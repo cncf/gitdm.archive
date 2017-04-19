@@ -1,0 +1,53 @@
+#
+# This is a gitdm configuration file for OpenStack
+#
+
+#
+# EmailAliases lets us cope with developers who use more
+# than one address.
+#
+EmailAliases openstack-config/aliases
+
+#
+# EmailMap does the main work of mapping addresses onto 
+# employers.
+#
+EmailMap openstack-config/domain-map
+EmailMap openstack-config/email-map
+
+#
+# Use GroupMap to map a file full of addresses to the 
+# same employer
+#
+# GroupMap sample-config/illuminati  The Illuminati
+#
+GroupMap openstack-config/groups/att AT&T
+GroupMap openstack-config/groups/bvox BVox
+GroupMap openstack-config/groups/canonical Canonical
+GroupMap openstack-config/groups/cloudbase Cloudbase Solutions
+GroupMap openstack-config/groups/dell Dell
+GroupMap openstack-config/groups/delta Delta Electronics
+GroupMap openstack-config/groups/dreamhost DreamHost
+GroupMap openstack-config/groups/everbread Everbread
+GroupMap openstack-config/groups/hp HP
+GroupMap openstack-config/groups/ibm IBM
+GroupMap openstack-config/groups/internap Internap
+GroupMap openstack-config/groups/locaweb Locaweb
+GroupMap openstack-config/groups/midokura Midokura
+GroupMap openstack-config/groups/mirantis Mirantis
+GroupMap openstack-config/groups/nebula Nebula
+GroupMap openstack-config/groups/netapp NetApp
+GroupMap openstack-config/groups/nicira Nicira
+GroupMap openstack-config/groups/ntt NTT
+GroupMap openstack-config/groups/piston Piston Cloud
+GroupMap openstack-config/groups/rackspace Rackspace
+GroupMap openstack-config/groups/redhat Red Hat
+GroupMap openstack-config/groups/sina SINA
+GroupMap openstack-config/groups/stackops StackOps
+GroupMap openstack-config/groups/unimelb University of Melbourne
+
+#
+# Use FileTypeMap to map a file types to file names using regular
+# regular expressions.
+#
+FileTypeMap sample-config/filetypes.txt

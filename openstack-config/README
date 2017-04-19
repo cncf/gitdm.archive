@@ -1,0 +1,110 @@
+To generate the log used for input:
+
+  $> grep -v '^#' openstack-config/essex | \
+      while read project revisions; do \
+       (cd ~/git/openstack/$project; \
+        git fetch origin 2>/dev/null; \
+        git log --no-merges --numstat -M --find-copies-harder $revisions); \
+      done > log.txt
+
+I then manually deleted the translation imports from the
+'OpenStack Jenkins' user.
+
+The EmailAliases file was created with this horror:
+
+  $> for p in nova glance swift horizon; do cat ~/git/openstack/$p/.mailmap; done | \
+      grep -v '^#' | sed 's/^[^<]*<\([^>]*\)>/\1/' | \
+      grep '<.*>' | sed -e 's/[<>]/ /g' | \
+      awk '{if ($3 != "") { print $3" "$1 } else {print $2" "$1}}' | \
+      sort | uniq > aliases
+
+with the only exception that I've tweaked Soren's canonical
+email address to be is linux2go one, to fix a git-dm traceback.
+
+To generate the stats I did:
+
+  $> python ./gitdm -l 20 -n < log.txt
+
+== Launchpad ==
+
+To get every email address we know about:
+
+  $> grep -v '^#' openstack-config/essex | \
+      while read project revisions; do \
+        cd ~/git/openstack/$project; \
+        git log | awk -F '[<>]' '/^Author:/ {print $2}'; \
+      done | sort | uniq | grep -v '\((none)\|\.local\)$' > tmp
+  $> sed 's/ /\n/' < openstack-config/aliases >> tmp
+  $> sed 's/ /\n/' < openstack-config/other-aliases >> tmp
+  $> (sort | uniq | grep -v '\((none)\|\.local\)$') < tmp > emails.txt
+
+To map those to launchpad names:
+
+  $> ./tools/with_venv.sh python launchpad/map-email-to-lp-name.py \
+       $(cat emails.txt) > openstack-config/launchpad-ids.txt
+
+To generate a list of bugs:
+
+  $> grep -v '^#' openstack-config/essex | \
+      while read project revisions; do \
+        ./tools/with_venv.sh python ./launchpad/buglist.py $project essex; \
+      done > buglist.txt
+
+Then to include the email addresses in the buglist:
+
+  $> while read id $date person; do \
+       emails=$(awk "/^$person / {print \$2}" openstack-config/launchpad-ids.txt); \
+       echo $id $person $date $emails; \
+     done < buglist.txt > buglist-full.txt
+
+To generate the stats, I did:
+
+  $> grep -v '<unknown>' buglist-full.txt | python ./lpdm -l 20
+
+Launchpad API docs are here:
+
+  https://launchpad.net/+apidoc/1.0.html
+  https://help.launchpad.net/API/launchpadlib
+
+== Gerrit ==
+
+First, generate a list of Change-Ids:
+
+  $> grep -v '^#' openstack-config/essex | \
+      while read project revisions; do \
+       (cd ~/git/openstack/$project; \
+        git fetch origin 2>/dev/null; \
+        git log $revisions); \
+      done | \
+        awk '/^    Change-Id: / { print $2 }' | \
+        split -l 100 -d - essex-change-ids-
+
+The output is split across files of 100 lines each because gerrit's
+query will only return 500 results at a time.
+
+Now, we generate a raw json query result:
+
+  $> for f in essex-change-ids-??; do
+        ssh -p 29418 review.openstack.org \
+            gerrit query --all-approvals --format=json \
+                $(awk -v ORS=" OR "  '{print}' $f | sed 's/ OR $//') ; \
+      done > essex-reviews.txt
+
+Next, generate a list of commits:
+
+  $> grep -v '^#' openstack-config/essex | \
+      while read project revisions; do \
+       (cd ~/git/openstack/$project; \
+        git fetch origin 2>/dev/null; \
+        git log --pretty=format:%H $revisions); \
+      done > essex-commits.txt
+
+Now parse the json into a list of reviewers:
+
+  $> python gerrit/parse-reviews.py \
+       essex-commits.txt openstack-config/launchpad-ids.txt \
+       < essex-reviews.txt  > essex-reviewers.txt
+
+Finally, generate the stats with:
+
+  $> python ./gerritdm -l 20 < essex-reviewers.txt
