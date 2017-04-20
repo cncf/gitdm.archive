@@ -29,7 +29,7 @@ class Hacker:
         self.versions = [ ]
 
     def full_name(self):
-        return self.name + ' ' + self.email[0]
+        return self.email[0] + ' ' + self.name
 
     def repr(self):
         return ('Hacker', self.id, self.name, 'Email', self.email[0], 'Employers', len(self.employer))
