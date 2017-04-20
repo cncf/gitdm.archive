@@ -107,7 +107,7 @@ def ReportByPCount (hlist, cscount):
         changed = max(h.added, h.removed)
         delta = h.added - h.removed
         if pcount > 0:
-            ReportLine (h.name, pcount, Pct(pcount, cscount))
+            ReportLine (h.full_name(), pcount, Pct(pcount, cscount))
             reported += pcount
         count += 1
         if count >= ListCount:
@@ -124,7 +124,7 @@ def ReportByBCount (hlist, totalbugs):
     for h in hlist:
         bcount = len (h.bugsfixed)
         if bcount > 0:
-            ReportLine (h.name, bcount, Pct(bcount, totalbugs))
+            ReportLine (h.full_name(), bcount, Pct(bcount, totalbugs))
             reported += bcount
         count += 1
         if count >= ListCount:
@@ -143,7 +143,7 @@ def ReportByLChanged (hlist, totalchanged):
         changed = max(h.added, h.removed)
         delta = h.added - h.removed
         if (h.added + h.removed) > 0:
-            ReportLine (h.name, changed, Pct(changed, totalchanged))
+            ReportLine (h.full_name(), changed, Pct(changed, totalchanged))
             reported += changed
         count += 1
         if count >= ListCount:
@@ -162,7 +162,7 @@ def ReportByLRemoved (hlist, totalremoved):
         changed = max(h.added, h.removed)
         delta = h.added - h.removed
         if delta < 0:
-            ReportLine (h.name, -delta, Pct(-delta, totalremoved))
+            ReportLine (h.full_name(), -delta, Pct(-delta, totalremoved))
             reported += -delta
         count += 1
         if count >= ListCount:
@@ -178,7 +178,7 @@ def ReportByPCEmpl (elist, cscount):
     BeginReport ('Top changeset contributors by employer')
     for e in elist:
         if e.count != 0:
-            ReportLine (e.name, e.count, Pct(e.count, cscount))
+            ReportLine (e.full_name(), e.count, Pct(e.count, cscount))
             total_pcount += e.count
         count += 1
         if count >= ListCount:
@@ -194,7 +194,7 @@ def ReportByBCEmpl (elist, totalbugs):
     BeginReport ('Top bugs fixed by employer')
     for e in elist:
         if len(e.bugsfixed) != 0:
-            ReportLine (e.name, len(e.bugsfixed), Pct(len(e.bugsfixed), totalbugs))
+            ReportLine (e.full_name(), len(e.bugsfixed), Pct(len(e.bugsfixed), totalbugs))
             reported += len(e.bugsfixed)
         count += 1
         if count >= ListCount:
@@ -210,7 +210,7 @@ def ReportByELChanged (elist, totalchanged):
     BeginReport ('Top lines changed by employer')
     for e in elist:
         if e.changed != 0:
-            ReportLine (e.name, e.changed, Pct(e.changed, totalchanged))
+            ReportLine (e.full_name(), e.changed, Pct(e.changed, totalchanged))
             reported += e.changed
         count += 1
         if count >= ListCount:
@@ -232,7 +232,7 @@ def ReportBySOBs (hlist):
     for h in hlist:
         scount = len (h.signoffs)
         if scount > 0:
-            ReportLine (h.name, scount, Pct(scount, totalsobs))
+            ReportLine (h.full_name(), scount, Pct(scount, totalsobs))
             reported += scount
         count += 1
         if count >= ListCount:
@@ -255,7 +255,7 @@ def ReportByRevs (hlist):
     for h in hlist:
         scount = len (h.reviews)
         if scount > 0:
-            ReportLine (h.name, scount, Pct(scount, totalrevs))
+            ReportLine (h.full_name(), scount, Pct(scount, totalrevs))
             reported += scount
         count += 1
         if count >= ListCount:
@@ -275,7 +275,7 @@ def ReportByRevsEmpl (elist):
     for e in elist:
         scount = len (e.reviews)
         if scount > 0:
-            ReportLine (e.name, scount, Pct(scount, totalrevs))
+            ReportLine (e.full_name(), scount, Pct(scount, totalrevs))
             reported += scount
         count += 1
         if count >= ListCount:
@@ -298,7 +298,7 @@ def ReportByTests (hlist):
     for h in hlist:
         scount = len (h.tested)
         if scount > 0:
-            ReportLine (h.name, scount, Pct(scount, totaltests))
+            ReportLine (h.full_name(), scount, Pct(scount, totaltests))
             reported += scount
         count += 1
         if count >= ListCount:
@@ -317,7 +317,7 @@ def ReportByTestCreds (hlist):
     BeginReport ('Developers who gave the most tested-by credits (total %d)' % totaltests)
     for h in hlist:
         if h.testcred > 0:
-            ReportLine (h.name, h.testcred, Pct(h.testcred, totaltests))
+            ReportLine (h.full_name(), h.testcred, Pct(h.testcred, totaltests))
             reported += h.testcred
         count += 1
         if count >= ListCount:
@@ -342,7 +342,7 @@ def ReportByReports (hlist):
     for h in hlist:
         scount = len (h.reports)
         if scount > 0:
-            ReportLine (h.name, scount, Pct(scount, totalreps))
+            ReportLine (h.full_name(), scount, Pct(scount, totalreps))
             report += scount
         count += 1
         if count >= ListCount:
@@ -361,7 +361,7 @@ def ReportByRepCreds (hlist):
     BeginReport ('Developers who gave the most report credits (total %d)' % totalreps)
     for h in hlist:
         if h.repcred > 0:
-            ReportLine (h.name, h.repcred, Pct(h.repcred, totalreps))
+            ReportLine (h.full_name(), h.repcred, Pct(h.repcred, totalreps))
             reported += h.repcred
         count += 1
         if count >= ListCount:
@@ -391,7 +391,7 @@ def ReportVersions (hlist):
     count = 0
     allversions = hlist[0].versions
     for h in hlist:
-        ReportLineStr (h.name, len (h.versions), MissedVersions (h.versions, allversions))
+        ReportLineStr (h.full_name(), len (h.versions), MissedVersions (h.versions, allversions))
         count += 1
         if count >= ListCount:
             break
@@ -410,7 +410,7 @@ def ReportByESOBs (elist):
     BeginReport ('Employers with the most signoffs (total %d)' % totalsobs)
     for e in elist:
         if e.sobs > 0:
-            ReportLine (e.name, e.sobs, Pct(e.sobs, totalsobs))
+            ReportLine (e.full_name(), e.sobs, Pct(e.sobs, totalsobs))
             reported += e.sobs
         count += 1
         if count >= ListCount:
@@ -430,7 +430,7 @@ def ReportByEHackers (elist):
     for e in elist:
         nhackers = len (e.hackers)
         if nhackers > 0:
-            ReportLine (e.name, nhackers, Pct(nhackers, totalhackers))
+            ReportLine (e.full_name(), nhackers, Pct(nhackers, totalhackers))
             reported += nhackers
         count += 1
         if count >= ListCount:
@@ -488,7 +488,7 @@ def ReportUnknowns(hlist, cscount):
     for h in ulist:
         pcount = len(h.patches)
         if pcount > 0:
-            ReportLine(h.name, pcount, (pcount*100.0)/cscount)
+            ReportLine(h.full_name(), pcount, (pcount*100.0)/cscount)
             count += 1
         if count >= ListCount:
             break
@@ -518,12 +518,12 @@ def ReportByFileType (hacker_list):
                     total[filetype] = [added, removed, []]
 
         # Print a summary by hacker
-        print h.name
+        print h.full_name()
         for filetype, counters in by_hacker.iteritems():
             print '\t', filetype, counters
             h_added = by_hacker[filetype][patch.ADDED]
             h_removed = by_hacker[filetype][patch.REMOVED]
-            total[filetype][2].append ([h.name, h_added, h_removed])
+            total[filetype][2].append ([h.full_name(), h_added, h_removed])
 
     # Print the global summary
     BeginReport ('Contributions by type and developers')

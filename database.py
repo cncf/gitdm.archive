@@ -28,6 +28,9 @@ class Hacker:
         self.testcred = self.repcred = 0
         self.versions = [ ]
 
+    def full_name(self):
+        return self.name + ' ' + self.email[0]
+
     def repr(self):
         return ('Hacker', self.id, self.name, 'Email', self.email[0], 'Employers', len(self.employer))
 
@@ -152,6 +155,9 @@ class Employer:
         self.bugsfixed = [ ]
         self.reviews = [ ]
         self.hackers = [ ]
+
+    def full_name(self):
+        return self.name
 
     def repr(self):
         return ('Employer', self.name, 'Hackers', len(self.hackers))
