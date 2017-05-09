@@ -91,7 +91,7 @@ def analysis(args)
     CSV.open(fn, "w", headers: hdr) do |csv|
       csv << hdr
       arr.each_with_index do |row, index|
-        csv << [index] + row if index < 10 || required.include?(row[0])
+        csv << [index] + row if index <= 10 || required.include?(row[0])
       end
     end
   end
