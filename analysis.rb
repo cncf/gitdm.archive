@@ -2,11 +2,35 @@ require 'scanf'
 require 'csv'
 require 'pry'
 
+def make_summary(prefix, data)
+  data.keys.each do |key|
+    sum = 0
+    perc = 100.0
+    n = data[key].keys.length
+    if data[key].key?('(Unknown)')
+      data[key].each do |name, value|
+        sum += value[0] unless name == '(Unknown)'
+      end
+      n -= 1
+      perc = sum * 100.0 / (sum + data[key]['(Unknown)'][0])
+    end
+
+    hdr = ['N companies', 'sum', 'percent']
+    fn = "report/#{prefix}_#{key}_sum.csv"
+    CSV.open(fn, "w", headers: hdr) do |csv|
+      csv << hdr
+      csv << [n, sum, perc]
+    end
+
+    data[key]['(All)'] = [sum, perc]
+  end
+end
+
 def analysis(args)
   files = args[1..-1]
   prefix = args[0]
   out = {}
-  files.each do |file|
+  files.each_with_index do |file, index|
     mode = ''
     File.readlines(file).each do |line|
       line = line.strip
@@ -44,6 +68,8 @@ def analysis(args)
         end
       end
     end
+    # We assume that 1st file is "no map" file, which means file with only Companies and '(Unknown)'
+    make_summary(prefix, out) if index == 0
   end
 
   hdr = ['idx', 'company', 'n', 'percent']
@@ -57,7 +83,7 @@ def analysis(args)
     fn = "report/#{prefix}_#{key}_all.csv"
     CSV.open(fn, "w", headers: hdr) do |csv|
       csv << hdr
-      arr.each_with_index { |row, index| csv << [index + 1] + row }
+      arr.each_with_index { |row, index| csv << [index] + row }
     end
 
     fn = "report/#{prefix}_#{key}_top.csv"
@@ -65,7 +91,7 @@ def analysis(args)
     CSV.open(fn, "w", headers: hdr) do |csv|
       csv << hdr
       arr.each_with_index do |row, index|
-        csv << [index + 1] + row if index < 10 || required.include?(row[0])
+        csv << [index] + row if index < 10 || required.include?(row[0])
       end
     end
   end
