@@ -22,7 +22,7 @@ def make_summary(prefix, data)
       csv << [n, sum, perc]
     end
 
-    data[key]["(All known #{n})"] = [sum, perc]
+    data[key]["(All known #{n})"] = [sum, perc.round(2)]
   end
 end
 
