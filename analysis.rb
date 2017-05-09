@@ -94,7 +94,7 @@ def analysis(args)
     end
 
     fn = "report/#{prefix}_#{key}_top.csv"
-    required = ['(Unknown)', 'Gmail *', 'Qq *', 'Outlook *', 'Yahoo *', 'Hotmail *', 'Self', 'NotFound']
+    required = ['(Unknown)', 'Gmail *', 'Qq *', 'Outlook *', 'Yahoo *', 'Hotmail *', '(Self)', '(Not Found)']
     CSV.open(fn, "w", headers: hdr) do |csv|
       csv << hdr
       arr.each_with_index do |row, index|
