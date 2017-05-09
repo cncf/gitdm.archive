@@ -3,33 +3,54 @@ require 'pry'
 
 def analysis(fn)
   # "Name","Email","Affliation","Date","Added","Removed","Changesets"
-  added = []
-  removed = []
-  changesets = []
+  obj = {}
   sa = sr = sc = 0
+  sums = %w(added removed changesets)
   CSV.foreach(fn, headers: true) do |row|
     h = row.to_h
-    a = h['Added'].to_i
-    r = h['Removed'].to_i
-    c = h['Changesets'].to_i
+    h.each do |k, v|
+      h[k] = v.to_i if v.to_i.to_s == v
+    end
+    a = h['Added']
+    r = h['Removed']
+    c = h['Changesets']
+    e = h['Email']
     sa += a
     sr += r
     sc += c
-    added << [a, h]
-    removed << [r, h]
-    changesets << [c, h]
+    if obj.key?(e)
+      obj[e].each do |k, v|
+        obj[e][k] += h[k] unless v.is_a?(String)
+      end
+    else
+      obj[e] = h
+    end
+  end
+
+  added = []
+  removed = []
+  changesets = []
+  obj.each do |k, v|
+    a = v['Added']
+    r = v['Removed']
+    c = v['Changesets']
+    e = v['Email']
+    added << [a, v]
+    removed << [r, v]
+    changesets << [c, v]
   end
 
   added = added.sort_by { |item| -item[0] }
   removed = removed.sort_by { |item| -item[0] }
   changesets = changesets.sort_by { |item| -item[0] }
+
   ks = added[0][1].keys + ['% Added', '% Removed', '% Changesets']
-  %w(added removed changesets).each do |obj|
-    fn = "#{obj}.csv"
-    obj = binding.local_variable_get(obj)
+  sums.each do |key|
+    fn = "#{key}.csv"
+    data = binding.local_variable_get(key)
     CSV.open(fn, "w", headers: ks) do |csv|
       csv << ks
-      obj.each do |row|
+      data.each do |row|
         pa = (row[1]['Added'].to_f * 100.0 / sa).round(3)
         pr = (row[1]['Removed'].to_f * 100.0 / sr).round(3)
         pc = (row[1]['Changesets'].to_f * 100.0 / sc).round(3)
