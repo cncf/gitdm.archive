@@ -26,6 +26,12 @@ def make_summary(prefix, data)
   end
 end
 
+def map_name(name)
+  return '(Self)' if name == 'Self'
+  return '(Not Found)' if name == 'NotFound'
+  return name
+end
+
 def analysis(args)
   files = args[1..-1]
   prefix = args[0]
@@ -64,6 +70,7 @@ def analysis(args)
         if out[mode].key? name
           puts "WARNING: already have [#{mode}][#{name}] = #{out[mode][name]}, new value: #{[n, perc]} in file: #{file}" if out[mode][name] != [n, perc]
         else
+          name = map_name(name)
           out[mode][name] = [n, perc]
         end
       end
