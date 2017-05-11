@@ -47,6 +47,8 @@ ReportUnknowns = False
 InputData = sys.stdin
 InputDataIsFile = False
 DebugHalt = False
+DateFrom = datetime.date(1970, 1, 1)
+DateTo = datetime.date(2069, 1, 1)
 
 #
 # Options:
@@ -71,15 +73,17 @@ DebugHalt = False
 # -z		Dump out the hacker database at completion
 # -i            Specify input file (instead of default sys.stdin)
 # -X            Stop in the debugger at end (cannot be used with stdin, please use -i)
+# -f date       Only use patches >= date
+# -e date       Only use patches <= date
 
 def ParseOpts ():
     global MapUnknown, DevReports
     global DateStats, AuthorSOBs, FileFilter, DumpDB
     global CFName, CSVFile, CSVPrefix,DirName, Aggregate, Numstat
     global ReportByFileType, ReportUnknowns
-    global InputData, InputDataIsFile, DebugHalt
+    global InputData, InputDataIsFile, DebugHalt, DateFrom, DateTo
 
-    opts, rest = getopt.getopt (sys.argv[1:], 'i:b:dc:Dh:l:no:p:r:stUumwx:yzX')
+    opts, rest = getopt.getopt (sys.argv[1:], 'i:b:dc:Dh:l:no:p:r:stUumwx:yzXf:e:')
     for opt in opts:
         if opt[0] == '-b':
             DirName = opt[1]
@@ -123,6 +127,10 @@ def ParseOpts ():
             DumpDB = 1
         elif opt[0] == '-X':
             DebugHalt = True
+        elif opt[0] == '-f':
+            DateFrom = datetime.datetime.strptime(opt[1], '%Y-%m-%d')
+        elif opt[0] == '-e':
+            DateTo = datetime.datetime.strptime(opt[1], '%Y-%m-%d')
         elif opt[0] == '-i':
             try:
                 InputData = open(opt[1], 'r')
@@ -507,9 +515,10 @@ TotalChanged = TotalAdded = TotalRemoved = 0
 #
 # Snarf changesets.
 #
-print >> sys.stderr, 'Grabbing changesets...\r',
+print >> sys.stderr,  str(DateFrom) + ' - ' + str(DateTo) + '\r'
+print >> sys.stderr, 'Grabbing changesets...\r'
 
-patches = logparser.LogPatchSplitter(InputData)
+patches = logparser.LogPatchSplitter(InputData, DateFrom, DateTo)
 printcount = CSCount = 0
 
 for logpatch in patches:

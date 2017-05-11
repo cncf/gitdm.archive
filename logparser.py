@@ -19,6 +19,7 @@
 
 import sys
 from patterns import patterns
+import datetime
 
 class LogPatchSplitter:
     """
@@ -27,14 +28,16 @@ class LogPatchSplitter:
 
         Typical use case:
 
-            patches = LogPatchSplitter(sys.stdin)
+            patches = LogPatchSplitter(sys.stdin, datetime.date(2016,1, 1), datetime.date(2017,1,1))
 
             for patch in patches:
                 parse_patch(patch)
     """
 
-    def __init__(self, fd):
+    def __init__(self, fd, date_from, date_to):
         self.fd = fd
+        self.date_from = date_from
+        self.date_to = date_to
         self.buffer = None
         self.patch = []
 
@@ -43,9 +46,24 @@ class LogPatchSplitter:
 
     def next(self):
         patch = self.__grab_patch__()
+        while patch == "skip":
+            patch = self.__grab_patch__()
         if not patch:
             raise StopIteration
         return patch
+
+    def getDate(self, line):
+        # ['Date:', '', '', 'Thu', 'May', '11', '09:15:21', '2017', '+0200\n']
+        arr = line.split(' ')
+        arr2 = []
+        for i in range(len(arr) - 1):
+            s = arr[i]
+            if s != '' and s != 'Date:':
+                arr2.append(s)
+        datestr = ' '.join(arr2)
+        date = datetime.datetime.strptime(datestr, '%a %b %d %H:%M:%S %Y')
+        # print "DATE: " + str(date) + ", FROM: " + datestr
+        return date
 
     def __grab_patch__(self):
         """
@@ -73,6 +91,12 @@ class LogPatchSplitter:
             if m:
                 self.buffer = line
                 break
+            m = patterns['date'].match(line)
+            if m:
+                date = self.getDate(line)
+                if date < self.date_from or date > self.date_to:
+                    # print "Date " + str(date) + ", not in [" + str(self.date_from) + " - " + str(self.date_to) + "]"
+                    return "skip"
 
             patch.append(line)
             self.buffer = None
@@ -82,7 +106,7 @@ class LogPatchSplitter:
 
 
 if __name__ == '__main__':
-    patches = LogPatchSplitter(sys.stdin)
+    patches = LogPatchSplitter(sys.stdin, datetime.datetime(1970,1,1), datetime.datetime(2069,1,1))
 
     for patch in patches:
         print '---------- NEW PATCH ----------'

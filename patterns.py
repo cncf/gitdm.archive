@@ -20,11 +20,11 @@ import re
 #
 _pemail = r'\s+"?([^<"]+)"?\s<([^>]+)>' # just email addr + name
 # LG: added re.I in some cases (need to ignore case)
-
 patterns = {
-        'tagcommit': re.compile (r'^commit ([\da-f]+) .*tag: (v[0-9]\.\d(\.\d\d?)?)'),  # LG: allow versions v[0-9].n[...]
+    'tagcommit': re.compile (r'^commit ([\da-f]+) .*tag: (v[0-9]\.\d(\.\d\d?)?)'),  # LG: allow versions v[0-9].n[...]
     'commit': re.compile (r'^commit ([0-9a-f ]+)'),
     'author': re.compile (r'^Author:' + _pemail + '$', re.I),
+    'date': re.compile (r'^Date: '),
     'signed-off-by': re.compile (r'^\s+Signed-off-by:' + _pemail + '.*$', re.I),
     'merge': re.compile (r'^Merge:.*$'),
     'add': re.compile (r'^\+[^+].*$'),
