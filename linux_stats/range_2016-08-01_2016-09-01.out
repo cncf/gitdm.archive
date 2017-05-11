@@ -1,0 +1,3493 @@
+open output file /Users/lukasz/dev/cncf/gitdm/linux_stats/range_2016-08-01_2016-09-01.csv
+
+mhiramat@kernel.org is an author name, probably not what you want
+shubhrajyoti.datta@xilinx.com is an author name, probably not what you want
+sean.wang@mediatek.com is an author name, probably not what you want
+unknown@hacker.net Unknown hacker
+m.szyprowski@samsung.com Marek Szyprowski
+	unknown [4, 1]
+k.kozlowski@samsung.com Krzysztof Kozlowski
+	unknown [7, 6]
+	devel-doc [9, 6]
+	code [700, 798]
+	build [2, 0]
+	documentation [15, 20]
+hl@rock-chips.com Lin Huang
+	code [224, 0]
+	build [1, 0]
+heiko@sntech.de Heiko Stuebner
+agruenba@redhat.com Andreas Gruenbacher
+	code [113, 110]
+mszeredi@redhat.com Miklos Szeredi
+	code [12, 13]
+colin.king@canonical.com Colin Ian King
+	code [66, 47]
+york.sun@nxp.com York Sun
+	unknown [22, 0]
+	code [993, 880]
+	build [14, 1]
+	documentation [2, 0]
+bp@suse.de Borislav Petkov
+	code [208, 30]
+	build [0, 2]
+	documentation [21, 0]
+tthayer@opensource.altera.com Thor Thayer
+	unknown [12, 0]
+	code [194, 15]
+	build [7, 0]
+	documentation [19, 0]
+andriy.shevchenko@linux.intel.com Andy Shevchenko
+	code [619, 379]
+	build [20, 2]
+	documentation [0, 19]
+mingo@kernel.org Ingo Molnar
+davem@davemloft.net David S. Miller
+	code [4, 4]
+robert.foss@collabora.com Robert Foss
+	code [618, 180]
+grundler@google.com Grant Grundler
+allan@asix.com.tw Allan Chou
+vpalatin@chromium.org Vincent Palatin
+freddy@asix.com.tw Freddy Xin
+sudarsana.kalluru@qlogic.com Sudarsana Reddy Kalluru
+	code [877, 316]
+yuval.mintz@qlogic.com Yuval Mintz
+	code [2440, 1570]
+xiyou.wangcong@gmail.com WANG Cong
+	code [304, 162]
+dvyukov@google.com Dmitry Vyukov
+coproscefalo@gmail.com Azael Avalos
+	code [152, 105]
+dvhart@linux.intel.com Darren Hart
+steve.muckle@linaro.org Steve Muckle
+	code [3, 1]
+rafael.j.wysocki@intel.com Rafael J. Wysocki
+	code [111, 112]
+	build [1, 4]
+	documentation [102, 76]
+heikki.krogerus@linux.intel.com Heikki Krogerus
+	code [42, 5]
+vegard.nossum@oracle.com Vegard Nossum
+	devel-doc [11, 0]
+	code [46, 16]
+	build [1, 1]
+john.stultz@linaro.org John Stultz
+	unknown [50, 2]
+	code [80, 25]
+	build [1, 1]
+kandoiruchi@google.com Ruchi Kandoi
+	code [2, 0]
+kwalker@redhat.com Kyle Walker
+	code [12, 3]
+g.nault@alphalink.fr Guillaume Nault
+	code [51, 12]
+gfree.wind@gmail.com Feng Gao
+stephen@networkplumber.org stephen hemminger
+	code [7, 6]
+andrew@lunn.ch Andrew Lunn
+	code [88, 56]
+	build [289, 285]
+vivien.didelot@savoirfairelinux.com Vivien Didelot
+	code [710, 480]
+	documentation [28, 5]
+rvatsavayi@caviumnetworks.com Raghu Vatsavayi
+	code [3025, 616]
+	build [14, 12]
+derek.chickles@caviumnetworks.com Derek Chickles
+satananda.burla@caviumnetworks.com Satanand Burla
+felix.manlunas@caviumnetworks.com Felix Manlunas
+nm@ti.com Nishanth Menon
+	unknown [12, 0]
+ssantosh@kernel.org Santosh Shilimkar
+afd@ti.com Andrew F. Davis
+	code [35, 197]
+	unknown [20, 0]
+	documentation [16, 16]
+s-anna@ti.com Suman Anna
+	code [122, 109]
+grygorii.strashko@ti.com Grygorii Strashko
+	unknown [34, 18]
+	code [9, 11]
+mguzik@redhat.com Mateusz Guzik
+	code [30, 9]
+paul@paul-moore.com Paul Moore
+	code [15, 9]
+rogerq@ti.com Roger Quadros
+	code [3, 3]
+	build [1, 0]
+david1.zhou@amd.com Chunming Zhou
+	code [299, 83]
+christian.koenig@amd.com Christian König
+	code [529, 587]
+alexander.deucher@amd.com Alex Deucher
+	code [232, 119]
+ray.huang@amd.com Huang Rui
+	code [83, 64]
+maruthi.bayyavarapu@amd.com Maruthi Bayyavarapu
+	code [9137, 0]
+clabbe.montjoie@gmail.com LABBE Corentin
+	code [259, 208]
+alexandre.belloni@free-electrons.com Alexandre Belloni
+	code [216, 1]
+	build [16, 0]
+	documentation [49, 0]
+akinobu.mita@gmail.com Akinobu Mita
+	code [552, 0]
+	build [13, 0]
+	documentation [37, 0]
+jic23@kernel.org Jonathan Cameron
+will.deacon@arm.com Will Deacon
+	code [15, 30]
+	build [13, 10]
+yao.qi@arm.com Yao Qi
+jim.qu@amd.com jimqu
+	code [93, 55]
+torvalds@linux-foundation.org Linus Torvalds
+	code [46, 101]
+	build [6, 5]
+dcaratti@redhat.com Davide Caratti
+	code [1, 1]
+geert+renesas@glider.be Geert Uytterhoeven
+	unknown [0, 41]
+	devel-doc [4, 4]
+	code [30, 20]
+	build [38, 2]
+wens@csie.org Chen-Yu Tsai
+	unknown [64, 8]
+	code [1699, 18]
+	build [11, 0]
+	documentation [2, 1]
+julia.lawall@lip6.fr Julia Lawall
+	code [50, 59]
+elfring@users.sourceforge.net Markus Elfring
+	code [45, 147]
+jao@hms.se Jan Östlund
+	code [10, 6]
+daro@hms.se Daniel Romell
+	code [5, 3]
+fabio.estevam@nxp.com Fabio Estevam
+	code [133, 66]
+	unknown [181, 1]
+	documentation [3, 2]
+	build [2, 6]
+christophe.jaillet@wanadoo.fr Christophe JAILLET
+	code [30, 23]
+woogyom.kim@gmail.com Milo Kim
+	unknown [31, 10]
+	documentation [2, 2]
+maxime.ripard@free-electrons.com Maxime Ripard
+robert@swiecki.net Robert Święcki
+peterz@infradead.org Peter Zijlstra
+	code [107, 28]
+shli@fb.com Shaohua Li
+	code [45, 46]
+neilb@suse.com NeilBrown
+	code [13, 15]
+okaya@codeaurora.org Sinan Kaya
+	code [51, 41]
+vinod.koul@intel.com Vinod Koul
+	code [163, 139]
+tony@atomide.com Tony Lindgren
+	code [120, 21]
+yuchao0@huawei.com Chao Yu
+	code [78, 47]
+jack@suse.cz Jan Kara
+	code [236, 208]
+tytso@mit.edu Theodore Ts'o
+smueller@chronox.de Stephan Mueller
+	code [19, 13]
+tsarangi@trustwave.com Tapas Sarangi
+herbert@gondor.apana.org.au Herbert Xu
+	devel-doc [1, 0]
+	code [109, 66]
+niklas.cassel@axis.com Niklas Cassel
+	documentation [4, 3]
+robh@kernel.org Rob Herring
+	devel-doc [5, 0]
+	code [63, 84]
+	build [283, 0]
+maksim.lukoshkov@intel.com Maksim Lukoshkov
+	code [12, 8]
+giovanni.cabiddu@intel.com Giovanni Cabiddu
+	code [2, 2]
+prasannatsmkumar@gmail.com PrasannaKumar Muralidharan
+	code [22, 200]
+sfr@canb.auug.org.au Stephen Rothwell
+baoyou.xie@linaro.org Baoyou Xie
+	code [19, 12]
+okhaliq@caviumnetworks.com Omer Khaliq
+	code [193, 0]
+	build [14, 0]
+ananth.jasty@cavium.com Ananth Jasty
+	code [11, 0]
+horia.geanta@nxp.com Horia Geantă
+	code [45, 45]
+sowmini.varadhan@oracle.com Sowmini Varadhan
+wenyou.yang@atmel.com Wenyou Yang
+	code [303, 52]
+	documentation [22, 9]
+sre@kernel.org Sebastian Reichel
+	devel-doc [6, 6]
+fengguang.wu@intel.com Fengguang Wu
+	code [1, 1]
+javier@osg.samsung.com Javier Martinez Canillas
+	unknown [217, 201]
+	devel-doc [1, 0]
+	code [82, 93]
+	build [2, 2]
+mugunthanvnm@ti.com Mugunthan V N
+jay.schroeder@garmin.com J.D. Schroeder
+	unknown [11, 4]
+trenton.andres@garmin.com Trenton Andres
+nandor.han@ge.com Nandor Han
+	code [144, 85]
+peter.senna@collabora.com Peter Senna Tschudin
+	code [79, 41]
+gregkh@linuxfoundation.org Greg Kroah-Hartman
+	code [16, 6]
+o-takashi@sakamocchi.jp Takashi Sakamoto
+	code [429, 529]
+	build [3, 2]
+vaishali.thakkar@oracle.com Vaishali Thakkar
+tiwai@suse.de Takashi Iwai
+	code [23, 13]
+pure.logic@nexus-software.ie Bryan O'Donoghue
+	code [19, 9]
+peter@hurleysoftware.com Peter Hurley
+eugeniy.paltsev@synopsys.com Eugeniy Paltsev
+eddie.huang@mediatek.com Eddie Huang
+	code [2, 8]
+long.cheng@mediatek.com Long Cheng
+zubair.kakakhel@imgtec.com Zubair Lutfullah Kakakhel
+	code [24, 1]
+	build [1, 1]
+wangkefeng.wang@huawei.com Kefeng Wang
+	unknown [393, 185]
+	code [6, 16]
+	build [4, 1]
+	documentation [28, 11]
+arnd@arndb.de Arnd Bergmann
+	unknown [30, 30]
+	code [94, 92]
+	build [6, 2]
+ludovic.desroches@atmel.com Ludovic Desroches
+	code [34, 8]
+mika.westerberg@linux.intel.com Mika Westerberg
+	code [2, 3]
+alex.shi@linaro.org Alex Shi
+	code [6, 5]
+w.egorov@phytec.de Wadim Egorov
+	code [476, 47]
+	documentation [34, 3]
+	build [6, 6]
+lee.jones@linaro.org Lee Jones
+	code [9, 9]
+andy.yan@rock-chips.com Andy Yan
+	build [1, 1]
+ard.biesheuvel@linaro.org Ard Biesheuvel
+	unknown [1, 2]
+	code [247, 198]
+suzuki.poulose@arm.com Suzuki K Poulose
+	code [134, 170]
+yizhouzhou@ict.ac.cn Zhouyi Zhou
+	code [6, 1]
+ebiederm@xmission.com Eric W. Biederman
+	code [409, 88]
+avagin@openvz.org Andrei Vagin
+j-keerthy@ti.com Keerthy
+	unknown [37, 0]
+	code [561, 0]
+	build [28, 1]
+linus.walleij@linaro.org Linus Walleij
+	unknown [229, 82]
+	code [535, 1165]
+	build [33, 117]
+	documentation [134, 18]
+alexander.kapshuk@gmail.com Alexander Kapshuk
+	unknown [0, 193]
+	code [89, 0]
+weiyj.lk@gmail.com Wei Yongjun
+	code [135, 177]
+b.spranger@linutronix.de Benedikt Spranger
+	devel-doc [6, 3]
+kim.phillips@arm.com Kim Phillips
+	build [0, 1]
+mmarek@suse.com Michal Marek
+	unknown [17, 18]
+	code [1, 1]
+	build [4, 0]
+fvogt@suse.com Fabian Vogt
+lukas@wunner.de Lukas Wunner
+	code [3, 3]
+andreas.noever@gmail.com Andreas Noever
+peter.ujfalusi@ti.com Peter Ujfalusi
+	code [45, 51]
+	documentation [0, 10]
+daniel.vetter@ffwll.ch Daniel Vetter
+	unknown [391, 562]
+	code [6147, 5378]
+	build [11, 16]
+jthumshirn@suse.de Johannes Thumshirn
+	code [59, 66]
+andreas.werner@men.de Andreas Werner
+	code [279, 14]
+	build [10, 0]
+mpe@ellerman.id.au Michael Ellerman
+	code [22, 11]
+	build [13, 11]
+keescook@chromium.org Kees Cook
+	unknown [3, 1]
+	code [85, 68]
+	build [2, 1]
+mathieu.poirier@linaro.org Mathieu Poirier
+	devel-doc [1, 0]
+	code [555, 133]
+	build [3, 0]
+sudeep.holla@arm.com Sudeep Holla
+	unknown [2, 2]
+	code [93, 49]
+peter.chen@nxp.com Peter Chen
+	code [83, 30]
+	build [8, 0]
+olivier.schonken@gmail.com Olivier Schonken
+	code [5, 0]
+zhang.chunyan@linaro.org Chunyan Zhang
+	code [22, 0]
+alexng@messages.microsoft.com Alex Ng
+	code [5, 8]
+kys@microsoft.com K. Y. Srinivasan
+vkuznets@redhat.com Vitaly Kuznetsov
+	code [236, 181]
+victoryang@google.com Vic Yang
+	code [230, 107]
+tomeu.vizoso@collabora.com Tomeu Vizoso
+enric.balletbo@collabora.com Enric Balletbo i Serra
+maarten.lankhorst@linux.intel.com Maarten Lankhorst
+	code [966, 606]
+narmstrong@baylibre.com Neil Armstrong
+	code [3389, 5]
+	build [20, 1]
+	documentation [64, 0]
+bjorn.andersson@linaro.org Bjorn Andersson
+	code [1156, 233]
+	build [18, 0]
+	documentation [136, 0]
+qca_liord@qca.qualcomm.com Lior David
+	code [495, 67]
+qca_merez@qca.qualcomm.com Maya Erez
+	code [725, 138]
+kvalo@qca.qualcomm.com Kalle Valo
+michal.kazior@tieto.com Michal Kazior
+	code [242, 1]
+marek.puzyniak@tieto.com Marek Puzyniak
+ansonjacob.aj@gmail.com Anson Jacob
+	code [10, 6]
+sudipm.mukherjee@gmail.com Sudip Mukherjee
+	code [62, 76]
+	build [1, 0]
+c_traja@qti.qualcomm.com Tamizh chelvam
+	code [83, 22]
+mohammed@qti.qualcomm.com Mohammed Shafi Shajakhan
+	code [0, 1]
+a.hajda@samsung.com Andrzej Hajda
+	code [1, 1]
+arnagara@qti.qualcomm.com Ashok Raj Nagarajan
+	code [5, 5]
+r.baldyga@samsung.com Robert Baldyga
+	code [20, 68]
+johnyoun@synopsys.com John Youn
+	code [32, 1]
+felipe.balbi@linux.intel.com Felipe Balbi
+	code [120, 204]
+	build [19, 19]
+romain.izard.pro@gmail.com Romain Izard
+	code [1, 1]
+petr.cvek@tul.cz Petr Cvek
+	code [7, 1]
+yoshihiro.shimoda.uh@renesas.com Yoshihiro Shimoda
+	code [51, 18]
+	documentation [1, 0]
+peter@lekensteyn.nl Peter Wu
+	code [11, 0]
+airlied@redhat.com Dave Airlie
+simon.horman@netronome.com Simon Horman
+	unknown [106, 0]
+	code [11, 3]
+dsa@cumulusnetworks.com David Ahern
+	code [146, 27]
+buytenh@wantstofly.org Lennert Buytenhek
+roopa@cumulusnetworks.com Roopa Prabhu
+	code [106, 6]
+edumazet@google.com Eric Dumazet
+	code [121, 143]
+mark.d.rustad@intel.com Mark Rustad
+	code [5, 11]
+andrewx.bowers@intel.com Andrew Bowers
+jeffrey.t.kirsher@intel.com Jeff Kirsher
+	code [96, 92]
+andy.green@linaro.org Andy Green
+	code [111, 17]
+bart.vanassche@sandisk.com Bart Van Assche
+	code [3, 1]
+martin.petersen@oracle.com Martin K. Petersen
+stefan@agner.ch Stefan Agner
+	unknown [68, 13]
+fthain@telegraphics.com.au Finn Thain
+	code [7, 8]
+	documentation [0, 4]
+f.fainelli@gmail.com Florian Fainelli
+	code [476, 1110]
+	documentation [44, 21]
+	build [1, 0]
+jitendra.bhivare@broadcom.com Jitendra Bhivare
+	devel-doc [5, 5]
+	code [3308, 3152]
+paul.burton@imgtec.com Paul Burton
+	code [50, 37]
+bhaktipriya96@gmail.com Bhaktipriya Shridhar
+	code [25, 39]
+snitzer@redhat.com Mike Snitzer
+	code [47, 21]
+ebiggers@google.com Eric Biggers
+	code [2, 2]
+	documentation [26, 12]
+mpatocka@redhat.com Mikulas Patocka
+	code [10, 3]
+ahs3@redhat.com Al Stone
+	code [9, 6]
+robert@ocallahan.org Robert O'Callahan
+khuey@kylehuey.com Kyle Huey
+lv.zheng@intel.com Lv Zheng
+	code [887, 672]
+	documentation [96, 0]
+	build [0, 1]
+pprakash@codeaurora.org Prakash, Prashanth
+	code [349, 166]
+ashwin.chaugule@linaro.org Ashwin Chaugule
+	code [192, 58]
+alexey.klimov@arm.com Alexey Klimov
+	code [3, 1]
+hotran@apm.com hotran
+	code [245, 71]
+carlosg@gnome.org Carlos Garnacho
+	code [6, 4]
+todd.e.brandt@linux.intel.com Todd E Brandt
+schalbroeck@gmail.com Sebastiaan Schalbroeck
+	documentation [6, 6]
+	build [1, 1]
+cw00.choi@samsung.com Chanwoo Choi
+	code [13, 0]
+hdegoede@redhat.com Hans de Goede
+	code [55, 349]
+	unknown [657, 515]
+	documentation [39, 35]
+	build [3, 14]
+bharat.kumar.gogada@xilinx.com Bharat Kumar Gogada
+	documentation [3, 2]
+info@gunibert.de Guenther Wutz
+	documentation [1, 1]
+ralf@ramses-pyramidenbau.de Ralf Ramsauer
+simhavcs@gmail.com Vinay Simha BN
+	documentation [1, 0]
+ccc94453@vip.cybercity.dk Rask Ingemann Lambertsen
+	documentation [14, 13]
+wsa+renesas@sang-engineering.com Wolfram Sang
+	code [238, 842]
+	documentation [5, 14]
+sboyd@codeaurora.org Stephen Boyd
+	devel-doc [1, 0]
+	code [328, 243]
+	build [4, 3]
+monk.liu@amd.com Monk Liu
+	code [11, 0]
+tom.stdenis@amd.com Tom St Denis
+	code [242, 580]
+jordan.lazare@amd.com Jordan Lazare
+	code [0, 1]
+marek.olsak@amd.com Marek Olšák
+	code [134, 49]
+moinejf@free.fr Jean-Francois Moine
+	code [0, 5]
+jeffv@google.com Jeff Vander Stoep
+eric@anholt.net Eric Anholt
+	code [8, 6]
+peda@axentia.se Peter Rosin
+	code [52, 26]
+yamada.masahiro@socionext.com Masahiro Yamada
+	unknown [878, 222]
+	devel-doc [2, 0]
+	code [591, 485]
+	build [25, 12]
+	documentation [93, 0]
+nicolas.iooss_linux@m4x.org Nicolas Iooss
+	code [8, 5]
+jbacik@fb,com Josef Bacik
+	code [7, 3]
+jonathanh@nvidia.com Jon Hunter
+	unknown [197, 12]
+	code [121, 114]
+william.c.roberts@intel.com William Roberts
+	code [13, 9]
+	build [0, 38]
+kishon@ti.com Kishon Vijay Abraham I
+	unknown [2, 0]
+vigneshr@ti.com Vignesh R
+	unknown [62, 4]
+	code [289, 28]
+	build [13, 0]
+	documentation [23, 0]
+rmk+kernel@armlinux.org.uk Russell King
+	code [620, 434]
+stern@rowland.harvard.edu Alan Stern
+	devel-doc [1, 1]
+	code [84, 21]
+linux@roeck-us.net Guenter Roeck
+	code [10, 2]
+jpoimboe@redhat.com Josh Poimboeuf
+	devel-doc [0, 18]
+	code [221, 217]
+	build [0, 18]
+	documentation [11, 0]
+rdunlap@infradead.org Randy Dunlap
+	code [3, 5]
+	build [1, 1]
+nariman@opensource.wolfsonmicro.com Nariman Poushin
+	code [2, 2]
+ckeepax@opensource.wolfsonmicro.com Charles Keepax
+	code [45, 3]
+broonie@kernel.org Mark Brown
+	code [3, 2]
+neidhard.kim@lge.com Jongsung Kim
+alan@linux.intel.com Alan Cox
+	code [1, 1]
+estellnb@elstel.org Ellmar Stelnberger
+tj@kernel.org Tejun Heo
+	code [271, 134]
+guodong.xu@linaro.org Guodong Xu
+	unknown [11, 1]
+	build [11, 0]
+xuwei5@hisilicon.com Wei Xu
+p.zabel@pengutronix.de Philipp Zabel
+	unknown [38, 0]
+	code [17, 2]
+	build [14, 2]
+dhowells@redhat.com David Howells
+	code [2074, 882]
+	documentation [26, 13]
+acme@redhat.com Arnaldo Carvalho de Melo
+	devel-doc [1, 0]
+	code [389, 209]
+	documentation [4, 0]
+trond.myklebust@primarydata.com Trond Myklebust
+	code [344, 108]
+bcodding@redhat.com Benjamin Coddington
+	code [15, 5]
+net147@gmail.com Jonathan Liu
+	code [6, 2]
+ladis@linux-mips.org Ladislav Michl
+b-liu@ti.com Bin Liu
+pbonzini@redhat.com Paolo Bonzini
+	code [8, 6]
+	build [2, 1]
+	documentation [4, 3]
+anson.huang@nxp.com Anson Huang
+	unknown [2, 1]
+	code [21, 7]
+shawnguo@kernel.org Shawn Guo
+	code [4, 5]
+stuart.yoder@nxp.com Stuart Yoder
+	unknown [23, 6]
+jose.abreu@synopsys.com Jose Abreu
+	code [4, 3]
+architt@codeaurora.org Archit Taneja
+fgao@ikuai8.com Gao Feng
+	code [185, 137]
+pablo@netfilter.org Pablo Neira Ayuso
+	code [383, 1096]
+	build [11, 20]
+fw@strlen.de Florian Westphal
+	code [401, 221]
+liping.zhang@spreadtrum.com Liping Zhang
+	code [141, 97]
+tomi.valkeinen@ti.com Tomi Valkeinen
+marex@denx.de Marek Vasut
+	unknown [15, 0]
+	code [5, 4]
+green@linuxhacker.ru Oleg Drokin
+	devel-doc [1, 0]
+	code [375, 346]
+kai.heng.feng@canonical.com Kai-Heng Feng
+	code [11, 0]
+l.stach@pengutronix.de Lucas Stach
+	code [159, 203]
+linus.luessing@c0d3.blue Linus Lüssing
+	unknown [2, 0]
+	code [10, 1]
+johannes.berg@intel.com Johannes Berg
+	code [29, 32]
+arik@wizery.com Arik Nemtsov
+	code [4, 3]
+kamil.toman@gmail.com Kamil Toman
+shrirang.bagul@canonical.com Shrirang Bagul
+	code [4, 0]
+darrick.wong@oracle.com Darrick J. Wong
+	code [6909, 1522]
+	build [5, 0]
+hch@infradead.org Christoph Hellwig
+	code [136, 76]
+	build [2, 2]
+	documentation [10, 14]
+dchinner@redhat.com Dave Chinner
+	code [22, 5]
+dmitry.torokhov@gmail.com Dmitry Torokhov
+	code [65, 18]
+liushuoran@huawei.com Shuoran Liu
+	code [4, 1]
+jaegeuk@kernel.org Jaegeuk Kim
+	code [60, 46]
+shengyong1@huawei.com Sheng Yong
+	code [1, 1]
+heyunlei@huawei.com Yunlei He
+	code [25, 3]
+dan.j.williams@intel.com Dan Williams
+	devel-doc [1, 0]
+	code [396, 297]
+toshi.kani@hpe.com Toshi Kani
+vishal.l.verma@intel.com Vishal Verma
+	code [7, 0]
+quorum.laval@gmail.com Quorum Laval
+	code [8, 2]
+dave.kleikamp@oracle.com Dave Kleikamp
+aford173@gmail.com Adam Ford
+	unknown [7, 5]
+	documentation [6, 0]
+dan.carpenter@oracle.com Dan Carpenter
+	code [29, 28]
+computersforpeace@gmail.com Brian Norris
+	code [19, 10]
+	documentation [2, 1]
+enwlinux@gmail.com Eric Whitney
+	code [7, 0]
+ilan.peer@intel.com Peer, Ilan
+	code [1, 0]
+luciano.coelho@intel.com Luca Coelho
+emmanuel.grumbach@intel.com Emmanuel Grumbach
+	code [2, 1]
+martin.blumenstingl@googlemail.com Martin Blumenstingl
+	code [8, 0]
+khilman@baylibre.com Kevin Hilman
+	code [18, 2]
+	build [18, 41]
+vlad.dogaru@intel.com Vlad Dogaru
+	unknown [1, 0]
+mranostay@gmail.com Matt Ranostay
+	code [506, 74]
+	build [14, 0]
+	documentation [38, 0]
+weijg.fnst@cn.fujitsu.com Wei Jiangang
+	code [5, 7]
+alex.williamson@redhat.com Alex Williamson
+	code [49, 36]
+gwenhael.goavec-merou@trabucayre.com Gwenhael Goavec-Merou
+	code [239, 0]
+	build [11, 0]
+gregor.boirie@parrot.com Gregor Boirie
+	code [1, 1]
+amsfield22@gmail.com Alison Schofield
+	code [170, 28]
+	build [12, 0]
+clifton.a.barnes@gmail.com Clifton Barnes
+	code [1, 1]
+ken.lin@advantech.com.tw Ken Lin
+	unknown [95, 0]
+	code [1, 0]
+akshay.bhat@timesys.com Akshay Bhat
+axboe@fb.com Jens Axboe
+	code [313, 310]
+	documentation [3, 3]
+slongerbeam@gmail.com Steve Longerbeam
+	code [454, 0]
+	build [1, 1]
+gnuiyl@gmail.com Liu Ying
+	code [185, 80]
+vz@mleia.com Vladimir Zapolskiy
+	unknown [1, 1]
+jaswinder.singh@linaro.org Jassi Brar
+rrice@broadcom.com Rob Rice
+	build [1, 0]
+rafal@milecki.pl Rafał Miłecki
+	code [153, 8]
+	unknown [38, 1]
+	devel-doc [7, 0]
+	documentation [2, 18]
+	build [14, 0]
+j.anaszewski@samsung.com Jacek Anaszewski
+jdelvare@suse.de Jean Delvare
+	code [1, 0]
+jani.nikula@intel.com Jani Nikula
+	code [27, 25]
+	build [23, 28]
+chris@chris-wilson.co.uk Chris Wilson
+	unknown [3, 0]
+	code [8597, 8078]
+	build [6, 3]
+david.weinehall@linux.intel.com David Weinehall
+	code [709, 734]
+mroos@linux.ee Meelis Roos
+gregory.clement@free-electrons.com Gregory CLEMENT
+	unknown [4, 0]
+	code [0, 1]
+	build [1, 0]
+schwidefsky@de.ibm.com Martin Schwidefsky
+	unknown [169, 0]
+	code [923, 1155]
+	build [6, 0]
+freude@linux.vnet.ibm.com Harald Freudenberger
+jacob.e.keller@intel.com Jacob Keller
+	code [131, 100]
+krishneil.k.singh@intel.com Krishneil Singh
+daniel.lezcano@linaro.org Daniel Lezcano
+	code [1, 0]
+tglx@linutronix.de Thomas Gleixner
+khoroshilov@ispras.ru Alexey Khoroshilov
+	code [15, 7]
+jkosina@suse.cz Jiri Kosina
+	code [85, 57]
+conselvan2@gmail.com Ander Conselvan de Oliveira
+jorik@kippendief.biz Jorik Jonker
+	code [8, 8]
+paul.gortmaker@windriver.com Paul Gortmaker
+	code [81, 380]
+vidya@cumulusnetworks.com Vidya Sagar Ravipati
+	code [9, 2]
+james.morse@arm.com James Morse
+	devel-doc [0, 1]
+	code [239, 86]
+	build [0, 1]
+olin@rivetnetworks.com Owen Lin
+	code [3, 0]
+andrea.merello@gmail.com Andrea Merello
+	code [105, 6]
+robert.jarzmik@free.fr Robert Jarzmik
+	code [7, 4]
+tom@herbertland.com Tom Herbert
+	code [848, 476]
+	build [8, 0]
+	documentation [136, 0]
+maorg@mellanox.com Maor Gottlieb
+	code [1, 1]
+saeedm@mellanox.com Saeed Mahameed
+	code [119, 132]
+eranbe@mellanox.com Eran Ben Elisha
+	code [83, 14]
+kamalh@mellanox.com Kamal Heib
+	code [4, 3]
+tariqt@mellanox.com Tariq Toukan
+	code [13, 2]
+cyrilbur@gmail.com Cyril Bur
+	code [47, 28]
+	documentation [2, 0]
+ldufour@linux.vnet.ibm.com Laurent Dufour
+benh@kernel.crashing.org Benjamin Herrenschmidt
+	code [74, 16]
+	build [1, 0]
+mukesh02@linux.vnet.ibm.com Mukesh Ojha
+	code [12, 2]
+hegdevasant@linux.vnet.ibm.com Vasant Hegde
+chf.fritz@googlemail.com Christoph Fritz
+	code [14, 0]
+contact@paulk.fr Paul Kocialkowski
+	code [5, 1]
+mario.kleiner.de@gmail.com Mario Kleiner
+	code [3, 3]
+robdclark@gmail.com Rob Clark
+	code [41, 6]
+sagi@grimberg.me Sagi Grimberg
+	code [15, 20]
+valentinrothberg@gmail.com Valentin Rothberg
+	code [184, 182]
+	build [0, 1]
+icenowy@aosc.xyz Icenowy Zheng
+	unknown [109, 0]
+	devel-doc [10, 1]
+	code [5, 5]
+	build [1, 0]
+tcpip@t-online.de Bernd Dietzel
+mika.kuoppala@intel.com Mika Kuoppala
+joonas.lahtinen@linux.intel.com Joonas Lahtinen
+caiqian@redhat.com CAI Qian
+zyjzyj2000@gmail.com Zhu Yanjun
+	code [1, 2]
+jcooper@solarflare.com Jon Cooper
+	code [23, 10]
+ecree@solarflare.com Edward Cree
+	code [11, 7]
+andrew.rybchenko@oktetlabs.ru Andrew Rybchenko
+	code [2, 1]
+richard.alpe@ericsson.com Richard Alpe
+	code [631, 106]
+jon.maloy@ericsson.com Jon Maloy
+	code [52, 47]
+tobias.regnery@gmail.com Tobias Regnery
+	code [71, 4]
+nelson.chang@mediatek.com Nelson Chang
+	code [75, 35]
+ross.zwisler@linux.intel.com Ross Zwisler
+	code [11, 6]
+	build [0, 13]
+jmoyer@redhat.com Jeff Moyer
+akpm@linux-foundation.org Andrew Morton
+	unknown [0, 8]
+	code [3, 4]
+m.abhilash-kumar@hpe.com Abhilash Kumar Mulumudi
+davej@codemonkey.org.uk Dave Jones
+mhocko@suse.com Michal Hocko
+	code [10, 1]
+	build [8, 1]
+aarcange@redhat.com Andrea Arcangeli
+	code [6, 1]
+subashab@codeaurora.org Subash Abhinov Kasiviswanathan
+	code [45, 2]
+joe@perches.com Joe Perches
+	unknown [11, 2]
+	code [123, 45]
+idosch@mellanox.com Ido Schimmel
+	code [422, 422]
+	build [2, 0]
+	documentation [4, 9]
+jiri@mellanox.com Jiri Pirko
+	code [20, 8]
+s.nawrocki@samsung.com Sylwester Nawrocki
+	code [231, 279]
+john.c.harrison@intel.com John Harrison
+thomas.daniel@intel.com Thomas Daniel
+lftan@altera.com Ley Foon Tan
+	code [78, 31]
+bhelgaas@google.com Bjorn Helgaas
+	code [21, 21]
+ivecera@redhat.com Ivan Vecera
+	code [0, 1]
+pabeni@redhat.com Paolo Abeni
+	code [50, 22]
+nikolay@cumulusnetworks.com Nikolay Aleksandrov
+	code [46, 76]
+lucien.xin@gmail.com Xin Long
+	code [3, 3]
+tjlishuang@yeah.net Li Shuang
+zren@suse.com Eric Ren
+	code [106, 52]
+teigland@redhat.com David Teigland
+nsekhar@ti.com Sekhar Nori
+	unknown [1, 1]
+s.mueller-klieser@phytec.de Stefan Müller-Klieser
+	unknown [62, 0]
+t-kristo@ti.com Tero Kristo
+	unknown [6, 0]
+	code [23, 0]
+d-gerlach@ti.com Dave Gerlach
+andy.gross@linaro.org Andy Gross
+	code [0, 48]
+	build [0, 1]
+dledford@redhat.com Doug Ledford
+	code [5, 4]
+shiraz.saleem@intel.com Shiraz Saleem
+	code [6, 8]
+mustafa.ismail@intel.com Mustafa Ismail
+	code [11, 5]
+sassmann@redhat.com Stefan Assmann
+marcin.nowakowski@imgtec.com Marcin Nowakowski
+	code [4, 4]
+boris.brezillon@free-electrons.com Boris Brezillon
+	code [11, 2]
+sergei.shtylyov@cogentembedded.com Sergei Shtylyov
+	unknown [304, 6]
+	code [721, 0]
+mareklindner@neomailbox.ch Marek Lindner
+sven@narfation.org Sven Eckelmann
+	code [27, 1]
+sw@simonwunderlich.de Simon Wunderlich
+	code [1, 1]
+chuhu@redhat.com Chunyu Hu
+pmladek@suse.com Petr Mladek
+	code [7, 4]
+zhengsq@rock-chips.com Shunqian Zheng
+	unknown [2, 2]
+wxt@rock-chips.com Caesar Wang
+zhengxing@rock-chips.com Xing Zheng
+	unknown [2, 2]
+	code [382, 5]
+	build [14, 0]
+	documentation [15, 0]
+johan@hovoldconsulting.com Johan Hovold
+	unknown [4, 9]
+	code [414, 236]
+rui.silva@linaro.org Rui Miguel Silva
+	code [58, 25]
+huang_kris@projectara.com Kris Huang
+	code [151, 39]
+dtwlin@google.com David Lin
+	code [18, 17]
+mgreer@animalcreek.com Mark Greer
+	code [5, 103]
+vaibhav.agarwal@linaro.org Vaibhav Agarwal
+	code [605, 704]
+catalin.marinas@arm.com Catalin Marinas
+	code [17, 10]
+chris.packham@alliedtelesis.co.nz Chris Packham
+	unknown [9, 0]
+jgross@suse.com Juergen Gross
+	code [18, 12]
+david.vrabel@citrix.com David Vrabel
+aaro.koskinen@iki.fi Aaro Koskinen
+	code [9, 1]
+gmbnomis@gmail.com Simon Baatz
+	unknown [1, 1]
+mark.rutland@arm.com Mark Rutland
+	devel-doc [9, 10]
+	code [122, 70]
+	build [3, 0]
+jason@lakedaemon.net Jason Cooper
+	unknown [8, 1]
+fabf@skynet.be Fabian Frederick
+	code [77, 84]
+	build [2, 6]
+thomas.petazzoni@free-electrons.com Thomas Petazzoni
+	unknown [15, 0]
+	code [209, 16]
+	build [4, 0]
+	documentation [25, 0]
+pawel.moll@arm.com Pawel Moll
+	code [35, 10]
+	documentation [10, 6]
+bfoster@redhat.com Brian Foster
+	code [1, 2]
+cmaiolino@redhat.com Carlos Maiolino
+tyreld@linux.vnet.ibm.com Tyrel Datwyler
+	code [15, 2]
+hkallweit1@gmail.com Heiner Kallweit
+	code [54, 80]
+brking@linux.vnet.ibm.com Brian King
+	code [130, 24]
+halves@linux.vnet.ibm.com Heitor Ricardo Alves de Siqueira
+krisman@linux.vnet.ibm.com Gabriel Krisman Bertazi
+	code [22, 13]
+john.garry@huawei.com John Garry
+	code [256, 8]
+hare@suse.com Hannes Reinecke
+shawn.lin@rock-chips.com Shawn Lin
+	code [17, 17]
+treding@nvidia.com Thierry Reding
+	code [114, 87]
+olof@lixom.net Olof Johansson
+anjali.singhai@intel.com Anjali Singhai Jain
+	code [30, 12]
+xander.huff@ni.com Xander Huff
+	code [5, 3]
+nathan.sullivan@ni.com Nathan Sullivan
+	code [7, 5]
+skhare@vmware.com Shrikrishna Khare
+	code [5, 3]
+lucas.demarchi@intel.com Lucas De Marchi
+	code [104, 49]
+jose.souza@intel.com José Roberto de Souza
+	code [9, 4]
+christian.ruppert@alitech.com Christian Ruppert
+jarkko.nikula@linux.intel.com Jarkko Nikula
+	code [145, 55]
+weifeng.voon@intel.com Weifeng Voon
+	code [72, 21]
+jglauber@cavium.com Jan Glauber
+	devel-doc [8, 0]
+	code [1447, 1013]
+	build [25, 2]
+heiko.carstens@de.ibm.com Heiko Carstens
+	code [27, 4]
+borntraeger@de.ibm.com Christian Borntraeger
+	code [10, 12]
+	build [4, 4]
+adrian.hunter@intel.com Adrian Hunter
+	code [60, 36]
+srinivas.kandagatla@linaro.org Srinivas Kandagatla
+	code [7, 2]
+	build [2, 0]
+bhe@redhat.com Baoquan He
+	code [14, 37]
+	documentation [13, 7]
+corbet@lwn.net Jonathan Corbet
+	code [1, 1]
+	unknown [2893, 981]
+	devel-doc [5, 5]
+	documentation [0, 1703]
+	build [1, 1]
+luiz.von.dentz@intel.com Luiz Augusto von Dentz
+	code [2, 2]
+marcel@holtmann.org Marcel Holtmann
+noralf@tronnes.org Noralf Trønnes
+	code [70, 1]
+martink@posteo.de Martin Kepplinger
+	code [1, 0]
+johnny.chuang@emc.com.tw Johnny Chuang
+	code [20, 11]
+takahiro.akashi@linaro.org AKASHI Takahiro
+	code [13, 4]
+panand@redhat.com Pratyush Anand
+	code [13, 16]
+npiggin@gmail.com Nicholas Piggin
+	code [41, 23]
+	build [6, 6]
+tim.kryger@gmail.com Tim Kryger
+rex.zhu@amd.com Rex Zhu
+	code [608, 51]
+	build [1, 1]
+dahi@linux.vnet.ibm.com David Hildenbrand
+	code [6, 4]
+haoqf@linux.vnet.ibm.com Hao QingFeng
+shaun@tancheff.com Shaun Tancheff
+	code [323, 88]
+tatyana.e.nikolova@intel.com Tatyana Nikolova
+	code [1, 21]
+dh.herrmann@gmail.com David Herrmann
+	code [11, 12]
+	build [79, 57]
+aryabinin@virtuozzo.com Andrey Ryabinin
+	code [99, 97]
+salil.mehta@huawei.com Salil
+	code [228, 75]
+yisen.zhuang@huawei.com Yisen Zhuang
+mchehab@s-opensource.com Mauro Carvalho Chehab
+	unknown [5688, 5405]
+	image [0, 0]
+	code [116, 54]
+	build [13, 7]
+	documentation [0, 0]
+hverkuil@xs4all.nl Hans Verkuil
+	unknown [64, 43]
+	devel-doc [0, 8]
+	code [150, 5844]
+	build [3, 112]
+becher.jannik@gmail.com Jannik Becher
+	code [1, 1]
+paulus@ozlabs.org Paul Mackerras
+	code [17, 0]
+	build [9, 11]
+david@gibson.dropbear.id.au David Gibson
+sd@queasysnail.net Sabrina Dubroca
+	code [53, 20]
+fdmanana@suse.com Filipe Manana
+	code [8, 34]
+dsterba@suse.com David Sterba
+clm@fb.com Chris Mason
+	code [3, 2]
+bo.li.liu@oracle.com Liu Bo
+	code [38, 1]
+jeffm@suse.com Jeff Mahoney
+	code [47, 19]
+osandov@fb.com Omar Sandoval
+wangxg.fnst@cn.fujitsu.com Wang Xiaoguang
+	code [25, 1]
+quwenruo@cn.fujitsu.com Qu Wenruo
+	code [190, 53]
+mfasheh@suse.de Mark Fasheh
+rgoldwyn@suse.com Goldwyn Rodrigues
+eu@felipetonello.com Felipe F. Tonello
+	code [196, 126]
+jaret.cantu@timesys.com Jaret Cantu
+	code [61, 0]
+	documentation [10, 0]
+philipp.gesang@intra2net.com Philipp Gesang
+	code [57, 6]
+william.wu@rock-chips.com William Wu
+	code [49, 0]
+	documentation [70, 0]
+jussi.kivilinna@haltian.com Jussi Kivilinna
+	code [155, 5]
+cpaul@redhat.com Lyude
+	code [827, 236]
+matthew.d.roper@intel.com Matt Roper
+	code [56, 4]
+tjaalton@ubuntu.com Timo Aaltonen
+lorenzo@google.com Lorenzo Colitti
+	code [73, 30]
+chuck.lever@oracle.com Chuck Lever
+	code [30, 14]
+bfields@fieldses.org J. Bruce Fields
+heinzm@redhat.com Heinz Mauelshagen
+	code [55, 42]
+mchristi@redhat.com Mike Christie
+	unknown [20, 3]
+	code [127, 70]
+idryomov@gmail.com Ilya Dryomov
+	unknown [6, 0]
+	code [1020, 141]
+elder@linaro.org Alex Elder
+dianders@chromium.org Douglas Anderson
+adobriyan@gmail.com Alexey Dobriyan
+	code [30, 68]
+	build [1, 0]
+stefan.wahren@i2se.com Stefan Wahren
+	unknown [58, 0]
+	build [2, 1]
+stanimir.varbanov@linaro.org Stanimir Varbanov
+	code [1, 0]
+sakari.ailus@linux.intel.com Sakari Ailus
+	code [1, 4]
+stev391@gmail.com Stephen Backway
+	unknown [1, 0]
+	code [131, 1]
+matthew.auld@intel.com Matthew Auld
+	code [11, 9]
+vinceh@nvidia.com Vince Hsu
+	code [10, 22]
+boris.ostrovsky@oracle.com Boris Ostrovsky
+	code [79, 78]
+yizhan@redhat.com Yi Zhang
+tomasz.majchrzak@intel.com Tomasz Majchrzak
+	code [5, 4]
+songliubraving@fb.com Song Liu
+	code [12, 9]
+jbeulich@suse.com Jan Beulich
+	code [1, 1]
+rschuetz@uni-koblenz.de Richard Schütz
+laurent.pinchart@ideasonboard.com Laurent Pinchart
+	code [101, 51]
+yotamg@mellanox.com Yotam Gigi
+	code [1, 1]
+sheng@yasker.org Sheng Yang
+ashish.samant@oracle.com Ashish Samant
+dhinakaran.pandiyan@intel.com Pandiyan, Dhinakaran
+	code [21, 14]
+rodrigo.vivi@intel.com Rodrigo Vivi
+	code [8, 15]
+selvin.xavier@broadcom.com Selvin Xavier
+	code [17, 13]
+devesh.sharma@broadcom.com Devesh Sharma
+leonro@mellanox.com Leon Romanovsky
+	devel-doc [1, 1]
+loberman@redhat.com Laurence Oberman
+xinliang.liu@linaro.org Xinliang Liu
+	unknown [95, 0]
+frederic.dalleau@collabora.co.uk Frederic Dalleau
+	code [2, 0]
+tiffany.lin@mediatek.com Tiffany Lin
+	code [46, 36]
+felix.kuehling@amd.com Felix Kuehling
+	code [4, 4]
+ming.lei@canonical.com Ming Lei
+	code [22, 0]
+sroesner-kernelorg@roesner-online.de Sebastian Roesner
+bcache@lists.ewheeler.net Eric Wheeler
+	code [2, 1]
+digetx@gmail.com Dmitry Osipenko
+	code [8, 1]
+luto@kernel.org Andy Lutomirski
+	code [367, 304]
+	build [35, 0]
+mhiramat@kernel.org mhiramat@kernel.org
+	code [166, 48]
+	documentation [18, 13]
+daniel.thompson@linaro.org Daniel Thompson
+	code [3, 1]
+alexander.shishkin@linux.intel.com Alexander Shishkin
+zhong@linux.vnet.ibm.com Li Zhong
+	code [1, 1]
+wenqian.yu@intel.com Wenqian Yu
+aleksandr.o.makarov@gmail.com Aleksandr Makarov
+	code [9, 0]
+ezequiel@vanguardiasur.com.ar Ezequiel Garcia
+	code [81, 58]
+steffen.klassert@secunet.com Steffen Klassert
+	code [1, 1]
+pavel@ucw.cz Pavel Machek
+	code [380, 0]
+	build [8, 0]
+brgerst@gmail.com Brian Gerst
+	code [192, 215]
+kuninori.morimoto.gx@renesas.com Kuninori Morimoto
+	code [1580, 1248]
+	build [12, 12]
+	documentation [32, 27]
+pbrobinson@gmail.com Peter Robinson
+	build [1, 0]
+anisse@astier.eu Anisse Astier
+	code [4, 3]
+wanpeng.li@hotmail.com Wanpeng Li
+	code [37, 8]
+cosurgi@gmail.com Janek Kozicki
+yu.c.chen@intel.com Chen Yu
+rostedt@goodmis.org Steven Rostedt
+	code [11, 3]
+bjsdjshi@linux.vnet.ibm.com Dong Jia Shi
+	code [0, 1]
+soheil@google.com Soheil Hassas Yeganeh
+	code [1, 5]
+francisyyan@google.com Francis Yan
+pankaj.dubey@samsung.com Pankaj Dubey
+	code [0, 24]
+rnayak@codeaurora.org Rajendra Nayak
+	unknown [156, 0]
+	code [10, 0]
+marc.zyngier@arm.com Marc Zyngier
+	unknown [6, 6]
+	code [52, 5]
+	documentation [1, 0]
+hare@suse.de Hannes Reinicke
+	code [23, 4]
+lduncan@suse.com Lee Duncan
+mrochs@linux.vnet.ibm.com Matthew R. Ochs
+	code [111, 135]
+	documentation [39, 5]
+ramirose@gmail.com Rami Rosen
+	code [3, 9]
+lrichard@redhat.com Lance Richardson
+	code [35, 2]
+rabinv@axis.com Rabin Vincent
+	code [10, 7]
+larper@axis.com Lars Persson
+phil@nwl.cc Phil Sutter
+	code [79, 71]
+hariprasad@chelsio.com Hariprasad Shenai
+	code [4164, 110]
+	build [27, 1]
+ycheng@google.com Yuchung Cheng
+	code [9, 15]
+	documentation [23, 22]
+piotr.jerzy.jurkiewicz@gmail.com Piotr Jurkiewicz
+ncardwell@google.com Neal Cardwell
+jm@lentin.co.uk Jamie Lentin
+	code [33, 4]
+hofrat@osadl.org Nicholas Mc Guire
+	code [2, 2]
+zefir.kurtisi@neratec.com Zefir Kurtisi
+	code [16, 7]
+labbott@redhat.com Laura Abbott
+	code [38, 285]
+	documentation [1, 1]
+keith.busch@intel.com Keith Busch
+	code [9, 2]
+grzegorz.koczot@intel.com Grzegorz Koczot
+miroslaw.drost@intel.com Miroslaw Drost
+stefan@hello-penguin.com Stefan Traby
+richard@nod.at Richard Weinberger
+	build [1, 0]
+vincent.stehle@intel.com Vincent Stehlé
+	code [3, 2]
+artem.bityutskiy@linux.intel.com Artem Bityutskiy
+zeccav@gmail.com Vittorio Zecca
+nick@shmanahar.org Nick Dyer
+	unknown [490, 7]
+	code [91, 33]
+andre.przywara@arm.com Andre Przywara
+	unknown [2, 0]
+	code [117, 45]
+dekien@gmail.com Jeroen Dekien
+niklas.soderlund+renesas@ragnatech.se Niklas Söderlund
+	code [271, 237]
+	build [1, 1]
+sthemmin@microsoft.com Stephen Hemminger
+	code [305, 262]
+rui.teng@linux.vnet.ibm.com Rui Teng
+	build [1, 1]
+jolsa@kernel.org Jiri Olsa
+	devel-doc [1, 0]
+	code [283, 60]
+	build [3, 3]
+	documentation [3, 0]
+xypron.glpk@gmx.de Heinrich Schuchardt
+	code [21, 52]
+alexandre.f.demers@gmail.com Alexandre Demers
+	code [13, 15]
+funfunctor@folklore1984.net Edward O'Callaghan
+bharat@chelsio.com Bharat Potnuri
+	code [10, 5]
+swise@opengridcomputing.com Steve Wise
+	code [5, 1]
+arvind.yadav.cs@gmail.com Arvind Yadav
+	code [10, 2]
+seanpaul@chromium.org Sean Paul
+	code [305, 167]
+ykk@rock-chips.com Yakir Yang
+mark.yao@rock-chips.com Mark Yao
+	code [84, 84]
+kbeldan@baylibre.com Karl Beldan
+	unknown [226, 32]
+	code [3, 0]
+	build [8, 0]
+	documentation [4, 0]
+linda.knippers@hpe.com Linda Knippers
+shreyas.nc@intel.com Shreyas NC
+	devel-doc [1, 0]
+	code [953, 190]
+kchsu0@nuvoton.com John Hsu
+	code [1200, 50]
+	build [7, 0]
+	documentation [16, 0]
+michael.weiser@gmx.de Michael Weiser
+	build [1, 0]
+robin.murphy@arm.com Robin Murphy
+	unknown [4, 5]
+	code [25, 6]
+christoffer.dall@linaro.org Christoffer Dall
+	code [83, 39]
+vladimir.murzin@arm.com Vladimir Murzin
+	code [2, 9]
+	build [0, 3]
+ivan.khoronzhuk@linaro.org Ivan Khoronzhuk
+	code [979, 658]
+davejwatson@fb.com Dave Watson
+	code [0, 3]
+jhs@mojatatu.com Jamal Hadi Salim
+	code [10, 8]
+rahul.lakkireddy@chelsio.com Rahul Lakkireddy
+	code [889, 4]
+	build [1, 1]
+appanad@xilinx.com Kedareswara rao Appana
+shmulik.ladkani@gmail.com Shmulik Ladkani
+	code [5, 3]
+wenxu@ucloud.cn wenxu
+mmanning@brocade.com Mike Manning
+	code [23, 15]
+mikko.rapeli@iki.fi Mikko Rapeli
+	code [59, 13]
+yehuday@marvell.com Yehuda Yitschak
+markus.heiser@darmarit.de Markus Heiser
+	unknown [60, 13]
+	code [245, 1]
+	build [50, 7]
+	documentation [2, 1]
+aduggan@synaptics.com Andrew Duggan
+	code [2, 1]
+nitinchaudhary1289@gmail.com Nitin Chaudhary
+benjamin.tissoires@redhat.com Benjamin Tissoires
+christian.gromm@microchip.com Christian Gromm
+	code [244, 223]
+jsimmons@infradead.org James Simmons
+	code [6, 7]
+andreas.dilger@intel.com Andreas Dilger
+ira.weiny@intel.com Ira Weiny
+	code [2, 0]
+dean.luick@intel.com Dean Luick
+dennis.dalessandro@intel.com Dennis Dalessandro
+mike.marciniszyn@intel.com Mike Marciniszyn
+	code [27, 23]
+mitko.haralanov@intel.com Mitko Haralanov
+	code [18, 1]
+easwar.hariharan@intel.com Easwar Hariharan
+	code [38, 2]
+bonstra@bonstra.fr.eu.org Hugo Grostabussiat
+	unknown [1, 1]
+don.hiatt@intel.com Don Hiatt
+jubin.john@intel.com Jubin John
+haggaie@mellanox.com Haggai Eran
+tadeusz.struk@intel.com Tadeusz Struk
+	code [13, 7]
+sebastian.sanchez@intel.com Sebastian Sanchez
+stefan.mavrodiev@gmail.com Stefan Mavrodiev
+	unknown [226, 0]
+	build [1, 0]
+mengdong.lin@linux.intel.com Mengdong Lin
+	code [2, 0]
+matthias.bgg@gmail.com Matthias Brugger
+ck.hu@mediatek.com CK Hu
+	unknown [77, 0]
+cawa.cheng@mediatek.com Cawa Cheng
+jie.qiu@mediatek.com Jie Qiu
+djkurtz@chromium.org Daniel Kurtz
+	code [41, 76]
+sj38.park@gmail.com SeongJae Park
+	code [6, 6]
+	documentation [3138, 2]
+paulmck@linux.vnet.ibm.com Paul E. McKenney
+	documentation [22, 0]
+bigeasy@linutronix.de Sebastian Andrzej Siewior
+	code [31, 43]
+jaffe1@gmail.com Johan Fjeldtvedt
+linuxdev.baldrick@gmail.com David Binderman
+nbd@nbd.name Felix Fietkau
+	code [9, 8]
+songjun.wu@microchip.com Songjun Wu
+	code [1679, 0]
+	devel-doc [8, 0]
+	documentation [65, 0]
+	build [13, 0]
+james.hartley@imgtec.com James Hartley
+	code [70, 13]
+sifan.naeem@imgtec.com Sifan Naeem
+imre.deak@intel.com Imre Deak
+	code [274, 251]
+david.s.gordon@intel.com Dave Gordon
+	code [75, 55]
+ccr@tnsp.org Matti Hämäläinen
+strongbox8@zoho.com perr perr
+	code [1, 5]
+jszhang@marvell.com Jisheng Zhang
+	code [38, 30]
+honghui.zhang@mediatek.com Honghui Zhang
+	code [1, 1]
+jroedel@suse.de Joerg Roedel
+	code [3, 3]
+paulo.r.zanoni@intel.com Paulo Zanoni
+	code [11, 3]
+nevola@gmail.com Laura Garcia Liebana
+	code [381, 2]
+	build [14, 0]
+daniel@zonque.org Daniel Mack
+	code [14, 11]
+norman.nolte@gmx.net Norman Nolte
+t.gresens@intershop.de Thomas Gresens
+dev@andree.sk Andrej Krutak
+	code [8, 7]
+stefanha@gmail.com Stefan Hajnoczi
+	code [6, 2]
+b.galvani@gmail.com Beniamino Galvani
+	code [118, 228]
+kwangwoo.lee@sk.com Kwangwoo Lee
+	code [44, 47]
+nicolassaenzj@gmeil.com Nicolas Saenz Julienne
+	code [3, 3]
+dinguyen@opensource.altera.com Dinh Nguyen
+	code [23, 0]
+bgolaszewski@baylibre.com Bartosz Golaszewski
+	code [13, 2]
+glider@google.com Alexander Potapenko
+	code [9, 7]
+christophe.leroy@c-s.fr Christophe Leroy
+	code [16, 12]
+boqun.feng@gmail.com Boqun Feng
+	code [1, 1]
+mauricfo@linux.vnet.ibm.com Mauricio Faria de Oliveira
+	code [46, 2]
+gwshan@linux.vnet.ibm.com Gavin Shan
+	code [1, 1]
+andrew.donnellan@au1.ibm.com Andrew Donnellan
+	code [10, 1]
+emoly.liu@intel.com Emoly Liu
+	code [55, 63]
+srinivas.pandruvada@linux.intel.com Srinivas Pandruvada
+	devel-doc [7, 0]
+	code [7352, 1]
+	build [43, 0]
+	documentation [454, 0]
+zhiyong.tao@mediatek.com Zhiyong Tao
+	code [291, 0]
+	build [14, 0]
+	documentation [29, 21]
+tony.luck@intel.com Tony Luck
+	devel-doc [6, 0]
+	code [1121, 0]
+	build [9, 0]
+louie.lu@hopebaytech.com Louie Lu
+	code [1, 1]
+lambert.quentin@gmail.com Quentin Lambert
+	code [10, 8]
+shiva@exdev.nl Shiva Kerdel
+	code [40, 40]
+gustavo.padovan@collabora.co.uk Gustavo Padovan
+	code [214, 96]
+	build [14, 14]
+	documentation [14, 0]
+aditya.shankar@microchip.com Aditya Shankar
+	devel-doc [2, 6]
+loic.lefort@atmel.com Loic Lefort
+ganesh.krishna@microchip.com Ganesh Krishna
+nicolas.ferre@atmel.com Nicolas Ferre
+josh@awful.name Joshua Houghton
+	devel-doc [0, 1]
+	code [2, 4]
+sheldon.anthony.sheldon@gmail.com Anthony Sheldon
+	code [1, 3]
+lars@metafoo.de Lars-Peter Clausen
+	code [28, 10]
+andrey.shvetsov@k2l.de Andrey Shvetsov
+john.hammond@intel.com John L. Hammond
+	code [1173, 1367]
+di.wang@intel.com wangdi
+	code [3339, 1118]
+jinshan.xiong@intel.com Jinshan Xiong
+	code [312, 239]
+bob.glossman@intel.com Bob Glossman
+dmitry.eremin@intel.com Dmitry Eremin
+	code [23, 19]
+jian.yu@intel.com Jian Yu
+	code [16, 232]
+viro@zeniv.linux.org.uk Al Viro
+	code [246, 597]
+doug.s.oucharek@intel.com Doug Oucharek
+	code [26, 5]
+amir.shehata@intel.com Amir Shehata
+liang.zhen@intel.com Liang Zhen
+	code [18, 28]
+alexander.boyko@seagate.com Alexander Boyko
+	code [6, 0]
+alexey.lyashkov@seagate.com Alexey Lyashkov
+alexander.zarochentsev@seagate.com Alexander Zarochentsev
+fan.yong@intel.com Fan Yong
+	code [269, 227]
+mike.pershin@intel.com Mike Pershin
+	code [36, 22]
+hongchao.zhang@intel.com Hongchao Zhang
+	code [74, 47]
+lixi@ddn.com Li Xi
+alexey.zhuravlev@intel.com Alex Zhuravlev
+andriy_skulysh@xyratex.com Andriy Skulysh
+	code [3, 1]
+amk@cray.com Ann Koehler
+lai.siyao@intel.com Lai Siyao
+	code [76, 115]
+nathaniel.l.clark@intel.com Nathaniel Clark
+	code [3, 0]
+behlendorf1@llnl.gov Brian Behlendorf
+	code [64, 27]
+he.huang@intel.com Isaac Huang
+bobijam@gmail.com Bobi Jam
+paf@cray.com Patrick Farrell
+	code [19, 0]
+jacques-charles.lafoucriere@cea.fr jacques-Charles Lafoucriere
+yawei.niu@intel.com Niu Yawei
+	code [6, 5]
+morrone2@llnl.gov Christopher J. Morrone
+	code [1, 1]
+robert.read@intel.com Robert Read
+gregoire.pichon@bull.net Gregoire Pichon
+	code [320, 2]
+hornc@cray.com Chris Horn
+	code [25, 12]
+vitaly_fertman@xyratex.com Vitaly Fertman
+	code [148, 66]
+arshad.hussain@seagate.com Mirza Arshad Mirza Hussain
+spimpale@ddn.com Swapnil Pimpale
+bruno.faccini@intel.com Faccini Bruno
+surya1@llnl.gov Prakash Surya
+haasken@cray.com Ryan Haasken
+	code [7, 2]
+sebastien.buisson@bull.net Sebastien Buisson
+johanna@mjao.org Johanna Abrahamsson
+	code [20, 20]
+giorgio.nicole@arcor.de Giorgio Dal Molin
+	code [2, 1]
+tremyfr@gmail.com Philippe Reynes
+	code [42, 52]
+donald.c.skidmore@intel.com Don Skidmore
+	code [66, 2]
+emil.s.tantilov@intel.com Emil Tantilov
+	code [134, 51]
+veola.nazareth@intel.com Veola Nazareth
+	code [3, 1]
+deller@gmx.de Helge Deller
+	code [5, 25]
+gyang@vmware.com Guolin Yang
+u9012063@gmail.com William Tu
+	code [326, 0]
+	build [1, 0]
+haiyangz@microsoft.com Haiyang Zhang
+	code [211, 42]
+alexander.h.duyck@intel.com Alexander Duyck
+	code [16, 7]
+avinash.dayanand@intel.com Avinash Dayanand
+	code [3, 0]
+harshitha.ramamurthy@intel.com Harshitha Ramamurthy
+	code [2, 2]
+catherine.sullivan@intel.com Catherine Sullivan
+	code [25, 0]
+carolyn.wyborny@intel.com Carolyn Wyborny
+	code [88, 42]
+mitch.a.williams@intel.com Mitch Williams
+	code [70, 12]
+marcelo.leitner@gmail.com Marcelo Ricardo Leitner
+	code [7, 17]
+tlfalcon@linux.vnet.ibm.com Thomas Falcon
+	code [34, 2]
+oulijun@huawei.com oulijun
+	code [162, 0]
+xavier.huwei@huawei.com Wei Hu
+zhaonenglong@hisilicon.com Nenglong Zhao
+lisheng011@huawei.com Sheng Li
+ogerlitz@mellanox.com Or Gerlitz
+	code [30, 14]
+hadarh@mellanox.com Hadar Hen Zion
+	code [281, 49]
+amir@vadai.me Amir Vadai
+	code [10, 1]
+paulb@mellanox.com Paul Blakey
+	code [54, 31]
+mohamad@mellanox.com Mohamad Haj Yahia
+	code [29, 30]
+vgupta@synopsys.com Vineet Gupta
+	code [23, 7]
+shunli.wang@mediatek.com Shunli Wang
+	code [569, 0]
+jamesjj.liao@mediatek.com James Liao
+	code [8, 8]
+	documentation [82, 7]
+	build [25, 3]
+erin.lo@mediatek.com Erin Lo
+blogic@openwrt.org John Crispin
+xiaolong.ye@intel.com kernel test robot
+liavr@mellanox.com Liav Rehana
+	code [2, 2]
+abrodkin@synopsys.com Alexey Brodkin
+bruno@wolff.to Bruno Wolff III
+flora.cui@amd.com Flora Cui
+	code [89, 63]
+qingqing.wang@amd.com Ken Wang
+michel.daenzer@amd.com Michel Dänzer
+	code [260, 215]
+luwei.kang@intel.com Luwei Kang
+	code [2, 1]
+rkrcmar@redhat.com Radim Krčmář
+	code [57, 63]
+bsd@redhat.com Bandan Das
+	code [13, 14]
+james.hogan@imgtec.com James Hogan
+	code [81, 45]
+james.bottomley@hansenpartnership.com James Bottomley
+rui.zhang@intel.com Zhang Rui
+brendan.jackman@arm.com Brendan Jackman
+	code [16, 5]
+bin.gao@linux.intel.com Bin Gao
+	code [14, 0]
+james_p_freyensee@linux.intel.com Jay Freyensee
+	code [33, 11]
+michal.simek@xilinx.com Michal Simek
+	unknown [39, 0]
+qca_ailizaro@qca.qualcomm.com Lazar Alexei
+	code [2, 14]
+eduardo.abinader@riverbed.com Eduardo Abinader
+	code [4, 2]
+me@bobcopeland.com Bob Copeland
+	code [1, 1]
+julian.calaby@gmail.com Julian Calaby
+lucile.quirion@savoirfairelinux.com Lucile Quirion
+	unknown [583, 0]
+	code [190, 0]
+	build [10, 0]
+	documentation [36, 0]
+matt.evans@arm.com Matt Evans
+david.daney@cavium.com David Daney
+	code [10, 3]
+takeshi.kihara.df@renesas.com Takeshi Kihara
+	code [2662, 0]
+	build [6, 0]
+	documentation [1, 0]
+ulrich.hecht+renesas@gmail.com Ulrich Hecht
+atul.gupta@chelsio.com Atul Gupta
+xlpang@redhat.com Xunlei Pang
+	code [2, 2]
+daniel@iogearbox.net Daniel Borkmann
+	code [291, 100]
+paul.durrant@citrix.com Paul Durrant
+	code [107, 2]
+oneukum@suse.com Oliver Neukum
+	code [10, 7]
+marco.gra@gmail.com Marco Grassi
+appana.durga.rao@xilinx.com Appana Durga Kedareswara Rao
+	code [112, 0]
+	build [8, 0]
+	documentation [35, 0]
+shubhrajyoti.datta@xilinx.com shubhrajyoti.datta@xilinx.com
+	code [29, 6]
+	documentation [1, 0]
+kent.overstreet@gmail.com Kent Overstreet
+	code [1, 1]
+chad.dupuis@qlogic.com Chad Dupuis
+jejb@linux.vnet.ibm.com James E.J. Bottomley
+lkp@intel.com kbuild test robot
+jun.li@nxp.com Li Jun
+	code [5, 2]
+yuantian.tang@nxp.com Tang Yuantian
+	unknown [4, 1]
+	code [11, 7]
+oss@buserror.net Scott Wood
+zhangqing@rock-chips.com Elaine Zhang
+	code [61, 45]
+jeyu@redhat.com Jessica Yu
+	code [81, 3]
+	documentation [16, 4]
+	build [1, 0]
+tvrtko.ursulin@intel.com Tvrtko Ursulin
+	code [81, 56]
+roscaeugeniu@gmail.com Eugeniu Rosca
+	documentation [38, 1]
+mbroemme@libmpq.org Maik Broemme
+	code [1, 0]
+bsweeney@lgsinnovations.com Brian Sweeney
+sridhar.samudrala@intel.com Sridhar Samudrala
+	code [1, 0]
+kernel@kyup.com Nikolay Borisov
+	code [18, 3]
+jlayton@redhat.com Jeff Layton
+	code [20, 5]
+ricardo.ribalda@gmail.com Ricardo Ribalda Delgado
+	documentation [2, 3]
+eric.engestrom@imgtec.com Eric Engestrom
+	code [107, 66]
+clinton.a.taylor@intel.com Clint Taylor
+	code [1, 1]
+rpeterso@redhat.com Bob Peterson
+ayaka@soulik.info Randy Li
+	unknown [67, 48]
+valex@mellanox.com Alex Vesker
+	code [10, 6]
+ben@crypt.ly Ben LeMasurier
+	code [18, 15]
+dave@stgolabs.net Davidlohr Bueso
+	code [43, 53]
+dimitrysh@google.com Dmitry Shmidt
+oleg@redhat.com Oleg Nesterov
+	code [29, 29]
+chen_ann@projectara.com Ann Chen
+	code [30, 17]
+viresh.kumar@linaro.org Viresh Kumar
+	unknown [30, 29]
+	code [33, 32]
+pfeiner@google.com Peter Feiner
+	code [12, 4]
+jmattson@google.com Jim Mattson
+sgruszka@redhat.com Stanislaw Gruszka
+	code [32, 1]
+ggherdovich@suse.cz Giovanni Gherdovich
+	code [19, 0]
+rui.y.wang@intel.com Rui Wang
+	code [48, 25]
+andi.shyti@samsung.com Andi Shyti
+	devel-doc [11, 1]
+	documentation [22, 20]
+dietmar.eggemann@arm.com Dietmar Eggemann
+	code [14, 0]
+morten.rasmussen@arm.com Morten Rasmussen
+riel@redhat.com Rik van Riel
+	code [0, 1]
+davidcc@google.com David Carrillo-Cisneros
+	code [97, 36]
+eranian@google.com Stephane Eranian
+umgwanakikbuti@gmail.com Mike Galbraith
+maddy@linux.vnet.ibm.com Madhavan Srinivasan
+	code [24, 5]
+ynorov@caviumnetworks.com Yury Norov
+vincent.weaver@maine.edu Vince Weaver
+theidsieck@leenox.de Tillmann Heidsieck
+	code [9, 3]
+framsay@redhat.com Frank Ramsay
+prarit@redhat.com Prarit Bhargava
+	code [6, 0]
+bblanco@plumgrid.com Brenden Blanco
+hannes@cmpxchg.org Johannes Weiner
+daniel.verkamp@intel.com Daniel Verkamp
+mrv@mojatatu.com Roman Mashak
+	code [1, 42]
+tamirw@mellanox.com Tamir Winetroub
+ilant@mellanox.com Ilan Tayari
+eladr@mellanox.com Elad Raz
+	code [18, 0]
+nuclearcat@nuclearcat.com Denys Fedoryshchenko
+joao.pinto@synopsys.com Joao Pinto
+	code [107, 19]
+emily.deng@amd.com Emily Deng
+	code [1947, 125]
+	build [2, 1]
+cov@codeaurora.org Christopher Covington
+artur.paszkiewicz@intel.com Artur Paszkiewicz
+	code [9, 4]
+sven.koehler@gmail.com Sven Koehler
+gqjiang@suse.com Guoqing Jiang
+	code [2, 5]
+hanjun.guo@linaro.org Hanjun Guo
+ilyal@mellanox.com Ilya Lesokhin
+stillcompiling@gmail.com Joshua Clayton
+	unknown [4, 0]
+	code [22, 1]
+bsingharora@gmail.com Balbir Singh
+	code [2, 2]
+alu.ula@outlook.com Yuta Kobayashi
+	code [6, 0]
+sr@denx.de Stefan Roese
+ralph.sennhauser@gmail.com Ralph Sennhauser
+pierre-louis.bossart@linux.intel.com Pierre-Louis Bossart
+	code [413, 62]
+grant.likely@secretlab.ca Grant Likely
+rb6@duke.edu Rann Bar-On
+badshah400@aim.com Atri Bhattacharya
+sumit.semwal@linaro.org Sumit Semwal
+	code [1, 3]
+kamlakant.patel@broadcom.com Kamlakant Patel
+	code [18, 1]
+david.m.ertman@intel.com Dave Ertman
+	code [25, 10]
+zach.brown@ni.com Zach Brown
+agordeev@redhat.com Alexander Gordeev
+milian.wolff@kdab.com Milian Wolff
+	code [2, 2]
+martin@omnibond.com Martin Brandenburg
+	code [1354, 1843]
+lw@karo-electronics.de Lothar Waßmann
+	code [10, 0]
+pmeerw@pmeerw.net Peter Meerwald-Stadler
+	code [12, 13]
+swarren@nvidia.com Stephen Warren
+	unknown [5, 5]
+c.huber@bct-electronic.com Christoph Huber
+	code [3, 2]
+tharvey@gateworks.com Tim Harvey
+	unknown [552, 0]
+	code [420, 0]
+	build [11, 0]
+	documentation [94, 0]
+xiaodong.liu@intel.com Xiaodong Liu
+	code [8, 7]
+frobnic+lkml@gmail.com Frank Paulsen
+lists@nerdbynature.de Christian Kujau
+mathias.nyman@linux.intel.com Mathias Nyman
+	code [9, 7]
+jilin@nvidia.com Jim Lin
+	code [3, 0]
+alban.browaeys@gmail.com Alban Browaeys
+	code [2, 1]
+sean.wang@mediatek.com sean.wang@mediatek.com
+	code [41, 27]
+xose.vazquez@gmail.com Xose Vazquez Perez
+	code [4, 0]
+eric.auger@redhat.com Eric Auger
+anton@samba.org Anton Blanchard
+	code [5, 3]
+naveen.n.rao@linux.vnet.ibm.com Naveen N. Rao
+wangnan0@huawei.com Wang Nan
+brian.boylston@hpe.com Brian Boylston
+philipp@redfish-solutions.com Philip Prindeville
+daniel.wagner@bmw-carit.de Daniel Wagner
+	code [10, 9]
+hekuang@huawei.com He Kuang
+	code [10, 3]
+dave.long@linaro.org David A. Long
+	code [5, 28]
+	documentation [10, 0]
+david@protonic.nl David Jander
+anders@chargestorm.se Anders Darander
+	code [2, 2]
+t.remmet@phytec.de Teresa Remmet
+	unknown [3, 3]
+sandeen@redhat.com Eric Sandeen
+	code [12, 6]
+billodo@redhat.com Bill O'Donnell
+benjamin.gaignard@linaro.org Benjamin Gaignard
+git@thegavinli.com Gavin Li
+	code [2, 4]
+irina.tirdea@intel.com Irina Tirdea
+	code [181, 15]
+breno.lima@nxp.com Breno Lima
+	unknown [19, 0]
+	build [1, 0]
+baruch@tkos.co.il Baruch Siach
+	devel-doc [1, 0]
+	code [1, 0]
+bblock@linux.vnet.ibm.com Benjamin Block
+vincent.stehle@laposte.net Vincent
+	code [2, 1]
+linux@eikelenboom.it Sander Eikelenboom
+mst@redhat.com Michael S. Tsirkin
+	unknown [5, 0]
+	code [72, 7]
+	build [7, 10]
+ggarcia@deic.uab.cat Gerard Garcia
+	code [3, 7]
+kdasu.kdev@gmail.com Kamal Dasu
+cyrille.pitchen@atmel.com Cyrille Pitchen
+	code [14, 10]
+sgoutham@cavium.com Sunil Goutham
+	code [974, 401]
+	build [11, 0]
+zr@semihalf.com Zyta Szpak
+	code [34, 0]
+jerin.jacob@caviumnetworks.com Jerin Jacob
+	code [87, 0]
+rad@semihalf.com Radoslaw Biernacki
+	code [16, 8]
+isubramanian@apm.com Iyappan Subramanian
+	unknown [2, 1]
+	code [144, 39]
+	build [1, 0]
+	documentation [3, 0]
+fchen@apm.com Fushen Chen
+qnguyen@apm.com Quan Nguyen
+ast@fb.com Alexei Starovoitov
+	code [131, 31]
+haoxuany@fb.com Aaron Yue
+	code [110, 4]
+sargun@sargun.me Sargun Dhillon
+	code [258, 2]
+	build [5, 0]
+bkenward@solarflare.com Bert Kenward
+	code [789, 125]
+robert.moore@intel.com Bob Moore
+	code [120, 92]
+amitoj1606@gmail.com Amitoj Kaur Chawla
+	code [2, 2]
+jkim@freebsd.org Jung-uk Kim
+	code [51, 5]
+netanel@annapurnalabs.com Netanel Belgazal
+	unknown [2, 0]
+	devel-doc [9, 0]
+	code [10501, 0]
+	build [41, 0]
+	documentation [305, 0]
+thgarnie@google.com Thomas Garnier
+	code [21, 7]
+thesven73@gmail.com Sven Van Asbroeck
+	code [9, 6]
+maier@linux.vnet.ibm.com Steffen Maier
+	code [200, 38]
+aishchuk@linux.vnet.ibm.com Alexey Ishchuk
+alexey.kodanev@oracle.com Alexey Kodanev
+	code [8, 7]
+haokexin@gmail.com Kevin Hao
+	code [2, 0]
+ravi.bangoria@linux.vnet.ibm.com Ravi Bangoria
+	code [69, 32]
+mpetlan@redhat.com Michael Petlan
+jacopo.mondi@linaro.org Jacopo Mondi
+	code [10, 125]
+jorge.ramirez-ortiz@linaro.org Jorge Ramirez Ortiz
+nicolas.pitre@linaro.org Nicolas Pitre
+	unknown [1, 1]
+	code [3, 2]
+andrew.smirnov@gmail.com Andrey Smirnov
+	code [6, 7]
+thilo@cestona.ro Thilo Cestonaro
+	unknown [2, 2]
+akash.goel@intel.com Akash Goel
+	code [32, 2]
+axel.lin@ingics.com Axel Lin
+	code [7, 7]
+david@lechnology.com David Lechner
+	code [153, 0]
+jniedwor@linux.vnet.ibm.com Julius Niedworok
+	code [4, 1]
+kan.liang@intel.com Kan Liang
+	code [19, 5]
+lukasz.odzioba@intel.com Lukasz Odzioba
+dvlasenk@redhat.com Denys Vlasenko
+	code [11, 11]
+byungchul.park@lge.com Byungchul Park
+arbab@linux.vnet.ibm.com Reza Arbab
+	code [2, 0]
+vdavydov@virtuozzo.com Vladimir Davydov
+	code [86, 32]
+mgorman@techsingularity.net Mel Gorman
+	code [7, 7]
+zhongjiang@huawei.com zhong jiang
+	code [18, 0]
+	build [1, 0]
+zyw@rock-chips.com Chris Zhong
+	code [5, 1]
+maxim.altshul@ti.com Maxim Altshul
+	code [11, 9]
+pkushwah@qti.qualcomm.com Purushottam Kushwaha
+	code [10, 8]
+roman.penyaev@profitbricks.com Roman Pen
+	code [3, 0]
+jasowang@redhat.com Jason Wang
+	code [1, 4]
+cornelia.huck@de.ibm.com Cornelia Huck
+baolu.lu@linux.intel.com Lu Baolu
+	code [4, 3]
+joe.lawrence@redhat.com Joe Lawrence
+	documentation [18, 0]
+denkenz@gmail.com Denis Kenzior
+	code [42, 31]
+fweisbec@gmail.com Frederic Weisbecker
+	code [2, 1]
+ville.syrjala@linux.intel.com Ville Syrjälä
+	code [178, 95]
+fdporg@vega.pgw.jp Taketo Kabe
+chunkeey@googlemail.com Christian Lamparter
+	code [4, 0]
+noltari@gmail.com Álvaro Fernández Rojas
+	documentation [46, 0]
+patrice.chotard@st.com Patrice Chotard
+	unknown [4, 0]
+	code [368, 115]
+	documentation [7, 3]
+maxime.coquelin@st.com Maxime Coquelin
+austinwc@codeaurora.org Austin Christ
+	code [8, 6]
+matt@codeblueprint.co.uk Matt Fleming
+jlee@suse.com Lee, Chun-Yi
+athorlton@sgi.com Alex Thorlton
+	code [2, 1]
+vilhelm.gray@gmail.com William Breathitt Gray
+	devel-doc [6, 0]
+	code [267, 0]
+	build [14, 0]
+aaron.lu@intel.com Aaron Lu
+	code [1, 6]
+dave.hansen@linux.intel.com Dave Hansen
+	code [2, 2]
+sth@linux.vnet.ibm.com Stefan Haberland
+	code [19, 1]
+martynas@weave.works Martynas Pumputis
+	code [25, 4]
+arb@fb.com Adam Barth
+	code [3, 1]
+yinghai@kernel.org Yinghai Lu
+	code [4, 4]
+parthasarathy.bhuvaragan@ericsson.com Parthasarathy Bhuvaragan
+	code [2, 1]
+harini.katakam@xilinx.com Harini Katakam
+	code [62, 12]
+steve.capper@arm.com Steve Capper
+	code [18, 1]
+kirill.shutemov@linux.intel.com Kirill A. Shutemov
+	code [3, 2]
+iamjoonsoo.kim@lge.com Joonsoo Kim
+	code [36, 16]
+alexandre.bounine@idt.com Alexandre Bounine
+	devel-doc [1, 0]
+	code [3194, 243]
+	build [17, 0]
+	documentation [146, 2]
+chris.harris@intel.com Chris Harris
+arun.siluvery@linux.intel.com Arun Siluvery
+u.kleine-koenig@pengutronix.de Uwe Kleine-König
+	code [9, 8]
+dharageswari.r@intel.com Dharageswari R
+	code [10, 21]
+martin@kaiser.cx Martin Kaiser
+	code [1, 1]
+danielmentz@google.com Daniel Mentz
+	code [1, 1]
+jay@jcornwall.me Jay Cornwall
+	code [2, 1]
+travis@sgi.com Mike Travis
+	code [28, 27]
+estabrook@sgi.com John Estabrook
+sivanich@sgi.com Dimitri Sivanich
+nzimmer@sgi.com Nathan Zimmer
+gdobrev@mm-sol.com Georgi Dobrev
+	code [57, 0]
+juri.lelli@arm.com Juri Lelli
+	code [16, 6]
+leo.yan@linaro.org Leo Yan
+	code [7, 6]
+pinglinux@gmail.com Ping Cheng
+	code [36, 27]
+peter.hutterer@who-t.net Peter Hutterer
+killertofu@gmail.com Jason Gerecke
+	code [112, 32]
+amelie.delaunay@st.com Amelie DELAUNAY
+sebott@linux.vnet.ibm.com Sebastian Ott
+	code [1, 8]
+makita.toshiaki@lab.ntt.co.jp Toshiaki Makita
+	code [27, 25]
+fbarrat@linux.vnet.ibm.com Frederic Barrat
+	code [6, 3]
+ukrishn@linux.vnet.ibm.com Uma Krishnan
+lizefan@huawei.com Zefan Li
+	code [15, 0]
+khlebnikov@yandex-team.ru Konstantin Khlebnikov
+	code [9, 1]
+haliu@redhat.com Hangbin Liu
+	code [20, 0]
+jtluka@redhat.com Jan Tluka
+shlimeng@cn.ibm.com Meng Li
+mathias.koehrer@etas.com Mathias Koehrer
+	documentation [4, 0]
+nwatters@codeaurora.org Nate Watterson
+shc_work@mail.ru Alexander Shiyan
+	code [26, 832]
+	build [15, 46]
+ohlf@mkt-sys.de Marc Ohlf
+	code [2, 2]
+roswest@cisco.com roswest
+naohiro.aota@hgst.com Naohiro Aota
+	code [12, 3]
+	documentation [9, 1]
+lcapitulino@redhat.com Luiz Capitulino
+masami.hiramatsu@linaro.org Masami Hiramatsu
+	code [1, 1]
+bgregg@netflix.com Brendan Gregg
+	code [1, 1]
+	documentation [2, 2]
+mgautam@codeaurora.org Manu Gautam
+fabien.lahoudere@collabora.co.uk Fabien Lahoudere
+	unknown [18, 0]
+cristian.birsan@microchip.com Cristian Birsan
+	code [37, 3]
+romain.perier@free-electrons.com Romain Perier
+	code [11, 7]
+will.thomas@imgtec.com Will Thomas
+	code [7, 3]
+govindraj.raja@imgtec.com Govindraj Raja
+	code [27, 0]
+mnghuan@gmail.com Minfei Huang
+	code [14, 28]
+fanc.fnst@cn.fujitsu.com Chao Fan
+hushiyuan@huawei.com Shiyuan Hu
+mahesh@linux.vnet.ibm.com Mahesh Salgaonkar
+	code [60, 43]
+cmetcalf@mellanox.com Chris Metcalf
+	code [16, 1]
+guneshwor.o.singh@intel.com Guneshwor Singh
+	code [258, 1]
+hardik.t.shah@intel.com Hardik T Shah
+felix@linux.vnet.ibm.com Philippe Bergheaud
+	code [2, 2]
+alastair@d-silva.org Alastair D'Silva
+	code [13, 13]
+shreyas@linux.vnet.ibm.com Shreyas B. Prabhu
+linuxbugs@vittgam.net Vittorio Gambaletta (VittGam)
+	code [1, 0]
+peter.karasinski@gmail.com Piotr Karasinski
+	code [1, 0]
+aik@ozlabs.ru Alexey Kardashevskiy
+	code [1, 1]
+hubcap@omnibond.com Mike Marshall
+	documentation [46, 4]
+jon.mason@broadcom.com Jon Mason
+	unknown [869, 1]
+	build [5, 0]
+david.carroll@microsemi.com Dave Carroll
+	code [11, 2]
+wpengfeinudt@gmail.com Pengfei Wang
+mic@digikod.net Mickaël Salaün
+	code [10, 7]
+	build [0, 11]
+james.l.morris@oracle.com James Morris
+raju.lakkaraju@microsemi.com Raju Lakkaraju
+	code [161, 0]
+	build [6, 0]
+soltys@ziu.info Michal Soltys
+	code [14, 37]
+the_cartographer@hotmail.com Chris Thompson
+pshelar@ovn.org pravin shelar
+	code [20, 14]
+jlibosva@redhat.com Jakub Libosvar
+dalias@libc.org Rich Felker
+	code [326, 0]
+	build [16, 0]
+	documentation [60, 0]
+zyan@redhat.com Yan, Zheng
+	code [4, 1]
+andreas.ziegler@fau.de Andreas Ziegler
+	code [0, 2]
+bibby.hsieh@mediatek.com Bibby Hsieh
+	code [18, 5]
+leo.liu@amd.com Leo Liu
+	code [2, 8]
+jaz@semihalf.com Grzegorz Jaszczyk
+	unknown [538, 5]
+	documentation [13, 2]
+	build [3, 0]
+adam.thomson.opensource@diasemi.com Adam Thomson
+	code [109, 73]
+alior@marvell.com Lior Amsalem
+ursula.braun@de.ibm.com Ursula Braun
+	code [25, 24]
+brueckner@linux.vnet.ibm.com Hendrik Brueckner
+dmcg@drizz.net Derek McGowan
+chris.brandt@renesas.com Chris Brandt
+	code [12, 2]
+dnlplm@gmail.com Daniele Palmas
+	code [21, 0]
+akp@akp.dk Anders K. Pedersen
+frank.binns@imgtec.com Frank Binns
+ben@decadent.org.uk Ben Hutchings
+yazen.ghannam@amd.com Yazen Ghannam
+	code [12, 3]
+maninder1.s@samsung.com Maninder Singh
+	code [1, 1]
+v.narang@samsung.com Vaneet Narang
+guaneryu@gmail.com Eryu Guan
+	code [5, 4]
+akshay.adiga@linux.vnet.ibm.com Akshay Adiga
+	code [20, 1]
+aleksey.obitotskiy@intel.com Alexey Obitotskiy
+	code [3, 1]
+dforster@brocade.com David Forster
+	code [2, 6]
+iwienand@redhat.com Ian Wienand
+	code [1, 1]
+chang_jackson@projectara.com Jackson Chang
+	code [31, 4]
+kolga@netapp.com Olga Kornievskaia
+	code [5, 3]
+masashi.honma@gmail.com Masashi Honma
+	code [38, 10]
+acelan.kao@canonical.com AceLan Kao
+	code [1, 0]
+zijun_hu@htc.com zijun_hu
+	code [4, 1]
+iamyooon@gmail.com seokhoon.yoon
+	unknown [5, 5]
+	devel-doc [2, 2]
+	documentation [14, 14]
+	build [2, 2]
+kuleshovmail@gmail.com Alexander Kuleshov
+	code [2, 2]
+jinpu.wang@profitbricks.com Jinpu Wang
+jpittman@redhat.com John Pittman
+	code [0, 1]
+jbaron@akamai.com Jason Baron
+	code [146, 30]
+k.debski@samsung.com Kamil Debski
+	devel-doc [8, 4]
+shijie.huang@arm.com Huang Shijie
+	code [22, 29]
+hui.wang@canonical.com Hui Wang
+	code [6, 0]
+ubuntu@hbuus.com Helen Buus
+chris@zankel.net Chris Zankel
+jrg.otte@gmail.com Jörg Otte
+manish.chopra@qlogic.com Manish Chopra
+	code [62, 48]
+rajesh.borundia@qlogic.com Rajesh Borundia
+sony.chacko@qlogic.com Sony Chacko
+siva.kallam@broadcom.com Siva Reddy Kallam
+	code [0, 4]
+michael.chan@broadcom.com Michael Chan
+satish.baddipadige@broadcom.com Satish Baddipadige
+	code [1, 0]
+jakub.kicinski@netronome.com Jakub Kicinski
+	code [2, 1]
+jarno@ovn.org Jarno Rajahalme
+	code [1, 7]
+jiyin@redhat.com Jianhong Yin
+steved@redhat.com Steve Dickson
+hiremath_vaibhav@projectara.com Vaibhav Hiremath
+	code [3, 0]
+ralf@linux-mips.org Ralf Baechle
+jcarlyle@google.com Jeffrey Carlyle
+mika.penttila@nextfour.com Mika Penttilä
+	code [413, 0]
+	build [13, 0]
+	documentation [34, 0]
+valdis.kletnieks@vt.edu Valdis Kletnieks
+	code [1, 1]
+	build [2, 1]
+hns@goldelico.com H. Nikolaus Schaller
+	code [0, 2]
+barry.wood@idt.com Barry Wood
+ptesarik@suse.com Petr Tesarik
+	code [11, 4]
+hidehiro.kawai.ez@hitachi.com Hidehiro Kawai
+	code [4, 9]
+vitalya@ti.com Vitaly Andrianov
+	unknown [8, 0]
+geliangtang@gmail.com Geliang Tang
+	code [1, 1]
+konishi.ryusuke@lab.ntt.co.jp Ryusuke Konishi
+	devel-doc [2, 1]
+	code [882, 810]
+	documentation [3, 2]
+hecmargi@upv.es Hector Marco-Gisbert
+allenbh@gmail.com Allen Hubbe
+	code [5, 3]
+alanjhd@gmail.com Alan Douglas
+tomas.winkler@intel.com Tomas Winkler
+	code [3, 2]
+markivx@codeaurora.org Vikram Mulukutla
+	code [5, 2]
+gerald.schaefer@de.ibm.com Gerald Schaefer
+sergey.senozhatsky@gmail.com Sergey Senozhatsky
+	code [19, 7]
+luisbg@osg.samsung.com Luis de Bethencourt
+	devel-doc [4, 1]
+	code [4, 3]
+chengang@emindsoft.com.cn Chen Gang
+	code [5, 5]
+alexander.levin@verizon.com Sasha Levin
+hejianet@gmail.com Jia He
+	code [4, 0]
+n-horiguchi@ah.jp.nec.com Naoya Horiguchi
+minchan@kernel.org Minchan Kim
+	code [1, 0]
+piaojun@huawei.com piaojun
+	code [102, 53]
+joseph.qi@huawei.com Joseph Qi
+xuejiufei@huawei.com Jiufei Xue
+ghe@suse.com Gang He
+	code [9, 2]
+namhyung@kernel.org Namhyung Kim
+	unknown [1, 0]
+	devel-doc [3, 1]
+hau@realtek.com Chun-Hao Lin
+	code [8, 4]
+devel-doc 168 86
+	k.kozlowski@samsung.com Krzysztof Kozlowski: [9, 6]
+	vegard.nossum@oracle.com Vegard Nossum: [11, 0]
+	geert+renesas@glider.be Geert Uytterhoeven: [4, 4]
+	herbert@gondor.apana.org.au Herbert Xu: [1, 0]
+	robh@kernel.org Rob Herring: [5, 0]
+	sre@kernel.org Sebastian Reichel: [6, 6]
+	javier@osg.samsung.com Javier Martinez Canillas: [1, 0]
+	b.spranger@linutronix.de Benedikt Spranger: [6, 3]
+	mathieu.poirier@linaro.org Mathieu Poirier: [1, 0]
+	jitendra.bhivare@broadcom.com Jitendra Bhivare: [5, 5]
+	sboyd@codeaurora.org Stephen Boyd: [1, 0]
+	yamada.masahiro@socionext.com Masahiro Yamada: [2, 0]
+	stern@rowland.harvard.edu Alan Stern: [1, 1]
+	jpoimboe@redhat.com Josh Poimboeuf: [0, 18]
+	acme@redhat.com Arnaldo Carvalho de Melo: [1, 0]
+	green@linuxhacker.ru Oleg Drokin: [1, 0]
+	dan.j.williams@intel.com Dan Williams: [1, 0]
+	rafal@milecki.pl Rafał Miłecki: [7, 0]
+	james.morse@arm.com James Morse: [0, 1]
+	icenowy@aosc.xyz Icenowy Zheng: [10, 1]
+	mark.rutland@arm.com Mark Rutland: [9, 10]
+	jglauber@cavium.com Jan Glauber: [8, 0]
+	corbet@lwn.net Jonathan Corbet: [5, 5]
+	hverkuil@xs4all.nl Hans Verkuil: [0, 8]
+	leonro@mellanox.com Leon Romanovsky: [1, 1]
+	jolsa@kernel.org Jiri Olsa: [1, 0]
+	shreyas.nc@intel.com Shreyas NC: [1, 0]
+	songjun.wu@microchip.com Songjun Wu: [8, 0]
+	srinivas.pandruvada@linux.intel.com Srinivas Pandruvada: [7, 0]
+	tony.luck@intel.com Tony Luck: [6, 0]
+	aditya.shankar@microchip.com Aditya Shankar: [2, 6]
+	josh@awful.name Joshua Houghton: [0, 1]
+	andi.shyti@samsung.com Andi Shyti: [11, 1]
+	baruch@tkos.co.il Baruch Siach: [1, 0]
+	netanel@annapurnalabs.com Netanel Belgazal: [9, 0]
+	vilhelm.gray@gmail.com William Breathitt Gray: [6, 0]
+	alexandre.bounine@idt.com Alexandre Bounine: [1, 0]
+	iamyooon@gmail.com seokhoon.yoon: [2, 2]
+	k.debski@samsung.com Kamil Debski: [8, 4]
+	konishi.ryusuke@lab.ntt.co.jp Ryusuke Konishi: [2, 1]
+	luisbg@osg.samsung.com Luis de Bethencourt: [4, 1]
+	namhyung@kernel.org Namhyung Kim: [3, 1]
+code 160397 74973
+	k.kozlowski@samsung.com Krzysztof Kozlowski: [700, 798]
+	hl@rock-chips.com Lin Huang: [224, 0]
+	agruenba@redhat.com Andreas Gruenbacher: [113, 110]
+	mszeredi@redhat.com Miklos Szeredi: [12, 13]
+	colin.king@canonical.com Colin Ian King: [66, 47]
+	york.sun@nxp.com York Sun: [993, 880]
+	bp@suse.de Borislav Petkov: [208, 30]
+	tthayer@opensource.altera.com Thor Thayer: [194, 15]
+	andriy.shevchenko@linux.intel.com Andy Shevchenko: [619, 379]
+	davem@davemloft.net David S. Miller: [4, 4]
+	robert.foss@collabora.com Robert Foss: [618, 180]
+	sudarsana.kalluru@qlogic.com Sudarsana Reddy Kalluru: [877, 316]
+	yuval.mintz@qlogic.com Yuval Mintz: [2440, 1570]
+	xiyou.wangcong@gmail.com WANG Cong: [304, 162]
+	coproscefalo@gmail.com Azael Avalos: [152, 105]
+	steve.muckle@linaro.org Steve Muckle: [3, 1]
+	rafael.j.wysocki@intel.com Rafael J. Wysocki: [111, 112]
+	heikki.krogerus@linux.intel.com Heikki Krogerus: [42, 5]
+	vegard.nossum@oracle.com Vegard Nossum: [46, 16]
+	john.stultz@linaro.org John Stultz: [80, 25]
+	kandoiruchi@google.com Ruchi Kandoi: [2, 0]
+	kwalker@redhat.com Kyle Walker: [12, 3]
+	g.nault@alphalink.fr Guillaume Nault: [51, 12]
+	stephen@networkplumber.org stephen hemminger: [7, 6]
+	andrew@lunn.ch Andrew Lunn: [88, 56]
+	vivien.didelot@savoirfairelinux.com Vivien Didelot: [710, 480]
+	rvatsavayi@caviumnetworks.com Raghu Vatsavayi: [3025, 616]
+	afd@ti.com Andrew F. Davis: [35, 197]
+	s-anna@ti.com Suman Anna: [122, 109]
+	grygorii.strashko@ti.com Grygorii Strashko: [9, 11]
+	mguzik@redhat.com Mateusz Guzik: [30, 9]
+	paul@paul-moore.com Paul Moore: [15, 9]
+	rogerq@ti.com Roger Quadros: [3, 3]
+	david1.zhou@amd.com Chunming Zhou: [299, 83]
+	christian.koenig@amd.com Christian König: [529, 587]
+	alexander.deucher@amd.com Alex Deucher: [232, 119]
+	ray.huang@amd.com Huang Rui: [83, 64]
+	maruthi.bayyavarapu@amd.com Maruthi Bayyavarapu: [9137, 0]
+	clabbe.montjoie@gmail.com LABBE Corentin: [259, 208]
+	alexandre.belloni@free-electrons.com Alexandre Belloni: [216, 1]
+	akinobu.mita@gmail.com Akinobu Mita: [552, 0]
+	will.deacon@arm.com Will Deacon: [15, 30]
+	jim.qu@amd.com jimqu: [93, 55]
+	torvalds@linux-foundation.org Linus Torvalds: [46, 101]
+	dcaratti@redhat.com Davide Caratti: [1, 1]
+	geert+renesas@glider.be Geert Uytterhoeven: [30, 20]
+	wens@csie.org Chen-Yu Tsai: [1699, 18]
+	julia.lawall@lip6.fr Julia Lawall: [50, 59]
+	elfring@users.sourceforge.net Markus Elfring: [45, 147]
+	jao@hms.se Jan Östlund: [10, 6]
+	daro@hms.se Daniel Romell: [5, 3]
+	fabio.estevam@nxp.com Fabio Estevam: [133, 66]
+	christophe.jaillet@wanadoo.fr Christophe JAILLET: [30, 23]
+	peterz@infradead.org Peter Zijlstra: [107, 28]
+	shli@fb.com Shaohua Li: [45, 46]
+	neilb@suse.com NeilBrown: [13, 15]
+	okaya@codeaurora.org Sinan Kaya: [51, 41]
+	vinod.koul@intel.com Vinod Koul: [163, 139]
+	tony@atomide.com Tony Lindgren: [120, 21]
+	yuchao0@huawei.com Chao Yu: [78, 47]
+	jack@suse.cz Jan Kara: [236, 208]
+	smueller@chronox.de Stephan Mueller: [19, 13]
+	herbert@gondor.apana.org.au Herbert Xu: [109, 66]
+	robh@kernel.org Rob Herring: [63, 84]
+	maksim.lukoshkov@intel.com Maksim Lukoshkov: [12, 8]
+	giovanni.cabiddu@intel.com Giovanni Cabiddu: [2, 2]
+	prasannatsmkumar@gmail.com PrasannaKumar Muralidharan: [22, 200]
+	baoyou.xie@linaro.org Baoyou Xie: [19, 12]
+	okhaliq@caviumnetworks.com Omer Khaliq: [193, 0]
+	ananth.jasty@cavium.com Ananth Jasty: [11, 0]
+	horia.geanta@nxp.com Horia Geantă: [45, 45]
+	wenyou.yang@atmel.com Wenyou Yang: [303, 52]
+	fengguang.wu@intel.com Fengguang Wu: [1, 1]
+	javier@osg.samsung.com Javier Martinez Canillas: [82, 93]
+	nandor.han@ge.com Nandor Han: [144, 85]
+	peter.senna@collabora.com Peter Senna Tschudin: [79, 41]
+	gregkh@linuxfoundation.org Greg Kroah-Hartman: [16, 6]
+	o-takashi@sakamocchi.jp Takashi Sakamoto: [429, 529]
+	tiwai@suse.de Takashi Iwai: [23, 13]
+	pure.logic@nexus-software.ie Bryan O'Donoghue: [19, 9]
+	eddie.huang@mediatek.com Eddie Huang: [2, 8]
+	zubair.kakakhel@imgtec.com Zubair Lutfullah Kakakhel: [24, 1]
+	wangkefeng.wang@huawei.com Kefeng Wang: [6, 16]
+	arnd@arndb.de Arnd Bergmann: [94, 92]
+	ludovic.desroches@atmel.com Ludovic Desroches: [34, 8]
+	mika.westerberg@linux.intel.com Mika Westerberg: [2, 3]
+	alex.shi@linaro.org Alex Shi: [6, 5]
+	w.egorov@phytec.de Wadim Egorov: [476, 47]
+	lee.jones@linaro.org Lee Jones: [9, 9]
+	ard.biesheuvel@linaro.org Ard Biesheuvel: [247, 198]
+	suzuki.poulose@arm.com Suzuki K Poulose: [134, 170]
+	yizhouzhou@ict.ac.cn Zhouyi Zhou: [6, 1]
+	ebiederm@xmission.com Eric W. Biederman: [409, 88]
+	j-keerthy@ti.com Keerthy: [561, 0]
+	linus.walleij@linaro.org Linus Walleij: [535, 1165]
+	alexander.kapshuk@gmail.com Alexander Kapshuk: [89, 0]
+	weiyj.lk@gmail.com Wei Yongjun: [135, 177]
+	mmarek@suse.com Michal Marek: [1, 1]
+	lukas@wunner.de Lukas Wunner: [3, 3]
+	peter.ujfalusi@ti.com Peter Ujfalusi: [45, 51]
+	daniel.vetter@ffwll.ch Daniel Vetter: [6147, 5378]
+	jthumshirn@suse.de Johannes Thumshirn: [59, 66]
+	andreas.werner@men.de Andreas Werner: [279, 14]
+	mpe@ellerman.id.au Michael Ellerman: [22, 11]
+	keescook@chromium.org Kees Cook: [85, 68]
+	mathieu.poirier@linaro.org Mathieu Poirier: [555, 133]
+	sudeep.holla@arm.com Sudeep Holla: [93, 49]
+	peter.chen@nxp.com Peter Chen: [83, 30]
+	olivier.schonken@gmail.com Olivier Schonken: [5, 0]
+	zhang.chunyan@linaro.org Chunyan Zhang: [22, 0]
+	alexng@messages.microsoft.com Alex Ng: [5, 8]
+	vkuznets@redhat.com Vitaly Kuznetsov: [236, 181]
+	victoryang@google.com Vic Yang: [230, 107]
+	maarten.lankhorst@linux.intel.com Maarten Lankhorst: [966, 606]
+	narmstrong@baylibre.com Neil Armstrong: [3389, 5]
+	bjorn.andersson@linaro.org Bjorn Andersson: [1156, 233]
+	qca_liord@qca.qualcomm.com Lior David: [495, 67]
+	qca_merez@qca.qualcomm.com Maya Erez: [725, 138]
+	michal.kazior@tieto.com Michal Kazior: [242, 1]
+	ansonjacob.aj@gmail.com Anson Jacob: [10, 6]
+	sudipm.mukherjee@gmail.com Sudip Mukherjee: [62, 76]
+	c_traja@qti.qualcomm.com Tamizh chelvam: [83, 22]
+	mohammed@qti.qualcomm.com Mohammed Shafi Shajakhan: [0, 1]
+	a.hajda@samsung.com Andrzej Hajda: [1, 1]
+	arnagara@qti.qualcomm.com Ashok Raj Nagarajan: [5, 5]
+	r.baldyga@samsung.com Robert Baldyga: [20, 68]
+	johnyoun@synopsys.com John Youn: [32, 1]
+	felipe.balbi@linux.intel.com Felipe Balbi: [120, 204]
+	romain.izard.pro@gmail.com Romain Izard: [1, 1]
+	petr.cvek@tul.cz Petr Cvek: [7, 1]
+	yoshihiro.shimoda.uh@renesas.com Yoshihiro Shimoda: [51, 18]
+	peter@lekensteyn.nl Peter Wu: [11, 0]
+	simon.horman@netronome.com Simon Horman: [11, 3]
+	dsa@cumulusnetworks.com David Ahern: [146, 27]
+	roopa@cumulusnetworks.com Roopa Prabhu: [106, 6]
+	edumazet@google.com Eric Dumazet: [121, 143]
+	mark.d.rustad@intel.com Mark Rustad: [5, 11]
+	jeffrey.t.kirsher@intel.com Jeff Kirsher: [96, 92]
+	andy.green@linaro.org Andy Green: [111, 17]
+	bart.vanassche@sandisk.com Bart Van Assche: [3, 1]
+	fthain@telegraphics.com.au Finn Thain: [7, 8]
+	f.fainelli@gmail.com Florian Fainelli: [476, 1110]
+	jitendra.bhivare@broadcom.com Jitendra Bhivare: [3308, 3152]
+	paul.burton@imgtec.com Paul Burton: [50, 37]
+	bhaktipriya96@gmail.com Bhaktipriya Shridhar: [25, 39]
+	snitzer@redhat.com Mike Snitzer: [47, 21]
+	ebiggers@google.com Eric Biggers: [2, 2]
+	mpatocka@redhat.com Mikulas Patocka: [10, 3]
+	ahs3@redhat.com Al Stone: [9, 6]
+	lv.zheng@intel.com Lv Zheng: [887, 672]
+	pprakash@codeaurora.org Prakash, Prashanth: [349, 166]
+	ashwin.chaugule@linaro.org Ashwin Chaugule: [192, 58]
+	alexey.klimov@arm.com Alexey Klimov: [3, 1]
+	hotran@apm.com hotran: [245, 71]
+	carlosg@gnome.org Carlos Garnacho: [6, 4]
+	cw00.choi@samsung.com Chanwoo Choi: [13, 0]
+	hdegoede@redhat.com Hans de Goede: [55, 349]
+	wsa+renesas@sang-engineering.com Wolfram Sang: [238, 842]
+	sboyd@codeaurora.org Stephen Boyd: [328, 243]
+	monk.liu@amd.com Monk Liu: [11, 0]
+	tom.stdenis@amd.com Tom St Denis: [242, 580]
+	jordan.lazare@amd.com Jordan Lazare: [0, 1]
+	marek.olsak@amd.com Marek Olšák: [134, 49]
+	moinejf@free.fr Jean-Francois Moine: [0, 5]
+	eric@anholt.net Eric Anholt: [8, 6]
+	peda@axentia.se Peter Rosin: [52, 26]
+	yamada.masahiro@socionext.com Masahiro Yamada: [591, 485]
+	nicolas.iooss_linux@m4x.org Nicolas Iooss: [8, 5]
+	jbacik@fb,com Josef Bacik: [7, 3]
+	jonathanh@nvidia.com Jon Hunter: [121, 114]
+	william.c.roberts@intel.com William Roberts: [13, 9]
+	vigneshr@ti.com Vignesh R: [289, 28]
+	rmk+kernel@armlinux.org.uk Russell King: [620, 434]
+	stern@rowland.harvard.edu Alan Stern: [84, 21]
+	linux@roeck-us.net Guenter Roeck: [10, 2]
+	jpoimboe@redhat.com Josh Poimboeuf: [221, 217]
+	rdunlap@infradead.org Randy Dunlap: [3, 5]
+	nariman@opensource.wolfsonmicro.com Nariman Poushin: [2, 2]
+	ckeepax@opensource.wolfsonmicro.com Charles Keepax: [45, 3]
+	broonie@kernel.org Mark Brown: [3, 2]
+	alan@linux.intel.com Alan Cox: [1, 1]
+	tj@kernel.org Tejun Heo: [271, 134]
+	p.zabel@pengutronix.de Philipp Zabel: [17, 2]
+	dhowells@redhat.com David Howells: [2074, 882]
+	acme@redhat.com Arnaldo Carvalho de Melo: [389, 209]
+	trond.myklebust@primarydata.com Trond Myklebust: [344, 108]
+	bcodding@redhat.com Benjamin Coddington: [15, 5]
+	net147@gmail.com Jonathan Liu: [6, 2]
+	pbonzini@redhat.com Paolo Bonzini: [8, 6]
+	anson.huang@nxp.com Anson Huang: [21, 7]
+	shawnguo@kernel.org Shawn Guo: [4, 5]
+	jose.abreu@synopsys.com Jose Abreu: [4, 3]
+	fgao@ikuai8.com Gao Feng: [185, 137]
+	pablo@netfilter.org Pablo Neira Ayuso: [383, 1096]
+	fw@strlen.de Florian Westphal: [401, 221]
+	liping.zhang@spreadtrum.com Liping Zhang: [141, 97]
+	marex@denx.de Marek Vasut: [5, 4]
+	green@linuxhacker.ru Oleg Drokin: [375, 346]
+	kai.heng.feng@canonical.com Kai-Heng Feng: [11, 0]
+	l.stach@pengutronix.de Lucas Stach: [159, 203]
+	linus.luessing@c0d3.blue Linus Lüssing: [10, 1]
+	johannes.berg@intel.com Johannes Berg: [29, 32]
+	arik@wizery.com Arik Nemtsov: [4, 3]
+	shrirang.bagul@canonical.com Shrirang Bagul: [4, 0]
+	darrick.wong@oracle.com Darrick J. Wong: [6909, 1522]
+	hch@infradead.org Christoph Hellwig: [136, 76]
+	dchinner@redhat.com Dave Chinner: [22, 5]
+	dmitry.torokhov@gmail.com Dmitry Torokhov: [65, 18]
+	liushuoran@huawei.com Shuoran Liu: [4, 1]
+	jaegeuk@kernel.org Jaegeuk Kim: [60, 46]
+	shengyong1@huawei.com Sheng Yong: [1, 1]
+	heyunlei@huawei.com Yunlei He: [25, 3]
+	dan.j.williams@intel.com Dan Williams: [396, 297]
+	vishal.l.verma@intel.com Vishal Verma: [7, 0]
+	quorum.laval@gmail.com Quorum Laval: [8, 2]
+	dan.carpenter@oracle.com Dan Carpenter: [29, 28]
+	computersforpeace@gmail.com Brian Norris: [19, 10]
+	enwlinux@gmail.com Eric Whitney: [7, 0]
+	ilan.peer@intel.com Peer, Ilan: [1, 0]
+	emmanuel.grumbach@intel.com Emmanuel Grumbach: [2, 1]
+	martin.blumenstingl@googlemail.com Martin Blumenstingl: [8, 0]
+	khilman@baylibre.com Kevin Hilman: [18, 2]
+	mranostay@gmail.com Matt Ranostay: [506, 74]
+	weijg.fnst@cn.fujitsu.com Wei Jiangang: [5, 7]
+	alex.williamson@redhat.com Alex Williamson: [49, 36]
+	gwenhael.goavec-merou@trabucayre.com Gwenhael Goavec-Merou: [239, 0]
+	gregor.boirie@parrot.com Gregor Boirie: [1, 1]
+	amsfield22@gmail.com Alison Schofield: [170, 28]
+	clifton.a.barnes@gmail.com Clifton Barnes: [1, 1]
+	ken.lin@advantech.com.tw Ken Lin: [1, 0]
+	axboe@fb.com Jens Axboe: [313, 310]
+	slongerbeam@gmail.com Steve Longerbeam: [454, 0]
+	gnuiyl@gmail.com Liu Ying: [185, 80]
+	rafal@milecki.pl Rafał Miłecki: [153, 8]
+	jdelvare@suse.de Jean Delvare: [1, 0]
+	jani.nikula@intel.com Jani Nikula: [27, 25]
+	chris@chris-wilson.co.uk Chris Wilson: [8597, 8078]
+	david.weinehall@linux.intel.com David Weinehall: [709, 734]
+	gregory.clement@free-electrons.com Gregory CLEMENT: [0, 1]
+	schwidefsky@de.ibm.com Martin Schwidefsky: [923, 1155]
+	jacob.e.keller@intel.com Jacob Keller: [131, 100]
+	daniel.lezcano@linaro.org Daniel Lezcano: [1, 0]
+	khoroshilov@ispras.ru Alexey Khoroshilov: [15, 7]
+	jkosina@suse.cz Jiri Kosina: [85, 57]
+	jorik@kippendief.biz Jorik Jonker: [8, 8]
+	paul.gortmaker@windriver.com Paul Gortmaker: [81, 380]
+	vidya@cumulusnetworks.com Vidya Sagar Ravipati: [9, 2]
+	james.morse@arm.com James Morse: [239, 86]
+	olin@rivetnetworks.com Owen Lin: [3, 0]
+	andrea.merello@gmail.com Andrea Merello: [105, 6]
+	robert.jarzmik@free.fr Robert Jarzmik: [7, 4]
+	tom@herbertland.com Tom Herbert: [848, 476]
+	maorg@mellanox.com Maor Gottlieb: [1, 1]
+	saeedm@mellanox.com Saeed Mahameed: [119, 132]
+	eranbe@mellanox.com Eran Ben Elisha: [83, 14]
+	kamalh@mellanox.com Kamal Heib: [4, 3]
+	tariqt@mellanox.com Tariq Toukan: [13, 2]
+	cyrilbur@gmail.com Cyril Bur: [47, 28]
+	benh@kernel.crashing.org Benjamin Herrenschmidt: [74, 16]
+	mukesh02@linux.vnet.ibm.com Mukesh Ojha: [12, 2]
+	chf.fritz@googlemail.com Christoph Fritz: [14, 0]
+	contact@paulk.fr Paul Kocialkowski: [5, 1]
+	mario.kleiner.de@gmail.com Mario Kleiner: [3, 3]
+	robdclark@gmail.com Rob Clark: [41, 6]
+	sagi@grimberg.me Sagi Grimberg: [15, 20]
+	valentinrothberg@gmail.com Valentin Rothberg: [184, 182]
+	icenowy@aosc.xyz Icenowy Zheng: [5, 5]
+	zyjzyj2000@gmail.com Zhu Yanjun: [1, 2]
+	jcooper@solarflare.com Jon Cooper: [23, 10]
+	ecree@solarflare.com Edward Cree: [11, 7]
+	andrew.rybchenko@oktetlabs.ru Andrew Rybchenko: [2, 1]
+	richard.alpe@ericsson.com Richard Alpe: [631, 106]
+	jon.maloy@ericsson.com Jon Maloy: [52, 47]
+	tobias.regnery@gmail.com Tobias Regnery: [71, 4]
+	nelson.chang@mediatek.com Nelson Chang: [75, 35]
+	ross.zwisler@linux.intel.com Ross Zwisler: [11, 6]
+	akpm@linux-foundation.org Andrew Morton: [3, 4]
+	mhocko@suse.com Michal Hocko: [10, 1]
+	aarcange@redhat.com Andrea Arcangeli: [6, 1]
+	subashab@codeaurora.org Subash Abhinov Kasiviswanathan: [45, 2]
+	joe@perches.com Joe Perches: [123, 45]
+	idosch@mellanox.com Ido Schimmel: [422, 422]
+	jiri@mellanox.com Jiri Pirko: [20, 8]
+	s.nawrocki@samsung.com Sylwester Nawrocki: [231, 279]
+	lftan@altera.com Ley Foon Tan: [78, 31]
+	bhelgaas@google.com Bjorn Helgaas: [21, 21]
+	ivecera@redhat.com Ivan Vecera: [0, 1]
+	pabeni@redhat.com Paolo Abeni: [50, 22]
+	nikolay@cumulusnetworks.com Nikolay Aleksandrov: [46, 76]
+	lucien.xin@gmail.com Xin Long: [3, 3]
+	zren@suse.com Eric Ren: [106, 52]
+	t-kristo@ti.com Tero Kristo: [23, 0]
+	andy.gross@linaro.org Andy Gross: [0, 48]
+	dledford@redhat.com Doug Ledford: [5, 4]
+	shiraz.saleem@intel.com Shiraz Saleem: [6, 8]
+	mustafa.ismail@intel.com Mustafa Ismail: [11, 5]
+	marcin.nowakowski@imgtec.com Marcin Nowakowski: [4, 4]
+	boris.brezillon@free-electrons.com Boris Brezillon: [11, 2]
+	sergei.shtylyov@cogentembedded.com Sergei Shtylyov: [721, 0]
+	sven@narfation.org Sven Eckelmann: [27, 1]
+	sw@simonwunderlich.de Simon Wunderlich: [1, 1]
+	pmladek@suse.com Petr Mladek: [7, 4]
+	zhengxing@rock-chips.com Xing Zheng: [382, 5]
+	johan@hovoldconsulting.com Johan Hovold: [414, 236]
+	rui.silva@linaro.org Rui Miguel Silva: [58, 25]
+	huang_kris@projectara.com Kris Huang: [151, 39]
+	dtwlin@google.com David Lin: [18, 17]
+	mgreer@animalcreek.com Mark Greer: [5, 103]
+	vaibhav.agarwal@linaro.org Vaibhav Agarwal: [605, 704]
+	catalin.marinas@arm.com Catalin Marinas: [17, 10]
+	jgross@suse.com Juergen Gross: [18, 12]
+	aaro.koskinen@iki.fi Aaro Koskinen: [9, 1]
+	mark.rutland@arm.com Mark Rutland: [122, 70]
+	fabf@skynet.be Fabian Frederick: [77, 84]
+	thomas.petazzoni@free-electrons.com Thomas Petazzoni: [209, 16]
+	pawel.moll@arm.com Pawel Moll: [35, 10]
+	bfoster@redhat.com Brian Foster: [1, 2]
+	tyreld@linux.vnet.ibm.com Tyrel Datwyler: [15, 2]
+	hkallweit1@gmail.com Heiner Kallweit: [54, 80]
+	brking@linux.vnet.ibm.com Brian King: [130, 24]
+	krisman@linux.vnet.ibm.com Gabriel Krisman Bertazi: [22, 13]
+	john.garry@huawei.com John Garry: [256, 8]
+	shawn.lin@rock-chips.com Shawn Lin: [17, 17]
+	treding@nvidia.com Thierry Reding: [114, 87]
+	anjali.singhai@intel.com Anjali Singhai Jain: [30, 12]
+	xander.huff@ni.com Xander Huff: [5, 3]
+	nathan.sullivan@ni.com Nathan Sullivan: [7, 5]
+	skhare@vmware.com Shrikrishna Khare: [5, 3]
+	lucas.demarchi@intel.com Lucas De Marchi: [104, 49]
+	jose.souza@intel.com José Roberto de Souza: [9, 4]
+	jarkko.nikula@linux.intel.com Jarkko Nikula: [145, 55]
+	weifeng.voon@intel.com Weifeng Voon: [72, 21]
+	jglauber@cavium.com Jan Glauber: [1447, 1013]
+	heiko.carstens@de.ibm.com Heiko Carstens: [27, 4]
+	borntraeger@de.ibm.com Christian Borntraeger: [10, 12]
+	adrian.hunter@intel.com Adrian Hunter: [60, 36]
+	srinivas.kandagatla@linaro.org Srinivas Kandagatla: [7, 2]
+	bhe@redhat.com Baoquan He: [14, 37]
+	corbet@lwn.net Jonathan Corbet: [1, 1]
+	luiz.von.dentz@intel.com Luiz Augusto von Dentz: [2, 2]
+	noralf@tronnes.org Noralf Trønnes: [70, 1]
+	martink@posteo.de Martin Kepplinger: [1, 0]
+	johnny.chuang@emc.com.tw Johnny Chuang: [20, 11]
+	takahiro.akashi@linaro.org AKASHI Takahiro: [13, 4]
+	panand@redhat.com Pratyush Anand: [13, 16]
+	npiggin@gmail.com Nicholas Piggin: [41, 23]
+	rex.zhu@amd.com Rex Zhu: [608, 51]
+	dahi@linux.vnet.ibm.com David Hildenbrand: [6, 4]
+	shaun@tancheff.com Shaun Tancheff: [323, 88]
+	tatyana.e.nikolova@intel.com Tatyana Nikolova: [1, 21]
+	dh.herrmann@gmail.com David Herrmann: [11, 12]
+	aryabinin@virtuozzo.com Andrey Ryabinin: [99, 97]
+	salil.mehta@huawei.com Salil: [228, 75]
+	mchehab@s-opensource.com Mauro Carvalho Chehab: [116, 54]
+	hverkuil@xs4all.nl Hans Verkuil: [150, 5844]
+	becher.jannik@gmail.com Jannik Becher: [1, 1]
+	paulus@ozlabs.org Paul Mackerras: [17, 0]
+	sd@queasysnail.net Sabrina Dubroca: [53, 20]
+	fdmanana@suse.com Filipe Manana: [8, 34]
+	clm@fb.com Chris Mason: [3, 2]
+	bo.li.liu@oracle.com Liu Bo: [38, 1]
+	jeffm@suse.com Jeff Mahoney: [47, 19]
+	wangxg.fnst@cn.fujitsu.com Wang Xiaoguang: [25, 1]
+	quwenruo@cn.fujitsu.com Qu Wenruo: [190, 53]
+	eu@felipetonello.com Felipe F. Tonello: [196, 126]
+	jaret.cantu@timesys.com Jaret Cantu: [61, 0]
+	philipp.gesang@intra2net.com Philipp Gesang: [57, 6]
+	william.wu@rock-chips.com William Wu: [49, 0]
+	jussi.kivilinna@haltian.com Jussi Kivilinna: [155, 5]
+	cpaul@redhat.com Lyude: [827, 236]
+	matthew.d.roper@intel.com Matt Roper: [56, 4]
+	lorenzo@google.com Lorenzo Colitti: [73, 30]
+	chuck.lever@oracle.com Chuck Lever: [30, 14]
+	heinzm@redhat.com Heinz Mauelshagen: [55, 42]
+	mchristi@redhat.com Mike Christie: [127, 70]
+	idryomov@gmail.com Ilya Dryomov: [1020, 141]
+	adobriyan@gmail.com Alexey Dobriyan: [30, 68]
+	stanimir.varbanov@linaro.org Stanimir Varbanov: [1, 0]
+	sakari.ailus@linux.intel.com Sakari Ailus: [1, 4]
+	stev391@gmail.com Stephen Backway: [131, 1]
+	matthew.auld@intel.com Matthew Auld: [11, 9]
+	vinceh@nvidia.com Vince Hsu: [10, 22]
+	boris.ostrovsky@oracle.com Boris Ostrovsky: [79, 78]
+	tomasz.majchrzak@intel.com Tomasz Majchrzak: [5, 4]
+	songliubraving@fb.com Song Liu: [12, 9]
+	jbeulich@suse.com Jan Beulich: [1, 1]
+	laurent.pinchart@ideasonboard.com Laurent Pinchart: [101, 51]
+	yotamg@mellanox.com Yotam Gigi: [1, 1]
+	dhinakaran.pandiyan@intel.com Pandiyan, Dhinakaran: [21, 14]
+	rodrigo.vivi@intel.com Rodrigo Vivi: [8, 15]
+	selvin.xavier@broadcom.com Selvin Xavier: [17, 13]
+	frederic.dalleau@collabora.co.uk Frederic Dalleau: [2, 0]
+	tiffany.lin@mediatek.com Tiffany Lin: [46, 36]
+	felix.kuehling@amd.com Felix Kuehling: [4, 4]
+	ming.lei@canonical.com Ming Lei: [22, 0]
+	bcache@lists.ewheeler.net Eric Wheeler: [2, 1]
+	digetx@gmail.com Dmitry Osipenko: [8, 1]
+	luto@kernel.org Andy Lutomirski: [367, 304]
+	mhiramat@kernel.org mhiramat@kernel.org: [166, 48]
+	daniel.thompson@linaro.org Daniel Thompson: [3, 1]
+	zhong@linux.vnet.ibm.com Li Zhong: [1, 1]
+	aleksandr.o.makarov@gmail.com Aleksandr Makarov: [9, 0]
+	ezequiel@vanguardiasur.com.ar Ezequiel Garcia: [81, 58]
+	steffen.klassert@secunet.com Steffen Klassert: [1, 1]
+	pavel@ucw.cz Pavel Machek: [380, 0]
+	brgerst@gmail.com Brian Gerst: [192, 215]
+	kuninori.morimoto.gx@renesas.com Kuninori Morimoto: [1580, 1248]
+	anisse@astier.eu Anisse Astier: [4, 3]
+	wanpeng.li@hotmail.com Wanpeng Li: [37, 8]
+	rostedt@goodmis.org Steven Rostedt: [11, 3]
+	bjsdjshi@linux.vnet.ibm.com Dong Jia Shi: [0, 1]
+	soheil@google.com Soheil Hassas Yeganeh: [1, 5]
+	pankaj.dubey@samsung.com Pankaj Dubey: [0, 24]
+	rnayak@codeaurora.org Rajendra Nayak: [10, 0]
+	marc.zyngier@arm.com Marc Zyngier: [52, 5]
+	hare@suse.de Hannes Reinicke: [23, 4]
+	mrochs@linux.vnet.ibm.com Matthew R. Ochs: [111, 135]
+	ramirose@gmail.com Rami Rosen: [3, 9]
+	lrichard@redhat.com Lance Richardson: [35, 2]
+	rabinv@axis.com Rabin Vincent: [10, 7]
+	phil@nwl.cc Phil Sutter: [79, 71]
+	hariprasad@chelsio.com Hariprasad Shenai: [4164, 110]
+	ycheng@google.com Yuchung Cheng: [9, 15]
+	jm@lentin.co.uk Jamie Lentin: [33, 4]
+	hofrat@osadl.org Nicholas Mc Guire: [2, 2]
+	zefir.kurtisi@neratec.com Zefir Kurtisi: [16, 7]
+	labbott@redhat.com Laura Abbott: [38, 285]
+	keith.busch@intel.com Keith Busch: [9, 2]
+	vincent.stehle@intel.com Vincent Stehlé: [3, 2]
+	nick@shmanahar.org Nick Dyer: [91, 33]
+	andre.przywara@arm.com Andre Przywara: [117, 45]
+	niklas.soderlund+renesas@ragnatech.se Niklas Söderlund: [271, 237]
+	sthemmin@microsoft.com Stephen Hemminger: [305, 262]
+	jolsa@kernel.org Jiri Olsa: [283, 60]
+	xypron.glpk@gmx.de Heinrich Schuchardt: [21, 52]
+	alexandre.f.demers@gmail.com Alexandre Demers: [13, 15]
+	bharat@chelsio.com Bharat Potnuri: [10, 5]
+	swise@opengridcomputing.com Steve Wise: [5, 1]
+	arvind.yadav.cs@gmail.com Arvind Yadav: [10, 2]
+	seanpaul@chromium.org Sean Paul: [305, 167]
+	mark.yao@rock-chips.com Mark Yao: [84, 84]
+	kbeldan@baylibre.com Karl Beldan: [3, 0]
+	shreyas.nc@intel.com Shreyas NC: [953, 190]
+	kchsu0@nuvoton.com John Hsu: [1200, 50]
+	robin.murphy@arm.com Robin Murphy: [25, 6]
+	christoffer.dall@linaro.org Christoffer Dall: [83, 39]
+	vladimir.murzin@arm.com Vladimir Murzin: [2, 9]
+	ivan.khoronzhuk@linaro.org Ivan Khoronzhuk: [979, 658]
+	davejwatson@fb.com Dave Watson: [0, 3]
+	jhs@mojatatu.com Jamal Hadi Salim: [10, 8]
+	rahul.lakkireddy@chelsio.com Rahul Lakkireddy: [889, 4]
+	shmulik.ladkani@gmail.com Shmulik Ladkani: [5, 3]
+	mmanning@brocade.com Mike Manning: [23, 15]
+	mikko.rapeli@iki.fi Mikko Rapeli: [59, 13]
+	markus.heiser@darmarit.de Markus Heiser: [245, 1]
+	aduggan@synaptics.com Andrew Duggan: [2, 1]
+	christian.gromm@microchip.com Christian Gromm: [244, 223]
+	jsimmons@infradead.org James Simmons: [6, 7]
+	ira.weiny@intel.com Ira Weiny: [2, 0]
+	mike.marciniszyn@intel.com Mike Marciniszyn: [27, 23]
+	mitko.haralanov@intel.com Mitko Haralanov: [18, 1]
+	easwar.hariharan@intel.com Easwar Hariharan: [38, 2]
+	tadeusz.struk@intel.com Tadeusz Struk: [13, 7]
+	mengdong.lin@linux.intel.com Mengdong Lin: [2, 0]
+	djkurtz@chromium.org Daniel Kurtz: [41, 76]
+	sj38.park@gmail.com SeongJae Park: [6, 6]
+	bigeasy@linutronix.de Sebastian Andrzej Siewior: [31, 43]
+	nbd@nbd.name Felix Fietkau: [9, 8]
+	songjun.wu@microchip.com Songjun Wu: [1679, 0]
+	james.hartley@imgtec.com James Hartley: [70, 13]
+	imre.deak@intel.com Imre Deak: [274, 251]
+	david.s.gordon@intel.com Dave Gordon: [75, 55]
+	strongbox8@zoho.com perr perr: [1, 5]
+	jszhang@marvell.com Jisheng Zhang: [38, 30]
+	honghui.zhang@mediatek.com Honghui Zhang: [1, 1]
+	jroedel@suse.de Joerg Roedel: [3, 3]
+	paulo.r.zanoni@intel.com Paulo Zanoni: [11, 3]
+	nevola@gmail.com Laura Garcia Liebana: [381, 2]
+	daniel@zonque.org Daniel Mack: [14, 11]
+	dev@andree.sk Andrej Krutak: [8, 7]
+	stefanha@gmail.com Stefan Hajnoczi: [6, 2]
+	b.galvani@gmail.com Beniamino Galvani: [118, 228]
+	kwangwoo.lee@sk.com Kwangwoo Lee: [44, 47]
+	nicolassaenzj@gmeil.com Nicolas Saenz Julienne: [3, 3]
+	dinguyen@opensource.altera.com Dinh Nguyen: [23, 0]
+	bgolaszewski@baylibre.com Bartosz Golaszewski: [13, 2]
+	glider@google.com Alexander Potapenko: [9, 7]
+	christophe.leroy@c-s.fr Christophe Leroy: [16, 12]
+	boqun.feng@gmail.com Boqun Feng: [1, 1]
+	mauricfo@linux.vnet.ibm.com Mauricio Faria de Oliveira: [46, 2]
+	gwshan@linux.vnet.ibm.com Gavin Shan: [1, 1]
+	andrew.donnellan@au1.ibm.com Andrew Donnellan: [10, 1]
+	emoly.liu@intel.com Emoly Liu: [55, 63]
+	srinivas.pandruvada@linux.intel.com Srinivas Pandruvada: [7352, 1]
+	zhiyong.tao@mediatek.com Zhiyong Tao: [291, 0]
+	tony.luck@intel.com Tony Luck: [1121, 0]
+	louie.lu@hopebaytech.com Louie Lu: [1, 1]
+	lambert.quentin@gmail.com Quentin Lambert: [10, 8]
+	shiva@exdev.nl Shiva Kerdel: [40, 40]
+	gustavo.padovan@collabora.co.uk Gustavo Padovan: [214, 96]
+	josh@awful.name Joshua Houghton: [2, 4]
+	sheldon.anthony.sheldon@gmail.com Anthony Sheldon: [1, 3]
+	lars@metafoo.de Lars-Peter Clausen: [28, 10]
+	john.hammond@intel.com John L. Hammond: [1173, 1367]
+	di.wang@intel.com wangdi: [3339, 1118]
+	jinshan.xiong@intel.com Jinshan Xiong: [312, 239]
+	dmitry.eremin@intel.com Dmitry Eremin: [23, 19]
+	jian.yu@intel.com Jian Yu: [16, 232]
+	viro@zeniv.linux.org.uk Al Viro: [246, 597]
+	doug.s.oucharek@intel.com Doug Oucharek: [26, 5]
+	liang.zhen@intel.com Liang Zhen: [18, 28]
+	alexander.boyko@seagate.com Alexander Boyko: [6, 0]
+	fan.yong@intel.com Fan Yong: [269, 227]
+	mike.pershin@intel.com Mike Pershin: [36, 22]
+	hongchao.zhang@intel.com Hongchao Zhang: [74, 47]
+	andriy_skulysh@xyratex.com Andriy Skulysh: [3, 1]
+	lai.siyao@intel.com Lai Siyao: [76, 115]
+	nathaniel.l.clark@intel.com Nathaniel Clark: [3, 0]
+	behlendorf1@llnl.gov Brian Behlendorf: [64, 27]
+	paf@cray.com Patrick Farrell: [19, 0]
+	yawei.niu@intel.com Niu Yawei: [6, 5]
+	morrone2@llnl.gov Christopher J. Morrone: [1, 1]
+	gregoire.pichon@bull.net Gregoire Pichon: [320, 2]
+	hornc@cray.com Chris Horn: [25, 12]
+	vitaly_fertman@xyratex.com Vitaly Fertman: [148, 66]
+	haasken@cray.com Ryan Haasken: [7, 2]
+	johanna@mjao.org Johanna Abrahamsson: [20, 20]
+	giorgio.nicole@arcor.de Giorgio Dal Molin: [2, 1]
+	tremyfr@gmail.com Philippe Reynes: [42, 52]
+	donald.c.skidmore@intel.com Don Skidmore: [66, 2]
+	emil.s.tantilov@intel.com Emil Tantilov: [134, 51]
+	veola.nazareth@intel.com Veola Nazareth: [3, 1]
+	deller@gmx.de Helge Deller: [5, 25]
+	u9012063@gmail.com William Tu: [326, 0]
+	haiyangz@microsoft.com Haiyang Zhang: [211, 42]
+	alexander.h.duyck@intel.com Alexander Duyck: [16, 7]
+	avinash.dayanand@intel.com Avinash Dayanand: [3, 0]
+	harshitha.ramamurthy@intel.com Harshitha Ramamurthy: [2, 2]
+	catherine.sullivan@intel.com Catherine Sullivan: [25, 0]
+	carolyn.wyborny@intel.com Carolyn Wyborny: [88, 42]
+	mitch.a.williams@intel.com Mitch Williams: [70, 12]
+	marcelo.leitner@gmail.com Marcelo Ricardo Leitner: [7, 17]
+	tlfalcon@linux.vnet.ibm.com Thomas Falcon: [34, 2]
+	oulijun@huawei.com oulijun: [162, 0]
+	ogerlitz@mellanox.com Or Gerlitz: [30, 14]
+	hadarh@mellanox.com Hadar Hen Zion: [281, 49]
+	amir@vadai.me Amir Vadai: [10, 1]
+	paulb@mellanox.com Paul Blakey: [54, 31]
+	mohamad@mellanox.com Mohamad Haj Yahia: [29, 30]
+	vgupta@synopsys.com Vineet Gupta: [23, 7]
+	shunli.wang@mediatek.com Shunli Wang: [569, 0]
+	jamesjj.liao@mediatek.com James Liao: [8, 8]
+	liavr@mellanox.com Liav Rehana: [2, 2]
+	flora.cui@amd.com Flora Cui: [89, 63]
+	michel.daenzer@amd.com Michel Dänzer: [260, 215]
+	luwei.kang@intel.com Luwei Kang: [2, 1]
+	rkrcmar@redhat.com Radim Krčmář: [57, 63]
+	bsd@redhat.com Bandan Das: [13, 14]
+	james.hogan@imgtec.com James Hogan: [81, 45]
+	brendan.jackman@arm.com Brendan Jackman: [16, 5]
+	bin.gao@linux.intel.com Bin Gao: [14, 0]
+	james_p_freyensee@linux.intel.com Jay Freyensee: [33, 11]
+	qca_ailizaro@qca.qualcomm.com Lazar Alexei: [2, 14]
+	eduardo.abinader@riverbed.com Eduardo Abinader: [4, 2]
+	me@bobcopeland.com Bob Copeland: [1, 1]
+	lucile.quirion@savoirfairelinux.com Lucile Quirion: [190, 0]
+	david.daney@cavium.com David Daney: [10, 3]
+	takeshi.kihara.df@renesas.com Takeshi Kihara: [2662, 0]
+	xlpang@redhat.com Xunlei Pang: [2, 2]
+	daniel@iogearbox.net Daniel Borkmann: [291, 100]
+	paul.durrant@citrix.com Paul Durrant: [107, 2]
+	oneukum@suse.com Oliver Neukum: [10, 7]
+	appana.durga.rao@xilinx.com Appana Durga Kedareswara Rao: [112, 0]
+	shubhrajyoti.datta@xilinx.com shubhrajyoti.datta@xilinx.com: [29, 6]
+	kent.overstreet@gmail.com Kent Overstreet: [1, 1]
+	jun.li@nxp.com Li Jun: [5, 2]
+	yuantian.tang@nxp.com Tang Yuantian: [11, 7]
+	zhangqing@rock-chips.com Elaine Zhang: [61, 45]
+	jeyu@redhat.com Jessica Yu: [81, 3]
+	tvrtko.ursulin@intel.com Tvrtko Ursulin: [81, 56]
+	mbroemme@libmpq.org Maik Broemme: [1, 0]
+	sridhar.samudrala@intel.com Sridhar Samudrala: [1, 0]
+	kernel@kyup.com Nikolay Borisov: [18, 3]
+	jlayton@redhat.com Jeff Layton: [20, 5]
+	eric.engestrom@imgtec.com Eric Engestrom: [107, 66]
+	clinton.a.taylor@intel.com Clint Taylor: [1, 1]
+	valex@mellanox.com Alex Vesker: [10, 6]
+	ben@crypt.ly Ben LeMasurier: [18, 15]
+	dave@stgolabs.net Davidlohr Bueso: [43, 53]
+	oleg@redhat.com Oleg Nesterov: [29, 29]
+	chen_ann@projectara.com Ann Chen: [30, 17]
+	viresh.kumar@linaro.org Viresh Kumar: [33, 32]
+	pfeiner@google.com Peter Feiner: [12, 4]
+	sgruszka@redhat.com Stanislaw Gruszka: [32, 1]
+	ggherdovich@suse.cz Giovanni Gherdovich: [19, 0]
+	rui.y.wang@intel.com Rui Wang: [48, 25]
+	dietmar.eggemann@arm.com Dietmar Eggemann: [14, 0]
+	riel@redhat.com Rik van Riel: [0, 1]
+	davidcc@google.com David Carrillo-Cisneros: [97, 36]
+	maddy@linux.vnet.ibm.com Madhavan Srinivasan: [24, 5]
+	theidsieck@leenox.de Tillmann Heidsieck: [9, 3]
+	prarit@redhat.com Prarit Bhargava: [6, 0]
+	mrv@mojatatu.com Roman Mashak: [1, 42]
+	eladr@mellanox.com Elad Raz: [18, 0]
+	joao.pinto@synopsys.com Joao Pinto: [107, 19]
+	emily.deng@amd.com Emily Deng: [1947, 125]
+	artur.paszkiewicz@intel.com Artur Paszkiewicz: [9, 4]
+	gqjiang@suse.com Guoqing Jiang: [2, 5]
+	stillcompiling@gmail.com Joshua Clayton: [22, 1]
+	bsingharora@gmail.com Balbir Singh: [2, 2]
+	alu.ula@outlook.com Yuta Kobayashi: [6, 0]
+	pierre-louis.bossart@linux.intel.com Pierre-Louis Bossart: [413, 62]
+	sumit.semwal@linaro.org Sumit Semwal: [1, 3]
+	kamlakant.patel@broadcom.com Kamlakant Patel: [18, 1]
+	david.m.ertman@intel.com Dave Ertman: [25, 10]
+	milian.wolff@kdab.com Milian Wolff: [2, 2]
+	martin@omnibond.com Martin Brandenburg: [1354, 1843]
+	lw@karo-electronics.de Lothar Waßmann: [10, 0]
+	pmeerw@pmeerw.net Peter Meerwald-Stadler: [12, 13]
+	c.huber@bct-electronic.com Christoph Huber: [3, 2]
+	tharvey@gateworks.com Tim Harvey: [420, 0]
+	xiaodong.liu@intel.com Xiaodong Liu: [8, 7]
+	mathias.nyman@linux.intel.com Mathias Nyman: [9, 7]
+	jilin@nvidia.com Jim Lin: [3, 0]
+	alban.browaeys@gmail.com Alban Browaeys: [2, 1]
+	sean.wang@mediatek.com sean.wang@mediatek.com: [41, 27]
+	xose.vazquez@gmail.com Xose Vazquez Perez: [4, 0]
+	anton@samba.org Anton Blanchard: [5, 3]
+	daniel.wagner@bmw-carit.de Daniel Wagner: [10, 9]
+	hekuang@huawei.com He Kuang: [10, 3]
+	dave.long@linaro.org David A. Long: [5, 28]
+	anders@chargestorm.se Anders Darander: [2, 2]
+	sandeen@redhat.com Eric Sandeen: [12, 6]
+	git@thegavinli.com Gavin Li: [2, 4]
+	irina.tirdea@intel.com Irina Tirdea: [181, 15]
+	baruch@tkos.co.il Baruch Siach: [1, 0]
+	vincent.stehle@laposte.net Vincent: [2, 1]
+	mst@redhat.com Michael S. Tsirkin: [72, 7]
+	ggarcia@deic.uab.cat Gerard Garcia: [3, 7]
+	cyrille.pitchen@atmel.com Cyrille Pitchen: [14, 10]
+	sgoutham@cavium.com Sunil Goutham: [974, 401]
+	zr@semihalf.com Zyta Szpak: [34, 0]
+	jerin.jacob@caviumnetworks.com Jerin Jacob: [87, 0]
+	rad@semihalf.com Radoslaw Biernacki: [16, 8]
+	isubramanian@apm.com Iyappan Subramanian: [144, 39]
+	ast@fb.com Alexei Starovoitov: [131, 31]
+	haoxuany@fb.com Aaron Yue: [110, 4]
+	sargun@sargun.me Sargun Dhillon: [258, 2]
+	bkenward@solarflare.com Bert Kenward: [789, 125]
+	robert.moore@intel.com Bob Moore: [120, 92]
+	amitoj1606@gmail.com Amitoj Kaur Chawla: [2, 2]
+	jkim@freebsd.org Jung-uk Kim: [51, 5]
+	netanel@annapurnalabs.com Netanel Belgazal: [10501, 0]
+	thgarnie@google.com Thomas Garnier: [21, 7]
+	thesven73@gmail.com Sven Van Asbroeck: [9, 6]
+	maier@linux.vnet.ibm.com Steffen Maier: [200, 38]
+	alexey.kodanev@oracle.com Alexey Kodanev: [8, 7]
+	haokexin@gmail.com Kevin Hao: [2, 0]
+	ravi.bangoria@linux.vnet.ibm.com Ravi Bangoria: [69, 32]
+	jacopo.mondi@linaro.org Jacopo Mondi: [10, 125]
+	nicolas.pitre@linaro.org Nicolas Pitre: [3, 2]
+	andrew.smirnov@gmail.com Andrey Smirnov: [6, 7]
+	akash.goel@intel.com Akash Goel: [32, 2]
+	axel.lin@ingics.com Axel Lin: [7, 7]
+	david@lechnology.com David Lechner: [153, 0]
+	jniedwor@linux.vnet.ibm.com Julius Niedworok: [4, 1]
+	kan.liang@intel.com Kan Liang: [19, 5]
+	dvlasenk@redhat.com Denys Vlasenko: [11, 11]
+	arbab@linux.vnet.ibm.com Reza Arbab: [2, 0]
+	vdavydov@virtuozzo.com Vladimir Davydov: [86, 32]
+	mgorman@techsingularity.net Mel Gorman: [7, 7]
+	zhongjiang@huawei.com zhong jiang: [18, 0]
+	zyw@rock-chips.com Chris Zhong: [5, 1]
+	maxim.altshul@ti.com Maxim Altshul: [11, 9]
+	pkushwah@qti.qualcomm.com Purushottam Kushwaha: [10, 8]
+	roman.penyaev@profitbricks.com Roman Pen: [3, 0]
+	jasowang@redhat.com Jason Wang: [1, 4]
+	baolu.lu@linux.intel.com Lu Baolu: [4, 3]
+	denkenz@gmail.com Denis Kenzior: [42, 31]
+	fweisbec@gmail.com Frederic Weisbecker: [2, 1]
+	ville.syrjala@linux.intel.com Ville Syrjälä: [178, 95]
+	chunkeey@googlemail.com Christian Lamparter: [4, 0]
+	patrice.chotard@st.com Patrice Chotard: [368, 115]
+	austinwc@codeaurora.org Austin Christ: [8, 6]
+	athorlton@sgi.com Alex Thorlton: [2, 1]
+	vilhelm.gray@gmail.com William Breathitt Gray: [267, 0]
+	aaron.lu@intel.com Aaron Lu: [1, 6]
+	dave.hansen@linux.intel.com Dave Hansen: [2, 2]
+	sth@linux.vnet.ibm.com Stefan Haberland: [19, 1]
+	martynas@weave.works Martynas Pumputis: [25, 4]
+	arb@fb.com Adam Barth: [3, 1]
+	yinghai@kernel.org Yinghai Lu: [4, 4]
+	parthasarathy.bhuvaragan@ericsson.com Parthasarathy Bhuvaragan: [2, 1]
+	harini.katakam@xilinx.com Harini Katakam: [62, 12]
+	steve.capper@arm.com Steve Capper: [18, 1]
+	kirill.shutemov@linux.intel.com Kirill A. Shutemov: [3, 2]
+	iamjoonsoo.kim@lge.com Joonsoo Kim: [36, 16]
+	alexandre.bounine@idt.com Alexandre Bounine: [3194, 243]
+	u.kleine-koenig@pengutronix.de Uwe Kleine-König: [9, 8]
+	dharageswari.r@intel.com Dharageswari R: [10, 21]
+	martin@kaiser.cx Martin Kaiser: [1, 1]
+	danielmentz@google.com Daniel Mentz: [1, 1]
+	jay@jcornwall.me Jay Cornwall: [2, 1]
+	travis@sgi.com Mike Travis: [28, 27]
+	gdobrev@mm-sol.com Georgi Dobrev: [57, 0]
+	juri.lelli@arm.com Juri Lelli: [16, 6]
+	leo.yan@linaro.org Leo Yan: [7, 6]
+	pinglinux@gmail.com Ping Cheng: [36, 27]
+	killertofu@gmail.com Jason Gerecke: [112, 32]
+	sebott@linux.vnet.ibm.com Sebastian Ott: [1, 8]
+	makita.toshiaki@lab.ntt.co.jp Toshiaki Makita: [27, 25]
+	fbarrat@linux.vnet.ibm.com Frederic Barrat: [6, 3]
+	lizefan@huawei.com Zefan Li: [15, 0]
+	khlebnikov@yandex-team.ru Konstantin Khlebnikov: [9, 1]
+	haliu@redhat.com Hangbin Liu: [20, 0]
+	shc_work@mail.ru Alexander Shiyan: [26, 832]
+	ohlf@mkt-sys.de Marc Ohlf: [2, 2]
+	naohiro.aota@hgst.com Naohiro Aota: [12, 3]
+	masami.hiramatsu@linaro.org Masami Hiramatsu: [1, 1]
+	bgregg@netflix.com Brendan Gregg: [1, 1]
+	cristian.birsan@microchip.com Cristian Birsan: [37, 3]
+	romain.perier@free-electrons.com Romain Perier: [11, 7]
+	will.thomas@imgtec.com Will Thomas: [7, 3]
+	govindraj.raja@imgtec.com Govindraj Raja: [27, 0]
+	mnghuan@gmail.com Minfei Huang: [14, 28]
+	mahesh@linux.vnet.ibm.com Mahesh Salgaonkar: [60, 43]
+	cmetcalf@mellanox.com Chris Metcalf: [16, 1]
+	guneshwor.o.singh@intel.com Guneshwor Singh: [258, 1]
+	felix@linux.vnet.ibm.com Philippe Bergheaud: [2, 2]
+	alastair@d-silva.org Alastair D'Silva: [13, 13]
+	linuxbugs@vittgam.net Vittorio Gambaletta (VittGam): [1, 0]
+	peter.karasinski@gmail.com Piotr Karasinski: [1, 0]
+	aik@ozlabs.ru Alexey Kardashevskiy: [1, 1]
+	david.carroll@microsemi.com Dave Carroll: [11, 2]
+	mic@digikod.net Mickaël Salaün: [10, 7]
+	raju.lakkaraju@microsemi.com Raju Lakkaraju: [161, 0]
+	soltys@ziu.info Michal Soltys: [14, 37]
+	pshelar@ovn.org pravin shelar: [20, 14]
+	dalias@libc.org Rich Felker: [326, 0]
+	zyan@redhat.com Yan, Zheng: [4, 1]
+	andreas.ziegler@fau.de Andreas Ziegler: [0, 2]
+	bibby.hsieh@mediatek.com Bibby Hsieh: [18, 5]
+	leo.liu@amd.com Leo Liu: [2, 8]
+	adam.thomson.opensource@diasemi.com Adam Thomson: [109, 73]
+	ursula.braun@de.ibm.com Ursula Braun: [25, 24]
+	chris.brandt@renesas.com Chris Brandt: [12, 2]
+	dnlplm@gmail.com Daniele Palmas: [21, 0]
+	yazen.ghannam@amd.com Yazen Ghannam: [12, 3]
+	maninder1.s@samsung.com Maninder Singh: [1, 1]
+	guaneryu@gmail.com Eryu Guan: [5, 4]
+	akshay.adiga@linux.vnet.ibm.com Akshay Adiga: [20, 1]
+	aleksey.obitotskiy@intel.com Alexey Obitotskiy: [3, 1]
+	dforster@brocade.com David Forster: [2, 6]
+	iwienand@redhat.com Ian Wienand: [1, 1]
+	chang_jackson@projectara.com Jackson Chang: [31, 4]
+	kolga@netapp.com Olga Kornievskaia: [5, 3]
+	masashi.honma@gmail.com Masashi Honma: [38, 10]
+	acelan.kao@canonical.com AceLan Kao: [1, 0]
+	zijun_hu@htc.com zijun_hu: [4, 1]
+	kuleshovmail@gmail.com Alexander Kuleshov: [2, 2]
+	jpittman@redhat.com John Pittman: [0, 1]
+	jbaron@akamai.com Jason Baron: [146, 30]
+	shijie.huang@arm.com Huang Shijie: [22, 29]
+	hui.wang@canonical.com Hui Wang: [6, 0]
+	manish.chopra@qlogic.com Manish Chopra: [62, 48]
+	siva.kallam@broadcom.com Siva Reddy Kallam: [0, 4]
+	satish.baddipadige@broadcom.com Satish Baddipadige: [1, 0]
+	jakub.kicinski@netronome.com Jakub Kicinski: [2, 1]
+	jarno@ovn.org Jarno Rajahalme: [1, 7]
+	hiremath_vaibhav@projectara.com Vaibhav Hiremath: [3, 0]
+	mika.penttila@nextfour.com Mika Penttilä: [413, 0]
+	valdis.kletnieks@vt.edu Valdis Kletnieks: [1, 1]
+	hns@goldelico.com H. Nikolaus Schaller: [0, 2]
+	ptesarik@suse.com Petr Tesarik: [11, 4]
+	hidehiro.kawai.ez@hitachi.com Hidehiro Kawai: [4, 9]
+	geliangtang@gmail.com Geliang Tang: [1, 1]
+	konishi.ryusuke@lab.ntt.co.jp Ryusuke Konishi: [882, 810]
+	allenbh@gmail.com Allen Hubbe: [5, 3]
+	tomas.winkler@intel.com Tomas Winkler: [3, 2]
+	markivx@codeaurora.org Vikram Mulukutla: [5, 2]
+	sergey.senozhatsky@gmail.com Sergey Senozhatsky: [19, 7]
+	luisbg@osg.samsung.com Luis de Bethencourt: [4, 3]
+	chengang@emindsoft.com.cn Chen Gang: [5, 5]
+	hejianet@gmail.com Jia He: [4, 0]
+	minchan@kernel.org Minchan Kim: [1, 0]
+	piaojun@huawei.com piaojun: [102, 53]
+	ghe@suse.com Gang He: [9, 2]
+	hau@realtek.com Chun-Hao Lin: [8, 4]
+unknown 17515 8777
+	m.szyprowski@samsung.com Marek Szyprowski: [4, 1]
+	k.kozlowski@samsung.com Krzysztof Kozlowski: [7, 6]
+	york.sun@nxp.com York Sun: [22, 0]
+	tthayer@opensource.altera.com Thor Thayer: [12, 0]
+	john.stultz@linaro.org John Stultz: [50, 2]
+	nm@ti.com Nishanth Menon: [12, 0]
+	afd@ti.com Andrew F. Davis: [20, 0]
+	grygorii.strashko@ti.com Grygorii Strashko: [34, 18]
+	geert+renesas@glider.be Geert Uytterhoeven: [0, 41]
+	wens@csie.org Chen-Yu Tsai: [64, 8]
+	fabio.estevam@nxp.com Fabio Estevam: [181, 1]
+	woogyom.kim@gmail.com Milo Kim: [31, 10]
+	javier@osg.samsung.com Javier Martinez Canillas: [217, 201]
+	jay.schroeder@garmin.com J.D. Schroeder: [11, 4]
+	wangkefeng.wang@huawei.com Kefeng Wang: [393, 185]
+	arnd@arndb.de Arnd Bergmann: [30, 30]
+	ard.biesheuvel@linaro.org Ard Biesheuvel: [1, 2]
+	j-keerthy@ti.com Keerthy: [37, 0]
+	linus.walleij@linaro.org Linus Walleij: [229, 82]
+	alexander.kapshuk@gmail.com Alexander Kapshuk: [0, 193]
+	mmarek@suse.com Michal Marek: [17, 18]
+	daniel.vetter@ffwll.ch Daniel Vetter: [391, 562]
+	keescook@chromium.org Kees Cook: [3, 1]
+	sudeep.holla@arm.com Sudeep Holla: [2, 2]
+	simon.horman@netronome.com Simon Horman: [106, 0]
+	stefan@agner.ch Stefan Agner: [68, 13]
+	hdegoede@redhat.com Hans de Goede: [657, 515]
+	yamada.masahiro@socionext.com Masahiro Yamada: [878, 222]
+	jonathanh@nvidia.com Jon Hunter: [197, 12]
+	kishon@ti.com Kishon Vijay Abraham I: [2, 0]
+	vigneshr@ti.com Vignesh R: [62, 4]
+	guodong.xu@linaro.org Guodong Xu: [11, 1]
+	p.zabel@pengutronix.de Philipp Zabel: [38, 0]
+	anson.huang@nxp.com Anson Huang: [2, 1]
+	stuart.yoder@nxp.com Stuart Yoder: [23, 6]
+	marex@denx.de Marek Vasut: [15, 0]
+	linus.luessing@c0d3.blue Linus Lüssing: [2, 0]
+	aford173@gmail.com Adam Ford: [7, 5]
+	vlad.dogaru@intel.com Vlad Dogaru: [1, 0]
+	ken.lin@advantech.com.tw Ken Lin: [95, 0]
+	vz@mleia.com Vladimir Zapolskiy: [1, 1]
+	rafal@milecki.pl Rafał Miłecki: [38, 1]
+	chris@chris-wilson.co.uk Chris Wilson: [3, 0]
+	gregory.clement@free-electrons.com Gregory CLEMENT: [4, 0]
+	schwidefsky@de.ibm.com Martin Schwidefsky: [169, 0]
+	icenowy@aosc.xyz Icenowy Zheng: [109, 0]
+	akpm@linux-foundation.org Andrew Morton: [0, 8]
+	joe@perches.com Joe Perches: [11, 2]
+	nsekhar@ti.com Sekhar Nori: [1, 1]
+	s.mueller-klieser@phytec.de Stefan Müller-Klieser: [62, 0]
+	t-kristo@ti.com Tero Kristo: [6, 0]
+	sergei.shtylyov@cogentembedded.com Sergei Shtylyov: [304, 6]
+	zhengsq@rock-chips.com Shunqian Zheng: [2, 2]
+	zhengxing@rock-chips.com Xing Zheng: [2, 2]
+	johan@hovoldconsulting.com Johan Hovold: [4, 9]
+	chris.packham@alliedtelesis.co.nz Chris Packham: [9, 0]
+	gmbnomis@gmail.com Simon Baatz: [1, 1]
+	jason@lakedaemon.net Jason Cooper: [8, 1]
+	thomas.petazzoni@free-electrons.com Thomas Petazzoni: [15, 0]
+	corbet@lwn.net Jonathan Corbet: [2893, 981]
+	mchehab@s-opensource.com Mauro Carvalho Chehab: [5688, 5405]
+	hverkuil@xs4all.nl Hans Verkuil: [64, 43]
+	mchristi@redhat.com Mike Christie: [20, 3]
+	idryomov@gmail.com Ilya Dryomov: [6, 0]
+	stefan.wahren@i2se.com Stefan Wahren: [58, 0]
+	stev391@gmail.com Stephen Backway: [1, 0]
+	xinliang.liu@linaro.org Xinliang Liu: [95, 0]
+	rnayak@codeaurora.org Rajendra Nayak: [156, 0]
+	marc.zyngier@arm.com Marc Zyngier: [6, 6]
+	nick@shmanahar.org Nick Dyer: [490, 7]
+	andre.przywara@arm.com Andre Przywara: [2, 0]
+	kbeldan@baylibre.com Karl Beldan: [226, 32]
+	robin.murphy@arm.com Robin Murphy: [4, 5]
+	markus.heiser@darmarit.de Markus Heiser: [60, 13]
+	bonstra@bonstra.fr.eu.org Hugo Grostabussiat: [1, 1]
+	stefan.mavrodiev@gmail.com Stefan Mavrodiev: [226, 0]
+	ck.hu@mediatek.com CK Hu: [77, 0]
+	michal.simek@xilinx.com Michal Simek: [39, 0]
+	lucile.quirion@savoirfairelinux.com Lucile Quirion: [583, 0]
+	yuantian.tang@nxp.com Tang Yuantian: [4, 1]
+	ayaka@soulik.info Randy Li: [67, 48]
+	viresh.kumar@linaro.org Viresh Kumar: [30, 29]
+	stillcompiling@gmail.com Joshua Clayton: [4, 0]
+	swarren@nvidia.com Stephen Warren: [5, 5]
+	tharvey@gateworks.com Tim Harvey: [552, 0]
+	t.remmet@phytec.de Teresa Remmet: [3, 3]
+	breno.lima@nxp.com Breno Lima: [19, 0]
+	mst@redhat.com Michael S. Tsirkin: [5, 0]
+	isubramanian@apm.com Iyappan Subramanian: [2, 1]
+	netanel@annapurnalabs.com Netanel Belgazal: [2, 0]
+	nicolas.pitre@linaro.org Nicolas Pitre: [1, 1]
+	thilo@cestona.ro Thilo Cestonaro: [2, 2]
+	patrice.chotard@st.com Patrice Chotard: [4, 0]
+	fabien.lahoudere@collabora.co.uk Fabien Lahoudere: [18, 0]
+	jon.mason@broadcom.com Jon Mason: [869, 1]
+	jaz@semihalf.com Grzegorz Jaszczyk: [538, 5]
+	iamyooon@gmail.com seokhoon.yoon: [5, 5]
+	vitalya@ti.com Vitaly Andrianov: [8, 0]
+	namhyung@kernel.org Namhyung Kim: [1, 0]
+image 0 0
+	mchehab@s-opensource.com Mauro Carvalho Chehab: [0, 0]
+documentation 6369 2237
+	k.kozlowski@samsung.com Krzysztof Kozlowski: [15, 20]
+	york.sun@nxp.com York Sun: [2, 0]
+	bp@suse.de Borislav Petkov: [21, 0]
+	tthayer@opensource.altera.com Thor Thayer: [19, 0]
+	andriy.shevchenko@linux.intel.com Andy Shevchenko: [0, 19]
+	rafael.j.wysocki@intel.com Rafael J. Wysocki: [102, 76]
+	vivien.didelot@savoirfairelinux.com Vivien Didelot: [28, 5]
+	afd@ti.com Andrew F. Davis: [16, 16]
+	alexandre.belloni@free-electrons.com Alexandre Belloni: [49, 0]
+	akinobu.mita@gmail.com Akinobu Mita: [37, 0]
+	wens@csie.org Chen-Yu Tsai: [2, 1]
+	fabio.estevam@nxp.com Fabio Estevam: [3, 2]
+	woogyom.kim@gmail.com Milo Kim: [2, 2]
+	niklas.cassel@axis.com Niklas Cassel: [4, 3]
+	wenyou.yang@atmel.com Wenyou Yang: [22, 9]
+	wangkefeng.wang@huawei.com Kefeng Wang: [28, 11]
+	w.egorov@phytec.de Wadim Egorov: [34, 3]
+	linus.walleij@linaro.org Linus Walleij: [134, 18]
+	peter.ujfalusi@ti.com Peter Ujfalusi: [0, 10]
+	narmstrong@baylibre.com Neil Armstrong: [64, 0]
+	bjorn.andersson@linaro.org Bjorn Andersson: [136, 0]
+	yoshihiro.shimoda.uh@renesas.com Yoshihiro Shimoda: [1, 0]
+	fthain@telegraphics.com.au Finn Thain: [0, 4]
+	f.fainelli@gmail.com Florian Fainelli: [44, 21]
+	ebiggers@google.com Eric Biggers: [26, 12]
+	lv.zheng@intel.com Lv Zheng: [96, 0]
+	schalbroeck@gmail.com Sebastiaan Schalbroeck: [6, 6]
+	hdegoede@redhat.com Hans de Goede: [39, 35]
+	bharat.kumar.gogada@xilinx.com Bharat Kumar Gogada: [3, 2]
+	info@gunibert.de Guenther Wutz: [1, 1]
+	simhavcs@gmail.com Vinay Simha BN: [1, 0]
+	ccc94453@vip.cybercity.dk Rask Ingemann Lambertsen: [14, 13]
+	wsa+renesas@sang-engineering.com Wolfram Sang: [5, 14]
+	yamada.masahiro@socionext.com Masahiro Yamada: [93, 0]
+	vigneshr@ti.com Vignesh R: [23, 0]
+	jpoimboe@redhat.com Josh Poimboeuf: [11, 0]
+	dhowells@redhat.com David Howells: [26, 13]
+	acme@redhat.com Arnaldo Carvalho de Melo: [4, 0]
+	pbonzini@redhat.com Paolo Bonzini: [4, 3]
+	hch@infradead.org Christoph Hellwig: [10, 14]
+	aford173@gmail.com Adam Ford: [6, 0]
+	computersforpeace@gmail.com Brian Norris: [2, 1]
+	mranostay@gmail.com Matt Ranostay: [38, 0]
+	axboe@fb.com Jens Axboe: [3, 3]
+	rafal@milecki.pl Rafał Miłecki: [2, 18]
+	tom@herbertland.com Tom Herbert: [136, 0]
+	cyrilbur@gmail.com Cyril Bur: [2, 0]
+	idosch@mellanox.com Ido Schimmel: [4, 9]
+	zhengxing@rock-chips.com Xing Zheng: [15, 0]
+	thomas.petazzoni@free-electrons.com Thomas Petazzoni: [25, 0]
+	pawel.moll@arm.com Pawel Moll: [10, 6]
+	bhe@redhat.com Baoquan He: [13, 7]
+	corbet@lwn.net Jonathan Corbet: [0, 1703]
+	mchehab@s-opensource.com Mauro Carvalho Chehab: [0, 0]
+	jaret.cantu@timesys.com Jaret Cantu: [10, 0]
+	william.wu@rock-chips.com William Wu: [70, 0]
+	mhiramat@kernel.org mhiramat@kernel.org: [18, 13]
+	kuninori.morimoto.gx@renesas.com Kuninori Morimoto: [32, 27]
+	marc.zyngier@arm.com Marc Zyngier: [1, 0]
+	mrochs@linux.vnet.ibm.com Matthew R. Ochs: [39, 5]
+	ycheng@google.com Yuchung Cheng: [23, 22]
+	labbott@redhat.com Laura Abbott: [1, 1]
+	jolsa@kernel.org Jiri Olsa: [3, 0]
+	kbeldan@baylibre.com Karl Beldan: [4, 0]
+	kchsu0@nuvoton.com John Hsu: [16, 0]
+	markus.heiser@darmarit.de Markus Heiser: [2, 1]
+	sj38.park@gmail.com SeongJae Park: [3138, 2]
+	paulmck@linux.vnet.ibm.com Paul E. McKenney: [22, 0]
+	songjun.wu@microchip.com Songjun Wu: [65, 0]
+	srinivas.pandruvada@linux.intel.com Srinivas Pandruvada: [454, 0]
+	zhiyong.tao@mediatek.com Zhiyong Tao: [29, 21]
+	gustavo.padovan@collabora.co.uk Gustavo Padovan: [14, 0]
+	jamesjj.liao@mediatek.com James Liao: [82, 7]
+	lucile.quirion@savoirfairelinux.com Lucile Quirion: [36, 0]
+	takeshi.kihara.df@renesas.com Takeshi Kihara: [1, 0]
+	appana.durga.rao@xilinx.com Appana Durga Kedareswara Rao: [35, 0]
+	shubhrajyoti.datta@xilinx.com shubhrajyoti.datta@xilinx.com: [1, 0]
+	jeyu@redhat.com Jessica Yu: [16, 4]
+	roscaeugeniu@gmail.com Eugeniu Rosca: [38, 1]
+	ricardo.ribalda@gmail.com Ricardo Ribalda Delgado: [2, 3]
+	andi.shyti@samsung.com Andi Shyti: [22, 20]
+	tharvey@gateworks.com Tim Harvey: [94, 0]
+	dave.long@linaro.org David A. Long: [10, 0]
+	isubramanian@apm.com Iyappan Subramanian: [3, 0]
+	netanel@annapurnalabs.com Netanel Belgazal: [305, 0]
+	joe.lawrence@redhat.com Joe Lawrence: [18, 0]
+	noltari@gmail.com Álvaro Fernández Rojas: [46, 0]
+	patrice.chotard@st.com Patrice Chotard: [7, 3]
+	alexandre.bounine@idt.com Alexandre Bounine: [146, 2]
+	mathias.koehrer@etas.com Mathias Koehrer: [4, 0]
+	naohiro.aota@hgst.com Naohiro Aota: [9, 1]
+	bgregg@netflix.com Brendan Gregg: [2, 2]
+	hubcap@omnibond.com Mike Marshall: [46, 4]
+	dalias@libc.org Rich Felker: [60, 0]
+	jaz@semihalf.com Grzegorz Jaszczyk: [13, 2]
+	iamyooon@gmail.com seokhoon.yoon: [14, 14]
+	mika.penttila@nextfour.com Mika Penttilä: [34, 0]
+	konishi.ryusuke@lab.ntt.co.jp Ryusuke Konishi: [3, 2]
+build 1817 1041
+	k.kozlowski@samsung.com Krzysztof Kozlowski: [2, 0]
+	hl@rock-chips.com Lin Huang: [1, 0]
+	york.sun@nxp.com York Sun: [14, 1]
+	bp@suse.de Borislav Petkov: [0, 2]
+	tthayer@opensource.altera.com Thor Thayer: [7, 0]
+	andriy.shevchenko@linux.intel.com Andy Shevchenko: [20, 2]
+	rafael.j.wysocki@intel.com Rafael J. Wysocki: [1, 4]
+	vegard.nossum@oracle.com Vegard Nossum: [1, 1]
+	john.stultz@linaro.org John Stultz: [1, 1]
+	andrew@lunn.ch Andrew Lunn: [289, 285]
+	rvatsavayi@caviumnetworks.com Raghu Vatsavayi: [14, 12]
+	rogerq@ti.com Roger Quadros: [1, 0]
+	alexandre.belloni@free-electrons.com Alexandre Belloni: [16, 0]
+	akinobu.mita@gmail.com Akinobu Mita: [13, 0]
+	will.deacon@arm.com Will Deacon: [13, 10]
+	torvalds@linux-foundation.org Linus Torvalds: [6, 5]
+	geert+renesas@glider.be Geert Uytterhoeven: [38, 2]
+	wens@csie.org Chen-Yu Tsai: [11, 0]
+	fabio.estevam@nxp.com Fabio Estevam: [2, 6]
+	robh@kernel.org Rob Herring: [283, 0]
+	okhaliq@caviumnetworks.com Omer Khaliq: [14, 0]
+	javier@osg.samsung.com Javier Martinez Canillas: [2, 2]
+	o-takashi@sakamocchi.jp Takashi Sakamoto: [3, 2]
+	zubair.kakakhel@imgtec.com Zubair Lutfullah Kakakhel: [1, 1]
+	wangkefeng.wang@huawei.com Kefeng Wang: [4, 1]
+	arnd@arndb.de Arnd Bergmann: [6, 2]
+	w.egorov@phytec.de Wadim Egorov: [6, 6]
+	andy.yan@rock-chips.com Andy Yan: [1, 1]
+	j-keerthy@ti.com Keerthy: [28, 1]
+	linus.walleij@linaro.org Linus Walleij: [33, 117]
+	kim.phillips@arm.com Kim Phillips: [0, 1]
+	mmarek@suse.com Michal Marek: [4, 0]
+	daniel.vetter@ffwll.ch Daniel Vetter: [11, 16]
+	andreas.werner@men.de Andreas Werner: [10, 0]
+	mpe@ellerman.id.au Michael Ellerman: [13, 11]
+	keescook@chromium.org Kees Cook: [2, 1]
+	mathieu.poirier@linaro.org Mathieu Poirier: [3, 0]
+	peter.chen@nxp.com Peter Chen: [8, 0]
+	narmstrong@baylibre.com Neil Armstrong: [20, 1]
+	bjorn.andersson@linaro.org Bjorn Andersson: [18, 0]
+	sudipm.mukherjee@gmail.com Sudip Mukherjee: [1, 0]
+	felipe.balbi@linux.intel.com Felipe Balbi: [19, 19]
+	f.fainelli@gmail.com Florian Fainelli: [1, 0]
+	lv.zheng@intel.com Lv Zheng: [0, 1]
+	schalbroeck@gmail.com Sebastiaan Schalbroeck: [1, 1]
+	hdegoede@redhat.com Hans de Goede: [3, 14]
+	sboyd@codeaurora.org Stephen Boyd: [4, 3]
+	yamada.masahiro@socionext.com Masahiro Yamada: [25, 12]
+	william.c.roberts@intel.com William Roberts: [0, 38]
+	vigneshr@ti.com Vignesh R: [13, 0]
+	jpoimboe@redhat.com Josh Poimboeuf: [0, 18]
+	rdunlap@infradead.org Randy Dunlap: [1, 1]
+	guodong.xu@linaro.org Guodong Xu: [11, 0]
+	p.zabel@pengutronix.de Philipp Zabel: [14, 2]
+	pbonzini@redhat.com Paolo Bonzini: [2, 1]
+	pablo@netfilter.org Pablo Neira Ayuso: [11, 20]
+	darrick.wong@oracle.com Darrick J. Wong: [5, 0]
+	hch@infradead.org Christoph Hellwig: [2, 2]
+	khilman@baylibre.com Kevin Hilman: [18, 41]
+	mranostay@gmail.com Matt Ranostay: [14, 0]
+	gwenhael.goavec-merou@trabucayre.com Gwenhael Goavec-Merou: [11, 0]
+	amsfield22@gmail.com Alison Schofield: [12, 0]
+	slongerbeam@gmail.com Steve Longerbeam: [1, 1]
+	rrice@broadcom.com Rob Rice: [1, 0]
+	rafal@milecki.pl Rafał Miłecki: [14, 0]
+	jani.nikula@intel.com Jani Nikula: [23, 28]
+	chris@chris-wilson.co.uk Chris Wilson: [6, 3]
+	gregory.clement@free-electrons.com Gregory CLEMENT: [1, 0]
+	schwidefsky@de.ibm.com Martin Schwidefsky: [6, 0]
+	james.morse@arm.com James Morse: [0, 1]
+	tom@herbertland.com Tom Herbert: [8, 0]
+	benh@kernel.crashing.org Benjamin Herrenschmidt: [1, 0]
+	valentinrothberg@gmail.com Valentin Rothberg: [0, 1]
+	icenowy@aosc.xyz Icenowy Zheng: [1, 0]
+	ross.zwisler@linux.intel.com Ross Zwisler: [0, 13]
+	mhocko@suse.com Michal Hocko: [8, 1]
+	idosch@mellanox.com Ido Schimmel: [2, 0]
+	andy.gross@linaro.org Andy Gross: [0, 1]
+	zhengxing@rock-chips.com Xing Zheng: [14, 0]
+	mark.rutland@arm.com Mark Rutland: [3, 0]
+	fabf@skynet.be Fabian Frederick: [2, 6]
+	thomas.petazzoni@free-electrons.com Thomas Petazzoni: [4, 0]
+	jglauber@cavium.com Jan Glauber: [25, 2]
+	borntraeger@de.ibm.com Christian Borntraeger: [4, 4]
+	srinivas.kandagatla@linaro.org Srinivas Kandagatla: [2, 0]
+	corbet@lwn.net Jonathan Corbet: [1, 1]
+	npiggin@gmail.com Nicholas Piggin: [6, 6]
+	rex.zhu@amd.com Rex Zhu: [1, 1]
+	dh.herrmann@gmail.com David Herrmann: [79, 57]
+	mchehab@s-opensource.com Mauro Carvalho Chehab: [13, 7]
+	hverkuil@xs4all.nl Hans Verkuil: [3, 112]
+	paulus@ozlabs.org Paul Mackerras: [9, 11]
+	adobriyan@gmail.com Alexey Dobriyan: [1, 0]
+	stefan.wahren@i2se.com Stefan Wahren: [2, 1]
+	luto@kernel.org Andy Lutomirski: [35, 0]
+	pavel@ucw.cz Pavel Machek: [8, 0]
+	kuninori.morimoto.gx@renesas.com Kuninori Morimoto: [12, 12]
+	pbrobinson@gmail.com Peter Robinson: [1, 0]
+	hariprasad@chelsio.com Hariprasad Shenai: [27, 1]
+	richard@nod.at Richard Weinberger: [1, 0]
+	niklas.soderlund+renesas@ragnatech.se Niklas Söderlund: [1, 1]
+	rui.teng@linux.vnet.ibm.com Rui Teng: [1, 1]
+	jolsa@kernel.org Jiri Olsa: [3, 3]
+	kbeldan@baylibre.com Karl Beldan: [8, 0]
+	kchsu0@nuvoton.com John Hsu: [7, 0]
+	michael.weiser@gmx.de Michael Weiser: [1, 0]
+	vladimir.murzin@arm.com Vladimir Murzin: [0, 3]
+	rahul.lakkireddy@chelsio.com Rahul Lakkireddy: [1, 1]
+	markus.heiser@darmarit.de Markus Heiser: [50, 7]
+	stefan.mavrodiev@gmail.com Stefan Mavrodiev: [1, 0]
+	songjun.wu@microchip.com Songjun Wu: [13, 0]
+	nevola@gmail.com Laura Garcia Liebana: [14, 0]
+	srinivas.pandruvada@linux.intel.com Srinivas Pandruvada: [43, 0]
+	zhiyong.tao@mediatek.com Zhiyong Tao: [14, 0]
+	tony.luck@intel.com Tony Luck: [9, 0]
+	gustavo.padovan@collabora.co.uk Gustavo Padovan: [14, 14]
+	u9012063@gmail.com William Tu: [1, 0]
+	jamesjj.liao@mediatek.com James Liao: [25, 3]
+	lucile.quirion@savoirfairelinux.com Lucile Quirion: [10, 0]
+	takeshi.kihara.df@renesas.com Takeshi Kihara: [6, 0]
+	appana.durga.rao@xilinx.com Appana Durga Kedareswara Rao: [8, 0]
+	jeyu@redhat.com Jessica Yu: [1, 0]
+	emily.deng@amd.com Emily Deng: [2, 1]
+	tharvey@gateworks.com Tim Harvey: [11, 0]
+	breno.lima@nxp.com Breno Lima: [1, 0]
+	mst@redhat.com Michael S. Tsirkin: [7, 10]
+	sgoutham@cavium.com Sunil Goutham: [11, 0]
+	isubramanian@apm.com Iyappan Subramanian: [1, 0]
+	sargun@sargun.me Sargun Dhillon: [5, 0]
+	netanel@annapurnalabs.com Netanel Belgazal: [41, 0]
+	zhongjiang@huawei.com zhong jiang: [1, 0]
+	vilhelm.gray@gmail.com William Breathitt Gray: [14, 0]
+	alexandre.bounine@idt.com Alexandre Bounine: [17, 0]
+	shc_work@mail.ru Alexander Shiyan: [15, 46]
+	jon.mason@broadcom.com Jon Mason: [5, 0]
+	mic@digikod.net Mickaël Salaün: [0, 11]
+	raju.lakkaraju@microsemi.com Raju Lakkaraju: [6, 0]
+	dalias@libc.org Rich Felker: [16, 0]
+	jaz@semihalf.com Grzegorz Jaszczyk: [3, 0]
+	iamyooon@gmail.com seokhoon.yoon: [2, 2]
+	mika.penttila@nextfour.com Mika Penttilä: [13, 0]
+	valdis.kletnieks@vt.edu Valdis Kletnieks: [2, 1]
+devel-doc 168 86
+code 160397 74973
+unknown 17515 8777
+image 0 0
+documentation 6369 2237
+build 1817 1041

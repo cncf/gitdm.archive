@@ -154,7 +154,7 @@ def LookupStoreHacker (name, email):
         return ha
     elist = database.LookupEmployer (email, MapUnknown)
     ha = database.LookupName (name)
-    if email != 'unknown@hacker.net' and elist[0][1].name == '(Unknown)':
+    if email != 'unknown@hacker.net' and elist[0][1].name == '(Unknown)' and '@' in email:
         domain = email.split('@')[1].strip().lower()
         if domain in unknown_domains:
             unknown_domains[domain].append(email)
