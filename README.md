@@ -12,3 +12,11 @@ Final report:
 Data: https://docs.google.com/spreadsheets/d/15otmXVx8Gd6JzfiGP_OSjP8M9zyLeLof5-IGQKEb0UQ/edit?usp=sharing
 Report: https://docs.google.com/document/d/1RKtRamlu4D_OpTDFTKNpMsmV51obdZlPWbXVj-LrDuw/edit?usp=sharing
 
+* Contributing
+Pull Request are welcome.
+Our mapping is not complete, please see config files in `https://github.com/cncf/gitdm/blob/master/cncf-config/`.
+File `https://github.com/cncf/gitdm/blob/master/cncf-config/email-map` is a direct mapping email to employer.
+
+There is also a long list of unknown emails, please see: `https://github.com/cncf/gitdm/blob/master/kubernetes/all_time/run_no_map_patch.txt`
+All unknown developers have 4 or less contribution.
+
