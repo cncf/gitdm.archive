@@ -6,6 +6,7 @@ def analysis(fn)
   obj = {}
   sa = sr = sc = 0
   unknowns = []
+  goo = []
   sums = %w(added removed changesets)
   CSV.foreach(fn, headers: true) do |row|
     h = row.to_h
@@ -30,11 +31,19 @@ def analysis(fn)
     em = h['Affliation']
     if em == '(Unknown)'
       unknowns << h
+    elsif em == 'Google' && !e.include?('@google.com')
+      goo << h
     end
   end
 
   File.open('unknown_devs.txt', 'w') do |file|
     unknowns.each do |dev|
+      file.write("#{dev['Name']} <#{dev['Email']}>\n")
+    end
+  end
+
+  File.open('google_other.txt', 'w') do |file|
+    goo.each do |dev|
       file.write("#{dev['Name']} <#{dev['Email']}>\n")
     end
   end
