@@ -19,5 +19,11 @@ echo "Analysis All"
 echo "Analysis Releases"
 ./analysis_rels.sh
 
+echo "Kubernetes repos"
+./kubernetes_repos.sh
+
+echo "TopDevs, google others and unknowns"
+./topdevs.sh
+
 echo "All done."
 
