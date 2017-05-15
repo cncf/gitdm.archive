@@ -5,6 +5,7 @@ def analysis(fn)
   # "Name","Email","Affliation","Date","Added","Removed","Changesets"
   obj = {}
   sa = sr = sc = 0
+  unknowns = []
   sums = %w(added removed changesets)
   CSV.foreach(fn, headers: true) do |row|
     h = row.to_h
@@ -24,6 +25,17 @@ def analysis(fn)
       end
     else
       obj[e] = h
+    end
+    # If run with: kubernetes/all_time/first_run_patch.csv
+    em = h['Affliation']
+    if em == '(Unknown)'
+      unknowns << h
+    end
+  end
+
+  File.open('unknown_devs.txt', 'w') do |file|
+    unknowns.each do |dev|
+      file.write("#{dev['Name']} <#{dev['Email']}>\n")
     end
   end
 

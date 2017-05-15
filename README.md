@@ -20,4 +20,5 @@ File `https://github.com/cncf/gitdm/blob/master/cncf-config/email-map` is a dire
 
 There is also a long list of unknown emails, please see: `https://github.com/cncf/gitdm/blob/master/results.txt`
 All unknown developers have 4 or less contribution.
+List of unknown developers (names & emails): `https://github.com/cncf/gitdm/blob/master/unknown_devs.txt`
 
