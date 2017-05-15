@@ -47,8 +47,8 @@ ReportUnknowns = False
 InputData = sys.stdin
 InputDataIsFile = False
 DebugHalt = False
-DateFrom = datetime.date(1970, 1, 1)
-DateTo = datetime.date(2069, 1, 1)
+DateFrom = datetime.datetime(1970, 1, 1)
+DateTo = datetime.datetime(2069, 1, 1)
 
 #
 # Options:
