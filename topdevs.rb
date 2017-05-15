@@ -5,8 +5,8 @@ def analysis(fn)
   # "Name","Email","Affliation","Date","Added","Removed","Changesets"
   obj = {}
   sa = sr = sc = 0
-  unknowns = []
-  goo = []
+  unknowns = {}
+  goo = {}
   sums = %w(added removed changesets)
   CSV.foreach(fn, headers: true) do |row|
     h = row.to_h
@@ -30,11 +30,14 @@ def analysis(fn)
     # If run with: kubernetes/all_time/first_run_patch.csv
     em = h['Affliation']
     if em == '(Unknown)'
-      unknowns << h
+      unknowns[h['Name']] = h
     elsif em == 'Google' && !e.include?('@google.com')
-      goo << h
+      goo[h['Name']] = h
     end
   end
+
+  unknowns = unknowns.values.sort_by { |item| item['Name'] }
+  goo = goo.values.sort_by { |item| item['Name'] }
 
   File.open('unknown_devs.txt', 'w') do |file|
     unknowns.each do |dev|
