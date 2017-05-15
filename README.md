@@ -15,10 +15,12 @@ Report: https://docs.google.com/document/d/1RKtRamlu4D_OpTDFTKNpMsmV51obdZlPWbXV
 # Contributing
 
 Pull Request are welcome.
-Our mapping is not complete, please see config files in `https://github.com/cncf/gitdm/blob/master/cncf-config/`.
-File `https://github.com/cncf/gitdm/blob/master/cncf-config/email-map` is a direct mapping email to employer.
+Our mapping is not complete, please see config files in: https://github.com/cncf/gitdm/blob/master/cncf-config/.
+File https://github.com/cncf/gitdm/blob/master/cncf-config/email-map is a direct mapping email to employer.
 
-There is also a long list of unknown emails, please see: `https://github.com/cncf/gitdm/blob/master/results.txt`
+There is also a long list of unknown emails, please see section `Developers with unknown affiliation`:
+https://github.com/cncf/gitdm/blob/master/results.txt
+
 All unknown developers have 4 or less contribution.
-List of unknown developers (names & emails): `https://github.com/cncf/gitdm/blob/master/unknown_devs.txt`
+Current list of unknown developers (names & emails): https://github.com/cncf/gitdm/blob/master/unknown_devs.txt
 
