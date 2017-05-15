@@ -6,7 +6,8 @@ emails = {}
 emails2 = {}
 keys = {}
 
-CSV.foreach('./new_round_enriched.csv', headers: true) do |row|
+# new_round_enriched.csv
+CSV.foreach('./all_clearbit_queries.csv', headers: true) do |row|
   h = row.to_h
   status = h['status']
   email = h['source']
@@ -35,6 +36,14 @@ CSV.foreach('./new_round_enriched.csv', headers: true) do |row|
   end
 end
 
+CSV.foreach('./unknown_devs.csv', headers: true) do |row|
+  h = row.to_h
+  e = h['email']
+  if emails.key? e
+    puts "#{e} #{emails[e].first}"
+  end
+end
+
 found = []
 keys.each do |key, value|
   found << [key, value[0], value[1]]
@@ -46,9 +55,7 @@ found = found.sort_by { |item| -item[1] }
 #  puts "#{email.strip} #{company.first.strip}"
 #end
 
-emails2.each do |email, full_name|
-  puts "#{email.strip} #{full_name.first.strip}"
-end
+#emails2.each do |email, full_name|
+#  puts "#{email.strip} #{full_name.first.strip}"
+#end
 
-binding.pry
-puts 'bye'

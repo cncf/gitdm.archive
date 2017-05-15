@@ -51,6 +51,12 @@ def analysis(fn)
     end
   end
 
+  hdr = %w(email name)
+  CSV.open('unknown_devs.csv', 'w', headers: hdr) do |csv|
+    csv << hdr
+    unknowns.each { |dev| csv << [dev['Email'], dev['Name']] }
+  end
+
   added = []
   removed = []
   changesets = []
