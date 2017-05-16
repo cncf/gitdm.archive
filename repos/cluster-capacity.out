@@ -1,14 +1,15 @@
+Filter on "\/vendor\/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/cluster-capacity.csv
 
 unknown@hacker.net Unknown hacker
 avesh.ncsu@gmail.com Avesh Agarwal
-	devel-doc [132018, 168364]
-	code [29181, 45900]
-	unknown [2445745, 6259601]
+	devel-doc [93262, 88833]
+	code [21063, 33081]
+	unknown [1442765, 4119261]
 	image [1499, 2809]
-	documentation [40607, 58857]
+	documentation [30251, 43753]
 	ui [6, 1]
-	build [6826, 9374]
+	build [5839, 7822]
 	translation [5323, 2792]
 decarr@redhat.com Derek Carr
 	unknown [2374, 249]
@@ -17,65 +18,63 @@ decarr@redhat.com Derek Carr
 	build [28, 0]
 	documentation [58, 0]
 jchaloup@redhat.com Jan Chaloupka
-	devel-doc [196411, 155088]
-	code [89780, 86974]
-	package [0, 0]
-	unknown [5535255, 4920425]
-	image [3428, 3429]
-	documentation [181165, 181805]
-	build [15879, 15536]
+	devel-doc [62728, 7149]
+	code [13079, 1376]
+	unknown [2324401, 266369]
+	image [0, 0]
+	documentation [4649, 494]
+	build [1452, 180]
 dhodovsk@redhat.com Dominika Hodovska
-	devel-doc [177103, 5395]
-	code [97390, 706]
+	devel-doc [130532, 1167]
+	code [90248, 666]
 	package [0, 0]
-	unknown [7428255, 108506]
+	unknown [5841752, 93567]
 	image [4025, 0]
-	documentation [72914, 139]
+	documentation [63503, 81]
 	ui [1, 0]
-	build [17041, 377]
-devel-doc 505744 328847
-	avesh.ncsu@gmail.com Avesh Agarwal: [132018, 168364]
+	build [15877, 275]
+devel-doc 286734 97149
+	avesh.ncsu@gmail.com Avesh Agarwal: [93262, 88833]
 	decarr@redhat.com Derek Carr: [212, 0]
-	jchaloup@redhat.com Jan Chaloupka: [196411, 155088]
-	dhodovsk@redhat.com Dominika Hodovska: [177103, 5395]
-code 216772 133580
-	avesh.ncsu@gmail.com Avesh Agarwal: [29181, 45900]
+	jchaloup@redhat.com Jan Chaloupka: [62728, 7149]
+	dhodovsk@redhat.com Dominika Hodovska: [130532, 1167]
+code 124811 35123
+	avesh.ncsu@gmail.com Avesh Agarwal: [21063, 33081]
 	decarr@redhat.com Derek Carr: [421, 0]
-	jchaloup@redhat.com Jan Chaloupka: [89780, 86974]
-	dhodovsk@redhat.com Dominika Hodovska: [97390, 706]
+	jchaloup@redhat.com Jan Chaloupka: [13079, 1376]
+	dhodovsk@redhat.com Dominika Hodovska: [90248, 666]
 package 0 0
-	jchaloup@redhat.com Jan Chaloupka: [0, 0]
 	dhodovsk@redhat.com Dominika Hodovska: [0, 0]
-unknown 15411629 11288781
-	avesh.ncsu@gmail.com Avesh Agarwal: [2445745, 6259601]
+unknown 9611292 4479446
+	avesh.ncsu@gmail.com Avesh Agarwal: [1442765, 4119261]
 	decarr@redhat.com Derek Carr: [2374, 249]
-	jchaloup@redhat.com Jan Chaloupka: [5535255, 4920425]
-	dhodovsk@redhat.com Dominika Hodovska: [7428255, 108506]
-image 8952 6238
+	jchaloup@redhat.com Jan Chaloupka: [2324401, 266369]
+	dhodovsk@redhat.com Dominika Hodovska: [5841752, 93567]
+image 5524 2809
 	avesh.ncsu@gmail.com Avesh Agarwal: [1499, 2809]
-	jchaloup@redhat.com Jan Chaloupka: [3428, 3429]
+	jchaloup@redhat.com Jan Chaloupka: [0, 0]
 	dhodovsk@redhat.com Dominika Hodovska: [4025, 0]
-documentation 294744 240801
-	avesh.ncsu@gmail.com Avesh Agarwal: [40607, 58857]
+documentation 98461 44328
+	avesh.ncsu@gmail.com Avesh Agarwal: [30251, 43753]
 	decarr@redhat.com Derek Carr: [58, 0]
-	jchaloup@redhat.com Jan Chaloupka: [181165, 181805]
-	dhodovsk@redhat.com Dominika Hodovska: [72914, 139]
+	jchaloup@redhat.com Jan Chaloupka: [4649, 494]
+	dhodovsk@redhat.com Dominika Hodovska: [63503, 81]
 ui 7 1
 	avesh.ncsu@gmail.com Avesh Agarwal: [6, 1]
 	dhodovsk@redhat.com Dominika Hodovska: [1, 0]
-build 39774 25287
-	avesh.ncsu@gmail.com Avesh Agarwal: [6826, 9374]
+build 23196 8277
+	avesh.ncsu@gmail.com Avesh Agarwal: [5839, 7822]
 	decarr@redhat.com Derek Carr: [28, 0]
-	jchaloup@redhat.com Jan Chaloupka: [15879, 15536]
-	dhodovsk@redhat.com Dominika Hodovska: [17041, 377]
+	jchaloup@redhat.com Jan Chaloupka: [1452, 180]
+	dhodovsk@redhat.com Dominika Hodovska: [15877, 275]
 translation 5323 2792
 	avesh.ncsu@gmail.com Avesh Agarwal: [5323, 2792]
-devel-doc 505744 328847
-code 216772 133580
+devel-doc 286734 97149
+code 124811 35123
 package 0 0
-unknown 15411629 11288781
-image 8952 6238
-documentation 294744 240801
+unknown 9611292 4479446
+image 5524 2809
+documentation 98461 44328
 ui 7 1
-build 39774 25287
+build 23196 8277
 translation 5323 2792

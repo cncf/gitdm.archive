@@ -1,14 +1,9 @@
+Filter on "\/vendor\/"
 open output file /Users/lukasz/dev/cncf/gitdm/output_strict_numstat.csv
 
 unknown@hacker.net Unknown hacker
 pwittroc@google.com Phillip Wittrock
 	unknown [969, 122]
-k8s-merge-robot@users.noreply.github.com Kubernetes Submit Queue
-	unknown [1133, 695]
-	devel-doc [3, 3]
-	code [440, 20]
-	build [5, 1]
-	documentation [2, 0]
 quinton@google.com Quinton Hoole
 	unknown [1895, 469]
 	code [5, 1]
@@ -48,9 +43,9 @@ madhusudancs@google.com Madhusudan.C.S
 	build [94, 21]
 	documentation [24, 12]
 nikhiljindal@google.com nikhiljindal
-	code [473, 191]
 	unknown [13199, 962]
 	devel-doc [12, 10]
+	code [473, 191]
 	documentation [5, 0]
 ccoleman@redhat.com Clayton Coleman
 	code [3, 2]
@@ -417,9 +412,6 @@ tstclair@redhat.com Timothy St. Clair
 	code [62, 93]
 	build [33, 34]
 	documentation [33, 115]
-xlgao@zju.edu.cn Xianglin Gao
-	unknown [5, 5]
-	devel-doc [1, 1]
 qlee@google.com Quintin Lee
 	unknown [295, 0]
 	devel-doc [141, 1]
@@ -486,6 +478,9 @@ shivania@vmware.com Abrar Shivani
 	build [4, 8]
 crazykev@zju.edu.cn Crazykev
 	unknown [7, 7]
+xlgao@zju.edu.cn Xianglin Gao
+	unknown [5, 5]
+	devel-doc [1, 1]
 evan.cordell@coreos.com Evan Cordell
 	unknown [1612, 1]
 	code [102, 0]
@@ -525,10 +520,6 @@ li.xiaobing1@zte.com.cn lixiaobing10051267
 	unknown [69, 54]
 saadali@google.com saadali
 	unknown [2002, 455]
-brownwm@us.ibm.com Mike Brown
-	unknown [484, 294]
-	code [9, 1]
-	build [11, 1]
 avagarwa@redhat.com Avesh Agarwal
 	unknown [248, 46]
 	code [15, 0]
@@ -589,6 +580,10 @@ akurilin@mirantis.com Andrey Kurilin
 	unknown [552, 236]
 	devel-doc [42, 2]
 	code [12, 0]
+brownwm@us.ibm.com Mike Brown
+	unknown [484, 294]
+	code [9, 1]
+	build [11, 1]
 pawel.skrzynski@intel.com Pawel Skrzynski
 	unknown [23, 14]
 	code [6, 1]
@@ -680,8 +675,6 @@ keegan.csmith@gmail.com Keegan Carruthers-Smith
 	devel-doc [1, 1]
 quentin.machu@coreos.com Quentin Machu
 	unknown [1, 1]
-runcom@redhat.com Antonio Murdaca
-	unknown [59, 2]
 apelisse@gmail.com Antoine Pelisse
 	unknown [2049, 5618]
 	devel-doc [28, 318]
@@ -720,6 +713,8 @@ zhouhaibing089@gmail.com zhouhaibing089
 	devel-doc [10, 0]
 tnguyen@redhat.com Thien-Thi Nguyen
 	unknown [1, 1]
+runcom@redhat.com Antonio Murdaca
+	unknown [59, 2]
 mdame@redhat.com Mike Dame
 	unknown [3, 3]
 	code [21, 0]
@@ -753,25 +748,19 @@ christoph.held@est.fujitsu.com Christoph Held
 mrubin@google.com Michael Rubin
 	unknown [770, 568]
 	devel-doc [100, 0]
-dug@us.ibm.com Doug Davis
-	unknown [13, 14]
-	code [1, 1]
 lorrin.nelson@salesforce.com Lorrin Nelson
 	code [8, 4]
 allenmiller@users.noreply.github.com allenmiller
 	unknown [1, 1]
 casey@tigera.io Casey Davenport
-	code [20, 25]
 	unknown [912, 51]
 	devel-doc [36, 20]
-	documentation [0, 0]
+	code [20, 25]
 	build [10, 9]
 ancosen@gmail.com Andrea Cosentino
 	devel-doc [1, 1]
 sbrzeczkowski@mirantis.com Sylwester Brzeczkowski
 	unknown [78, 28]
-liubin0329@gmail.com bin liu
-	unknown [17, 17]
 alex@bengler.no Alexander Staubo
 	unknown [1, 1]
 elyscape@gmail.com Eli Young
@@ -786,6 +775,11 @@ meng.mobile@gmail.com Liyi Meng
 	unknown [1, 1]
 michael@secful.com Michael Vilensky
 	code [3, 2]
+liubin0329@gmail.com bin liu
+	unknown [17, 17]
+dug@us.ibm.com Doug Davis
+	unknown [13, 14]
+	code [1, 1]
 grod@google.com Garrett Rodrigues
 	unknown [5, 13]
 peeyushgupta91@gmail.com Peeyush Gupta
@@ -805,8 +799,6 @@ christiankoep@gmail.com Christian Koep
 	unknown [3, 6]
 matt@nowprovision.com Matt Freeman
 	unknown [65, 14]
-aanm90@gmail.com André Martins
-	code [7, 4]
 weixu@appformix.com Weixu Zhuang
 	unknown [382, 45]
 	devel-doc [29, 26]
@@ -822,6 +814,8 @@ dua_rajdeep@yahoo.com Rajdeep Dua
 	unknown [149, 61]
 me@jing.io Jing Dong
 	code [13, 11]
+aanm90@gmail.com André Martins
+	code [7, 4]
 dalanlan925@gmail.com dalanlan
 	unknown [1, 4]
 	code [1, 1]
@@ -853,8 +847,7 @@ christian@paral.in Christian Stewart
 	code [3, 1]
 wlodzimierz.borkowski@intel.com Wlodzimierz Borkowski
 	code [1, 1]
-devel-doc 26245 13247
-	k8s-merge-robot@users.noreply.github.com Kubernetes Submit Queue: [3, 3]
+devel-doc 26242 13244
 	foxish@users.noreply.github.com Anirudh Ramanathan: [1, 2]
 	vishnuk@google.com Vishnu kannan: [344, 356]
 	davidopp@google.com David Oppenheimer: [2, 0]
@@ -901,7 +894,6 @@ devel-doc 26245 13247
 	hchen@redhat.com Huamin Chen: [67, 0]
 	aledbf@gmail.com Manuel de Brito Fontes: [1, 11]
 	tstclair@redhat.com Timothy St. Clair: [571, 278]
-	xlgao@zju.edu.cn Xianglin Gao: [1, 1]
 	qlee@google.com Quintin Lee: [141, 1]
 	johannes.scheuermann@inovex.de Johannes Scheuermann: [128, 1]
 	contact@tmrts.com Tamer Tas: [3, 3]
@@ -910,6 +902,7 @@ devel-doc 26245 13247
 	buddhap@google.com dubstack: [216, 8]
 	mehdy@google.com mbohlool: [6543, 1115]
 	shivania@vmware.com Abrar Shivani: [34, 2]
+	xlgao@zju.edu.cn Xianglin Gao: [1, 1]
 	krousey@users.noreply.github.com krousey: [35, 59]
 	tobias.schottdorf@gmail.com Tobias Schottdorf: [97, 0]
 	mturansk@redhat.com markturansky: [2, 0]
@@ -942,8 +935,7 @@ devel-doc 26245 13247
 	weixu@appformix.com Weixu Zhuang: [29, 26]
 	matthew.dupre@metaswitch.com Matt Dupre: [20, 0]
 	justinclayton@users.noreply.github.com Justin Clayton: [0, 8]
-code 16178 10317
-	k8s-merge-robot@users.noreply.github.com Kubernetes Submit Queue: [440, 20]
+code 15738 10297
 	quinton@google.com Quinton Hoole: [5, 1]
 	vishnuk@google.com Vishnu kannan: [23, 117]
 	jianhui.zhou@huawei.com jianhuiz: [2, 2]
@@ -1031,7 +1023,6 @@ code 16178 10317
 	george.tankersley@coreos.com George Tankersley: [1949, 5]
 	wang.ping5@zte.com.cn PingWang: [1, 0]
 	agoldste@redhat.com Andy Goldstein: [14, 0]
-	brownwm@us.ibm.com Mike Brown: [9, 1]
 	avagarwa@redhat.com Avesh Agarwal: [15, 0]
 	jvallejo@redhat.com juanvallejo: [12, 0]
 	silas@godaddy.com Silas Boyd-Wickizer: [5, 1]
@@ -1042,6 +1033,7 @@ code 16178 10317
 	bbreslauer@google.com Ben Breslauer: [8, 6]
 	mrostecki@mirantis.com Michal Rostecki: [0, 5]
 	akurilin@mirantis.com Andrey Kurilin: [12, 0]
+	brownwm@us.ibm.com Mike Brown: [9, 1]
 	pawel.skrzynski@intel.com Pawel Skrzynski: [6, 1]
 	zhao.xiangpeng@zte.com.cn xiangpengzhao: [1, 0]
 	matthew.bruzek@canonical.com Matt Bruzek: [392, 237]
@@ -1059,15 +1051,15 @@ code 16178 10317
 	mdame@redhat.com Mike Dame: [21, 0]
 	doug@zenly.co.uk Douglas Gibbons: [1, 0]
 	elson.rodriguez@gmail.com Elson Rodriguez: [12, 4]
-	dug@us.ibm.com Doug Davis: [1, 1]
 	lorrin.nelson@salesforce.com Lorrin Nelson: [8, 4]
 	casey@tigera.io Casey Davenport: [20, 25]
 	weeks@squareup.com Brandon Weeks: [8, 2]
 	anton@endocode.com Anton Khramov: [7, 7]
 	michael@secful.com Michael Vilensky: [3, 2]
-	aanm90@gmail.com André Martins: [7, 4]
+	dug@us.ibm.com Doug Davis: [1, 1]
 	weixu@appformix.com Weixu Zhuang: [1001, 16]
 	me@jing.io Jing Dong: [13, 11]
+	aanm90@gmail.com André Martins: [7, 4]
 	dalanlan925@gmail.com dalanlan: [1, 1]
 	reames@asymmetricventures.com Richard Eames: [5, 5]
 	matthew.dupre@metaswitch.com Matt Dupre: [12, 0]
@@ -1075,9 +1067,8 @@ code 16178 10317
 	metral@gmail.com Mike Metral: [13, 0]
 	christian@paral.in Christian Stewart: [3, 1]
 	wlodzimierz.borkowski@intel.com Wlodzimierz Borkowski: [1, 1]
-unknown 634922 290352
+unknown 633789 289657
 	pwittroc@google.com Phillip Wittrock: [969, 122]
-	k8s-merge-robot@users.noreply.github.com Kubernetes Submit Queue: [1133, 695]
 	quinton@google.com Quinton Hoole: [1895, 469]
 	vishnuk@google.com Vishnu kannan: [5992, 2306]
 	davidopp@google.com David Oppenheimer: [528, 3]
@@ -1177,7 +1168,6 @@ unknown 634922 290352
 	aledbf@gmail.com Manuel de Brito Fontes: [186, 74]
 	bart.vanbos@rombit.be Bart Van Bos: [2, 1]
 	tstclair@redhat.com Timothy St. Clair: [27307, 11129]
-	xlgao@zju.edu.cn Xianglin Gao: [5, 5]
 	qlee@google.com Quintin Lee: [295, 0]
 	ts@soundcloud.com Tobias Schmidt: [473, 244]
 	feiskyer@gmail.com Pengfei Ni: [7706, 807]
@@ -1195,6 +1185,7 @@ unknown 634922 290352
 	mehdy@google.com mbohlool: [56211, 53]
 	shivania@vmware.com Abrar Shivani: [1411, 436]
 	crazykev@zju.edu.cn Crazykev: [7, 7]
+	xlgao@zju.edu.cn Xianglin Gao: [5, 5]
 	evan.cordell@coreos.com Evan Cordell: [1612, 1]
 	eric.chiang.m@gmail.com Eric Chiang: [1668, 525]
 	krousey@users.noreply.github.com krousey: [263, 1111]
@@ -1208,7 +1199,6 @@ unknown 634922 290352
 	mkwiek@mirantis.com Maciej Kwiek: [28, 11]
 	li.xiaobing1@zte.com.cn lixiaobing10051267: [69, 54]
 	saadali@google.com saadali: [2002, 455]
-	brownwm@us.ibm.com Mike Brown: [484, 294]
 	avagarwa@redhat.com Avesh Agarwal: [248, 46]
 	jvallejo@redhat.com juanvallejo: [471, 254]
 	krancourt@engineyard.com Kent Rancourt: [171, 1]
@@ -1228,6 +1218,7 @@ unknown 634922 290352
 	xiangli.cs@gmail.com Xiang Li: [340, 377]
 	sjenning@redhat.com Seth Jennings: [181, 63]
 	akurilin@mirantis.com Andrey Kurilin: [552, 236]
+	brownwm@us.ibm.com Mike Brown: [484, 294]
 	pawel.skrzynski@intel.com Pawel Skrzynski: [23, 14]
 	zhao.xiangpeng@zte.com.cn xiangpengzhao: [223, 134]
 	taariql@gmail.com Taariq Levack: [1, 1]
@@ -1258,7 +1249,6 @@ unknown 634922 290352
 	maazkhansgsits@gmail.com maaz khan: [343, 0]
 	anish@gatech.edu Anish Bhatt: [79, 9]
 	quentin.machu@coreos.com Quentin Machu: [1, 1]
-	runcom@redhat.com Antonio Murdaca: [59, 2]
 	apelisse@gmail.com Antoine Pelisse: [2049, 5618]
 	hzwangxing@corp.netease.com Wang Xing: [0, 4]
 	filipg@google.com Filip Grzadkowski: [2, 0]
@@ -1272,6 +1262,7 @@ unknown 634922 290352
 	wang.kanghua@zte.com.cn Kevin Wang: [11, 17]
 	zhouhaibing089@gmail.com zhouhaibing089: [2, 1]
 	tnguyen@redhat.com Thien-Thi Nguyen: [1, 1]
+	runcom@redhat.com Antonio Murdaca: [59, 2]
 	mdame@redhat.com Mike Dame: [3, 3]
 	joe2farrell@gmail.com joe2far: [2100, 2030]
 	charlie@charliedrage.com Charlie Drage: [1, 1]
@@ -1283,15 +1274,15 @@ unknown 634922 290352
 	development@advance-leap.com Adrian Ursu: [0, 1]
 	christoph.held@est.fujitsu.com Christoph Held: [3, 0]
 	mrubin@google.com Michael Rubin: [770, 568]
-	dug@us.ibm.com Doug Davis: [13, 14]
 	allenmiller@users.noreply.github.com allenmiller: [1, 1]
 	casey@tigera.io Casey Davenport: [912, 51]
 	sbrzeczkowski@mirantis.com Sylwester Brzeczkowski: [78, 28]
-	liubin0329@gmail.com bin liu: [17, 17]
 	alex@bengler.no Alexander Staubo: [1, 1]
 	elyscape@gmail.com Eli Young: [3, 2]
 	aaron.mills@returnpath.com Aaron Mills: [7, 7]
 	meng.mobile@gmail.com Liyi Meng: [1, 1]
+	liubin0329@gmail.com bin liu: [17, 17]
+	dug@us.ibm.com Doug Davis: [13, 14]
 	grod@google.com Garrett Rodrigues: [5, 13]
 	brandon@ifup.org Brandon Philips: [3, 4]
 	oleg@apcera.com Oleg Shaldybin: [759, 287]
@@ -1319,8 +1310,7 @@ image 0 10566
 	jeffmendoza@google.com Jeff Mendoza: [0, 1002]
 	mnshaw@google.com Marie Shaw: [0, 0]
 	arob@google.com Alex Robinson: [0, 9564]
-documentation 3723 2798
-	k8s-merge-robot@users.noreply.github.com Kubernetes Submit Queue: [2, 0]
+documentation 3721 2798
 	jianhui.zhou@huawei.com jianhuiz: [0, 0]
 	dawnchen@google.com Dawn Chen: [0, 0]
 	mml@google.com Matt Liggett: [0, 2455]
@@ -1379,11 +1369,9 @@ documentation 3723 2798
 	bchilds@redhat.com childsb: [0, 0]
 	maazkhansgsits@gmail.com maaz khan: [1, 0]
 	aps.sids@gmail.com Amanpreet Singh: [1, 0]
-	casey@tigera.io Casey Davenport: [0, 0]
 ui 0 65
 	thockin@google.com Tim Hockin: [0, 65]
-build 2918 4988
-	k8s-merge-robot@users.noreply.github.com Kubernetes Submit Queue: [5, 1]
+build 2913 4987
 	vishnuk@google.com Vishnu kannan: [20, 10]
 	fabioy@google.com Fabio Yeon: [9, 10]
 	mml@google.com Matt Liggett: [0, 62]
@@ -1428,10 +1416,10 @@ build 2918 4988
 	buddhap@google.com dubstack: [1, 0]
 	mehdy@google.com mbohlool: [53, 0]
 	shivania@vmware.com Abrar Shivani: [4, 8]
-	brownwm@us.ibm.com Mike Brown: [11, 1]
 	cole.mickens@gmail.com Cole Mickens: [1, 0]
 	matt@projectcalico.org Matt: [4, 1]
 	xh@decbug.com codejuan: [8, 8]
+	brownwm@us.ibm.com Mike Brown: [11, 1]
 	harryge00@gmail.com haoyuan: [1, 1]
 	zhao.xiangpeng@zte.com.cn xiangpengzhao: [19, 3]
 	bryan@weave.works Bryan Boreham: [7, 7]
@@ -1441,10 +1429,10 @@ build 2918 4988
 	casey@tigera.io Casey Davenport: [10, 9]
 	weixu@appformix.com Weixu Zhuang: [237, 0]
 	matthew.dupre@metaswitch.com Matt Dupre: [19, 2]
-devel-doc 26245 13247
-code 16178 10317
-unknown 634922 290352
+devel-doc 26242 13244
+code 15738 10297
+unknown 633789 289657
 image 0 10566
-documentation 3723 2798
+documentation 3721 2798
 ui 0 65
-build 2918 4988
+build 2913 4987

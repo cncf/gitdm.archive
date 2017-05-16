@@ -1,3 +1,4 @@
+Filter on "\/vendor\/"
 open output file /Users/lukasz/dev/cncf/gitdm/output_numstat.csv
 
 yarntime@163.com is an author name, probably not what you want
@@ -9,7 +10,6 @@ enisoc@google.com Anthony Yeh
 	code [1, 4]
 	build [71, 1]
 	documentation [27769, 27769]
-k8s-merge-robot@users.noreply.github.com Kubernetes Submit Queue
 dan.gillespie@coreos.com Dan Gillespie
 	unknown [918, 1000]
 	code [52, 21]
@@ -581,16 +581,16 @@ saratk@gmail.com Sarat Kamisetty
 jaescobar.cell@gmail.com Alejandro Escobar
 	unknown [175, 119]
 	code [84, 44]
-hchiramm@redhat.com Humble Chirammal
-	unknown [491, 134]
-	devel-doc [27, 9]
-	documentation [0, 0]
 eparis@redhat.com Eric Paris
 	unknown [15, 17]
 	code [45, 36]
 chuck@dasroot.net Charles Butler
 	unknown [1, 1]
 	code [73, 15]
+hchiramm@redhat.com Humble Chirammal
+	unknown [491, 134]
+	devel-doc [27, 9]
+	documentation [0, 0]
 xingzhou@cn.ibm.com Xing Zhou
 	unknown [1230, 162]
 	devel-doc [23, 16]
@@ -724,8 +724,6 @@ robert.roland@hpe.com Robert Roland
 jvance@redhat.com Jeff Vance
 	unknown [1043, 702]
 	devel-doc [1, 0]
-skuznets@redhat.com Steve Kuznetsov
-	unknown [13, 1]
 beeps@google.com bprashanth
 	unknown [380, 117]
 	devel-doc [22, 10]
@@ -746,13 +744,15 @@ aleksandram@google.com Aleksandra Malinowska
 	documentation [0, 1]
 rchopra@redhat.com Rajat Chopra
 	unknown [3, 3]
-berrange@redhat.com Daniel P. Berrange
-	code [2, 2]
+skuznets@redhat.com Steve Kuznetsov
+	unknown [13, 1]
 rahn.jonathan@gmail.com Jonathan Rahn
 	devel-doc [4, 4]
 kpgriffith@me.com Kevin Griffith
 	unknown [56, 206]
 	devel-doc [0, 2]
+berrange@redhat.com Daniel P. Berrange
+	code [2, 2]
 ashley@victorianfox.com Ashley Reese
 	unknown [1, 1]
 andrewpilloud@igneoussystems.com Andrew Pilloud
@@ -779,8 +779,6 @@ pires@apprenda.com Paulo Pires
 	documentation [1, 0]
 rene.treffer@soundcloud.com Rene Treffer
 	unknown [29, 15]
-yu.peng36@zte.com.cn yupeng
-	unknown [50, 50]
 slaskawi@redhat.com Sebastian Laskawiec
 	unknown [13, 1]
 anastasis90@yahoo.gr Anastasis Andronidis
@@ -788,9 +786,6 @@ anastasis90@yahoo.gr Anastasis Andronidis
 	code [31, 0]
 andy@lindeman.io Andy Lindeman
 	code [3, 3]
-mkhan@redhat.com Monis Khan
-	unknown [884, 1582]
-	devel-doc [40, 99]
 jorge@ubuntu.com Jorge O. Castro
 	unknown [3, 4]
 rhallise@redhat.com Ryan Hallisey
@@ -845,6 +840,9 @@ forrestchen@tencent.com forrestchen
 	unknown [25, 0]
 bonifaido@gmail.com Nandor Kracser
 	unknown [1, 1]
+mkhan@redhat.com Monis Khan
+	unknown [884, 1582]
+	devel-doc [40, 99]
 pmorie@redhat.com Paul Morie
 	unknown [339, 187]
 tsmetana@redhat.com Tomas Smetana
@@ -973,6 +971,8 @@ asalkeld@mirantis.com Angus Salkeld
 	documentation [3, 0]
 mf6510@att.com Ciello89
 	devel-doc [1, 1]
+yu.peng36@zte.com.cn yupeng
+	unknown [50, 50]
 da.colonel@gmail.com Denis Andrejew
 	unknown [3, 3]
 salvatore-dario.minonne@amadeus.com Salvatore Dario Minonne
@@ -1011,8 +1011,6 @@ sykesmat@us.ibm.com Matthew Sykes
 	unknown [105, 13]
 etune@google.com Eric Tune
 	devel-doc [7, 1]
-runcom@redhat.com Antonio Murdaca
-	unknown [6, 3]
 vishh@users.noreply.github.com Vish Kannan
 	unknown [2, 64]
 shivania@vmware.com Abrar Shivani
@@ -1021,17 +1019,14 @@ hongchaodeng1@gmail.com Hongchao Deng
 	unknown [160, 226]
 	devel-doc [1, 13]
 	code [4, 2]
+runcom@redhat.com Antonio Murdaca
+	unknown [6, 3]
 lzw19860818@aliyun.com LouZhengwei
 	unknown [6, 3]
 mevanj89@gmail.com Morgan Jones
 	unknown [0, 21]
-dug@us.ibm.com Doug Davis
-	unknown [12, 49]
 dims@linux.vnet.ibm.com Davanum Srinivas
 	unknown [1, 4]
-obnox@redhat.com Michael Adam
-	unknown [741, 37]
-	devel-doc [14, 2]
 graut@us.ibm.com gajju26
 	unknown [8, 4]
 	devel-doc [16, 1]
@@ -1039,6 +1034,11 @@ graut@us.ibm.com gajju26
 	build [32, 4]
 xiaoping378@163.com xiaoping378
 	code [191, 28]
+dug@us.ibm.com Doug Davis
+	unknown [12, 49]
+obnox@redhat.com Michael Adam
+	unknown [741, 37]
+	devel-doc [14, 2]
 igor.katson@gmail.com Igor Katson
 	build [1, 1]
 dave.michael@ntlworld.com David Michael
@@ -1083,14 +1083,10 @@ deads2k@users.noreply.github.com David Eads
 	unknown [9, 9]
 cai.yixiang@zte.com.cn caiyixiang
 	unknown [3, 3]
-yaoyao.xyy@alibaba-inc.com yaoyao.xyy
-	unknown [14, 10]
 filipg@google.com Filip Grzadkowski
 brandon.philips@coreos.com Brandon Philips
 	unknown [3, 1]
 	devel-doc [1, 1]
-xlgao@zju.edu.cn Xianglin Gao
-	code [24, 2]
 oulinbao@163.com oulinbao
 	unknown [678, 596]
 mrevilgnome@gmail.com Matthew Stump
@@ -1120,6 +1116,10 @@ jistr@redhat.com Jiri Stransky
 li.xialong@zte.com.cn xialong.lee
 	unknown [6, 1]
 	devel-doc [1, 0]
+xlgao@zju.edu.cn Xianglin Gao
+	code [24, 2]
+yaoyao.xyy@alibaba-inc.com yaoyao.xyy
+	unknown [14, 10]
 mfisher@deis.com Matthew Fisher
 	unknown [33, 9]
 	devel-doc [1, 1]
@@ -1273,13 +1273,13 @@ devel-doc 177752 149167
 	pu.junqi@zte.com.cn tianshapjq: [1, 1]
 	luca.bruno@coreos.com Luca Bruno: [1, 1]
 	pires@apprenda.com Paulo Pires: [3, 7]
-	mkhan@redhat.com Monis Khan: [40, 99]
 	dbsmith@google.com Daniel Smith: [0, 4]
 	rmmh@google.com Ryan Hitchman: [58, 0]
 	rene.saenz@gmail.com Rene Saenz: [6, 6]
 	maciej.iai@gmail.com Maciej Kwiek: [1, 59]
 	liu.hao89@zte.com.cn foxyriver: [0, 2]
 	djmm@google.com David McMahon: [148, 146]
+	mkhan@redhat.com Monis Khan: [40, 99]
 	danw@redhat.com Dan Winship: [42, 31]
 	euan.kemp@coreos.com Euan Kemp: [56, 17]
 	coolhzb@163.com AdoHe: [0, 1]
@@ -1300,8 +1300,8 @@ devel-doc 177752 149167
 	surajssd009005@gmail.com Suraj Deshmukh: [31, 20]
 	etune@google.com Eric Tune: [7, 1]
 	hongchaodeng1@gmail.com Hongchao Deng: [1, 13]
-	obnox@redhat.com Michael Adam: [14, 2]
 	graut@us.ibm.com gajju26: [16, 1]
+	obnox@redhat.com Michael Adam: [14, 2]
 	dave.michael@ntlworld.com David Michael: [1, 3]
 	kenan435@gmail.com Kenan Karamehmedovic: [1, 0]
 	bryan@weave.works Bryan Boreham: [2, 2]
@@ -1448,10 +1448,10 @@ code 15163 17087
 	henry.nash@uk.ibm.com henry.nash@uk.ibm.com: [1, 1]
 	caosf.fnst@cn.fujitsu.com Cao Shufeng: [2, 2]
 	sejug@redhat.com Sebastian Jug: [1, 1]
-	xlgao@zju.edu.cn Xianglin Gao: [24, 2]
 	mrevilgnome@gmail.com Matthew Stump: [83, 37]
 	robertc@vmware.com Robert Collins: [20, 15]
 	minhongz@gmail.com mhzed: [1, 1]
+	xlgao@zju.edu.cn Xianglin Gao: [24, 2]
 	mfisher@deis.com Matthew Fisher: [0, 33]
 unknown 630150 669946
 	enisoc@google.com Anthony Yeh: [15654, 14088]
@@ -1598,9 +1598,9 @@ unknown 630150 669946
 	bburns@google.com Brendan Burns: [15860, 3812]
 	saratk@gmail.com Sarat Kamisetty: [220, 71]
 	jaescobar.cell@gmail.com Alejandro Escobar: [175, 119]
-	hchiramm@redhat.com Humble Chirammal: [491, 134]
 	eparis@redhat.com Eric Paris: [15, 17]
 	chuck@dasroot.net Charles Butler: [1, 1]
+	hchiramm@redhat.com Humble Chirammal: [491, 134]
 	xingzhou@cn.ibm.com Xing Zhou: [1230, 162]
 	harryz@hyper.sh Harry Zhang: [499, 365]
 	julien.balestra@gmail.com JulienBalestra: [54, 11]
@@ -1641,13 +1641,13 @@ unknown 630150 669946
 	errordeveloper@gmail.com Ilya Dmitrichenko: [4, 3]
 	robert.roland@hpe.com Robert Roland: [40, 25]
 	jvance@redhat.com Jeff Vance: [1043, 702]
-	skuznets@redhat.com Steve Kuznetsov: [13, 1]
 	beeps@google.com bprashanth: [380, 117]
 	jchaloup@redhat.com Jan Chaloupka: [76, 0]
 	wei.chuanhui1@zte.com.cn zte-20170208: [3, 0]
 	jianhui.zhou@huawei.com jianhuiz: [2512, 74]
 	aleksandram@google.com Aleksandra Malinowska: [74, 181]
 	rchopra@redhat.com Rajat Chopra: [3, 3]
+	skuznets@redhat.com Steve Kuznetsov: [13, 1]
 	kpgriffith@me.com Kevin Griffith: [56, 206]
 	ashley@victorianfox.com Ashley Reese: [1, 1]
 	andrewpilloud@igneoussystems.com Andrew Pilloud: [10, 19]
@@ -1657,10 +1657,8 @@ unknown 630150 669946
 	luca.bruno@coreos.com Luca Bruno: [55, 47]
 	pires@apprenda.com Paulo Pires: [585, 711]
 	rene.treffer@soundcloud.com Rene Treffer: [29, 15]
-	yu.peng36@zte.com.cn yupeng: [50, 50]
 	slaskawi@redhat.com Sebastian Laskawiec: [13, 1]
 	anastasis90@yahoo.gr Anastasis Andronidis: [252, 21]
-	mkhan@redhat.com Monis Khan: [884, 1582]
 	jorge@ubuntu.com Jorge O. Castro: [3, 4]
 	beeradb@gmail.com Brad Bowman: [1, 1]
 	dbsmith@google.com Daniel Smith: [48, 94]
@@ -1678,6 +1676,7 @@ unknown 630150 669946
 	ales.nosek@gmail.com Ales Nosek: [3, 0]
 	forrestchen@tencent.com forrestchen: [25, 0]
 	bonifaido@gmail.com Nandor Kracser: [1, 1]
+	mkhan@redhat.com Monis Khan: [884, 1582]
 	pmorie@redhat.com Paul Morie: [339, 187]
 	tsmetana@redhat.com Tomas Smetana: [68, 151]
 	danw@redhat.com Dan Winship: [722, 281]
@@ -1717,6 +1716,7 @@ unknown 630150 669946
 	jonathan.boulle@coreos.com Jonathan Boulle: [96, 32]
 	likexu@harmonycloud.cn Aaron.L.Xu: [76, 76]
 	asalkeld@mirantis.com Angus Salkeld: [598, 57]
+	yu.peng36@zte.com.cn yupeng: [50, 50]
 	da.colonel@gmail.com Denis Andrejew: [3, 3]
 	xiangli.cs@gmail.com Xiang Li: [2671, 3]
 	chen.tao3@zte.com.cn chentao1596: [2, 5]
@@ -1726,16 +1726,16 @@ unknown 630150 669946
 	linki@users.noreply.github.com Martin Linkhorst: [4, 4]
 	yuanying@fraction.jp OTSUKA, Yuanying: [8, 7]
 	sykesmat@us.ibm.com Matthew Sykes: [105, 13]
-	runcom@redhat.com Antonio Murdaca: [6, 3]
 	vishh@users.noreply.github.com Vish Kannan: [2, 64]
 	shivania@vmware.com Abrar Shivani: [2, 1]
 	hongchaodeng1@gmail.com Hongchao Deng: [160, 226]
+	runcom@redhat.com Antonio Murdaca: [6, 3]
 	lzw19860818@aliyun.com LouZhengwei: [6, 3]
 	mevanj89@gmail.com Morgan Jones: [0, 21]
-	dug@us.ibm.com Doug Davis: [12, 49]
 	dims@linux.vnet.ibm.com Davanum Srinivas: [1, 4]
-	obnox@redhat.com Michael Adam: [741, 37]
 	graut@us.ibm.com gajju26: [8, 4]
+	dug@us.ibm.com Doug Davis: [12, 49]
+	obnox@redhat.com Michael Adam: [741, 37]
 	lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [21, 0]
 	kenan435@gmail.com Kenan Karamehmedovic: [26, 0]
 	bryan@weave.works Bryan Boreham: [1, 13]
@@ -1750,7 +1750,6 @@ unknown 630150 669946
 	nvartolomei@gmail.com Nicolae Vartolomei: [12, 3]
 	deads2k@users.noreply.github.com David Eads: [9, 9]
 	cai.yixiang@zte.com.cn caiyixiang: [3, 3]
-	yaoyao.xyy@alibaba-inc.com yaoyao.xyy: [14, 10]
 	brandon.philips@coreos.com Brandon Philips: [3, 1]
 	oulinbao@163.com oulinbao: [678, 596]
 	mrevilgnome@gmail.com Matthew Stump: [247, 7]
@@ -1763,6 +1762,7 @@ unknown 630150 669946
 	li.guangxu@zte.com.cn guangxuli: [19, 13]
 	jistr@redhat.com Jiri Stransky: [11, 0]
 	li.xialong@zte.com.cn xialong.lee: [6, 1]
+	yaoyao.xyy@alibaba-inc.com yaoyao.xyy: [14, 10]
 	mfisher@deis.com Matthew Fisher: [33, 9]
 	matt@skillshare.com Matt Condon: [30, 17]
 	rodcloutier@gmail.com Rod Cloutier: [7, 0]

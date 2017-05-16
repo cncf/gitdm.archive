@@ -16,5 +16,5 @@ do
 done
 PWD=$WD
 cd $PWD
-cat git.log | ~/dev/cncf/gitdm/cncfdm.py -n -b ~/dev/cncf/gitdm/ -t -z -d -D -U -u -h $F.html -o $F.txt -x $F.csv > $F.out
+cat git.log | ~/dev/cncf/gitdm/cncfdm.py -r '\/vendor\/' -R -n -b ~/dev/cncf/gitdm/ -t -z -d -D -U -u -h $F.html -o $F.txt -x $F.csv > $F.out
 rm $FN 
