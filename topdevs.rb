@@ -7,6 +7,7 @@ def analysis(fn)
   sa = sr = sc = 0
   unknowns = {}
   goo = {}
+  companies = {}
   sums = %w(added removed changesets)
   CSV.foreach(fn, headers: true) do |row|
     h = row.to_h
@@ -34,6 +35,31 @@ def analysis(fn)
     elsif em == 'Google' && !e.include?('@google.com')
       goo[h['Name']] = h
     end
+    co = h['Affliation'].to_s
+    companies[co] = [] unless companies.key?(co)
+    companies[co] << e
+  end
+
+  companies.each do |company, emails|
+    companies[company] = emails.sort.uniq
+  end
+
+  ary = []
+  companies.each do |company, emails|
+      ary << [company, emails, emails.length]
+  end
+  ary = ary.sort_by { |item| -item[2] }
+
+  hdr = %w(company n emails)
+  CSV.open('companies_by_count.csv', 'w', headers: hdr) do |csv|
+    csv << hdr
+    ary.each { |item| csv << [item[0], item[2], item[1].join(', ')] }
+  end
+
+  ary = ary.sort_by { |item| item[0].downcase.strip }
+  CSV.open('companies_by_name.csv', 'w', headers: hdr) do |csv|
+    csv << hdr
+    ary.each { |item| csv << [item[0], item[2], item[1].join(', ')] }
   end
 
   unknowns = unknowns.values.sort_by { |item| item['Name'] }

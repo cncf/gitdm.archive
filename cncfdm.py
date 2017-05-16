@@ -79,7 +79,7 @@ DateTo = datetime.datetime(2069, 1, 1)
 def ParseOpts ():
     global MapUnknown, DevReports
     global DateStats, AuthorSOBs, FileFilter, DumpDB
-    global CFName, CSVFile, CSVPrefix,DirName, Aggregate, Numstat
+    global CFName, CSVFile, CSVPrefix, DirName, Aggregate, Numstat
     global ReportByFileType, ReportUnknowns
     global InputData, InputDataIsFile, DebugHalt, DateFrom, DateTo
 
@@ -191,7 +191,7 @@ def DebugUnknowns():
 DateMap = { }
 
 def AddDateLines(date, lines):
-    if lines > 1000000:
+    if lines > 20000000:
         print 'Skip big patch (%d)' % lines
         return
     try:
