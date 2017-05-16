@@ -438,6 +438,10 @@ for logpatch in patches:
         continue
     if p.email == "openstack-infra@lists.openstack.org":
         continue
+    if p.email == "k8s-publish-robot@users.noreply.github.com":
+        continue
+    if p.email == "containers-bot@bitnami.com":
+        continue
 
     #
     # Record some global information - but only if this patch had

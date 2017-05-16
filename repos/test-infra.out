@@ -2,6 +2,40 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/test-infra.csv
 
 john.felten@gmail.com is an author name, probably not what you want
 unknown@hacker.net Unknown hacker
+lukaszgryglicki@o2.pl lukaszgryglicki
+	unknown [5332, 202]
+	devel-doc [97, 0]
+senlu@google.com Sen Lu
+	unknown [37193, 10793]
+	devel-doc [831, 31]
+	code [29544, 23668]
+	build [284, 37]
+	documentation [224, 3]
+vishh@users.noreply.github.com Vish Kannan
+	unknown [60, 1]
+vishnuk@google.com Vishnu kannan
+	unknown [433, 111]
+	documentation [1, 1]
+rmmh@google.com Ryan Hitchman
+	devel-doc [340, 19]
+	code [41595, 3316]
+	package [0, 0]
+	unknown [4477, 754]
+	image [101, 0]
+	documentation [1526, 418]
+	ui [400, 2]
+	build [85, 37]
+madhusudancs@gmail.com Madhusudan.C.S
+	unknown [474, 123]
+	devel-doc [2, 0]
+	code [103, 55]
+erick@fejta.com Erick Fejta
+	devel-doc [464, 143]
+	code [20931, 12816]
+	unknown [12906, 11378]
+	documentation [2, 2]
+	ui [16, 2]
+	build [142, 53]
 wojtekt@google.com Wojciech Tyczynski
 	unknown [841, 357]
 	code [195, 118]
@@ -25,22 +59,6 @@ mikewu@google.com Ke Wu
 	unknown [226, 9]
 dawnchen@google.com Dawn Chen
 	unknown [45, 25]
-erick@fejta.com Erick Fejta
-	devel-doc [464, 143]
-	code [20931, 12816]
-	unknown [12905, 11377]
-	documentation [2, 2]
-	ui [16, 2]
-	build [142, 53]
-rmmh@google.com Ryan Hitchman
-	devel-doc [340, 19]
-	code [41428, 3284]
-	package [0, 0]
-	unknown [4477, 754]
-	image [101, 0]
-	documentation [1443, 397]
-	ui [400, 2]
-	build [85, 37]
 gmarek@google.com Marek Grabowski
 	unknown [1439, 578]
 	code [74, 14]
@@ -52,12 +70,6 @@ caesarxuchao@users.noreply.github.com Chao Xu
 	devel-doc [1, 1]
 	code [878, 276]
 	build [4, 1]
-senlu@google.com Sen Lu
-	unknown [37191, 10792]
-	devel-doc [831, 31]
-	code [29544, 23668]
-	build [284, 37]
-	documentation [224, 3]
 zihongz@google.com Zihong Zheng
 	unknown [20, 8]
 	code [1, 0]
@@ -88,10 +100,6 @@ dashpole@google.com David Ashpole
 	unknown [17, 16]
 eric.chiang.m@gmail.com Eric Chiang
 	unknown [3, 3]
-madhusudancs@gmail.com Madhusudan.C.S
-	unknown [474, 123]
-	devel-doc [2, 0]
-	code [103, 55]
 vorlon@debian.org vorlonofportland
 	unknown [14, 0]
 grodrigues3@users.noreply.github.com grodrigues3
@@ -119,6 +127,8 @@ admin@toph.ca Christoph Blecker
 	unknown [26, 21]
 	devel-doc [8, 13]
 	documentation [13, 17]
+msau@google.com Michelle Au
+	unknown [13, 11]
 zml@google.com Zach Loafman
 	unknown [2098, 674]
 	code [1933, 668]
@@ -140,8 +150,6 @@ mikedanese@gmail.com Mike Danese
 	image [0, 0]
 	documentation [4606, 0]
 	build [101, 1]
-msau@google.com Michelle Au
-	unknown [11, 9]
 pszczesniak@google.com Piotr Szczesniak
 	unknown [10, 11]
 aleksandram@google.com Aleksandra Malinowska
@@ -170,8 +178,6 @@ dettervt@gmail.com Dan Etter
 	unknown [253, 2]
 	devel-doc [46, 0]
 	build [1, 1]
-lukaszgryglicki@o2.pl lukaszgryglicki
-	unknown [399, 200]
 nikhiljindal@google.com Nikhil Jindal
 	unknown [101, 186]
 	code [29, 34]
@@ -349,8 +355,6 @@ saadali@google.com Saad Ali
 	unknown [2, 2]
 marcin@owsiany.pl Marcin Owsiany
 	devel-doc [1, 1]
-vishh@users.noreply.github.com Vish Kannan
-	unknown [1, 1]
 stclair@google.com Tim St. Clair
 	unknown [27, 40]
 	code [3, 0]
@@ -367,9 +371,6 @@ andreyu@google.com Andrey Ulanov
 robertbailey@google.com Robert Bailey
 	unknown [35, 13]
 	documentation [3, 0]
-vishnuk@google.com Vishnu kannan
-	unknown [433, 111]
-	documentation [1, 1]
 viglesias@google.com Vic Iglesias
 	unknown [109, 8]
 bdbauer@google.com Benjamin Bauer
@@ -431,17 +432,18 @@ harryzhang@zju.edu.cn Harry Zhang
 	documentation [1, 0]
 hesimei@zju.edu.cn He Simei
 	documentation [1, 0]
-devel-doc 27427 13185
+devel-doc 27524 13185
+	lukaszgryglicki@o2.pl lukaszgryglicki: [97, 0]
+	senlu@google.com Sen Lu: [831, 31]
+	rmmh@google.com Ryan Hitchman: [340, 19]
+	madhusudancs@gmail.com Madhusudan.C.S: [2, 0]
+	erick@fejta.com Erick Fejta: [464, 143]
 	spxtr@users.noreply.github.com Joe Finney: [9055, 7415]
 	colew@google.com Cole Wagner: [81, 92]
-	erick@fejta.com Erick Fejta: [464, 143]
-	rmmh@google.com Ryan Hitchman: [340, 19]
 	caesarxuchao@users.noreply.github.com Chao Xu: [1, 1]
-	senlu@google.com Sen Lu: [831, 31]
 	jgrafton@google.com Jeff Grafton: [19, 12]
 	shyamjvs@google.com Shyam JVS: [32, 0]
 	beacham@google.com Jakob: [4, 1]
-	madhusudancs@gmail.com Madhusudan.C.S: [2, 0]
 	grodrigues3@users.noreply.github.com grodrigues3: [11, 0]
 	john@zenzic.com john.felten@gmail.com: [4, 0]
 	grod@google.com Garrett Rodrigues: [228, 80]
@@ -466,22 +468,22 @@ devel-doc 27427 13185
 	hongchaodeng1@gmail.com Hongchao Deng: [3, 1]
 	spextear@gmail.com spxtr: [1302, 0]
 	travis@appformix.com Travis Newhouse: [19, 0]
-code 335183 57902
+code 335350 57934
+	senlu@google.com Sen Lu: [29544, 23668]
+	rmmh@google.com Ryan Hitchman: [41595, 3316]
+	madhusudancs@gmail.com Madhusudan.C.S: [103, 55]
+	erick@fejta.com Erick Fejta: [20931, 12816]
 	wojtekt@google.com Wojciech Tyczynski: [195, 118]
 	spxtr@users.noreply.github.com Joe Finney: [7934, 3722]
 	colew@google.com Cole Wagner: [313, 558]
-	erick@fejta.com Erick Fejta: [20931, 12816]
-	rmmh@google.com Ryan Hitchman: [41428, 3284]
 	gmarek@google.com Marek Grabowski: [74, 14]
 	ygg@google.com Yang Guo: [54, 24]
 	caesarxuchao@users.noreply.github.com Chao Xu: [878, 276]
-	senlu@google.com Sen Lu: [29544, 23668]
 	zihongz@google.com Zihong Zheng: [1, 0]
 	jgrafton@google.com Jeff Grafton: [893, 459]
 	shyamjvs@google.com Shyam JVS: [6, 3]
 	beacham@google.com Jakob: [354, 141]
 	spiffxp@gmail.com Aaron Crickenberger: [14, 4]
-	madhusudancs@gmail.com Madhusudan.C.S: [103, 55]
 	grod@google.com Garrett Rodrigues: [264, 19]
 	shashidhara.td@huawei.com shashidharatd: [56, 188]
 	zml@google.com Zach Loafman: [1933, 668]
@@ -523,19 +525,23 @@ code 335183 57902
 	travis@appformix.com Travis Newhouse: [109, 28]
 package 0 0
 	rmmh@google.com Ryan Hitchman: [0, 0]
-unknown 638670 345937
+unknown 643667 345943
+	lukaszgryglicki@o2.pl lukaszgryglicki: [5332, 202]
+	senlu@google.com Sen Lu: [37193, 10793]
+	vishh@users.noreply.github.com Vish Kannan: [60, 1]
+	vishnuk@google.com Vishnu kannan: [433, 111]
+	rmmh@google.com Ryan Hitchman: [4477, 754]
+	madhusudancs@gmail.com Madhusudan.C.S: [474, 123]
+	erick@fejta.com Erick Fejta: [12906, 11378]
 	wojtekt@google.com Wojciech Tyczynski: [841, 357]
 	spxtr@users.noreply.github.com Joe Finney: [269826, 233705]
 	colew@google.com Cole Wagner: [2710, 1709]
 	taotaotheripper@gmail.com Lantao Liu: [70, 6]
 	mikewu@google.com Ke Wu: [226, 9]
 	dawnchen@google.com Dawn Chen: [45, 25]
-	erick@fejta.com Erick Fejta: [12905, 11377]
-	rmmh@google.com Ryan Hitchman: [4477, 754]
 	gmarek@google.com Marek Grabowski: [1439, 578]
 	ygg@google.com Yang Guo: [1572, 22]
 	caesarxuchao@users.noreply.github.com Chao Xu: [1495, 346]
-	senlu@google.com Sen Lu: [37191, 10792]
 	zihongz@google.com Zihong Zheng: [20, 8]
 	jgrafton@google.com Jeff Grafton: [4225, 3857]
 	shyamjvs@google.com Shyam JVS: [388, 6]
@@ -544,7 +550,6 @@ unknown 638670 345937
 	captainshar@gmail.com Sharon: [2, 1]
 	dashpole@google.com David Ashpole: [17, 16]
 	eric.chiang.m@gmail.com Eric Chiang: [3, 3]
-	madhusudancs@gmail.com Madhusudan.C.S: [474, 123]
 	vorlon@debian.org vorlonofportland: [14, 0]
 	grodrigues3@users.noreply.github.com grodrigues3: [8, 4]
 	john@zenzic.com john.felten@gmail.com: [21, 0]
@@ -553,12 +558,12 @@ unknown 638670 345937
 	shashidhara.td@huawei.com shashidharatd: [235, 78]
 	juntee@google.com Jun Xiang Tee: [1111, 91]
 	admin@toph.ca Christoph Blecker: [26, 21]
+	msau@google.com Michelle Au: [13, 11]
 	zml@google.com Zach Loafman: [2098, 674]
 	justin@fathomdb.com Justin Santa Barbara: [82, 4]
 	verb@google.com Lee Verberne: [2, 2]
 	yjhong@google.com Yu-Ju Hong: [533, 1435]
 	mikedanese@gmail.com Mike Danese: [83795, 219]
-	msau@google.com Michelle Au: [11, 9]
 	pszczesniak@google.com Piotr Szczesniak: [10, 11]
 	aleksandram@google.com Aleksandra Malinowska: [51, 2]
 	vmik@google.com Mik Vyatskov: [90, 0]
@@ -569,7 +574,6 @@ unknown 638670 345937
 	saied@google.com Saied Kazemi: [116, 0]
 	dvorak@google.com Jonathan MacMillan: [25, 6]
 	dettervt@gmail.com Dan Etter: [253, 2]
-	lukaszgryglicki@o2.pl lukaszgryglicki: [399, 200]
 	nikhiljindal@google.com Nikhil Jindal: [101, 186]
 	eparis@redhat.com Eric Paris: [20628, 59122]
 	brendan.d.burns@gmail.com Brendan Burns: [1833, 84]
@@ -630,14 +634,12 @@ unknown 638670 345937
 	maisem@google.com Maisem Ali: [577, 572]
 	dims@linux.vnet.ibm.com Davanum Srinivas: [2, 2]
 	saadali@google.com Saad Ali: [2, 2]
-	vishh@users.noreply.github.com Vish Kannan: [1, 1]
 	stclair@google.com Tim St. Clair: [27, 40]
 	michael.a.scheetz@gmail.com Michael Scheetz: [11, 0]
 	quinton@google.com Quinton Hoole: [17, 10]
 	maciej.iai@gmail.com Maciej Kwiek: [42, 11]
 	andreyu@google.com Andrey Ulanov: [37, 0]
 	robertbailey@google.com Robert Bailey: [35, 13]
-	vishnuk@google.com Vishnu kannan: [433, 111]
 	viglesias@google.com Vic Iglesias: [109, 8]
 	bdbauer@google.com Benjamin Bauer: [140, 10]
 	hongchaodeng1@gmail.com Hongchao Deng: [560, 150]
@@ -657,18 +659,19 @@ unknown 638670 345937
 	travis@appformix.com Travis Newhouse: [102, 2]
 	qzheng@google.com Andy Zheng: [6, 6]
 image 303 0
-	spxtr@users.noreply.github.com Joe Finney: [202, 0]
 	rmmh@google.com Ryan Hitchman: [101, 0]
+	spxtr@users.noreply.github.com Joe Finney: [202, 0]
 	juntee@google.com Jun Xiang Tee: [0, 0]
 	mikedanese@gmail.com Mike Danese: [0, 0]
 	eparis@redhat.com Eric Paris: [0, 0]
 	ramanathana@google.com foxish: [0, 0]
 	thockin@google.com Tim Hockin: [0, 0]
-documentation 11878 6493
-	spxtr@users.noreply.github.com Joe Finney: [486, 328]
-	erick@fejta.com Erick Fejta: [2, 2]
-	rmmh@google.com Ryan Hitchman: [1443, 397]
+documentation 11961 6514
 	senlu@google.com Sen Lu: [224, 3]
+	vishnuk@google.com Vishnu kannan: [1, 1]
+	rmmh@google.com Ryan Hitchman: [1526, 418]
+	erick@fejta.com Erick Fejta: [2, 2]
+	spxtr@users.noreply.github.com Joe Finney: [486, 328]
 	jgrafton@google.com Jeff Grafton: [89, 16]
 	grod@google.com Garrett Rodrigues: [154, 1]
 	admin@toph.ca Christoph Blecker: [13, 17]
@@ -682,7 +685,6 @@ documentation 11878 6493
 	dbsmith@google.com Daniel Smith: [14, 1]
 	alexander.kanevskiy@intel.com Alexander Kanevskiy: [1, 1]
 	robertbailey@google.com Robert Bailey: [3, 0]
-	vishnuk@google.com Vishnu kannan: [1, 1]
 	mnshaw@andrew.cmu.edu Marie Shaw: [125, 58]
 	euan.kemp@coreos.com Euan Kemp: [1, 1]
 	goltermann@google.com goltermann: [9, 0]
@@ -690,18 +692,18 @@ documentation 11878 6493
 	harryzhang@zju.edu.cn Harry Zhang: [1, 0]
 	hesimei@zju.edu.cn He Simei: [1, 0]
 ui 418 5
-	spxtr@users.noreply.github.com Joe Finney: [1, 1]
-	erick@fejta.com Erick Fejta: [16, 2]
 	rmmh@google.com Ryan Hitchman: [400, 2]
+	erick@fejta.com Erick Fejta: [16, 2]
+	spxtr@users.noreply.github.com Joe Finney: [1, 1]
 	jgrafton@google.com Jeff Grafton: [1, 0]
 build 2415 1223
+	senlu@google.com Sen Lu: [284, 37]
+	rmmh@google.com Ryan Hitchman: [85, 37]
+	erick@fejta.com Erick Fejta: [142, 53]
 	wojtekt@google.com Wojciech Tyczynski: [1, 1]
 	spxtr@users.noreply.github.com Joe Finney: [863, 779]
 	colew@google.com Cole Wagner: [27, 4]
-	erick@fejta.com Erick Fejta: [142, 53]
-	rmmh@google.com Ryan Hitchman: [85, 37]
 	caesarxuchao@users.noreply.github.com Chao Xu: [4, 1]
-	senlu@google.com Sen Lu: [284, 37]
 	jgrafton@google.com Jeff Grafton: [29, 29]
 	shyamjvs@google.com Shyam JVS: [35, 0]
 	beacham@google.com Jakob: [26, 3]
@@ -724,11 +726,11 @@ build 2415 1223
 	spextear@gmail.com spxtr: [44, 1]
 	bgardner@redhat.com Ben Gardner: [21, 5]
 	goltermann@google.com goltermann: [6, 0]
-devel-doc 27427 13185
-code 335183 57902
+devel-doc 27524 13185
+code 335350 57934
 package 0 0
-unknown 638670 345937
+unknown 643667 345943
 image 303 0
-documentation 11878 6493
+documentation 11961 6514
 ui 418 5
 build 2415 1223
