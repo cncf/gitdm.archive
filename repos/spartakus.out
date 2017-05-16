@@ -1,0 +1,52 @@
+open output file /Users/lukasz/dev/cncf/gitdm/repos/spartakus.csv
+
+unknown@hacker.net Unknown hacker
+thockin@google.com Tim Hockin
+	unknown [666465, 283736]
+	devel-doc [7213, 3648]
+	code [3127, 1966]
+	build [308, 107]
+	documentation [1491, 425]
+lserven@gmail.com Lucas Serven
+	unknown [172229, 175637]
+	devel-doc [2245, 1181]
+	code [104, 2608]
+	build [68, 13]
+	documentation [0, 2455]
+rodrigo@sdfg.com.ar Rodrigo Campos
+	devel-doc [7, 0]
+brandon.philips@coreos.com Brandon Philips
+	devel-doc [1, 1]
+brian@waldon.cc Brian Waldon
+	unknown [195754, 0]
+	devel-doc [3461, 0]
+	code [1966, 0]
+	build [112, 0]
+	documentation [2455, 0]
+unknown 1034448 459373
+	thockin@google.com Tim Hockin: [666465, 283736]
+	lserven@gmail.com Lucas Serven: [172229, 175637]
+	brian@waldon.cc Brian Waldon: [195754, 0]
+devel-doc 12927 4830
+	thockin@google.com Tim Hockin: [7213, 3648]
+	lserven@gmail.com Lucas Serven: [2245, 1181]
+	rodrigo@sdfg.com.ar Rodrigo Campos: [7, 0]
+	brandon.philips@coreos.com Brandon Philips: [1, 1]
+	brian@waldon.cc Brian Waldon: [3461, 0]
+code 5197 4574
+	thockin@google.com Tim Hockin: [3127, 1966]
+	lserven@gmail.com Lucas Serven: [104, 2608]
+	brian@waldon.cc Brian Waldon: [1966, 0]
+build 488 120
+	thockin@google.com Tim Hockin: [308, 107]
+	lserven@gmail.com Lucas Serven: [68, 13]
+	brian@waldon.cc Brian Waldon: [112, 0]
+documentation 3946 2880
+	thockin@google.com Tim Hockin: [1491, 425]
+	lserven@gmail.com Lucas Serven: [0, 2455]
+	brian@waldon.cc Brian Waldon: [2455, 0]
+unknown 1034448 459373
+devel-doc 12927 4830
+code 5197 4574
+build 488 120
+documentation 3946 2880

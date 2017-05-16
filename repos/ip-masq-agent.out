@@ -1,0 +1,32 @@
+open output file /Users/lukasz/dev/cncf/gitdm/repos/ip-masq-agent.csv
+
+unknown@hacker.net Unknown hacker
+mtaufen@google.com Michael Taufen
+	unknown [24390, 66]
+	devel-doc [2241, 50]
+	code [1, 1]
+	build [14, 9]
+thockin@google.com Tim Hockin
+	unknown [73, 0]
+	devel-doc [246, 6]
+	code [94, 2]
+	build [180, 28]
+joe.github@bedafamily.com Joe Beda
+	build [1, 1]
+unknown 24463 66
+	mtaufen@google.com Michael Taufen: [24390, 66]
+	thockin@google.com Tim Hockin: [73, 0]
+devel-doc 2487 56
+	mtaufen@google.com Michael Taufen: [2241, 50]
+	thockin@google.com Tim Hockin: [246, 6]
+code 95 3
+	mtaufen@google.com Michael Taufen: [1, 1]
+	thockin@google.com Tim Hockin: [94, 2]
+build 195 38
+	mtaufen@google.com Michael Taufen: [14, 9]
+	thockin@google.com Tim Hockin: [180, 28]
+	joe.github@bedafamily.com Joe Beda: [1, 1]
+unknown 24463 66
+devel-doc 2487 56
+code 95 3
+build 195 38
