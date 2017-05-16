@@ -290,6 +290,11 @@ def parse_numstat(line, file_filter):
     else:
         return None, None, None, None
 
+def is_botemail(email):
+    if email in ["k8s.production.user@gmail.com", "jenkins@openstack.org", "jenkins@review.openstack.org", "openstack-infra@lists.openstack.org", "k8s-publish-robot@users.noreply.github.com", "containers-bot@bitnami.com", "abbott@squareup.com", "nfdmergebot@intel.com", "minikube-bot@google.com"]:
+        return True
+    return False
+
 #
 # The core hack for grabbing the information about a changeset.
 #
@@ -316,7 +321,8 @@ def grabpatch(logpatch):
         m = patterns['author'].match (Line)
         if m:
             pa.email = database.RemapEmail (m.group (2))
-            pa.author = LookupStoreHacker(m.group (1), pa.email)
+            if not is_botemail(pa.email):
+                pa.author = LookupStoreHacker(m.group (1), pa.email)
             dkey = 'author'
             if dkey not in matched:
                 matched[dkey] = 1
@@ -544,10 +550,9 @@ for logpatch in patches:
         continue
 
     #
-    # skip over any k8s-bot
+    # skip over any Bots
     #
-    # LG: TODO: here we need to skip k8s bot(s)
-    if pa.email == 'k8s-merge-robot@users.noreply.github.com':
+    if is_botemail(pa.email):
         continue
 
     #

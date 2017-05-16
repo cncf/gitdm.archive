@@ -1,4 +1,5 @@
 #!/bin/sh
+# kubernetes org
 ./anyrepo.sh ~/dev/go/src/k8s.io/test-infra/ test-infra
 ./anyrepo.sh ~/dev/go/src/k8s.io/kubernetes/ kubernetes
 ./anyrepo.sh ~/dev/go/src/k8s.io/kubernetes.github.io/ kubernetes.github.io
@@ -38,7 +39,31 @@
 ./anyrepo.sh ~/dev/go/src/k8s.io/kubernetes-template-project/ kubernetes-template-project
 ./anyrepo.sh ~/dev/go/src/k8s.io/kubernetes-docs-cn/ kubernetes-docs-cn
 ./anyrepo.sh ~/dev/go/src/k8s.io/kube-ui/ kube-ui
+./anyrepo.sh ~/dev/go/src/k8s.io/kubeadm/ kubeadm
+# kubernetes-incubator org
+./anyrepo.sh ~/dev/go/src/k8s.io/kompose/ kompose
+./anyrepo.sh ~/dev/go/src/k8s.io/external-storage/ external-storage
+./anyrepo.sh ~/dev/go/src/k8s.io/cri-tools/ cri-tools
+./anyrepo.sh ~/dev/go/src/k8s.io/kube-aws/ kube-aws
+./anyrepo.sh ~/dev/go/src/k8s.io/external-dns/ external-dns
+./anyrepo.sh ~/dev/go/src/k8s.io/bootkube/ bootkube
+./anyrepo.sh ~/dev/go/src/k8s.io/service-catalog/ service-catalog
+./anyrepo.sh ~/dev/go/src/k8s.io/kargo/ kargo
+./anyrepo.sh ~/dev/go/src/k8s.io/cri-o/ cri-o
+./anyrepo.sh ~/dev/go/src/k8s.io/cri-containerd/ cri-containerd
+./anyrepo.sh ~/dev/go/src/k8s.io/apiserver-builder/ apiserver-builder
+./anyrepo.sh ~/dev/go/src/k8s.io/ip-masq-agent/ ip-masq-agent
+./anyrepo.sh ~/dev/go/src/k8s.io/client-python/ client-python
+./anyrepo.sh ~/dev/go/src/k8s.io/cluster-capacity/ cluster-capacity
+./anyrepo.sh ~/dev/go/src/k8s.io/reference-docs/ reference-docs
+./anyrepo.sh ~/dev/go/src/k8s.io/kube-mesos-framework/ kube-mesos-framework
+./anyrepo.sh ~/dev/go/src/k8s.io/rktlet/ rktlet
+./anyrepo.sh ~/dev/go/src/k8s.io/spartakus/ spartakus
+./anyrepo.sh ~/dev/go/src/k8s.io/cluster-proportional-autoscaler/ cluster-proportional-autoscaler
+./anyrepo.sh ~/dev/go/src/k8s.io/nfs-provisioner/ nfs-provisioner
+./anyrepo.sh ~/dev/go/src/k8s.io/node-feature-discovery/ node-feature-discovery
+./anyrepo.sh ~/dev/go/src/k8s.io/application-images/ application-images
 echo "All repos combined"
-./multirepo.sh ~/dev/go/src/k8s.io/test-infra/ ~/dev/go/src/k8s.io/kubernetes/ ~/dev/go/src/k8s.io/kubernetes.github.io/ ~/dev/go/src/k8s.io/contrib/ ~/dev/go/src/k8s.io/helm/ ~/dev/go/src/k8s.io/kops/ ~/dev/go/src/k8s.io/community/ ~/dev/go/src/k8s.io/heapster/ ~/dev/go/src/k8s.io/dashboard/ ~/dev/go/src/k8s.io/minikube/ ~/dev/go/src/k8s.io/charts/ ~/dev/go/src/k8s.io/kube-state-metrics/ ~/dev/go/src/k8s.io/kubernetes-anywhere/ ~/dev/go/src/k8s.io/ingress/ ~/dev/go/src/k8s.io/release/ ~/dev/go/src/k8s.io/gengo/ ~/dev/go/src/k8s.io/autoscaler/ ~/dev/go/src/k8s.io/dns/ ~/dev/go/src/k8s.io/sample-apiserver/ ~/dev/go/src/k8s.io/apiserver/ ~/dev/go/src/k8s.io/kube-aggregator/ ~/dev/go/src/k8s.io/client-go/ ~/dev/go/src/k8s.io/node-problem-detector/ ~/dev/go/src/k8s.io/perf-tests/ ~/dev/go/src/k8s.io/apimachinery/ ~/dev/go/src/k8s.io/frakti/ ~/dev/go/src/k8s.io/features/ ~/dev/go/src/k8s.io/repo-infra/ ~/dev/go/src/k8s.io/kube-deploy/ ~/dev/go/src/k8s.io/examples/ ~/dev/go/src/k8s.io/git-sync/ ~/dev/go/src/k8s.io/k8s.io/ ~/dev/go/src/k8s.io/kubernetes-bootcamp/ ~/dev/go/src/k8s.io/kubectl/ ~/dev/go/src/k8s.io/metrics/ ~/dev/go/src/k8s.io/md-check/ ~/dev/go/src/k8s.io/kubernetes-template-project/ ~/dev/go/src/k8s.io/kubernetes-docs-cn/ ~/dev/go/src/k8s.io/kubernetes-docs-cn/
+./multirepo.sh ~/dev/go/src/k8s.io/test-infra/ ~/dev/go/src/k8s.io/kubernetes/ ~/dev/go/src/k8s.io/kubernetes.github.io/ ~/dev/go/src/k8s.io/contrib/ ~/dev/go/src/k8s.io/helm/ ~/dev/go/src/k8s.io/kops/ ~/dev/go/src/k8s.io/community/ ~/dev/go/src/k8s.io/heapster/ ~/dev/go/src/k8s.io/dashboard/ ~/dev/go/src/k8s.io/minikube/ ~/dev/go/src/k8s.io/charts/ ~/dev/go/src/k8s.io/kube-state-metrics/ ~/dev/go/src/k8s.io/kubernetes-anywhere/ ~/dev/go/src/k8s.io/ingress/ ~/dev/go/src/k8s.io/release/ ~/dev/go/src/k8s.io/gengo/ ~/dev/go/src/k8s.io/autoscaler/ ~/dev/go/src/k8s.io/dns/ ~/dev/go/src/k8s.io/sample-apiserver/ ~/dev/go/src/k8s.io/apiserver/ ~/dev/go/src/k8s.io/kube-aggregator/ ~/dev/go/src/k8s.io/client-go/ ~/dev/go/src/k8s.io/node-problem-detector/ ~/dev/go/src/k8s.io/perf-tests/ ~/dev/go/src/k8s.io/apimachinery/ ~/dev/go/src/k8s.io/frakti/ ~/dev/go/src/k8s.io/features/ ~/dev/go/src/k8s.io/repo-infra/ ~/dev/go/src/k8s.io/kube-deploy/ ~/dev/go/src/k8s.io/examples/ ~/dev/go/src/k8s.io/git-sync/ ~/dev/go/src/k8s.io/k8s.io/ ~/dev/go/src/k8s.io/kubernetes-bootcamp/ ~/dev/go/src/k8s.io/kubectl/ ~/dev/go/src/k8s.io/metrics/ ~/dev/go/src/k8s.io/md-check/ ~/dev/go/src/k8s.io/kubernetes-template-project/ ~/dev/go/src/k8s.io/kubernetes-docs-cn/ ~/dev/go/src/k8s.io/kube-ui/ ~/dev/go/src/k8s.io/kubeadm/ ~/dev/go/src/k8s.io/kompose/ ~/dev/go/src/k8s.io/external-storage/ ~/dev/go/src/k8s.io/cri-tools/ ~/dev/go/src/k8s.io/kube-aws/ ~/dev/go/src/k8s.io/external-dns/ ~/dev/go/src/k8s.io/bootkube/ ~/dev/go/src/k8s.io/service-catalog/ ~/dev/go/src/k8s.io/kargo/ ~/dev/go/src/k8s.io/cri-o/ ~/dev/go/src/k8s.io/cri-containerd/ ~/dev/go/src/k8s.io/apiserver-builder/ ~/dev/go/src/k8s.io/ip-masq-agent/ ~/dev/go/src/k8s.io/client-python/ ~/dev/go/src/k8s.io/cluster-capacity/ ~/dev/go/src/k8s.io/reference-docs/ ~/dev/go/src/k8s.io/kube-mesos-framework/ ~/dev/go/src/k8s.io/rktlet/ ~/dev/go/src/k8s.io/spartakus/ ~/dev/go/src/k8s.io/cluster-proportional-autoscaler/ ~/dev/go/src/k8s.io/nfs-provisioner/ ~/dev/go/src/k8s.io/node-feature-discovery/ ~/dev/go/src/k8s.io/application-images/
 echo "TopDevs, google others and unknowns"
 ./topdevs.sh
