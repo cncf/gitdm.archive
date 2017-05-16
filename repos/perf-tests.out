@@ -1,3 +1,4 @@
+Filter on "\/vendor\/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/perf-tests.csv
 
 unknown@hacker.net Unknown hacker
@@ -6,26 +7,20 @@ wojtekt@google.com Wojciech Tyczynski
 	devel-doc [1, 1]
 	code [43, 3]
 gmarek@google.com Marek Grabowski
-	unknown [1409686, 29]
-	devel-doc [13900, 1]
-	code [6729, 42]
-	build [426, 2]
-	documentation [4632, 0]
+	code [609, 42]
+	unknown [2635, 29]
+	devel-doc [226, 1]
+	documentation [52, 0]
+	build [37, 2]
 shyamjvs@google.com Shyam Jeedigunta
-	code [10380, 40]
-	unknown [2831842, 98776]
-	devel-doc [65876, 2650]
-	documentation [10936, 0]
-	build [953, 11]
+	unknown [10939, 774]
+	devel-doc [25, 0]
+	documentation [1106, 0]
+	build [63, 7]
 sejug@redhat.com Sebastian Jug
-	devel-doc [193856, 146682]
-	code [99758, 94417]
-	package [0, 0]
-	unknown [7419806, 5699049]
-	image [10025, 10025]
-	documentation [187166, 182235]
-	ui [26, 26]
-	build [27797, 27352]
+	unknown [5340, 966]
+	devel-doc [81, 0]
+	code [25, 0]
 bowei.du@gmail.com Bowei Du
 	devel-doc [245, 44]
 	code [1294, 0]
@@ -45,53 +40,43 @@ gkalele@google.com Girish Kalele
 	devel-doc [152, 0]
 	code [28, 0]
 	build [102, 0]
-devel-doc 274198 149378
+devel-doc 898 46
 	wojtekt@google.com Wojciech Tyczynski: [1, 1]
-	gmarek@google.com Marek Grabowski: [13900, 1]
-	shyamjvs@google.com Shyam Jeedigunta: [65876, 2650]
-	sejug@redhat.com Sebastian Jug: [193856, 146682]
+	gmarek@google.com Marek Grabowski: [226, 1]
+	shyamjvs@google.com Shyam Jeedigunta: [25, 0]
+	sejug@redhat.com Sebastian Jug: [81, 0]
 	bowei.du@gmail.com Bowei Du: [245, 44]
 	rlourenc@redhat.com Ricardo Lourenco: [168, 0]
 	gkalele@google.com Girish Kalele: [152, 0]
-code 118232 94502
+code 1999 45
 	wojtekt@google.com Wojciech Tyczynski: [43, 3]
-	gmarek@google.com Marek Grabowski: [6729, 42]
-	shyamjvs@google.com Shyam Jeedigunta: [10380, 40]
-	sejug@redhat.com Sebastian Jug: [99758, 94417]
+	gmarek@google.com Marek Grabowski: [609, 42]
+	sejug@redhat.com Sebastian Jug: [25, 0]
 	bowei.du@gmail.com Bowei Du: [1294, 0]
 	gkalele@google.com Girish Kalele: [28, 0]
-package 0 0
-	sejug@redhat.com Sebastian Jug: [0, 0]
-unknown 11663040 5798000
+unknown 20620 1915
 	wojtekt@google.com Wojciech Tyczynski: [11, 7]
-	gmarek@google.com Marek Grabowski: [1409686, 29]
-	shyamjvs@google.com Shyam Jeedigunta: [2831842, 98776]
-	sejug@redhat.com Sebastian Jug: [7419806, 5699049]
+	gmarek@google.com Marek Grabowski: [2635, 29]
+	shyamjvs@google.com Shyam Jeedigunta: [10939, 774]
+	sejug@redhat.com Sebastian Jug: [5340, 966]
 	bowei.du@gmail.com Bowei Du: [451, 112]
 	tomas.dohnalek@firma.seznam.cz Tomas Dohnalek: [1, 1]
 	rlourenc@redhat.com Ricardo Lourenco: [99, 26]
 	gkalele@google.com Girish Kalele: [1144, 0]
-image 10025 10025
-	sejug@redhat.com Sebastian Jug: [10025, 10025]
-documentation 202773 182235
-	gmarek@google.com Marek Grabowski: [4632, 0]
-	shyamjvs@google.com Shyam Jeedigunta: [10936, 0]
-	sejug@redhat.com Sebastian Jug: [187166, 182235]
+documentation 1197 0
+	gmarek@google.com Marek Grabowski: [52, 0]
+	shyamjvs@google.com Shyam Jeedigunta: [1106, 0]
 	bowei.du@gmail.com Bowei Du: [39, 0]
-ui 305 26
-	sejug@redhat.com Sebastian Jug: [26, 26]
+ui 279 0
 	bowei.du@gmail.com Bowei Du: [279, 0]
-build 29354 27375
-	gmarek@google.com Marek Grabowski: [426, 2]
-	shyamjvs@google.com Shyam Jeedigunta: [953, 11]
-	sejug@redhat.com Sebastian Jug: [27797, 27352]
+build 278 19
+	gmarek@google.com Marek Grabowski: [37, 2]
+	shyamjvs@google.com Shyam Jeedigunta: [63, 7]
 	bowei.du@gmail.com Bowei Du: [76, 10]
 	gkalele@google.com Girish Kalele: [102, 0]
-devel-doc 274198 149378
-code 118232 94502
-package 0 0
-unknown 11663040 5798000
-image 10025 10025
-documentation 202773 182235
-ui 305 26
-build 29354 27375
+devel-doc 898 46
+code 1999 45
+unknown 20620 1915
+documentation 1197 0
+ui 279 0
+build 278 19

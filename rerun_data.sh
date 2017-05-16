@@ -15,3 +15,4 @@ echo "Releases with map to Domain *"
 
 echo "Multi repos"
 ./all_multirepos.sh
+

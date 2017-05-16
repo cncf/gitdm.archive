@@ -1,18 +1,19 @@
+Filter on "\/vendor\/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-ui.csv
 
 unknown@hacker.net Unknown hacker
 mikedanese@gmail.com Mike Danese
 	unknown [6416, 1012]
 	devel-doc [74, 0]
-	code [76, 22]
+	code [71, 17]
 	build [30, 4]
 	documentation [16, 0]
 patrick@kismatic.com Patrick Reilly
 	devel-doc [2371, 180]
-	code [142490, 3208]
+	code [142485, 3208]
 	unknown [29872, 4423]
 	image [1766, 778]
-	documentation [30660, 267]
+	documentation [30653, 267]
 	ui [215, 1]
 	build [150, 4]
 sttts@mesosphere.io Dr. Stefan Schimanski
@@ -37,9 +38,9 @@ stclair@google.com Tim St. Clair
 jackgr@google.com jackgr
 	unknown [20, 14]
 	devel-doc [172, 101]
-	code [271, 308]
+	code [261, 303]
 	image [76, 0]
-	documentation [256, 1639]
+	documentation [248, 1638]
 alexdwanerobinson@gmail.com Alex Robinson
 shlomi@ben-hanna.com Shlomi Zadok
 	documentation [2, 2]
@@ -78,14 +79,14 @@ devel-doc 2638 291
 	jackgr@google.com jackgr: [172, 101]
 	jeffml@google.com Jeff Lowdermilk: [18, 1]
 	blake.haggerty@rackspace.com Blake Haggerty: [1, 1]
-code 158713 18714
-	mikedanese@gmail.com Mike Danese: [76, 22]
-	patrick@kismatic.com Patrick Reilly: [142490, 3208]
+code 158693 18704
+	mikedanese@gmail.com Mike Danese: [71, 17]
+	patrick@kismatic.com Patrick Reilly: [142485, 3208]
 	sttts@mesosphere.io Dr. Stefan Schimanski: [74, 24]
 	robertbailey@google.com Robert Bailey: [5, 1]
 	slokas@upmc.edu Steve Sloka: [105, 71]
 	info@sebastian-mueller.net Sebastian Müller: [145, 130]
-	jackgr@google.com jackgr: [271, 308]
+	jackgr@google.com jackgr: [261, 303]
 	bc@kismatic.io BC Broussard: [3722, 3431]
 	bburns@google.com Brendan Burns: [273, 45]
 	djvirgen@gmail.com Hector Virgen: [75, 1]
@@ -108,12 +109,12 @@ image 2620 778
 	jackgr@google.com jackgr: [76, 0]
 	bburns@google.com Brendan Burns: [778, 0]
 	nikhiljindal18@gmail.com nikhiljindal: [0, 0]
-documentation 33027 3564
+documentation 33012 3563
 	mikedanese@gmail.com Mike Danese: [16, 0]
-	patrick@kismatic.com Patrick Reilly: [30660, 267]
+	patrick@kismatic.com Patrick Reilly: [30653, 267]
 	slokas@upmc.edu Steve Sloka: [18, 3]
 	info@sebastian-mueller.net Sebastian Müller: [1, 1]
-	jackgr@google.com jackgr: [256, 1639]
+	jackgr@google.com jackgr: [248, 1638]
 	shlomi@ben-hanna.com Shlomi Zadok: [2, 2]
 	bc@kismatic.io BC Broussard: [377, 185]
 	imesh@apache.org Imesh Gunaratne: [1, 1]
@@ -125,9 +126,9 @@ build 180 8
 	mikedanese@gmail.com Mike Danese: [30, 4]
 	patrick@kismatic.com Patrick Reilly: [150, 4]
 devel-doc 2638 291
-code 158713 18714
+code 158693 18704
 unknown 37048 29987
 image 2620 778
-documentation 33027 3564
+documentation 33012 3563
 ui 215 1
 build 180 8

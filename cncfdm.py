@@ -35,6 +35,7 @@ DevReports = 1
 DateStats = 0
 AuthorSOBs = 1
 FileFilter = None
+InvertFilter = False
 CSVFile = None
 CSVPrefix = None
 DumpDB = 0
@@ -49,6 +50,19 @@ InputDataIsFile = False
 DebugHalt = False
 DateFrom = datetime.datetime(1970, 1, 1)
 DateTo = datetime.datetime(2069, 1, 1)
+BotEmails = [
+    "k8s.production.user@gmail.com",
+    "jenkins@openstack.org",
+    "jenkins@review.openstack.org",
+    "openstack-infra@lists.openstack.org",
+    "k8s-publish-robot@users.noreply.github.com",
+    "containers-bot@bitnami.com",
+    "abbott@squareup.com",
+    "nfdmergebot@intel.com",
+    "minikube-bot@google.com",
+    "k8s-merge-robot@users.noreply.github.com",
+    "support@greenkeeper.io"
+]
 
 #
 # Options:
@@ -62,7 +76,8 @@ DateTo = datetime.datetime(2069, 1, 1)
 # -n            Use numstats instead of generated patch from git log
 # -o file	File for text output
 # -p prefix     Prefix for CSV output
-# -r pattern	Restrict to files matching pattern
+# -r pattern	Restrict to files matching pattern (or not matching if used with -R)
+# -R            Invert FileFilter (so it will return only files *NOT* matching -r pattern)
 # -s		Ignore author SOB lines
 # -u		Map unknown employers to '(Unknown)'
 # -m		Map unknown employers to their email's domain name
@@ -78,12 +93,12 @@ DateTo = datetime.datetime(2069, 1, 1)
 
 def ParseOpts ():
     global MapUnknown, DevReports
-    global DateStats, AuthorSOBs, FileFilter, DumpDB
+    global DateStats, AuthorSOBs, FileFilter, InvertFilter, DumpDB
     global CFName, CSVFile, CSVPrefix, DirName, Aggregate, Numstat
     global ReportByFileType, ReportUnknowns
     global InputData, InputDataIsFile, DebugHalt, DateFrom, DateTo
 
-    opts, rest = getopt.getopt (sys.argv[1:], 'i:b:dc:Dh:l:no:p:r:stUumwx:yzXf:e:')
+    opts, rest = getopt.getopt (sys.argv[1:], 'i:b:dc:Dh:l:no:p:r:stUumwx:yzXf:e:R')
     for opt in opts:
         if opt[0] == '-b':
             DirName = opt[1]
@@ -103,6 +118,8 @@ def ParseOpts ():
             reports.SetOutput (open (opt[1], 'w'))
         elif opt[0] == '-p':
             CSVPrefix = opt[1]
+        elif opt[0] == '-R':
+            InvertFilter = True
         elif opt[0] == '-r':
             print 'Filter on "%s"' % (opt[1])
             FileFilter = re.compile (opt[1])
@@ -252,7 +269,7 @@ for key in patterns.keys():
     ns[key] = 0
 
 def parse_numstat(line, file_filter):
-    global ns
+    global ns, InvertFilter
     """
         Receive a line of text, determine if fits a numstat line and
         parse the added and removed lines as well as the file type.
@@ -267,8 +284,10 @@ def parse_numstat(line, file_filter):
 
         filename = m.group (3)
         # If we have a file filter, check for file lines.
-        if file_filter and not file_filter.search (filename):
-            return None, None, None, None
+        if file_filter:
+            match = not not file_filter.search(filename)
+            if match == InvertFilter:
+                return None, None, None, None
 
         try:
             added = int (m.group (1))
@@ -291,9 +310,8 @@ def parse_numstat(line, file_filter):
         return None, None, None, None
 
 def is_botemail(email):
-    if email in ["k8s.production.user@gmail.com", "jenkins@openstack.org", "jenkins@review.openstack.org", "openstack-infra@lists.openstack.org", "k8s-publish-robot@users.noreply.github.com", "containers-bot@bitnami.com", "abbott@squareup.com", "nfdmergebot@intel.com", "minikube-bot@google.com"]:
-        return True
-    return False
+    global BotEmails
+    return email in BotEmails
 
 #
 # The core hack for grabbing the information about a changeset.
@@ -323,6 +341,8 @@ def grabpatch(logpatch):
             pa.email = database.RemapEmail (m.group (2))
             if not is_botemail(pa.email):
                 pa.author = LookupStoreHacker(m.group (1), pa.email)
+            else:
+                return 'bot'
             dkey = 'author'
             if dkey not in matched:
                 matched[dkey] = 1
@@ -429,6 +449,8 @@ def grabpatch(logpatch):
             #
             if FileFilter:
                 ignore = ApplyFileFilter (Line, ignore)
+                if InvertFilter:
+                    ignore = not ignore
             #
             # OK, maybe it's part of the diff itself.
             #
@@ -543,16 +565,16 @@ for logpatch in patches:
     pa = grabpatch(logpatch)
     if not pa:
         break
+    #
+    # skip over any Bots
+    #
+    if pa == 'bot':
+        continue
+
 #    if pa.added > 100000 or pa.removed > 100000:
 #        print 'Skipping massive add', pa.commit
 #        continue
     if FileFilter and pa.added == 0 and pa.removed == 0:
-        continue
-
-    #
-    # skip over any Bots
-    #
-    if is_botemail(pa.email):
         continue
 
     #

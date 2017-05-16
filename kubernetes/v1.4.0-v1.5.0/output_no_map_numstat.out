@@ -1,3 +1,4 @@
+Filter on "\/vendor\/"
 open output file /Users/lukasz/dev/cncf/gitdm/output_no_map_numstat.csv
 
 yarntime@163.com is an author name, probably not what you want
@@ -8,7 +9,6 @@ saadali@google.com saadali
 	devel-doc [4255, 3807]
 	documentation [1, 0]
 	build [0, 9]
-k8s-merge-robot@users.noreply.github.com Kubernetes Submit Queue
 jsz@google.com Jerzy Szczepkowski
 	unknown [589, 105]
 	devel-doc [32, 4]
@@ -175,7 +175,6 @@ nikhiljindal@google.com nikhiljindal
 	unknown [2331, 540]
 	devel-doc [51, 1]
 	code [7, 0]
-	documentation [0, 0]
 bryk@google.com bryk
 	unknown [10, 10]
 ccoleman@redhat.com Clayton Coleman
@@ -360,8 +359,6 @@ rickyp999@gmail.com Ricky Pai
 jonathan.boulle@coreos.com Jonathan Boulle
 	unknown [281, 278]
 	code [1, 1]
-ouyang.qinhua@zte.com.cn bruceauyeung
-	unknown [43, 16]
 jimmy@jimmycuadra.com Jimmy Cuadra
 	unknown [35, 36]
 	devel-doc [55, 55]
@@ -455,6 +452,8 @@ jvallejo@redhat.com juanvallejo
 	unknown [699, 301]
 	code [94, 0]
 	documentation [1, 0]
+ouyang.qinhua@zte.com.cn bruceauyeung
+	unknown [43, 16]
 li.guangxu@zte.com.cn guangxuli
 	unknown [124, 36]
 rmmh@google.com Ryan Hitchman
@@ -467,11 +466,6 @@ dgoodwin@redhat.com Devan Goodwin
 	build [53, 0]
 kiall@hpe.com Kiall Mac Innes
 	unknown [97, 124]
-yu.peng36@zte.com.cn yupeng
-	unknown [37, 37]
-	devel-doc [3, 3]
-	code [11, 11]
-	build [1, 1]
 maciej.iai@gmail.com Maciej Kwiek
 	unknown [612, 533]
 zhang.dongjie@zte.com.cn zdj6373
@@ -485,6 +479,11 @@ zml@google.com Zach Loafman
 	devel-doc [2, 0]
 	code [164, 75]
 	documentation [8, 1]
+yu.peng36@zte.com.cn yupeng
+	unknown [37, 37]
+	devel-doc [3, 3]
+	code [11, 11]
+	build [1, 1]
 mkulke@gmail.com Magnus Kulke
 	unknown [8, 5]
 fabioy@google.com Fabio Yeon
@@ -678,14 +677,14 @@ clove@cnmconsulting.net chrislovecnm
 	code [152, 67]
 	build [7, 5]
 	documentation [5, 3]
-wang.yuexiao@zte.com.cn yuexiao-wang
-	devel-doc [2, 2]
-	build [2, 0]
 elson.rodriguez@gmail.com Elson Rodriguez
 	unknown [60, 20]
 	devel-doc [151, 47]
 mike@mikebryant.me.uk Mike Bryant
 	unknown [10, 1]
+wang.yuexiao@zte.com.cn yuexiao-wang
+	devel-doc [2, 2]
+	build [2, 0]
 zhaohuizhi@gmail.com Hui-Zhi
 	unknown [10, 1]
 chuck@dasroot.net Charles Butler
@@ -718,14 +717,6 @@ kokhang@gmail.com Steve Leon
 	unknown [54, 39]
 vsemushi@redhat.com Slava Semushin
 	unknown [2, 2]
-aanm90@gmail.com André Martins
-	code [3, 2]
-	documentation [1, 1]
-dug@us.ibm.com Doug Davis
-	unknown [85, 87]
-	devel-doc [67, 65]
-	code [1, 1]
-	documentation [39, 28]
 aaronjlevy@gmail.com Aaron Levy
 	unknown [1, 1]
 	devel-doc [1, 1]
@@ -734,8 +725,16 @@ zachaller@hotmail.com Zach Aller
 	unknown [2, 2]
 me@lukemarsden.net Luke Marsden
 	unknown [314, 8]
+dug@us.ibm.com Doug Davis
+	unknown [85, 87]
+	devel-doc [67, 65]
+	code [1, 1]
+	documentation [39, 28]
 sander@xanzy.io Sander van Harmelen
 	unknown [14, 15]
+aanm90@gmail.com André Martins
+	code [3, 2]
+	documentation [1, 1]
 zhang.ke106@zte.com.cn Ke Zhang
 	unknown [134, 85]
 optimuswu8685@gmail.com wu8685
@@ -945,9 +944,9 @@ devel-doc 79180 23334
 	jay@apache.org jayunit100: [7953, 1027]
 	pmorie@redhat.com Paul Morie: [1, 4]
 	dgoodwin@redhat.com Devan Goodwin: [92, 39]
-	yu.peng36@zte.com.cn yupeng: [3, 3]
 	djmm@google.com David McMahon: [361, 205]
 	zml@google.com Zach Loafman: [2, 0]
+	yu.peng36@zte.com.cn yupeng: [3, 3]
 	fabioy@google.com Fabio Yeon: [290, 194]
 	alexdwanerobinson@gmail.com Alex Robinson: [77, 20]
 	beacham@google.com Jacob Beacham: [30, 1]
@@ -969,12 +968,12 @@ devel-doc 79180 23334
 	graham.hayes@hpe.com Graham Hayes: [398, 0]
 	quinton@google.com Quinton Hoole: [26, 7]
 	clove@cnmconsulting.net chrislovecnm: [347, 69]
-	wang.yuexiao@zte.com.cn yuexiao-wang: [2, 2]
 	elson.rodriguez@gmail.com Elson Rodriguez: [151, 47]
+	wang.yuexiao@zte.com.cn yuexiao-wang: [2, 2]
 	adityakali@google.com Aditya Kali: [7, 2]
 	eli@mirantis.com Evgeny L: [2, 2]
-	dug@us.ibm.com Doug Davis: [67, 65]
 	aaronjlevy@gmail.com Aaron Levy: [1, 1]
+	dug@us.ibm.com Doug Davis: [67, 65]
 	simon@swine.de Christian Simon: [2, 2]
 	spiffxp@gmail.com Aaron Crickenberger: [133, 0]
 	dbsmith@google.com Daniel Smith: [2158, 169]
@@ -1054,9 +1053,9 @@ code 11711 7793
 	pmorie@redhat.com Paul Morie: [66, 49]
 	jvallejo@redhat.com juanvallejo: [94, 0]
 	rmmh@google.com Ryan Hitchman: [178, 49]
-	yu.peng36@zte.com.cn yupeng: [11, 11]
 	djmm@google.com David McMahon: [43, 1274]
 	zml@google.com Zach Loafman: [164, 75]
+	yu.peng36@zte.com.cn yupeng: [11, 11]
 	alexdwanerobinson@gmail.com Alex Robinson: [7, 1]
 	beacham@google.com Jacob Beacham: [139, 0]
 	mfojtik@redhat.com Michal Fojtik: [4, 4]
@@ -1079,8 +1078,8 @@ code 11711 7793
 	chuck@dasroot.net Charles Butler: [1, 1]
 	adityakali@google.com Aditya Kali: [2, 2]
 	bernard@bvandewa.com Bernard Van De Walle: [1, 1]
-	aanm90@gmail.com André Martins: [3, 2]
 	dug@us.ibm.com Doug Davis: [1, 1]
+	aanm90@gmail.com André Martins: [3, 2]
 	mkumatag@in.ibm.com Manjunath A Kumatagi: [88, 25]
 	dbsmith@google.com Daniel Smith: [73, 47]
 	pengjingtian@huawei.com Jingtian Peng: [1, 1]
@@ -1179,7 +1178,6 @@ unknown 608498 290534
 	irfan.rehman@huawei.com Irfan Ur Rehman: [30, 6]
 	rickyp999@gmail.com Ricky Pai: [1, 1]
 	jonathan.boulle@coreos.com Jonathan Boulle: [281, 278]
-	ouyang.qinhua@zte.com.cn bruceauyeung: [43, 16]
 	jimmy@jimmycuadra.com Jimmy Cuadra: [35, 36]
 	sross@redhat.com Solly Ross: [1802, 540]
 	ablock84@gmail.com Alexander Block: [2, 1]
@@ -1204,15 +1202,16 @@ unknown 608498 290534
 	jtanenba@redhat.com Jacob Tanenbaum: [350, 13]
 	pmorie@redhat.com Paul Morie: [3442, 3332]
 	jvallejo@redhat.com juanvallejo: [699, 301]
+	ouyang.qinhua@zte.com.cn bruceauyeung: [43, 16]
 	li.guangxu@zte.com.cn guangxuli: [124, 36]
 	rmmh@google.com Ryan Hitchman: [875, 711]
 	dgoodwin@redhat.com Devan Goodwin: [1284, 237]
 	kiall@hpe.com Kiall Mac Innes: [97, 124]
-	yu.peng36@zte.com.cn yupeng: [37, 37]
 	maciej.iai@gmail.com Maciej Kwiek: [612, 533]
 	zhang.dongjie@zte.com.cn zdj6373: [2, 2]
 	djmm@google.com David McMahon: [0, 397]
 	zml@google.com Zach Loafman: [337, 304]
+	yu.peng36@zte.com.cn yupeng: [37, 37]
 	mkulke@gmail.com Magnus Kulke: [8, 5]
 	alexdwanerobinson@gmail.com Alex Robinson: [109, 30]
 	abrand@apprenda.com Alexander Brand: [141, 427]
@@ -1289,10 +1288,10 @@ unknown 608498 290534
 	eli@mirantis.com Evgeny L: [150, 32]
 	kokhang@gmail.com Steve Leon: [54, 39]
 	vsemushi@redhat.com Slava Semushin: [2, 2]
-	dug@us.ibm.com Doug Davis: [85, 87]
 	aaronjlevy@gmail.com Aaron Levy: [1, 1]
 	zachaller@hotmail.com Zach Aller: [2, 2]
 	me@lukemarsden.net Luke Marsden: [314, 8]
+	dug@us.ibm.com Doug Davis: [85, 87]
 	sander@xanzy.io Sander van Harmelen: [14, 15]
 	zhang.ke106@zte.com.cn Ke Zhang: [134, 85]
 	optimuswu8685@gmail.com wu8685: [865, 324]
@@ -1366,7 +1365,6 @@ documentation 899 103
 	taotaotheripper@gmail.com Random-Liu: [3, 1]
 	yjhong@google.com Yu-Ju Hong: [3, 2]
 	miaol@vmware.com Miao Luo: [0, 0]
-	nikhiljindal@google.com nikhiljindal: [0, 0]
 	ccoleman@redhat.com Clayton Coleman: [0, 0]
 	hongchaodeng1@gmail.com Hongchao Deng: [1, 0]
 	vmik@google.com Mik Vyatskov: [5, 3]
@@ -1404,8 +1402,8 @@ documentation 899 103
 	yifan.gu@coreos.com Yifan Gu: [3, 3]
 	clove@cnmconsulting.net chrislovecnm: [5, 3]
 	eli@mirantis.com Evgeny L: [11, 1]
-	aanm90@gmail.com André Martins: [1, 1]
 	dug@us.ibm.com Doug Davis: [39, 28]
+	aanm90@gmail.com André Martins: [1, 1]
 	simon@swine.de Christian Simon: [0, 0]
 	mkumatag@in.ibm.com Manjunath A Kumatagi: [15, 0]
 	grosskur@google.com Alan Grosskurth: [1, 0]

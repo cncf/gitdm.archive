@@ -1,3 +1,4 @@
+Filter on "\/vendor\/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-deploy.csv
 
 unknown@hacker.net Unknown hacker
@@ -10,12 +11,11 @@ lucas.kaldstrom@hotmail.co.uk Lucas Käldström
 	image [0, 0]
 	build [112, 0]
 justin@fathomdb.com Justin Santa Barbara
-	devel-doc [4951, 558]
-	code [6143, 766]
-	unknown [2596097, 38018]
-	image [0, 0]
-	documentation [10400, 4]
-	build [937, 163]
+	unknown [41088, 38018]
+	devel-doc [700, 558]
+	code [766, 766]
+	build [171, 163]
+	documentation [4, 4]
 shanestarcher@gmail.com Shane Starcher
 	code [2, 1]
 clove@cnmconsulting.net chrislovecnm
@@ -122,9 +122,9 @@ abshah@google.com Abhishek Shah
 decarr@redhat.com derekwaynecarr
 	unknown [3, 3]
 	code [40, 0]
-devel-doc 5464 841
+devel-doc 1213 841
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [159, 216]
-	justin@fathomdb.com Justin Santa Barbara: [4951, 558]
+	justin@fathomdb.com Justin Santa Barbara: [700, 558]
 	clove@cnmconsulting.net chrislovecnm: [1, 0]
 	jonathanboulle@gmail.com Jonathan Boulle: [1, 1]
 	lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [56, 6]
@@ -133,10 +133,10 @@ devel-doc 5464 841
 	mikedanese@gmail.com Mike Danese: [273, 57]
 	rlalonde@univa.com roblalonde: [13, 0]
 	christoph.held@est.fujitsu.com Christoph Held: [1, 1]
-code 8795 2664
+code 3418 2664
 	robertbailey@google.com Robert Bailey: [48, 7]
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [1039, 1264]
-	justin@fathomdb.com Justin Santa Barbara: [6143, 766]
+	justin@fathomdb.com Justin Santa Barbara: [766, 766]
 	shanestarcher@gmail.com Shane Starcher: [2, 1]
 	clove@cnmconsulting.net chrislovecnm: [42, 5]
 	lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [553, 376]
@@ -167,9 +167,9 @@ code 8795 2664
 	cjcullen@google.com CJ Cullen: [3, 6]
 	etune@google.com Eric Tune: [107, 26]
 	decarr@redhat.com derekwaynecarr: [40, 0]
-unknown 2598586 40558
+unknown 43577 40558
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [481, 681]
-	justin@fathomdb.com Justin Santa Barbara: [2596097, 38018]
+	justin@fathomdb.com Justin Santa Barbara: [41088, 38018]
 	clove@cnmconsulting.net chrislovecnm: [5, 0]
 	andrew.basson@gmail.com Andrew Basson: [9, 9]
 	lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [349, 220]
@@ -194,18 +194,17 @@ unknown 2598586 40558
 	decarr@redhat.com derekwaynecarr: [3, 3]
 image 0 0
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [0, 0]
-	justin@fathomdb.com Justin Santa Barbara: [0, 0]
-documentation 10400 4
-	justin@fathomdb.com Justin Santa Barbara: [10400, 4]
+documentation 4 4
+	justin@fathomdb.com Justin Santa Barbara: [4, 4]
 	rlalonde@univa.com roblalonde: [0, 0]
-build 1478 529
+build 712 529
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [112, 0]
-	justin@fathomdb.com Justin Santa Barbara: [937, 163]
+	justin@fathomdb.com Justin Santa Barbara: [171, 163]
 	comp_@gmx.net Ion Savin: [5, 5]
 	mikedanese@gmail.com Mike Danese: [424, 361]
-devel-doc 5464 841
-code 8795 2664
-unknown 2598586 40558
+devel-doc 1213 841
+code 3418 2664
+unknown 43577 40558
 image 0 0
-documentation 10400 4
-build 1478 529
+documentation 4 4
+build 712 529

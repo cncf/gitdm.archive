@@ -1,3 +1,4 @@
+Filter on "\/vendor\/"
 open output file /Users/lukasz/dev/cncf/gitdm/output_no_map_numstat.csv
 
 Oops...funky email hokutosei
@@ -12,8 +13,8 @@ bgrant0607@users.noreply.github.com Brian Grant
 	unknown [904, 1659]
 	devel-doc [115, 2]
 decarr@redhat.com derekwaynecarr
-	unknown [11414, 1494]
-	devel-doc [915, 306]
+	unknown [11414, 1457]
+	devel-doc [915, 295]
 	code [251, 129]
 	build [15, 20]
 	documentation [9, 0]
@@ -59,9 +60,8 @@ xuchao@google.com Chao Xu
 	documentation [29764, 0]
 zhenggouyong.zheng@huawei.com eulerzgy
 	unknown [31, 35]
-	image [0, 0]
-	code [34, 34]
 	devel-doc [3, 3]
+	code [34, 34]
 etune@google.com Eric Tune
 	unknown [1790, 514]
 	devel-doc [215, 118]
@@ -204,7 +204,6 @@ robertbailey@google.com Robert Bailey
 	documentation [0, 1]
 huangyuqi@huawei.com yuqi huang
 	unknown [54, 8]
-	image [0, 0]
 	code [85, 3]
 skywalker94@gmail.com Ananya Kumar
 	unknown [5755, 563]
@@ -595,10 +594,10 @@ marun@redhat.com Maru Newby
 	code [26, 22]
 patrick@kismatic.io Patrick Reilly
 	devel-doc [4, 2080]
-	code [3, 152069]
+	code [3, 152059]
 	unknown [0, 9342]
 	image [0, 447]
-	documentation [0, 29429]
+	documentation [0, 29415]
 	ui [0, 214]
 	build [0, 169]
 peeyushagarwal1994@gmail.com Peeyush Agarwal
@@ -756,10 +755,10 @@ jdsutherland3@gmail.com Joel Sutherland
 	unknown [1, 1]
 james@jameskyle.org James Kyle
 	code [6, 1]
-devel-doc 11884 10411
+devel-doc 11884 10400
 	bburns@google.com Brendan Burns: [526, 1822]
 	bgrant0607@users.noreply.github.com Brian Grant: [115, 2]
-	decarr@redhat.com derekwaynecarr: [915, 306]
+	decarr@redhat.com derekwaynecarr: [915, 295]
 	arob@google.com Alex Robinson: [126, 122]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [416, 2]
 	mwielgus@google.com Marcin Wielgus: [6, 3]
@@ -852,7 +851,7 @@ devel-doc 11884 10411
 	zg@users.noreply.github.com Zack Gold: [1, 1]
 	mgannholm@users.noreply.github.com mgannholm: [3, 3]
 	raffo_uppuiu@yahoo.it Raffaele Di Fazio: [1, 1]
-code 43391 190570
+code 43391 190560
 	bburns@google.com Brendan Burns: [203, 19]
 	decarr@redhat.com derekwaynecarr: [251, 129]
 	pmorie@redhat.com Paul Morie: [9, 3]
@@ -934,7 +933,7 @@ code 43391 190570
 	brian@brosner.com Brian Rosner: [1, 1]
 	byungjoon.lee@gmail.com Byungjoon Lee: [64, 10]
 	marun@redhat.com Maru Newby: [26, 22]
-	patrick@kismatic.io Patrick Reilly: [3, 152069]
+	patrick@kismatic.io Patrick Reilly: [3, 152059]
 	o.lemasle@gmail.com Olivier Lemasle: [2, 0]
 	vlajos@gmail.com Veres Lajos: [17, 17]
 	jeanepaul@gmail.com jeanepaul: [6, 4]
@@ -957,10 +956,10 @@ code 43391 190570
 package 0 0
 	mikedanese@gmail.com Mike Danese: [0, 0]
 	jsafrane@redhat.com Jan Safranek: [0, 0]
-unknown 372574 274003
+unknown 372574 273966
 	bburns@google.com Brendan Burns: [15492, 8201]
 	bgrant0607@users.noreply.github.com Brian Grant: [904, 1659]
-	decarr@redhat.com derekwaynecarr: [11414, 1494]
+	decarr@redhat.com derekwaynecarr: [11414, 1457]
 	pmorie@redhat.com Paul Morie: [1556, 374]
 	arob@google.com Alex Robinson: [1051, 802]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [6253, 1388]
@@ -1172,18 +1171,16 @@ unknown 372574 274003
 image 1883 884
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [2, 0]
 	mikedanese@gmail.com Mike Danese: [0, 0]
-	zhenggouyong.zheng@huawei.com eulerzgy: [0, 0]
 	thockin@google.com Tim Hockin: [0, 0]
 	davidopp@google.com David Oppenheimer: [0, 0]
 	nikhiljindal@google.com nikhiljindal: [0, 0]
 	dbsmith@google.com Daniel Smith: [0, 0]
 	gmarek@google.com gmarek: [0, 0]
-	huangyuqi@huawei.com yuqi huang: [0, 0]
 	qiaolei2@huawei.com qiaolei: [1832, 388]
 	wangzefeng@huawei.com Kevin: [0, 0]
 	patrick@kismatic.io Patrick Reilly: [0, 447]
 	ben@connectifier.com Ben McCann: [49, 49]
-documentation 34310 32943
+documentation 34310 32929
 	bburns@google.com Brendan Burns: [293, 16]
 	decarr@redhat.com derekwaynecarr: [9, 0]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [3, 1]
@@ -1232,7 +1229,7 @@ documentation 34310 32943
 	anastasis90@yahoo.gr Anastasis Andronidis: [1, 0]
 	ben.the.elder@gmail.com BenTheElder: [2, 0]
 	nakayamakenjiro@gmail.com Kenjiro Nakayama: [1, 1]
-	patrick@kismatic.io Patrick Reilly: [0, 29429]
+	patrick@kismatic.io Patrick Reilly: [0, 29415]
 	peeyushagarwal1994@gmail.com Peeyush Agarwal: [83, 83]
 	matt.jibson@gmail.com Matt Jibson: [1, 1]
 	vlajos@gmail.com Veres Lajos: [5, 5]
@@ -1274,11 +1271,11 @@ build 912 863
 	philibert.dugas@gmail.com Philibert Dugas: [10, 0]
 	alex.crawford@coreos.com Alex Crawford: [6, 0]
 	ej.simeon@gmail.com eddiesimeon: [9, 9]
-devel-doc 11884 10411
-code 43391 190570
+devel-doc 11884 10400
+code 43391 190560
 package 0 0
-unknown 372574 274003
+unknown 372574 273966
 image 1883 884
-documentation 34310 32943
+documentation 34310 32929
 ui 0 214
 build 912 863
