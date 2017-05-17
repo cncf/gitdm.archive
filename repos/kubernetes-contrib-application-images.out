@@ -1,0 +1,36 @@
+Filter on "\/vendor\/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/kubernetes-contrib-application-images.csv
+
+unknown@hacker.net Unknown hacker
+matt@redhat.com Matthew Farrellee
+	unknown [3, 44]
+	devel-doc [0, 37]
+	code [0, 22]
+	build [13, 32]
+	documentation [0, 0]
+zml@google.com Zach Loafman
+	unknown [196, 2]
+	devel-doc [280, 1]
+	code [141, 0]
+	build [69, 3]
+	documentation [19, 0]
+unknown 199 46
+	matt@redhat.com Matthew Farrellee: [3, 44]
+	zml@google.com Zach Loafman: [196, 2]
+devel-doc 280 38
+	matt@redhat.com Matthew Farrellee: [0, 37]
+	zml@google.com Zach Loafman: [280, 1]
+code 141 22
+	matt@redhat.com Matthew Farrellee: [0, 22]
+	zml@google.com Zach Loafman: [141, 0]
+build 82 35
+	matt@redhat.com Matthew Farrellee: [13, 32]
+	zml@google.com Zach Loafman: [69, 3]
+documentation 19 0
+	matt@redhat.com Matthew Farrellee: [0, 0]
+	zml@google.com Zach Loafman: [19, 0]
+unknown 199 46
+devel-doc 280 38
+code 141 22
+build 82 35
+documentation 19 0

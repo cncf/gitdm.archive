@@ -1,0 +1,47 @@
+Filter on "\/vendor\/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/container-terminal.csv
+
+unknown@hacker.net Unknown hacker
+jforrest@redhat.com Jessica Forrester
+	unknown [9, 9]
+	code [74, 36]
+	documentation [12, 4]
+stefw@redhat.com Stef Walter
+	unknown [110, 46]
+	devel-doc [646, 29]
+	code [786, 240]
+	image [0, 0]
+	documentation [198, 25]
+mdemaria@redhat.com Mark DeMaria
+	devel-doc [6, 0]
+	code [16, 2]
+spadgett@redhat.com Samuel Padgett
+	unknown [1, 1]
+	code [20, 4]
+admin@benjaminapetersen.me benjaminapetersen
+	code [14, 8]
+	documentation [2, 2]
+unknown 120 56
+	jforrest@redhat.com Jessica Forrester: [9, 9]
+	stefw@redhat.com Stef Walter: [110, 46]
+	spadgett@redhat.com Samuel Padgett: [1, 1]
+devel-doc 652 29
+	stefw@redhat.com Stef Walter: [646, 29]
+	mdemaria@redhat.com Mark DeMaria: [6, 0]
+code 910 290
+	jforrest@redhat.com Jessica Forrester: [74, 36]
+	stefw@redhat.com Stef Walter: [786, 240]
+	mdemaria@redhat.com Mark DeMaria: [16, 2]
+	spadgett@redhat.com Samuel Padgett: [20, 4]
+	admin@benjaminapetersen.me benjaminapetersen: [14, 8]
+image 0 0
+	stefw@redhat.com Stef Walter: [0, 0]
+documentation 212 31
+	jforrest@redhat.com Jessica Forrester: [12, 4]
+	stefw@redhat.com Stef Walter: [198, 25]
+	admin@benjaminapetersen.me benjaminapetersen: [2, 2]
+unknown 120 56
+devel-doc 652 29
+code 910 290
+image 0 0
+documentation 212 31

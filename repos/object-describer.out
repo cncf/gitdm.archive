@@ -1,0 +1,41 @@
+Filter on "\/vendor\/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/object-describer.csv
+
+unknown@hacker.net Unknown hacker
+jforrest@redhat.com Jessica Forrester
+	unknown [83, 24]
+	devel-doc [125, 24]
+	code [908, 55]
+	documentation [276, 48]
+rhamilto@redhat.com Robb Hamilton
+	code [9, 9]
+	documentation [9, 9]
+jordan@liggitt.net Jordan Liggitt
+	unknown [9, 8]
+spadgett@redhat.com Samuel Padgett
+	unknown [4, 3]
+	code [424, 105]
+	documentation [121, 48]
+stefw@redhat.com Stef Walter
+	code [18, 10]
+	documentation [2, 2]
+unknown 96 35
+	jforrest@redhat.com Jessica Forrester: [83, 24]
+	jordan@liggitt.net Jordan Liggitt: [9, 8]
+	spadgett@redhat.com Samuel Padgett: [4, 3]
+devel-doc 125 24
+	jforrest@redhat.com Jessica Forrester: [125, 24]
+code 1359 179
+	jforrest@redhat.com Jessica Forrester: [908, 55]
+	rhamilto@redhat.com Robb Hamilton: [9, 9]
+	spadgett@redhat.com Samuel Padgett: [424, 105]
+	stefw@redhat.com Stef Walter: [18, 10]
+documentation 408 107
+	jforrest@redhat.com Jessica Forrester: [276, 48]
+	rhamilto@redhat.com Robb Hamilton: [9, 9]
+	spadgett@redhat.com Samuel Padgett: [121, 48]
+	stefw@redhat.com Stef Walter: [2, 2]
+unknown 96 35
+devel-doc 125 24
+code 1359 179
+documentation 408 107
