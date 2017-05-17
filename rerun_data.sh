@@ -12,7 +12,16 @@ echo "Releases without mapping"
 ./rels_no_map.sh
 echo "Releases with map to Domain *"
 ./rels.sh
+echo "Done mapping"
+
+echo "Analysis All"
+./analysis_all.sh
+echo "Analysis Releases"
+./analysis_rels.sh
+
+echo "New devs"
+./new_devs.sh
 
 echo "Multi repos"
-./all_multirepos.sh
+./kubernetes_repos.sh
 
