@@ -109,3 +109,7 @@ Other tools include:
 `range.sh` - generate stats for `Linux kernel` for given data range (1st and 2nnd commandline argument like 2016-01-01 2017-01-01), assumes Linux repo (`torvalds/linux`) is cloned in `~/dev/linux/`
 `range_<period>.sh` - used to generate monthly, quarterly, yearly stats using above `./range.sh`, for example `./range_monthly.sh`.
 
+# Report
+Links to data and generated report are here: `./res/links.txt`
+
+
