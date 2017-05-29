@@ -109,6 +109,27 @@ Other tools include:
 `range.sh` - generate stats for `Linux kernel` for given data range (1st and 2nnd commandline argument like 2016-01-01 2017-01-01), assumes Linux repo (`torvalds/linux`) is cloned in `~/dev/linux/`
 `range_<period>.sh` - used to generate monthly, quarterly, yearly stats using above `./range.sh`, for example `./range_monthly.sh`.
 
+To work on Prometheus contributors before and after joining CNCF:
+Prometheus joined CNCF at 2016-05-09.
+You need to clone all prometheus repos into `~/dev/prometheus` using `./clone_prometheus.sh`
+Then You need to get number of distinct Prometheus contributors before joining CNCF:
+./prometheus_repos.sh 2015-05-09 2016-05-08 ~/dev/prometheus/
+Result is:
+```
+Processed 2721 csets from 230 developers
+252 employers found
+A total of 1558445 lines added, 353900 removed (delta 1204545)
+```
+Now let's check numbe rof distinct contributors after 2016-05-09:
+`./prometheus_repos.sh 2016-05-09 2017-06-01 ~/dev/prometheus/`
+```
+Processed 2817 csets from 346 developers
+365 employers found
+A total of 2696196 lines added, 771502 removed (delta 1924694)
+```
+
+We have an increase from 230 to 365 which is 59% more.
+
 # Report
 Links to data and generated report are here: `./res/links.txt`
 
