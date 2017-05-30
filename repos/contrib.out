@@ -1,4 +1,4 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/contrib.csv
 
 unknown@hacker.net Unknown hacker
@@ -405,8 +405,8 @@ github@louis-paul.net Louis-Paul Dareau
 	unknown [1, 0]
 	build [1, 1]
 madhusudancs@gmail.com Madhusudan.C.S
-	unknown [1266, 248]
-	devel-doc [211, 1]
+	unknown [1201, 228]
+	devel-doc [209, 0]
 	build [24, 0]
 maciej.strzelecki@gmail.com Maciej Strzelecki
 sivabalan.manivannan@gmail.com Siva Manivannan
@@ -669,7 +669,7 @@ sgallagh@redhat.com Stephen Gallagher
 	unknown [1, 0]
 ben.the.elder@gmail.com BenTheElder
 	unknown [249, 0]
-devel-doc 119083 57311
+devel-doc 119081 57310
 	gmarek@google.com Marek Grabowski: [16950, 0]
 	stclair@google.com Tim St. Clair: [175, 0]
 	qlee@google.com Quintin Lee: [231, 84]
@@ -737,7 +737,7 @@ devel-doc 119083 57311
 	dj199008@gmail.com m1093782566: [1, 1]
 	robertbailey@google.com Robert Bailey: [6, 5]
 	glyons@box.com Greg Lyons: [5, 1]
-	madhusudancs@gmail.com Madhusudan.C.S: [211, 1]
+	madhusudancs@gmail.com Madhusudan.C.S: [209, 0]
 	sivabalan.manivannan@gmail.com Siva Manivannan: [1, 1]
 	ide+github@jameside.com James Ide: [2, 1]
 	rutsky.vladimir@gmail.com Vladimir Rutsky: [51, 7]
@@ -835,7 +835,7 @@ package 0 0
 	aledbf@gmail.com Manuel de Brito Fontes: [0, 0]
 	lantaol@google.com Random-Liu: [0, 0]
 	bburns@google.com Brendan Burns: [0, 0]
-unknown 6492829 3404066
+unknown 6492764 3404046
 	gmarek@google.com Marek Grabowski: [640600, 1019]
 	stclair@google.com Tim St. Clair: [497, 7]
 	qlee@google.com Quintin Lee: [3136, 701]
@@ -928,7 +928,7 @@ unknown 6492829 3404066
 	glyons@box.com Greg Lyons: [318, 94]
 	mml@google.com Matt Liggett: [0, 9]
 	github@louis-paul.net Louis-Paul Dareau: [1, 0]
-	madhusudancs@gmail.com Madhusudan.C.S: [1266, 248]
+	madhusudancs@gmail.com Madhusudan.C.S: [1201, 228]
 	adrian.garciaprado@nrg.com Adrian G Prado: [21, 21]
 	rutsky.vladimir@gmail.com Vladimir Rutsky: [360, 224]
 	filipg@google.com Filip Grzadkowski: [42807, 20060]
@@ -1115,10 +1115,10 @@ build 6970 3130
 	roque@juniper.net Pedro Roque Marques: [117, 0]
 	krancourt@engineyard.com Kent Rancourt: [4, 0]
 	chiachenk@google.com Janet Kuo: [192, 0]
-devel-doc 119083 57311
+devel-doc 119081 57310
 code 73859 42204
 package 0 0
-unknown 6492829 3404066
+unknown 6492764 3404046
 image 0 0
 documentation 73132 41455
 build 6970 3130

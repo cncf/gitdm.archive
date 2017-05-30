@@ -1,4 +1,4 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/node-problem-detector.csv
 
 unknown@hacker.net Unknown hacker
@@ -15,16 +15,14 @@ euan.kemp@coreos.com Euan Kemp
 	unknown [5, 3]
 	build [11, 2]
 lantaol@google.com Random-Liu
-	unknown [595295, 15530]
-	devel-doc [8501, 58]
-	code [3062, 0]
-	build [285, 41]
-	documentation [3999, 0]
+	unknown [5567, 1626]
+	devel-doc [282, 58]
+	code [66, 0]
+	build [175, 41]
 andy.xning@gmail.com Andy Xie
-	unknown [419782, 125744]
-	devel-doc [681, 1542]
-	documentation [4, 2880]
-	build [97, 66]
+	unknown [890, 416]
+	devel-doc [35, 10]
+	build [13, 9]
 chenjg@harmonycloud.cn fate-grand-order
 	unknown [3, 3]
 aps.sids@gmail.com Amanpreet Singh
@@ -34,10 +32,7 @@ shyamjvs@google.com Shyam Jeedigunta
 thecantero@users.noreply.github.com thecantero
 	devel-doc [1, 1]
 coolhzb@163.com AdoHe
-	unknown [2493, 3387]
-	devel-doc [202, 507]
-	documentation [0, 21]
-	build [0, 11]
+	unknown [140, 102]
 johannes.scheuermann@inovex.de Johannes Scheuermann
 	devel-doc [1, 1]
 gkalele@google.com Girish Kalele
@@ -45,47 +40,36 @@ gkalele@google.com Girish Kalele
 	devel-doc [29, 0]
 	build [42, 0]
 edwardam@interlix.com Edward Muller
-	unknown [190, 94424]
-	devel-doc [54, 100]
-	code [0, 2570]
-unknown 1017958 239094
+	unknown [9, 13]
+unknown 6804 2166
 	taotaotheripper@gmail.com Lantao Liu: [1, 1]
 	jmilan@redhat.com Julius Milan: [39, 1]
 	euan.kemp@coreos.com Euan Kemp: [5, 3]
-	lantaol@google.com Random-Liu: [595295, 15530]
-	andy.xning@gmail.com Andy Xie: [419782, 125744]
+	lantaol@google.com Random-Liu: [5567, 1626]
+	andy.xning@gmail.com Andy Xie: [890, 416]
 	chenjg@harmonycloud.cn fate-grand-order: [3, 3]
 	shyamjvs@google.com Shyam Jeedigunta: [1, 1]
-	coolhzb@163.com AdoHe: [2493, 3387]
+	coolhzb@163.com AdoHe: [140, 102]
 	gkalele@google.com Girish Kalele: [149, 0]
-	edwardam@interlix.com Edward Muller: [190, 94424]
-devel-doc 9680 2214
+	edwardam@interlix.com Edward Muller: [9, 13]
+devel-doc 559 75
 	jmilan@redhat.com Julius Milan: [1, 0]
 	zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang: [1, 1]
 	dawnchen@google.com Dawn Chen: [203, 0]
-	lantaol@google.com Random-Liu: [8501, 58]
-	andy.xning@gmail.com Andy Xie: [681, 1542]
+	lantaol@google.com Random-Liu: [282, 58]
+	andy.xning@gmail.com Andy Xie: [35, 10]
 	aps.sids@gmail.com Amanpreet Singh: [6, 4]
 	thecantero@users.noreply.github.com thecantero: [1, 1]
-	coolhzb@163.com AdoHe: [202, 507]
 	johannes.scheuermann@inovex.de Johannes Scheuermann: [1, 1]
 	gkalele@google.com Girish Kalele: [29, 0]
-	edwardam@interlix.com Edward Muller: [54, 100]
-code 3062 2570
-	lantaol@google.com Random-Liu: [3062, 0]
-	edwardam@interlix.com Edward Muller: [0, 2570]
-build 435 120
+code 66 0
+	lantaol@google.com Random-Liu: [66, 0]
+build 241 52
 	euan.kemp@coreos.com Euan Kemp: [11, 2]
-	lantaol@google.com Random-Liu: [285, 41]
-	andy.xning@gmail.com Andy Xie: [97, 66]
-	coolhzb@163.com AdoHe: [0, 11]
+	lantaol@google.com Random-Liu: [175, 41]
+	andy.xning@gmail.com Andy Xie: [13, 9]
 	gkalele@google.com Girish Kalele: [42, 0]
-documentation 4003 2901
-	lantaol@google.com Random-Liu: [3999, 0]
-	andy.xning@gmail.com Andy Xie: [4, 2880]
-	coolhzb@163.com AdoHe: [0, 21]
-unknown 1017958 239094
-devel-doc 9680 2214
-code 3062 2570
-build 435 120
-documentation 4003 2901
+unknown 6804 2166
+devel-doc 559 75
+code 66 0
+build 241 52

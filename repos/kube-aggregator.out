@@ -1,13 +1,11 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-aggregator.csv
 
 unknown@hacker.net Unknown hacker
 deads@redhat.com deads2k
-	unknown [344459, 817]
-	devel-doc [8077, 5]
-	code [3666, 42]
-	build [256, 0]
-	documentation [4157, 0]
+	unknown [13380, 817]
+	devel-doc [341, 5]
+	code [545, 42]
 madaxa@cn.ibm.com Klaus Ma
 	unknown [46, 0]
 stefan.schimanski@gmail.com Dr. Stefan Schimanski
@@ -58,8 +56,8 @@ sjenning@redhat.com Seth Jennings
 	unknown [4, 109]
 eric.chiang.m@gmail.com Eric Chiang
 	unknown [0, 2]
-unknown 345024 2212
-	deads@redhat.com deads2k: [344459, 817]
+unknown 13945 2212
+	deads@redhat.com deads2k: [13380, 817]
 	madaxa@cn.ibm.com Klaus Ma: [46, 0]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [289, 78]
 	mehdy@google.com mbohlool: [5, 5]
@@ -81,21 +79,15 @@ unknown 345024 2212
 	chiachenk@google.com Janet Kuo: [4, 4]
 	sjenning@redhat.com Seth Jennings: [4, 109]
 	eric.chiang.m@gmail.com Eric Chiang: [0, 2]
-devel-doc 8951 12
-	deads@redhat.com deads2k: [8077, 5]
+devel-doc 1215 12
+	deads@redhat.com deads2k: [341, 5]
 	xuchao@google.com Chao Xu: [2, 7]
 	andy.goldstein@gmail.com Andy Goldstein: [2, 0]
 	mikedanese@google.com Mike Danese: [870, 0]
-code 3667 53
-	deads@redhat.com deads2k: [3666, 42]
+code 546 53
+	deads@redhat.com deads2k: [545, 42]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [0, 10]
 	dcbw@redhat.com Dan Williams: [1, 1]
-build 256 0
-	deads@redhat.com deads2k: [256, 0]
-documentation 4157 0
-	deads@redhat.com deads2k: [4157, 0]
-unknown 345024 2212
-devel-doc 8951 12
-code 3667 53
-build 256 0
-documentation 4157 0
+unknown 13945 2212
+devel-doc 1215 12
+code 546 53

@@ -1,4 +1,4 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/gengo.csv
 
 unknown@hacker.net Unknown hacker
@@ -22,7 +22,7 @@ pwittroc@google.com Phillip Wittrock
 chenjg@harmonycloud.cn fate-grand-order
 	unknown [2, 2]
 deads@redhat.com deads2k
-	unknown [106, 19]
+	unknown [103, 19]
 wojtekt@google.com Wojciech Tyczynski
 	unknown [857, 419]
 agoldste@redhat.com Andy Goldstein
@@ -59,7 +59,7 @@ abshah@google.com Abhi Shah
 eparis@redhat.com Eric Paris
 laurie.malau@gmail.com laushinka
 bburns@google.com Brendan Burns
-unknown 12438 1658
+unknown 12435 1658
 	ccoleman@redhat.com Clayton Coleman: [2932, 105]
 	jliggitt@redhat.com Jordan Liggitt: [49, 29]
 	thockin@google.com Tim Hockin: [3093, 814]
@@ -67,7 +67,7 @@ unknown 12438 1658
 	dbsmith@google.com Daniel Smith: [5019, 172]
 	pwittroc@google.com Phillip Wittrock: [1, 1]
 	chenjg@harmonycloud.cn fate-grand-order: [2, 2]
-	deads@redhat.com deads2k: [106, 19]
+	deads@redhat.com deads2k: [103, 19]
 	wojtekt@google.com Wojciech Tyczynski: [857, 419]
 	agoldste@redhat.com Andy Goldstein: [58, 5]
 	sttts@redhat.com Dr. Stefan Schimanski: [42, 32]
@@ -90,7 +90,7 @@ build 16 0
 	thockin@google.com Tim Hockin: [16, 0]
 documentation 16 0
 	dbsmith@google.com Daniel Smith: [16, 0]
-unknown 12438 1658
+unknown 12435 1658
 devel-doc 255 2
 code 60 60
 build 16 0

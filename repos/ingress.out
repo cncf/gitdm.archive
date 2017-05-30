@@ -1,15 +1,15 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/ingress.csv
 
 unknown@hacker.net Unknown hacker
 aledbf@gmail.com Manuel Alejandro de Brito Fontes
-	devel-doc [22816, 18414]
-	code [3108, 787]
+	devel-doc [4565, 6734]
+	code [314, 664]
 	package [0, 0]
-	unknown [1355801, 1227803]
+	unknown [104697, 412642]
 	image [0, 0]
-	documentation [1188, 3453]
-	build [396, 555]
+	documentation [1026, 2769]
+	build [235, 491]
 zouyee1989@gmail.com zouyee
 	unknown [116, 1]
 	devel-doc [82, 23]
@@ -174,12 +174,12 @@ chenjg@harmonycloud.cn fate-grand-order
 at28997146@163.com Tang Le
 	unknown [42, 33]
 beeps@google.com Prashanth B
-	devel-doc [17278, 5575]
+	devel-doc [16131, 5503]
 	code [3686, 2570]
 	package [0, 0]
-	unknown [1184227, 194265]
+	unknown [1091855, 167796]
 	documentation [6857, 454]
-	build [753, 92]
+	build [661, 79]
 kraig.amador@ticketmaster.com Kraig Amador
 	unknown [9, 0]
 andrew.stuart2@gmail.com Andrew Stuart
@@ -254,8 +254,8 @@ github@cutterslade.ca Wesley Hartford
 	unknown [1, 1]
 joonathan@gmail.com Joonathan Mägi
 	devel-doc [1, 1]
-devel-doc 42963 24326
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [22816, 18414]
+devel-doc 23565 12574
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [4565, 6734]
 	zouyee1989@gmail.com zouyee: [82, 23]
 	cai.yixiang@zte.com.cn caiyixiang: [244, 6]
 	olvesh@gmail.com Olve S. Hansen: [1, 1]
@@ -281,7 +281,7 @@ devel-doc 42963 24326
 	craig@malachiarts.com craigmonson: [1, 1]
 	li.xialong@zte.com.cn Peter Lee: [1, 1]
 	jo@umask.net Jo Geraerts: [1, 1]
-	beeps@google.com Prashanth B: [17278, 5575]
+	beeps@google.com Prashanth B: [16131, 5503]
 	arnd.hannemann@credativ.de Arnd Hannemann: [1, 1]
 	justin.ryan@nytimes.com Justin Ryan: [1, 1]
 	lucas@weave.works Lucas Käldström: [53, 19]
@@ -293,8 +293,8 @@ devel-doc 42963 24326
 	luke@mallon.io Luke Mallon: [6, 5]
 	simon@swine.de Christian Simon: [70, 7]
 	joonathan@gmail.com Joonathan Mägi: [1, 1]
-code 6850 3384
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [3108, 787]
+code 4056 3261
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [314, 664]
 	dcech@grafana.com Dan Cech: [3, 3]
 	mkumatag@in.ibm.com Manjunath A Kumatagi: [51, 22]
 	gianrubio@gmail.com Giancarlo Rubio: [1, 1]
@@ -303,8 +303,8 @@ code 6850 3384
 package 0 0
 	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [0, 0]
 	beeps@google.com Prashanth B: [0, 0]
-unknown 2549754 1424552
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [1355801, 1227803]
+unknown 1206278 582922
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [104697, 412642]
 	zouyee1989@gmail.com zouyee: [116, 1]
 	cai.yixiang@zte.com.cn caiyixiang: [213, 21]
 	dcech@grafana.com Dan Cech: [2, 2]
@@ -351,7 +351,7 @@ unknown 2549754 1424552
 	pszczesniak@google.com Piotr Szczesniak: [2, 0]
 	chenjg@harmonycloud.cn fate-grand-order: [3, 3]
 	at28997146@163.com Tang Le: [42, 33]
-	beeps@google.com Prashanth B: [1184227, 194265]
+	beeps@google.com Prashanth B: [1091855, 167796]
 	kraig.amador@ticketmaster.com Kraig Amador: [9, 0]
 	andrew.stuart2@gmail.com Andrew Stuart: [12, 2]
 	joshrosso@gmail.com joshrosso: [1, 1]
@@ -375,8 +375,8 @@ unknown 2549754 1424552
 image 0 0
 	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [0, 0]
 	gianrubio@gmail.com Giancarlo Rubio: [0, 0]
-documentation 8227 4031
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [1188, 3453]
+documentation 8065 3347
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [1026, 2769]
 	cai.yixiang@zte.com.cn caiyixiang: [1, 1]
 	cheungpat@oursky.com Kwok-kuen Cheung: [2, 0]
 	david.pratt@gmail.com David Pratt: [3, 3]
@@ -403,8 +403,8 @@ documentation 8227 4031
 	shane@node.mu Vy-Shane Xie: [1, 0]
 	alex@bengler.no Alexander Staubo: [1, 0]
 	simon@swine.de Christian Simon: [6, 4]
-build 1364 678
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [396, 555]
+build 1111 601
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [235, 491]
 	nicksardo@users.noreply.github.com Nick Sardo: [1, 1]
 	mkumatag@in.ibm.com Manjunath A Kumatagi: [143, 10]
 	jgrafton@google.com Jeff Grafton: [7, 7]
@@ -413,12 +413,12 @@ build 1364 678
 	cole.mickens@gmail.com Cole Mickens: [30, 2]
 	tony.li@nytimes.com Tony Li: [4, 4]
 	stclair@google.com Tim St. Clair: [1, 1]
-	beeps@google.com Prashanth B: [753, 92]
+	beeps@google.com Prashanth B: [661, 79]
 	robertspencersmith@gmail.com Spencer Smith: [1, 1]
-devel-doc 42963 24326
-code 6850 3384
+devel-doc 23565 12574
+code 4056 3261
 package 0 0
-unknown 2549754 1424552
+unknown 1206278 582922
 image 0 0
-documentation 8227 4031
-build 1364 678
+documentation 8065 3347
+build 1111 601

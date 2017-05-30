@@ -1,10 +1,10 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-mesos-framework.csv
 
 unknown@hacker.net Unknown hacker
 k82cn@icloud.com Klaus Ma
-	unknown [150964, 5937]
-	devel-doc [801, 331]
+	unknown [1181, 5889]
+	devel-doc [6, 331]
 	code [60, 14371]
 	image [2, 270]
 	build [0, 4547]
@@ -12,12 +12,12 @@ joerg@mesosphere.io Joerg Schad
 	unknown [523, 57]
 	devel-doc [1, 0]
 deads@redhat.com deads2k
-	devel-doc [28346, 4]
-	code [54437, 20]
-	unknown [2273284, 1573]
+	devel-doc [6240, 4]
+	code [49219, 20]
+	unknown [37053, 1573]
 	image [1084, 2]
-	documentation [37520, 0]
-	build [7402, 0]
+	documentation [32130, 0]
+	build [7000, 0]
 davidopp@google.com David Oppenheimer
 	unknown [8, 5]
 ccoleman@redhat.com Clayton Coleman
@@ -215,26 +215,26 @@ pszczesniak@google.com Piotr Szczesniak
 	unknown [0, 1]
 salvatore-dario.minonne@amadeus.com Salvatore Dario Minonne
 	unknown [1, 1]
-devel-doc 29193 345
-	k82cn@icloud.com Klaus Ma: [801, 331]
+devel-doc 6292 345
+	k82cn@icloud.com Klaus Ma: [6, 331]
 	joerg@mesosphere.io Joerg Schad: [1, 0]
-	deads@redhat.com deads2k: [28346, 4]
+	deads@redhat.com deads2k: [6240, 4]
 	joe2farrell@gmail.com joe2far: [1, 1]
 	justinclayton@users.noreply.github.com Justin Clayton: [0, 8]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [44, 1]
-code 54970 14425
+code 49752 14425
 	k82cn@icloud.com Klaus Ma: [60, 14371]
-	deads@redhat.com deads2k: [54437, 20]
+	deads@redhat.com deads2k: [49219, 20]
 	thockin@google.com Tim Hockin: [1, 1]
 	djmm@google.com David McMahon: [10, 10]
 	james@mesosphere.io James DeFelice: [46, 0]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [28, 20]
 	spiffxp@gmail.com Aaron Crickenberger: [2, 2]
 	karl@mesosphere.io Karl Isenberg: [386, 1]
-unknown 2464804 21984
-	k82cn@icloud.com Klaus Ma: [150964, 5937]
+unknown 78790 21936
+	k82cn@icloud.com Klaus Ma: [1181, 5889]
 	joerg@mesosphere.io Joerg Schad: [523, 57]
-	deads@redhat.com deads2k: [2273284, 1573]
+	deads@redhat.com deads2k: [37053, 1573]
 	davidopp@google.com David Oppenheimer: [8, 5]
 	ccoleman@redhat.com Clayton Coleman: [97, 87]
 	apelisse@gmail.com Antoine Pelisse: [2, 3]
@@ -328,14 +328,14 @@ image 1088 272
 	k82cn@icloud.com Klaus Ma: [2, 270]
 	deads@redhat.com deads2k: [1084, 2]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [2, 0]
-documentation 37520 0
-	deads@redhat.com deads2k: [37520, 0]
-build 7402 4547
+documentation 32130 0
+	deads@redhat.com deads2k: [32130, 0]
+build 7000 4547
 	k82cn@icloud.com Klaus Ma: [0, 4547]
-	deads@redhat.com deads2k: [7402, 0]
-devel-doc 29193 345
-code 54970 14425
-unknown 2464804 21984
+	deads@redhat.com deads2k: [7000, 0]
+devel-doc 6292 345
+code 49752 14425
+unknown 78790 21936
 image 1088 272
-documentation 37520 0
-build 7402 4547
+documentation 32130 0
+build 7000 4547

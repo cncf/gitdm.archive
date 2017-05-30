@@ -1,4 +1,4 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/apimachinery.csv
 
 unknown@hacker.net Unknown hacker
@@ -16,11 +16,9 @@ jamie.hannaford@rackspace.com Jamie Hannaford
 ccoleman@redhat.com Clayton Coleman
 	unknown [3610, 715]
 deads@redhat.com deads2k
-	unknown [193081, 611]
-	devel-doc [3831, 2]
-	code [589, 9]
-	build [185, 0]
-	documentation [1486, 0]
+	unknown [41690, 579]
+	devel-doc [236, 0]
+	code [140, 9]
 mikedanese@google.com Mike Danese
 	unknown [51, 126]
 	devel-doc [1770, 4]
@@ -105,13 +103,13 @@ grod@google.com Garrett Rodrigues
 	unknown [0, 1]
 pires@apprenda.com Paulo Pires
 	unknown [4, 4]
-unknown 214221 4474
+unknown 62830 4442
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [10860, 378]
 	sid@rancher.com wlan0: [31, 0]
 	mehdy@google.com mbohlool: [21, 4]
 	jamie.hannaford@rackspace.com Jamie Hannaford: [34, 14]
 	ccoleman@redhat.com Clayton Coleman: [3610, 715]
-	deads@redhat.com deads2k: [193081, 611]
+	deads@redhat.com deads2k: [41690, 579]
 	mikedanese@google.com Mike Danese: [51, 126]
 	xuchao@google.com Chao Xu: [399, 158]
 	cezarsa@gmail.com Cezar Sa Espinola: [31, 2]
@@ -152,22 +150,16 @@ unknown 214221 4474
 	nikhiljindal@google.com nikhiljindal: [1, 1]
 	grod@google.com Garrett Rodrigues: [0, 1]
 	pires@apprenda.com Paulo Pires: [4, 4]
-devel-doc 5661 60
+devel-doc 2066 58
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [55, 54]
 	sid@rancher.com wlan0: [1, 0]
 	jamie.hannaford@rackspace.com Jamie Hannaford: [2, 0]
-	deads@redhat.com deads2k: [3831, 2]
+	deads@redhat.com deads2k: [236, 0]
 	mikedanese@google.com Mike Danese: [1770, 4]
 	andy.goldstein@gmail.com Andy Goldstein: [1, 0]
 	liamwhite@uk.ibm.com Liam White: [1, 0]
-code 589 9
-	deads@redhat.com deads2k: [589, 9]
-build 185 0
-	deads@redhat.com deads2k: [185, 0]
-documentation 1486 0
-	deads@redhat.com deads2k: [1486, 0]
-unknown 214221 4474
-devel-doc 5661 60
-code 589 9
-build 185 0
-documentation 1486 0
+code 140 9
+	deads@redhat.com deads2k: [140, 9]
+unknown 62830 4442
+devel-doc 2066 58
+code 140 9

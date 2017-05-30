@@ -1,10 +1,10 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/git-sync.csv
 
 unknown@hacker.net Unknown hacker
 thockin@google.com Tim Hockin
-	unknown [2619, 258]
-	devel-doc [1000, 30]
+	unknown [1181, 258]
+	devel-doc [319, 30]
 	code [557, 67]
 	build [275, 81]
 pieter@ptlc.nl Pieter Lange
@@ -31,8 +31,8 @@ service@futurequest.net TerraTech
 	unknown [1, 1]
 	build [2, 2]
 mikedanese@gmail.com Mike Danese
-unknown 2681 291
-	thockin@google.com Tim Hockin: [2619, 258]
+unknown 1243 291
+	thockin@google.com Tim Hockin: [1181, 258]
 	pieter@ptlc.nl Pieter Lange: [29, 7]
 	development@stp-ip.net Michael Grosser: [10, 9]
 	vikramtheone1@gmail.com Vikram Tiwari: [1, 1]
@@ -41,8 +41,8 @@ unknown 2681 291
 	chenjg@harmonycloud.cn fate-grand-order: [1, 1]
 	aps.sids@gmail.com Aman: [5, 11]
 	service@futurequest.net TerraTech: [1, 1]
-devel-doc 1003 33
-	thockin@google.com Tim Hockin: [1000, 30]
+devel-doc 322 33
+	thockin@google.com Tim Hockin: [319, 30]
 	development@stp-ip.net Michael Grosser: [1, 1]
 	vikramtheone1@gmail.com Vikram Tiwari: [2, 2]
 code 561 96
@@ -54,7 +54,7 @@ build 281 91
 	development@stp-ip.net Michael Grosser: [4, 4]
 	yerken.tussupbekov@zalando.de ideahitme: [0, 4]
 	service@futurequest.net TerraTech: [2, 2]
-unknown 2681 291
-devel-doc 1003 33
+unknown 1243 291
+devel-doc 322 33
 code 561 96
 build 281 91

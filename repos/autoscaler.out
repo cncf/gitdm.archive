@@ -1,4 +1,4 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/autoscaler.csv
 
 unknown@hacker.net Unknown hacker
@@ -80,15 +80,15 @@ filipg@google.com Filip Grzadkowski
 	code [70, 0]
 	build [13, 75]
 madhusudancs@google.com Madhusudan.C.S
-	unknown [67, 22]
-	devel-doc [2, 1]
+	unknown [2, 2]
+	devel-doc [0, 0]
 zml@google.com Zach Loafman
 	unknown [2, 2]
 jsz@google.com Jerzy Szczepkowski
 	unknown [35, 12]
 eparis@redhat.com Eric Paris
 	unknown [23, 0]
-unknown 624019 37440
+unknown 623954 37420
 	maciekpytel@google.com MaciekPytel: [1833, 344]
 	walt@seamlessdocs.com Matthew Walter: [5, 5]
 	mwielgus@google.com Marcin Wielgus: [503421, 10612]
@@ -110,11 +110,11 @@ unknown 624019 37440
 	pszczesniak@google.com Piotr Szczesniak: [67686, 5418]
 	ramanathana@google.com foxish: [5, 0]
 	filipg@google.com Filip Grzadkowski: [42807, 20060]
-	madhusudancs@google.com Madhusudan.C.S: [67, 22]
+	madhusudancs@google.com Madhusudan.C.S: [2, 2]
 	zml@google.com Zach Loafman: [2, 2]
 	jsz@google.com Jerzy Szczepkowski: [35, 12]
 	eparis@redhat.com Eric Paris: [23, 0]
-devel-doc 9785 232
+devel-doc 9783 231
 	maciekpytel@google.com MaciekPytel: [10, 8]
 	mwielgus@google.com Marcin Wielgus: [8301, 124]
 	ykuoka@gmail.com Yusuke Kuoka: [83, 1]
@@ -128,7 +128,7 @@ devel-doc 9785 232
 	arnaldo@luizalabs.com Arnaldo de Moraes Pereira: [1, 1]
 	pszczesniak@google.com Piotr Szczesniak: [621, 26]
 	filipg@google.com Filip Grzadkowski: [578, 58]
-	madhusudancs@google.com Madhusudan.C.S: [2, 1]
+	madhusudancs@google.com Madhusudan.C.S: [0, 0]
 code 1138 2
 	maciekpytel@google.com MaciekPytel: [572, 0]
 	mwielgus@google.com Marcin Wielgus: [454, 0]
@@ -147,8 +147,8 @@ documentation 4568 0
 	maciekpytel@google.com MaciekPytel: [46, 0]
 	mwielgus@google.com Marcin Wielgus: [4522, 0]
 	pszczesniak@google.com Piotr Szczesniak: [0, 0]
-unknown 624019 37440
-devel-doc 9785 232
+unknown 623954 37420
+devel-doc 9783 231
 code 1138 2
 build 264 83
 documentation 4568 0

@@ -1,13 +1,11 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-state-metrics.csv
 
 unknown@hacker.net Unknown hacker
 fbranczyk@gmail.com Frederic Branczyk
-	unknown [379730, 178067]
-	devel-doc [3231, 4530]
-	code [2635, 38]
-	build [117, 86]
-	documentation [19, 635]
+	unknown [2835, 1688]
+	devel-doc [137, 139]
+	build [4, 3]
 zouyee1989@gmail.com zouyee
 	unknown [245, 7]
 	devel-doc [8, 2]
@@ -15,8 +13,8 @@ andy.xning@gmail.com Andy Xie
 	unknown [20, 12]
 	build [5, 3]
 fab.reinartz@gmail.com Fabian Reinartz
-	unknown [2274, 1228]
-	devel-doc [19, 62]
+	unknown [896, 435]
+	devel-doc [18, 9]
 	build [26, 0]
 arno.uhlig@sap.com Arno Uhlig
 	unknown [177, 7]
@@ -38,8 +36,8 @@ jkeife@alianza.com josh keife
 russell.r.cohen@gmail.com Russell Cohen
 	devel-doc [1, 1]
 davidoff@qedmf.net Andrew Davidoff
-	unknown [85169, 75841]
-	devel-doc [61, 60]
+	unknown [778, 239]
+	devel-doc [1, 0]
 chenjg@harmonycloud.cn fate-grand-order
 	unknown [1, 1]
 cs006061@gmail.com koudaiii
@@ -68,24 +66,21 @@ greg.dallavalle@ave81.com Greg Dallavalle
 	unknown [49, 1]
 	devel-doc [1, 0]
 sam@box.com Sam Ghods
-	unknown [462645, 0]
-	devel-doc [8744, 18]
-	code [426, 0]
-	build [168, 0]
-	documentation [4120, 0]
+	unknown [1547, 0]
+	devel-doc [91, 18]
 vishh@users.noreply.github.com Vish Kannan
 bgrant0607@users.noreply.github.com Brian Grant
 	devel-doc [203, 0]
-unknown 931315 255191
-	fbranczyk@gmail.com Frederic Branczyk: [379730, 178067]
+unknown 7553 2417
+	fbranczyk@gmail.com Frederic Branczyk: [2835, 1688]
 	zouyee1989@gmail.com zouyee: [245, 7]
 	andy.xning@gmail.com Andy Xie: [20, 12]
-	fab.reinartz@gmail.com Fabian Reinartz: [2274, 1228]
+	fab.reinartz@gmail.com Fabian Reinartz: [896, 435]
 	arno.uhlig@sap.com Arno Uhlig: [177, 7]
 	nv@kuende.com Nicolae Vartolomei: [13, 0]
 	dominik.schulz@gauner.org Dominik Schulz: [528, 12]
 	jkeife@alianza.com josh keife: [1, 1]
-	davidoff@qedmf.net Andrew Davidoff: [85169, 75841]
+	davidoff@qedmf.net Andrew Davidoff: [778, 239]
 	chenjg@harmonycloud.cn fate-grand-order: [1, 1]
 	cs006061@gmail.com koudaiii: [10, 2]
 	frodenas@gmail.com Ferran Rodenas: [2, 1]
@@ -96,11 +91,11 @@ unknown 931315 255191
 	rul@kalgan.cc Raúl Benencia: [16, 0]
 	mail@wombatsoftware.de Daniel Sachse: [43, 1]
 	greg.dallavalle@ave81.com Greg Dallavalle: [49, 1]
-	sam@box.com Sam Ghods: [462645, 0]
-devel-doc 12359 4705
-	fbranczyk@gmail.com Frederic Branczyk: [3231, 4530]
+	sam@box.com Sam Ghods: [1547, 0]
+devel-doc 551 201
+	fbranczyk@gmail.com Frederic Branczyk: [137, 139]
 	zouyee1989@gmail.com zouyee: [8, 2]
-	fab.reinartz@gmail.com Fabian Reinartz: [19, 62]
+	fab.reinartz@gmail.com Fabian Reinartz: [18, 9]
 	arno.uhlig@sap.com Arno Uhlig: [3, 0]
 	nv@kuende.com Nicolae Vartolomei: [1, 0]
 	haissam.kaj@gmail.com Haissam Kaj: [7, 7]
@@ -108,7 +103,7 @@ devel-doc 12359 4705
 	sophaskins@github.com Sophie Haskins: [3, 5]
 	dominik.schulz@gauner.org Dominik Schulz: [23, 0]
 	russell.r.cohen@gmail.com Russell Cohen: [1, 1]
-	davidoff@qedmf.net Andrew Davidoff: [61, 60]
+	davidoff@qedmf.net Andrew Davidoff: [1, 0]
 	slaws@users.noreply.github.com slaws: [6, 0]
 	luke@mallon.io Luke Mallon: [5, 5]
 	ahakanbaba@users.noreply.github.com ahakanbaba: [2, 0]
@@ -116,21 +111,12 @@ devel-doc 12359 4705
 	rul@kalgan.cc Raúl Benencia: [1, 0]
 	mail@wombatsoftware.de Daniel Sachse: [26, 6]
 	greg.dallavalle@ave81.com Greg Dallavalle: [1, 0]
-	sam@box.com Sam Ghods: [8744, 18]
+	sam@box.com Sam Ghods: [91, 18]
 	bgrant0607@users.noreply.github.com Brian Grant: [203, 0]
-code 3061 38
-	fbranczyk@gmail.com Frederic Branczyk: [2635, 38]
-	sam@box.com Sam Ghods: [426, 0]
-build 316 89
-	fbranczyk@gmail.com Frederic Branczyk: [117, 86]
+build 35 6
+	fbranczyk@gmail.com Frederic Branczyk: [4, 3]
 	andy.xning@gmail.com Andy Xie: [5, 3]
 	fab.reinartz@gmail.com Fabian Reinartz: [26, 0]
-	sam@box.com Sam Ghods: [168, 0]
-documentation 4139 635
-	fbranczyk@gmail.com Frederic Branczyk: [19, 635]
-	sam@box.com Sam Ghods: [4120, 0]
-unknown 931315 255191
-devel-doc 12359 4705
-code 3061 38
-build 316 89
-documentation 4139 635
+unknown 7553 2417
+devel-doc 551 201
+build 35 6

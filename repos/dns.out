@@ -1,13 +1,12 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/dns.csv
 
 unknown@hacker.net Unknown hacker
 bowei.du@gmail.com Bowei Du
-	unknown [760736, 3456]
-	devel-doc [11021, 394]
-	code [3894, 248]
-	build [922, 69]
-	documentation [3634, 67]
+	unknown [7459, 1065]
+	devel-doc [392, 264]
+	code [697, 248]
+	build [607, 56]
 jessek@allenai.org Jesse Kinkead
 	build [4, 4]
 abrand@apprenda.com Alexander Brand
@@ -92,8 +91,8 @@ abshah@google.com Abhishek Shah
 	unknown [1694, 278]
 chen.tao3@zte.com.cn chentao1596
 	unknown [7, 7]
-unknown 764949 4338
-	bowei.du@gmail.com Bowei Du: [760736, 3456]
+unknown 11672 1947
+	bowei.du@gmail.com Bowei Du: [7459, 1065]
 	abrand@apprenda.com Alexander Brand: [2, 1]
 	zihongz@google.com Zihong Zheng: [63, 54]
 	mrick@google.com Matt Rickard: [1, 1]
@@ -130,25 +129,22 @@ unknown 764949 4338
 	beeps@google.com Prashanth Balasubramanian: [253, 27]
 	abshah@google.com Abhishek Shah: [1694, 278]
 	chen.tao3@zte.com.cn chentao1596: [7, 7]
-devel-doc 11196 431
-	bowei.du@gmail.com Bowei Du: [11021, 394]
+devel-doc 567 301
+	bowei.du@gmail.com Bowei Du: [392, 264]
 	xuchao@google.com Chao Xu: [13, 13]
 	mikedanese@google.com Mike Danese: [158, 20]
 	ccoleman@redhat.com Clayton Coleman: [4, 4]
-code 3895 249
-	bowei.du@gmail.com Bowei Du: [3894, 248]
+code 698 249
+	bowei.du@gmail.com Bowei Du: [697, 248]
 	cmluciano@us.ibm.com Christopher M. Luciano: [1, 1]
-build 944 76
-	bowei.du@gmail.com Bowei Du: [922, 69]
+build 629 63
+	bowei.du@gmail.com Bowei Du: [607, 56]
 	jessek@allenai.org Jesse Kinkead: [4, 4]
 	zihongz@google.com Zihong Zheng: [2, 0]
 	graut@us.ibm.com gajju26: [7, 3]
 	rdmello@us.ibm.com Ryan D'Mello: [4, 0]
 	ghe@debian.org Ghe Rivero: [5, 0]
-documentation 3634 67
-	bowei.du@gmail.com Bowei Du: [3634, 67]
-unknown 764949 4338
-devel-doc 11196 431
-code 3895 249
-build 944 76
-documentation 3634 67
+unknown 11672 1947
+devel-doc 567 301
+code 698 249
+build 629 63

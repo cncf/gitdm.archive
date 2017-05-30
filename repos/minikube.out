@@ -1,13 +1,12 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/minikube.csv
 
 unknown@hacker.net Unknown hacker
 m@rickard.email Matt Rickard
-	unknown [1243582, 717291]
-	devel-doc [32045, 18935]
-	code [977, 543]
-	build [308, 163]
-	documentation [281, 572]
+	unknown [27117, 22362]
+	devel-doc [805, 1087]
+	code [511, 434]
+	build [184, 122]
 budhram.gurung01@gmail.com Budh Ram Gurung
 	unknown [11, 11]
 gianrubio@gmail.com Giancarlo Rubio
@@ -16,12 +15,11 @@ gianrubio@gmail.com Giancarlo Rubio
 sukantgujar@yahoo.com SukantGujar
 	devel-doc [1, 1]
 aprindle@google.com Aaron Prindle
-	devel-doc [3046, 283]
-	code [597, 114]
-	unknown [41404, 9750]
+	unknown [19866, 9011]
+	devel-doc [348, 283]
+	code [596, 114]
+	build [263, 87]
 	image [0, 0]
-	documentation [29, 0]
-	build [299, 87]
 dale.hamel@shopify.com Dale Hamel
 	unknown [137, 28]
 	build [2, 0]
@@ -32,11 +30,11 @@ tgraf@suug.ch Thomas Graf
 	devel-doc [2, 2]
 	build [26, 24]
 dlorenc@google.com dlorenc
-	unknown [1128678, 1145156]
-	devel-doc [22577, 19328]
-	code [8133, 11428]
-	build [761, 736]
-	documentation [6339, 8920]
+	unknown [17338, 11588]
+	devel-doc [574, 98]
+	code [622, 172]
+	build [265, 105]
+	documentation [60, 0]
 avlasov@sugarcrm.com Alexander Vlasov
 	devel-doc [1, 1]
 zhang.wanmin@zte.com.cn William Chang
@@ -51,7 +49,7 @@ andrew@sig.gy Andrew Seigner
 everett.toews@rackspace.com Everett Toews
 	unknown [1, 1]
 mgrass@salesforce.com Mike Grass
-	unknown [625, 295]
+	unknown [122, 72]
 giovanni.tirloni@gmail.com Giovanni Tirloni
 	build [3, 0]
 kokhang@gmail.com Steve Leon
@@ -86,7 +84,7 @@ eden.li@gmail.com Eden Li
 dims@linux.vnet.ibm.com Davanum Srinivas
 	unknown [6, 2]
 dongsu@endocode.com Dongsu Park
-	unknown [93, 38]
+	unknown [92, 34]
 	build [1, 1]
 trishnaguha17@gmail.com trishnaguha
 	unknown [6, 0]
@@ -126,10 +124,10 @@ sur@coreos.com Sergiusz Urbaniak
 chenjg@harmonycloud.cn fate-grand-order
 	unknown [1, 1]
 jimmidyson@gmail.com Jimmi Dyson
-	unknown [30526, 14176]
-	devel-doc [1579, 24]
-	code [15, 3]
-	build [81, 30]
+	unknown [6448, 5337]
+	devel-doc [51, 22]
+	code [3, 3]
+	build [50, 30]
 paulo@wattpad.com Paulo Bittencourt
 	unknown [1, 1]
 rfranken@google.com Rob Franken
@@ -160,11 +158,11 @@ justinleegarrison@gmail.com Justin Garrison
 cedric@cedric-ziel.com Cedric Ziel
 	build [1, 1]
 vishah@blackrock.com vishah
-	unknown [433, 320]
+	unknown [218, 214]
 gjcarneiro@gmail.com Gustavo Carneiro
 	build [5, 2]
 rodcloutier@gmail.com Rod Cloutier
-	unknown [356, 347]
+	unknown [242, 347]
 	code [42, 0]
 alexander.kanevskiy@intel.com Alexander Kanevskiy
 	unknown [4, 4]
@@ -188,7 +186,7 @@ marun@redhat.com Maru Newby
 balaajanthan@gmail.com Ajanthan
 	unknown [23, 5]
 brandon@ifup.org Brandon Philips
-	unknown [1077, 21]
+	unknown [121, 21]
 	devel-doc [10, 2]
 jonathanboulle@gmail.com Jonathan Boulle
 	devel-doc [4, 4]
@@ -231,20 +229,18 @@ rdsubhas@gmail.com Subhas Dandapani
 shailesh.pant@gmail.com Shailesh Pant
 	build [1, 1]
 dan@redspread.com Dan Gillespie
-	unknown [1264707, 119]
-	devel-doc [20639, 1]
-	code [8891, 1]
-	build [656, 0]
-	documentation [8493, 0]
+	unknown [5623, 119]
+	devel-doc [1, 1]
+	code [41, 1]
 eparis@redhat.com Eric Paris
 vishh@users.noreply.github.com Vish Kannan
 	devel-doc [206, 2]
-devel-doc 81169 39278
-	m@rickard.email Matt Rickard: [32045, 18935]
+devel-doc 3062 2198
+	m@rickard.email Matt Rickard: [805, 1087]
 	sukantgujar@yahoo.com SukantGujar: [1, 1]
-	aprindle@google.com Aaron Prindle: [3046, 283]
+	aprindle@google.com Aaron Prindle: [348, 283]
 	tgraf@suug.ch Thomas Graf: [2, 2]
-	dlorenc@google.com dlorenc: [22577, 19328]
+	dlorenc@google.com dlorenc: [574, 98]
 	avlasov@sugarcrm.com Alexander Vlasov: [1, 1]
 	foobarto@gmail.com Bartosz Ptaszynski: [1, 1]
 	warmchang@outlook.com Wiiliam Chang: [2, 2]
@@ -266,7 +262,7 @@ devel-doc 81169 39278
 	ensonic@google.com Stefan Sauer: [9, 0]
 	mfisher@deis.com Matthew Fisher: [9, 0]
 	sur@coreos.com Sergiusz Urbaniak: [396, 277]
-	jimmidyson@gmail.com Jimmi Dyson: [1579, 24]
+	jimmidyson@gmail.com Jimmi Dyson: [51, 22]
 	waprin@google.com Bill Prin: [2, 0]
 	mpnuttall@gmail.com Mark Nuttall: [7, 5]
 	raees.bhatti@gmail.com Raees Bhatti: [1, 0]
@@ -280,32 +276,32 @@ devel-doc 81169 39278
 	yumino99@gmail.com umiyosh: [7, 7]
 	luxas@users.noreply.github.com Lucas Käldström: [54, 23]
 	james.strachan@gmail.com James Strachan: [17, 3]
-	dan@redspread.com Dan Gillespie: [20639, 1]
+	dan@redspread.com Dan Gillespie: [1, 1]
 	vishh@users.noreply.github.com Vish Kannan: [206, 2]
-code 18786 12160
-	m@rickard.email Matt Rickard: [977, 543]
+code 1946 795
+	m@rickard.email Matt Rickard: [511, 434]
 	gianrubio@gmail.com Giancarlo Rubio: [1, 1]
-	aprindle@google.com Aaron Prindle: [597, 114]
-	dlorenc@google.com dlorenc: [8133, 11428]
+	aprindle@google.com Aaron Prindle: [596, 114]
+	dlorenc@google.com dlorenc: [622, 172]
 	sur@coreos.com Sergiusz Urbaniak: [36, 36]
-	jimmidyson@gmail.com Jimmi Dyson: [15, 3]
+	jimmidyson@gmail.com Jimmi Dyson: [3, 3]
 	xihuanbo_0521@zju.edu.cn Xinbo Weng: [27, 29]
 	rodcloutier@gmail.com Rod Cloutier: [42, 0]
 	luxas@users.noreply.github.com Lucas Käldström: [67, 5]
-	dan@redspread.com Dan Gillespie: [8891, 1]
-unknown 3714320 1888903
-	m@rickard.email Matt Rickard: [1243582, 717291]
+	dan@redspread.com Dan Gillespie: [41, 1]
+unknown 80026 50495
+	m@rickard.email Matt Rickard: [27117, 22362]
 	budhram.gurung01@gmail.com Budh Ram Gurung: [11, 11]
 	gianrubio@gmail.com Giancarlo Rubio: [5, 5]
-	aprindle@google.com Aaron Prindle: [41404, 9750]
+	aprindle@google.com Aaron Prindle: [19866, 9011]
 	dale.hamel@shopify.com Dale Hamel: [137, 28]
 	bryan@larsen.st Bryan Larsen: [2, 2]
 	tgraf@suug.ch Thomas Graf: [7, 5]
-	dlorenc@google.com dlorenc: [1128678, 1145156]
+	dlorenc@google.com dlorenc: [17338, 11588]
 	zhang.wanmin@zte.com.cn William Chang: [1, 1]
 	warmchang@outlook.com Wiiliam Chang: [5, 3]
 	everett.toews@rackspace.com Everett Toews: [1, 1]
-	mgrass@salesforce.com Mike Grass: [625, 295]
+	mgrass@salesforce.com Mike Grass: [122, 72]
 	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [4, 4]
 	eric.chiang.m@gmail.com Eric Chiang: [2, 2]
 	maxime.vidori@container-solutions.com Maxime Vidori: [44, 0]
@@ -314,7 +310,7 @@ unknown 3714320 1888903
 	max.lavrenov@optiopay.com Max Lavrenov: [23, 2]
 	eden.li@gmail.com Eden Li: [28, 21]
 	dims@linux.vnet.ibm.com Davanum Srinivas: [6, 2]
-	dongsu@endocode.com Dongsu Park: [93, 38]
+	dongsu@endocode.com Dongsu Park: [92, 34]
 	trishnaguha17@gmail.com trishnaguha: [6, 0]
 	andreas.kohn@gmail.com Andreas Kohn: [6, 5]
 	tomvons@gmail.com Tom von Schwerdtner: [3, 0]
@@ -323,7 +319,7 @@ unknown 3714320 1888903
 	m.etmajer@gmail.com Martin Etmajer: [1, 0]
 	sur@coreos.com Sergiusz Urbaniak: [686, 189]
 	chenjg@harmonycloud.cn fate-grand-order: [1, 1]
-	jimmidyson@gmail.com Jimmi Dyson: [30526, 14176]
+	jimmidyson@gmail.com Jimmi Dyson: [6448, 5337]
 	paulo@wattpad.com Paulo Bittencourt: [1, 1]
 	rfranken@google.com Rob Franken: [12, 12]
 	glaubitz@physik.fu-berlin.de John Paul Adrian Glaubitz: [2, 1]
@@ -335,14 +331,14 @@ unknown 3714320 1888903
 	ccl0326@163.com clchen: [3, 2]
 	david.lyle@intel.com David Lyle: [1, 1]
 	justinleegarrison@gmail.com Justin Garrison: [4, 1]
-	vishah@blackrock.com vishah: [433, 320]
-	rodcloutier@gmail.com Rod Cloutier: [356, 347]
+	vishah@blackrock.com vishah: [218, 214]
+	rodcloutier@gmail.com Rod Cloutier: [242, 347]
 	alexander.kanevskiy@intel.com Alexander Kanevskiy: [4, 4]
 	bschrijver@schubergphilis.com Boris Schrijver: [8, 3]
 	zoidbergwill@gmail.com William Martin Stewart: [24, 24]
 	bison@coreos.com Brad Ison: [4, 0]
 	balaajanthan@gmail.com Ajanthan: [23, 5]
-	brandon@ifup.org Brandon Philips: [1077, 21]
+	brandon@ifup.org Brandon Philips: [121, 21]
 	bryk@google.com bryk: [8, 8]
 	viglesias@google.com Vic Iglesias: [1, 0]
 	pgray@conductor.com Patrick Gray: [7, 0]
@@ -352,21 +348,18 @@ unknown 3714320 1888903
 	brk3@users.noreply.github.com Paul Bourke: [17, 3]
 	luxas@users.noreply.github.com Lucas Käldström: [1006, 717]
 	rdsubhas@gmail.com Subhas Dandapani: [14, 2]
-	dan@redspread.com Dan Gillespie: [1264707, 119]
+	dan@redspread.com Dan Gillespie: [5623, 119]
 image 118 0
 	aprindle@google.com Aaron Prindle: [0, 0]
 	victoria.domalik@gmail.com Victoria Domalik: [118, 0]
-documentation 15142 9492
-	m@rickard.email Matt Rickard: [281, 572]
-	aprindle@google.com Aaron Prindle: [29, 0]
-	dlorenc@google.com dlorenc: [6339, 8920]
-	dan@redspread.com Dan Gillespie: [8493, 0]
-build 3198 1129
-	m@rickard.email Matt Rickard: [308, 163]
-	aprindle@google.com Aaron Prindle: [299, 87]
+documentation 60 0
+	dlorenc@google.com dlorenc: [60, 0]
+build 1855 457
+	m@rickard.email Matt Rickard: [184, 122]
+	aprindle@google.com Aaron Prindle: [263, 87]
 	dale.hamel@shopify.com Dale Hamel: [2, 0]
 	tgraf@suug.ch Thomas Graf: [26, 24]
-	dlorenc@google.com dlorenc: [761, 736]
+	dlorenc@google.com dlorenc: [265, 105]
 	giovanni.tirloni@gmail.com Giovanni Tirloni: [3, 0]
 	kokhang@gmail.com Steve Leon: [4, 0]
 	maxime.vidori@container-solutions.com Maxime Vidori: [19, 3]
@@ -374,7 +367,7 @@ build 3198 1129
 	tomvons@gmail.com Tom von Schwerdtner: [14, 47]
 	ensonic@google.com Stefan Sauer: [1, 0]
 	sur@coreos.com Sergiusz Urbaniak: [883, 11]
-	jimmidyson@gmail.com Jimmi Dyson: [81, 30]
+	jimmidyson@gmail.com Jimmi Dyson: [50, 30]
 	cedric@cedric-ziel.com Cedric Ziel: [1, 1]
 	gjcarneiro@gmail.com Gustavo Carneiro: [5, 2]
 	iago@kinvolk.io Iago López Galeiras: [9, 0]
@@ -383,10 +376,9 @@ build 3198 1129
 	luxas@users.noreply.github.com Lucas Käldström: [76, 18]
 	mbauer@us.ibm.com Morgan Bauer: [3, 4]
 	shailesh.pant@gmail.com Shailesh Pant: [1, 1]
-	dan@redspread.com Dan Gillespie: [656, 0]
-devel-doc 81169 39278
-code 18786 12160
-unknown 3714320 1888903
+devel-doc 3062 2198
+code 1946 795
+unknown 80026 50495
 image 118 0
-documentation 15142 9492
-build 3198 1129
+documentation 60 0
+build 1855 457

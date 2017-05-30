@@ -1,4 +1,4 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/rktlet.csv
 
 unknown@hacker.net Unknown hacker
@@ -7,84 +7,46 @@ luca.bruno@coreos.com Luca Bruno
 	devel-doc [21, 9]
 	build [29, 8]
 casey.callendrello@coreos.com Casey Callendrello
-	devel-doc [31190, 16350]
-	code [6780, 5983]
-	unknown [1290305, 253122]
-	image [0, 1943]
-	documentation [3000, 65]
-	ui [6, 0]
-	build [1107, 619]
+	unknown [469, 371]
+	build [2, 1]
 sur@coreos.com Sergiusz Urbaniak
 	unknown [105, 13]
 euan.kemp@coreos.com Euan Kemp
-	devel-doc [172641, 19619]
-	code [159834, 6441]
-	package [0, 0]
-	unknown [4008532, 623934]
-	image [3431, 2]
-	documentation [53373, 509]
-	build [17094, 1312]
-	translation [140, 0]
+	unknown [4456, 1136]
+	devel-doc [62, 2]
+	code [45, 0]
+	build [86, 12]
+	documentation [16, 0]
 yifan.gu@coreos.com Yifan Gu
-	devel-doc [31109, 9566]
-	code [7916, 192]
-	package [0, 0]
-	unknown [788385, 7306]
-	image [6596, 0]
-	documentation [3405, 0]
-	ui [26, 0]
-	build [13258, 52]
+	unknown [1746, 337]
 jason@loodse.com Jason Murray
 	devel-doc [1, 1]
 jonathanboulle@gmail.com Jonathan Boulle
 	devel-doc [2, 2]
 dawnchen@google.com Dawn Chen
 	devel-doc [203, 0]
-devel-doc 235167 45547
+unknown 6806 1866
+	luca.bruno@coreos.com Luca Bruno: [30, 9]
+	casey.callendrello@coreos.com Casey Callendrello: [469, 371]
+	sur@coreos.com Sergiusz Urbaniak: [105, 13]
+	euan.kemp@coreos.com Euan Kemp: [4456, 1136]
+	yifan.gu@coreos.com Yifan Gu: [1746, 337]
+devel-doc 289 14
 	luca.bruno@coreos.com Luca Bruno: [21, 9]
-	casey.callendrello@coreos.com Casey Callendrello: [31190, 16350]
-	euan.kemp@coreos.com Euan Kemp: [172641, 19619]
-	yifan.gu@coreos.com Yifan Gu: [31109, 9566]
+	euan.kemp@coreos.com Euan Kemp: [62, 2]
 	jason@loodse.com Jason Murray: [1, 1]
 	jonathanboulle@gmail.com Jonathan Boulle: [2, 2]
 	dawnchen@google.com Dawn Chen: [203, 0]
-code 174530 12616
-	casey.callendrello@coreos.com Casey Callendrello: [6780, 5983]
-	euan.kemp@coreos.com Euan Kemp: [159834, 6441]
-	yifan.gu@coreos.com Yifan Gu: [7916, 192]
-package 0 0
-	euan.kemp@coreos.com Euan Kemp: [0, 0]
-	yifan.gu@coreos.com Yifan Gu: [0, 0]
-unknown 6087357 884384
-	luca.bruno@coreos.com Luca Bruno: [30, 9]
-	casey.callendrello@coreos.com Casey Callendrello: [1290305, 253122]
-	sur@coreos.com Sergiusz Urbaniak: [105, 13]
-	euan.kemp@coreos.com Euan Kemp: [4008532, 623934]
-	yifan.gu@coreos.com Yifan Gu: [788385, 7306]
-image 10027 1945
-	casey.callendrello@coreos.com Casey Callendrello: [0, 1943]
-	euan.kemp@coreos.com Euan Kemp: [3431, 2]
-	yifan.gu@coreos.com Yifan Gu: [6596, 0]
-documentation 59778 574
-	casey.callendrello@coreos.com Casey Callendrello: [3000, 65]
-	euan.kemp@coreos.com Euan Kemp: [53373, 509]
-	yifan.gu@coreos.com Yifan Gu: [3405, 0]
-ui 32 0
-	casey.callendrello@coreos.com Casey Callendrello: [6, 0]
-	yifan.gu@coreos.com Yifan Gu: [26, 0]
-build 31488 1991
+code 45 0
+	euan.kemp@coreos.com Euan Kemp: [45, 0]
+build 117 21
 	luca.bruno@coreos.com Luca Bruno: [29, 8]
-	casey.callendrello@coreos.com Casey Callendrello: [1107, 619]
-	euan.kemp@coreos.com Euan Kemp: [17094, 1312]
-	yifan.gu@coreos.com Yifan Gu: [13258, 52]
-translation 140 0
-	euan.kemp@coreos.com Euan Kemp: [140, 0]
-devel-doc 235167 45547
-code 174530 12616
-package 0 0
-unknown 6087357 884384
-image 10027 1945
-documentation 59778 574
-ui 32 0
-build 31488 1991
-translation 140 0
+	casey.callendrello@coreos.com Casey Callendrello: [2, 1]
+	euan.kemp@coreos.com Euan Kemp: [86, 12]
+documentation 16 0
+	euan.kemp@coreos.com Euan Kemp: [16, 0]
+unknown 6806 1866
+devel-doc 289 14
+code 45 0
+build 117 21
+documentation 16 0

@@ -1,4 +1,4 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/dashboard.csv
 
 唐飞雄 (twitter: @tangfx) is an author name, probably not what you want
@@ -8,31 +8,31 @@ kenan.karamehmedovic@est.fujitsu.com Kenan Karamehmedovic
 	code [425, 262]
 	documentation [107, 64]
 bryk@google.com Piotr Bryk
-	devel-doc [7520, 88172]
-	code [89600, 145161]
+	devel-doc [4233, 88172]
+	code [88965, 145161]
 	package [0, 0]
-	unknown [843242, 1935065]
+	unknown [525798, 1935065]
 	image [67, 21779]
-	documentation [28255, 117740]
+	documentation [23230, 117740]
 	ui [149, 123]
-	build [270, 10328]
+	build [90, 10328]
 s.florek91@gmail.com Sebastian Florek
-	devel-doc [9848, 6207]
+	devel-doc [3268, 2]
 	code [21940, 8437]
-	unknown [1073423, 302649]
+	unknown [499472, 48037]
 	image [18, 0]
-	documentation [9518, 3643]
+	documentation [6286, 3643]
 	ui [6, 4]
 	build [199, 0]
 maciaszczykm@users.noreply.github.com Marcin Maciaszczyk
-	devel-doc [67088, 1751]
+	devel-doc [56443, 4]
 	code [80885, 3227]
 	package [0, 0]
-	unknown [1838009, 75295]
+	unknown [1649405, 3349]
 	image [21781, 2]
 	documentation [102989, 799]
 	ui [101, 0]
-	build [10344, 1]
+	build [10268, 0]
 wang.bin21@zte.com.cn billy2180
 	unknown [48, 48]
 steffen.hanikel@gmail.com Steffen Hanikel
@@ -60,10 +60,9 @@ sean@soundcloud.com Sean Treadway
 	unknown [2, 2]
 	devel-doc [2, 2]
 rob@rob-franken.nl Rob Franken
-	unknown [316483, 116459]
-	devel-doc [10794, 1479]
+	unknown [3236, 1982]
 	code [2036, 195]
-	documentation [549, 30]
+	documentation [497, 30]
 mlamina09@gmail.com Marco Lamina
 	unknown [799, 28]
 	image [0, 0]
@@ -243,14 +242,13 @@ ramitsurana@gmail.com Ramit Surana
 bolu@google.com bolu
 filipg@google.com Filip Grzadkowski
 	devel-doc [1, 0]
-devel-doc 130233 97997
-	bryk@google.com Piotr Bryk: [7520, 88172]
-	s.florek91@gmail.com Sebastian Florek: [9848, 6207]
-	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [67088, 1751]
+devel-doc 98927 88566
+	bryk@google.com Piotr Bryk: [4233, 88172]
+	s.florek91@gmail.com Sebastian Florek: [3268, 2]
+	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [56443, 4]
 	janos@lenart.io Janos Lenart: [7, 3]
 	christoph.held@est.fujitsu.com Christoph Held: [201, 236]
 	sean@soundcloud.com Sean Treadway: [2, 2]
-	rob@rob-franken.nl Rob Franken: [10794, 1479]
 	dromlein@apprenda.com Dan Romlein: [42, 9]
 	ianlewis@google.com Ian Lewis: [3, 28]
 	puja108@gmail.com Puja: [2, 0]
@@ -267,9 +265,9 @@ devel-doc 130233 97997
 	jason@murrayinfotech.com thecanadianbaker: [76, 25]
 	ramitsurana@gmail.com Ramit Surana: [9, 0]
 	filipg@google.com Filip Grzadkowski: [1, 0]
-code 210951 162600
+code 210316 162600
 	kenan.karamehmedovic@est.fujitsu.com Kenan Karamehmedovic: [425, 262]
-	bryk@google.com Piotr Bryk: [89600, 145161]
+	bryk@google.com Piotr Bryk: [88965, 145161]
 	s.florek91@gmail.com Sebastian Florek: [21940, 8437]
 	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [80885, 3227]
 	zhouhaibing089@gmail.com zhouhaibing089: [82, 3]
@@ -302,11 +300,11 @@ code 210951 162600
 package 0 0
 	bryk@google.com Piotr Bryk: [0, 0]
 	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [0, 0]
-unknown 4145760 2445028
+unknown 2752514 2003993
 	kenan.karamehmedovic@est.fujitsu.com Kenan Karamehmedovic: [312, 22]
-	bryk@google.com Piotr Bryk: [843242, 1935065]
-	s.florek91@gmail.com Sebastian Florek: [1073423, 302649]
-	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [1838009, 75295]
+	bryk@google.com Piotr Bryk: [525798, 1935065]
+	s.florek91@gmail.com Sebastian Florek: [499472, 48037]
+	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [1649405, 3349]
 	wang.bin21@zte.com.cn billy2180: [48, 48]
 	steffen.hanikel@gmail.com Steffen Hanikel: [153, 90]
 	tangfx128@gmail.com 唐飞雄 (twitter: @tangfx): [806, 0]
@@ -315,7 +313,7 @@ unknown 4145760 2445028
 	zhouhaibing089@gmail.com zhouhaibing089: [24, 6]
 	christoph.held@est.fujitsu.com Christoph Held: [1534, 456]
 	sean@soundcloud.com Sean Treadway: [2, 2]
-	rob@rob-franken.nl Rob Franken: [316483, 116459]
+	rob@rob-franken.nl Rob Franken: [3236, 1982]
 	mlamina09@gmail.com Marco Lamina: [799, 28]
 	olekz@google.com olekzabl: [206, 0]
 	yamagami-takuma@users.noreply.github.com Yamagami-Takuma: [1937, 2279]
@@ -369,14 +367,14 @@ image 21866 21781
 	dromlein@apprenda.com Dan Romlein: [0, 0]
 	ianlewis@google.com Ian Lewis: [0, 0]
 	sebastien.coavoux@nuance.com Sebastien Coavoux: [0, 0]
-documentation 145552 124231
+documentation 137243 124231
 	kenan.karamehmedovic@est.fujitsu.com Kenan Karamehmedovic: [107, 64]
-	bryk@google.com Piotr Bryk: [28255, 117740]
-	s.florek91@gmail.com Sebastian Florek: [9518, 3643]
+	bryk@google.com Piotr Bryk: [23230, 117740]
+	s.florek91@gmail.com Sebastian Florek: [6286, 3643]
 	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [102989, 799]
 	zhouhaibing089@gmail.com zhouhaibing089: [4, 0]
 	christoph.held@est.fujitsu.com Christoph Held: [138, 33]
-	rob@rob-franken.nl Rob Franken: [549, 30]
+	rob@rob-franken.nl Rob Franken: [497, 30]
 	mlamina09@gmail.com Marco Lamina: [117, 0]
 	yamagami-takuma@users.noreply.github.com Yamagami-Takuma: [3, 3]
 	ianlewis@google.com Ian Lewis: [16, 3]
@@ -407,17 +405,17 @@ ui 264 131
 	atanas.mirchev@est.fujitsu.com Atanas Mirchev: [1, 3]
 	batikan.urcan@est.fujitsu.com urcan: [3, 1]
 	lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [3, 0]
-build 10834 10332
-	bryk@google.com Piotr Bryk: [270, 10328]
+build 10578 10331
+	bryk@google.com Piotr Bryk: [90, 10328]
 	s.florek91@gmail.com Sebastian Florek: [199, 0]
-	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [10344, 1]
+	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [10268, 0]
 	higashi.isao@jp.fujitsu.com higashi isao: [16, 0]
 	sebastien.coavoux@nuance.com Sebastien Coavoux: [5, 3]
-devel-doc 130233 97997
-code 210951 162600
+devel-doc 98927 88566
+code 210316 162600
 package 0 0
-unknown 4145760 2445028
+unknown 2752514 2003993
 image 21866 21781
-documentation 145552 124231
+documentation 137243 124231
 ui 264 131
-build 10834 10332
+build 10578 10331

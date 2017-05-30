@@ -1,4 +1,4 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/md-check.csv
 
 unknown@hacker.net Unknown hacker
@@ -6,8 +6,8 @@ etune@google.com Eric Tune
 21521209@zju.edu.cn jg Chen
 	unknown [1, 1]
 jrhoak@gmail.com Josh Hoak
-	unknown [3440, 0]
-	devel-doc [337, 4]
+	unknown [481, 0]
+	devel-doc [34, 4]
 techtonik@gmail.com anatoly techtonik
 	devel-doc [1, 1]
 foxish@users.noreply.github.com Anirudh Ramanathan
@@ -16,13 +16,13 @@ ramanathana@google.com Anirudh
 pwittroc+github@google.com Phillip Wittrock
 bgrant0607@users.noreply.github.com Brian Grant
 	devel-doc [202, 0]
-unknown 3445 4
+unknown 486 4
 	21521209@zju.edu.cn jg Chen: [1, 1]
-	jrhoak@gmail.com Josh Hoak: [3440, 0]
+	jrhoak@gmail.com Josh Hoak: [481, 0]
 	ramanathana@google.com Anirudh: [4, 3]
-devel-doc 540 5
-	jrhoak@gmail.com Josh Hoak: [337, 4]
+devel-doc 237 5
+	jrhoak@gmail.com Josh Hoak: [34, 4]
 	techtonik@gmail.com anatoly techtonik: [1, 1]
 	bgrant0607@users.noreply.github.com Brian Grant: [202, 0]
-unknown 3445 4
-devel-doc 540 5
+unknown 486 4
+devel-doc 237 5

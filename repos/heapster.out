@@ -1,24 +1,21 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/heapster.csv
 
 yoyozhiyou@163.com is an author name, probably not what you want
 unknown@hacker.net Unknown hacker
 pszczesniak@google.com Piotr Szczesniak
-	devel-doc [3444, 3542]
-	code [495, 454]
-	unknown [847020, 322761]
+	devel-doc [2138, 3226]
+	code [468, 416]
+	unknown [364500, 183024]
 	image [0, 0]
-	documentation [1023, 963]
-	build [131, 71]
+	documentation [1003, 471]
+	build [28, 57]
 aleksandram@google.com Aleksandra Malinowska
-	unknown [6257, 185]
+	unknown [931, 185]
 	build [1, 1]
 directxman12+github@gmail.com Solly Ross
-	unknown [154810, 643744]
-	devel-doc [838, 5491]
-	code [55, 1965]
-	build [0, 85]
-	documentation [49, 624]
+	unknown [5782, 3667]
+	devel-doc [11, 4]
 vmik@google.com Mik Vyatskov
 	unknown [1, 1]
 	build [16, 5]
@@ -31,26 +28,23 @@ watercraftsoftware@gmail.com Alan Jones
 jesse.kinkead@gmail.com Jesse Kinkead
 	unknown [1, 1]
 lucas.kaldstrom@hotmail.co.uk Lucas Käldström
-	unknown [1632, 1552]
-	devel-doc [416, 244]
+	unknown [408, 494]
+	devel-doc [50, 26]
 	code [11, 153]
 	build [308, 203]
 pu.junqi@zte.com.cn 10138035
 	unknown [18, 35]
 corbin.math@gmail.com mcorbin
-	unknown [1896, 1075]
-	devel-doc [152, 114]
-	code [23, 0]
-	build [28, 17]
+	unknown [1007, 269]
 ouyang.qinhua@zte.com.cn bruceauyeung
 	unknown [20, 19]
 caarlos0@gmail.com Carlos Alexandro Becker
 	build [2, 2]
 mwielgus@google.com Marcin Wielgus
-	unknown [20447, 52604]
-	devel-doc [512, 2760]
-	code [11, 151]
-	build [17, 85]
+	unknown [19221, 15776]
+	devel-doc [215, 12]
+	code [11, 41]
+	build [17, 14]
 j2@dronedeploy.com astropuffin
 	unknown [57, 2]
 jedroadam@gmail.com Adam Jedro
@@ -99,8 +93,7 @@ almogbaku@rimoto.com Almog Baku
 morten@mediaflex.dk Morten Rasmussen
 	unknown [6, 2]
 jsoriano@tuenti.com Jaime Soriano Pastor
-	unknown [658, 50]
-	devel-doc [78, 0]
+	unknown [413, 50]
 10138035@zte.com.cn tianshapjq
 	unknown [19, 26]
 aaron@roydhouse.com Aaron Roydhouse
@@ -121,9 +114,7 @@ jack.zampolin@gmail.com Jack Zampolin
 kcmastrpc@gmail.com Kevin Crawley
 	unknown [11, 3]
 ricardo.katz@serpro.gov.br Ricardo Pchevuzinske Katz
-	unknown [13, 13]
-	devel-doc [10, 1]
-	build [0, 0]
+	unknown [10, 10]
 zhanglingwei@jd.com gadaigadai
 	unknown [1, 1]
 chance.zibolski@coreos.com Chance Zibolski
@@ -135,11 +126,8 @@ da.colonel@gmail.com Denis Andrejew
 miao.yanqiang@zte.com.cn miao.yanqiang10144685
 	unknown [404, 114]
 almog.baku@gmail.com AlmogBaku
-	unknown [4472, 969]
-	devel-doc [476, 315]
-	code [2, 0]
-	build [11, 11]
-	documentation [28, 0]
+	unknown [969, 261]
+	build [3, 3]
 brandon@ifup.org Brandon Philips
 	devel-doc [3, 2]
 chris.machler@evergreenitco.com Chris Machler
@@ -161,11 +149,10 @@ atanas.mirchev@est.fujitsu.com Atanas Mirchev
 	unknown [11534, 17]
 	devel-doc [444, 0]
 magorzata@google.com mksalawa
-	unknown [725668, 317962]
-	devel-doc [8602, 2799]
-	code [4925, 0]
-	build [155, 2]
-	documentation [1048, 0]
+	unknown [3946, 1277]
+	devel-doc [144, 105]
+	code [167, 0]
+	build [2, 2]
 huangyuqi@huawei.com yuqi huang
 	unknown [60051, 1403]
 	devel-doc [1624, 1]
@@ -183,7 +170,7 @@ gmarek@google.com gmarek
 	unknown [8, 8]
 	build [0, 1]
 jamie.hannaford@rackspace.com Jamie Hannaford
-	unknown [220, 71]
+	unknown [219, 70]
 yak@iki.fi Michael Burman
 	unknown [4272, 1430]
 	devel-doc [6, 2]
@@ -196,8 +183,7 @@ bryan@activeshadow.com Bryan T. Richardson
 i.galic@brainsware.org Igor Galić
 	unknown [1, 1]
 mkumatag@in.ibm.com Manjunath A Kumatagi
-	unknown [13366, 8490]
-	devel-doc [658, 216]
+	unknown [13, 8]
 zhao.xiangpeng@zte.com.cn Xiangpeng Zhao
 	unknown [1, 1]
 joeyi@google.com Joey Imbasciano
@@ -358,24 +344,19 @@ dipankarsarkar@gmail.com Dipankar Sarkar
 	unknown [4, 1]
 bburns@google.com Brendan Burns
 	devel-doc [2, 0]
-devel-doc 40805 26742
-	pszczesniak@google.com Piotr Szczesniak: [3444, 3542]
-	directxman12+github@gmail.com Solly Ross: [838, 5491]
-	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [416, 244]
-	corbin.math@gmail.com mcorbin: [152, 114]
-	mwielgus@google.com Marcin Wielgus: [512, 2760]
+devel-doc 28177 14633
+	pszczesniak@google.com Piotr Szczesniak: [2138, 3226]
+	directxman12+github@gmail.com Solly Ross: [11, 4]
+	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [50, 26]
+	mwielgus@google.com Marcin Wielgus: [215, 12]
 	stclair@google.com Tim St. Clair: [2003, 144]
 	almogbaku@rimoto.com Almog Baku: [1, 1]
-	jsoriano@tuenti.com Jaime Soriano Pastor: [78, 0]
-	ricardo.katz@serpro.gov.br Ricardo Pchevuzinske Katz: [10, 1]
-	almog.baku@gmail.com AlmogBaku: [476, 315]
 	brandon@ifup.org Brandon Philips: [3, 2]
 	atanas.mirchev@est.fujitsu.com Atanas Mirchev: [444, 0]
-	magorzata@google.com mksalawa: [8602, 2799]
+	magorzata@google.com mksalawa: [144, 105]
 	huangyuqi@huawei.com yuqi huang: [1624, 1]
 	sarah.novotny@gmail.com sarahnovotny: [1, 1]
 	yak@iki.fi Michael Burman: [6, 2]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [658, 216]
 	thibault.cohen@nuance.com Thibault Cohen: [12, 0]
 	jimmidyson@gmail.com Jimmi Dyson: [2077, 6403]
 	vishnuk@google.com Vishnu kannan: [13305, 4442]
@@ -396,18 +377,15 @@ devel-doc 40805 26742
 	jacob.jh.clark@googlemail.com Jacob Clark: [3, 3]
 	maxforbes@google.com Max Forbes: [48, 42]
 	bburns@google.com Brendan Burns: [2, 0]
-code 7938 3556
-	pszczesniak@google.com Piotr Szczesniak: [495, 454]
-	directxman12+github@gmail.com Solly Ross: [55, 1965]
+code 3073 1443
+	pszczesniak@google.com Piotr Szczesniak: [468, 416]
 	andy.xning@gmail.com Andy Xie: [1, 1]
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [11, 153]
-	corbin.math@gmail.com mcorbin: [23, 0]
-	mwielgus@google.com Marcin Wielgus: [11, 151]
+	mwielgus@google.com Marcin Wielgus: [11, 41]
 	stclair@google.com Tim St. Clair: [316, 51]
 	xihuanbo_0521@zju.edu.cn Xinbo Weng: [1, 1]
-	almog.baku@gmail.com AlmogBaku: [2, 0]
 	aegixx@gmail.com Bryan Stone: [8, 8]
-	magorzata@google.com mksalawa: [4925, 0]
+	magorzata@google.com mksalawa: [167, 0]
 	huangyuqi@huawei.com yuqi huang: [185, 0]
 	bryan@activeshadow.com Bryan T. Richardson: [5, 3]
 	jimmidyson@gmail.com Jimmi Dyson: [56, 149]
@@ -428,19 +406,19 @@ code 7938 3556
 package 0 0
 	vishnuk@google.com Vishnu kannan: [0, 0]
 	vmarmol@google.com Victor Marmol: [0, 0]
-unknown 2627148 1782116
-	pszczesniak@google.com Piotr Szczesniak: [847020, 322761]
-	aleksandram@google.com Aleksandra Malinowska: [6257, 185]
-	directxman12+github@gmail.com Solly Ross: [154810, 643744]
+unknown 1248108 637731
+	pszczesniak@google.com Piotr Szczesniak: [364500, 183024]
+	aleksandram@google.com Aleksandra Malinowska: [931, 185]
+	directxman12+github@gmail.com Solly Ross: [5782, 3667]
 	vmik@google.com Mik Vyatskov: [1, 1]
 	andy.xning@gmail.com Andy Xie: [512, 80]
 	watercraftsoftware@gmail.com Alan Jones: [13, 4]
 	jesse.kinkead@gmail.com Jesse Kinkead: [1, 1]
-	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [1632, 1552]
+	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [408, 494]
 	pu.junqi@zte.com.cn 10138035: [18, 35]
-	corbin.math@gmail.com mcorbin: [1896, 1075]
+	corbin.math@gmail.com mcorbin: [1007, 269]
 	ouyang.qinhua@zte.com.cn bruceauyeung: [20, 19]
-	mwielgus@google.com Marcin Wielgus: [20447, 52604]
+	mwielgus@google.com Marcin Wielgus: [19221, 15776]
 	j2@dronedeploy.com astropuffin: [57, 2]
 	jedroadam@gmail.com Adam Jedro: [58, 64]
 	johannes.wuerbach@googlemail.com Johannes Würbach: [663, 7]
@@ -459,7 +437,7 @@ unknown 2627148 1782116
 	jonas.falck@gmail.com Jonas Falck: [2, 0]
 	martijni@topdesk.com Martijn van Iersel: [21, 16]
 	morten@mediaflex.dk Morten Rasmussen: [6, 2]
-	jsoriano@tuenti.com Jaime Soriano Pastor: [658, 50]
+	jsoriano@tuenti.com Jaime Soriano Pastor: [413, 50]
 	10138035@zte.com.cn tianshapjq: [19, 26]
 	aaron@roydhouse.com Aaron Roydhouse: [1, 1]
 	shyamjvs@google.com Shyam Jeedigunta: [13, 3]
@@ -468,13 +446,13 @@ unknown 2627148 1782116
 	xihuanbo_0521@zju.edu.cn Xinbo Weng: [23, 23]
 	jack.zampolin@gmail.com Jack Zampolin: [120, 51]
 	kcmastrpc@gmail.com Kevin Crawley: [11, 3]
-	ricardo.katz@serpro.gov.br Ricardo Pchevuzinske Katz: [13, 13]
+	ricardo.katz@serpro.gov.br Ricardo Pchevuzinske Katz: [10, 10]
 	zhanglingwei@jd.com gadaigadai: [1, 1]
 	chance.zibolski@coreos.com Chance Zibolski: [7, 4]
 	dongziming@zju.edu.cn dongziming: [13, 13]
 	da.colonel@gmail.com Denis Andrejew: [1, 1]
 	miao.yanqiang@zte.com.cn miao.yanqiang10144685: [404, 114]
-	almog.baku@gmail.com AlmogBaku: [4472, 969]
+	almog.baku@gmail.com AlmogBaku: [969, 261]
 	chris.machler@evergreenitco.com Chris Machler: [4, 2]
 	euan.kemp@coreos.com Euan Kemp: [16, 13]
 	service@futurequest.net TerraTech: [2, 2]
@@ -483,18 +461,18 @@ unknown 2627148 1782116
 	aegixx@gmail.com Bryan Stone: [89, 63]
 	ashiquzzaman33@users.noreply.github.com Md. Ashiquzzaman: [1, 1]
 	atanas.mirchev@est.fujitsu.com Atanas Mirchev: [11534, 17]
-	magorzata@google.com mksalawa: [725668, 317962]
+	magorzata@google.com mksalawa: [3946, 1277]
 	huangyuqi@huawei.com yuqi huang: [60051, 1403]
 	yoyozhiyou@163.com yoyozhiyou@163.com: [1, 1]
 	gskgoskk@gmail.com German: [1, 1]
 	jm.carp@gmail.com Joshua Carp: [13, 13]
 	gmarek@google.com gmarek: [8, 8]
-	jamie.hannaford@rackspace.com Jamie Hannaford: [220, 71]
+	jamie.hannaford@rackspace.com Jamie Hannaford: [219, 70]
 	yak@iki.fi Michael Burman: [4272, 1430]
 	tyranron@gmail.com tyranron: [2, 1]
 	pmorie@gmail.com Paul Morie: [2, 2]
 	i.galic@brainsware.org Igor Galić: [1, 1]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [13366, 8490]
+	mkumatag@in.ibm.com Manjunath A Kumatagi: [13, 8]
 	zhao.xiangpeng@zte.com.cn Xiangpeng Zhao: [1, 1]
 	joeyi@google.com Joey Imbasciano: [1, 1]
 	michael.morello@gmail.com Michael Morello: [239, 5]
@@ -550,36 +528,30 @@ image 0 0
 	pszczesniak@google.com Piotr Szczesniak: [0, 0]
 	jimmidyson@gmail.com Jimmi Dyson: [0, 0]
 	vishnuk@google.com Vishnu kannan: [0, 0]
-documentation 6961 1930
-	pszczesniak@google.com Piotr Szczesniak: [1023, 963]
-	directxman12+github@gmail.com Solly Ross: [49, 624]
+documentation 5816 814
+	pszczesniak@google.com Piotr Szczesniak: [1003, 471]
 	stclair@google.com Tim St. Clair: [1043, 110]
-	almog.baku@gmail.com AlmogBaku: [28, 0]
-	magorzata@google.com mksalawa: [1048, 0]
 	jimmidyson@gmail.com Jimmi Dyson: [27, 203]
 	vishnuk@google.com Vishnu kannan: [3695, 30]
 	mvdan@mvdan.cc Daniel Martí: [28, 0]
 	jnagal@google.com Rohit Jnagal: [13, 0]
 	vmarmol@google.com Victor Marmol: [7, 0]
-build 1306 796
-	pszczesniak@google.com Piotr Szczesniak: [131, 71]
+build 1014 601
+	pszczesniak@google.com Piotr Szczesniak: [28, 57]
 	aleksandram@google.com Aleksandra Malinowska: [1, 1]
-	directxman12+github@gmail.com Solly Ross: [0, 85]
 	vmik@google.com Mik Vyatskov: [16, 5]
 	andy.xning@gmail.com Andy Xie: [14, 9]
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [308, 203]
-	corbin.math@gmail.com mcorbin: [28, 17]
 	caarlos0@gmail.com Carlos Alexandro Becker: [2, 2]
-	mwielgus@google.com Marcin Wielgus: [17, 85]
+	mwielgus@google.com Marcin Wielgus: [17, 14]
 	johannes.wuerbach@googlemail.com Johannes Würbach: [4, 1]
 	vivkong@ca.ibm.com Vivian Kong: [4, 0]
 	senlu@google.com Sen Lu: [17, 3]
 	stclair@google.com Tim St. Clair: [2, 18]
 	almogbaku@rimoto.com Almog Baku: [2, 2]
 	jgrafton@google.com Jeff Grafton: [3, 3]
-	ricardo.katz@serpro.gov.br Ricardo Pchevuzinske Katz: [0, 0]
-	almog.baku@gmail.com AlmogBaku: [11, 11]
-	magorzata@google.com mksalawa: [155, 2]
+	almog.baku@gmail.com AlmogBaku: [3, 3]
+	magorzata@google.com mksalawa: [2, 2]
 	huangyuqi@huawei.com yuqi huang: [50, 2]
 	gmarek@google.com gmarek: [0, 1]
 	jimmidyson@gmail.com Jimmi Dyson: [6, 90]
@@ -591,10 +563,10 @@ build 1306 796
 	thuc.nguyen@ebay.com Thuc Nguyen: [13, 0]
 	almavrog@google.com Alexandros Mavrogiannis: [0, 1]
 	saadali@google.com saadali: [14, 1]
-devel-doc 40805 26742
-code 7938 3556
+devel-doc 28177 14633
+code 3073 1443
 package 0 0
-unknown 2627148 1782116
+unknown 1248108 637731
 image 0 0
-documentation 6961 1930
-build 1306 796
+documentation 5816 814
+build 1014 601
