@@ -1,16 +1,13 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-aws.csv
 
 unknown@hacker.net Unknown hacker
 ykuoka@gmail.com KUOKA Yusuke
-	devel-doc [4530, 6642]
-	code [30, 13595]
-	package [0, 0]
-	unknown [670735, 966684]
-	image [0, 2379]
-	documentation [1450, 22938]
-	ui [0, 7082]
-	build [245, 622]
+	code [30, 2]
+	unknown [24405, 8150]
+	devel-doc [1440, 273]
+	documentation [1, 1]
+	build [92, 17]
 ivanov.maxim@gmail.com Maxim Ivanov
 	unknown [2011, 1505]
 	devel-doc [2, 2]
@@ -31,11 +28,7 @@ patrik@votocek.cz Patrik Votoček
 velo@users.noreply.github.com Marvin Froeder
 	unknown [1, 1]
 ioanowen@gmail.com tyrannasaurusbanks
-	unknown [194315, 25550]
-	devel-doc [3753, 1406]
-	code [8568, 0]
-	build [67, 1]
-	documentation [274, 0]
+	unknown [28, 19]
 fabian.selles@schibsted.com Fabian Selles Rosa
 	unknown [539, 164]
 simon@wydooghe.com Simon Wydooghe
@@ -58,10 +51,9 @@ c-knowles@users.noreply.github.com Chris Knowles
 jollinshead@users.noreply.github.com J. Hollinshead
 	unknown [22, 38]
 gianrubio@gmail.com Giancarlo Rubio
-	unknown [471922, 61449]
-	devel-doc [821, 7]
-	documentation [86, 42]
-	build [44, 18]
+	unknown [492, 104]
+	devel-doc [8, 3]
+	build [1, 1]
 jorge.arcoma@gmail.com Jorge Arco
 	unknown [3, 3]
 almog.baku@gmail.com AlmogBaku
@@ -132,19 +124,15 @@ nicroland9@gmail.com Nic Roland
 	unknown [1, 1]
 	devel-doc [4, 2]
 colhom@gmail.com Colin Hom
-	devel-doc [9505, 1316]
-	code [18517, 327]
-	package [0, 0]
-	unknown [1279163, 17804]
-	image [2379, 0]
-	documentation [22902, 35]
-	ui [7082, 0]
-	build [761, 19]
+	code [5, 327]
+	unknown [18718, 17804]
+	devel-doc [280, 1316]
+	documentation [19, 35]
+	build [4, 19]
 qqshfox@gmail.com Hanfei Shen
 	unknown [25, 8]
 pb@coreos.com Patrick Baxter
-	unknown [1019, 555]
-	devel-doc [202, 0]
+	unknown [713, 555]
 buenemann@louis.info Felix Bünemann
 	unknown [31, 20]
 harsha@earnest.com Harsha Yalamanchili
@@ -211,45 +199,17 @@ fearsome.lucidity@gmail.com Elias Levy
 	unknown [1, 1]
 rob@robszumski.com Rob Szumski
 	unknown [1, 1]
-devel-doc 20545 9426
-	ykuoka@gmail.com KUOKA Yusuke: [4530, 6642]
-	ivanov.maxim@gmail.com Maxim Ivanov: [2, 2]
-	camil@edka.io Camil Blanaru: [67, 2]
-	ioanowen@gmail.com tyrannasaurusbanks: [3753, 1406]
-	jhollinshead@hotels.com Joseph Hollinshead: [42, 2]
-	c-knowles@users.noreply.github.com Chris Knowles: [4, 6]
-	gianrubio@gmail.com Giancarlo Rubio: [821, 7]
-	almog.baku@gmail.com AlmogBaku: [2, 2]
-	almogbaku@rimoto.com Almog Baku: [2, 2]
-	swestcott@gmail.com Simon Westcott: [1, 1]
-	brandon@ifup.org Brandon Philips: [2, 17]
-	helinwang@baidu.com Helin Wang: [3, 0]
-	pieter@ptlc.nl Pieter Lange: [4, 1]
-	nicroland9@gmail.com Nic Roland: [4, 2]
-	colhom@gmail.com Colin Hom: [9505, 1316]
-	pb@coreos.com Patrick Baxter: [202, 0]
-	tom@tomdee.co.uk Tom Denham: [2, 0]
-	curtis@curtis.io Curtis Gagliardi: [18, 12]
-	ltiao@users.noreply.github.com Louis Tiao: [1, 1]
-	mahata777+github@gmail.com mahata: [1, 1]
-	joe.bowers@coreos.com Joe Bowers: [2, 2]
-	brian@waldon.cc Brian Waldon: [1576, 1]
-	gmonroy@engineyard.com Gabriel Monroy: [1, 1]
-code 27731 13941
-	ykuoka@gmail.com KUOKA Yusuke: [30, 13595]
+code 651 348
+	ykuoka@gmail.com KUOKA Yusuke: [30, 2]
 	camil@edka.io Camil Blanaru: [112, 0]
-	ioanowen@gmail.com tyrannasaurusbanks: [8568, 0]
 	jhollinshead@hotels.com Joseph Hollinshead: [166, 3]
-	colhom@gmail.com Colin Hom: [18517, 327]
+	colhom@gmail.com Colin Hom: [5, 327]
 	aaronjlevy@gmail.com Aaron Levy: [16, 14]
 	joe.bowers@coreos.com Joe Bowers: [12, 0]
 	brian@waldon.cc Brian Waldon: [309, 2]
 	patrick.hemmer@gmail.com Patrick Hemmer: [1, 0]
-package 0 0
-	ykuoka@gmail.com KUOKA Yusuke: [0, 0]
-	colhom@gmail.com Colin Hom: [0, 0]
-unknown 2707049 1076982
-	ykuoka@gmail.com KUOKA Yusuke: [670735, 966684]
+unknown 134251 31572
+	ykuoka@gmail.com KUOKA Yusuke: [24405, 8150]
 	ivanov.maxim@gmail.com Maxim Ivanov: [2011, 1505]
 	camil@edka.io Camil Blanaru: [1245, 285]
 	jeremydeininger@gmail.com Jeremy Deininger: [412, 185]
@@ -257,7 +217,7 @@ unknown 2707049 1076982
 	daniel.tritone@gmail.com Daniel Martins: [2341, 462]
 	patrik@votocek.cz Patrik Votoček: [175, 10]
 	velo@users.noreply.github.com Marvin Froeder: [1, 1]
-	ioanowen@gmail.com tyrannasaurusbanks: [194315, 25550]
+	ioanowen@gmail.com tyrannasaurusbanks: [28, 19]
 	fabian.selles@schibsted.com Fabian Selles Rosa: [539, 164]
 	simon@wydooghe.com Simon Wydooghe: [1, 1]
 	jhollinshead@hotels.com Joseph Hollinshead: [516, 36]
@@ -267,7 +227,7 @@ unknown 2707049 1076982
 	kevtaylor@expedia.com Kevin Taylor: [142, 17]
 	c-knowles@users.noreply.github.com Chris Knowles: [603, 152]
 	jollinshead@users.noreply.github.com J. Hollinshead: [22, 38]
-	gianrubio@gmail.com Giancarlo Rubio: [471922, 61449]
+	gianrubio@gmail.com Giancarlo Rubio: [492, 104]
 	jorge.arcoma@gmail.com Jorge Arco: [3, 3]
 	almog.baku@gmail.com AlmogBaku: [3, 3]
 	almogbaku@rimoto.com Almog Baku: [10, 10]
@@ -297,9 +257,9 @@ unknown 2707049 1076982
 	pieter@ptlc.nl Pieter Lange: [550, 63]
 	joshrosso@gmail.com joshrosso: [3, 3]
 	nicroland9@gmail.com Nic Roland: [1, 1]
-	colhom@gmail.com Colin Hom: [1279163, 17804]
+	colhom@gmail.com Colin Hom: [18718, 17804]
 	qqshfox@gmail.com Hanfei Shen: [25, 8]
-	pb@coreos.com Patrick Baxter: [1019, 555]
+	pb@coreos.com Patrick Baxter: [713, 555]
 	buenemann@louis.info Felix Bünemann: [31, 20]
 	harsha@earnest.com Harsha Yalamanchili: [1, 1]
 	aaronjlevy@gmail.com Aaron Levy: [220, 146]
@@ -325,33 +285,43 @@ unknown 2707049 1076982
 	silas@sewell.org Silas Sewell: [122, 38]
 	fearsome.lucidity@gmail.com Elias Levy: [1, 1]
 	rob@robszumski.com Rob Szumski: [1, 1]
-image 2379 2379
-	ykuoka@gmail.com KUOKA Yusuke: [0, 2379]
-	colhom@gmail.com Colin Hom: [2379, 0]
-documentation 26856 23015
-	ykuoka@gmail.com KUOKA Yusuke: [1450, 22938]
-	ioanowen@gmail.com tyrannasaurusbanks: [274, 0]
-	gianrubio@gmail.com Giancarlo Rubio: [86, 42]
-	colhom@gmail.com Colin Hom: [22902, 35]
+devel-doc 3462 1647
+	ykuoka@gmail.com KUOKA Yusuke: [1440, 273]
+	ivanov.maxim@gmail.com Maxim Ivanov: [2, 2]
+	camil@edka.io Camil Blanaru: [67, 2]
+	jhollinshead@hotels.com Joseph Hollinshead: [42, 2]
+	c-knowles@users.noreply.github.com Chris Knowles: [4, 6]
+	gianrubio@gmail.com Giancarlo Rubio: [8, 3]
+	almog.baku@gmail.com AlmogBaku: [2, 2]
+	almogbaku@rimoto.com Almog Baku: [2, 2]
+	swestcott@gmail.com Simon Westcott: [1, 1]
+	brandon@ifup.org Brandon Philips: [2, 17]
+	helinwang@baidu.com Helin Wang: [3, 0]
+	pieter@ptlc.nl Pieter Lange: [4, 1]
+	nicroland9@gmail.com Nic Roland: [4, 2]
+	colhom@gmail.com Colin Hom: [280, 1316]
+	tom@tomdee.co.uk Tom Denham: [2, 0]
+	curtis@curtis.io Curtis Gagliardi: [18, 12]
+	ltiao@users.noreply.github.com Louis Tiao: [1, 1]
+	mahata777+github@gmail.com mahata: [1, 1]
+	joe.bowers@coreos.com Joe Bowers: [2, 2]
+	brian@waldon.cc Brian Waldon: [1576, 1]
+	gmonroy@engineyard.com Gabriel Monroy: [1, 1]
+documentation 2164 36
+	ykuoka@gmail.com KUOKA Yusuke: [1, 1]
+	colhom@gmail.com Colin Hom: [19, 35]
 	brian@waldon.cc Brian Waldon: [2144, 0]
-ui 7082 7082
-	ykuoka@gmail.com KUOKA Yusuke: [0, 7082]
-	colhom@gmail.com Colin Hom: [7082, 0]
-build 1169 664
-	ykuoka@gmail.com KUOKA Yusuke: [245, 622]
+build 149 41
+	ykuoka@gmail.com KUOKA Yusuke: [92, 17]
 	ivanov.maxim@gmail.com Maxim Ivanov: [1, 1]
 	camil@edka.io Camil Blanaru: [22, 1]
-	ioanowen@gmail.com tyrannasaurusbanks: [67, 1]
-	gianrubio@gmail.com Giancarlo Rubio: [44, 18]
+	gianrubio@gmail.com Giancarlo Rubio: [1, 1]
 	almog.baku@gmail.com AlmogBaku: [1, 1]
 	almogbaku@rimoto.com Almog Baku: [1, 1]
-	colhom@gmail.com Colin Hom: [761, 19]
+	colhom@gmail.com Colin Hom: [4, 19]
 	brian@waldon.cc Brian Waldon: [27, 0]
-devel-doc 20545 9426
-code 27731 13941
-package 0 0
-unknown 2707049 1076982
-image 2379 2379
-documentation 26856 23015
-ui 7082 7082
-build 1169 664
+code 651 348
+unknown 134251 31572
+devel-doc 3462 1647
+documentation 2164 36
+build 149 41

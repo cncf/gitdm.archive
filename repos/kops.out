@@ -1,4 +1,4 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kops.csv
 
 Carl B. beethoven1110@gmail.com is an author name, probably not what you want
@@ -11,15 +11,11 @@ clove@cnmconsulting.net Chris Love
 	documentation [60, 0]
 	build [89, 32]
 justin@fathomdb.com Justin Santa Barbara
-	devel-doc [288972, 89802]
-	code [132773, 39530]
-	package [28, 28]
-	unknown [8575482, 1948538]
-	image [28421, 19087]
-	documentation [57766, 3642]
-	ui [169, 137]
-	build [26802, 9756]
-	translation [65468, 23]
+	unknown [123832, 40507]
+	devel-doc [1213, 329]
+	code [1428, 796]
+	build [741, 381]
+	documentation [71, 4]
 willem.mali@gmail.com Willem Mali
 	build [92, 13]
 svozza@gmail.com Stefano Vozza
@@ -65,9 +61,9 @@ dennis@bluesentryit.com Dennis Webb
 while1eq1@gmail.com William Broach
 	unknown [21, 6]
 miaol@vmware.com Miao Luo
-	unknown [53593, 417]
-	devel-doc [2254, 0]
-	build [207, 6]
+	unknown [778, 417]
+	devel-doc [21, 0]
+	build [0, 6]
 shivania@vmware.com Abrar Shivani
 	unknown [408, 46]
 prashimas@vmware.com prashima
@@ -75,11 +71,7 @@ prashimas@vmware.com prashima
 	code [98, 98]
 	build [27, 4]
 sandeeppissay@users.noreply.github.com SandeepPissay
-	unknown [136123, 80]
-	devel-doc [1190, 0]
-	code [6729, 0]
-	build [112, 0]
-	documentation [365, 0]
+	unknown [995, 80]
 ryanlitalien@gmail.com Ryan L'Italien
 	unknown [8, 1]
 leandro.repolho@theiconic.com.au Leandro Repolho
@@ -117,12 +109,11 @@ dcohen@gatech.edu Daniel Cohen
 theo.ch@mley.fr Théo Chamley
 	unknown [342, 24]
 kris@nivenly.com Kris Nova
-	devel-doc [4849, 3555]
-	code [1223, 488]
-	unknown [227857, 176019]
-	image [308, 308]
-	documentation [98, 0]
-	build [452, 116]
+	unknown [6358, 2594]
+	devel-doc [210, 228]
+	code [150, 89]
+	build [19, 4]
+	image [0, 0]
 arthurlm44@gmail.com Arthur Le Maitre
 	unknown [4, 2]
 zytek@nuxi.pl Jakub Paweł Głazik
@@ -250,7 +241,7 @@ matt@skillshare.com Matt Condon
 	unknown [298, 24]
 duncan.mcnaught@welltok.com Duncan McNaught
 	unknown [14, 4]
-	devel-doc [15, 9]
+	devel-doc [10, 4]
 mmaglana@gmail.com Mark S. Maglana
 	unknown [3, 0]
 keglevich2@gmail.com vendrov
@@ -287,9 +278,7 @@ beethoven1110@gmail.com Carl B. beethoven1110@gmail.com
 	unknown [5, 2]
 	build [2, 2]
 billy.shambrook@gmail.com Billy Shambrook
-	unknown [12326, 52]
-	devel-doc [368, 0]
-	documentation [1970, 0]
+	unknown [1688, 52]
 	build [3, 0]
 cgilmour@gmail.com Caleb Gilmour
 	unknown [1, 0]
@@ -396,18 +385,17 @@ abshah@google.com Abhishek Shah
 decarr@redhat.com derekwaynecarr
 	unknown [3, 3]
 	code [40, 0]
-devel-doc 298342 93607
+devel-doc 2148 802
 	clove@cnmconsulting.net Chris Love: [117, 92]
-	justin@fathomdb.com Justin Santa Barbara: [288972, 89802]
+	justin@fathomdb.com Justin Santa Barbara: [1213, 329]
 	spollack@beenverified.com Seth Pollack: [12, 1]
 	geojaz@users.noreply.github.com Eric Hole: [63, 29]
 	dennis@bluesentryit.com Dennis Webb: [27, 0]
-	miaol@vmware.com Miao Luo: [2254, 0]
-	sandeeppissay@users.noreply.github.com SandeepPissay: [1190, 0]
+	miaol@vmware.com Miao Luo: [21, 0]
 	leandro.repolho@theiconic.com.au Leandro Repolho: [0, 3]
 	aholland@a1dutch.co.uk Andrew Holland: [1, 3]
 	andrew@wattpad.com andrewsykim: [24, 0]
-	kris@nivenly.com Kris Nova: [4849, 3555]
+	kris@nivenly.com Kris Nova: [210, 228]
 	zytek@nuxi.pl Jakub Paweł Głazik: [1, 1]
 	ydradcliffe@gmail.com yissachar: [1, 1]
 	patrick.harboeck@tngtech.com Patrick Harböck: [6, 1]
@@ -419,21 +407,19 @@ devel-doc 298342 93607
 	sjevsejev@gmail.com Sergej Jevsejev: [1, 1]
 	vise890@gmail.com Martino Visintin: [2, 0]
 	feynman.liang@gmail.com Feynman Liang: [1, 1]
-	duncan.mcnaught@welltok.com Duncan McNaught: [15, 9]
+	duncan.mcnaught@welltok.com Duncan McNaught: [10, 4]
 	keglevich2@gmail.com vendrov: [2, 0]
 	johnwchadwick@gmail.com John Chadwick: [5, 3]
 	wplatnick@gmail.com Will Platnick: [16, 6]
 	aps.sids@gmail.com Aman: [5, 0]
-	billy.shambrook@gmail.com Billy Shambrook: [368, 0]
 	rwfowler@gmail.com Ryan Fowler: [1, 1]
 	mbauer@us.ibm.com Morgan Bauer: [1, 1]
 	mikedanese@gmail.com Mike Danese: [212, 1]
-code 142521 41526
+code 3374 2393
 	clove@cnmconsulting.net Chris Love: [622, 126]
-	justin@fathomdb.com Justin Santa Barbara: [132773, 39530]
+	justin@fathomdb.com Justin Santa Barbara: [1428, 796]
 	prashimas@vmware.com prashima: [98, 98]
-	sandeeppissay@users.noreply.github.com SandeepPissay: [6729, 0]
-	kris@nivenly.com Kris Nova: [1223, 488]
+	kris@nivenly.com Kris Nova: [150, 89]
 	zml@google.com Zach Loafman: [125, 354]
 	ashley.penney@maxwellhealth.com Ashley Penney: [1, 0]
 	heschlie@gmail.com Stephen Schlie: [1, 1]
@@ -461,11 +447,9 @@ code 142521 41526
 	cjcullen@google.com CJ Cullen: [3, 6]
 	etune@google.com Eric Tune: [107, 26]
 	decarr@redhat.com derekwaynecarr: [40, 0]
-package 28 28
-	justin@fathomdb.com Justin Santa Barbara: [28, 28]
-unknown 9041122 2133824
+unknown 169392 52368
 	clove@cnmconsulting.net Chris Love: [14413, 3918]
-	justin@fathomdb.com Justin Santa Barbara: [8575482, 1948538]
+	justin@fathomdb.com Justin Santa Barbara: [123832, 40507]
 	svozza@gmail.com Stefano Vozza: [13, 2]
 	laurent@crisci.io Laurent Crisci: [6, 6]
 	bwilsonhunt@gmail.com Bradley: [11, 10]
@@ -485,10 +469,10 @@ unknown 9041122 2133824
 	contact@voyalab.com Voyalab LLC: [1, 1]
 	dennis@bluesentryit.com Dennis Webb: [91, 0]
 	while1eq1@gmail.com William Broach: [21, 6]
-	miaol@vmware.com Miao Luo: [53593, 417]
+	miaol@vmware.com Miao Luo: [778, 417]
 	shivania@vmware.com Abrar Shivani: [408, 46]
 	prashimas@vmware.com prashima: [896, 176]
-	sandeeppissay@users.noreply.github.com SandeepPissay: [136123, 80]
+	sandeeppissay@users.noreply.github.com SandeepPissay: [995, 80]
 	ryanlitalien@gmail.com Ryan L'Italien: [8, 1]
 	leandro.repolho@theiconic.com.au Leandro Repolho: [7, 3]
 	pronix.service@gmail.com dima: [420, 9]
@@ -505,7 +489,7 @@ unknown 9041122 2133824
 	adrian@changeover.za.net Adrian Moisey: [2, 2]
 	dcohen@gatech.edu Daniel Cohen: [96, 60]
 	theo.ch@mley.fr Théo Chamley: [342, 24]
-	kris@nivenly.com Kris Nova: [227857, 176019]
+	kris@nivenly.com Kris Nova: [6358, 2594]
 	arthurlm44@gmail.com Arthur Le Maitre: [4, 2]
 	zytek@nuxi.pl Jakub Paweł Głazik: [143, 117]
 	robin@trinimbus.com Robin Percy: [446, 77]
@@ -571,7 +555,7 @@ unknown 9041122 2133824
 	aps.sids@gmail.com Aman: [238, 13]
 	emerlinsky@gmail.com emerlinsky: [19, 1]
 	beethoven1110@gmail.com Carl B. beethoven1110@gmail.com: [5, 2]
-	billy.shambrook@gmail.com Billy Shambrook: [12326, 52]
+	billy.shambrook@gmail.com Billy Shambrook: [1688, 52]
 	cgilmour@gmail.com Caleb Gilmour: [1, 0]
 	radcliffe.david@gmail.com David Radcliffe: [2, 2]
 	jdubay@discogsinc.com Jesse Dubay: [3, 3]
@@ -602,28 +586,21 @@ unknown 9041122 2133824
 	etune@google.com Eric Tune: [41, 51]
 	abshah@google.com Abhishek Shah: [21, 2]
 	decarr@redhat.com derekwaynecarr: [3, 3]
-image 28729 19395
+image 0 0
 	clove@cnmconsulting.net Chris Love: [0, 0]
-	justin@fathomdb.com Justin Santa Barbara: [28421, 19087]
-	kris@nivenly.com Kris Nova: [308, 308]
-documentation 60259 3642
+	kris@nivenly.com Kris Nova: [0, 0]
+documentation 131 4
 	clove@cnmconsulting.net Chris Love: [60, 0]
-	justin@fathomdb.com Justin Santa Barbara: [57766, 3642]
-	sandeeppissay@users.noreply.github.com SandeepPissay: [365, 0]
-	kris@nivenly.com Kris Nova: [98, 0]
-	billy.shambrook@gmail.com Billy Shambrook: [1970, 0]
-ui 169 137
-	justin@fathomdb.com Justin Santa Barbara: [169, 137]
-build 27965 10088
+	justin@fathomdb.com Justin Santa Barbara: [71, 4]
+build 1152 601
 	clove@cnmconsulting.net Chris Love: [89, 32]
-	justin@fathomdb.com Justin Santa Barbara: [26802, 9756]
+	justin@fathomdb.com Justin Santa Barbara: [741, 381]
 	willem.mali@gmail.com Willem Mali: [92, 13]
 	geojaz@users.noreply.github.com Eric Hole: [2, 2]
-	miaol@vmware.com Miao Luo: [207, 6]
+	miaol@vmware.com Miao Luo: [0, 6]
 	prashimas@vmware.com prashima: [27, 4]
-	sandeeppissay@users.noreply.github.com SandeepPissay: [112, 0]
 	andrew@wattpad.com andrewsykim: [2, 2]
-	kris@nivenly.com Kris Nova: [452, 116]
+	kris@nivenly.com Kris Nova: [19, 4]
 	zytek@nuxi.pl Jakub Paweł Głazik: [1, 1]
 	daniel@dcn.io Daniel Nelson: [6, 6]
 	zml@google.com Zach Loafman: [128, 125]
@@ -633,14 +610,9 @@ build 27965 10088
 	beethoven1110@gmail.com Carl B. beethoven1110@gmail.com: [2, 2]
 	billy.shambrook@gmail.com Billy Shambrook: [3, 0]
 	michel@traveloka.com Michel Alexandre Salim: [4, 3]
-translation 65468 23
-	justin@fathomdb.com Justin Santa Barbara: [65468, 23]
-devel-doc 298342 93607
-code 142521 41526
-package 28 28
-unknown 9041122 2133824
-image 28729 19395
-documentation 60259 3642
-ui 169 137
-build 27965 10088
-translation 65468 23
+devel-doc 2148 802
+code 3374 2393
+unknown 169392 52368
+image 0 0
+documentation 131 4
+build 1152 601

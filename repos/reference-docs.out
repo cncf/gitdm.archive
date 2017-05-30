@@ -1,42 +1,42 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/reference-docs.csv
 
 unknown@hacker.net Unknown hacker
 pwittroc+github@google.com Phillip Wittrock
-	devel-doc [15788, 3296]
+	devel-doc [9924, 3296]
 	code [183553, 61186]
-	unknown [247441, 60019]
+	unknown [170255, 60017]
 	image [9741, 3247]
-	documentation [131107, 26302]
+	documentation [130933, 26302]
 	ui [213, 71]
-	build [1188, 147]
+	build [320, 147]
 jmyue@hotmail.com supereagle
 	unknown [12, 12]
 gregoplex@users.noreply.github.com gregoplex
 	unknown [1, 1]
 sarah.novotny@gmail.com sarahnovotny
 	devel-doc [201, 0]
-devel-doc 15989 3296
-	pwittroc+github@google.com Phillip Wittrock: [15788, 3296]
+devel-doc 10125 3296
+	pwittroc+github@google.com Phillip Wittrock: [9924, 3296]
 	sarah.novotny@gmail.com sarahnovotny: [201, 0]
 code 183553 61186
 	pwittroc+github@google.com Phillip Wittrock: [183553, 61186]
-unknown 247454 60032
-	pwittroc+github@google.com Phillip Wittrock: [247441, 60019]
+unknown 170268 60030
+	pwittroc+github@google.com Phillip Wittrock: [170255, 60017]
 	jmyue@hotmail.com supereagle: [12, 12]
 	gregoplex@users.noreply.github.com gregoplex: [1, 1]
 image 9741 3247
 	pwittroc+github@google.com Phillip Wittrock: [9741, 3247]
-documentation 131107 26302
-	pwittroc+github@google.com Phillip Wittrock: [131107, 26302]
+documentation 130933 26302
+	pwittroc+github@google.com Phillip Wittrock: [130933, 26302]
 ui 213 71
 	pwittroc+github@google.com Phillip Wittrock: [213, 71]
-build 1188 147
-	pwittroc+github@google.com Phillip Wittrock: [1188, 147]
-devel-doc 15989 3296
+build 320 147
+	pwittroc+github@google.com Phillip Wittrock: [320, 147]
+devel-doc 10125 3296
 code 183553 61186
-unknown 247454 60032
+unknown 170268 60030
 image 9741 3247
-documentation 131107 26302
+documentation 130933 26302
 ui 213 71
-build 1188 147
+build 320 147

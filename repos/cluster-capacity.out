@@ -1,80 +1,54 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/cluster-capacity.csv
 
 unknown@hacker.net Unknown hacker
 avesh.ncsu@gmail.com Avesh Agarwal
-	devel-doc [93262, 88833]
-	code [21063, 33081]
-	unknown [1442765, 4119261]
-	image [1499, 2809]
-	documentation [30251, 43753]
-	ui [6, 1]
-	build [5839, 7822]
-	translation [5323, 2792]
+	unknown [1326, 3561]
+	devel-doc [36, 186]
+	code [1, 58]
+	build [4, 1]
+	documentation [1, 1]
 decarr@redhat.com Derek Carr
-	unknown [2374, 249]
+	unknown [2359, 247]
 	devel-doc [212, 0]
 	code [421, 0]
 	build [28, 0]
 	documentation [58, 0]
 jchaloup@redhat.com Jan Chaloupka
-	devel-doc [62728, 7149]
-	code [13079, 1376]
-	unknown [2324401, 266369]
-	image [0, 0]
-	documentation [4649, 494]
-	build [1452, 180]
+	unknown [6163, 2271]
+	devel-doc [364, 39]
+	code [128, 18]
+	build [19, 4]
 dhodovsk@redhat.com Dominika Hodovska
-	devel-doc [130532, 1167]
-	code [90248, 666]
-	package [0, 0]
-	unknown [5841752, 93567]
-	image [4025, 0]
-	documentation [63503, 81]
-	ui [1, 0]
-	build [15877, 275]
-devel-doc 286734 97149
-	avesh.ncsu@gmail.com Avesh Agarwal: [93262, 88833]
+	unknown [2937, 970]
+	devel-doc [50, 32]
+	code [66, 11]
+	documentation [1218, 29]
+unknown 12785 7049
+	avesh.ncsu@gmail.com Avesh Agarwal: [1326, 3561]
+	decarr@redhat.com Derek Carr: [2359, 247]
+	jchaloup@redhat.com Jan Chaloupka: [6163, 2271]
+	dhodovsk@redhat.com Dominika Hodovska: [2937, 970]
+devel-doc 662 257
+	avesh.ncsu@gmail.com Avesh Agarwal: [36, 186]
 	decarr@redhat.com Derek Carr: [212, 0]
-	jchaloup@redhat.com Jan Chaloupka: [62728, 7149]
-	dhodovsk@redhat.com Dominika Hodovska: [130532, 1167]
-code 124811 35123
-	avesh.ncsu@gmail.com Avesh Agarwal: [21063, 33081]
+	jchaloup@redhat.com Jan Chaloupka: [364, 39]
+	dhodovsk@redhat.com Dominika Hodovska: [50, 32]
+code 616 87
+	avesh.ncsu@gmail.com Avesh Agarwal: [1, 58]
 	decarr@redhat.com Derek Carr: [421, 0]
-	jchaloup@redhat.com Jan Chaloupka: [13079, 1376]
-	dhodovsk@redhat.com Dominika Hodovska: [90248, 666]
-package 0 0
-	dhodovsk@redhat.com Dominika Hodovska: [0, 0]
-unknown 9611292 4479446
-	avesh.ncsu@gmail.com Avesh Agarwal: [1442765, 4119261]
-	decarr@redhat.com Derek Carr: [2374, 249]
-	jchaloup@redhat.com Jan Chaloupka: [2324401, 266369]
-	dhodovsk@redhat.com Dominika Hodovska: [5841752, 93567]
-image 5524 2809
-	avesh.ncsu@gmail.com Avesh Agarwal: [1499, 2809]
-	jchaloup@redhat.com Jan Chaloupka: [0, 0]
-	dhodovsk@redhat.com Dominika Hodovska: [4025, 0]
-documentation 98461 44328
-	avesh.ncsu@gmail.com Avesh Agarwal: [30251, 43753]
-	decarr@redhat.com Derek Carr: [58, 0]
-	jchaloup@redhat.com Jan Chaloupka: [4649, 494]
-	dhodovsk@redhat.com Dominika Hodovska: [63503, 81]
-ui 7 1
-	avesh.ncsu@gmail.com Avesh Agarwal: [6, 1]
-	dhodovsk@redhat.com Dominika Hodovska: [1, 0]
-build 23196 8277
-	avesh.ncsu@gmail.com Avesh Agarwal: [5839, 7822]
+	jchaloup@redhat.com Jan Chaloupka: [128, 18]
+	dhodovsk@redhat.com Dominika Hodovska: [66, 11]
+build 51 5
+	avesh.ncsu@gmail.com Avesh Agarwal: [4, 1]
 	decarr@redhat.com Derek Carr: [28, 0]
-	jchaloup@redhat.com Jan Chaloupka: [1452, 180]
-	dhodovsk@redhat.com Dominika Hodovska: [15877, 275]
-translation 5323 2792
-	avesh.ncsu@gmail.com Avesh Agarwal: [5323, 2792]
-devel-doc 286734 97149
-code 124811 35123
-package 0 0
-unknown 9611292 4479446
-image 5524 2809
-documentation 98461 44328
-ui 7 1
-build 23196 8277
-translation 5323 2792
+	jchaloup@redhat.com Jan Chaloupka: [19, 4]
+documentation 1277 30
+	avesh.ncsu@gmail.com Avesh Agarwal: [1, 1]
+	decarr@redhat.com Derek Carr: [58, 0]
+	dhodovsk@redhat.com Dominika Hodovska: [1218, 29]
+unknown 12785 7049
+devel-doc 662 257
+code 616 87
+build 51 5
+documentation 1277 30

@@ -1,12 +1,12 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/output_numstat.csv
 
 yarntime@163.com is an author name, probably not what you want
 unknown@hacker.net Unknown hacker
 saadali@google.com saadali
 	code [13, 28]
-	unknown [115, 249]
-	devel-doc [4255, 3807]
+	unknown [114, 248]
+	devel-doc [828, 380]
 	documentation [1, 0]
 	build [0, 9]
 jsz@google.com Jerzy Szczepkowski
@@ -16,8 +16,8 @@ jsz@google.com Jerzy Szczepkowski
 	build [76, 2]
 	documentation [1, 1]
 stclair@google.com Tim St. Clair
-	unknown [5803, 2853]
-	devel-doc [811, 2311]
+	unknown [4825, 2849]
+	devel-doc [605, 2311]
 	code [3, 3]
 jinxu@google.com Jing Xu
 	unknown [2225, 570]
@@ -40,7 +40,7 @@ sjenning@redhat.com Seth Jennings
 mwielgus@google.com Marcin Wielgus
 	code [7, 7]
 	unknown [17270, 2329]
-	devel-doc [504, 241]
+	devel-doc [500, 239]
 	documentation [22, 0]
 	build [0, 0]
 thockin@google.com Tim Hockin
@@ -50,14 +50,14 @@ thockin@google.com Tim Hockin
 	build [114, 57]
 	documentation [1, 0]
 jliggitt@redhat.com Jordan Liggitt
-	unknown [3330, 1100]
-	devel-doc [548, 28]
+	unknown [3034, 1100]
+	devel-doc [231, 28]
 	code [50, 2]
 	documentation [3, 0]
 decarr@redhat.com Derek Carr
 	code [14, 1]
-	unknown [2731, 996]
-	devel-doc [18, 3]
+	unknown [2263, 661]
+	devel-doc [16, 2]
 	documentation [2, 0]
 mkargaki@redhat.com Michail Kargakis
 	unknown [3825, 1380]
@@ -66,9 +66,9 @@ mkargaki@redhat.com Michail Kargakis
 	build [8, 0]
 	documentation [0, 0]
 deads@redhat.com deads2k
-	devel-doc [405, 4237]
+	devel-doc [405, 4191]
 	code [270, 496]
-	unknown [21119, 64708]
+	unknown [21119, 51312]
 	image [0, 2]
 	documentation [6, 1]
 	build [5, 1]
@@ -92,10 +92,10 @@ mixia@google.com Minhan Xia
 caosf.fnst@cn.fujitsu.com Cao Shufeng
 	unknown [24, 1]
 mikedanese@google.com Mike Danese
-	unknown [3828, 14552]
-	devel-doc [45578, 1676]
+	unknown [2137, 1156]
+	devel-doc [33492, 1358]
 	code [254, 61]
-	build [16, 6]
+	build [14, 6]
 	documentation [9, 0]
 zihongz@google.com Zihong Zheng
 	unknown [949, 437]
@@ -113,7 +113,7 @@ yarntime@163.com yarntime@163.com
 	unknown [279, 3]
 	devel-doc [13, 0]
 ramanathana@google.com Anirudh
-	unknown [1058, 699]
+	unknown [1058, 618]
 	devel-doc [6, 198]
 mengqiy@google.com ymqytw
 	unknown [6368, 5525]
@@ -138,7 +138,7 @@ rkouj@google.com rkouj
 	documentation [1, 0]
 	build [1, 0]
 wojtekt@google.com Wojciech Tyczynski
-	unknown [2645, 2072]
+	unknown [2621, 2054]
 	devel-doc [26, 7]
 	code [667, 233]
 	build [101, 36]
@@ -166,8 +166,8 @@ robertbailey@google.com Robert Bailey
 	build [1, 1]
 miaol@vmware.com Miao Luo
 	code [5, 5]
-	unknown [6301, 75]
-	devel-doc [372, 1]
+	unknown [2486, 75]
+	devel-doc [260, 1]
 	documentation [0, 0]
 rfranken@google.com Rob Franken
 	unknown [3, 3]
@@ -178,7 +178,7 @@ nikhiljindal@google.com nikhiljindal
 bryk@google.com bryk
 	unknown [10, 10]
 ccoleman@redhat.com Clayton Coleman
-	unknown [12502, 4151]
+	unknown [11745, 4150]
 	devel-doc [211, 13]
 	code [29, 20]
 	build [142, 2]
@@ -189,7 +189,7 @@ pszczesniak@google.com Piotr Szczesniak
 	code [1, 26]
 	build [4, 4]
 hongchaodeng1@gmail.com Hongchao Deng
-	unknown [2098, 1235]
+	unknown [1099, 589]
 	devel-doc [46, 0]
 	code [1, 1]
 	documentation [1, 0]
@@ -224,11 +224,11 @@ yashulyak@gmail.com Dmitry Shulyak
 	code [5, 0]
 	documentation [1, 0]
 bburns@google.com Brendan Burns
-	unknown [3305, 91]
-	devel-doc [209, 0]
-	documentation [18, 0]
+	unknown [1141, 91]
+	devel-doc [95, 0]
+	documentation [3, 0]
 maszulik@redhat.com Maciej Szulik
-	unknown [2627, 1429]
+	unknown [2467, 1364]
 	devel-doc [13, 10]
 	documentation [0, 0]
 harryz@hyper.sh Harry Zhang
@@ -247,7 +247,7 @@ bchilds@redhat.com childsb
 	unknown [5, 14]
 	devel-doc [0, 1]
 dashpole@google.com David Ashpole
-	unknown [1193, 696]
+	unknown [1030, 547]
 	devel-doc [1, 0]
 	code [4, 14]
 lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski
@@ -270,12 +270,12 @@ fejta@google.com Erick Fejta
 	unknown [126, 142]
 	code [21, 63]
 hchiramm@redhat.com Humble Chirammal
-	unknown [202, 73]
+	unknown [187, 71]
 	devel-doc [35, 30]
 dims@linux.vnet.ibm.com Davanum Srinivas
-	unknown [16132, 5237]
-	devel-doc [1340, 8]
-	code [113, 18]
+	unknown [480, 167]
+	devel-doc [1267, 7]
+	code [73, 18]
 	documentation [1, 0]
 mml@google.com Matt Liggett
 	unknown [421, 168]
@@ -317,8 +317,8 @@ euan.kemp@coreos.com Euan Kemp
 	build [2, 2]
 justin@fathomdb.com Justin Santa Barbara
 	code [7, 7]
-	unknown [2224, 1669]
-	devel-doc [30, 836]
+	unknown [2224, 1373]
+	devel-doc [29, 509]
 	documentation [2, 0]
 	build [4, 19]
 leitzler@gmail.com Pontus Leitzler
@@ -345,8 +345,8 @@ brandon.philips@coreos.com Brandon Philips
 	devel-doc [14, 258]
 	documentation [0, 0]
 ffranz@redhat.com Fabiano Franz
-	unknown [1597, 656]
-	devel-doc [192, 0]
+	unknown [1435, 656]
+	devel-doc [58, 0]
 	code [40, 0]
 jianhui.zhou@huawei.com jianhuiz
 	unknown [66, 6]
@@ -404,7 +404,7 @@ dj199008@gmail.com m1093782566
 	build [82, 19]
 xuchao@google.com Chao Xu
 	unknown [220438, 45182]
-	devel-doc [4996, 2428]
+	devel-doc [4901, 2416]
 	code [2052, 407]
 	build [61, 2]
 	documentation [440, 0]
@@ -423,22 +423,21 @@ joe.github@bedafamily.com Joe Beda
 	code [967, 873]
 	build [0, 4]
 tstclair@redhat.com Timothy St. Clair
-	unknown [2585, 1013]
-	devel-doc [106, 107]
+	unknown [1046, 615]
+	devel-doc [1, 0]
 	documentation [1, 0]
 stephenhsu90@gmail.com Di Xu
 	unknown [46, 8]
 	devel-doc [2, 0]
 	documentation [1, 0]
 hchen@redhat.com Huamin Chen
-	unknown [6441, 249]
-	devel-doc [609, 14]
+	unknown [1033, 141]
+	devel-doc [586, 13]
 jay@apache.org jayunit100
-	unknown [21898, 303]
-	devel-doc [7953, 1027]
-	code [96, 7]
-	build [17, 0]
-	documentation [175, 0]
+	unknown [928, 303]
+	devel-doc [5170, 1027]
+	code [11, 7]
+	documentation [1, 0]
 jtanenba@redhat.com Jacob Tanenbaum
 	unknown [350, 13]
 	code [66, 13]
@@ -541,7 +540,7 @@ chenr.fnst@cn.fujitsu.com xilabao
 	unknown [1, 1]
 	code [7, 0]
 mmilata@redhat.com Martin Milata
-	unknown [7, 9]
+	unknown [1, 1]
 vincent.heet@topicus.nl Vincent Heet
 	unknown [4, 4]
 bgrant0607@users.noreply.github.com Brian Grant
@@ -555,8 +554,8 @@ ishvedunov@mirantis.com Ivan Shvedunov
 	devel-doc [4, 4]
 	code [2, 2]
 errordeveloper@gmail.com Ilya Dmitrichenko
-	unknown [11659, 2298]
-	devel-doc [1174, 111]
+	unknown [4540, 2298]
+	devel-doc [720, 111]
 	documentation [35, 31]
 miao.yanqiang@zte.com.cn Yanqiang Miao
 	unknown [0, 25]
@@ -645,14 +644,14 @@ mspreitz@us.ibm.com Mike Spreitzer
 pigmej@gmail.com Jędrzej Nowak
 	unknown [72, 72]
 mathieu.velten@cern.ch Mathieu Velten
-	unknown [409, 223]
+	unknown [92, 71]
 	devel-doc [199, 0]
 davidopp@google.com David Oppenheimer
 	unknown [42, 292]
 jm.carp@gmail.com Joshua Carp
 	unknown [36, 18]
 graham.hayes@hpe.com Graham Hayes
-	unknown [844, 31]
+	unknown [272, 31]
 	devel-doc [398, 0]
 atanas.mirchev@est.fujitsu.com Atanas Mirchev
 	unknown [241, 126]
@@ -738,7 +737,7 @@ aanm90@gmail.com André Martins
 zhang.ke106@zte.com.cn Ke Zhang
 	unknown [134, 85]
 optimuswu8685@gmail.com wu8685
-	unknown [865, 324]
+	unknown [655, 225]
 lu.zhenxing@zte.com.cn lojies
 	unknown [86, 64]
 sean@coreitpro.com Sean M. Collins
@@ -746,12 +745,12 @@ sean@coreitpro.com Sean M. Collins
 oz.tiram@mobilityhouse.com Oz N Tiram
 	unknown [1, 1]
 simon@swine.de Christian Simon
-	unknown [1169, 354]
+	unknown [1069, 322]
 	devel-doc [2, 2]
 	documentation [0, 0]
 mkumatag@in.ibm.com Manjunath A Kumatagi
-	unknown [16284, 3427]
-	code [88, 25]
+	unknown [67, 12]
+	code [7, 1]
 	documentation [15, 0]
 yancey1989@gmail.com Yancey1989
 	build [2, 2]
@@ -763,11 +762,11 @@ spiffxp@gmail.com Aaron Crickenberger
 jackson.coakley@gmail.com hacktastic
 	unknown [3, 21]
 dbsmith@google.com Daniel Smith
-	unknown [6074, 6034]
-	devel-doc [2158, 169]
+	unknown [704, 5951]
+	devel-doc [1906, 119]
 	code [73, 47]
 eric.chiang.m@gmail.com Eric Chiang
-	unknown [93, 88]
+	unknown [40, 16]
 philibert.dugas@gmail.com Philibert Dugas
 	unknown [27, 22]
 marcin.maciaszczyk@ts.fujitsu.com Marcin Maciaszczyk
@@ -791,8 +790,8 @@ dujun5@huawei.com d00369826
 anthony.elizondo@gmail.com Anthony Elizondo
 	unknown [6, 6]
 johannes.scheuermann@inovex.de Johannes Scheuermann
-	unknown [597, 20]
-	devel-doc [193, 6]
+	unknown [376, 20]
+	devel-doc [130, 6]
 tom@haddons.net Tom Haddon
 	unknown [2, 2]
 haih@us.ibm.com Hai Huang
@@ -868,21 +867,21 @@ ant.mironov@gmail.com Anton Mironov
 	code [5, 4]
 lparam@users.noreply.github.com lparam
 	code [1, 0]
-devel-doc 79180 23334
-	saadali@google.com saadali: [4255, 3807]
+devel-doc 58929 19042
+	saadali@google.com saadali: [828, 380]
 	jsz@google.com Jerzy Szczepkowski: [32, 4]
-	stclair@google.com Tim St. Clair: [811, 2311]
+	stclair@google.com Tim St. Clair: [605, 2311]
 	jinxu@google.com Jing Xu: [8, 0]
 	mehdy@google.com mbohlool: [6, 2]
 	sjenning@redhat.com Seth Jennings: [2, 0]
-	mwielgus@google.com Marcin Wielgus: [504, 241]
+	mwielgus@google.com Marcin Wielgus: [500, 239]
 	thockin@google.com Tim Hockin: [31, 2851]
-	jliggitt@redhat.com Jordan Liggitt: [548, 28]
-	decarr@redhat.com Derek Carr: [18, 3]
+	jliggitt@redhat.com Jordan Liggitt: [231, 28]
+	decarr@redhat.com Derek Carr: [16, 2]
 	mkargaki@redhat.com Michail Kargakis: [4, 0]
-	deads@redhat.com deads2k: [405, 4237]
+	deads@redhat.com deads2k: [405, 4191]
 	madhusudancs@google.com Madhusudan.C.S: [254, 23]
-	mikedanese@google.com Mike Danese: [45578, 1676]
+	mikedanese@google.com Mike Danese: [33492, 1358]
 	zihongz@google.com Zihong Zheng: [104, 79]
 	alexander.kanevskiy@intel.com Alexander Kanevskiy: [1, 1]
 	jgrafton@google.com Jeff Grafton: [3, 3]
@@ -896,7 +895,7 @@ devel-doc 79180 23334
 	chiachenk@google.com Janet Kuo: [142, 146]
 	taotaotheripper@gmail.com Random-Liu: [97, 7]
 	yjhong@google.com Yu-Ju Hong: [32, 0]
-	miaol@vmware.com Miao Luo: [372, 1]
+	miaol@vmware.com Miao Luo: [260, 1]
 	nikhiljindal@google.com nikhiljindal: [51, 1]
 	ccoleman@redhat.com Clayton Coleman: [211, 13]
 	pszczesniak@google.com Piotr Szczesniak: [3, 15]
@@ -906,7 +905,7 @@ devel-doc 79180 23334
 	bowei@google.com Bowei Du: [199, 4]
 	jeffml@google.com Jeff Lowdermilk: [10, 0]
 	yashulyak@gmail.com Dmitry Shulyak: [3, 0]
-	bburns@google.com Brendan Burns: [209, 0]
+	bburns@google.com Brendan Burns: [95, 0]
 	maszulik@redhat.com Maciej Szulik: [13, 10]
 	harryz@hyper.sh Harry Zhang: [5, 22]
 	feiskyer@gmail.com Pengfei Ni: [8, 0]
@@ -914,18 +913,18 @@ devel-doc 79180 23334
 	dashpole@google.com David Ashpole: [1, 0]
 	runseb@gmail.com sebgoa: [97, 200]
 	hchiramm@redhat.com Humble Chirammal: [35, 30]
-	dims@linux.vnet.ibm.com Davanum Srinivas: [1340, 8]
+	dims@linux.vnet.ibm.com Davanum Srinivas: [1267, 7]
 	etune@google.com Eric Tune: [1, 0]
 	jakub.dlugolecki@intel.com Dlugolecki, Jakub: [0, 1]
 	jsafrane@redhat.com Jan Safranek: [23, 15]
 	vishnuk@google.com Vishnu kannan: [12, 1]
-	justin@fathomdb.com Justin Santa Barbara: [30, 836]
+	justin@fathomdb.com Justin Santa Barbara: [29, 509]
 	pweil@redhat.com pweil-: [224, 0]
 	klaus1982.cn@gmail.com Klaus Ma: [2, 1]
 	acidburn@google.com Jess Frazelle: [987, 622]
 	vojtech.vitek@gmail.com Vojtech Vitek: [1, 1]
 	brandon.philips@coreos.com Brandon Philips: [14, 258]
-	ffranz@redhat.com Fabiano Franz: [192, 0]
+	ffranz@redhat.com Fabiano Franz: [58, 0]
 	jimmy@jimmycuadra.com Jimmy Cuadra: [55, 55]
 	sross@redhat.com Solly Ross: [13, 3]
 	pires@apprenda.com Paulo Pires: [103, 29]
@@ -934,14 +933,14 @@ devel-doc 79180 23334
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [3, 147]
 	foxish@users.noreply.github.com Anirudh Ramanathan: [32, 32]
 	dj199008@gmail.com m1093782566: [39, 5]
-	xuchao@google.com Chao Xu: [4996, 2428]
+	xuchao@google.com Chao Xu: [4901, 2416]
 	agoldste@redhat.com Andy Goldstein: [940, 88]
 	bdbauer@google.com Benjamin Bauer: [1, 0]
 	joe.github@bedafamily.com Joe Beda: [73, 67]
-	tstclair@redhat.com Timothy St. Clair: [106, 107]
+	tstclair@redhat.com Timothy St. Clair: [1, 0]
 	stephenhsu90@gmail.com Di Xu: [2, 0]
-	hchen@redhat.com Huamin Chen: [609, 14]
-	jay@apache.org jayunit100: [7953, 1027]
+	hchen@redhat.com Huamin Chen: [586, 13]
+	jay@apache.org jayunit100: [5170, 1027]
 	pmorie@redhat.com Paul Morie: [1, 4]
 	dgoodwin@redhat.com Devan Goodwin: [92, 39]
 	djmm@google.com David McMahon: [361, 205]
@@ -960,7 +959,7 @@ devel-doc 79180 23334
 	nickren19@gmail.com NickrenREN: [1, 1]
 	shivania@vmware.com Abrar Shivani: [388, 1]
 	ishvedunov@mirantis.com Ivan Shvedunov: [4, 4]
-	errordeveloper@gmail.com Ilya Dmitrichenko: [1174, 111]
+	errordeveloper@gmail.com Ilya Dmitrichenko: [720, 111]
 	sritesh@vmware.com Ritesh H Shukla: [4, 4]
 	avagarwa@redhat.com Avesh Agarwal: [1, 1]
 	slang800@gmail.com Sean Lang: [1, 1]
@@ -976,15 +975,15 @@ devel-doc 79180 23334
 	dug@us.ibm.com Doug Davis: [67, 65]
 	simon@swine.de Christian Simon: [2, 2]
 	spiffxp@gmail.com Aaron Crickenberger: [133, 0]
-	dbsmith@google.com Daniel Smith: [2158, 169]
-	johannes.scheuermann@inovex.de Johannes Scheuermann: [193, 6]
+	dbsmith@google.com Daniel Smith: [1906, 119]
+	johannes.scheuermann@inovex.de Johannes Scheuermann: [130, 6]
 	hans@starefossen.com Hans Kristian Flaatten: [1, 1]
 	derek.mahar@gmail.com Derek Mahar: [1, 1]
 	nrkfeller@gmail.com Nicolas Feller: [1, 1]
 	jrhoak@gmail.com Josh Hoak: [1, 1]
 	matthew.bruzek@canonical.com Matt Bruzek: [5, 3]
 	jvance@redhat.com Jeff Vance: [52, 2]
-code 11711 7793
+code 11505 7769
 	saadali@google.com saadali: [13, 28]
 	jsz@google.com Jerzy Szczepkowski: [416, 125]
 	stclair@google.com Tim St. Clair: [3, 3]
@@ -1025,7 +1024,7 @@ code 11711 7793
 	dashpole@google.com David Ashpole: [4, 14]
 	lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [1, 1]
 	fejta@google.com Erick Fejta: [21, 63]
-	dims@linux.vnet.ibm.com Davanum Srinivas: [113, 18]
+	dims@linux.vnet.ibm.com Davanum Srinivas: [73, 18]
 	mml@google.com Matt Liggett: [8, 6]
 	cole.mickens@gmail.com Cole Mickens: [17, 22]
 	etune@google.com Eric Tune: [1, 1]
@@ -1048,7 +1047,7 @@ code 11711 7793
 	xuchao@google.com Chao Xu: [2052, 407]
 	agoldste@redhat.com Andy Goldstein: [16, 0]
 	joe.github@bedafamily.com Joe Beda: [967, 873]
-	jay@apache.org jayunit100: [96, 7]
+	jay@apache.org jayunit100: [11, 7]
 	jtanenba@redhat.com Jacob Tanenbaum: [66, 13]
 	pmorie@redhat.com Paul Morie: [66, 49]
 	jvallejo@redhat.com juanvallejo: [94, 0]
@@ -1080,7 +1079,7 @@ code 11711 7793
 	bernard@bvandewa.com Bernard Van De Walle: [1, 1]
 	dug@us.ibm.com Doug Davis: [1, 1]
 	aanm90@gmail.com André Martins: [3, 2]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [88, 25]
+	mkumatag@in.ibm.com Manjunath A Kumatagi: [7, 1]
 	dbsmith@google.com Daniel Smith: [73, 47]
 	pengjingtian@huawei.com Jingtian Peng: [1, 1]
 	ameyd@google.com Amey Deshpande: [2, 2]
@@ -1092,46 +1091,46 @@ code 11711 7793
 	bmoylan@palantir.com Brad Moylan: [16, 7]
 	ant.mironov@gmail.com Anton Mironov: [5, 4]
 	lparam@users.noreply.github.com lparam: [1, 0]
-unknown 608498 290534
-	saadali@google.com saadali: [115, 249]
+unknown 523051 252707
+	saadali@google.com saadali: [114, 248]
 	jsz@google.com Jerzy Szczepkowski: [589, 105]
-	stclair@google.com Tim St. Clair: [5803, 2853]
+	stclair@google.com Tim St. Clair: [4825, 2849]
 	jinxu@google.com Jing Xu: [2225, 570]
 	mehdy@google.com mbohlool: [97720, 48750]
 	spxtr@google.com Joe Finney: [298, 574]
 	sjenning@redhat.com Seth Jennings: [774, 104]
 	mwielgus@google.com Marcin Wielgus: [17270, 2329]
 	thockin@google.com Tim Hockin: [230, 12661]
-	jliggitt@redhat.com Jordan Liggitt: [3330, 1100]
-	decarr@redhat.com Derek Carr: [2731, 996]
+	jliggitt@redhat.com Jordan Liggitt: [3034, 1100]
+	decarr@redhat.com Derek Carr: [2263, 661]
 	mkargaki@redhat.com Michail Kargakis: [3825, 1380]
-	deads@redhat.com deads2k: [21119, 64708]
+	deads@redhat.com deads2k: [21119, 51312]
 	madhusudancs@google.com Madhusudan.C.S: [3986, 486]
 	ttsujika@zlab.co.jp Tatsuhiro Tsujikawa: [4, 0]
 	dawnchen@google.com Dawn Chen: [61, 16]
 	mixia@google.com Minhan Xia: [1087, 684]
 	caosf.fnst@cn.fujitsu.com Cao Shufeng: [24, 1]
-	mikedanese@google.com Mike Danese: [3828, 14552]
+	mikedanese@google.com Mike Danese: [2137, 1156]
 	zihongz@google.com Zihong Zheng: [949, 437]
 	alexander.kanevskiy@intel.com Alexander Kanevskiy: [56, 20]
 	jgrafton@google.com Jeff Grafton: [16, 9]
 	yarntime@163.com yarntime@163.com: [279, 3]
-	ramanathana@google.com Anirudh: [1058, 699]
+	ramanathana@google.com Anirudh: [1058, 618]
 	mengqiy@google.com ymqytw: [6368, 5525]
 	mtaufen@google.com Michael Taufen: [684, 334]
 	beeps@google.com bprashanth: [2855, 1260]
 	rkouj@google.com rkouj: [360, 49]
-	wojtekt@google.com Wojciech Tyczynski: [2645, 2072]
+	wojtekt@google.com Wojciech Tyczynski: [2621, 2054]
 	chiachenk@google.com Janet Kuo: [6583, 3724]
 	taotaotheripper@gmail.com Random-Liu: [7227, 2680]
 	yjhong@google.com Yu-Ju Hong: [3652, 1781]
-	miaol@vmware.com Miao Luo: [6301, 75]
+	miaol@vmware.com Miao Luo: [2486, 75]
 	rfranken@google.com Rob Franken: [3, 3]
 	nikhiljindal@google.com nikhiljindal: [2331, 540]
 	bryk@google.com bryk: [10, 10]
-	ccoleman@redhat.com Clayton Coleman: [12502, 4151]
+	ccoleman@redhat.com Clayton Coleman: [11745, 4150]
 	pszczesniak@google.com Piotr Szczesniak: [243, 9298]
-	hongchaodeng1@gmail.com Hongchao Deng: [2098, 1235]
+	hongchaodeng1@gmail.com Hongchao Deng: [1099, 589]
 	krousey@google.com Kris: [79, 63]
 	vmik@google.com Mik Vyatskov: [806, 627]
 	gmarek@google.com gmarek: [4956, 3904]
@@ -1139,14 +1138,14 @@ unknown 608498 290534
 	jeffml@google.com Jeff Lowdermilk: [452, 36]
 	metal3d@gmail.com Patrice Ferlet: [1, 1]
 	yashulyak@gmail.com Dmitry Shulyak: [336, 26]
-	bburns@google.com Brendan Burns: [3305, 91]
-	maszulik@redhat.com Maciej Szulik: [2627, 1429]
+	bburns@google.com Brendan Burns: [1141, 91]
+	maszulik@redhat.com Maciej Szulik: [2467, 1364]
 	harryz@hyper.sh Harry Zhang: [745, 114]
 	coolhzb@163.com AdoHe: [1252, 963]
 	feiskyer@gmail.com Pengfei Ni: [4518, 1607]
 	apelisse@gmail.com Antoine Pelisse: [781, 936]
 	bchilds@redhat.com childsb: [5, 14]
-	dashpole@google.com David Ashpole: [1193, 696]
+	dashpole@google.com David Ashpole: [1030, 547]
 	lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [53, 0]
 	sebastian.florek@ts.fujitsu.com Sebastian Florek: [71, 0]
 	marcin@owsiany.pl Marcin Owsiany: [2, 2]
@@ -1154,8 +1153,8 @@ unknown 608498 290534
 	runseb@gmail.com sebgoa: [4, 160]
 	zhao.xiangpeng@zte.com.cn xiangpengzhao: [5, 5]
 	fejta@google.com Erick Fejta: [126, 142]
-	hchiramm@redhat.com Humble Chirammal: [202, 73]
-	dims@linux.vnet.ibm.com Davanum Srinivas: [16132, 5237]
+	hchiramm@redhat.com Humble Chirammal: [187, 71]
+	dims@linux.vnet.ibm.com Davanum Srinivas: [480, 167]
 	mml@google.com Matt Liggett: [421, 168]
 	mjog@google.com Mandar U Jog: [36, 7]
 	cole.mickens@gmail.com Cole Mickens: [63, 30]
@@ -1166,14 +1165,14 @@ unknown 608498 290534
 	shashidhara.td@huawei.com shashidharatd: [620, 250]
 	vishnuk@google.com Vishnu kannan: [565, 330]
 	euan.kemp@coreos.com Euan Kemp: [538, 295]
-	justin@fathomdb.com Justin Santa Barbara: [2224, 1669]
+	justin@fathomdb.com Justin Santa Barbara: [2224, 1373]
 	leitzler@gmail.com Pontus Leitzler: [1, 1]
 	pweil@redhat.com pweil-: [1523, 33]
 	klaus1982.cn@gmail.com Klaus Ma: [332, 224]
 	acidburn@google.com Jess Frazelle: [59, 58]
 	cjcullen@google.com CJ Cullen: [6, 3]
 	brandon.philips@coreos.com Brandon Philips: [42, 83]
-	ffranz@redhat.com Fabiano Franz: [1597, 656]
+	ffranz@redhat.com Fabiano Franz: [1435, 656]
 	jianhui.zhou@huawei.com jianhuiz: [66, 6]
 	irfan.rehman@huawei.com Irfan Ur Rehman: [30, 6]
 	rickyp999@gmail.com Ricky Pai: [1, 1]
@@ -1195,10 +1194,10 @@ unknown 608498 290534
 	agoldste@redhat.com Andy Goldstein: [2258, 473]
 	bdbauer@google.com Benjamin Bauer: [1282, 5]
 	joe.github@bedafamily.com Joe Beda: [168, 99]
-	tstclair@redhat.com Timothy St. Clair: [2585, 1013]
+	tstclair@redhat.com Timothy St. Clair: [1046, 615]
 	stephenhsu90@gmail.com Di Xu: [46, 8]
-	hchen@redhat.com Huamin Chen: [6441, 249]
-	jay@apache.org jayunit100: [21898, 303]
+	hchen@redhat.com Huamin Chen: [1033, 141]
+	jay@apache.org jayunit100: [928, 303]
 	jtanenba@redhat.com Jacob Tanenbaum: [350, 13]
 	pmorie@redhat.com Paul Morie: [3442, 3332]
 	jvallejo@redhat.com juanvallejo: [699, 301]
@@ -1229,11 +1228,11 @@ unknown 608498 290534
 	filipg@google.com Filip Grzadkowski: [497, 0]
 	fmeng@ebay.com fmeng: [120, 10]
 	chenr.fnst@cn.fujitsu.com xilabao: [1, 1]
-	mmilata@redhat.com Martin Milata: [7, 9]
+	mmilata@redhat.com Martin Milata: [1, 1]
 	vincent.heet@topicus.nl Vincent Heet: [4, 4]
 	shivania@vmware.com Abrar Shivani: [261, 26]
 	ishvedunov@mirantis.com Ivan Shvedunov: [809, 1245]
-	errordeveloper@gmail.com Ilya Dmitrichenko: [11659, 2298]
+	errordeveloper@gmail.com Ilya Dmitrichenko: [4540, 2298]
 	miao.yanqiang@zte.com.cn Yanqiang Miao: [0, 25]
 	jcope@redhat.com Jon Cope: [395, 315]
 	lukaszoles@gmail.com Łukasz Oleś: [105, 11]
@@ -1262,10 +1261,10 @@ unknown 608498 290534
 	pskamruk@mirantis.com Piotr Skamruk: [6, 0]
 	salvatore-dario.minonne@amadeus.com Salvatore Dario Minonne: [99, 0]
 	pigmej@gmail.com Jędrzej Nowak: [72, 72]
-	mathieu.velten@cern.ch Mathieu Velten: [409, 223]
+	mathieu.velten@cern.ch Mathieu Velten: [92, 71]
 	davidopp@google.com David Oppenheimer: [42, 292]
 	jm.carp@gmail.com Joshua Carp: [36, 18]
-	graham.hayes@hpe.com Graham Hayes: [844, 31]
+	graham.hayes@hpe.com Graham Hayes: [272, 31]
 	atanas.mirchev@est.fujitsu.com Atanas Mirchev: [241, 126]
 	quinton@google.com Quinton Hoole: [720, 213]
 	pskieu@gmail.com Phu Kieu: [11, 2]
@@ -1294,16 +1293,16 @@ unknown 608498 290534
 	dug@us.ibm.com Doug Davis: [85, 87]
 	sander@xanzy.io Sander van Harmelen: [14, 15]
 	zhang.ke106@zte.com.cn Ke Zhang: [134, 85]
-	optimuswu8685@gmail.com wu8685: [865, 324]
+	optimuswu8685@gmail.com wu8685: [655, 225]
 	lu.zhenxing@zte.com.cn lojies: [86, 64]
 	sean@coreitpro.com Sean M. Collins: [1, 41]
 	oz.tiram@mobilityhouse.com Oz N Tiram: [1, 1]
-	simon@swine.de Christian Simon: [1169, 354]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [16284, 3427]
+	simon@swine.de Christian Simon: [1069, 322]
+	mkumatag@in.ibm.com Manjunath A Kumatagi: [67, 12]
 	grosskur@google.com Alan Grosskurth: [11, 6]
 	jackson.coakley@gmail.com hacktastic: [3, 21]
-	dbsmith@google.com Daniel Smith: [6074, 6034]
-	eric.chiang.m@gmail.com Eric Chiang: [93, 88]
+	dbsmith@google.com Daniel Smith: [704, 5951]
+	eric.chiang.m@gmail.com Eric Chiang: [40, 16]
 	philibert.dugas@gmail.com Philibert Dugas: [27, 22]
 	marcin.maciaszczyk@ts.fujitsu.com Marcin Maciaszczyk: [0, 89]
 	spyzalski@mirantis.com Szymon Pyżalski: [3, 5]
@@ -1313,7 +1312,7 @@ unknown 608498 290534
 	wang.ping5@zte.com.cn PingWang: [195, 145]
 	dujun5@huawei.com d00369826: [139, 119]
 	anthony.elizondo@gmail.com Anthony Elizondo: [6, 6]
-	johannes.scheuermann@inovex.de Johannes Scheuermann: [597, 20]
+	johannes.scheuermann@inovex.de Johannes Scheuermann: [376, 20]
 	tom@haddons.net Tom Haddon: [2, 2]
 	haih@us.ibm.com Hai Huang: [1, 1]
 	zhoufang@google.com Zhou Fang: [193, 96]
@@ -1343,7 +1342,7 @@ image 0 2
 	deads@redhat.com deads2k: [0, 2]
 	runseb@gmail.com sebgoa: [0, 0]
 	filipg@google.com Filip Grzadkowski: [0, 0]
-documentation 899 103
+documentation 710 103
 	saadali@google.com saadali: [1, 0]
 	jsz@google.com Jerzy Szczepkowski: [1, 1]
 	jinxu@google.com Jing Xu: [1, 0]
@@ -1371,7 +1370,7 @@ documentation 899 103
 	gmarek@google.com gmarek: [2, 0]
 	bowei@google.com Bowei Du: [5, 2]
 	yashulyak@gmail.com Dmitry Shulyak: [1, 0]
-	bburns@google.com Brendan Burns: [18, 0]
+	bburns@google.com Brendan Burns: [3, 0]
 	maszulik@redhat.com Maciej Szulik: [0, 0]
 	zhao.xiangpeng@zte.com.cn xiangpengzhao: [0, 0]
 	dims@linux.vnet.ibm.com Davanum Srinivas: [1, 0]
@@ -1386,7 +1385,7 @@ documentation 899 103
 	bdbauer@google.com Benjamin Bauer: [0, 0]
 	tstclair@redhat.com Timothy St. Clair: [1, 0]
 	stephenhsu90@gmail.com Di Xu: [1, 0]
-	jay@apache.org jayunit100: [175, 0]
+	jay@apache.org jayunit100: [1, 0]
 	jtanenba@redhat.com Jacob Tanenbaum: [3, 0]
 	jvallejo@redhat.com juanvallejo: [1, 0]
 	dgoodwin@redhat.com Devan Goodwin: [1, 0]
@@ -1409,7 +1408,7 @@ documentation 899 103
 	grosskur@google.com Alan Grosskurth: [1, 0]
 	marcin.maciaszczyk@ts.fujitsu.com Marcin Maciaszczyk: [0, 3]
 	bryan@weave.works Bryan Boreham: [2, 0]
-build 1544 558
+build 1525 558
 	saadali@google.com saadali: [0, 9]
 	jsz@google.com Jerzy Szczepkowski: [76, 2]
 	jinxu@google.com Jing Xu: [5, 5]
@@ -1421,7 +1420,7 @@ build 1544 558
 	madhusudancs@google.com Madhusudan.C.S: [46, 2]
 	dawnchen@google.com Dawn Chen: [1, 0]
 	mixia@google.com Minhan Xia: [9, 6]
-	mikedanese@google.com Mike Danese: [16, 6]
+	mikedanese@google.com Mike Danese: [14, 6]
 	zihongz@google.com Zihong Zheng: [84, 91]
 	mengqiy@google.com ymqytw: [1, 1]
 	mtaufen@google.com Michael Taufen: [6, 4]
@@ -1448,7 +1447,6 @@ build 1544 558
 	xuchao@google.com Chao Xu: [61, 2]
 	agoldste@redhat.com Andy Goldstein: [0, 0]
 	joe.github@bedafamily.com Joe Beda: [0, 4]
-	jay@apache.org jayunit100: [17, 0]
 	pmorie@redhat.com Paul Morie: [1, 0]
 	dgoodwin@redhat.com Devan Goodwin: [53, 0]
 	yu.peng36@zte.com.cn yupeng: [1, 1]
@@ -1466,9 +1464,9 @@ build 1544 558
 	aaronjlevy@gmail.com Aaron Levy: [1, 0]
 	yancey1989@gmail.com Yancey1989: [2, 2]
 	bryan@weave.works Bryan Boreham: [5, 1]
-devel-doc 79180 23334
-code 11711 7793
-unknown 608498 290534
+devel-doc 58929 19042
+code 11505 7769
+unknown 523051 252707
 image 0 2
-documentation 899 103
-build 1544 558
+documentation 710 103
+build 1525 558

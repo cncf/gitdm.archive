@@ -1,14 +1,13 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/cluster-proportional-autoscaler.csv
 
 unknown@hacker.net Unknown hacker
 bowei.du@gmail.com Bowei Du
 zihongz@google.com Zihong Zheng
-	unknown [454682, 397]
-	devel-doc [4179, 81]
-	code [518, 0]
-	build [302, 4]
-	documentation [1066, 0]
+	unknown [3079, 397]
+	devel-doc [245, 81]
+	code [92, 0]
+	build [176, 4]
 wojtekt@google.com Wojciech Tyczynski
 	unknown [2, 0]
 gkalele@google.com Girish Kalele
@@ -17,23 +16,20 @@ gkalele@google.com Girish Kalele
 brandon@ifup.org Brandon Philips
 	unknown [99, 0]
 	devel-doc [224, 0]
-unknown 454793 403
-	zihongz@google.com Zihong Zheng: [454682, 397]
+unknown 3190 403
+	zihongz@google.com Zihong Zheng: [3079, 397]
 	wojtekt@google.com Wojciech Tyczynski: [2, 0]
 	gkalele@google.com Girish Kalele: [10, 6]
 	brandon@ifup.org Brandon Philips: [99, 0]
-devel-doc 4409 89
-	zihongz@google.com Zihong Zheng: [4179, 81]
+devel-doc 475 89
+	zihongz@google.com Zihong Zheng: [245, 81]
 	gkalele@google.com Girish Kalele: [6, 8]
 	brandon@ifup.org Brandon Philips: [224, 0]
-code 518 0
-	zihongz@google.com Zihong Zheng: [518, 0]
-build 302 4
-	zihongz@google.com Zihong Zheng: [302, 4]
-documentation 1066 0
-	zihongz@google.com Zihong Zheng: [1066, 0]
-unknown 454793 403
-devel-doc 4409 89
-code 518 0
-build 302 4
-documentation 1066 0
+code 92 0
+	zihongz@google.com Zihong Zheng: [92, 0]
+build 176 4
+	zihongz@google.com Zihong Zheng: [176, 4]
+unknown 3190 403
+devel-doc 475 89
+code 92 0
+build 176 4

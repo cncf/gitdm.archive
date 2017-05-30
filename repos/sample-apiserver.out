@@ -1,19 +1,15 @@
-Filter on "\/vendor\/"
+Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/sample-apiserver.csv
 
 unknown@hacker.net Unknown hacker
 deads@redhat.com deads2k
-	unknown [594434, 12550]
-	devel-doc [9884, 290]
-	code [3497, 38]
-	build [264, 8]
-	documentation [3799, 67]
+	unknown [3869, 1733]
+	devel-doc [302, 5]
+	code [271, 35]
 mehdy@google.com mbohlool
 	unknown [5, 5]
 xuchao@google.com Chao Xu
-	unknown [13, 251807]
-	devel-doc [0, 1884]
-	code [0, 102]
+	unknown [13, 616]
 mkhan@redhat.com Monis Khan
 	unknown [3, 6]
 mikedanese@google.com Mike Danese
@@ -43,10 +39,10 @@ chiachenk@google.com Janet Kuo
 	unknown [4, 4]
 sjenning@redhat.com Seth Jennings
 	unknown [4, 4]
-unknown 594554 264484
-	deads@redhat.com deads2k: [594434, 12550]
+unknown 3989 2476
+	deads@redhat.com deads2k: [3869, 1733]
 	mehdy@google.com mbohlool: [5, 5]
-	xuchao@google.com Chao Xu: [13, 251807]
+	xuchao@google.com Chao Xu: [13, 616]
 	mkhan@redhat.com Monis Khan: [3, 6]
 	spzala@us.ibm.com Sahdev P. Zala: [8, 0]
 	timothysc@gmail.com Timothy St. Clair: [41, 37]
@@ -59,20 +55,12 @@ unknown 594554 264484
 	wojtekt@google.com Wojciech Tyczynski: [22, 22]
 	chiachenk@google.com Janet Kuo: [4, 4]
 	sjenning@redhat.com Seth Jennings: [4, 4]
-devel-doc 10081 2174
-	deads@redhat.com deads2k: [9884, 290]
-	xuchao@google.com Chao Xu: [0, 1884]
+devel-doc 499 5
+	deads@redhat.com deads2k: [302, 5]
 	mikedanese@google.com Mike Danese: [197, 0]
-code 3549 142
-	deads@redhat.com deads2k: [3497, 38]
-	xuchao@google.com Chao Xu: [0, 102]
+code 323 37
+	deads@redhat.com deads2k: [271, 35]
 	jliggitt@redhat.com Jordan Liggitt: [52, 2]
-build 264 8
-	deads@redhat.com deads2k: [264, 8]
-documentation 3799 67
-	deads@redhat.com deads2k: [3799, 67]
-unknown 594554 264484
-devel-doc 10081 2174
-code 3549 142
-build 264 8
-documentation 3799 67
+unknown 3989 2476
+devel-doc 499 5
+code 323 37
