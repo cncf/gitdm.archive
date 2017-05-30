@@ -286,6 +286,7 @@ def parse_numstat(line, file_filter):
         # If we have a file filter, check for file lines.
         if file_filter:
             match = not not file_filter.search(filename)
+            # print(filename)
             if match == InvertFilter:
                 return None, None, None, None
 
