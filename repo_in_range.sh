@@ -1,6 +1,6 @@
 #!/bin/sh
 PWD=`pwd`
-FN=$PWD/repos/$2_$3_$4
+FN=$PWD/other_repos/$2_$3_$4
 cd "$1"
 echo "Processing repo $1 $2 $3 $4"
 git config merge.renameLimit 100000
