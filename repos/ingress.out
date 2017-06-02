@@ -3,16 +3,63 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/ingress.csv
 
 unknown@hacker.net Unknown hacker
 aledbf@gmail.com Manuel Alejandro de Brito Fontes
-	devel-doc [4565, 6734]
-	code [314, 664]
+	devel-doc [4634, 6740]
+	code [322, 672]
 	package [0, 0]
-	unknown [104697, 412642]
+	unknown [105560, 413782]
 	image [0, 0]
-	documentation [1026, 2769]
-	build [235, 491]
+	documentation [1059, 2775]
+	build [332, 496]
+jan@iosphere.de Jan Weitz
+	unknown [14, 0]
+	devel-doc [15, 0]
+nicksardo@users.noreply.github.com Nick Sardo
+	unknown [1655, 688]
+	devel-doc [31, 13]
+	build [1, 1]
+my@famer.me 明扬
+	devel-doc [1, 1]
+arjan.schaaf@luminis.eu Arjan Schaaf
+	unknown [9, 14]
+	devel-doc [9, 5]
+	documentation [0, 3]
+ft@le-fay.org Liss Tarnell
+	unknown [78, 5]
+lars.solberg+github@gmail.com Lars Solberg
+	devel-doc [1, 1]
+arve.knudsen@gmail.com Arve Knudsen
+	devel-doc [2, 2]
+ohaiwalt@gmail.com Matthew Walter
+	unknown [1, 1]
+julian.modesto@liveramp.com Julian V. Modesto
+	unknown [5, 2]
+chen.tao3@zte.com.cn chentao1596
+	unknown [2701, 121]
+	devel-doc [293, 4]
+	build [1, 1]
+jcmoraisjr@gmail.com Joao Morais
+	unknown [346, 171]
+	devel-doc [829, 156]
+stevenk1@stanford.edu Steve Kallestad
+	unknown [106, 0]
+	devel-doc [143, 0]
+mkumatag@in.ibm.com Manjunath A Kumatagi
+	unknown [4, 1]
+	devel-doc [3, 1]
+	code [51, 22]
+	build [183, 20]
+sandor.szuecs@zalando.de Sandor Szücs
+	unknown [1, 0]
+me@ckeyer.net Chuanjian Wang
+	unknown [3, 1]
+v@gor.io Vlad Gorodetsky
+	unknown [10, 0]
+	documentation [3, 1]
+wangdk@inspur.com Damon Wang
+	devel-doc [1, 1]
 zouyee1989@gmail.com zouyee
-	unknown [116, 1]
-	devel-doc [82, 23]
+	unknown [134, 1]
+	devel-doc [87, 24]
 cai.yixiang@zte.com.cn caiyixiang
 	unknown [213, 21]
 	devel-doc [244, 6]
@@ -21,30 +68,18 @@ olvesh@gmail.com Olve S. Hansen
 	devel-doc [1, 1]
 cheungpat@oursky.com Kwok-kuen Cheung
 	documentation [2, 0]
+payam.hekmat@gmail.com Payam Hekmat
+	documentation [1, 1]
 dcech@grafana.com Dan Cech
 	unknown [2, 2]
 	code [3, 3]
 tobilarscheid@gmail.com tobilarscheid
 	devel-doc [5, 1]
-jcmoraisjr@gmail.com Joao Morais
-	unknown [186, 48]
-	devel-doc [829, 156]
 david.pratt@gmail.com David Pratt
 	unknown [26, 1]
 	documentation [3, 3]
-me@ckeyer.net Chuanjian Wang
-	unknown [2, 0]
 donald@tulip.co Donald Guy
 	unknown [8, 6]
-nicksardo@users.noreply.github.com Nick Sardo
-	unknown [1652, 685]
-	devel-doc [31, 13]
-	build [1, 1]
-julianvmodesto@gmail.com Julian V. Modesto
-	unknown [4, 2]
-chen.tao3@zte.com.cn chentao1596
-	unknown [2684, 120]
-	devel-doc [293, 4]
 matjaz.pancur@gmail.com Matjaz Pancur
 	documentation [1, 1]
 jxpearce@godaddy.com Jeff Pearce
@@ -56,14 +91,6 @@ thakkaryash94@gmail.com Yash Thakkar
 	devel-doc [1, 1]
 eduardobaitello@gmail.com Eduardo Baitello
 	unknown [1, 1]
-mkumatag@in.ibm.com Manjunath A Kumatagi
-	unknown [4, 1]
-	devel-doc [3, 1]
-	code [51, 22]
-	build [143, 10]
-arjan.schaaf@luminis.eu Arjan Schaaf
-	unknown [9, 14]
-	devel-doc [9, 5]
 brandon@ifup.org Brandon Philips
 	unknown [14, 12]
 wmorgan@users.noreply.github.com William Morgan
@@ -254,18 +281,24 @@ github@cutterslade.ca Wesley Hartford
 	unknown [1, 1]
 joonathan@gmail.com Joonathan Mägi
 	devel-doc [1, 1]
-devel-doc 23565 12574
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [4565, 6734]
-	zouyee1989@gmail.com zouyee: [82, 23]
+devel-doc 23802 12586
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [4634, 6740]
+	jan@iosphere.de Jan Weitz: [15, 0]
+	nicksardo@users.noreply.github.com Nick Sardo: [31, 13]
+	my@famer.me 明扬: [1, 1]
+	arjan.schaaf@luminis.eu Arjan Schaaf: [9, 5]
+	lars.solberg+github@gmail.com Lars Solberg: [1, 1]
+	arve.knudsen@gmail.com Arve Knudsen: [2, 2]
+	chen.tao3@zte.com.cn chentao1596: [293, 4]
+	jcmoraisjr@gmail.com Joao Morais: [829, 156]
+	stevenk1@stanford.edu Steve Kallestad: [143, 0]
+	mkumatag@in.ibm.com Manjunath A Kumatagi: [3, 1]
+	wangdk@inspur.com Damon Wang: [1, 1]
+	zouyee1989@gmail.com zouyee: [87, 24]
 	cai.yixiang@zte.com.cn caiyixiang: [244, 6]
 	olvesh@gmail.com Olve S. Hansen: [1, 1]
 	tobilarscheid@gmail.com tobilarscheid: [5, 1]
-	jcmoraisjr@gmail.com Joao Morais: [829, 156]
-	nicksardo@users.noreply.github.com Nick Sardo: [31, 13]
-	chen.tao3@zte.com.cn chentao1596: [293, 4]
 	thakkaryash94@gmail.com Yash Thakkar: [1, 1]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [3, 1]
-	arjan.schaaf@luminis.eu Arjan Schaaf: [9, 5]
 	thockin@google.com Tim Hockin: [201, 0]
 	gyliu513@gmail.com Guangya Liu: [1, 1]
 	gianrubio@gmail.com Giancarlo Rubio: [443, 0]
@@ -293,33 +326,39 @@ devel-doc 23565 12574
 	luke@mallon.io Luke Mallon: [6, 5]
 	simon@swine.de Christian Simon: [70, 7]
 	joonathan@gmail.com Joonathan Mägi: [1, 1]
-code 4056 3261
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [314, 664]
-	dcech@grafana.com Dan Cech: [3, 3]
+code 4064 3269
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [322, 672]
 	mkumatag@in.ibm.com Manjunath A Kumatagi: [51, 22]
+	dcech@grafana.com Dan Cech: [3, 3]
 	gianrubio@gmail.com Giancarlo Rubio: [1, 1]
 	beeps@google.com Prashanth B: [3686, 2570]
 	jchaloup@redhat.com Jan Chaloupka: [1, 1]
 package 0 0
 	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [0, 0]
 	beeps@google.com Prashanth B: [0, 0]
-unknown 1206278 582922
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [104697, 412642]
-	zouyee1989@gmail.com zouyee: [116, 1]
+unknown 1207551 584196
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [105560, 413782]
+	jan@iosphere.de Jan Weitz: [14, 0]
+	nicksardo@users.noreply.github.com Nick Sardo: [1655, 688]
+	arjan.schaaf@luminis.eu Arjan Schaaf: [9, 14]
+	ft@le-fay.org Liss Tarnell: [78, 5]
+	ohaiwalt@gmail.com Matthew Walter: [1, 1]
+	julian.modesto@liveramp.com Julian V. Modesto: [5, 2]
+	chen.tao3@zte.com.cn chentao1596: [2701, 121]
+	jcmoraisjr@gmail.com Joao Morais: [346, 171]
+	stevenk1@stanford.edu Steve Kallestad: [106, 0]
+	mkumatag@in.ibm.com Manjunath A Kumatagi: [4, 1]
+	sandor.szuecs@zalando.de Sandor Szücs: [1, 0]
+	me@ckeyer.net Chuanjian Wang: [3, 1]
+	v@gor.io Vlad Gorodetsky: [10, 0]
+	zouyee1989@gmail.com zouyee: [134, 1]
 	cai.yixiang@zte.com.cn caiyixiang: [213, 21]
 	dcech@grafana.com Dan Cech: [2, 2]
-	jcmoraisjr@gmail.com Joao Morais: [186, 48]
 	david.pratt@gmail.com David Pratt: [26, 1]
-	me@ckeyer.net Chuanjian Wang: [2, 0]
 	donald@tulip.co Donald Guy: [8, 6]
-	nicksardo@users.noreply.github.com Nick Sardo: [1652, 685]
-	julianvmodesto@gmail.com Julian V. Modesto: [4, 2]
-	chen.tao3@zte.com.cn chentao1596: [2684, 120]
 	jxpearce@godaddy.com Jeff Pearce: [22, 0]
 	luitvd@gmail.com Luit van Drongelen: [1, 2]
 	eduardobaitello@gmail.com Eduardo Baitello: [1, 1]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [4, 1]
-	arjan.schaaf@luminis.eu Arjan Schaaf: [9, 14]
 	brandon@ifup.org Brandon Philips: [14, 12]
 	wmorgan@users.noreply.github.com William Morgan: [1, 0]
 	fengyun.pan@easystack.cn FengyunPan: [2, 9]
@@ -375,10 +414,13 @@ unknown 1206278 582922
 image 0 0
 	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [0, 0]
 	gianrubio@gmail.com Giancarlo Rubio: [0, 0]
-documentation 8065 3347
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [1026, 2769]
+documentation 8102 3358
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [1059, 2775]
+	arjan.schaaf@luminis.eu Arjan Schaaf: [0, 3]
+	v@gor.io Vlad Gorodetsky: [3, 1]
 	cai.yixiang@zte.com.cn caiyixiang: [1, 1]
 	cheungpat@oursky.com Kwok-kuen Cheung: [2, 0]
+	payam.hekmat@gmail.com Payam Hekmat: [1, 1]
 	david.pratt@gmail.com David Pratt: [3, 3]
 	matjaz.pancur@gmail.com Matjaz Pancur: [1, 1]
 	jxpearce@godaddy.com Jeff Pearce: [8, 5]
@@ -403,10 +445,11 @@ documentation 8065 3347
 	shane@node.mu Vy-Shane Xie: [1, 0]
 	alex@bengler.no Alexander Staubo: [1, 0]
 	simon@swine.de Christian Simon: [6, 4]
-build 1111 601
-	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [235, 491]
+build 1249 617
+	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [332, 496]
 	nicksardo@users.noreply.github.com Nick Sardo: [1, 1]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [143, 10]
+	chen.tao3@zte.com.cn chentao1596: [1, 1]
+	mkumatag@in.ibm.com Manjunath A Kumatagi: [183, 20]
 	jgrafton@google.com Jeff Grafton: [7, 7]
 	porridge@google.com Marcin Owsiany: [4, 4]
 	electroma@gmail.com rsafronov: [24, 1]
@@ -415,10 +458,10 @@ build 1111 601
 	stclair@google.com Tim St. Clair: [1, 1]
 	beeps@google.com Prashanth B: [661, 79]
 	robertspencersmith@gmail.com Spencer Smith: [1, 1]
-devel-doc 23565 12574
-code 4056 3261
+devel-doc 23802 12586
+code 4064 3269
 package 0 0
-unknown 1206278 582922
+unknown 1207551 584196
 image 0 0
-documentation 8065 3347
-build 1111 601
+documentation 8102 3358
+build 1249 617

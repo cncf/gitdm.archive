@@ -2,19 +2,25 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/autoscaler.csv
 
 unknown@hacker.net Unknown hacker
-maciekpytel@google.com MaciekPytel
-	unknown [1833, 344]
-	devel-doc [10, 8]
-	code [572, 0]
-	documentation [46, 0]
-walt@seamlessdocs.com Matthew Walter
-	unknown [5, 5]
 mwielgus@google.com Marcin Wielgus
-	unknown [503421, 10612]
+	unknown [504844, 10717]
 	devel-doc [8301, 124]
 	code [454, 0]
 	build [206, 4]
 	documentation [4522, 0]
+maciekpytel@google.com Maciej Pytel
+	unknown [2631, 453]
+	devel-doc [10, 8]
+	code [572, 0]
+	documentation [46, 0]
+aleksandram@google.com Aleksandra Malinowska
+	unknown [274, 29]
+ej@reactiveops.com ejether
+	devel-doc [1, 1]
+jansel@jansel.net Jason Ansel
+	devel-doc [2, 2]
+walt@seamlessdocs.com Matthew Walter
+	unknown [5, 5]
 ykuoka@gmail.com Yusuke Kuoka
 	unknown [2067, 720]
 	devel-doc [83, 1]
@@ -88,10 +94,11 @@ jsz@google.com Jerzy Szczepkowski
 	unknown [35, 12]
 eparis@redhat.com Eric Paris
 	unknown [23, 0]
-unknown 623954 37420
-	maciekpytel@google.com MaciekPytel: [1833, 344]
+unknown 626449 37663
+	mwielgus@google.com Marcin Wielgus: [504844, 10717]
+	maciekpytel@google.com Maciej Pytel: [2631, 453]
+	aleksandram@google.com Aleksandra Malinowska: [274, 29]
 	walt@seamlessdocs.com Matthew Walter: [5, 5]
-	mwielgus@google.com Marcin Wielgus: [503421, 10612]
 	ykuoka@gmail.com Yusuke Kuoka: [2067, 720]
 	gfilipek@google.com Gabriela Filipek: [2890, 0]
 	jessek@allenai.org Jesse Kinkead: [21, 21]
@@ -114,9 +121,11 @@ unknown 623954 37420
 	zml@google.com Zach Loafman: [2, 2]
 	jsz@google.com Jerzy Szczepkowski: [35, 12]
 	eparis@redhat.com Eric Paris: [23, 0]
-devel-doc 9783 231
-	maciekpytel@google.com MaciekPytel: [10, 8]
+devel-doc 9786 234
 	mwielgus@google.com Marcin Wielgus: [8301, 124]
+	maciekpytel@google.com Maciej Pytel: [10, 8]
+	ej@reactiveops.com ejether: [1, 1]
+	jansel@jansel.net Jason Ansel: [2, 2]
 	ykuoka@gmail.com Yusuke Kuoka: [83, 1]
 	gfilipek@google.com Gabriela Filipek: [36, 0]
 	ouyang.qinhua@zte.com.cn bruceauyeung: [2, 2]
@@ -130,8 +139,8 @@ devel-doc 9783 231
 	filipg@google.com Filip Grzadkowski: [578, 58]
 	madhusudancs@google.com Madhusudan.C.S: [0, 0]
 code 1138 2
-	maciekpytel@google.com MaciekPytel: [572, 0]
 	mwielgus@google.com Marcin Wielgus: [454, 0]
+	maciekpytel@google.com Maciej Pytel: [572, 0]
 	jchaloup@redhat.com Jan Chaloupka: [2, 2]
 	pszczesniak@google.com Piotr Szczesniak: [40, 0]
 	filipg@google.com Filip Grzadkowski: [70, 0]
@@ -144,11 +153,11 @@ build 264 83
 	pszczesniak@google.com Piotr Szczesniak: [0, 0]
 	filipg@google.com Filip Grzadkowski: [13, 75]
 documentation 4568 0
-	maciekpytel@google.com MaciekPytel: [46, 0]
 	mwielgus@google.com Marcin Wielgus: [4522, 0]
+	maciekpytel@google.com Maciej Pytel: [46, 0]
 	pszczesniak@google.com Piotr Szczesniak: [0, 0]
-unknown 623954 37420
-devel-doc 9783 231
+unknown 626449 37663
+devel-doc 9786 234
 code 1138 2
 build 264 83
 documentation 4568 0

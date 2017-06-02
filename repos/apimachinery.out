@@ -2,6 +2,13 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/apimachinery.csv
 
 unknown@hacker.net Unknown hacker
+ccoleman@redhat.com Clayton Coleman
+	unknown [6106, 922]
+	devel-doc [85, 2]
+admin@toph.ca Christoph Blecker
+	unknown [43, 2]
+nikhiljindal@google.com nikhiljindal
+	unknown [187, 139]
 stefan.schimanski@gmail.com Dr. Stefan Schimanski
 	unknown [10860, 378]
 	devel-doc [55, 54]
@@ -13,8 +20,6 @@ mehdy@google.com mbohlool
 jamie.hannaford@rackspace.com Jamie Hannaford
 	unknown [34, 14]
 	devel-doc [2, 0]
-ccoleman@redhat.com Clayton Coleman
-	unknown [3610, 715]
 deads@redhat.com deads2k
 	unknown [41690, 579]
 	devel-doc [236, 0]
@@ -40,8 +45,6 @@ liamwhite@uk.ibm.com Liam White
 	devel-doc [1, 0]
 vsemushi@redhat.com Slava Semushin
 	unknown [0, 1]
-admin@toph.ca Christoph Blecker
-	unknown [2, 2]
 m@moscar.net Mikkel Oscar Lyderik Larsen
 	unknown [2, 2]
 yashulyak@gmail.com Dmitry Shulyak
@@ -97,18 +100,18 @@ tan.shanshan@zte.com.cn tanshanshan
 	unknown [4, 4]
 apelisse@google.com Antoine Pelisse
 	unknown [10, 5]
-nikhiljindal@google.com nikhiljindal
-	unknown [1, 1]
 grod@google.com Garrett Rodrigues
 	unknown [0, 1]
 pires@apprenda.com Paulo Pires
 	unknown [4, 4]
-unknown 62830 4442
+unknown 65553 4787
+	ccoleman@redhat.com Clayton Coleman: [6106, 922]
+	admin@toph.ca Christoph Blecker: [43, 2]
+	nikhiljindal@google.com nikhiljindal: [187, 139]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [10860, 378]
 	sid@rancher.com wlan0: [31, 0]
 	mehdy@google.com mbohlool: [21, 4]
 	jamie.hannaford@rackspace.com Jamie Hannaford: [34, 14]
-	ccoleman@redhat.com Clayton Coleman: [3610, 715]
 	deads@redhat.com deads2k: [41690, 579]
 	mikedanese@google.com Mike Danese: [51, 126]
 	xuchao@google.com Chao Xu: [399, 158]
@@ -119,7 +122,6 @@ unknown 62830 4442
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [5, 5]
 	liamwhite@uk.ibm.com Liam White: [172, 20]
 	vsemushi@redhat.com Slava Semushin: [0, 1]
-	admin@toph.ca Christoph Blecker: [2, 2]
 	m@moscar.net Mikkel Oscar Lyderik Larsen: [2, 2]
 	yashulyak@gmail.com Dmitry Shulyak: [53, 0]
 	jliggitt@redhat.com Jordan Liggitt: [479, 132]
@@ -147,10 +149,10 @@ unknown 62830 4442
 	jvallejo@redhat.com juanvallejo: [56, 4]
 	tan.shanshan@zte.com.cn tanshanshan: [4, 4]
 	apelisse@google.com Antoine Pelisse: [10, 5]
-	nikhiljindal@google.com nikhiljindal: [1, 1]
 	grod@google.com Garrett Rodrigues: [0, 1]
 	pires@apprenda.com Paulo Pires: [4, 4]
-devel-doc 2066 58
+devel-doc 2151 60
+	ccoleman@redhat.com Clayton Coleman: [85, 2]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [55, 54]
 	sid@rancher.com wlan0: [1, 0]
 	jamie.hannaford@rackspace.com Jamie Hannaford: [2, 0]
@@ -160,6 +162,6 @@ devel-doc 2066 58
 	liamwhite@uk.ibm.com Liam White: [1, 0]
 code 140 9
 	deads@redhat.com deads2k: [140, 9]
-unknown 62830 4442
-devel-doc 2066 58
+unknown 65553 4787
+devel-doc 2151 60
 code 140 9

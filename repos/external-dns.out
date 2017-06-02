@@ -3,9 +3,12 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/external-dns.csv
 
 unknown@hacker.net Unknown hacker
 linki@users.noreply.github.com Martin Linkhorst
-	unknown [8128, 3144]
-	devel-doc [238, 110]
+	unknown [8577, 3761]
+	devel-doc [241, 110]
 	build [37, 15]
+ismith@mit.edu Ian Smith
+	unknown [243, 18]
+	devel-doc [4, 0]
 yerken.tussupbekov@zalando.de Yerken
 	unknown [5113, 1573]
 	devel-doc [29, 25]
@@ -32,8 +35,9 @@ difazio.raffaele@gmail.com Raffaele Di Fazio
 	devel-doc [13, 0]
 sarah.novotny@gmail.com sarahnovotny
 	devel-doc [202, 0]
-unknown 13967 4828
-	linki@users.noreply.github.com Martin Linkhorst: [8128, 3144]
+unknown 14659 5463
+	linki@users.noreply.github.com Martin Linkhorst: [8577, 3761]
+	ismith@mit.edu Ian Smith: [243, 18]
 	yerken.tussupbekov@zalando.de Yerken: [5113, 1573]
 	henning@jacobs1.de Henning Jacobs: [13, 1]
 	omarkj@gmail.com Omar Yasin: [1, 1]
@@ -41,8 +45,9 @@ unknown 13967 4828
 	lauri.apple@zalando.de Lauri Apple: [25, 25]
 	justin@fathomdb.com Justin Santa Barbara: [223, 40]
 	iterion@gmail.com Adam Sunderland: [14, 4]
-devel-doc 557 169
-	linki@users.noreply.github.com Martin Linkhorst: [238, 110]
+devel-doc 564 169
+	linki@users.noreply.github.com Martin Linkhorst: [241, 110]
+	ismith@mit.edu Ian Smith: [4, 0]
 	yerken.tussupbekov@zalando.de Yerken: [29, 25]
 	henning@jacobs1.de Henning Jacobs: [37, 4]
 	lauri.apple@zalando.de Lauri Apple: [38, 30]
@@ -57,8 +62,8 @@ build 97 31
 	justin@fathomdb.com Justin Santa Barbara: [20, 0]
 documentation 54 52
 	yerken.tussupbekov@zalando.de Yerken: [54, 52]
-unknown 13967 4828
-devel-doc 557 169
+unknown 14659 5463
+devel-doc 564 169
 code 392 392
 build 97 31
 documentation 54 52

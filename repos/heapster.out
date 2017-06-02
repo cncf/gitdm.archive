@@ -3,6 +3,13 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/heapster.csv
 
 yoyozhiyou@163.com is an author name, probably not what you want
 unknown@hacker.net Unknown hacker
+directxman12+github@gmail.com Solly Ross
+	unknown [5782, 3667]
+	devel-doc [11, 4]
+andy.xning@gmail.com Andy Xie
+	unknown [533, 118]
+	code [1, 1]
+	build [14, 9]
 pszczesniak@google.com Piotr Szczesniak
 	devel-doc [2138, 3226]
 	code [468, 416]
@@ -10,19 +17,18 @@ pszczesniak@google.com Piotr Szczesniak
 	image [0, 0]
 	documentation [1003, 471]
 	build [28, 57]
+loburm@google.com Marian Lobur
+	unknown [25, 11]
 aleksandram@google.com Aleksandra Malinowska
-	unknown [931, 185]
+	unknown [978, 191]
 	build [1, 1]
-directxman12+github@gmail.com Solly Ross
-	unknown [5782, 3667]
-	devel-doc [11, 4]
+abkaplan07@gmail.com Adam Kaplan
+	unknown [32, 16]
+	code [0, 1]
+	build [5, 5]
 vmik@google.com Mik Vyatskov
 	unknown [1, 1]
 	build [16, 5]
-andy.xning@gmail.com Andy Xie
-	unknown [512, 80]
-	code [1, 1]
-	build [14, 9]
 watercraftsoftware@gmail.com Alan Jones
 	unknown [13, 4]
 jesse.kinkead@gmail.com Jesse Kinkead
@@ -345,8 +351,8 @@ dipankarsarkar@gmail.com Dipankar Sarkar
 bburns@google.com Brendan Burns
 	devel-doc [2, 0]
 devel-doc 28177 14633
-	pszczesniak@google.com Piotr Szczesniak: [2138, 3226]
 	directxman12+github@gmail.com Solly Ross: [11, 4]
+	pszczesniak@google.com Piotr Szczesniak: [2138, 3226]
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [50, 26]
 	mwielgus@google.com Marcin Wielgus: [215, 12]
 	stclair@google.com Tim St. Clair: [2003, 144]
@@ -377,9 +383,10 @@ devel-doc 28177 14633
 	jacob.jh.clark@googlemail.com Jacob Clark: [3, 3]
 	maxforbes@google.com Max Forbes: [48, 42]
 	bburns@google.com Brendan Burns: [2, 0]
-code 3073 1443
-	pszczesniak@google.com Piotr Szczesniak: [468, 416]
+code 3073 1444
 	andy.xning@gmail.com Andy Xie: [1, 1]
+	pszczesniak@google.com Piotr Szczesniak: [468, 416]
+	abkaplan07@gmail.com Adam Kaplan: [0, 1]
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [11, 153]
 	mwielgus@google.com Marcin Wielgus: [11, 41]
 	stclair@google.com Tim St. Clair: [316, 51]
@@ -406,12 +413,14 @@ code 3073 1443
 package 0 0
 	vishnuk@google.com Vishnu kannan: [0, 0]
 	vmarmol@google.com Victor Marmol: [0, 0]
-unknown 1248108 637731
-	pszczesniak@google.com Piotr Szczesniak: [364500, 183024]
-	aleksandram@google.com Aleksandra Malinowska: [931, 185]
+unknown 1248233 637802
 	directxman12+github@gmail.com Solly Ross: [5782, 3667]
+	andy.xning@gmail.com Andy Xie: [533, 118]
+	pszczesniak@google.com Piotr Szczesniak: [364500, 183024]
+	loburm@google.com Marian Lobur: [25, 11]
+	aleksandram@google.com Aleksandra Malinowska: [978, 191]
+	abkaplan07@gmail.com Adam Kaplan: [32, 16]
 	vmik@google.com Mik Vyatskov: [1, 1]
-	andy.xning@gmail.com Andy Xie: [512, 80]
 	watercraftsoftware@gmail.com Alan Jones: [13, 4]
 	jesse.kinkead@gmail.com Jesse Kinkead: [1, 1]
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [408, 494]
@@ -536,11 +545,12 @@ documentation 5816 814
 	mvdan@mvdan.cc Daniel Martí: [28, 0]
 	jnagal@google.com Rohit Jnagal: [13, 0]
 	vmarmol@google.com Victor Marmol: [7, 0]
-build 1014 601
+build 1019 606
+	andy.xning@gmail.com Andy Xie: [14, 9]
 	pszczesniak@google.com Piotr Szczesniak: [28, 57]
 	aleksandram@google.com Aleksandra Malinowska: [1, 1]
+	abkaplan07@gmail.com Adam Kaplan: [5, 5]
 	vmik@google.com Mik Vyatskov: [16, 5]
-	andy.xning@gmail.com Andy Xie: [14, 9]
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [308, 203]
 	caarlos0@gmail.com Carlos Alexandro Becker: [2, 2]
 	mwielgus@google.com Marcin Wielgus: [17, 14]
@@ -564,9 +574,9 @@ build 1014 601
 	almavrog@google.com Alexandros Mavrogiannis: [0, 1]
 	saadali@google.com saadali: [14, 1]
 devel-doc 28177 14633
-code 3073 1443
+code 3073 1444
 package 0 0
-unknown 1248108 637731
+unknown 1248233 637802
 image 0 0
 documentation 5816 814
-build 1014 601
+build 1019 606

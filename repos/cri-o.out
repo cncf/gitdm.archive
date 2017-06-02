@@ -2,16 +2,22 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/cri-o.csv
 
 unknown@hacker.net Unknown hacker
-runcom@users.noreply.github.com Antonio Murdaca
-	unknown [6573, 3739]
-	devel-doc [138, 90]
-	code [955, 284]
-	build [138, 41]
-mrunalp@gmail.com Mrunal Patel
-	unknown [4117, 864]
-	devel-doc [333, 219]
-	code [955, 386]
-	build [72, 56]
+mrunal@me.com Mrunal Patel
+	unknown [4250, 929]
+	devel-doc [335, 221]
+	code [1143, 417]
+	build [80, 64]
+runcom@redhat.com Antonio Murdaca
+	unknown [7500, 3974]
+	devel-doc [140, 90]
+	code [1251, 310]
+	build [141, 44]
+sameo@linux.intel.com Samuel Ortiz
+	unknown [1164, 318]
+	devel-doc [44, 9]
+	code [262, 71]
+jbieren@redhat.com Johnny Bieren
+	unknown [27, 0]
 mheon@redhat.com Matthew Heon
 	unknown [45, 3]
 	code [4, 4]
@@ -34,10 +40,6 @@ nalin@redhat.com Nalin Dahyabhai
 	build [45, 20]
 surajssd009005@gmail.com Suraj Deshmukh
 	unknown [45, 14]
-sameo@linux.intel.com Samuel Ortiz
-	unknown [1142, 299]
-	devel-doc [44, 9]
-	code [262, 71]
 jacek.lakis@intel.com Jacek J. Łakis
 	unknown [739, 59]
 	devel-doc [8, 0]
@@ -119,16 +121,17 @@ hmeng@redhat.com Haiyan Meng
 	devel-doc [15, 0]
 sarah.novotny@gmail.com sarahnovotny
 	devel-doc [203, 0]
-unknown 19253 7101
-	runcom@users.noreply.github.com Antonio Murdaca: [6573, 3739]
-	mrunalp@gmail.com Mrunal Patel: [4117, 864]
+unknown 20362 7420
+	mrunal@me.com Mrunal Patel: [4250, 929]
+	runcom@redhat.com Antonio Murdaca: [7500, 3974]
+	sameo@linux.intel.com Samuel Ortiz: [1164, 318]
+	jbieren@redhat.com Johnny Bieren: [27, 0]
 	mheon@redhat.com Matthew Heon: [45, 3]
 	dwalsh@redhat.com Dan Walsh: [828, 405]
 	dcbw@redhat.com Dan Williams: [78, 18]
 	gbsalinetti@extraordy.com Gianni Salinetti: [9, 9]
 	nalin@redhat.com Nalin Dahyabhai: [1975, 419]
 	surajssd009005@gmail.com Suraj Deshmukh: [45, 14]
-	sameo@linux.intel.com Samuel Ortiz: [1142, 299]
 	jacek.lakis@intel.com Jacek J. Łakis: [739, 59]
 	vbatts@hashbangbash.com Vincent Batts: [231, 225]
 	asarai@suse.de Aleksa Sarai: [825, 161]
@@ -147,12 +150,12 @@ unknown 19253 7101
 	omarapazanadi@gmail.com Gao feng: [49, 41]
 	spotter@gmail.com Shaya Potter: [13, 1]
 	hmeng@redhat.com Haiyan Meng: [1175, 99]
-devel-doc 976 437
-	runcom@users.noreply.github.com Antonio Murdaca: [138, 90]
-	mrunalp@gmail.com Mrunal Patel: [333, 219]
+devel-doc 980 439
+	mrunal@me.com Mrunal Patel: [335, 221]
+	runcom@redhat.com Antonio Murdaca: [140, 90]
+	sameo@linux.intel.com Samuel Ortiz: [44, 9]
 	dwalsh@redhat.com Dan Walsh: [22, 17]
 	nalin@redhat.com Nalin Dahyabhai: [4, 2]
-	sameo@linux.intel.com Samuel Ortiz: [44, 9]
 	jacek.lakis@intel.com Jacek J. Łakis: [8, 0]
 	asarai@suse.de Aleksa Sarai: [20, 35]
 	jawnsy@redhat.com Jonathan Yu: [96, 27]
@@ -169,23 +172,23 @@ devel-doc 976 437
 	ccoleman@redhat.com Clayton Coleman: [6, 0]
 	hmeng@redhat.com Haiyan Meng: [15, 0]
 	sarah.novotny@gmail.com sarahnovotny: [203, 0]
-code 4157 1505
-	runcom@users.noreply.github.com Antonio Murdaca: [955, 284]
-	mrunalp@gmail.com Mrunal Patel: [955, 386]
+code 4641 1562
+	mrunal@me.com Mrunal Patel: [1143, 417]
+	runcom@redhat.com Antonio Murdaca: [1251, 310]
+	sameo@linux.intel.com Samuel Ortiz: [262, 71]
 	mheon@redhat.com Matthew Heon: [4, 4]
 	dwalsh@redhat.com Dan Walsh: [366, 365]
 	dcbw@redhat.com Dan Williams: [57, 0]
 	nalin@redhat.com Nalin Dahyabhai: [179, 9]
-	sameo@linux.intel.com Samuel Ortiz: [262, 71]
 	asarai@suse.de Aleksa Sarai: [859, 289]
 	jawnsy@redhat.com Jonathan Yu: [6, 6]
 	rchopra@redhat.com Rajat Chopra: [0, 1]
 	xlgao@zju.edu.cn Xianglin Gao: [320, 57]
 	crazykev@zju.edu.cn Crazykev: [171, 1]
 	alvaro@gnu.org Alvaro Lopez Ortega: [23, 32]
-build 709 368
-	runcom@users.noreply.github.com Antonio Murdaca: [138, 41]
-	mrunalp@gmail.com Mrunal Patel: [72, 56]
+build 720 379
+	mrunal@me.com Mrunal Patel: [80, 64]
+	runcom@redhat.com Antonio Murdaca: [141, 44]
 	mheon@redhat.com Matthew Heon: [5, 1]
 	dwalsh@redhat.com Dan Walsh: [204, 73]
 	dcbw@redhat.com Dan Williams: [58, 55]
@@ -203,8 +206,8 @@ build 709 368
 	alvaro@gnu.org Alvaro Lopez Ortega: [2, 2]
 image 322 0
 	duffy@redhat.com Máirín Duffy: [322, 0]
-unknown 19253 7101
-devel-doc 976 437
-code 4157 1505
-build 709 368
+unknown 20362 7420
+devel-doc 980 439
+code 4641 1562
+build 720 379
 image 322 0
