@@ -2,21 +2,27 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/gengo.csv
 
 unknown@hacker.net Unknown hacker
-ccoleman@redhat.com Clayton Coleman
-	unknown [2932, 105]
-	devel-doc [3, 2]
-jliggitt@redhat.com Jordan Liggitt
-	unknown [49, 29]
+dbsmith@google.com Daniel Smith
+	unknown [5019, 172]
+	devel-doc [252, 0]
+	documentation [16, 0]
+xuchao@google.com Chao Xu
+	unknown [276, 44]
+stefan.schimanski@gmail.com Dr. Stefan Schimanski
+	unknown [58, 34]
 thockin@google.com Tim Hockin
 	unknown [3093, 814]
 	code [60, 60]
 	build [16, 0]
 spzala@us.ibm.com Sahdev P. Zala
-	unknown [42, 16]
-dbsmith@google.com Daniel Smith
-	unknown [5019, 172]
-	devel-doc [252, 0]
-	documentation [16, 0]
+	unknown [277, 16]
+admin@toph.ca Christoph Blecker
+	unknown [8, 4]
+ccoleman@redhat.com Clayton Coleman
+	unknown [2932, 105]
+	devel-doc [3, 2]
+jliggitt@redhat.com Jordan Liggitt
+	unknown [49, 29]
 pwittroc@google.com Phillip Wittrock
 	unknown [1, 1]
 chenjg@harmonycloud.cn fate-grand-order
@@ -27,14 +33,10 @@ wojtekt@google.com Wojciech Tyczynski
 	unknown [857, 419]
 agoldste@redhat.com Andy Goldstein
 	unknown [58, 5]
-sttts@redhat.com Dr. Stefan Schimanski
-	unknown [42, 32]
 mehdy@google.com mbohlool
 	unknown [9, 0]
 qlee@google.com Quintin Lee
 	unknown [1, 0]
-xuchao@google.com Chao Xu
-	unknown [205, 32]
 stclair@google.com Tim St. Clair
 	unknown [8, 8]
 dims@linux.vnet.ibm.com Davanum Srinivas
@@ -59,21 +61,24 @@ abshah@google.com Abhi Shah
 eparis@redhat.com Eric Paris
 laurie.malau@gmail.com laushinka
 bburns@google.com Brendan Burns
-unknown 12435 1658
+code 60 60
+	thockin@google.com Tim Hockin: [60, 60]
+unknown 12765 1676
+	dbsmith@google.com Daniel Smith: [5019, 172]
+	xuchao@google.com Chao Xu: [276, 44]
+	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [58, 34]
+	thockin@google.com Tim Hockin: [3093, 814]
+	spzala@us.ibm.com Sahdev P. Zala: [277, 16]
+	admin@toph.ca Christoph Blecker: [8, 4]
 	ccoleman@redhat.com Clayton Coleman: [2932, 105]
 	jliggitt@redhat.com Jordan Liggitt: [49, 29]
-	thockin@google.com Tim Hockin: [3093, 814]
-	spzala@us.ibm.com Sahdev P. Zala: [42, 16]
-	dbsmith@google.com Daniel Smith: [5019, 172]
 	pwittroc@google.com Phillip Wittrock: [1, 1]
 	chenjg@harmonycloud.cn fate-grand-order: [2, 2]
 	deads@redhat.com deads2k: [103, 19]
 	wojtekt@google.com Wojciech Tyczynski: [857, 419]
 	agoldste@redhat.com Andy Goldstein: [58, 5]
-	sttts@redhat.com Dr. Stefan Schimanski: [42, 32]
 	mehdy@google.com mbohlool: [9, 0]
 	qlee@google.com Quintin Lee: [1, 0]
-	xuchao@google.com Chao Xu: [205, 32]
 	stclair@google.com Tim St. Clair: [8, 8]
 	george.tankersley@coreos.com George Tankersley: [3, 0]
 	eric.chiang@coreos.com Eric Chiang: [3, 0]
@@ -82,16 +87,14 @@ unknown 12435 1658
 	jianhui@outlook.com jianhuiz: [1, 0]
 	goltermann@google.com goltermann: [3, 4]
 devel-doc 255 2
-	ccoleman@redhat.com Clayton Coleman: [3, 2]
 	dbsmith@google.com Daniel Smith: [252, 0]
-code 60 60
-	thockin@google.com Tim Hockin: [60, 60]
-build 16 0
-	thockin@google.com Tim Hockin: [16, 0]
+	ccoleman@redhat.com Clayton Coleman: [3, 2]
 documentation 16 0
 	dbsmith@google.com Daniel Smith: [16, 0]
-unknown 12435 1658
-devel-doc 255 2
-code 60 60
 build 16 0
+	thockin@google.com Tim Hockin: [16, 0]
+code 60 60
+unknown 12765 1676
+devel-doc 255 2
 documentation 16 0
+build 16 0

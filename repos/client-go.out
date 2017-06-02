@@ -2,16 +2,41 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/client-go.csv
 
 unknown@hacker.net Unknown hacker
-andy@lindeman.io Andy Lindeman
-	unknown [104, 73]
-zihongz@google.com Zihong Zheng
-	unknown [1001, 743]
-xuchao@google.com Chao Xu
+caesarxuchao@users.noreply.github.com Chao Xu
 	unknown [505873, 894068]
-	devel-doc [2595, 4734]
+	devel-doc [2595, 4735]
 	code [0, 163]
 	build [0, 0]
 	documentation [0, 0]
+ccoleman@redhat.com Clayton Coleman
+	unknown [1688, 1816]
+	devel-doc [10, 32]
+bburns@google.com Brendan Burns
+	unknown [914, 753]
+stclair@google.com Tim St. Clair
+	unknown [343, 351]
+zihongz@google.com Zihong Zheng
+	unknown [1100, 752]
+admin@toph.ca Christoph Blecker
+	unknown [651, 10]
+ahmetb@google.com Ahmet Alp Balkan
+	unknown [789, 791]
+	devel-doc [3, 0]
+deads@redhat.com deads2k
+	unknown [2037, 1844]
+	devel-doc [2, 0]
+mehdy@google.com mbohlool
+	unknown [1694, 1727]
+	devel-doc [3, 3]
+yashulyak@gmail.com Dmitry Shulyak
+	unknown [1459, 217]
+	devel-doc [69, 4]
+caosf.fnst@cn.fujitsu.com Cao Shufeng
+	unknown [63, 19]
+jliggitt@redhat.com Jordan Liggitt
+	unknown [425, 212]
+andy@lindeman.io Andy Lindeman
+	unknown [104, 73]
 nislamov@atlassian.com Nail Islamov
 	unknown [420, 191]
 	devel-doc [90, 21]
@@ -24,9 +49,6 @@ madaxa@cn.ibm.com Klaus Ma
 	unknown [252, 220]
 haowang@redhat.com Haoran Wang
 	unknown [3, 0]
-mehdy@google.com mbohlool
-	unknown [9, 9]
-	devel-doc [3, 3]
 jamie.hannaford@rackspace.com Jamie Hannaford
 	unknown [935, 789]
 	devel-doc [1, 0]
@@ -43,8 +65,6 @@ henrique@lsd.ufcg.edu.br Henrique Truta
 	unknown [3, 3]
 ricky.pai@airbnb.com Ricky Pai
 	unknown [1798, 1002]
-deads@redhat.com deads2k
-	unknown [1765, 1722]
 ffranz@redhat.com Fabiano Franz
 	unknown [5, 2]
 pwittroc@google.com Phillip Wittrock
@@ -55,8 +75,6 @@ lucas.kaldstrom@hotmail.co.uk Lucas Käldström
 jsafrane@redhat.com Jan Safranek
 	unknown [1948, 6]
 	devel-doc [7, 5]
-jliggitt@redhat.com Jordan Liggitt
-	unknown [422, 212]
 rmohr@redhat.com Roman Mohr
 	unknown [218, 0]
 	devel-doc [51, 0]
@@ -64,8 +82,6 @@ ypwebstuff@gmail.com Yves Peter
 	unknown [1, 2]
 enisoc@google.com Anthony Yeh
 	unknown [24, 10]
-admin@toph.ca Christoph Blecker
-	unknown [10, 10]
 apelisse@google.com Antoine Pelisse
 	unknown [2, 2]
 thockin@google.com Tim Hockin
@@ -140,16 +156,25 @@ dtanshi45@gmail.com Daisuke Fujita
 wcfarrington@gmail.com Will Farrington
 	unknown [232, 0]
 	devel-doc [43, 0]
-unknown 538581 924032
+unknown 546537 929828
+	caesarxuchao@users.noreply.github.com Chao Xu: [505873, 894068]
+	ccoleman@redhat.com Clayton Coleman: [1688, 1816]
+	bburns@google.com Brendan Burns: [914, 753]
+	stclair@google.com Tim St. Clair: [343, 351]
+	zihongz@google.com Zihong Zheng: [1100, 752]
+	admin@toph.ca Christoph Blecker: [651, 10]
+	ahmetb@google.com Ahmet Alp Balkan: [789, 791]
+	deads@redhat.com deads2k: [2037, 1844]
+	mehdy@google.com mbohlool: [1694, 1727]
+	yashulyak@gmail.com Dmitry Shulyak: [1459, 217]
+	caosf.fnst@cn.fujitsu.com Cao Shufeng: [63, 19]
+	jliggitt@redhat.com Jordan Liggitt: [425, 212]
 	andy@lindeman.io Andy Lindeman: [104, 73]
-	zihongz@google.com Zihong Zheng: [1001, 743]
-	xuchao@google.com Chao Xu: [505873, 894068]
 	nislamov@atlassian.com Nail Islamov: [420, 191]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [58, 5]
 	gyliu513@gmail.com Guangya Liu: [1, 0]
 	madaxa@cn.ibm.com Klaus Ma: [252, 220]
 	haowang@redhat.com Haoran Wang: [3, 0]
-	mehdy@google.com mbohlool: [9, 9]
 	jamie.hannaford@rackspace.com Jamie Hannaford: [935, 789]
 	nickren19@gmail.com NickrenREN: [16, 21]
 	sross@redhat.com Solly Ross: [1, 0]
@@ -157,16 +182,13 @@ unknown 538581 924032
 	eric.chiang.m@gmail.com Eric Chiang: [5, 41]
 	henrique@lsd.ufcg.edu.br Henrique Truta: [3, 3]
 	ricky.pai@airbnb.com Ricky Pai: [1798, 1002]
-	deads@redhat.com deads2k: [1765, 1722]
 	ffranz@redhat.com Fabiano Franz: [5, 2]
 	pwittroc@google.com Phillip Wittrock: [118, 0]
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [18, 18]
 	jsafrane@redhat.com Jan Safranek: [1948, 6]
-	jliggitt@redhat.com Jordan Liggitt: [422, 212]
 	rmohr@redhat.com Roman Mohr: [218, 0]
 	ypwebstuff@gmail.com Yves Peter: [1, 2]
 	enisoc@google.com Anthony Yeh: [24, 10]
-	admin@toph.ca Christoph Blecker: [10, 10]
 	apelisse@google.com Antoine Pelisse: [2, 2]
 	thockin@google.com Tim Hockin: [820, 980]
 	1004815462@qq.com xu fei: [8, 8]
@@ -196,11 +218,15 @@ unknown 538581 924032
 	vladimir.vivien@gmail.com Vladimir Vivien: [3276, 1443]
 	dtanshi45@gmail.com Daisuke Fujita: [22, 22]
 	wcfarrington@gmail.com Will Farrington: [232, 0]
-devel-doc 8013 4832
-	xuchao@google.com Chao Xu: [2595, 4734]
+devel-doc 8097 4869
+	caesarxuchao@users.noreply.github.com Chao Xu: [2595, 4735]
+	ccoleman@redhat.com Clayton Coleman: [10, 32]
+	ahmetb@google.com Ahmet Alp Balkan: [3, 0]
+	deads@redhat.com deads2k: [2, 0]
+	mehdy@google.com mbohlool: [3, 3]
+	yashulyak@gmail.com Dmitry Shulyak: [69, 4]
 	nislamov@atlassian.com Nail Islamov: [90, 21]
 	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [3, 0]
-	mehdy@google.com mbohlool: [3, 3]
 	jamie.hannaford@rackspace.com Jamie Hannaford: [1, 0]
 	eric.chiang.m@gmail.com Eric Chiang: [51, 21]
 	pwittroc@google.com Phillip Wittrock: [4, 0]
@@ -216,13 +242,13 @@ devel-doc 8013 4832
 	kasper@firemango.dk Kasper Bentsen: [1, 1]
 	wcfarrington@gmail.com Will Farrington: [43, 0]
 code 0 163
-	xuchao@google.com Chao Xu: [0, 163]
+	caesarxuchao@users.noreply.github.com Chao Xu: [0, 163]
 build 0 0
-	xuchao@google.com Chao Xu: [0, 0]
+	caesarxuchao@users.noreply.github.com Chao Xu: [0, 0]
 documentation 0 0
-	xuchao@google.com Chao Xu: [0, 0]
-unknown 538581 924032
-devel-doc 8013 4832
+	caesarxuchao@users.noreply.github.com Chao Xu: [0, 0]
+unknown 546537 929828
+devel-doc 8097 4869
 code 0 163
 build 0 0
 documentation 0 0

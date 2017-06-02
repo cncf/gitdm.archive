@@ -2,6 +2,42 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/contrib.csv
 
 unknown@hacker.net Unknown hacker
+vmik@google.com Mik Vyatskov
+	code [29, 74]
+	unknown [2368, 164]
+	devel-doc [112, 56]
+	documentation [13, 6]
+	build [87, 87]
+pszczesniak@google.com Piotr Szczesniak
+	code [40, 0]
+	unknown [73128, 6266]
+	devel-doc [636, 26]
+	documentation [13, 0]
+	build [69, 8]
+maciejborsz@google.com Maciej Borsz
+	unknown [648, 22]
+	documentation [2, 0]
+loburm@google.com Marian Lobur
+	unknown [22, 6]
+mikedanese@gmail.com Mike Danese
+	devel-doc [55166, 2529]
+	code [12996, 496]
+	package [0, 0]
+	unknown [2544322, 198624]
+	image [0, 0]
+	documentation [35346, 1034]
+	build [1236, 39]
+robertbailey@google.com Robert Bailey
+	unknown [19, 9]
+	devel-doc [6, 5]
+	code [39, 0]
+	build [3, 3]
+	documentation [6, 3]
+verb@google.com Lee Verberne
+	unknown [1, 1]
+oleksii.khliupin@nytimes.com oleksii khliupin
+	unknown [8, 3]
+	build [1, 1]
 gmarek@google.com Marek Grabowski
 	devel-doc [16950, 0]
 	code [804, 39]
@@ -21,14 +57,6 @@ qlee@google.com Quintin Lee
 	code [31, 0]
 	build [240, 44]
 	documentation [11, 3]
-pszczesniak@google.com Piotr Szczesniak
-	code [40, 0]
-	unknown [72981, 6248]
-	devel-doc [636, 26]
-	documentation [13, 0]
-	build [69, 8]
-oleksii.khliupin@nytimes.com oleksii khliupin
-	unknown [5, 2]
 gyliu513@gmail.com Guangya Liu
 	unknown [1, 1]
 mwielgus@google.com Marcin Wielgus
@@ -37,14 +65,6 @@ mwielgus@google.com Marcin Wielgus
 	code [414, 103]
 	build [191, 35]
 	documentation [4538, 1]
-mikedanese@gmail.com Mike Danese
-	devel-doc [55166, 2529]
-	code [12996, 496]
-	package [0, 0]
-	unknown [2544322, 198624]
-	image [0, 0]
-	documentation [35346, 1034]
-	build [1236, 39]
 comp_@gmx.net isavin
 	unknown [6, 1]
 	documentation [1, 0]
@@ -134,11 +154,6 @@ thockin@google.com Tim Hockin
 	build [4, 20]
 mrbryanbecker@gmail.com Bryan Becker
 	unknown [8, 4]
-vmik@google.com Mik Vyatskov
-	unknown [79, 151]
-	devel-doc [29, 56]
-	code [29, 74]
-	build [45, 82]
 psyacca@gmail.com Daniele Santoro
 	unknown [14, 5]
 mhrivnak@hrivnak.org Michael Hrivnak
@@ -218,6 +233,9 @@ spxtr@google.com Joe Finney
 	code [26, 6]
 	build [2, 2]
 	documentation [17, 9]
+jayme-github@users.noreply.github.com jayme-github
+meybohm@traum-ferienwohnungen.de Janis Meybohm
+	code [1, 1]
 at28997146@163.com Tang Le
 	devel-doc [6, 3]
 ekuefler@gmail.com Erik Kuefler
@@ -384,12 +402,6 @@ dj199008@gmail.com m1093782566
 	devel-doc [1, 1]
 osxi@users.noreply.github.com osxi
 	unknown [744, 2]
-robertbailey@google.com Robert Bailey
-	unknown [19, 9]
-	devel-doc [6, 5]
-	code [39, 0]
-	build [3, 3]
-	documentation [6, 3]
 silas@godaddy.com Silas Boyd-Wickizer
 	unknown [1, 1]
 	build [11, 6]
@@ -669,13 +681,15 @@ sgallagh@redhat.com Stephen Gallagher
 	unknown [1, 0]
 ben.the.elder@gmail.com BenTheElder
 	unknown [249, 0]
-devel-doc 119081 57310
+devel-doc 119164 57310
+	vmik@google.com Mik Vyatskov: [112, 56]
+	pszczesniak@google.com Piotr Szczesniak: [636, 26]
+	mikedanese@gmail.com Mike Danese: [55166, 2529]
+	robertbailey@google.com Robert Bailey: [6, 5]
 	gmarek@google.com Marek Grabowski: [16950, 0]
 	stclair@google.com Tim St. Clair: [175, 0]
 	qlee@google.com Quintin Lee: [231, 84]
-	pszczesniak@google.com Piotr Szczesniak: [636, 26]
 	mwielgus@google.com Marcin Wielgus: [8052, 325]
-	mikedanese@gmail.com Mike Danese: [55166, 2529]
 	dbsmith@google.com Daniel Smith: [18, 2]
 	jchaloup@redhat.com Jan Chaloupka: [345, 38]
 	li.xialong@zte.com.cn Peter Lee: [1, 1]
@@ -689,7 +703,6 @@ devel-doc 119081 57310
 	e.proydakov@gmail.com Proydakov Evgeny: [2, 0]
 	talset55@gmail.com talset: [1, 1]
 	thockin@google.com Tim Hockin: [13, 73]
-	vmik@google.com Mik Vyatskov: [29, 56]
 	mhrivnak@hrivnak.org Michael Hrivnak: [1, 1]
 	contact@stephane-klein.info Stéphane Klein: [6, 6]
 	jgrafton@google.com Jeff Grafton: [54, 1557]
@@ -735,7 +748,6 @@ devel-doc 119081 57310
 	arnaldo@luizalabs.com Arnaldo de Moraes Pereira: [1, 1]
 	pdoreau@gmail.com Pierrick: [25, 8]
 	dj199008@gmail.com m1093782566: [1, 1]
-	robertbailey@google.com Robert Bailey: [6, 5]
 	glyons@box.com Greg Lyons: [5, 1]
 	madhusudancs@gmail.com Madhusudan.C.S: [209, 0]
 	sivabalan.manivannan@gmail.com Siva Manivannan: [1, 1]
@@ -771,13 +783,15 @@ devel-doc 119081 57310
 	brandon@ifup.org Brandon Philips: [1, 1]
 	chiachenk@google.com Janet Kuo: [1772, 3]
 	v.antonovich@gmail.com Victor Antonovich: [5, 1]
-code 73859 42204
+code 73860 42205
+	vmik@google.com Mik Vyatskov: [29, 74]
+	pszczesniak@google.com Piotr Szczesniak: [40, 0]
+	mikedanese@gmail.com Mike Danese: [12996, 496]
+	robertbailey@google.com Robert Bailey: [39, 0]
 	gmarek@google.com Marek Grabowski: [804, 39]
 	stclair@google.com Tim St. Clair: [196, 0]
 	qlee@google.com Quintin Lee: [31, 0]
-	pszczesniak@google.com Piotr Szczesniak: [40, 0]
 	mwielgus@google.com Marcin Wielgus: [414, 103]
-	mikedanese@gmail.com Mike Danese: [12996, 496]
 	dbsmith@google.com Daniel Smith: [169, 14]
 	jchaloup@redhat.com Jan Chaloupka: [453, 122]
 	li.xialong@zte.com.cn Peter Lee: [1, 1]
@@ -789,7 +803,6 @@ code 73859 42204
 	talset55@gmail.com talset: [4, 0]
 	guillaume@monzo.com Guillaume Breton: [10, 10]
 	thockin@google.com Tim Hockin: [940, 115]
-	vmik@google.com Mik Vyatskov: [29, 74]
 	jgrafton@google.com Jeff Grafton: [4, 226]
 	jbrooks@redhat.com Jason Brooks: [1, 1]
 	beeps@google.com Prashanth B: [629, 2570]
@@ -799,6 +812,7 @@ code 73859 42204
 	oatamanenko@eastbanctech.com Oleg Atamanenko: [1, 1]
 	apelisse@google.com Antoine Pelisse: [5, 0]
 	spxtr@google.com Joe Finney: [26, 6]
+	meybohm@traum-ferienwohnungen.de Janis Meybohm: [1, 1]
 	eparis@redhat.com Eric Paris: [1672, 570]
 	rmmh@google.com Ryan Hitchman: [24960, 58]
 	owensk@google.com Kenneth Owens: [273, 78]
@@ -809,7 +823,6 @@ code 73859 42204
 	lantaol@google.com Random-Liu: [2787, 2647]
 	zihongz@google.com MrHohn: [92, 0]
 	zhoufang@google.com Zhou Fang: [12440, 456]
-	robertbailey@google.com Robert Bailey: [39, 0]
 	glyons@box.com Greg Lyons: [25, 0]
 	rutsky.vladimir@gmail.com Vladimir Rutsky: [0, 706]
 	filipg@google.com Filip Grzadkowski: [70, 0]
@@ -828,22 +841,27 @@ code 73859 42204
 	walters@redhat.com Colin Walters: [22, 14]
 	chiachenk@google.com Janet Kuo: [47, 11]
 package 0 0
-	gmarek@google.com Marek Grabowski: [0, 0]
 	mikedanese@gmail.com Mike Danese: [0, 0]
+	gmarek@google.com Marek Grabowski: [0, 0]
 	shyamjvs@google.com Shyam Jeedigunta: [0, 0]
 	beeps@google.com Prashanth B: [0, 0]
 	aledbf@gmail.com Manuel de Brito Fontes: [0, 0]
 	lantaol@google.com Random-Liu: [0, 0]
 	bburns@google.com Brendan Burns: [0, 0]
-unknown 6492764 3404046
+unknown 6495874 3404107
+	vmik@google.com Mik Vyatskov: [2368, 164]
+	pszczesniak@google.com Piotr Szczesniak: [73128, 6266]
+	maciejborsz@google.com Maciej Borsz: [648, 22]
+	loburm@google.com Marian Lobur: [22, 6]
+	mikedanese@gmail.com Mike Danese: [2544322, 198624]
+	robertbailey@google.com Robert Bailey: [19, 9]
+	verb@google.com Lee Verberne: [1, 1]
+	oleksii.khliupin@nytimes.com oleksii khliupin: [8, 3]
 	gmarek@google.com Marek Grabowski: [640600, 1019]
 	stclair@google.com Tim St. Clair: [497, 7]
 	qlee@google.com Quintin Lee: [3136, 701]
-	pszczesniak@google.com Piotr Szczesniak: [72981, 6248]
-	oleksii.khliupin@nytimes.com oleksii khliupin: [5, 2]
 	gyliu513@gmail.com Guangya Liu: [1, 1]
 	mwielgus@google.com Marcin Wielgus: [502524, 24669]
-	mikedanese@gmail.com Mike Danese: [2544322, 198624]
 	comp_@gmx.net isavin: [6, 1]
 	dbsmith@google.com Daniel Smith: [4651, 1246]
 	jchaloup@redhat.com Jan Chaloupka: [1033, 660]
@@ -865,7 +883,6 @@ unknown 6492764 3404046
 	chenjg@harmonycloud.cn fate-grand-order: [10, 7]
 	thockin@google.com Tim Hockin: [605, 773]
 	mrbryanbecker@gmail.com Bryan Becker: [8, 4]
-	vmik@google.com Mik Vyatskov: [79, 151]
 	psyacca@gmail.com Daniele Santoro: [14, 5]
 	ykuoka@gmail.com Yusuke Kuoka: [1650, 682]
 	jgrafton@google.com Jeff Grafton: [55, 14812]
@@ -922,7 +939,6 @@ unknown 6492764 3404046
 	ikeontang@gmail.com keontang: [8, 1]
 	jlebon@redhat.com Jonathan Lebon: [122, 26]
 	osxi@users.noreply.github.com osxi: [744, 2]
-	robertbailey@google.com Robert Bailey: [19, 9]
 	silas@godaddy.com Silas Boyd-Wickizer: [1, 1]
 	tstclair@redhat.com Timothy St. Clair: [1, 0]
 	glyons@box.com Greg Lyons: [318, 94]
@@ -1002,20 +1018,23 @@ unknown 6492764 3404046
 	sgallagh@redhat.com Stephen Gallagher: [1, 0]
 	ben.the.elder@gmail.com BenTheElder: [249, 0]
 image 0 0
-	gmarek@google.com Marek Grabowski: [0, 0]
 	mikedanese@gmail.com Mike Danese: [0, 0]
+	gmarek@google.com Marek Grabowski: [0, 0]
 	shyamjvs@google.com Shyam Jeedigunta: [0, 0]
 	beeps@google.com Prashanth B: [0, 0]
 	aledbf@gmail.com Manuel de Brito Fontes: [0, 0]
 	ramanathana@google.com Anirudh: [0, 0]
 	eparis@redhat.com Eric Paris: [0, 0]
 	lantaol@google.com Random-Liu: [0, 0]
-documentation 73132 41455
+documentation 73147 41461
+	vmik@google.com Mik Vyatskov: [13, 6]
+	pszczesniak@google.com Piotr Szczesniak: [13, 0]
+	maciejborsz@google.com Maciej Borsz: [2, 0]
+	mikedanese@gmail.com Mike Danese: [35346, 1034]
+	robertbailey@google.com Robert Bailey: [6, 3]
 	gmarek@google.com Marek Grabowski: [8335, 715]
 	qlee@google.com Quintin Lee: [11, 3]
-	pszczesniak@google.com Piotr Szczesniak: [13, 0]
 	mwielgus@google.com Marcin Wielgus: [4538, 1]
-	mikedanese@gmail.com Mike Danese: [35346, 1034]
 	comp_@gmx.net isavin: [1, 0]
 	dbsmith@google.com Daniel Smith: [101, 25]
 	jchaloup@redhat.com Jan Chaloupka: [3, 3]
@@ -1043,7 +1062,6 @@ documentation 73132 41455
 	zhoufang@google.com Zhou Fang: [743, 183]
 	shane@node.mu Vy-Shane Xie: [1, 0]
 	pwittroc+github@google.com Phillip Wittrock: [1, 0]
-	robertbailey@google.com Robert Bailey: [6, 3]
 	filipg@google.com Filip Grzadkowski: [5, 2]
 	alex@bengler.no Alexander Staubo: [1, 0]
 	simon@swine.de Christian Simon: [7, 5]
@@ -1062,19 +1080,21 @@ documentation 73132 41455
 	chiachenk@google.com Janet Kuo: [5099, 33]
 	mvdan@mvdan.cc Daniel Martí: [1, 0]
 	james@mesosphere.io James DeFelice: [3, 0]
-build 6970 3130
+build 7013 3136
+	vmik@google.com Mik Vyatskov: [87, 87]
+	pszczesniak@google.com Piotr Szczesniak: [69, 8]
+	mikedanese@gmail.com Mike Danese: [1236, 39]
+	robertbailey@google.com Robert Bailey: [3, 3]
+	oleksii.khliupin@nytimes.com oleksii khliupin: [1, 1]
 	gmarek@google.com Marek Grabowski: [318, 4]
 	stclair@google.com Tim St. Clair: [40, 27]
 	qlee@google.com Quintin Lee: [240, 44]
-	pszczesniak@google.com Piotr Szczesniak: [69, 8]
 	mwielgus@google.com Marcin Wielgus: [191, 35]
-	mikedanese@gmail.com Mike Danese: [1236, 39]
 	dbsmith@google.com Daniel Smith: [18, 13]
 	jchaloup@redhat.com Jan Chaloupka: [104, 8]
 	bowei@google.com Bowei Du: [162, 248]
 	shyamjvs@google.com Shyam Jeedigunta: [0, 314]
 	thockin@google.com Tim Hockin: [4, 20]
-	vmik@google.com Mik Vyatskov: [45, 82]
 	ykuoka@gmail.com Yusuke Kuoka: [5, 1]
 	jgrafton@google.com Jeff Grafton: [47, 152]
 	rdmello@us.ibm.com Ryan D'Mello: [4, 1]
@@ -1092,7 +1112,6 @@ build 6970 3130
 	zihongz@google.com MrHohn: [119, 44]
 	zhoufang@google.com Zhou Fang: [27, 9]
 	pwittroc+github@google.com Phillip Wittrock: [1, 1]
-	robertbailey@google.com Robert Bailey: [3, 3]
 	silas@godaddy.com Silas Boyd-Wickizer: [11, 6]
 	github@louis-paul.net Louis-Paul Dareau: [1, 1]
 	madhusudancs@gmail.com Madhusudan.C.S: [24, 0]
@@ -1115,10 +1134,10 @@ build 6970 3130
 	roque@juniper.net Pedro Roque Marques: [117, 0]
 	krancourt@engineyard.com Kent Rancourt: [4, 0]
 	chiachenk@google.com Janet Kuo: [192, 0]
-devel-doc 119081 57310
-code 73859 42204
+devel-doc 119164 57310
+code 73860 42205
 package 0 0
-unknown 6492764 3404046
+unknown 6495874 3404107
 image 0 0
-documentation 73132 41455
-build 6970 3130
+documentation 73147 41461
+build 7013 3136

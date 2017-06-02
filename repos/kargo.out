@@ -3,26 +3,34 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/kargo.csv
 
 unknown@hacker.net Unknown hacker
 rsmitty@users.noreply.github.com Spencer Smith
-	unknown [613, 128]
+	unknown [724, 147]
 	devel-doc [30, 2]
-	code [321, 1]
+	code [382, 1]
 	build [1, 1]
-hkang.sunysb@gmail.com Hui Kang
+github@jonasmatser.nl Jonas Matser
+	devel-doc [5, 3]
+justin.hunthrop@emc.com Justin Hunthrop
+	unknown [1, 1]
+zounengren@cmss.chinamobile.com zoues
+zouyee1989@gmail.com zouyee
+	unknown [5, 5]
 	devel-doc [2, 2]
 mmosesohn@mirantis.com Matthew Mosesohn
-	devel-doc [79, 30]
+	devel-doc [89, 30]
 	code [794, 3115]
-	unknown [3433, 2236]
+	unknown [3470, 2239]
 	image [0, 0]
 	documentation [6, 1]
 	build [184, 381]
-moss2k03@yahoo.com moss2k13
-	unknown [1, 1]
 bradbeam@users.noreply.github.com Brad Beam
-	unknown [825, 291]
+	unknown [828, 297]
 	devel-doc [152, 49]
 	code [4, 306]
 	build [1, 0]
+hkang.sunysb@gmail.com Hui Kang
+	devel-doc [2, 2]
+moss2k03@yahoo.com moss2k13
+	unknown [1, 1]
 cfarquhar@cfarquhar.com Charles Farquhar
 	unknown [1, 1]
 adidenko@mirantis.com Aleksandr Didenko
@@ -56,9 +64,6 @@ vincent.schwarzer@yahoo.de Vincent Schwarzer
 	devel-doc [47, 17]
 	documentation [1, 0]
 	image [0, 0]
-zouyee1989@gmail.com zouyee
-	unknown [2, 2]
-	devel-doc [1, 1]
 antoine.legrand@coreos.com Antoine Legrand
 	unknown [1023, 646]
 	devel-doc [25, 41]
@@ -90,6 +95,8 @@ bogdando@mail.ru Bogdan Dobrelya
 	code [66, 11]
 	build [304, 820]
 	image [0, 0]
+github@connz.de Connz
+	devel-doc [1, 1]
 daniele.cesarini@sky.uk Cesarini, Daniele
 	code [1, 1]
 idcrook@users.noreply.github.com David Crook
@@ -239,18 +246,20 @@ github@teuto.net teuto.net Netzdienste GmbH
 	unknown [110, 30]
 nathan.franzen@ctl.io ntfrnzn
 	unknown [23, 5]
-devel-doc 2276 1296
+devel-doc 2293 1301
 	rsmitty@users.noreply.github.com Spencer Smith: [30, 2]
-	hkang.sunysb@gmail.com Hui Kang: [2, 2]
-	mmosesohn@mirantis.com Matthew Mosesohn: [79, 30]
+	github@jonasmatser.nl Jonas Matser: [5, 3]
+	zouyee1989@gmail.com zouyee: [2, 2]
+	mmosesohn@mirantis.com Matthew Mosesohn: [89, 30]
 	bradbeam@users.noreply.github.com Brad Beam: [152, 49]
+	hkang.sunysb@gmail.com Hui Kang: [2, 2]
 	sgolovatiuk@mirantis.com Sergii Golovatiuk: [12, 12]
 	galthaus@austin.rr.com Greg Althaus: [9, 9]
 	vincent.schwarzer@yahoo.de Vincent Schwarzer: [47, 17]
-	zouyee1989@gmail.com zouyee: [1, 1]
 	antoine.legrand@coreos.com Antoine Legrand: [25, 41]
 	zoidbergwill@gmail.com William Martin Stewart: [1, 1]
 	bogdando@mail.ru Bogdan Dobrelya: [57, 51]
+	github@connz.de Connz: [1, 1]
 	pablo.a.moreno@gmail.com Pablo Moreno: [179, 9]
 	hvn@familug.org Hung Nguyen Viet: [5, 4]
 	smainklh@gmail.com Smaine Kahlouch: [1062, 942]
@@ -264,8 +273,8 @@ devel-doc 2276 1296
 	ihor.dvoretskyi@gmail.com Ihor Dvoretskyi: [1, 1]
 	jsirot@weborama.com Jean-Christophe Sirot: [11, 2]
 	username.taken@gmail.com Paul Czarkowski: [196, 57]
-code 42970 21659
-	rsmitty@users.noreply.github.com Spencer Smith: [321, 1]
+code 43031 21659
+	rsmitty@users.noreply.github.com Spencer Smith: [382, 1]
 	mmosesohn@mirantis.com Matthew Mosesohn: [794, 3115]
 	bradbeam@users.noreply.github.com Brad Beam: [4, 306]
 	adidenko@mirantis.com Aleksandr Didenko: [0, 0]
@@ -281,11 +290,13 @@ code 42970 21659
 	2t.antoine@gmail.com ant31: [489, 0]
 	bjozsa@gmail.com Brandon B. Jozsa: [0, 0]
 	username.taken@gmail.com Paul Czarkowski: [736, 0]
-unknown 30701 13969
-	rsmitty@users.noreply.github.com Spencer Smith: [613, 128]
-	mmosesohn@mirantis.com Matthew Mosesohn: [3433, 2236]
+unknown 30856 14001
+	rsmitty@users.noreply.github.com Spencer Smith: [724, 147]
+	justin.hunthrop@emc.com Justin Hunthrop: [1, 1]
+	zouyee1989@gmail.com zouyee: [5, 5]
+	mmosesohn@mirantis.com Matthew Mosesohn: [3470, 2239]
+	bradbeam@users.noreply.github.com Brad Beam: [828, 297]
 	moss2k03@yahoo.com moss2k13: [1, 1]
-	bradbeam@users.noreply.github.com Brad Beam: [825, 291]
 	cfarquhar@cfarquhar.com Charles Farquhar: [1, 1]
 	adidenko@mirantis.com Aleksandr Didenko: [968, 283]
 	sgolovatiuk@mirantis.com Sergii Golovatiuk: [582, 230]
@@ -297,7 +308,6 @@ unknown 30701 13969
 	george.bolo@gmail.com gbolo: [8, 1]
 	jduhamel@gmail.com Joe Duhamel: [2, 2]
 	vincent.schwarzer@yahoo.de Vincent Schwarzer: [1002, 357]
-	zouyee1989@gmail.com zouyee: [2, 2]
 	antoine.legrand@coreos.com Antoine Legrand: [1023, 646]
 	pawel.skrzynski@intel.com Paweł Skrzyński: [13, 10]
 	justin@downing.us Justin Downing: [9, 1]
@@ -396,9 +406,9 @@ build 1499 1355
 	chadswen@gmail.com Chad Swenson: [2, 2]
 	jsirot@weborama.com Jean-Christophe Sirot: [1, 1]
 	eli@mirantis.com Evgeny L: [13, 8]
-devel-doc 2276 1296
-code 42970 21659
-unknown 30701 13969
+devel-doc 2293 1301
+code 43031 21659
+unknown 30856 14001
 image 0 0
 documentation 27 17
 build 1499 1355

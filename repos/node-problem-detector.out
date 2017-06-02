@@ -2,6 +2,13 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/node-problem-detector.csv
 
 unknown@hacker.net Unknown hacker
+dawnchen@google.com Dawn Chen
+	devel-doc [203, 0]
+lantaol@google.com Random-Liu
+	unknown [5574, 1653]
+	devel-doc [284, 60]
+	code [66, 0]
+	build [175, 41]
 taotaotheripper@gmail.com Lantao Liu
 	unknown [1, 1]
 jmilan@redhat.com Julius Milan
@@ -9,16 +16,10 @@ jmilan@redhat.com Julius Milan
 	devel-doc [1, 0]
 zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang
 	devel-doc [1, 1]
-dawnchen@google.com Dawn Chen
-	devel-doc [203, 0]
 euan.kemp@coreos.com Euan Kemp
-	unknown [5, 3]
+	unknown [315, 4]
+	devel-doc [11, 9]
 	build [11, 2]
-lantaol@google.com Random-Liu
-	unknown [5567, 1626]
-	devel-doc [282, 58]
-	code [66, 0]
-	build [175, 41]
 andy.xning@gmail.com Andy Xie
 	unknown [890, 416]
 	devel-doc [35, 10]
@@ -41,22 +42,23 @@ gkalele@google.com Girish Kalele
 	build [42, 0]
 edwardam@interlix.com Edward Muller
 	unknown [9, 13]
-unknown 6804 2166
+unknown 7121 2194
+	lantaol@google.com Random-Liu: [5574, 1653]
 	taotaotheripper@gmail.com Lantao Liu: [1, 1]
 	jmilan@redhat.com Julius Milan: [39, 1]
-	euan.kemp@coreos.com Euan Kemp: [5, 3]
-	lantaol@google.com Random-Liu: [5567, 1626]
+	euan.kemp@coreos.com Euan Kemp: [315, 4]
 	andy.xning@gmail.com Andy Xie: [890, 416]
 	chenjg@harmonycloud.cn fate-grand-order: [3, 3]
 	shyamjvs@google.com Shyam Jeedigunta: [1, 1]
 	coolhzb@163.com AdoHe: [140, 102]
 	gkalele@google.com Girish Kalele: [149, 0]
 	edwardam@interlix.com Edward Muller: [9, 13]
-devel-doc 559 75
+devel-doc 572 86
+	dawnchen@google.com Dawn Chen: [203, 0]
+	lantaol@google.com Random-Liu: [284, 60]
 	jmilan@redhat.com Julius Milan: [1, 0]
 	zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang: [1, 1]
-	dawnchen@google.com Dawn Chen: [203, 0]
-	lantaol@google.com Random-Liu: [282, 58]
+	euan.kemp@coreos.com Euan Kemp: [11, 9]
 	andy.xning@gmail.com Andy Xie: [35, 10]
 	aps.sids@gmail.com Amanpreet Singh: [6, 4]
 	thecantero@users.noreply.github.com thecantero: [1, 1]
@@ -65,11 +67,11 @@ devel-doc 559 75
 code 66 0
 	lantaol@google.com Random-Liu: [66, 0]
 build 241 52
-	euan.kemp@coreos.com Euan Kemp: [11, 2]
 	lantaol@google.com Random-Liu: [175, 41]
+	euan.kemp@coreos.com Euan Kemp: [11, 2]
 	andy.xning@gmail.com Andy Xie: [13, 9]
 	gkalele@google.com Girish Kalele: [42, 0]
-unknown 6804 2166
-devel-doc 559 75
+unknown 7121 2194
+devel-doc 572 86
 code 66 0
 build 241 52

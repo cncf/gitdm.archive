@@ -2,6 +2,13 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/release.csv
 
 unknown@hacker.net Unknown hacker
+ixdy@users.noreply.github.com Jeff Grafton
+	unknown [49, 29]
+	devel-doc [40, 17]
+	code [229, 79]
+	build [10, 10]
+admin@toph.ca Christoph Blecker
+	code [3, 1]
 mikedanese@gmail.com Mike Danese
 	unknown [690, 70]
 	devel-doc [109, 11]
@@ -10,16 +17,11 @@ mikedanese@gmail.com Mike Danese
 beacham@google.com Jacob Beacham
 	unknown [1, 1]
 	code [10, 2]
-	build [8, 2]
-jgrafton@google.com Jeff Grafton
-	unknown [49, 29]
-	devel-doc [40, 17]
-	code [229, 79]
-	build [10, 10]
+	build [15, 6]
 djmm@google.com David McMahon
-	unknown [2163, 355]
+	unknown [2174, 379]
 	devel-doc [1003, 57]
-	code [2667, 425]
+	code [2695, 440]
 dgoodwin@redhat.com Devan Goodwin
 	unknown [43, 14]
 	devel-doc [21, 9]
@@ -90,11 +92,11 @@ pwittroc+github@google.com Phillip Wittrock
 robertbailey@google.com Robert Bailey
 bgrant0607@users.noreply.github.com Brian Grant
 	devel-doc [203, 0]
-unknown 3316 690
+unknown 3327 714
+	ixdy@users.noreply.github.com Jeff Grafton: [49, 29]
 	mikedanese@gmail.com Mike Danese: [690, 70]
 	beacham@google.com Jacob Beacham: [1, 1]
-	jgrafton@google.com Jeff Grafton: [49, 29]
-	djmm@google.com David McMahon: [2163, 355]
+	djmm@google.com David McMahon: [2174, 379]
 	dgoodwin@redhat.com Devan Goodwin: [43, 14]
 	joe.github@bedafamily.com Joe Beda: [21, 8]
 	luxas@users.noreply.github.com Lucas Käldström: [239, 122]
@@ -108,8 +110,8 @@ unknown 3316 690
 	me@lukemarsden.net Luke Marsden: [3, 1]
 	eli@mirantis.com Evgeny L: [10, 12]
 devel-doc 1442 114
+	ixdy@users.noreply.github.com Jeff Grafton: [40, 17]
 	mikedanese@gmail.com Mike Danese: [109, 11]
-	jgrafton@google.com Jeff Grafton: [40, 17]
 	djmm@google.com David McMahon: [1003, 57]
 	dgoodwin@redhat.com Devan Goodwin: [21, 9]
 	bburns@microsoft.com Brendan Burns: [3, 2]
@@ -118,11 +120,12 @@ devel-doc 1442 114
 	marciopuga@gmail.com Marcio Puga: [1, 1]
 	mmosesohn@mirantis.com Matthew Mosesohn: [42, 15]
 	bgrant0607@users.noreply.github.com Brian Grant: [203, 0]
-code 3347 808
+code 3378 824
+	ixdy@users.noreply.github.com Jeff Grafton: [229, 79]
+	admin@toph.ca Christoph Blecker: [3, 1]
 	mikedanese@gmail.com Mike Danese: [215, 196]
 	beacham@google.com Jacob Beacham: [10, 2]
-	jgrafton@google.com Jeff Grafton: [229, 79]
-	djmm@google.com David McMahon: [2667, 425]
+	djmm@google.com David McMahon: [2695, 440]
 	dgoodwin@redhat.com Devan Goodwin: [31, 5]
 	bburns@microsoft.com Brendan Burns: [8, 0]
 	joe.github@bedafamily.com Joe Beda: [3, 3]
@@ -139,10 +142,10 @@ code 3347 808
 	mmosesohn@mirantis.com Matthew Mosesohn: [4, 1]
 	pigmej@gmail.com Jedrzej Nowak: [23, 5]
 	eli@mirantis.com Evgeny L: [1, 0]
-build 525 225
+build 532 229
+	ixdy@users.noreply.github.com Jeff Grafton: [10, 10]
 	mikedanese@gmail.com Mike Danese: [160, 48]
-	beacham@google.com Jacob Beacham: [8, 2]
-	jgrafton@google.com Jeff Grafton: [10, 10]
+	beacham@google.com Jacob Beacham: [15, 6]
 	dgoodwin@redhat.com Devan Goodwin: [173, 43]
 	luxas@users.noreply.github.com Lucas Käldström: [96, 67]
 	mkumatag@in.ibm.com Manjunath A Kumatagi: [6, 5]
@@ -152,7 +155,7 @@ build 525 225
 	errordeveloper@gmail.com Ilya Dmitrichenko: [31, 22]
 	mmosesohn@mirantis.com Matthew Mosesohn: [22, 15]
 	eli@mirantis.com Evgeny L: [4, 1]
-unknown 3316 690
+unknown 3327 714
 devel-doc 1442 114
-code 3347 808
-build 525 225
+code 3378 824
+build 532 229

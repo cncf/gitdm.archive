@@ -3,9 +3,6 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/test-infra.csv
 
 john.felten@gmail.com is an author name, probably not what you want
 unknown@hacker.net Unknown hacker
-lukaszgryglicki@o2.pl lukaszgryglicki
-	unknown [5325, 195]
-	devel-doc [97, 0]
 bowei.du@gmail.com Bowei Du
 	unknown [75, 1]
 	code [398, 186]
@@ -200,6 +197,8 @@ dettervt@gmail.com Dan Etter
 	unknown [253, 2]
 	devel-doc [46, 0]
 	build [1, 1]
+lukaszgryglicki@o2.pl lukaszgryglicki
+	unknown [392, 193]
 nikhiljindal@google.com Nikhil Jindal
 	unknown [101, 186]
 	code [29, 34]
@@ -440,8 +439,7 @@ harryzhang@zju.edu.cn Harry Zhang
 	documentation [1, 0]
 hesimei@zju.edu.cn He Simei
 	documentation [1, 0]
-devel-doc 13026 3255
-	lukaszgryglicki@o2.pl lukaszgryglicki: [97, 0]
+devel-doc 12929 3255
 	rmmh@google.com Ryan Hitchman: [276, 19]
 	grod@google.com Garrett Rodrigues: [228, 80]
 	jgrafton@google.com Jeff Grafton: [19, 12]
@@ -537,8 +535,7 @@ code 132036 55753
 	travis@appformix.com Travis Newhouse: [109, 28]
 package 0 0
 	rmmh@google.com Ryan Hitchman: [0, 0]
-unknown 241409 109289
-	lukaszgryglicki@o2.pl lukaszgryglicki: [5325, 195]
+unknown 236476 109287
 	bowei.du@gmail.com Bowei Du: [75, 1]
 	rmmh@google.com Ryan Hitchman: [4635, 731]
 	grod@google.com Garrett Rodrigues: [3822, 865]
@@ -590,6 +587,7 @@ unknown 241409 109289
 	saied@google.com Saied Kazemi: [116, 0]
 	dvorak@google.com Jonathan MacMillan: [25, 6]
 	dettervt@gmail.com Dan Etter: [253, 2]
+	lukaszgryglicki@o2.pl lukaszgryglicki: [392, 193]
 	nikhiljindal@google.com Nikhil Jindal: [101, 186]
 	eparis@redhat.com Eric Paris: [18026, 47844]
 	brendan.d.burns@gmail.com Brendan Burns: [1833, 84]
@@ -740,10 +738,10 @@ build 2092 1097
 	spextear@gmail.com spxtr: [1, 1]
 	bgardner@redhat.com Ben Gardner: [21, 5]
 	goltermann@google.com goltermann: [6, 0]
-devel-doc 13026 3255
+devel-doc 12929 3255
 code 132036 55753
 package 0 0
-unknown 241409 109289
+unknown 236476 109287
 image 303 0
 documentation 9333 5887
 ui 419 6
