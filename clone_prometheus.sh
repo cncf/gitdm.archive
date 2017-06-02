@@ -1,4 +1,6 @@
 #!/bin/sh
+mkdir ~/dev/prometheus/ 2>/dev/null
+# This list is from `cncf/velocity`:`BigQuery/query_prometheus_repos.sql`
 cd ~/dev/prometheus || exit 1
 git clone https://github.com/prometheus/alertmanager.git || exit 1
 git clone https://github.com/prometheus/blackbox_exporter.git || exit 1

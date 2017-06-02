@@ -133,4 +133,8 @@ We have an increase from 230 to 365 which is 59% more.
 # Report
 Links to data and generated report are here: `./res/links.txt`
 
-
+# CNCF Projects join statistics
+- CNCF Projects joindates are: https://github.com/cncf/toc#projects
+- To generate statistics for Prometheus 90 days before joining CNCF and 90 days after joining try this:
+- Run: `./clone_prometheus.sh`
+- Run `./cncf_join_analysis.sh prometheus 2016-05-09 90 ~/dev/prometheus/`

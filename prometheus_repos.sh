@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "args: date_from date_to patht_to_prometheus_repos_directory"
+echo "args: date_from date_to path_to_prometheus_repos_directory"
 WD=`pwd`
 FN=$WD/prometheus.log
 F=$WD/prometheus_repos/prometheus_combined
