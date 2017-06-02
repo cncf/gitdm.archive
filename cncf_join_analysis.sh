@@ -31,11 +31,11 @@ cd $PWD
 cat $FN_BEFORE | ~/dev/cncf/gitdm/cncfdm.py -n -b ~/dev/cncf/gitdm/ -f "$BEFORE_DATE" -e "$JOIN_DATE" -t -z -d -D -U -o $BEFORE.txt -x $BEFORE.csv > $BEFORE.out
 cat $FN_AFTER | ~/dev/cncf/gitdm/cncfdm.py -n -b ~/dev/cncf/gitdm/ -f "$JOIN_DATE" -e "$AFTER_DATE" -t -z -d -D -U -o $AFTER.txt -x $AFTER.csv > $AFTER.out
 rm $FN_BEFORE $FN_AFTER
-echo "Before joining CNCF: From: $BEFORE_DATE to $JOIN_DATE:" > $RESULT
+echo "$PROJECT before joining CNCF: From: $BEFORE_DATE to $JOIN_DATE:" > $RESULT
 head -n 1 $BEFORE.txt >> $RESULT
 head -n 3 $BEFORE.txt | tail -n 1 >> $RESULT
 echo "CNCF Join date: $JOIN_DATE" >> $RESULT
-echo "After joining CNCF: From: $JOIN_DATE to $AFTER_DATE:" >> $RESULT
+echo "$PROJECT after joining CNCF: From: $JOIN_DATE to $AFTER_DATE:" >> $RESULT
 head -n 1 $AFTER.txt >> $RESULT
 head -n 3 $AFTER.txt | tail -n 1 >> $RESULT
 echo "Results saved to $RESULT"
