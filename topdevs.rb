@@ -4,6 +4,7 @@ require 'pry'
 def analysis(fn)
   # "Name","Email","Affliation","Date","Added","Removed","Changesets"
   obj = {}
+  aff = {}
   sa = sr = sc = 0
   unknowns = {}
   goo = {}
@@ -18,6 +19,8 @@ def analysis(fn)
     r = h['Removed']
     c = h['Changesets']
     e = h['Email']
+    d = h['Date']
+    co = h['Affliation'].to_s
     sa += a
     sr += r
     sc += c
@@ -35,7 +38,6 @@ def analysis(fn)
     elsif em == 'Google' && !e.include?('@google.com')
       goo[h['Name']] = h
     end
-    co = h['Affliation'].to_s
     companies[co] = [] unless companies.key?(co)
     companies[co] << e
   end
