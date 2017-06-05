@@ -1,0 +1,53 @@
+open output file /Users/lukasz/dev/cncf/gitdm/cni_repos/combined_after.csv
+
+unknown@hacker.net Unknown hacker
+grosenhouse@pivotal.io Gabe Rosenhouse
+	unknown [41, 0]
+	devel-doc [6, 5]
+dcbw@redhat.com Dan Williams
+	unknown [2285, 155181]
+	devel-doc [591, 2735]
+	code [4, 2857]
+	build [0, 29]
+christx2@users.noreply.github.com ChristophLondon
+	devel-doc [1, 0]
+casey.callendrello@coreos.com Casey Callendrello
+	unknown [2334, 7012]
+	devel-doc [397, 39]
+	code [16, 8]
+bbennett@redhat.com Benjamin Bennett
+	devel-doc [1, 0]
+caniszczyk@gmail.com Chris Aniszczyk
+	devel-doc [2, 0]
+	image [0, 0]
+tom@tomdee.co.uk Tom Denham
+patelgunjan5@gmail.com gunjan5
+	unknown [16, 10]
+feiskyer@gmail.com Pengfei Ni
+	unknown [96, 54]
+bjboreham@gmail.com Bryan Boreham
+unknown 4772 162257
+	grosenhouse@pivotal.io Gabe Rosenhouse: [41, 0]
+	dcbw@redhat.com Dan Williams: [2285, 155181]
+	casey.callendrello@coreos.com Casey Callendrello: [2334, 7012]
+	patelgunjan5@gmail.com gunjan5: [16, 10]
+	feiskyer@gmail.com Pengfei Ni: [96, 54]
+devel-doc 998 2779
+	grosenhouse@pivotal.io Gabe Rosenhouse: [6, 5]
+	dcbw@redhat.com Dan Williams: [591, 2735]
+	christx2@users.noreply.github.com ChristophLondon: [1, 0]
+	casey.callendrello@coreos.com Casey Callendrello: [397, 39]
+	bbennett@redhat.com Benjamin Bennett: [1, 0]
+	caniszczyk@gmail.com Chris Aniszczyk: [2, 0]
+code 20 2865
+	dcbw@redhat.com Dan Williams: [4, 2857]
+	casey.callendrello@coreos.com Casey Callendrello: [16, 8]
+build 0 29
+	dcbw@redhat.com Dan Williams: [0, 29]
+image 0 0
+	caniszczyk@gmail.com Chris Aniszczyk: [0, 0]
+unknown 4772 162257
+devel-doc 998 2779
+code 20 2865
+build 0 29
+image 0 0
