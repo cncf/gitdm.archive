@@ -3,11 +3,11 @@ open output file /Users/lukasz/dev/cncf/gitdm/kubernetes_repos/combined_after.cs
 tiwillia@redhat.com is an author name, probably not what you want
 unknown@hacker.net Unknown hacker
 mwielgus@google.com Marcin Wielgus
-	code [928, 70]
-	unknown [986938, 12908]
-	devel-doc [15877, 90]
+	code [913, 57]
+	unknown [986937, 12907]
+	devel-doc [15876, 89]
 	documentation [9051, 1]
-	build [435, 9]
+	build [431, 5]
 pszczesniak@google.com Piotr Szczesniak
 	devel-doc [2413, 4203]
 	code [118, 86]
@@ -23,7 +23,7 @@ filipg@google.com Filip Grzadkowski
 	documentation [110, 14]
 jsz@google.com Jerzy Szczepkowski
 	code [29, 5]
-	unknown [779, 344]
+	unknown [775, 340]
 	devel-doc [2, 2]
 	documentation [4, 0]
 	build [6, 2]
@@ -121,7 +121,7 @@ vishnuk@google.com Vishnu Kannan
 	documentation [7, 5]
 xuchao@google.com Chao Xu
 	code [9, 8]
-	unknown [32255, 16173]
+	unknown [32236, 16155]
 	devel-doc [4, 4]
 	documentation [3, 1]
 avagarwa@redhat.com Avesh Agarwal
@@ -246,7 +246,7 @@ lucas.kaldstrom@hotmail.co.uk Lucas Käldström
 preet@apcera.com Preet Bhinder
 	unknown [3, 3]
 wojtekt@google.com Wojciech Tyczynski
-	unknown [14168, 19492]
+	unknown [14132, 19480]
 	devel-doc [5, 3]
 	code [141, 443]
 	build [8, 11]
@@ -713,7 +713,7 @@ github@teuto.net teuto.net Netzdienste GmbH
 justin@fathomdb.com Justin Santa Barbara
 	unknown [47223, 4257]
 	devel-doc [994, 36]
-	code [1593, 22]
+	code [1651, 36]
 	build [250, 34]
 	documentation [10, 0]
 curtis@curtis.io Curtis Gagliardi
@@ -1094,7 +1094,7 @@ maclof@gmail.com Marc Lough
 	documentation [5, 4]
 johndylan@google.com johndmulhausen
 	code [130, 0]
-	unknown [5156, 2372]
+	unknown [5160, 2376]
 	image [505, 1989]
 	documentation [3037, 1461]
 	devel-doc [48, 3]
@@ -1385,8 +1385,8 @@ travis@appformix.com Travis Newhouse
 	unknown [102, 2]
 	devel-doc [19, 0]
 	code [109, 28]
-devel-doc 358562 136775
-	mwielgus@google.com Marcin Wielgus: [15877, 90]
+devel-doc 358561 136774
+	mwielgus@google.com Marcin Wielgus: [15876, 89]
 	pszczesniak@google.com Piotr Szczesniak: [2413, 4203]
 	filipg@google.com Filip Grzadkowski: [5757, 273]
 	jsz@google.com Jerzy Szczepkowski: [2, 2]
@@ -1533,8 +1533,8 @@ devel-doc 358562 136775
 	dan@redspread.com Dan Gillespie: [20639, 1]
 	edwardam@interlix.com Edward Muller: [54, 100]
 	travis@appformix.com Travis Newhouse: [19, 0]
-code 193062 86948
-	mwielgus@google.com Marcin Wielgus: [928, 70]
+code 193105 86949
+	mwielgus@google.com Marcin Wielgus: [913, 57]
 	pszczesniak@google.com Piotr Szczesniak: [118, 86]
 	filipg@google.com Filip Grzadkowski: [204, 120]
 	jsz@google.com Jerzy Szczepkowski: [29, 5]
@@ -1627,7 +1627,7 @@ code 193062 86948
 	smainklh@gmail.com Smaine Kahlouch: [696, 4]
 	username.taken@gmail.com Paul Czarkowski: [736, 0]
 	2t.antoine@gmail.com Antoine Legrand: [318, 0]
-	justin@fathomdb.com Justin Santa Barbara: [1593, 22]
+	justin@fathomdb.com Justin Santa Barbara: [1651, 36]
 	colhom@gmail.com Colin Hom: [18981, 344]
 	lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [90, 40]
 	zhouhaibing089@gmail.com zhouhaibing089: [6, 2]
@@ -1712,11 +1712,11 @@ package 0 0
 	mbutcher@engineyard.com Matt Butcher: [0, 0]
 	jackgr@google.com jackgr: [0, 0]
 	colhom@gmail.com Colin Hom: [0, 0]
-unknown 10526441 3637579
-	mwielgus@google.com Marcin Wielgus: [986938, 12908]
+unknown 10526385 3637548
+	mwielgus@google.com Marcin Wielgus: [986937, 12907]
 	pszczesniak@google.com Piotr Szczesniak: [317696, 81703]
 	filipg@google.com Filip Grzadkowski: [280446, 68928]
-	jsz@google.com Jerzy Szczepkowski: [779, 344]
+	jsz@google.com Jerzy Szczepkowski: [775, 340]
 	eparis@redhat.com Eric Paris: [14537, 103711]
 	aaronjlevy@gmail.com Aaron Levy: [2131792, 402475]
 	dghubble@gmail.com Dalton Hubble: [1617, 556]
@@ -1736,7 +1736,7 @@ unknown 10526441 3637579
 	jchaloup@redhat.com Jan Chaloupka: [1089, 337]
 	mikedanese@gmail.com Mike Danese: [1434, 76471]
 	vishnuk@google.com Vishnu Kannan: [2576, 1414]
-	xuchao@google.com Chao Xu: [32255, 16173]
+	xuchao@google.com Chao Xu: [32236, 16155]
 	avagarwa@redhat.com Avesh Agarwal: [2005, 71]
 	dbsmith@google.com Daniel Smith: [5044, 992]
 	casey@tigera.io Casey Davenport: [1961, 52]
@@ -1763,7 +1763,7 @@ unknown 10526441 3637579
 	jeffml@google.com Jeff Lowdermilk: [626, 465]
 	lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [2231, 1203]
 	preet@apcera.com Preet Bhinder: [3, 3]
-	wojtekt@google.com Wojciech Tyczynski: [14168, 19492]
+	wojtekt@google.com Wojciech Tyczynski: [14132, 19480]
 	alexdwanerobinson@gmail.com Alex Robinson: [601, 167]
 	tnguyen@redhat.com Thien-Thi Nguyen: [2, 2]
 	saadali@google.com saadali: [8446, 105440]
@@ -1993,7 +1993,7 @@ unknown 10526441 3637579
 	dinghaiyang@huawei.com HaiyangDING: [10, 10]
 	jimmyjones2@gmx.co.uk Jimmy Jones: [7, 2]
 	maclof@gmail.com Marc Lough: [73, 19]
-	johndylan@google.com johndmulhausen: [5156, 2372]
+	johndylan@google.com johndmulhausen: [5160, 2376]
 	therc@users.noreply.github.com Rudi C: [38, 13]
 	porridge@google.com Marcin Owsiany: [11, 10]
 	nakayamakenjiro@gmail.com Kenjiro Nakayama: [266, 20]
@@ -2251,8 +2251,8 @@ ui 7156 10
 	sebastian.florek@ts.fujitsu.com Sebastian Florek: [2, 2]
 	atanas.mirchev@est.fujitsu.com Atanas Mirchev: [1, 3]
 	colhom@gmail.com Colin Hom: [7082, 0]
-build 21899 11892
-	mwielgus@google.com Marcin Wielgus: [435, 9]
+build 21895 11888
+	mwielgus@google.com Marcin Wielgus: [431, 5]
 	pszczesniak@google.com Piotr Szczesniak: [20, 28]
 	filipg@google.com Filip Grzadkowski: [141, 176]
 	jsz@google.com Jerzy Szczepkowski: [6, 2]
@@ -2334,11 +2334,11 @@ build 21899 11892
 	paul.a.bellamy@gmail.com Paul Bellamy: [27, 0]
 	shailesh.pant@gmail.com Shailesh Pant: [1, 1]
 	dan@redspread.com Dan Gillespie: [656, 0]
-devel-doc 358562 136775
-code 193062 86948
+devel-doc 358561 136774
+code 193105 86949
 package 0 0
-unknown 10526441 3637579
+unknown 10526385 3637548
 image 17535 14881
 documentation 201996 143417
 ui 7156 10
-build 21899 11892
+build 21895 11888

@@ -44,4 +44,4 @@ git clone https://github.com/prometheus/statsd_bridge.git || exit 1
 git clone https://github.com/prometheus/statsd_exporter.git || exit 1
 git clone https://github.com/prometheus/tsdb.git || exit 1
 git clone https://github.com/prometheus/utils.git || exit 1
-echo "All cloned"
+echo "All Prometheus repos cloned"
