@@ -1,6 +1,6 @@
 #!/bin/sh
 mkdir ~/dev/fluentd/ 2>/dev/null
-# This list is from `cncf/velocity`:`BigQuery/query_prometheus_repos.sql`
+# This list is from `cncf/velocity`:`BigQuery/query_cncf_repos.sql`
 cd ~/dev/fluentd || exit 1
 git clone https://github.com/fluent/NLog.Targets.Fluentd.git || exit 1
 git clone https://github.com/fluent/fluent-bit.git || exit 1
