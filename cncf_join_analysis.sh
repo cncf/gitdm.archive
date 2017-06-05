@@ -40,3 +40,4 @@ head -n 1 $AFTER.txt >> $RESULT
 head -n 3 $AFTER.txt | tail -n 1 >> $RESULT
 echo "Results saved to $RESULT"
 cat $RESULT
+ruby percent_stats.rb $RESULT >> $RESULT

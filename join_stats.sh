@@ -13,5 +13,6 @@ echo "All CNCF Projects Join statistics (authors, commits, additions, removals) 
 ./cncf_join_analysis.sh rkt 2017-03-15 75 ~/dev/rkt/
 ./cncf_join_analysis.sh cni 2017-05-03 30 ~/dev/cni/
 
-# TODO: Get correct join date!
-./cncf_join_analysis.sh etcd 2017-01-01 30 ~/dev/etcd/
+./cncf_join_analysis.sh etcd 2016-05-09 90 ~/dev/etcd/
+./cncf_join_analysis.sh etcd_6m 2016-05-09 183 ~/dev/etcd/
+./cncf_join_analysis.sh etcd_1y 2016-05-09 365 ~/dev/etcd/
