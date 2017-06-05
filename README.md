@@ -140,13 +140,17 @@ Links to data and generated report are here: `./res/links.txt`
 - Run `./cncf_join_analysis.sh prometheus 2016-05-09 90 ~/dev/prometheus/`
 - Result in `prometheus_repos/result.txt`
 
-- TODO: for Kubernetes it will be something like: ./cncf_join_analysis.sh kubernetes 2016-03-10 90 ~/dev/go/src/k8s.io/, but directory contains more than Kubernetes repos, so it must be changed a little
 - Create directory where You want to put links to kubernetes repos, like this: `mkdir ~/dev/kubernetes_repos_links`
 - Now copy kubernetes_repos.sh to link_kubernetes_repos.sh: `cp kubernetes_repos.sh link_kubernetes_repos.sh`
 - Open copy and add 1st line: `cd ~/dev/kubernetes_repos_links`
 - Now replace lines like `./anyrepo.sh ~/dev/go/src/k8s.io/test-infra/ test-infra` with ln -s ~/dev/go/src/k8s.io/test-infra/ test-infra`, run it, voila, You have k8s repos links in `~/dev/kubernetes_repos_links`
 - Now command that takes on Kubernetes repos should be: `./cncf_join_analysis.sh kubernetes 2016-03-10 90 ~/dev/kubernetes_repos_links`
 - Result in `kubernetes_repos/result.txt`
+
+- To generate statistics for OpenTracing 90 days before joining CNCF and 90 days after joining try this:
+- Run: `./clone_opentracing.sh`
+- Run `./cncf_join_analysis.sh opentracing 2016-08-17 90 ~/dev/opentracing/`
+- Result in `opentracing_repos/result.txt`
 
 - There is also All-in-one script to regenerate all CNCF Projects join statistics: run: `./join_stats.sh`
 
