@@ -194,3 +194,8 @@ activity,comments,prs,commits,issues,authors
 Last year: 308313,217684,46351,16000,28278,1728
 Last month: 30227,21371,4645,1741,2470,451
 ```
+- Analysis for kubernetes/kubernetes (main repo) are in format: `report/all_{key}_top.csv`, import them to 2nd sheet
+- Big summaries like all developers etc in `./repos/combined.txt`, for main k8s repo: `kubernetes/all_time/first_run_numstat.txt`
+- Top developer stats are here: `stats/all_key.csv` (for all repos), `stats/kubernetes_key.csv` (for main repo) and `stats/v1.x_key.csv` per versions.
+- Import those to last 3 sheets in data sheet
+- Per verion data: `report/v1.x_v1.y_key_top.csv`, key: changesets, lines, developers, import to data sheet for all versions: 7 x 3 = 21 imports
