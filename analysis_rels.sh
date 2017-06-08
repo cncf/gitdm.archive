@@ -10,3 +10,5 @@ echo "v1.4"
 ruby analysis.rb v1.4_v1.5 kubernetes/v1.4.0-v1.5.0/output_strict_patch.txt kubernetes/v1.4.0-v1.5.0/output_patch.txt kubernetes/v1.4.0-v1.5.0/output_no_map_patch.txt
 echo "v1.5"
 ruby analysis.rb v1.5_v1.6 kubernetes/v1.5.0-v1.6.0/output_strict_patch.txt kubernetes/v1.5.0-v1.6.0/output_patch.txt kubernetes/v1.5.0-v1.6.0/output_no_map_patch.txt
+echo "v1.6"
+ruby analysis.rb v1.6_v1.7 kubernetes/v1.6.0-v1.7.0/output_strict_patch.txt kubernetes/v1.6.0-v1.7.0/output_patch.txt kubernetes/v1.6.0-v1.7.0/output_no_map_patch.txt
