@@ -184,4 +184,6 @@ A total of 6667288 lines added, 4132224 removed (delta 2535064)
 - `analysis_all_repos.sh`, generates files starting with: `report/all_repos_rest`
 - `report/prefix_key_type` (prefix: all - for kubernetes/kubernetes, all_repos - for all repos, v1.x for releases), project/<prefix>_<key>_<type>
 - Commits info is in `other_repos/all_kubernetes_dtfrom_dtto` and `other_repos/kubernetes_dtfrom_dtto` (for all k8s repos and kubernetes/kubernetes alone)
-
+- To see commits for all kubernetes repos combined for last year & for last 12 months (each) separately: `grep -HIn "csets from" other_repos/all_kubernetes_range_unknown_201*`
+- The same for `kubernetes/kubernetes` repo: `grep -HIn "csets from" other_repos/kubernetes_range_unknown_201*`
+- Update report and report data sheet with those results
