@@ -6,6 +6,9 @@ echo "All without mapping"
 echo "All with map to Domain *"
 ./all_with_map.sh
 
+echo "Kubernetes/kubernetes commits in last year and each last 12 months"
+./k8s_commits_in_ranges.sh
+
 echo "Releases with map to (Unknown)"
 ./rels_strict.sh
 echo "Releases without mapping"

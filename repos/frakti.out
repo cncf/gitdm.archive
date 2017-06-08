@@ -1,0 +1,66 @@
+Filter on "^vendor/|/vendor/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/frakti.csv
+
+unknown@hacker.net Unknown hacker
+harryz@hyper.sh Harry Zhang
+	unknown [1874, 194]
+	devel-doc [38, 8]
+	code [3, 3]
+	image [0, 0]
+feiskyer@users.noreply.github.com Pengfei Ni
+	unknown [9852, 2761]
+	devel-doc [171, 31]
+	code [824, 42]
+	build [50, 6]
+	documentation [60, 0]
+21521209@zju.edu.cn heartlock
+	unknown [1648, 2107]
+	devel-doc [38, 4]
+	code [43, 2]
+crazykev@zju.edu.cn Crazykev
+	unknown [8269, 2110]
+	code [751, 44]
+	build [12, 0]
+yaozengzeng@zju.edu.cn YaoZengzeng
+	unknown [886, 359]
+xlgao@harmonycloud.cn Xianglin Gao
+	unknown [1509, 1267]
+	devel-doc [1, 0]
+	code [1, 4]
+chenjg@harmonycloud.cn fate-grand-order
+	unknown [2, 2]
+dawnchen@google.com Dawn Chen
+	devel-doc [228, 1]
+devel-doc 476 44
+	harryz@hyper.sh Harry Zhang: [38, 8]
+	feiskyer@users.noreply.github.com Pengfei Ni: [171, 31]
+	21521209@zju.edu.cn heartlock: [38, 4]
+	xlgao@harmonycloud.cn Xianglin Gao: [1, 0]
+	dawnchen@google.com Dawn Chen: [228, 1]
+code 1622 95
+	harryz@hyper.sh Harry Zhang: [3, 3]
+	feiskyer@users.noreply.github.com Pengfei Ni: [824, 42]
+	21521209@zju.edu.cn heartlock: [43, 2]
+	crazykev@zju.edu.cn Crazykev: [751, 44]
+	xlgao@harmonycloud.cn Xianglin Gao: [1, 4]
+unknown 24040 8800
+	harryz@hyper.sh Harry Zhang: [1874, 194]
+	feiskyer@users.noreply.github.com Pengfei Ni: [9852, 2761]
+	21521209@zju.edu.cn heartlock: [1648, 2107]
+	crazykev@zju.edu.cn Crazykev: [8269, 2110]
+	yaozengzeng@zju.edu.cn YaoZengzeng: [886, 359]
+	xlgao@harmonycloud.cn Xianglin Gao: [1509, 1267]
+	chenjg@harmonycloud.cn fate-grand-order: [2, 2]
+image 0 0
+	harryz@hyper.sh Harry Zhang: [0, 0]
+documentation 60 0
+	feiskyer@users.noreply.github.com Pengfei Ni: [60, 0]
+build 62 6
+	feiskyer@users.noreply.github.com Pengfei Ni: [50, 6]
+	crazykev@zju.edu.cn Crazykev: [12, 0]
+devel-doc 476 44
+code 1622 95
+unknown 24040 8800
+image 0 0
+documentation 60 0
+build 62 6

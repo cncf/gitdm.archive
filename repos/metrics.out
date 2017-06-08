@@ -1,0 +1,20 @@
+Filter on "^vendor/|/vendor/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/metrics.csv
+
+unknown@hacker.net Unknown hacker
+directxman12+github@gmail.com Solly Ross
+	unknown [11031, 0]
+	devel-doc [211, 1]
+	code [5, 1]
+sarah.novotny@gmail.com sarahnovotny
+	devel-doc [202, 0]
+unknown 11031 0
+	directxman12+github@gmail.com Solly Ross: [11031, 0]
+devel-doc 413 1
+	directxman12+github@gmail.com Solly Ross: [211, 1]
+	sarah.novotny@gmail.com sarahnovotny: [202, 0]
+code 5 1
+	directxman12+github@gmail.com Solly Ross: [5, 1]
+unknown 11031 0
+devel-doc 413 1
+code 5 1
