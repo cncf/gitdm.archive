@@ -10,3 +10,5 @@ mv output_* ~/dev/cncf/gitdm/kubernetes/v1.3.0-v1.4.0
 mv output_* ~/dev/cncf/gitdm/kubernetes/v1.4.0-v1.5.0
 ./run_for_rels.sh v1.5.0 v1.6.0
 mv output_* ~/dev/cncf/gitdm/kubernetes/v1.5.0-v1.6.0
+./run_for_rels.sh v1.6.0 v1.7.0
+mv output_* ~/dev/cncf/gitdm/kubernetes/v1.6.0-v1.7.0

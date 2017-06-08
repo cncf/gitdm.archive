@@ -3,8 +3,8 @@ PWD=`pwd`
 FNP=$PWD/run_with_map_patch
 FNN=$PWD/run_with_map_numstat
 cd ~/dev/go/src/k8s.io/kubernetes/
-git config merge.renameLimit 10000
-git config diff.renameLimit 10000
+git config merge.renameLimit 100000
+git config diff.renameLimit 100000
 # -m --> map unknowns to 'DomainName *' , -u map unknowns to '(Unknown)'
 git log -p -M | ~/dev/cncf/gitdm/cncfdm.py -r '^vendor/|/vendor/' -R -b ~/dev/cncf/gitdm/ -t -z -d -D -U -m -h $FNP.html -o $FNP.txt -x $FNP.csv
 git log --numstat -M | ~/dev/cncf/gitdm/cncfdm.py -r '^vendor/|/vendor/' -R -n -b ~/dev/cncf/gitdm/ -t -z -d -D -U -m -h $FNN.html -o $FNN.txt -x $FNN.csv > $FNN.out

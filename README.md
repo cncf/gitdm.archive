@@ -158,4 +158,5 @@ Links to data and generated report are here: `./res/links.txt`
 - Run ./pull_kubernetes.sh to get all Kubernetes repos updated.
 - Go to `cd dev/go/src/k8s.io/kubernetes/` and update this repository as well.
 - New release since last run (1.7) so many scripts needs to be updated, also all repos from 3 kubernetes orgs are now in  ~/dev/kubernetes/repos so `./kubernetes_repos.sh` script need update too
-
+- Updated `kubernetes_repos.sh` script to get repos from `~/dev/kubernetes_repos/`
+- Script to regenerate all data is `./rerun_data.sh`, it needs to be investigated to support v1.7.0
