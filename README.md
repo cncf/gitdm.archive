@@ -187,3 +187,10 @@ A total of 6667288 lines added, 4132224 removed (delta 2535064)
 - To see commits for all kubernetes repos combined for last year & for last 12 months (each) separately: `grep -HIn "csets from" other_repos/all_kubernetes_range_unknown_201*`
 - The same for `kubernetes/kubernetes` repo: `grep -HIn "csets from" other_repos/kubernetes_range_unknown_201*`
 - Update report and report data sheet with those results
+- Number of github events etc - from `cncf/velocity:projects/unlimited.csv` (this is for 201606-201705)
+- And number for May 2017 is: `cncf/velocity:projects/cncf_projects_201705.csv`
+```
+activity,comments,prs,commits,issues,authors
+Last year: 308313,217684,46351,16000,28278,1728
+Last month: 30227,21371,4645,1741,2470,451
+```
