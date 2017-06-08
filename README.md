@@ -154,4 +154,8 @@ Links to data and generated report are here: `./res/links.txt`
 
 - There is also All-in-one script to regenerate all CNCF Projects join statistics: run: `./join_stats.sh`
 
-- TODO: remining 8/10 CNCF Projects
+# Typical update of "Who writes Kubernetes report"
+- Run ./pull_kubernetes.sh to get all Kubernetes repos updated.
+- Go to `cd dev/go/src/k8s.io/kubernetes/` and update this repository as well.
+- New release since last run (1.7) so many scripts needs to be updated, also all repos from 3 kubernetes orgs are now in  ~/dev/kubernetes/repos so `./kubernetes_repos.sh` script need update too
+
