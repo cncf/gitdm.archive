@@ -1,0 +1,72 @@
+Filter on "^vendor/|/vendor/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/sample-apiserver.csv
+
+unknown@hacker.net Unknown hacker
+ccoleman@redhat.com Clayton Coleman
+	unknown [0, 4]
+mehdy@google.com mbohlool
+	unknown [34, 6]
+admin@toph.ca Christoph Blecker
+	unknown [10, 2]
+deads@redhat.com deads2k
+	unknown [3877, 1733]
+	devel-doc [302, 5]
+	code [271, 35]
+lukasz.szaszkiewicz@gmail.com p0lyn0mial
+	unknown [8, 0]
+xuchao@google.com Chao Xu
+	unknown [13, 616]
+mkhan@redhat.com Monis Khan
+	unknown [3, 6]
+mikedanese@google.com Mike Danese
+	devel-doc [197, 0]
+jliggitt@redhat.com Jordan Liggitt
+	code [52, 2]
+spzala@us.ibm.com Sahdev P. Zala
+	unknown [8, 0]
+timothysc@gmail.com Timothy St. Clair
+	unknown [41, 37]
+agoldste@redhat.com Andy Goldstein
+	unknown [2, 2]
+deads2k@users.noreply.github.com David Eads
+m@moscar.net Mikkel Oscar Lyderik Larsen
+	unknown [1, 1]
+maszulik@redhat.com Maciej Szulik
+	unknown [0, 41]
+stefan.schimanski@gmail.com Dr. Stefan Schimanski
+	unknown [14, 2]
+chenr.fnst@cn.fujitsu.com xilabao
+	unknown [1, 1]
+wojtekt@google.com Wojciech Tyczynski
+	unknown [22, 22]
+chiachenk@google.com Janet Kuo
+	unknown [4, 4]
+sjenning@redhat.com Seth Jennings
+	unknown [4, 4]
+unknown 4042 2481
+	ccoleman@redhat.com Clayton Coleman: [0, 4]
+	mehdy@google.com mbohlool: [34, 6]
+	admin@toph.ca Christoph Blecker: [10, 2]
+	deads@redhat.com deads2k: [3877, 1733]
+	lukasz.szaszkiewicz@gmail.com p0lyn0mial: [8, 0]
+	xuchao@google.com Chao Xu: [13, 616]
+	mkhan@redhat.com Monis Khan: [3, 6]
+	spzala@us.ibm.com Sahdev P. Zala: [8, 0]
+	timothysc@gmail.com Timothy St. Clair: [41, 37]
+	agoldste@redhat.com Andy Goldstein: [2, 2]
+	m@moscar.net Mikkel Oscar Lyderik Larsen: [1, 1]
+	maszulik@redhat.com Maciej Szulik: [0, 41]
+	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [14, 2]
+	chenr.fnst@cn.fujitsu.com xilabao: [1, 1]
+	wojtekt@google.com Wojciech Tyczynski: [22, 22]
+	chiachenk@google.com Janet Kuo: [4, 4]
+	sjenning@redhat.com Seth Jennings: [4, 4]
+devel-doc 499 5
+	deads@redhat.com deads2k: [302, 5]
+	mikedanese@google.com Mike Danese: [197, 0]
+code 323 37
+	deads@redhat.com deads2k: [271, 35]
+	jliggitt@redhat.com Jordan Liggitt: [52, 2]
+unknown 4042 2481
+devel-doc 499 5
+code 323 37

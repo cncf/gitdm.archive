@@ -1,0 +1,72 @@
+Filter on "^vendor/|/vendor/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/external-dns.csv
+
+unknown@hacker.net Unknown hacker
+linki@users.noreply.github.com Martin Linkhorst
+	unknown [8589, 3764]
+	devel-doc [241, 110]
+	build [37, 15]
+peter@segfault.guru Peter Huene
+	unknown [1032, 100]
+ismith@mit.edu Ian Smith
+	unknown [243, 18]
+	devel-doc [4, 0]
+yerken.tussupbekov@zalando.de Yerken
+	unknown [5113, 1573]
+	devel-doc [29, 25]
+	code [392, 392]
+	build [36, 16]
+	documentation [54, 52]
+henning@jacobs1.de Henning Jacobs
+	unknown [13, 1]
+	devel-doc [37, 4]
+omarkj@gmail.com Omar Yasin
+	unknown [1, 1]
+mikkeloscar@users.noreply.github.com Mikkel Oscar Lyderik Larsen
+	unknown [450, 40]
+	build [4, 0]
+lauri.apple@zalando.de Lauri Apple
+	unknown [25, 25]
+	devel-doc [38, 30]
+justin@fathomdb.com Justin Santa Barbara
+	unknown [223, 40]
+	build [20, 0]
+iterion@gmail.com Adam Sunderland
+	unknown [14, 4]
+difazio.raffaele@gmail.com Raffaele Di Fazio
+	devel-doc [13, 0]
+sarah.novotny@gmail.com sarahnovotny
+	devel-doc [202, 0]
+unknown 15703 5566
+	linki@users.noreply.github.com Martin Linkhorst: [8589, 3764]
+	peter@segfault.guru Peter Huene: [1032, 100]
+	ismith@mit.edu Ian Smith: [243, 18]
+	yerken.tussupbekov@zalando.de Yerken: [5113, 1573]
+	henning@jacobs1.de Henning Jacobs: [13, 1]
+	omarkj@gmail.com Omar Yasin: [1, 1]
+	mikkeloscar@users.noreply.github.com Mikkel Oscar Lyderik Larsen: [450, 40]
+	lauri.apple@zalando.de Lauri Apple: [25, 25]
+	justin@fathomdb.com Justin Santa Barbara: [223, 40]
+	iterion@gmail.com Adam Sunderland: [14, 4]
+devel-doc 564 169
+	linki@users.noreply.github.com Martin Linkhorst: [241, 110]
+	ismith@mit.edu Ian Smith: [4, 0]
+	yerken.tussupbekov@zalando.de Yerken: [29, 25]
+	henning@jacobs1.de Henning Jacobs: [37, 4]
+	lauri.apple@zalando.de Lauri Apple: [38, 30]
+	difazio.raffaele@gmail.com Raffaele Di Fazio: [13, 0]
+	sarah.novotny@gmail.com sarahnovotny: [202, 0]
+code 392 392
+	yerken.tussupbekov@zalando.de Yerken: [392, 392]
+build 97 31
+	linki@users.noreply.github.com Martin Linkhorst: [37, 15]
+	yerken.tussupbekov@zalando.de Yerken: [36, 16]
+	mikkeloscar@users.noreply.github.com Mikkel Oscar Lyderik Larsen: [4, 0]
+	justin@fathomdb.com Justin Santa Barbara: [20, 0]
+documentation 54 52
+	yerken.tussupbekov@zalando.de Yerken: [54, 52]
+unknown 15703 5566
+devel-doc 564 169
+code 392 392
+build 97 31
+documentation 54 52

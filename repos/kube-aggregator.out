@@ -1,0 +1,102 @@
+Filter on "^vendor/|/vendor/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-aggregator.csv
+
+unknown@hacker.net Unknown hacker
+ccoleman@redhat.com Clayton Coleman
+	unknown [0, 4]
+mehdy@google.com mbohlool
+	unknown [501, 2863]
+	devel-doc [20, 23]
+	code [4, 4]
+stefan.schimanski@gmail.com Dr. Stefan Schimanski
+	unknown [291, 80]
+	devel-doc [1, 0]
+	code [0, 10]
+admin@toph.ca Christoph Blecker
+	unknown [14, 2]
+deads@redhat.com deads2k
+	unknown [13388, 817]
+	devel-doc [341, 5]
+	code [545, 42]
+madaxa@cn.ibm.com Klaus Ma
+	unknown [46, 0]
+xuchao@google.com Chao Xu
+	unknown [65, 1055]
+	devel-doc [2, 7]
+andy.goldstein@gmail.com Andy Goldstein
+	unknown [52, 7]
+	devel-doc [2, 0]
+pwittroc@google.com Phillip Wittrock
+	unknown [8, 0]
+mikedanese@google.com Mike Danese
+	devel-doc [870, 0]
+qsj.daniel@gmail.com shijunqian
+	unknown [3, 17]
+mkhan@redhat.com Monis Khan
+	unknown [3, 6]
+1004815462@qq.com xu fei
+	unknown [1, 1]
+spzala@us.ibm.com Sahdev P. Zala
+	unknown [10, 0]
+timothysc@gmail.com Timothy St. Clair
+	unknown [41, 37]
+caosf.fnst@cn.fujitsu.com Cao Shufeng
+	unknown [2, 1]
+dcbw@redhat.com Dan Williams
+	code [1, 1]
+deads2k@users.noreply.github.com David Eads
+m@moscar.net Mikkel Oscar Lyderik Larsen
+	unknown [1, 1]
+maszulik@redhat.com Maciej Szulik
+	unknown [0, 41]
+chenr.fnst@cn.fujitsu.com xilabao
+	unknown [1, 1]
+jliggitt@redhat.com Jordan Liggitt
+	unknown [4, 4]
+wojtekt@google.com Wojciech Tyczynski
+	unknown [24, 24]
+chiachenk@google.com Janet Kuo
+	unknown [4, 4]
+sjenning@redhat.com Seth Jennings
+	unknown [4, 109]
+eric.chiang.m@gmail.com Eric Chiang
+	unknown [0, 2]
+unknown 14463 5076
+	ccoleman@redhat.com Clayton Coleman: [0, 4]
+	mehdy@google.com mbohlool: [501, 2863]
+	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [291, 80]
+	admin@toph.ca Christoph Blecker: [14, 2]
+	deads@redhat.com deads2k: [13388, 817]
+	madaxa@cn.ibm.com Klaus Ma: [46, 0]
+	xuchao@google.com Chao Xu: [65, 1055]
+	andy.goldstein@gmail.com Andy Goldstein: [52, 7]
+	pwittroc@google.com Phillip Wittrock: [8, 0]
+	qsj.daniel@gmail.com shijunqian: [3, 17]
+	mkhan@redhat.com Monis Khan: [3, 6]
+	1004815462@qq.com xu fei: [1, 1]
+	spzala@us.ibm.com Sahdev P. Zala: [10, 0]
+	timothysc@gmail.com Timothy St. Clair: [41, 37]
+	caosf.fnst@cn.fujitsu.com Cao Shufeng: [2, 1]
+	m@moscar.net Mikkel Oscar Lyderik Larsen: [1, 1]
+	maszulik@redhat.com Maciej Szulik: [0, 41]
+	chenr.fnst@cn.fujitsu.com xilabao: [1, 1]
+	jliggitt@redhat.com Jordan Liggitt: [4, 4]
+	wojtekt@google.com Wojciech Tyczynski: [24, 24]
+	chiachenk@google.com Janet Kuo: [4, 4]
+	sjenning@redhat.com Seth Jennings: [4, 109]
+	eric.chiang.m@gmail.com Eric Chiang: [0, 2]
+devel-doc 1236 35
+	mehdy@google.com mbohlool: [20, 23]
+	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [1, 0]
+	deads@redhat.com deads2k: [341, 5]
+	xuchao@google.com Chao Xu: [2, 7]
+	andy.goldstein@gmail.com Andy Goldstein: [2, 0]
+	mikedanese@google.com Mike Danese: [870, 0]
+code 550 57
+	mehdy@google.com mbohlool: [4, 4]
+	stefan.schimanski@gmail.com Dr. Stefan Schimanski: [0, 10]
+	deads@redhat.com deads2k: [545, 42]
+	dcbw@redhat.com Dan Williams: [1, 1]
+unknown 14463 5076
+devel-doc 1236 35
+code 550 57

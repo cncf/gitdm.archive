@@ -1,0 +1,163 @@
+Filter on "^vendor/|/vendor/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/autoscaler.csv
+
+unknown@hacker.net Unknown hacker
+mwielgus@google.com Marcin Wielgus
+	unknown [504844, 10717]
+	devel-doc [8301, 124]
+	code [454, 0]
+	build [206, 4]
+	documentation [4522, 0]
+maciekpytel@google.com Maciej Pytel
+	unknown [3134, 493]
+	devel-doc [10, 8]
+	code [573, 1]
+	documentation [46, 0]
+aleksandram@google.com Aleksandra Malinowska
+	unknown [417, 39]
+ej@reactiveops.com ejether
+	devel-doc [1, 1]
+jansel@jansel.net Jason Ansel
+	devel-doc [2, 2]
+walt@seamlessdocs.com Matthew Walter
+	unknown [5, 5]
+ykuoka@gmail.com Yusuke Kuoka
+	unknown [2067, 720]
+	devel-doc [83, 1]
+	build [5, 1]
+gfilipek@google.com Gabriela Filipek
+	unknown [2890, 0]
+	devel-doc [36, 0]
+	build [36, 0]
+jessek@allenai.org Jesse Kinkead
+	unknown [21, 21]
+ouyang.qinhua@zte.com.cn bruceauyeung
+	devel-doc [2, 2]
+kgrygiel+github@google.com kgrygiel
+	unknown [673, 110]
+kenm47@users.noreply.github.com Kendall Miller
+	devel-doc [1, 1]
+diwu1989@users.noreply.github.com Di Wu
+	unknown [12, 11]
+	devel-doc [2, 2]
+chenjg@harmonycloud.cn fate-grand-order
+	unknown [3, 3]
+me@philkates.com Phil Kates
+	unknown [2, 1]
+oatamanenko@eastbanctech.com Oleg Atamanenko
+	unknown [1160, 2]
+	devel-doc [1, 0]
+andrew@wattpad.com andrewsykim
+	unknown [25, 14]
+	devel-doc [143, 6]
+jgrafton@google.com Jeff Grafton
+	build [1, 1]
+thebigjc@gmail.com thebigjc
+	unknown [498, 44]
+	devel-doc [4, 2]
+apelisse@google.com Antoine Pelisse
+	unknown [5, 2]
+craig@craig-willis.co.uk Craig Willis
+	unknown [2, 2]
+rhyde@hydenetworks.com Trey Hyde
+	build [3, 2]
+crigor@gmail.com Christopher Rigor
+	unknown [1, 1]
+arnaldo@luizalabs.com Arnaldo de Moraes Pereira
+	devel-doc [1, 1]
+jchaloup@redhat.com Jan Chaloupka
+	unknown [32, 32]
+	code [2, 2]
+osxi@users.noreply.github.com osxi
+	unknown [744, 2]
+pszczesniak@google.com Piotr Szczesniak
+	unknown [67686, 5418]
+	devel-doc [621, 26]
+	code [40, 0]
+	build [0, 0]
+	documentation [0, 0]
+maciej.strzelecki@gmail.com Maciej Strzelecki
+ramanathana@google.com foxish
+	unknown [5, 0]
+mikedanese@gmail.com Mike Danese
+filipg@google.com Filip Grzadkowski
+	unknown [42807, 20060]
+	devel-doc [578, 58]
+	code [70, 0]
+	build [13, 75]
+madhusudancs@google.com Madhusudan.C.S
+	unknown [2, 2]
+	devel-doc [0, 0]
+zml@google.com Zach Loafman
+	unknown [2, 2]
+jsz@google.com Jerzy Szczepkowski
+	unknown [35, 12]
+eparis@redhat.com Eric Paris
+	unknown [23, 0]
+unknown 627095 37713
+	mwielgus@google.com Marcin Wielgus: [504844, 10717]
+	maciekpytel@google.com Maciej Pytel: [3134, 493]
+	aleksandram@google.com Aleksandra Malinowska: [417, 39]
+	walt@seamlessdocs.com Matthew Walter: [5, 5]
+	ykuoka@gmail.com Yusuke Kuoka: [2067, 720]
+	gfilipek@google.com Gabriela Filipek: [2890, 0]
+	jessek@allenai.org Jesse Kinkead: [21, 21]
+	kgrygiel+github@google.com kgrygiel: [673, 110]
+	diwu1989@users.noreply.github.com Di Wu: [12, 11]
+	chenjg@harmonycloud.cn fate-grand-order: [3, 3]
+	me@philkates.com Phil Kates: [2, 1]
+	oatamanenko@eastbanctech.com Oleg Atamanenko: [1160, 2]
+	andrew@wattpad.com andrewsykim: [25, 14]
+	thebigjc@gmail.com thebigjc: [498, 44]
+	apelisse@google.com Antoine Pelisse: [5, 2]
+	craig@craig-willis.co.uk Craig Willis: [2, 2]
+	crigor@gmail.com Christopher Rigor: [1, 1]
+	jchaloup@redhat.com Jan Chaloupka: [32, 32]
+	osxi@users.noreply.github.com osxi: [744, 2]
+	pszczesniak@google.com Piotr Szczesniak: [67686, 5418]
+	ramanathana@google.com foxish: [5, 0]
+	filipg@google.com Filip Grzadkowski: [42807, 20060]
+	madhusudancs@google.com Madhusudan.C.S: [2, 2]
+	zml@google.com Zach Loafman: [2, 2]
+	jsz@google.com Jerzy Szczepkowski: [35, 12]
+	eparis@redhat.com Eric Paris: [23, 0]
+devel-doc 9786 234
+	mwielgus@google.com Marcin Wielgus: [8301, 124]
+	maciekpytel@google.com Maciej Pytel: [10, 8]
+	ej@reactiveops.com ejether: [1, 1]
+	jansel@jansel.net Jason Ansel: [2, 2]
+	ykuoka@gmail.com Yusuke Kuoka: [83, 1]
+	gfilipek@google.com Gabriela Filipek: [36, 0]
+	ouyang.qinhua@zte.com.cn bruceauyeung: [2, 2]
+	kenm47@users.noreply.github.com Kendall Miller: [1, 1]
+	diwu1989@users.noreply.github.com Di Wu: [2, 2]
+	oatamanenko@eastbanctech.com Oleg Atamanenko: [1, 0]
+	andrew@wattpad.com andrewsykim: [143, 6]
+	thebigjc@gmail.com thebigjc: [4, 2]
+	arnaldo@luizalabs.com Arnaldo de Moraes Pereira: [1, 1]
+	pszczesniak@google.com Piotr Szczesniak: [621, 26]
+	filipg@google.com Filip Grzadkowski: [578, 58]
+	madhusudancs@google.com Madhusudan.C.S: [0, 0]
+code 1139 3
+	mwielgus@google.com Marcin Wielgus: [454, 0]
+	maciekpytel@google.com Maciej Pytel: [573, 1]
+	jchaloup@redhat.com Jan Chaloupka: [2, 2]
+	pszczesniak@google.com Piotr Szczesniak: [40, 0]
+	filipg@google.com Filip Grzadkowski: [70, 0]
+build 264 83
+	mwielgus@google.com Marcin Wielgus: [206, 4]
+	ykuoka@gmail.com Yusuke Kuoka: [5, 1]
+	gfilipek@google.com Gabriela Filipek: [36, 0]
+	jgrafton@google.com Jeff Grafton: [1, 1]
+	rhyde@hydenetworks.com Trey Hyde: [3, 2]
+	pszczesniak@google.com Piotr Szczesniak: [0, 0]
+	filipg@google.com Filip Grzadkowski: [13, 75]
+documentation 4568 0
+	mwielgus@google.com Marcin Wielgus: [4522, 0]
+	maciekpytel@google.com Maciej Pytel: [46, 0]
+	pszczesniak@google.com Piotr Szczesniak: [0, 0]
+unknown 627095 37713
+devel-doc 9786 234
+code 1139 3
+build 264 83
+documentation 4568 0

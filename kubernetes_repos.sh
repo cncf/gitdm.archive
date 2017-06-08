@@ -21,4 +21,4 @@ echo "TopDevs, google others and unknowns"
 
 echo "Merged file"
 cat repos/*.txt > repos/merged.out
-iecho "All done"
+echo "All done"

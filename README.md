@@ -160,3 +160,28 @@ Links to data and generated report are here: `./res/links.txt`
 - New release since last run (1.7) so many scripts needs to be updated, also all repos from 3 kubernetes orgs are now in  ~/dev/kubernetes/repos so `./kubernetes_repos.sh` script need update too
 - Updated `kubernetes_repos.sh` script to get repos from `~/dev/kubernetes_repos/`
 - Script to regenerate all data is `./rerun_data.sh`, it needs to be investigated to support v1.7.0
+- Now report is: https://docs.google.com/document/d/1RKtRamlu4D_OpTDFTKNpMsmV51obdZlPWbXVj-LrDuw/edit?usp=sharing
+- Repord data sheet/draft is: https://docs.google.com/spreadsheets/d/15otmXVx8Gd6JzfiGP_OSjP8M9zyLeLof5-IGQKEb0UQ/edit#gid=0
+- Now report sections:
+```
+Since kubernetes project started in June 2014 - 2623 Developers from 789 Companies were working on it (counting Kubernetes and all its projects 68 repos from 3 orgs).
+A total of 28.4 million lines were added, 16.3 million removed.
+```
+Taken from: `./repos/combined.txt`
+```
+Processed 59041 csets from 2623 developers
+789 employers found
+A total of 28440262 lines added, 16342872 removed (delta 12097390)
+```
+For single kubernetes/kubernetes repo we have data: `kubernetes/all_time/first_run_numstat.txt`
+```
+Processed 28225 csets from 1338 developers
+400 employers found
+A total of 6667288 lines added, 4132224 removed (delta 2535064)
+```
+- Now how to fill data sheet/chart:
+1. Sheet "all time data":
+- `analysis_all_repos.sh`, generates files starting with: `report/all_repos_rest`
+- `report/prefix_key_type` (prefix: all - for kubernetes/kubernetes, all_repos - for all repos, v1.x for releases), project/<prefix>_<key>_<type>
+- Commits info is in `other_repos/all_kubernetes_dtfrom_dtto` and `other_repos/kubernetes_dtfrom_dtto` (for all k8s repos and kubernetes/kubernetes alone)
+

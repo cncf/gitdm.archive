@@ -1,0 +1,199 @@
+Filter on "^vendor/|/vendor/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/service-catalog.csv
+
+unknown@hacker.net Unknown hacker
+kibbles-n-bytes@users.noreply.github.com Michael Kibbe
+	unknown [789, 165]
+	devel-doc [2, 2]
+	code [1379, 1139]
+	build [1, 1]
+arschles@gmail.com Aaron Schlesinger
+	unknown [10639, 4142]
+	devel-doc [87, 32]
+	code [36, 5]
+	build [102, 34]
+pmorie@redhat.com Paul Morie
+	code [406, 82]
+	unknown [28857, 26323]
+	devel-doc [417, 336]
+	documentation [60, 5]
+	build [125, 77]
+decarr@redhat.com Derek Carr
+	unknown [2245, 1455]
+	code [1, 0]
+	build [1, 1]
+vaikas-google@users.noreply.github.com Ville Aikas
+	unknown [6840, 5938]
+	devel-doc [0, 47]
+	build [3, 21]
+nilebox@users.noreply.github.com Nail Islamov
+	unknown [5, 1]
+dma@redhat.com DeShuai Ma
+	unknown [292, 56]
+dug@us.ibm.com Doug Davis
+	devel-doc [117, 146]
+	code [484, 443]
+	unknown [1225, 484]
+	image [0, 0]
+	documentation [0, 60]
+	build [402, 626]
+kent.rancourt@microsoft.com Kent Rancourt
+	devel-doc [194, 1079]
+	code [26, 1350]
+	package [0, 0]
+	unknown [5412, 3911]
+	documentation [0, 0]
+	build [179, 219]
+mbauer@us.ibm.com Morgan Bauer
+	unknown [9336, 4420]
+	devel-doc [30, 0]
+	code [122, 6]
+	build [110, 61]
+jpeeler@redhat.com Jeff Peeler
+	unknown [19932, 12282]
+	devel-doc [26, 20]
+	code [157, 0]
+	build [18, 7]
+sjenning@redhat.com Seth Jennings
+	unknown [939, 120]
+	build [6, 0]
+marko.luksa@gmail.com Marko Lukša
+	unknown [444, 271]
+	build [3, 0]
+sross@redhat.com Solly Ross
+	unknown [414, 56]
+	devel-doc [4, 0]
+	code [11, 2]
+chairmanhh1986@gmail.com hchenxa
+	unknown [11, 11]
+gyliu513@gmail.com Guang Ya Liu
+	unknown [6, 5]
+	devel-doc [5, 4]
+apelisse@google.com Antoine Pelisse
+	unknown [35, 2]
+leungs@us.ibm.com Simon Leung
+	unknown [343, 50]
+	devel-doc [278, 45]
+	code [1, 1]
+	build [1, 1]
+agonzalezro@gmail.com Alexandre González
+	unknown [7, 5]
+jforrest@redhat.com Jessica Forrester
+	unknown [8, 0]
+jvallejo@redhat.com Juan Vallejo
+	unknown [7734, 0]
+	build [16, 2]
+richardfung@google.com Richard Fung
+	unknown [727, 371]
+vineet@doorstop.net Vineet Kumar
+	unknown [1, 1]
+bmelville@google.com Brendan Melville
+	unknown [1254, 1078]
+	code [1, 90]
+	build [39, 0]
+mmaly@google.com Martin Maly
+	devel-doc [1126, 0]
+	code [2545, 9]
+	package [0, 0]
+	unknown [8406, 807]
+	documentation [5, 0]
+	build [388, 14]
+judkowitz@google.com Jay Judkowitz
+	unknown [71, 0]
+pwittroc@google.com Phillip Wittrock
+	unknown [113, 0]
+jhansen@deis.com Jason Hansen
+	unknown [195, 136]
+	devel-doc [43, 5]
+sarah.novotny@gmail.com sarahnovotny
+	devel-doc [202, 0]
+devel-doc 2531 1716
+	kibbles-n-bytes@users.noreply.github.com Michael Kibbe: [2, 2]
+	arschles@gmail.com Aaron Schlesinger: [87, 32]
+	pmorie@redhat.com Paul Morie: [417, 336]
+	vaikas-google@users.noreply.github.com Ville Aikas: [0, 47]
+	dug@us.ibm.com Doug Davis: [117, 146]
+	kent.rancourt@microsoft.com Kent Rancourt: [194, 1079]
+	mbauer@us.ibm.com Morgan Bauer: [30, 0]
+	jpeeler@redhat.com Jeff Peeler: [26, 20]
+	sross@redhat.com Solly Ross: [4, 0]
+	gyliu513@gmail.com Guang Ya Liu: [5, 4]
+	leungs@us.ibm.com Simon Leung: [278, 45]
+	mmaly@google.com Martin Maly: [1126, 0]
+	jhansen@deis.com Jason Hansen: [43, 5]
+	sarah.novotny@gmail.com sarahnovotny: [202, 0]
+code 5169 3127
+	kibbles-n-bytes@users.noreply.github.com Michael Kibbe: [1379, 1139]
+	arschles@gmail.com Aaron Schlesinger: [36, 5]
+	pmorie@redhat.com Paul Morie: [406, 82]
+	decarr@redhat.com Derek Carr: [1, 0]
+	dug@us.ibm.com Doug Davis: [484, 443]
+	kent.rancourt@microsoft.com Kent Rancourt: [26, 1350]
+	mbauer@us.ibm.com Morgan Bauer: [122, 6]
+	jpeeler@redhat.com Jeff Peeler: [157, 0]
+	sross@redhat.com Solly Ross: [11, 2]
+	leungs@us.ibm.com Simon Leung: [1, 1]
+	bmelville@google.com Brendan Melville: [1, 90]
+	mmaly@google.com Martin Maly: [2545, 9]
+package 0 0
+	kent.rancourt@microsoft.com Kent Rancourt: [0, 0]
+	mmaly@google.com Martin Maly: [0, 0]
+unknown 106280 62090
+	kibbles-n-bytes@users.noreply.github.com Michael Kibbe: [789, 165]
+	arschles@gmail.com Aaron Schlesinger: [10639, 4142]
+	pmorie@redhat.com Paul Morie: [28857, 26323]
+	decarr@redhat.com Derek Carr: [2245, 1455]
+	vaikas-google@users.noreply.github.com Ville Aikas: [6840, 5938]
+	nilebox@users.noreply.github.com Nail Islamov: [5, 1]
+	dma@redhat.com DeShuai Ma: [292, 56]
+	dug@us.ibm.com Doug Davis: [1225, 484]
+	kent.rancourt@microsoft.com Kent Rancourt: [5412, 3911]
+	mbauer@us.ibm.com Morgan Bauer: [9336, 4420]
+	jpeeler@redhat.com Jeff Peeler: [19932, 12282]
+	sjenning@redhat.com Seth Jennings: [939, 120]
+	marko.luksa@gmail.com Marko Lukša: [444, 271]
+	sross@redhat.com Solly Ross: [414, 56]
+	chairmanhh1986@gmail.com hchenxa: [11, 11]
+	gyliu513@gmail.com Guang Ya Liu: [6, 5]
+	apelisse@google.com Antoine Pelisse: [35, 2]
+	leungs@us.ibm.com Simon Leung: [343, 50]
+	agonzalezro@gmail.com Alexandre González: [7, 5]
+	jforrest@redhat.com Jessica Forrester: [8, 0]
+	jvallejo@redhat.com Juan Vallejo: [7734, 0]
+	richardfung@google.com Richard Fung: [727, 371]
+	vineet@doorstop.net Vineet Kumar: [1, 1]
+	bmelville@google.com Brendan Melville: [1254, 1078]
+	mmaly@google.com Martin Maly: [8406, 807]
+	judkowitz@google.com Jay Judkowitz: [71, 0]
+	pwittroc@google.com Phillip Wittrock: [113, 0]
+	jhansen@deis.com Jason Hansen: [195, 136]
+image 0 0
+	dug@us.ibm.com Doug Davis: [0, 0]
+documentation 65 65
+	pmorie@redhat.com Paul Morie: [60, 5]
+	dug@us.ibm.com Doug Davis: [0, 60]
+	kent.rancourt@microsoft.com Kent Rancourt: [0, 0]
+	mmaly@google.com Martin Maly: [5, 0]
+build 1394 1064
+	kibbles-n-bytes@users.noreply.github.com Michael Kibbe: [1, 1]
+	arschles@gmail.com Aaron Schlesinger: [102, 34]
+	pmorie@redhat.com Paul Morie: [125, 77]
+	decarr@redhat.com Derek Carr: [1, 1]
+	vaikas-google@users.noreply.github.com Ville Aikas: [3, 21]
+	dug@us.ibm.com Doug Davis: [402, 626]
+	kent.rancourt@microsoft.com Kent Rancourt: [179, 219]
+	mbauer@us.ibm.com Morgan Bauer: [110, 61]
+	jpeeler@redhat.com Jeff Peeler: [18, 7]
+	sjenning@redhat.com Seth Jennings: [6, 0]
+	marko.luksa@gmail.com Marko Lukša: [3, 0]
+	leungs@us.ibm.com Simon Leung: [1, 1]
+	jvallejo@redhat.com Juan Vallejo: [16, 2]
+	bmelville@google.com Brendan Melville: [39, 0]
+	mmaly@google.com Martin Maly: [388, 14]
+devel-doc 2531 1716
+code 5169 3127
+package 0 0
+unknown 106280 62090
+image 0 0
+documentation 65 65
+build 1394 1064

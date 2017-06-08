@@ -1,0 +1,30 @@
+Filter on "^vendor/|/vendor/"
+open output file /Users/lukasz/dev/cncf/gitdm/repos/java.csv
+
+unknown@hacker.net Unknown hacker
+mehdy@google.com Mehdy Bohlool
+	unknown [80575, 0]
+	devel-doc [1195, 0]
+	code [143353, 0]
+	documentation [220, 0]
+brendan.d.burns@gmail.com Brendan Burns
+	unknown [15, 2]
+	devel-doc [13, 0]
+	code [921, 97]
+	documentation [143, 17]
+unknown 80590 2
+	mehdy@google.com Mehdy Bohlool: [80575, 0]
+	brendan.d.burns@gmail.com Brendan Burns: [15, 2]
+devel-doc 1208 0
+	mehdy@google.com Mehdy Bohlool: [1195, 0]
+	brendan.d.burns@gmail.com Brendan Burns: [13, 0]
+code 144274 97
+	mehdy@google.com Mehdy Bohlool: [143353, 0]
+	brendan.d.burns@gmail.com Brendan Burns: [921, 97]
+documentation 363 17
+	mehdy@google.com Mehdy Bohlool: [220, 0]
+	brendan.d.burns@gmail.com Brendan Burns: [143, 17]
+unknown 80590 2
+devel-doc 1208 0
+code 144274 97
+documentation 363 17
