@@ -588,6 +588,8 @@ for logpatch in patches:
         TotalChanged += max (pa.added, pa.removed)
         AddDateLines (pa.date, max (pa.added, pa.removed))
         empl = pa.author.emailemployer (pa.email, pa.date)
+        # if not empl:
+        #     pdb.set_trace()
         empl.AddCSet (pa)
         for sobemail, sobber in pa.sobs:
             empl = sobber.emailemployer (sobemail, pa.date)
