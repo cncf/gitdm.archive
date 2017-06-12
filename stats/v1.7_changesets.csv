@@ -11,7 +11,7 @@ Zihong Zheng,zihongz@google.com,Google,2017-03-01,1628,734,39,0.392,0.299,1.702
 Cao Shufeng,caosf.fnst@cn.fujitsu.com,Fujitsu,2017-05-01,374,117,39,0.09,0.048,1.702
 shashidharatd,shashidhara.td@huawei.com,Huawei,2017-03-01,1141,1490,38,0.275,0.607,1.659
 Anthony Yeh,enisoc@google.com,Google,2017-03-01,2152,667,36,0.518,0.272,1.571
-zhengjiajin,393926893@qq.com,NotFound,2017-04-01,625,92,36,0.151,0.037,1.571
+zhengjiajin,393926893@qq.com,Caicloud,2017-04-01,625,92,36,0.151,0.037,1.571
 Yu-Ju Hong,yjhong@google.com,Google,2017-06-01,5071,7724,34,1.221,3.147,1.484
 xilabao,chenr.fnst@cn.fujitsu.com,Fujitsu,2017-02-01,1086,196,31,0.262,0.08,1.353
 Shyam Jeedigunta,shyamjvs@google.com,Google,2017-06-01,813,152,30,0.196,0.062,1.309
@@ -24,7 +24,7 @@ mbohlool,mehdy@google.com,Google,2017-04-01,14524,63496,24,3.498,25.874,1.048
 Jeff Grafton,jgrafton@google.com,Google,2017-06-01,185,136,23,0.045,0.055,1.004
 Michail Kargakis,mkargaki@redhat.com,Red Hat,2017-04-01,453,317,23,0.109,0.129,1.004
 Nick Sardo,nicksardo@google.com,Google,2017-04-01,1182,395,22,0.285,0.161,0.96
-NickrenREN,nickren19@gmail.com,NotFound,2017-04-01,311,415,20,0.075,0.169,0.873
+NickrenREN,nickren19@gmail.com,EasyStack,2017-04-01,311,415,20,0.075,0.169,0.873
 xiangpengzhao,zhao.xiangpeng@zte.com.cn,ZTE Corporation,2017-05-01,151,129,20,0.036,0.053,0.873
 Bowei Du,bowei@google.com,Google,2017-04-01,58616,2736,20,14.117,1.115,0.873
 Pengfei Ni,feiskyer@gmail.com,Hyper.sh,2017-05-01,1372,614,19,0.33,0.25,0.829
@@ -42,7 +42,7 @@ Solly Ross,sross@redhat.com,Red Hat,2017-05-01,623,47,16,0.15,0.019,0.698
 Janet Kuo,chiachenk@google.com,Google,2017-05-01,1605,658,15,0.387,0.268,0.655
 Guangya Liu,gyliu513@gmail.com,IBM,2017-04-01,332,167,15,0.08,0.068,0.655
 Mik Vyatskov,vmik@google.com,Google,2017-06-01,89,24,15,0.021,0.01,0.655
-timchenxiaoyu,837829664@qq.com,NotFound,2017-03-01,2,20,15,0.0,0.008,0.655
+timchenxiaoyu,837829664@qq.com,(Unknown),2017-03-01,2,20,15,0.0,0.008,0.655
 Fabiano Franz,ffranz@redhat.com,Red Hat,2017-03-01,1397,64,14,0.336,0.026,0.611
 Derek Carr,decarr@redhat.com,Red Hat,2017-04-01,189,75,14,0.046,0.031,0.611
 Michelle Au,msau@google.com,Google,2017-05-01,1140,70,13,0.275,0.029,0.567
@@ -50,9 +50,9 @@ Jack Francis,jack.francis@microsoft.com,Microsoft,2017-05-01,335,73,13,0.081,0.0
 Marcin Wielgus,mwielgus@google.com,Google,2017-03-01,349,219,13,0.084,0.089,0.567
 Matthew Wong,mawong@redhat.com,Red Hat,2017-04-01,156,60,13,0.038,0.024,0.567
 Dan Williams,dcbw@redhat.com,Red Hat,2017-03-01,461,202,12,0.111,0.082,0.524
-Random-Liu,taotaotheripper@gmail.com,Self,2017-04-01,134,34,12,0.032,0.014,0.524
+Random-Liu,taotaotheripper@gmail.com,(Unknown),2017-04-01,134,34,12,0.032,0.014,0.524
 yupengzte,yu.peng36@zte.com.cn,ZTE Corporation,2017-04-01,6,19,12,0.001,0.008,0.524
-Davanum Srinivas,dims@linux.vnet.ibm.com,IBM,2017-05-01,46,34,12,0.011,0.014,0.524
+Davanum Srinivas,dims@linux.vnet.ibm.com,Huawei,2017-05-01,46,34,12,0.011,0.014,0.524
 Justin Santa Barbara,justin@fathomdb.com,FathomDB,2017-01-01,33,22,12,0.008,0.009,0.524
 Klaus Ma,klaus1982.cn@gmail.com,IBM,2017-02-01,351,74,12,0.085,0.03,0.524
 Maciej Pytel,maciekpytel@google.com,Google,2017-04-01,176,59,12,0.042,0.024,0.524
@@ -70,7 +70,7 @@ Eric Chiang,eric.chiang.m@gmail.com,CoreOS,2017-02-01,56210,61046,9,13.538,24.87
 Ricky Pai,ricky.pai@airbnb.com,Airbnb,2017-05-01,226,7,9,0.054,0.003,0.393
 System Administrator,bdontu@vmware.com,VMware,2017-04-01,3544,330,9,0.854,0.134,0.393
 Haoran Wang,haowang@redhat.com,Red Hat,2017-04-01,441,122,9,0.106,0.05,0.393
-p0lyn0mial,lukasz.szaszkiewicz@gmail.com,Self,2017-04-01,400,217,9,0.096,0.088,0.393
+p0lyn0mial,lukasz.szaszkiewicz@gmail.com,(Unknown),2017-04-01,400,217,9,0.096,0.088,0.393
 Michael Taufen,mtaufen@google.com,Google,2017-05-01,709,404,9,0.171,0.165,0.393
 Seth Jennings,sjenning@redhat.com,Red Hat,2017-05-01,148,131,9,0.036,0.053,0.393
 Konstantinos Tsakalozos,kos.tsakalozos@canonical.com,Canonical,2017-05-01,81,41,9,0.02,0.017,0.393
@@ -84,17 +84,17 @@ ravisantoshgudimetla,ravisantoshgudimetla@gmail.com,Red Hat,2017-04-01,222,100,8
 Dong Liu,doliu@microsoft.com,Microsoft,2017-03-01,358,92,8,0.086,0.037,0.349
 Ryan Hitchman,rmmh@google.com,Google,2017-04-01,166,14,7,0.04,0.006,0.306
 Maciej Szulik,maszulik@redhat.com,Red Hat,2017-03-01,161,126,7,0.039,0.051,0.306
-supereagle,jmyue@hotmail.com,Self,2017-05-01,5,10,7,0.001,0.004,0.306
+supereagle,jmyue@hotmail.com,(Unknown),2017-05-01,5,10,7,0.001,0.004,0.306
 Hemant Kumar,hekumar@redhat.com,Red Hat,2017-03-01,309,72,7,0.074,0.029,0.306
 Shiyang Wang,shiyang.wang@outlook.com,(Unknown),2017-04-01,261,33,7,0.063,0.013,0.306
 Jeremy Whitlock,jwhitlock@apache.org,Apache,2017-02-01,1656,8,6,0.399,0.003,0.262
 Dmitry Shulyak,yashulyak@gmail.com,Mirantis,2017-05-01,324,284,6,0.078,0.116,0.262
 Monis Khan,mkhan@redhat.com,Red Hat,2017-04-01,598,127,6,0.144,0.052,0.262
 Dan Winship,danw@redhat.com,Red Hat,2016-12-01,4230,69,6,1.019,0.028,0.262
-Di Xu,stephenhsu90@gmail.com,Self,2017-05-01,88,64,6,0.021,0.026,0.262
+Di Xu,stephenhsu90@gmail.com,(Unknown),2017-05-01,88,64,6,0.021,0.026,0.262
 Daniel Nardo,dnardo@google.com,Google,2017-05-01,60,9,6,0.014,0.004,0.262
 Phillip Wittrock,pwittroc@google.com,Google,2017-05-01,953,56,6,0.23,0.023,0.262
-Rye Terrell,ryeterrell@ryeterrell.net,Self,2017-03-01,290,502,6,0.07,0.205,0.262
+Rye Terrell,ryeterrell@ryeterrell.net,(Unknown),2017-03-01,290,502,6,0.07,0.205,0.262
 Nikhita Raghunath,nikitaraghunath@gmail.com,(Unknown),2017-05-01,208,41,6,0.05,0.017,0.262
 Lee Verberne,verb@google.com,Google,2017-04-01,106,41,6,0.026,0.017,0.262
 Matt Liggett,mml@google.com,Google,2017-05-01,111,24,6,0.027,0.01,0.262
@@ -130,9 +130,9 @@ Derek McQuay,derekmcquay@gmail.com,Apprenda,2017-05-01,16,18,4,0.004,0.007,0.175
 Jacek N,jacek.nykis@canonical.com,Canonical,2017-03-01,203,4,4,0.049,0.002,0.175
 jianglingxia,jiang.lingxia@zte.com.cn,ZTE Corporation,2017-05-01,6,8,4,0.001,0.003,0.175
 Piotr Szczesniak,pszczesniak@google.com,Google,2017-04-01,4,268,4,0.001,0.109,0.175
-xu fei,1004815462@qq.com,NotFound,2017-04-01,3,11,4,0.001,0.004,0.175
+xu fei,1004815462@qq.com,(Unknown),2017-04-01,3,11,4,0.001,0.004,0.175
 Nail Islamov,nislamov@atlassian.com,Atlassian,2017-05-01,318,118,4,0.077,0.048,0.175
-Crazykev,crazykev@zju.edu.cn,Self,2017-05-01,13,5,4,0.003,0.002,0.175
+Crazykev,crazykev@zju.edu.cn,Zhejiang University,2017-05-01,13,5,4,0.003,0.002,0.175
 Josh Horwitz,horwitzja@gmail.com,(Unknown),2017-05-01,108,1,4,0.026,0.0,0.175
 Jesse Haka,jesse.haka@elisa.fi,Elisa,2017-04-01,216,91,4,0.052,0.037,0.175
 Julien Balestra,julien.balestra@gmail.com,126,2017-03-01,197,74,4,0.047,0.03,0.175
@@ -148,14 +148,14 @@ Michael Fraenkel,michael.fraenkel@gmail.com,JPMorgan Chase & Co.,2016-12-01,185,
 StudyNick,wei.chuanhui1@zte.com.cn,ZTE Corporation,2017-03-01,2,5,3,0.0,0.002,0.131
 lixiaobing1,li.xiaobing1@zte.com.cn,ZTE Corporation,2017-05-01,3,1,3,0.001,0.0,0.131
 Alejandro Escobar,jaescobar.cell@gmail.com,Socrata,2017-01-01,105,9,3,0.025,0.004,0.131
-Xianglin Gao,xlgao@zju.edu.cn,Self,2017-03-01,14,4,3,0.003,0.002,0.131
+Xianglin Gao,xlgao@zju.edu.cn,Zhejiang University,2017-03-01,14,4,3,0.003,0.002,0.131
 Jiangtian Li,jiangtianli@hotmail.com,Microsoft,2017-05-01,87,198,3,0.021,0.081,0.131
 caleb miles,caleb.miles@coreos.com,CoreOS,2017-04-01,201,210,3,0.048,0.086,0.131
 Rohit Agarwal,agarwalrohit@google.com,Google,2017-06-01,20,1,3,0.005,0.0,0.131
 Christian Bell,csbell@google.com,Google,2017-03-01,102,280,3,0.025,0.114,0.131
 bruceauyeung,ouyang.qinhua@zte.com.cn,ZTE Corporation,2016-12-01,38,43,3,0.009,0.018,0.131
 Antonio Murdaca,runcom@redhat.com,Red Hat,2017-02-01,49,6,3,0.012,0.002,0.131
-carlory,baofa.fan@daocloud.io,(Unknown),2017-05-01,0,3,3,0.0,0.001,0.131
+carlory,baofa.fan@daocloud.io,DaoCloud,2017-05-01,0,3,3,0.0,0.001,0.131
 Matt Bruzek,mbruzek@gmail.com,Juju Ecosystem,2017-03-01,10,6,3,0.002,0.002,0.131
 Paul Michali,pc@michali.net,(Unknown),2017-05-01,55,14,3,0.013,0.006,0.131
 mtanino,mitsuhiro.tanino@hds.com,Hitachi Data Systems,2017-03-01,56,26,3,0.013,0.011,0.131
@@ -169,7 +169,7 @@ emaildanwilson,emaildanwilson@gmail.com,(Unknown),2017-05-01,77,26,3,0.019,0.011
 Dan Gillespie,dan.gillespie@coreos.com,CoreOS,2017-03-01,20,6,3,0.005,0.002,0.131
 Daniel Smith,dbsmith@google.com,Google,2017-05-01,422,538,3,0.102,0.219,0.131
 Ivan Shvedunov,ishvedunov@mirantis.com,Mirantis,2017-04-01,3,3,3,0.001,0.001,0.131
-heartlock,21521209@zju.edu.cn,Self,2017-05-01,143,118,2,0.034,0.048,0.087
+heartlock,21521209@zju.edu.cn,Zhejiang University,2017-05-01,143,118,2,0.034,0.048,0.087
 fate-grand-order,chenjg@harmonycloud.cn,HarmonyCloud,2017-02-01,0,2,2,0.0,0.001,0.087
 Marcin Maciaszczyk,maciaszczykm@users.noreply.github.com,Fujitsu,2017-04-01,0,3,2,0.0,0.001,0.087
 Stanisław Szydło,stanislaw.szydlo@intel.com,Intel,2017-05-01,1,3,2,0.0,0.001,0.087
@@ -202,13 +202,13 @@ CJ Cullen,cjcullen@google.com,Google,2017-05-01,14,2,2,0.003,0.001,0.087
 Lou Yihua,supermouselyh@hotmail.com,TravelSky Technology Limited,2017-03-01,23,2,2,0.006,0.001,0.087
 Walter Fender,wfender@google.com,Google,2017-05-01,219,38,2,0.053,0.015,0.087
 Yassine TIJANI,yasstij11@gmail.com,(Unknown),2017-05-01,1,4,2,0.0,0.002,0.087
-Henrique Truta,henrique@lsd.ufcg.edu.br,Self,2017-05-01,0,10,2,0.0,0.004,0.087
+Henrique Truta,henrique@lsd.ufcg.edu.br,Universidade Federal de Campina Grande,2017-05-01,0,10,2,0.0,0.004,0.087
 Mikhail Mazurskiy,mmazurskiy@atlassian.com,Atlassian,2017-06-01,89,10,2,0.021,0.004,0.087
 Andrew Pilloud,andrewpilloud@igneoussystems.com,Igneous Systems,2017-04-01,21,20,2,0.005,0.008,0.087
 Jerzy Szczepkowski,jsz@google.com,Google,2017-03-01,5,1,2,0.001,0.0,0.087
 Tim Van Steenburgh,tvansteenburgh@gmail.com,Canonical,2017-04-01,278,17,2,0.067,0.007,0.087
 Dhawal Patel,dhawal55@gmail.com,Nordstrom,2016-12-01,0,5,2,0.0,0.002,0.087
-ailusazh,ailusazh@126.com,(Unknown),2017-03-01,3,1,2,0.001,0.0,0.087
+ailusazh,ailusazh@126.com,JD.COM,2017-03-01,3,1,2,0.001,0.0,0.087
 Bryan Boreham,bryan@weave.works,Weaveworks,2017-05-01,0,3,2,0.0,0.001,0.087
 Andrew Seigner,andrew@sig.gy,Code Coup,2017-04-01,0,2,2,0.0,0.001,0.087
 Ian Chakeres,ian.chakeres@gmail.com,SalesForce,2017-05-01,140,221,2,0.034,0.09,0.087
@@ -229,8 +229,8 @@ Dawn Chen,dawnchen@google.com,Google,2017-05-01,11,67,1,0.003,0.027,0.044
 StevenYCChou,yencheng.chou@gmail.com,(Unknown),2017-04-01,1,1,1,0.0,0.0,0.044
 Mayank Kumar,mayank.kumar@salesforce.com,SalesForce,2017-04-01,61,34,1,0.015,0.014,0.044
 Nick Stott,nick@nickstott.com,Compose,2017-04-01,0,1,1,0.0,0.0,0.044
-Kenjiro Nakayama,nakayamakenjiro@gmail.com,NotFound,2016-12-01,1,1,1,0.0,0.0,0.044
-moonfang(房孝敬),moonfang@tencent.com,(Unknown),2016-12-01,8,0,1,0.002,0.0,0.044
+Kenjiro Nakayama,nakayamakenjiro@gmail.com,(Unknown),2016-12-01,1,1,1,0.0,0.0,0.044
+moonfang(房孝敬),moonfang@tencent.com,Tencent,2016-12-01,8,0,1,0.002,0.0,0.044
 Drinky Pool,pu.junqi@zte.com.cn,ZTE Corporation,2017-03-01,1,1,1,0.0,0.0,0.044
 Chris Hupman,chupman@us.ibm.com,IBM,2017-03-01,13,15,1,0.003,0.006,0.044
 Aaron Levy,aaronjlevy@gmail.com,Aperian Global,2017-04-01,4,0,1,0.001,0.0,0.044
@@ -238,8 +238,8 @@ Jeff Lowdermilk,jeffml@google.com,Google,2017-06-01,0,1,1,0.0,0.0,0.044
 Jesse Haka,haka.jesse@gmail.com,Feedtrail,2017-05-01,40,18,1,0.01,0.007,0.044
 Casey Davenport,casey@tigera.io,Tigera,2016-08-01,87,103,1,0.021,0.042,0.044
 Author xiao-zhou,xxiaozhou@gmail.com,(Unknown),2017-05-01,68,0,1,0.016,0.0,0.044
-huzhifeng,huzhifeng@douyu.tv,NotFound,2017-03-01,0,1,1,0.0,0.0,0.044
-Arthur Miranda,artmr@lsd.ufcg.edu.br,Self,2017-05-01,153,0,1,0.037,0.0,0.044
+huzhifeng,huzhifeng@douyu.tv,(Unknown),2017-03-01,0,1,1,0.0,0.0,0.044
+Arthur Miranda,artmr@lsd.ufcg.edu.br,Universidade Federal de Campina Grande,2017-05-01,153,0,1,0.037,0.0,0.044
 Erick Fejta,fejta@google.com,Google,2017-05-01,0,518,1,0.0,0.211,0.044
 Federico Gimenez,fgimenez@coit.es,(Unknown),2017-02-01,94,0,1,0.023,0.0,0.044
 zdj6373,zhang.dongjie@zte.com.cn,ZTE Corporation,2017-05-01,1,1,1,0.0,0.0,0.044
@@ -292,7 +292,7 @@ opsnull,geekard@qq.com,(Unknown),2017-04-01,1,0,1,0.0,0.0,0.044
 Lucas Käldström,lucas@weave.works,Weaveworks,2017-06-01,37,17,1,0.009,0.007,0.044
 Hemant Kumar,gethemant@gmail.com,Red Hat,2017-02-01,1,0,1,0.0,0.0,0.044
 Pierre Ozoux,pierre@ozoux.net,indiehosters,2017-03-01,0,2,1,0.0,0.001,0.044
-Rodrigo Campos,rodrigo@sdfg.com.ar,Self,2017-04-01,1,92,1,0.0,0.037,0.044
+Rodrigo Campos,rodrigo@sdfg.com.ar,(Unknown),2017-04-01,1,92,1,0.0,0.037,0.044
 Scott Creeley,screeley@redhat.com,Red Hat,2017-02-01,1,1,1,0.0,0.0,0.044
 Johannes Scheuermann,joh.scheuer@gmail.com,inovex,2017-02-01,1,3,1,0.0,0.001,0.044
 Waseem Ahmad,talk.to.waseem@gmail.com,(Unknown),2017-05-01,89,53,1,0.021,0.022,0.044
@@ -310,9 +310,9 @@ Simen Bekkhus,sbekkhus91@gmail.com,FINN.no,2017-02-01,1,2,1,0.0,0.001,0.044
 Jess Frazelle,acidburn@google.com,Google,2017-04-01,105,66,1,0.025,0.027,0.044
 Alistair Scott,ali.scott@gmail.com,RightScale,2017-02-01,1,2,1,0.0,0.001,0.044
 n-marton,marton.natko@gmail.com,(Unknown),2017-06-01,5,0,1,0.001,0.0,0.044
-allencloud,allen.sun@daocloud.io,(Unknown),2017-05-01,2,6,1,0.0,0.002,0.044
+allencloud,allen.sun@daocloud.io,DaoCloud,2017-05-01,2,6,1,0.0,0.002,0.044
 Ravi Gadde,ravi.gadde@gmail.com,(Unknown),2017-04-01,109,10,1,0.026,0.004,0.044
-Alexander Block,ablock84@gmail.com,Self,2017-01-01,170,7,1,0.041,0.003,0.044
+Alexander Block,ablock84@gmail.com,(Unknown),2017-01-01,170,7,1,0.041,0.003,0.044
 Bob Van Zant,bvanzant@brkt.com,(Unknown),2017-05-01,10,7,1,0.002,0.003,0.044
 Jeff Schroeder,jeffschroeder@computer.org,IEEE Computer Society,2017-03-01,0,4,1,0.0,0.002,0.044
 Adrian Macneil,adrian@adrianmacneil.com,(Unknown),2017-04-01,1,2,1,0.0,0.001,0.044
@@ -343,7 +343,7 @@ Abhishek Dasgupta,a10gupta@linux.vnet.ibm.com,IBM,2017-02-01,41,37,1,0.01,0.015,
 Adam Reese,adam@reese.io,Microsoft,2017-04-01,14,4,1,0.003,0.002,0.044
 liangxia,lxia@redhat.com,Red Hat,2017-03-01,0,1,1,0.0,0.0,0.044
 yaxinlx,liuxu@asiainfo.com,(Unknown),2017-05-01,4,4,1,0.001,0.002,0.044
-Andy Xie,andy.xning@gmail.com,NotFound,2017-05-01,2,1,1,0.0,0.0,0.044
+Andy Xie,andy.xning@gmail.com,(Unknown),2017-05-01,2,1,1,0.0,0.0,0.044
 shawyeok,kmter@live.com,(Unknown),2017-02-01,122,33,1,0.029,0.013,0.044
 weizhanxu,xu.zhanwei@zte.com.cn,ZTE Corporation,2017-04-01,1,2,1,0.0,0.001,0.044
 Adam Worrall,abw@google.com,Google,2017-05-01,60,6,1,0.014,0.002,0.044

@@ -41,7 +41,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
     e = h['email']
     d = h['date_to']
     c = h['company']
-    next if ['(Unknown)', 'NotFound', 'Self'].include?(c)
+    next if ['(Unknown)', 'NotFound', 'Not Found', 'Self'].include?(c)
     affs[e] = {} unless affs.key?(e)
     affs[e][d] = c
   end
@@ -50,7 +50,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
   data = JSON.parse File.read json_file
 
 
-  # Load already rpocessed remap.csv?
+  # Load already processed remap.csv?
   remap = {}
   puts "Load remap config from remap.csv? (y/n)"
   c = mgetc
@@ -70,6 +70,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
   
   # domain-map
   companies = data['companies']
+  always_remap = false
   companies.each do |c|
     next if skip
     cn = c['company_name']
@@ -94,23 +95,36 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
           puts "domain '#{d}', company '#{cn}'"
           puts "JSON data:"
           p c
-          puts "Use old(o), use new(n), enter new name(e), use remap(r), skip(q)?"
-          c = mgetc
-          puts "==> #{c}"
-          if c == 'n'
+          if remap[cn]
+            puts "Remap value is '#{remap[cn]}'"
+            puts "Use old(o), use new(n), enter new name(e), use remap(r), always remap(a), skip(q)?"
+          else
+            puts "Use old(o), use new(n), enter new name(e), skip(q)?"
+          end
+          if always_remap && remap[cn]
+            ans = 'r'
+          else
+            ans = mgetc
+          end
+          if ans == 'a'
+            always_remap = true
+            ans = 'r'
+          end
+          puts "==> #{ans}"
+          if ans == 'n'
             doms[d][0] = [cn, nil]
             puts "New company name used"
-          elsif c == 'e'
+          elsif ans == 'e'
             puts "Enter new company name for domain '#{d}':"
             nn = STDIN.gets
             puts "==> #{nn}"
             doms[d][0] = [nn.strip, nil]
             puts "Custom company name used"
-          elsif c == 'q'
+          elsif ans == 'q'
             puts "Skipping processing"
             skip = true
             next
-          elsif c == 'r'
+          elsif ans == 'r'
             unless remap[cn]
               puts "Remap requested for company '#{cn}', but it is not present in remap.csv mapping"
               p remap
@@ -123,10 +137,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
           end
           puts "New mapping is domain '#{d}' company '#{doms[d][0][0]}'"
         end
-        unless cn == doms[d][0][0]
-          # We have rename, need to store that for user affiliations mapping
-          remap[cn] = doms[d][0][0]
-        end
+        remap[cn] = doms[d][0][0]
       else
         puts "Added new domain mapping: domain '#{d}' company '#{cn}'"
         doms[d] = [[cn, nil]]
@@ -167,9 +178,24 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
     end
   end
 
+  # Load already processed remap_emails.csv?
+  remape = {}
+  puts "Load remap emails config from remap_emails.csv? (y/n)"
+  c = mgetc
+  if c == 'y'
+    CSV.foreach('remap_emails.csv', headers: true) do |row|
+      h = row.to_h
+      email = h['email'].strip
+      date = h['date'].strip
+      company = h['company'].strip
+      remape[[email, date]] = company
+    end
+  end
+
   # email-map
   users = data['users']
   skip = false
+  always_remap = false
   users.each do |u|
     next if skip
     emails = u['emails']
@@ -179,6 +205,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
       cs.each do |c|
         next if skip
         cn = c['company_name']
+        next if ['*independent', '*robots'].include?(cn.strip)
         cn = remap[cn] if remap.key?(cn)
         cd = c['end_date'] ? Date.parse(c['end_date']).to_s : ''
         if affs.key?(e)
@@ -194,19 +221,40 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
               p u['companies']
               puts "CSV data"
               p affs[e]
-              puts "Use old(o), use new(n), enter new name(e), skip(q)?"
-              c = mgetc
-              puts "==> #{c}"
-              if c == 'n'
+              if remape[[e, cd]]
+                puts "Remap value is '#{remape[[e, cd]]}'"
+                puts "Use old(o), use new(n), enter new name(e), use remap(r), always remap(a), skip(q)?"
+              else
+                puts "Use old(o), use new(n), enter new name(e), skip(q)?"
+              end
+              if always_remap && remape[[e, cd]]
+                ans = 'r'
+              else
+                ans = mgetc
+              end
+              if ans == 'a'
+                always_remap = true
+                ans = 'r'
+              end
+              puts "==> #{ans}"
+              if ans == 'n'
                 affs[e][cd] = cn
                 puts "New company name used"
-              elsif c == 'e'
+              elsif ans == 'e'
                 puts "Enter new company name for email '#{e}', end-date '#{cd}':"
                 nn = STDIN.gets
                 puts "==> #{nn}"
                 affs[e][cd] = nn.strip
                 puts "Custom company name used"
-              elsif c == 'q'
+              elsif ans == 'r'
+                unless remape[[e, cd]]
+                  puts "Remap requested for email '#{e}', date '#{cd}', but it is not present in remap_emails.csv mapping"
+                  p remape
+                  exit
+                end
+                affs[e][cd] = remape[[e, cd]]
+                puts "Used value from remap email: '#{e}' date '#{cd}' -> '#{remape[[e, cd]]}'"
+              elsif ans == 'q'
                 puts "Skipping processing"
                 skip = true
                 next
@@ -215,6 +263,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
               end
               puts "New mapping is email '#{e}' end-date '#{cd}' company '#{affs[e][cd]}'"
             end
+            remape[[e, cd]] = affs[e][cd]
           else
             puts "New date: email '#{e}' company '#{cn}' end-date: #{cd}"
             affs[e][cd] = cn
@@ -231,14 +280,35 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
     end
   end
 
+  # Do we need to write remap_emails.csv file?
+  puts "Write new remap_emails.csv file? (y/n)"
+  c = mgetc
+  if c == 'y'
+    hdr = %w(email date company)
+    CSV.open('remap_emails.csv', "w", headers: hdr) do |csv|
+      csv << hdr
+      remape.keys.sort.each do |k|
+        csv << [k[0], k[1], remape[k]]
+      end
+    end
+  end
+
   # Write new domain mapping
   # [user@]domain  employer  [< yyyy-mm-dd]
   File.open(new_email_map, 'w') do |file|
     file.write("# [user@]domain  employer  [< yyyy-mm-dd]")
     affs.keys.sort.each do |email|
       dct = affs[email]
-      dct.keys.each do |date|
+      uvals = {}
+      ks = dct.keys.sort.reverse
+      ks = [''] + (dct.keys - ['']).sort.reverse if dct.keys.include?('')
+      ks.each do |date|
         company = affs[email][date]
+        if uvals.key?(company)
+          puts "email '#{email}', we already have company '#{company}' with date '#{uvals[company]}', skipping new: '#{date}'"
+          next
+        end
+        uvals[company] = date
         if date != ''
           file.write("#{email} #{company} < #{date}\n")
         else
@@ -246,7 +316,19 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
         end
       end
     end
+
+    # emails with no final employer
+    affs.keys.sort.each do |email|
+      dct = affs[email]
+      unless dct.keys.include?('')
+        last_date = dct.keys.sort.reverse.first
+        last_empl = affs[email][last_date]
+        puts "Email #{email} has no current employer, last was #{last_empl} till #{last_date}"
+        file.write("#{email} Was: #{last_empl}\n")
+      end
+    end
   end
+
 end
 
 if ARGV.size < 5
