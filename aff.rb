@@ -60,6 +60,7 @@ def aff(fn, email_col, date_col, affliation_col)
     end
   end
 
+  # email,company,final_company,date_from,date_to
   hdr = %w(email company final_company date_from date_to)
   CSV.open('affs.csv', 'w', headers: hdr) do |csv|
     csv << hdr
