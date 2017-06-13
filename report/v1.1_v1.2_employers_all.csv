@@ -1,35 +1,35 @@
 idx,company,n,percent
-0,(All known 120),289,81.41
-1,(Unknown),66,18.6
-2,Google,58,16.3
+0,(All known 122),299,84.23
+1,Google,58,16.3
+2,(Unknown),56,15.8
 3,Red Hat,50,14.1
-4,Gmail *,39,10.9
+4,Gmail *,31,8.7
 5,Huawei,17,4.8
 6,CoreOS,13,3.7
-7,UsersNoreplyGithub *,8,2.2
-8,IBM,7,2.0
-9,Fujitsu,5,1.4
-10,Mesosphere,4,1.1
-11,Weaveworks,3,0.8
+7,(Self),7,2.0
+8,UsersNoreplyGithub *,7,2.0
+9,IBM,7,2.0
+10,Fujitsu,5,1.4
+11,Mesosphere,4,1.1
 12,eBay,3,0.8
 13,Apcera,3,0.8
-14,Net EASE 网易有态度,3,0.8
+14,Weaveworks,3,0.8
 15,Caicloud,3,0.8
-16,Square,2,0.6
-17,Engine Yard,2,0.6
-18,Amadeus,2,0.6
-19,Metaswitch,2,0.6
-20,HP,2,0.6
-21,Sky *,2,0.6
-22,Docker,2,0.6
-23,Microsoft,2,0.6
-24,Diamanti,2,0.6
-25,Jetstack,2,0.6
-26,Juniper Networks,2,0.6
-27,Endocode,2,0.6
-28,SAP,2,0.6
-29,Orange,1,0.3
-30,Ahead4 Limited,1,0.3
+16,(Not Found),3,0.8
+17,Net EASE 网易有态度,3,0.8
+18,Jetstack,2,0.6
+19,Juniper Networks,2,0.6
+20,Endocode,2,0.6
+21,Metaswitch,2,0.6
+22,Square,2,0.6
+23,Engine Yard,2,0.6
+24,SAP,2,0.6
+25,Diamanti,2,0.6
+26,Docker,2,0.6
+27,Microsoft,2,0.6
+28,Sky *,2,0.6
+29,Amadeus,2,0.6
+30,HP,2,0.6
 31,Project Calico,1,0.3
 32,Yahoo,1,0.3
 33,ChinaNetCenter,1,0.3
@@ -53,8 +53,8 @@ idx,company,n,percent
 51,Atlas Informatics,1,0.3
 52,D2C Media,1,0.3
 53,Reizwerk GmbH,1,0.3
-54,Freeletics,1,0.3
-55,Indigo Biosystems,1,0.3
+54,Indigo Biosystems,1,0.3
+55,Freeletics,1,0.3
 56,Matrix,1,0.3
 57,Reddit,1,0.3
 58,Funio,1,0.3
@@ -97,121 +97,107 @@ idx,company,n,percent
 95,Inviqa & Freelancer,1,0.3
 96,Qwil,1,0.3
 97,Outlook *,1,0.3
-98,Tmrts *,1,0.3
-99,Schonfeld *,1,0.3
-100,Mamikonyan *,1,0.3
-101,AmSo-aweso *,1,0.3
-102,Yahoo *,1,0.3
-103,Faille *,1,0.3
-104,Krypton *,1,0.3
-105,Coit *,1,0.3
-106,Chinadtrace *,1,0.3
-107,Wehnerortega *,1,0.3
-108,LodgeGlasgownet *,1,0.3
-109,Bharr *,1,0.3
-110,FoxDumbain *,1,0.3
-111,Spencerbrown *,1,0.3
-112,Andyspohn *,1,0.3
-113,Spotify *,1,0.3
-114,Backha *,1,0.3
-115,Virdata *,1,0.3
-116,Isi *,1,0.3
-117,samsabed@gmail.com,1,0.3
-118,samabed@gmail.com,1,0.3
-119,taotaotheripper@gmail.com,1,0.3
-120,tamertas@outlook.com,1,0.3
-121,james.ravn@sky.uk,1,0.3
-122,laurie.malau@gmail.com,1,0.3
-123,deads2k@users.noreply.github.com,1,0.3
-124,thibserot@gmail.com,1,0.3
-125,fabioy@users.noreply.github.com,1,0.3
-126,contact@tmrts.com,1,0.3
-127,daniel@schonfeld.org,1,0.3
-128,mitake.hitoshi@gmail.com,1,0.3
-129,fengjingchao@gmail.com,1,0.3
-130,arsen@mamikonyan.am,1,0.3
-131,michael.j.schmidt@gmail.com,1,0.3
-132,ihmccreery@gmail.com,1,0.3
-133,aledbf@gmail.com,1,0.3
-134,siefert.david@gmail.com,1,0.3
-135,robert.lindstaedt@gmail.com,1,0.3
-136,ihmccreery@users.noreply.github.com,1,0.3
-137,i@am.so-aweso.me,1,0.3
-138,kenneth.kalmer@gmail.com,1,0.3
-139,gabr.farina@gmail.com,1,0.3
-140,litus81@gmail.com,1,0.3
-141,combcloud@gmail.com,1,0.3
-142,daniele.testa@gmail.com,1,0.3
-143,cephaslr@yahoo.com,1,0.3
-144,robertcboll@gmail.com,1,0.3
-145,uluyol0@gmail.com,1,0.3
-146,andrei.kopats@gmail.com,1,0.3
-147,alex.chesser@gmail.com,1,0.3
-148,ckleban@gmail.com,1,0.3
-149,michael@faille.io,1,0.3
-150,suhasanand@users.noreply.github.com,1,0.3
-151,yangm3ng@gmail.com,1,0.3
-152,chris@krypton.io,1,0.3
-153,mikael.cluseau@gmail.com,1,0.3
-154,fgimenez@coit.es,1,0.3
-155,petermd@gmail.com,1,0.3
-156,ty.w.martin@gmail.com,1,0.3
-157,rcw@wehnerortega.net,1,0.3
-158,nan@chinadtrace.org,1,0.3
-159,rmocius@gmail.com,1,0.3
-160,bjoern.erik.strand@gmail.com,1,0.3
-161,bayualdiyansyah@gmail.com,1,0.3
-162,fangying068@gmail.com,1,0.3
-163,hughes.matt@gmail.com,1,0.3
-164,markdevilliers@gmail.com,1,0.3
-165,root@fox.dumbain.net,1,0.3
-166,spencer@spencerbrown.org,1,0.3
-167,runningwild@gmail.com,1,0.3
-168,alfredo.espejel.corvera@gmail.com,1,0.3
-169,mail@bharr.is,1,0.3
-170,kyle@lodge.glasgownet.com,1,0.3
-171,hsatac@gmail.com,1,0.3
-172,jasrusable@users.noreply.github.com,1,0.3
-173,zhupengbupt@gmail.com,1,0.3
-174,andy@andyspohn.com,1,0.3
-175,yangbaohua@gmail.com,1,0.3
-176,kolyshkin@users.noreply.github.com,1,0.3
-177,yoseph.sultan@sky.uk,1,0.3
-178,doriordan@gmail.com,1,0.3
-179,till@backha.us,1,0.3
-180,mbonaci@users.noreply.github.com,1,0.3
-181,dxia@spotify.com,1,0.3
-182,roel.vannyen@virdata.com,1,0.3
-183,minhan.xia@gmail.com,1,0.3
-184,yanatan16@users.noreply.github.com,1,0.3
-185,tobias.adamson@gmail.com,1,0.3
-186,arisu1000@gmail.com,1,0.3
-187,mcluseau@isi.nc,1,0.3
-188,ClusterHQ,1,0.3
-189,FACE IT,1,0.3
-190,Cisco,1,0.3
-191,Epic Games,1,0.3
-192,FathomDB,1,0.3
-193,Clarifai,1,0.3
-194,Apache,1,0.3
-195,jobandtalent,1,0.3
-196,Rook,1,0.3
-197,Hyper.sh,1,0.3
-198,Udacity,1,0.3
-199,CERN,1,0.3
-200,Box,1,0.3
-201,NetWatcher,1,0.3
-202,NetEase,1,0.3
-203,Entelo,1,0.3
-204,VMware,1,0.3
-205,Intel,1,0.3
-206,Devops,1,0.3
-207,Samsung,1,0.3
-208,Tyk,1,0.3
-209,UPMC,1,0.3
-210,Atlassian,1,0.3
-211,Canonical,1,0.3
-212,PreviousNext,1,0.3
-213,Georgia Tech,1,0.3
-214,Imaginea,1,0.3
-215,Sky,1,0.3
+98,Schonfeld *,1,0.3
+99,AmSo-aweso *,1,0.3
+100,Yahoo *,1,0.3
+101,Faille *,1,0.3
+102,Krypton *,1,0.3
+103,Coit *,1,0.3
+104,Chinadtrace *,1,0.3
+105,Wehnerortega *,1,0.3
+106,LodgeGlasgownet *,1,0.3
+107,Bharr *,1,0.3
+108,FoxDumbain *,1,0.3
+109,Spencerbrown *,1,0.3
+110,Andyspohn *,1,0.3
+111,Spotify *,1,0.3
+112,Backha *,1,0.3
+113,Virdata *,1,0.3
+114,tamertas@outlook.com,1,0.3
+115,james.ravn@sky.uk,1,0.3
+116,laurie.malau@gmail.com,1,0.3
+117,deads2k@users.noreply.github.com,1,0.3
+118,thibserot@gmail.com,1,0.3
+119,daniel@schonfeld.org,1,0.3
+120,mitake.hitoshi@gmail.com,1,0.3
+121,fengjingchao@gmail.com,1,0.3
+122,michael.j.schmidt@gmail.com,1,0.3
+123,ihmccreery@gmail.com,1,0.3
+124,siefert.david@gmail.com,1,0.3
+125,robert.lindstaedt@gmail.com,1,0.3
+126,ihmccreery@users.noreply.github.com,1,0.3
+127,i@am.so-aweso.me,1,0.3
+128,kenneth.kalmer@gmail.com,1,0.3
+129,litus81@gmail.com,1,0.3
+130,combcloud@gmail.com,1,0.3
+131,daniele.testa@gmail.com,1,0.3
+132,robertcboll@gmail.com,1,0.3
+133,cephaslr@yahoo.com,1,0.3
+134,andrei.kopats@gmail.com,1,0.3
+135,alex.chesser@gmail.com,1,0.3
+136,ckleban@gmail.com,1,0.3
+137,michael@faille.io,1,0.3
+138,suhasanand@users.noreply.github.com,1,0.3
+139,yangm3ng@gmail.com,1,0.3
+140,chris@krypton.io,1,0.3
+141,mikael.cluseau@gmail.com,1,0.3
+142,fgimenez@coit.es,1,0.3
+143,petermd@gmail.com,1,0.3
+144,ty.w.martin@gmail.com,1,0.3
+145,rcw@wehnerortega.net,1,0.3
+146,nan@chinadtrace.org,1,0.3
+147,bjoern.erik.strand@gmail.com,1,0.3
+148,bayualdiyansyah@gmail.com,1,0.3
+149,fangying068@gmail.com,1,0.3
+150,hughes.matt@gmail.com,1,0.3
+151,markdevilliers@gmail.com,1,0.3
+152,root@fox.dumbain.net,1,0.3
+153,spencer@spencerbrown.org,1,0.3
+154,alfredo.espejel.corvera@gmail.com,1,0.3
+155,mail@bharr.is,1,0.3
+156,kyle@lodge.glasgownet.com,1,0.3
+157,hsatac@gmail.com,1,0.3
+158,jasrusable@users.noreply.github.com,1,0.3
+159,zhupengbupt@gmail.com,1,0.3
+160,andy@andyspohn.com,1,0.3
+161,yangbaohua@gmail.com,1,0.3
+162,kolyshkin@users.noreply.github.com,1,0.3
+163,yoseph.sultan@sky.uk,1,0.3
+164,doriordan@gmail.com,1,0.3
+165,till@backha.us,1,0.3
+166,mbonaci@users.noreply.github.com,1,0.3
+167,dxia@spotify.com,1,0.3
+168,roel.vannyen@virdata.com,1,0.3
+169,yanatan16@users.noreply.github.com,1,0.3
+170,tobias.adamson@gmail.com,1,0.3
+171,arisu1000@gmail.com,1,0.3
+172,ClusterHQ,1,0.3
+173,FACE IT,1,0.3
+174,Cisco,1,0.3
+175,Epic Games,1,0.3
+176,FathomDB,1,0.3
+177,Clarifai,1,0.3
+178,Apache,1,0.3
+179,jobandtalent,1,0.3
+180,Rook,1,0.3
+181,Hyper.sh,1,0.3
+182,Udacity,1,0.3
+183,CERN,1,0.3
+184,Box,1,0.3
+185,NetWatcher,1,0.3
+186,NetEase,1,0.3
+187,Entelo,1,0.3
+188,VMware,1,0.3
+189,Intel,1,0.3
+190,Devops,1,0.3
+191,Samsung,1,0.3
+192,Tyk,1,0.3
+193,UPMC,1,0.3
+194,Atlassian,1,0.3
+195,Canonical,1,0.3
+196,PreviousNext,1,0.3
+197,Georgia Tech,1,0.3
+198,Imaginea,1,0.3
+199,Sky,1,0.3
+200,Orange,1,0.3
+201,Ahead4 Limited,1,0.3

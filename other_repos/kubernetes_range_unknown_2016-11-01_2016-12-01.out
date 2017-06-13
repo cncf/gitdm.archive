@@ -1,82 +1,6 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/other_repos/kubernetes_range_unknown_2016-11-01_2016-12-01.csv
 
-WARNING: duplicate email/empl for pekowski@gmail.com
-WARNING: duplicate email/empl for thingee@gmail.com
-WARNING: duplicate email/empl for t.trifonov@gmail.com
-WARNING: duplicate email/empl for lyz@princessleia.com
-WARNING: duplicate email/empl for robertc@robertcollins.net
-WARNING: duplicate email/empl for clint@fewbar.com
-WARNING: duplicate email/empl for andrew@linuxjedi.co.uk
-WARNING: duplicate email/empl for duncan.thomas@gmail.com
-WARNING: duplicate email/empl for kiall@managedit.ie
-WARNING: duplicate email/empl for devananda.vdv@gmail.com
-WARNING: duplicate email/empl for zaro0508@gmail.com
-WARNING: duplicate email/empl for shrewsbury.dave@gmail.com
-WARNING: duplicate email/empl for j3p0uk@hotmail.com
-WARNING: duplicate email/empl for me@mark.atwood.name
-WARNING: duplicate email/empl for slicknik@gmail.com
-WARNING: duplicate email/empl for cmsj@tenshu.net
-WARNING: duplicate email/empl for anteaya@anteaya.info
-WARNING: duplicate email/empl for greg@greghaynes.net
-WARNING: duplicate email/empl for matt@mattfarina.com
-WARNING: duplicate email/empl for jp@jamezpolley.com
-WARNING: duplicate email/empl for steven@wedontsleep.org
-WARNING: duplicate email/empl for gleebix@gmail.com
-WARNING: duplicate email/empl for code@gentlydownthe.net
-WARNING: duplicate email/empl for morgan.fainberg@gmail.com
-WARNING: duplicate email/empl for jeblair@hp.com
-WARNING: duplicate email/empl for juliaashleykreger@gmail.com
-WARNING: duplicate email/empl for stephane@alum.mit.edu
-WARNING: duplicate email/empl for kragniz@gmail.com
-WARNING: duplicate email/empl for wchrisjohnson@gmail.com
-WARNING: duplicate email/empl for daisy.ycguo@gmail.com
-WARNING: duplicate email/empl for mordred@inaugust.com
-WARNING: duplicate email/empl for zxkuqyb@gmail.com
-WARNING: duplicate email/empl for amigliaccio@internap.com
-WARNING: duplicate email/empl for yorik.sar@gmail.com
-WARNING: duplicate email/empl for e0ne@e0ne.info
-WARNING: duplicate email/empl for gabriel@strikeawe.com
-WARNING: duplicate email/empl for heckj@mac.com
-WARNING: duplicate email/empl for ke.wu@ibeca.me
-WARNING: duplicate email/empl for rushi.agr@gmail.com
-WARNING: duplicate email/empl for salv.orlando@gmail.com
-WARNING: duplicate email/empl for tushar.vitthal.patil@gmail.com
-WARNING: duplicate email/empl for jmckenty@gmail.com
-WARNING: duplicate email/empl for anne@openstack.org
-WARNING: duplicate email/empl for breu@breu.org
-WARNING: duplicate email/empl for cbehrens@codestud.com
-WARNING: duplicate email/empl for clay.gerrard@gmail.com
-WARNING: duplicate email/empl for corywright@gmail.com
-WARNING: duplicate email/empl for cp16net@gmail.com
-WARNING: duplicate email/empl for cthier@gmail.com
-WARNING: duplicate email/empl for darren.birkett@gmail.com
-WARNING: duplicate email/empl for dolph.mathews@gmail.com
-WARNING: duplicate email/empl for ed@leafe.com
-WARNING: duplicate email/empl for github@highbridgellc.com
-WARNING: duplicate email/empl for greglange@gmail.com
-WARNING: duplicate email/empl for hugh@wherenow.org
-WARNING: duplicate email/empl for imsplitbit@gmail.com
-WARNING: duplicate email/empl for jason@koelker.net
-WARNING: duplicate email/empl for jcruz7@gmail.com
-WARNING: duplicate email/empl for josh@jk0.org
-WARNING: duplicate email/empl for mattt@defunct.ca
-WARNING: duplicate email/empl for mbasnight@gmail.com
-WARNING: duplicate email/empl for mike@weirdlooking.com
-WARNING: duplicate email/empl for msherborne@gmail.com
-WARNING: duplicate email/empl for naveedm9@gmail.com
-WARNING: duplicate email/empl for paul@openstack.org
-WARNING: duplicate email/empl for rnirmal@gmail.com
-WARNING: duplicate email/empl for rconradharris@gmail.com
-WARNING: duplicate email/empl for thierry@openstack.org
-WARNING: duplicate email/empl for throughnothing@gmail.com
-WARNING: duplicate email/empl for yoga80@yahoo.com
-WARNING: duplicate email/empl for mark.washenberger@markwash.net
-WARNING: duplicate email/empl for p@draigbrady.com
-WARNING: duplicate email/empl for zaitcev@kotori.zaitcev.us
-WARNING: duplicate email/empl for julie.pichon@gmail.com
-WARNING: duplicate email/empl for ghe@debian.org
-WARNING: duplicate email/empl for sorrison@gmail.com
 yarntime@163.com is an author name, probably not what you want
 unknown@hacker.net Unknown hacker
 ccoleman@redhat.com Clayton Coleman
@@ -84,6 +8,12 @@ ccoleman@redhat.com Clayton Coleman
 	devel-doc [375, 439]
 	code [15, 15]
 	documentation [4, 0]
+mkargaki@redhat.com Michail Kargakis
+	code [19, 3]
+	unknown [1204, 770]
+	devel-doc [17, 65]
+	documentation [4, 0]
+	build [8, 0]
 ppospisi@redhat.com pospispa
 	unknown [101, 0]
 ffranz@redhat.com Fabiano Franz
@@ -189,12 +119,6 @@ jvallejo@redhat.com juanvallejo
 	unknown [201, 31]
 	devel-doc [6, 1]
 	code [1, 1]
-mkargaki@redhat.com Michail Kargakis
-	code [19, 3]
-	unknown [1130, 700]
-	devel-doc [16, 65]
-	documentation [4, 0]
-	build [8, 0]
 cjcullen@google.com CJ Cullen
 	unknown [38, 9]
 	devel-doc [3, 1]
@@ -625,8 +549,9 @@ rmmh@google.com Ryan Hitchman
 	code [4, 1]
 djmm@google.com David McMahon
 	code [8, 15]
-devel-doc 6468 2969
+devel-doc 6469 2969
 	ccoleman@redhat.com Clayton Coleman: [375, 439]
+	mkargaki@redhat.com Michail Kargakis: [17, 65]
 	ffranz@redhat.com Fabiano Franz: [55, 0]
 	jsafrane@redhat.com Jan Safranek: [2, 0]
 	mikedanese@google.com Mike Danese: [466, 50]
@@ -646,7 +571,6 @@ devel-doc 6468 2969
 	tstclair@redhat.com Timothy St. Clair: [588, 595]
 	sttts@redhat.com Dr. Stefan Schimanski: [1, 2]
 	jvallejo@redhat.com juanvallejo: [6, 1]
-	mkargaki@redhat.com Michail Kargakis: [16, 65]
 	cjcullen@google.com CJ Cullen: [3, 1]
 	agoldste@redhat.com Andy Goldstein: [1130, 87]
 	sid@rancher.com wlan0: [49, 0]
@@ -701,6 +625,7 @@ devel-doc 6468 2969
 	pires@apprenda.com Paulo Pires: [60, 1]
 code 1778 856
 	ccoleman@redhat.com Clayton Coleman: [15, 15]
+	mkargaki@redhat.com Michail Kargakis: [19, 3]
 	ffranz@redhat.com Fabiano Franz: [132, 0]
 	jsafrane@redhat.com Jan Safranek: [23, 2]
 	mikedanese@google.com Mike Danese: [33, 13]
@@ -715,7 +640,6 @@ code 1778 856
 	wojtekt@google.com Wojciech Tyczynski: [82, 67]
 	sttts@redhat.com Dr. Stefan Schimanski: [80, 44]
 	jvallejo@redhat.com juanvallejo: [1, 1]
-	mkargaki@redhat.com Michail Kargakis: [19, 3]
 	cjcullen@google.com CJ Cullen: [28, 13]
 	agoldste@redhat.com Andy Goldstein: [21, 0]
 	asalkeld@mirantis.com Angus Salkeld: [13, 0]
@@ -768,8 +692,9 @@ code 1778 856
 	xlgao@zju.edu.cn Xianglin Gao: [24, 2]
 	rmmh@google.com Ryan Hitchman: [4, 1]
 	djmm@google.com David McMahon: [8, 15]
-unknown 124839 49894
+unknown 124913 49964
 	ccoleman@redhat.com Clayton Coleman: [8879, 4713]
+	mkargaki@redhat.com Michail Kargakis: [1204, 770]
 	ppospisi@redhat.com pospispa: [101, 0]
 	ffranz@redhat.com Fabiano Franz: [998, 18]
 	jsafrane@redhat.com Jan Safranek: [261, 118]
@@ -799,7 +724,6 @@ unknown 124839 49894
 	tstclair@redhat.com Timothy St. Clair: [361, 649]
 	sttts@redhat.com Dr. Stefan Schimanski: [1207, 582]
 	jvallejo@redhat.com juanvallejo: [201, 31]
-	mkargaki@redhat.com Michail Kargakis: [1130, 700]
 	cjcullen@google.com CJ Cullen: [38, 9]
 	michael.fraenkel@gmail.com Michael Fraenkel: [424, 10]
 	agoldste@redhat.com Andy Goldstein: [10017, 369]
@@ -939,6 +863,7 @@ image 0 0
 	runseb@gmail.com sebgoa: [0, 0]
 documentation 90 14
 	ccoleman@redhat.com Clayton Coleman: [4, 0]
+	mkargaki@redhat.com Michail Kargakis: [4, 0]
 	jsafrane@redhat.com Jan Safranek: [1, 0]
 	mikedanese@google.com Mike Danese: [0, 0]
 	vladimir.vivien@gmail.com Vladimir Vivien: [0, 0]
@@ -947,7 +872,6 @@ documentation 90 14
 	irfan.rehman@huawei.com Irfan Ur Rehman: [1, 0]
 	sjenning@redhat.com Seth Jennings: [1, 0]
 	wojtekt@google.com Wojciech Tyczynski: [5, 4]
-	mkargaki@redhat.com Michail Kargakis: [4, 0]
 	agoldste@redhat.com Andy Goldstein: [3, 0]
 	asalkeld@mirantis.com Angus Salkeld: [3, 0]
 	rrati@redhat.com Robert Rati: [0, 0]
@@ -972,12 +896,12 @@ documentation 90 14
 	justin@fathomdb.com Justin Santa Barbara: [1, 0]
 	bdbauer@google.com Benjamin Bauer: [0, 0]
 build 607 675
+	mkargaki@redhat.com Michail Kargakis: [8, 0]
 	jsafrane@redhat.com Jan Safranek: [13, 1]
 	mikedanese@google.com Mike Danese: [7, 0]
 	vishnuk@google.com Vishnu Kannan: [28, 9]
 	wojtekt@google.com Wojciech Tyczynski: [26, 4]
 	sttts@redhat.com Dr. Stefan Schimanski: [1, 1]
-	mkargaki@redhat.com Michail Kargakis: [8, 0]
 	cjcullen@google.com CJ Cullen: [84, 4]
 	euan.kemp@coreos.com Euan Kemp: [160, 257]
 	verb@google.com Lee Verberne: [13, 2]
@@ -997,9 +921,9 @@ build 607 675
 	pszczesniak@google.com Piotr Szczesniak: [4, 4]
 	beeps@google.com bprashanth: [2, 0]
 	dma@redhat.com mdshuai: [1, 1]
-devel-doc 6468 2969
+devel-doc 6469 2969
 code 1778 856
-unknown 124839 49894
+unknown 124913 49964
 image 0 0
 documentation 90 14
 build 607 675

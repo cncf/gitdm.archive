@@ -11,6 +11,7 @@
 #
 import sys, datetime
 import pdb
+import csv
 
 class Hacker:
     def __init__ (self, name, id, elist, email):
@@ -112,6 +113,25 @@ def LookupID (id):
         return HackersByID[id]
     except KeyError:
         return None
+
+def AllAffsCSV(file, hlist):
+    if file is None:
+        return
+    writer = csv.writer (file, quoting=csv.QUOTE_NONNUMERIC)
+    writer.writerow (['email', 'company', 'date_to'])
+    emails = list(set(sum(map(lambda el: el.email, hlist), [])))
+    emails.sort()
+    for email in emails:
+        if email == 'unknown@hacker.net':
+            continue
+        email = RemapEmail(email)
+        empls = MapToEmployer(email, 2)
+        for date, empl in empls:
+            datestr = str(date)
+            if date > yesterday:
+                datestr = ''
+            emplstr = empl.name.replace ('"', '.').replace ('\\', '.')
+            writer.writerow ([email, emplstr, datestr])
 
 def AllHackers ():
     return HackersByID.values ()
@@ -286,6 +306,7 @@ def RemapEmail (email):
 #
 EmailToEmployer = { }
 nextyear = datetime.date.today () + datetime.timedelta (days = 365)
+yesterday = datetime.date.today () - datetime.timedelta(days = 1)
 
 def AddEmailEmployerMapping (email, employer, end = nextyear):
     if end is None:

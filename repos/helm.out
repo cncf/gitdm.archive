@@ -1,96 +1,42 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/helm.csv
 
-WARNING: duplicate email/empl for pekowski@gmail.com
-WARNING: duplicate email/empl for thingee@gmail.com
-WARNING: duplicate email/empl for t.trifonov@gmail.com
-WARNING: duplicate email/empl for lyz@princessleia.com
-WARNING: duplicate email/empl for robertc@robertcollins.net
-WARNING: duplicate email/empl for clint@fewbar.com
-WARNING: duplicate email/empl for andrew@linuxjedi.co.uk
-WARNING: duplicate email/empl for duncan.thomas@gmail.com
-WARNING: duplicate email/empl for kiall@managedit.ie
-WARNING: duplicate email/empl for devananda.vdv@gmail.com
-WARNING: duplicate email/empl for zaro0508@gmail.com
-WARNING: duplicate email/empl for shrewsbury.dave@gmail.com
-WARNING: duplicate email/empl for j3p0uk@hotmail.com
-WARNING: duplicate email/empl for me@mark.atwood.name
-WARNING: duplicate email/empl for slicknik@gmail.com
-WARNING: duplicate email/empl for cmsj@tenshu.net
-WARNING: duplicate email/empl for anteaya@anteaya.info
-WARNING: duplicate email/empl for greg@greghaynes.net
-WARNING: duplicate email/empl for matt@mattfarina.com
-WARNING: duplicate email/empl for jp@jamezpolley.com
-WARNING: duplicate email/empl for steven@wedontsleep.org
-WARNING: duplicate email/empl for gleebix@gmail.com
-WARNING: duplicate email/empl for code@gentlydownthe.net
-WARNING: duplicate email/empl for morgan.fainberg@gmail.com
-WARNING: duplicate email/empl for jeblair@hp.com
-WARNING: duplicate email/empl for juliaashleykreger@gmail.com
-WARNING: duplicate email/empl for stephane@alum.mit.edu
-WARNING: duplicate email/empl for kragniz@gmail.com
-WARNING: duplicate email/empl for wchrisjohnson@gmail.com
-WARNING: duplicate email/empl for daisy.ycguo@gmail.com
-WARNING: duplicate email/empl for mordred@inaugust.com
-WARNING: duplicate email/empl for zxkuqyb@gmail.com
-WARNING: duplicate email/empl for amigliaccio@internap.com
-WARNING: duplicate email/empl for yorik.sar@gmail.com
-WARNING: duplicate email/empl for e0ne@e0ne.info
-WARNING: duplicate email/empl for gabriel@strikeawe.com
-WARNING: duplicate email/empl for heckj@mac.com
-WARNING: duplicate email/empl for ke.wu@ibeca.me
-WARNING: duplicate email/empl for rushi.agr@gmail.com
-WARNING: duplicate email/empl for salv.orlando@gmail.com
-WARNING: duplicate email/empl for tushar.vitthal.patil@gmail.com
-WARNING: duplicate email/empl for jmckenty@gmail.com
-WARNING: duplicate email/empl for anne@openstack.org
-WARNING: duplicate email/empl for breu@breu.org
-WARNING: duplicate email/empl for cbehrens@codestud.com
-WARNING: duplicate email/empl for clay.gerrard@gmail.com
-WARNING: duplicate email/empl for corywright@gmail.com
-WARNING: duplicate email/empl for cp16net@gmail.com
-WARNING: duplicate email/empl for cthier@gmail.com
-WARNING: duplicate email/empl for darren.birkett@gmail.com
-WARNING: duplicate email/empl for dolph.mathews@gmail.com
-WARNING: duplicate email/empl for ed@leafe.com
-WARNING: duplicate email/empl for github@highbridgellc.com
-WARNING: duplicate email/empl for greglange@gmail.com
-WARNING: duplicate email/empl for hugh@wherenow.org
-WARNING: duplicate email/empl for imsplitbit@gmail.com
-WARNING: duplicate email/empl for jason@koelker.net
-WARNING: duplicate email/empl for jcruz7@gmail.com
-WARNING: duplicate email/empl for josh@jk0.org
-WARNING: duplicate email/empl for mattt@defunct.ca
-WARNING: duplicate email/empl for mbasnight@gmail.com
-WARNING: duplicate email/empl for mike@weirdlooking.com
-WARNING: duplicate email/empl for msherborne@gmail.com
-WARNING: duplicate email/empl for naveedm9@gmail.com
-WARNING: duplicate email/empl for paul@openstack.org
-WARNING: duplicate email/empl for rnirmal@gmail.com
-WARNING: duplicate email/empl for rconradharris@gmail.com
-WARNING: duplicate email/empl for thierry@openstack.org
-WARNING: duplicate email/empl for throughnothing@gmail.com
-WARNING: duplicate email/empl for yoga80@yahoo.com
-WARNING: duplicate email/empl for mark.washenberger@markwash.net
-WARNING: duplicate email/empl for p@draigbrady.com
-WARNING: duplicate email/empl for zaitcev@kotori.zaitcev.us
-WARNING: duplicate email/empl for julie.pichon@gmail.com
-WARNING: duplicate email/empl for ghe@debian.org
-WARNING: duplicate email/empl for sorrison@gmail.com
 unknown@hacker.net Unknown hacker
+adamreese@users.noreply.github.com Adam Reese
+	devel-doc [502, 534]
+	code [1471, 838]
+	package [0, 0]
+	unknown [10591, 6741]
+	image [0, 8]
+	documentation [25, 5]
+	build [379, 177]
+matt.butcher@microsoft.com Matt Butcher
+	devel-doc [2642, 2168]
+	code [497, 4217]
+	package [0, 0]
+	unknown [52660, 34367]
+	image [48, 32]
+	documentation [2500, 3650]
+	build [230, 482]
+seh@panix.com Steven E. Harris
+	unknown [379, 115]
+	devel-doc [89, 92]
+lukaseichler1@googlemail.com Lukas Eichler
+	unknown [135, 14]
+	devel-doc [0, 0]
+minooral@microsoft.com Michelle Noorali
+	devel-doc [186, 22]
+	code [72, 5]
+	package [0, 0]
+	unknown [10022, 3524]
+	image [0, 0]
+	documentation [6, 2]
+	build [124, 92]
 thomastaylor312@gmail.com Taylor Thomas
 	unknown [1224, 619]
 	devel-doc [164, 9]
 bjozsa@jinkit.com Brandon B. Jozsa
 	unknown [2, 2]
-matt.butcher@microsoft.com Matt Butcher
-	devel-doc [2642, 2167]
-	code [497, 4217]
-	package [0, 0]
-	unknown [52454, 34362]
-	image [48, 32]
-	documentation [2500, 3650]
-	build [230, 482]
 admin@toph.ca Christoph Blecker
 	code [167, 3]
 	unknown [1246, 380]
@@ -100,14 +46,6 @@ admin@toph.ca Christoph Blecker
 lachlan.evenson@microsoft.com Lachlan Evenson
 	unknown [18, 9]
 	devel-doc [3, 3]
-adamreese@users.noreply.github.com Adam Reese
-	devel-doc [500, 532]
-	code [1471, 838]
-	package [0, 0]
-	unknown [10495, 6623]
-	image [0, 8]
-	documentation [25, 5]
-	build [379, 177]
 sushil.kumar@suse.com Sushil Kumar
 	devel-doc [90, 8]
 	package [0, 0]
@@ -120,14 +58,6 @@ willisesun@gmail.com willise
 	documentation [1, 1]
 devinyan@tencent.com devinyan
 	unknown [6, 6]
-minooral@microsoft.com Michelle Noorali
-	devel-doc [186, 22]
-	code [72, 5]
-	package [0, 0]
-	unknown [9758, 3357]
-	image [0, 0]
-	documentation [6, 2]
-	build [124, 92]
 rober.morales@rstor.io Rober Morales-Chaparro
 	unknown [1, 1]
 zoidbergwill@gmail.com William Martin Stewart
@@ -251,8 +181,6 @@ qin.wang@intel.com Qin Wang
 	package [0, 0]
 anubhavmishra@me.com Anubhav Mishra
 	unknown [34, 33]
-seharris@us.ibm.com Steven E. Harris
-	unknown [244, 64]
 dave@wittman.xyz David Wittman
 	unknown [2, 2]
 john.welsh@workday.com John Welsh
@@ -528,14 +456,16 @@ eric.ho@gogotech.hk Eric Ho
 	build [24, 9]
 vaikas@vaikas-glaptop.roam.corp.google.com vaikas
 	unknown [10, 4]
-devel-doc 6351 3807
+devel-doc 6442 3902
+	adamreese@users.noreply.github.com Adam Reese: [502, 534]
+	matt.butcher@microsoft.com Matt Butcher: [2642, 2168]
+	seh@panix.com Steven E. Harris: [89, 92]
+	lukaseichler1@googlemail.com Lukas Eichler: [0, 0]
+	minooral@microsoft.com Michelle Noorali: [186, 22]
 	thomastaylor312@gmail.com Taylor Thomas: [164, 9]
-	matt.butcher@microsoft.com Matt Butcher: [2642, 2167]
 	admin@toph.ca Christoph Blecker: [8, 7]
 	lachlan.evenson@microsoft.com Lachlan Evenson: [3, 3]
-	adamreese@users.noreply.github.com Adam Reese: [500, 532]
 	sushil.kumar@suse.com Sushil Kumar: [90, 8]
-	minooral@microsoft.com Michelle Noorali: [186, 22]
 	zoidbergwill@gmail.com William Martin Stewart: [2, 2]
 	justin.a.scott@intel.com Justin Scott: [21, 0]
 	bodepd@gmail.com Dan Bode: [3, 3]
@@ -587,10 +517,10 @@ devel-doc 6351 3807
 	vagababov@google.com Victor Agababov: [312, 0]
 	jiangyaoguo@gmail.com jiangyaoguo: [6, 6]
 code 9379 8801
-	matt.butcher@microsoft.com Matt Butcher: [497, 4217]
-	admin@toph.ca Christoph Blecker: [167, 3]
 	adamreese@users.noreply.github.com Adam Reese: [1471, 838]
+	matt.butcher@microsoft.com Matt Butcher: [497, 4217]
 	minooral@microsoft.com Michelle Noorali: [72, 5]
+	admin@toph.ca Christoph Blecker: [167, 3]
 	matt@mattfarina.com Matt Farina: [5, 5]
 	ladiclexxx@gmail.com Ladicle: [1, 1]
 	vaikas-google@users.noreply.github.com Ville Aikas: [472, 235]
@@ -606,26 +536,28 @@ code 9379 8801
 	vagababov@google.com Victor Agababov: [1721, 11]
 	gaocegege@hotmail.com Gaoce: [2, 3]
 package 0 0
-	matt.butcher@microsoft.com Matt Butcher: [0, 0]
 	adamreese@users.noreply.github.com Adam Reese: [0, 0]
-	sushil.kumar@suse.com Sushil Kumar: [0, 0]
+	matt.butcher@microsoft.com Matt Butcher: [0, 0]
 	minooral@microsoft.com Michelle Noorali: [0, 0]
+	sushil.kumar@suse.com Sushil Kumar: [0, 0]
 	rodcloutier@gmail.com Rod Cloutier: [0, 0]
 	adnan@prydoni.us Adnan Abdulhussein: [0, 0]
 	huszty.gergo@digitaltrip.hu Gergo Huszty: [0, 0]
 	qin.wang@intel.com Qin Wang: [0, 0]
 	jackgr@google.com jackgr: [0, 0]
-unknown 131725 70050
+unknown 132561 70405
+	adamreese@users.noreply.github.com Adam Reese: [10591, 6741]
+	matt.butcher@microsoft.com Matt Butcher: [52660, 34367]
+	seh@panix.com Steven E. Harris: [379, 115]
+	lukaseichler1@googlemail.com Lukas Eichler: [135, 14]
+	minooral@microsoft.com Michelle Noorali: [10022, 3524]
 	thomastaylor312@gmail.com Taylor Thomas: [1224, 619]
 	bjozsa@jinkit.com Brandon B. Jozsa: [2, 2]
-	matt.butcher@microsoft.com Matt Butcher: [52454, 34362]
 	admin@toph.ca Christoph Blecker: [1246, 380]
 	lachlan.evenson@microsoft.com Lachlan Evenson: [18, 9]
-	adamreese@users.noreply.github.com Adam Reese: [10495, 6623]
 	sushil.kumar@suse.com Sushil Kumar: [1391, 223]
 	willisesun@gmail.com willise: [4, 4]
 	devinyan@tencent.com devinyan: [6, 6]
-	minooral@microsoft.com Michelle Noorali: [9758, 3357]
 	rober.morales@rstor.io Rober Morales-Chaparro: [1, 1]
 	justin.a.scott@intel.com Justin Scott: [1710, 405]
 	bodepd@gmail.com Dan Bode: [2, 0]
@@ -668,7 +600,6 @@ unknown 131725 70050
 	jchauncey@deis.com Jonathan Chauncey: [172, 18]
 	qin.wang@intel.com Qin Wang: [297, 65]
 	anubhavmishra@me.com Anubhav Mishra: [34, 33]
-	seharris@us.ibm.com Steven E. Harris: [244, 64]
 	dave@wittman.xyz David Wittman: [2, 2]
 	john.welsh@workday.com John Welsh: [55, 2]
 	mario54@users.noreply.github.com Mario Lamontagne: [1, 1]
@@ -764,22 +695,22 @@ unknown 131725 70050
 	gaocegege@hotmail.com Gaoce: [1, 1]
 	vaikas@vaikas-glaptop.roam.corp.google.com vaikas: [10, 4]
 image 72 48
-	matt.butcher@microsoft.com Matt Butcher: [48, 32]
 	adamreese@users.noreply.github.com Adam Reese: [0, 8]
-	sushil.kumar@suse.com Sushil Kumar: [8, 0]
+	matt.butcher@microsoft.com Matt Butcher: [48, 32]
 	minooral@microsoft.com Michelle Noorali: [0, 0]
+	sushil.kumar@suse.com Sushil Kumar: [8, 0]
 	rodcloutier@gmail.com Rod Cloutier: [8, 0]
 	rmocius@gmail.com Rimantas Mocevicius: [0, 0]
 	jackgr@google.com jackgr: [8, 8]
 	leenders@google.com Robert Leenders: [0, 0]
 	vagababov@google.com Victor Agababov: [0, 0]
 documentation 7588 4017
-	matt.butcher@microsoft.com Matt Butcher: [2500, 3650]
-	admin@toph.ca Christoph Blecker: [1219, 275]
 	adamreese@users.noreply.github.com Adam Reese: [25, 5]
+	matt.butcher@microsoft.com Matt Butcher: [2500, 3650]
+	minooral@microsoft.com Michelle Noorali: [6, 2]
+	admin@toph.ca Christoph Blecker: [1219, 275]
 	sushil.kumar@suse.com Sushil Kumar: [167, 10]
 	willisesun@gmail.com willise: [1, 1]
-	minooral@microsoft.com Michelle Noorali: [6, 2]
 	justin.a.scott@intel.com Justin Scott: [5, 1]
 	slicknik@gmail.com Nikhil Manchanda: [6, 6]
 	peay@protonmail.com peay: [3567, 0]
@@ -791,11 +722,11 @@ documentation 7588 4017
 	grahamawelch@gmail.com Graham Welch: [1, 0]
 	vagababov@google.com Victor Agababov: [3, 0]
 build 1443 1124
-	matt.butcher@microsoft.com Matt Butcher: [230, 482]
-	admin@toph.ca Christoph Blecker: [6, 5]
 	adamreese@users.noreply.github.com Adam Reese: [379, 177]
-	sushil.kumar@suse.com Sushil Kumar: [2, 0]
+	matt.butcher@microsoft.com Matt Butcher: [230, 482]
 	minooral@microsoft.com Michelle Noorali: [124, 92]
+	admin@toph.ca Christoph Blecker: [6, 5]
+	sushil.kumar@suse.com Sushil Kumar: [2, 0]
 	segoings@microsoft.com Seth Goings: [18, 4]
 	matt@mattfarina.com Matt Farina: [1, 1]
 	mkwiek@mirantis.com Maciej Kwiek: [35, 12]
@@ -817,10 +748,10 @@ build 1443 1124
 	leenders@google.com Robert Leenders: [71, 0]
 	vagababov@google.com Victor Agababov: [120, 1]
 	eric.ho@gogotech.hk Eric Ho: [24, 9]
-devel-doc 6351 3807
+devel-doc 6442 3902
 code 9379 8801
 package 0 0
-unknown 131725 70050
+unknown 132561 70405
 image 72 48
 documentation 7588 4017
 build 1443 1124

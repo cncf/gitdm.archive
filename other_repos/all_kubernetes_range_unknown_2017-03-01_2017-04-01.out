@@ -1,82 +1,6 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_unknown_2017-03-01_2017-04-01.csv
 
-WARNING: duplicate email/empl for pekowski@gmail.com
-WARNING: duplicate email/empl for thingee@gmail.com
-WARNING: duplicate email/empl for t.trifonov@gmail.com
-WARNING: duplicate email/empl for lyz@princessleia.com
-WARNING: duplicate email/empl for robertc@robertcollins.net
-WARNING: duplicate email/empl for clint@fewbar.com
-WARNING: duplicate email/empl for andrew@linuxjedi.co.uk
-WARNING: duplicate email/empl for duncan.thomas@gmail.com
-WARNING: duplicate email/empl for kiall@managedit.ie
-WARNING: duplicate email/empl for devananda.vdv@gmail.com
-WARNING: duplicate email/empl for zaro0508@gmail.com
-WARNING: duplicate email/empl for shrewsbury.dave@gmail.com
-WARNING: duplicate email/empl for j3p0uk@hotmail.com
-WARNING: duplicate email/empl for me@mark.atwood.name
-WARNING: duplicate email/empl for slicknik@gmail.com
-WARNING: duplicate email/empl for cmsj@tenshu.net
-WARNING: duplicate email/empl for anteaya@anteaya.info
-WARNING: duplicate email/empl for greg@greghaynes.net
-WARNING: duplicate email/empl for matt@mattfarina.com
-WARNING: duplicate email/empl for jp@jamezpolley.com
-WARNING: duplicate email/empl for steven@wedontsleep.org
-WARNING: duplicate email/empl for gleebix@gmail.com
-WARNING: duplicate email/empl for code@gentlydownthe.net
-WARNING: duplicate email/empl for morgan.fainberg@gmail.com
-WARNING: duplicate email/empl for jeblair@hp.com
-WARNING: duplicate email/empl for juliaashleykreger@gmail.com
-WARNING: duplicate email/empl for stephane@alum.mit.edu
-WARNING: duplicate email/empl for kragniz@gmail.com
-WARNING: duplicate email/empl for wchrisjohnson@gmail.com
-WARNING: duplicate email/empl for daisy.ycguo@gmail.com
-WARNING: duplicate email/empl for mordred@inaugust.com
-WARNING: duplicate email/empl for zxkuqyb@gmail.com
-WARNING: duplicate email/empl for amigliaccio@internap.com
-WARNING: duplicate email/empl for yorik.sar@gmail.com
-WARNING: duplicate email/empl for e0ne@e0ne.info
-WARNING: duplicate email/empl for gabriel@strikeawe.com
-WARNING: duplicate email/empl for heckj@mac.com
-WARNING: duplicate email/empl for ke.wu@ibeca.me
-WARNING: duplicate email/empl for rushi.agr@gmail.com
-WARNING: duplicate email/empl for salv.orlando@gmail.com
-WARNING: duplicate email/empl for tushar.vitthal.patil@gmail.com
-WARNING: duplicate email/empl for jmckenty@gmail.com
-WARNING: duplicate email/empl for anne@openstack.org
-WARNING: duplicate email/empl for breu@breu.org
-WARNING: duplicate email/empl for cbehrens@codestud.com
-WARNING: duplicate email/empl for clay.gerrard@gmail.com
-WARNING: duplicate email/empl for corywright@gmail.com
-WARNING: duplicate email/empl for cp16net@gmail.com
-WARNING: duplicate email/empl for cthier@gmail.com
-WARNING: duplicate email/empl for darren.birkett@gmail.com
-WARNING: duplicate email/empl for dolph.mathews@gmail.com
-WARNING: duplicate email/empl for ed@leafe.com
-WARNING: duplicate email/empl for github@highbridgellc.com
-WARNING: duplicate email/empl for greglange@gmail.com
-WARNING: duplicate email/empl for hugh@wherenow.org
-WARNING: duplicate email/empl for imsplitbit@gmail.com
-WARNING: duplicate email/empl for jason@koelker.net
-WARNING: duplicate email/empl for jcruz7@gmail.com
-WARNING: duplicate email/empl for josh@jk0.org
-WARNING: duplicate email/empl for mattt@defunct.ca
-WARNING: duplicate email/empl for mbasnight@gmail.com
-WARNING: duplicate email/empl for mike@weirdlooking.com
-WARNING: duplicate email/empl for msherborne@gmail.com
-WARNING: duplicate email/empl for naveedm9@gmail.com
-WARNING: duplicate email/empl for paul@openstack.org
-WARNING: duplicate email/empl for rnirmal@gmail.com
-WARNING: duplicate email/empl for rconradharris@gmail.com
-WARNING: duplicate email/empl for thierry@openstack.org
-WARNING: duplicate email/empl for throughnothing@gmail.com
-WARNING: duplicate email/empl for yoga80@yahoo.com
-WARNING: duplicate email/empl for mark.washenberger@markwash.net
-WARNING: duplicate email/empl for p@draigbrady.com
-WARNING: duplicate email/empl for zaitcev@kotori.zaitcev.us
-WARNING: duplicate email/empl for julie.pichon@gmail.com
-WARNING: duplicate email/empl for ghe@debian.org
-WARNING: duplicate email/empl for sorrison@gmail.com
 unknown@hacker.net Unknown hacker
 sid@rancher.com wlan0
 	unknown [1686, 102]
@@ -532,6 +456,10 @@ tan.shanshan@zte.com.cn tanshanshan
 	unknown [131, 19]
 shekhar@venturit.com Shekhar
 	unknown [1, 1]
+owensk@google.com Kenneth Owens
+	unknown [366, 75]
+	devel-doc [345, 6]
+	build [13, 0]
 galexrt@googlemail.com Alexander Trost
 	unknown [106, 34]
 mikedanese@gmail.com Mike Danese
@@ -1330,8 +1258,6 @@ mitsuhiro.tanino@hds.com mtanino
 	code [1, 1]
 sebastian@loodse.com Sebastian Scheele
 	unknown [1, 1]
-owensk@google.com Kenneth Owens
-	unknown [35, 38]
 irfan.rehman@huawei.com Irfan Ur Rehman
 	unknown [16, 0]
 qlee@google.com Quintin Lee
@@ -1572,7 +1498,7 @@ sebastienvas@google.com Sebastien Vas
 	unknown [12, 0]
 chenjg@harmonycloud.cn fate-grand-order
 	unknown [3, 3]
-devel-doc 25864 5776
+devel-doc 26209 5782
 	sid@rancher.com wlan0: [270, 0]
 	enisoc@google.com Anthony Yeh: [2144, 689]
 	admin@toph.ca Christoph Blecker: [8, 13]
@@ -1652,6 +1578,7 @@ devel-doc 25864 5776
 	jregan@google.com Jeffrey Regan: [126, 116]
 	michmike@users.noreply.github.com Michael Michael: [8, 1]
 	pwittroc+github@google.com Phillip Wittrock: [10079, 0]
+	owensk@google.com Kenneth Owens: [345, 6]
 	mikedanese@gmail.com Mike Danese: [47, 4]
 	shyamjvs@google.com Shyam Jeedigunta: [32, 0]
 	e.proydakov@gmail.com Proydakov Evgeny: [2, 0]
@@ -1888,7 +1815,7 @@ code 200225 9645
 	senlu@google.com Sen Lu: [366, 373]
 package 0 0
 	qin.wang@intel.com Qin Wang: [0, 0]
-unknown 314212 151734
+unknown 314543 151771
 	sid@rancher.com wlan0: [1686, 102]
 	cezarsa@gmail.com Cezar Sa Espinola: [62, 4]
 	enisoc@google.com Anthony Yeh: [1607, 1038]
@@ -2018,6 +1945,7 @@ unknown 314212 151734
 	pwittroc+github@google.com Phillip Wittrock: [86373, 9039]
 	tan.shanshan@zte.com.cn tanshanshan: [131, 19]
 	shekhar@venturit.com Shekhar: [1, 1]
+	owensk@google.com Kenneth Owens: [366, 75]
 	galexrt@googlemail.com Alexander Trost: [106, 34]
 	mikedanese@gmail.com Mike Danese: [511, 112]
 	wtritchler@fairwaytech.com wtritch: [3, 0]
@@ -2281,7 +2209,6 @@ unknown 314212 151734
 	gus@inodes.org Angus Lees: [7, 7]
 	andrew@andrewrynhard.com Andrew Rynhard: [8, 5]
 	sebastian@loodse.com Sebastian Scheele: [1, 1]
-	owensk@google.com Kenneth Owens: [35, 38]
 	irfan.rehman@huawei.com Irfan Ur Rehman: [16, 0]
 	kazuki.suda@gmail.com Kazuki Suda: [4, 0]
 	409107750@qq.com mlmhl: [2, 2]
@@ -2448,7 +2375,7 @@ documentation 150921 105057
 	apelisse@google.com Antoine Pelisse: [1, 0]
 ui 213 0
 	pwittroc+github@google.com Phillip Wittrock: [213, 0]
-build 1645 797
+build 1658 797
 	admin@toph.ca Christoph Blecker: [1, 0]
 	jliggitt@redhat.com Jordan Liggitt: [26, 12]
 	spxtr@google.com Joe Finney: [20, 65]
@@ -2472,6 +2399,7 @@ build 1645 797
 	acidburn@google.com Jess Frazelle: [1, 1]
 	caleb.miles@coreos.com caleb miles: [5, 5]
 	pwittroc+github@google.com Phillip Wittrock: [194, 20]
+	owensk@google.com Kenneth Owens: [13, 0]
 	mikedanese@gmail.com Mike Danese: [18, 2]
 	shyamjvs@google.com Shyam Jeedigunta: [47, 12]
 	stclair@google.com Tim St. Clair: [3, 3]
@@ -2535,12 +2463,12 @@ build 1645 797
 	senlu@google.com Sen Lu: [1, 1]
 translation 6980 354
 	brendan.d.burns@gmail.com Brendan Burns: [6980, 354]
-devel-doc 25864 5776
+devel-doc 26209 5782
 code 200225 9645
 package 0 0
-unknown 314212 151734
+unknown 314543 151771
 image 10063 0
 documentation 150921 105057
 ui 213 0
-build 1645 797
+build 1658 797
 translation 6980 354

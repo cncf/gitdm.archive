@@ -1,82 +1,6 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/apiserver-builder.csv
 
-WARNING: duplicate email/empl for pekowski@gmail.com
-WARNING: duplicate email/empl for thingee@gmail.com
-WARNING: duplicate email/empl for t.trifonov@gmail.com
-WARNING: duplicate email/empl for lyz@princessleia.com
-WARNING: duplicate email/empl for robertc@robertcollins.net
-WARNING: duplicate email/empl for clint@fewbar.com
-WARNING: duplicate email/empl for andrew@linuxjedi.co.uk
-WARNING: duplicate email/empl for duncan.thomas@gmail.com
-WARNING: duplicate email/empl for kiall@managedit.ie
-WARNING: duplicate email/empl for devananda.vdv@gmail.com
-WARNING: duplicate email/empl for zaro0508@gmail.com
-WARNING: duplicate email/empl for shrewsbury.dave@gmail.com
-WARNING: duplicate email/empl for j3p0uk@hotmail.com
-WARNING: duplicate email/empl for me@mark.atwood.name
-WARNING: duplicate email/empl for slicknik@gmail.com
-WARNING: duplicate email/empl for cmsj@tenshu.net
-WARNING: duplicate email/empl for anteaya@anteaya.info
-WARNING: duplicate email/empl for greg@greghaynes.net
-WARNING: duplicate email/empl for matt@mattfarina.com
-WARNING: duplicate email/empl for jp@jamezpolley.com
-WARNING: duplicate email/empl for steven@wedontsleep.org
-WARNING: duplicate email/empl for gleebix@gmail.com
-WARNING: duplicate email/empl for code@gentlydownthe.net
-WARNING: duplicate email/empl for morgan.fainberg@gmail.com
-WARNING: duplicate email/empl for jeblair@hp.com
-WARNING: duplicate email/empl for juliaashleykreger@gmail.com
-WARNING: duplicate email/empl for stephane@alum.mit.edu
-WARNING: duplicate email/empl for kragniz@gmail.com
-WARNING: duplicate email/empl for wchrisjohnson@gmail.com
-WARNING: duplicate email/empl for daisy.ycguo@gmail.com
-WARNING: duplicate email/empl for mordred@inaugust.com
-WARNING: duplicate email/empl for zxkuqyb@gmail.com
-WARNING: duplicate email/empl for amigliaccio@internap.com
-WARNING: duplicate email/empl for yorik.sar@gmail.com
-WARNING: duplicate email/empl for e0ne@e0ne.info
-WARNING: duplicate email/empl for gabriel@strikeawe.com
-WARNING: duplicate email/empl for heckj@mac.com
-WARNING: duplicate email/empl for ke.wu@ibeca.me
-WARNING: duplicate email/empl for rushi.agr@gmail.com
-WARNING: duplicate email/empl for salv.orlando@gmail.com
-WARNING: duplicate email/empl for tushar.vitthal.patil@gmail.com
-WARNING: duplicate email/empl for jmckenty@gmail.com
-WARNING: duplicate email/empl for anne@openstack.org
-WARNING: duplicate email/empl for breu@breu.org
-WARNING: duplicate email/empl for cbehrens@codestud.com
-WARNING: duplicate email/empl for clay.gerrard@gmail.com
-WARNING: duplicate email/empl for corywright@gmail.com
-WARNING: duplicate email/empl for cp16net@gmail.com
-WARNING: duplicate email/empl for cthier@gmail.com
-WARNING: duplicate email/empl for darren.birkett@gmail.com
-WARNING: duplicate email/empl for dolph.mathews@gmail.com
-WARNING: duplicate email/empl for ed@leafe.com
-WARNING: duplicate email/empl for github@highbridgellc.com
-WARNING: duplicate email/empl for greglange@gmail.com
-WARNING: duplicate email/empl for hugh@wherenow.org
-WARNING: duplicate email/empl for imsplitbit@gmail.com
-WARNING: duplicate email/empl for jason@koelker.net
-WARNING: duplicate email/empl for jcruz7@gmail.com
-WARNING: duplicate email/empl for josh@jk0.org
-WARNING: duplicate email/empl for mattt@defunct.ca
-WARNING: duplicate email/empl for mbasnight@gmail.com
-WARNING: duplicate email/empl for mike@weirdlooking.com
-WARNING: duplicate email/empl for msherborne@gmail.com
-WARNING: duplicate email/empl for naveedm9@gmail.com
-WARNING: duplicate email/empl for paul@openstack.org
-WARNING: duplicate email/empl for rnirmal@gmail.com
-WARNING: duplicate email/empl for rconradharris@gmail.com
-WARNING: duplicate email/empl for thierry@openstack.org
-WARNING: duplicate email/empl for throughnothing@gmail.com
-WARNING: duplicate email/empl for yoga80@yahoo.com
-WARNING: duplicate email/empl for mark.washenberger@markwash.net
-WARNING: duplicate email/empl for p@draigbrady.com
-WARNING: duplicate email/empl for zaitcev@kotori.zaitcev.us
-WARNING: duplicate email/empl for julie.pichon@gmail.com
-WARNING: duplicate email/empl for ghe@debian.org
-WARNING: duplicate email/empl for sorrison@gmail.com
 unknown@hacker.net Unknown hacker
 pwittroc+github@google.com Phillip Wittrock
 	devel-doc [3546, 3467]
@@ -86,6 +10,9 @@ pwittroc+github@google.com Phillip Wittrock
 	documentation [20764, 20748]
 	ui [71, 71]
 	build [272, 225]
+sross@redhat.com Solly Ross
+	unknown [253, 1]
+	devel-doc [9, 0]
 alexanderhcampbell@gmail.com Alexander Campbell
 	unknown [183, 275]
 	devel-doc [13, 14]
@@ -95,25 +22,22 @@ jimmidyson@gmail.com Jimmi Dyson
 xiangli.cs@gmail.com Xiang
 	unknown [276, 43]
 	build [2, 2]
-sross@redhat.com Solly Ross
-	unknown [246, 0]
-	devel-doc [9, 0]
 calebamiles@users.noreply.github.com caleb miles
 	unknown [16, 0]
 	devel-doc [282, 2]
 devel-doc 3850 3483
 	pwittroc+github@google.com Phillip Wittrock: [3546, 3467]
-	alexanderhcampbell@gmail.com Alexander Campbell: [13, 14]
 	sross@redhat.com Solly Ross: [9, 0]
+	alexanderhcampbell@gmail.com Alexander Campbell: [13, 14]
 	calebamiles@users.noreply.github.com caleb miles: [282, 2]
 code 61838 61795
 	pwittroc+github@google.com Phillip Wittrock: [61838, 61795]
-unknown 46671 38319
+unknown 46678 38320
 	pwittroc+github@google.com Phillip Wittrock: [45924, 37980]
+	sross@redhat.com Solly Ross: [253, 1]
 	alexanderhcampbell@gmail.com Alexander Campbell: [183, 275]
 	jimmidyson@gmail.com Jimmi Dyson: [26, 21]
 	xiangli.cs@gmail.com Xiang: [276, 43]
-	sross@redhat.com Solly Ross: [246, 0]
 	calebamiles@users.noreply.github.com caleb miles: [16, 0]
 image 3247 3247
 	pwittroc+github@google.com Phillip Wittrock: [3247, 3247]
@@ -127,7 +51,7 @@ build 298 227
 	xiangli.cs@gmail.com Xiang: [2, 2]
 devel-doc 3850 3483
 code 61838 61795
-unknown 46671 38319
+unknown 46678 38320
 image 3247 3247
 documentation 20764 20748
 ui 71 71

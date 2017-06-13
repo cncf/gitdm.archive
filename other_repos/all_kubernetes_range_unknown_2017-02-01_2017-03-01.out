@@ -1,82 +1,6 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_unknown_2017-02-01_2017-03-01.csv
 
-WARNING: duplicate email/empl for pekowski@gmail.com
-WARNING: duplicate email/empl for thingee@gmail.com
-WARNING: duplicate email/empl for t.trifonov@gmail.com
-WARNING: duplicate email/empl for lyz@princessleia.com
-WARNING: duplicate email/empl for robertc@robertcollins.net
-WARNING: duplicate email/empl for clint@fewbar.com
-WARNING: duplicate email/empl for andrew@linuxjedi.co.uk
-WARNING: duplicate email/empl for duncan.thomas@gmail.com
-WARNING: duplicate email/empl for kiall@managedit.ie
-WARNING: duplicate email/empl for devananda.vdv@gmail.com
-WARNING: duplicate email/empl for zaro0508@gmail.com
-WARNING: duplicate email/empl for shrewsbury.dave@gmail.com
-WARNING: duplicate email/empl for j3p0uk@hotmail.com
-WARNING: duplicate email/empl for me@mark.atwood.name
-WARNING: duplicate email/empl for slicknik@gmail.com
-WARNING: duplicate email/empl for cmsj@tenshu.net
-WARNING: duplicate email/empl for anteaya@anteaya.info
-WARNING: duplicate email/empl for greg@greghaynes.net
-WARNING: duplicate email/empl for matt@mattfarina.com
-WARNING: duplicate email/empl for jp@jamezpolley.com
-WARNING: duplicate email/empl for steven@wedontsleep.org
-WARNING: duplicate email/empl for gleebix@gmail.com
-WARNING: duplicate email/empl for code@gentlydownthe.net
-WARNING: duplicate email/empl for morgan.fainberg@gmail.com
-WARNING: duplicate email/empl for jeblair@hp.com
-WARNING: duplicate email/empl for juliaashleykreger@gmail.com
-WARNING: duplicate email/empl for stephane@alum.mit.edu
-WARNING: duplicate email/empl for kragniz@gmail.com
-WARNING: duplicate email/empl for wchrisjohnson@gmail.com
-WARNING: duplicate email/empl for daisy.ycguo@gmail.com
-WARNING: duplicate email/empl for mordred@inaugust.com
-WARNING: duplicate email/empl for zxkuqyb@gmail.com
-WARNING: duplicate email/empl for amigliaccio@internap.com
-WARNING: duplicate email/empl for yorik.sar@gmail.com
-WARNING: duplicate email/empl for e0ne@e0ne.info
-WARNING: duplicate email/empl for gabriel@strikeawe.com
-WARNING: duplicate email/empl for heckj@mac.com
-WARNING: duplicate email/empl for ke.wu@ibeca.me
-WARNING: duplicate email/empl for rushi.agr@gmail.com
-WARNING: duplicate email/empl for salv.orlando@gmail.com
-WARNING: duplicate email/empl for tushar.vitthal.patil@gmail.com
-WARNING: duplicate email/empl for jmckenty@gmail.com
-WARNING: duplicate email/empl for anne@openstack.org
-WARNING: duplicate email/empl for breu@breu.org
-WARNING: duplicate email/empl for cbehrens@codestud.com
-WARNING: duplicate email/empl for clay.gerrard@gmail.com
-WARNING: duplicate email/empl for corywright@gmail.com
-WARNING: duplicate email/empl for cp16net@gmail.com
-WARNING: duplicate email/empl for cthier@gmail.com
-WARNING: duplicate email/empl for darren.birkett@gmail.com
-WARNING: duplicate email/empl for dolph.mathews@gmail.com
-WARNING: duplicate email/empl for ed@leafe.com
-WARNING: duplicate email/empl for github@highbridgellc.com
-WARNING: duplicate email/empl for greglange@gmail.com
-WARNING: duplicate email/empl for hugh@wherenow.org
-WARNING: duplicate email/empl for imsplitbit@gmail.com
-WARNING: duplicate email/empl for jason@koelker.net
-WARNING: duplicate email/empl for jcruz7@gmail.com
-WARNING: duplicate email/empl for josh@jk0.org
-WARNING: duplicate email/empl for mattt@defunct.ca
-WARNING: duplicate email/empl for mbasnight@gmail.com
-WARNING: duplicate email/empl for mike@weirdlooking.com
-WARNING: duplicate email/empl for msherborne@gmail.com
-WARNING: duplicate email/empl for naveedm9@gmail.com
-WARNING: duplicate email/empl for paul@openstack.org
-WARNING: duplicate email/empl for rnirmal@gmail.com
-WARNING: duplicate email/empl for rconradharris@gmail.com
-WARNING: duplicate email/empl for thierry@openstack.org
-WARNING: duplicate email/empl for throughnothing@gmail.com
-WARNING: duplicate email/empl for yoga80@yahoo.com
-WARNING: duplicate email/empl for mark.washenberger@markwash.net
-WARNING: duplicate email/empl for p@draigbrady.com
-WARNING: duplicate email/empl for zaitcev@kotori.zaitcev.us
-WARNING: duplicate email/empl for julie.pichon@gmail.com
-WARNING: duplicate email/empl for ghe@debian.org
-WARNING: duplicate email/empl for sorrison@gmail.com
 unknown@hacker.net Unknown hacker
 ccoleman@redhat.com Clayton Coleman
 	unknown [4003, 1875]
@@ -1025,6 +949,10 @@ fbranczyk@gmail.com Frederic Branczyk
 	build [1, 1]
 pjpires@gmail.com Paulo Pires
 	unknown [30, 8]
+simon.croome@storageos.com Simon Croome
+	unknown [2631, 12]
+	devel-doc [677, 0]
+	documentation [0, 0]
 jacobsimpson@google.com Jacob Simpson
 	unknown [1820, 60]
 	devel-doc [81, 0]
@@ -1533,7 +1461,7 @@ krousey@google.com Kris
 	unknown [123, 0]
 amerai@google.com Michelle Shepardson
 	unknown [69, 56]
-devel-doc 29482 23173
+devel-doc 30159 23173
 	ccoleman@redhat.com Clayton Coleman: [363, 40]
 	yashulyak@gmail.com Dmitry Shulyak: [26, 23]
 	xuchao@google.com Chao Xu: [137, 5527]
@@ -1691,6 +1619,7 @@ devel-doc 29482 23173
 	ykuoka@gmail.com Yusuke Kuoka: [16, 70]
 	andreas.kohn@gmail.com Andreas Kohn: [1, 1]
 	fbranczyk@gmail.com Frederic Branczyk: [32, 0]
+	simon.croome@storageos.com Simon Croome: [677, 0]
 	jacobsimpson@google.com Jacob Simpson: [81, 0]
 	gmarek@google.com gmarek: [21, 0]
 	shiywang@redhat.com Shiyang Wang: [4, 0]
@@ -1864,7 +1793,7 @@ code 11874 26704
 	rmmh@google.com Ryan Hitchman: [190, 45]
 package 0 0
 	gergo.huszty@nokia.com Gergo Huszty: [0, 0]
-unknown 424498 451385
+unknown 427129 451397
 	ccoleman@redhat.com Clayton Coleman: [4003, 1875]
 	vsemushi@redhat.com Slava Semushin: [10, 21]
 	yashulyak@gmail.com Dmitry Shulyak: [242, 161]
@@ -2156,6 +2085,7 @@ unknown 424498 451385
 	jeremydeininger@gmail.com Jeremy Deininger: [7, 0]
 	fbranczyk@gmail.com Frederic Branczyk: [515, 136]
 	pjpires@gmail.com Paulo Pires: [30, 8]
+	simon.croome@storageos.com Simon Croome: [2631, 12]
 	jacobsimpson@google.com Jacob Simpson: [1820, 60]
 	gmarek@google.com gmarek: [3312, 353]
 	shiywang@redhat.com Shiyang Wang: [1784, 73]
@@ -2375,6 +2305,7 @@ documentation 1086 2230
 	aledbf@gmail.com Manuel Alejandro de Brito Fontes: [46, 23]
 	mtaufen@google.com Michael Taufen: [8, 8]
 	ykuoka@gmail.com Yusuke Kuoka: [0, 0]
+	simon.croome@storageos.com Simon Croome: [0, 0]
 	gmarek@google.com gmarek: [8, 0]
 	shiywang@redhat.com Shiyang Wang: [11, 0]
 	dvorak@google.com Jonathan MacMillan: [5, 0]
@@ -2488,10 +2419,10 @@ build 1764 3221
 	rmmh@google.com Ryan Hitchman: [7, 7]
 translation 998 2
 	bburns@google.com Brendan Burns: [998, 2]
-devel-doc 29482 23173
+devel-doc 30159 23173
 code 11874 26704
 package 0 0
-unknown 424498 451385
+unknown 427129 451397
 image 0 0
 documentation 1086 2230
 ui 0 3

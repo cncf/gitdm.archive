@@ -1,29 +1,29 @@
 idx,company,n,percent
-0,(All known 68),236,89.06
-1,Google,68,25.7
+0,(All known 70),246,93.18
+1,Google,68,25.8
 2,Red Hat,45,17.0
-3,(Unknown),29,10.9
+3,(Unknown),18,6.8
 4,CoreOS,14,5.3
-5,Gmail *,13,4.9
-6,IBM,10,3.8
+5,IBM,10,3.8
+6,Gmail *,8,3.0
 7,Mirantis,6,2.3
-8,eBay,5,1.9
+8,(Self),6,2.3
 9,Huawei,5,1.9
-10,Apcera,4,1.5
-11,ZTE Corporation,4,1.5
-12,Fujitsu,4,1.5
-13,Cisco,4,1.5
-14,Intel,3,1.1
-15,Caicloud,3,1.1
-16,Sky *,2,0.8
-17,Canonical,2,0.8
-18,Microsoft,2,0.8
-19,VMware,2,0.8
-20,Clarifai,2,0.8
-21,Net EASE 网易有态度,2,0.8
-22,HP,2,0.8
-23,Eon Cloud,1,0.4
-24,inovex GmbH,1,0.4
+10,eBay,5,1.9
+11,Cisco,4,1.5
+12,(Not Found),4,1.5
+13,Fujitsu,4,1.5
+14,ZTE Corporation,4,1.5
+15,Apcera,4,1.5
+16,Intel,3,1.1
+17,Caicloud,3,1.1
+18,VMware,2,0.8
+19,Microsoft,2,0.8
+20,Net EASE 网易有态度,2,0.8
+21,HP,2,0.8
+22,Sky *,2,0.8
+23,Canonical,2,0.8
+24,Clarifai,2,0.8
 25,Box,1,0.4
 26,Infraly,1,0.4
 27,Bitnami,1,0.4
@@ -49,68 +49,53 @@ idx,company,n,percent
 47,Weaveworks,1,0.4
 48,CentOS,1,0.4
 49,KAYAK,1,0.4
-50,Suug *,1,0.4
-51,Tmrts *,1,0.4
-52,Googlemail *,1,0.4
-53,Isi *,1,0.4
-54,Nowprovision *,1,0.4
-55,SdfgCom *,1,0.4
-56,Fejta *,1,0.4
-57,Outlook *,1,0.4
-58,GmxCo *,1,0.4
-59,Advance-leap *,1,0.4
-60,Oszi *,1,0.4
-61,Cormann *,1,0.4
-62,Free *,1,0.4
-63,Hrboss *,1,0.4
-64,tgraf@suug.ch,1,0.4
-65,zcq8989@gmail.com,1,0.4
-66,taotaotheripper@gmail.com,1,0.4
-67,tyangliu@gmail.com,1,0.4
-68,tobias.adamson@gmail.com,1,0.4
-69,nakayamakenjiro@gmail.com,1,0.4
-70,christopher.batey@sky.uk,1,0.4
-71,contact@tmrts.com,1,0.4
-72,uluyol0@gmail.com,1,0.4
-73,ttr314@googlemail.com,1,0.4
-74,mcluseau@isi.nc,1,0.4
-75,james.ravn@sky.uk,1,0.4
-76,matt@nowprovision.com,1,0.4
-77,rodrigo@sdfg.com.ar,1,0.4
-78,aledbf@gmail.com,1,0.4
-79,tommy.murphy@gmail.com,1,0.4
-80,erick@fejta.com,1,0.4
-81,meng.mobile@gmail.com,1,0.4
-82,iamthemuffinman@outlook.com,1,0.4
-83,onorua@gmail.com,1,0.4
-84,jimmyjones2@gmx.co.uk,1,0.4
-85,zellster@gmail.com,1,0.4
-86,devel@oszi.one,1,0.4
-87,yangbaohua@gmail.com,1,0.4
-88,development@advance-leap.com,1,0.4
-89,lars@cormann.biz,1,0.4
-90,v.behar@free.fr,1,0.4
-91,mtaufen@gmail.com,1,0.4
-92,khoa.le@hrboss.com,1,0.4
-93,Apache,1,0.4
-94,CERN,1,0.4
-95,GoGoVan,1,0.4
-96,Rook,1,0.4
-97,Tigera,1,0.4
-98,FathomDB,1,0.4
-99,Rackspace,1,0.4
-100,Docker,1,0.4
-101,Hewlett Packard,1,0.4
-102,CNM Consulting,1,0.4
-103,Amadeus,1,0.4
-104,Cockroach,1,0.4
-105,thinkstep,1,0.4
-106,appOrbit,1,0.4
-107,CenturyLink,1,0.4
-108,Samsung,1,0.4
-109,Aperian Global,1,0.4
-110,Hyper.sh,1,0.4
-111,Mesosphere,1,0.4
-112,Ahead4 Limited,1,0.4
-113,Diamanti,1,0.4
-114,Reevoo,1,0.4
+50,Googlemail *,1,0.4
+51,Outlook *,1,0.4
+52,GmxCo *,1,0.4
+53,Advance-leap *,1,0.4
+54,Oszi *,1,0.4
+55,Cormann *,1,0.4
+56,Free *,1,0.4
+57,Hrboss *,1,0.4
+58,tyangliu@gmail.com,1,0.4
+59,tobias.adamson@gmail.com,1,0.4
+60,christopher.batey@sky.uk,1,0.4
+61,ttr314@googlemail.com,1,0.4
+62,james.ravn@sky.uk,1,0.4
+63,tommy.murphy@gmail.com,1,0.4
+64,meng.mobile@gmail.com,1,0.4
+65,iamthemuffinman@outlook.com,1,0.4
+66,onorua@gmail.com,1,0.4
+67,jimmyjones2@gmx.co.uk,1,0.4
+68,zellster@gmail.com,1,0.4
+69,devel@oszi.one,1,0.4
+70,yangbaohua@gmail.com,1,0.4
+71,development@advance-leap.com,1,0.4
+72,lars@cormann.biz,1,0.4
+73,v.behar@free.fr,1,0.4
+74,mtaufen@gmail.com,1,0.4
+75,khoa.le@hrboss.com,1,0.4
+76,Apache,1,0.4
+77,CERN,1,0.4
+78,GoGoVan,1,0.4
+79,Rook,1,0.4
+80,Tigera,1,0.4
+81,FathomDB,1,0.4
+82,Rackspace,1,0.4
+83,Docker,1,0.4
+84,Hewlett Packard,1,0.4
+85,CNM Consulting,1,0.4
+86,Amadeus,1,0.4
+87,Cockroach,1,0.4
+88,thinkstep,1,0.4
+89,appOrbit,1,0.4
+90,CenturyLink,1,0.4
+91,Samsung,1,0.4
+92,Aperian Global,1,0.4
+93,Hyper.sh,1,0.4
+94,Mesosphere,1,0.4
+95,Ahead4 Limited,1,0.4
+96,Diamanti,1,0.4
+97,Reevoo,1,0.4
+98,Eon Cloud,1,0.4
+99,inovex GmbH,1,0.4
