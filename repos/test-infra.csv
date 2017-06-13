@@ -1,6 +1,5 @@
 "Name","Email","Affliation","Date","Added","Removed","Changesets"
 "bprashanth","beeps@google.com","Google","2015-12-01",3,0,1
-"spxtr","spxtr@google.com","Google","2016-06-01",1457,736,24
 "Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2016-09-01",174,29,4
 "Jeff Grafton","jgrafton@google.com","Google","2016-01-01",8,0,2
 "Anirudh Ramanathan","ramanathana@google.com","Google","2016-10-01",21,15,3
@@ -18,7 +17,8 @@
 "Davanum Srinivas","dims@linux.vnet.ibm.com","Mirantis","2016-11-01",2,2,1
 "Zach Loafman","zml@google.com","Google","2016-06-01",43,18,10
 "Joe Beda","joe.github@bedafamily.com","Google","2014-10-01",0,3,1
-"Christoph Blecker","admin@toph.ca","Kelowna","2017-05-01",51,46,5
+"Christoph Blecker","admin@toph.ca","Kelowna","2017-05-01",53,48,6
+"Dawn Chen","dawnchen@google.com","Google","2017-06-01",17,17,2
 "Matt Liggett","mml@google.com","Google","2017-02-01",77,2,1
 "Zach Loafman","zml@google.com","Google","2017-02-01",179,428,10
 "Daniel Smith","dbsmith@google.com","Google","2015-09-01",114,28,6
@@ -29,10 +29,10 @@
 "Michael Taufen","mtaufen@google.com","Google","2017-05-01",1679,411,1
 "Brad Erickson","eosrei@gmail.com","Udacity","2015-11-01",4,4,1
 "Andy Goldstein","andy.goldstein@gmail.com","ASG Consulting","2017-05-01",2,0,1
-"jg Chen","21521209@zju.edu.cn","Zhejiang University","2017-02-01",2,2,1
+"jg Chen","21521209@zju.edu.cn","Self","2017-02-01",2,2,1
 "Jeff Dempsey","jeffml@google.com","Google","2015-12-01",5,3,1
 "Matthew Wong","mawong@redhat.com","Red Hat","2017-04-01",16,2,1
-"Jeff Grafton","jgrafton@google.com","Google","2017-06-01",1,4,1
+"Jeff Grafton","jgrafton@google.com","Google","2017-06-01",11,13,3
 "Zach Loafman","zml@google.com","Google","2017-01-01",199,73,14
 "Madhusudan.C.S","madhusudancs@google.com","Google","2017-03-01",95,43,8
 "Andrey Ulanov","andreyu@google.com","Google","2016-10-01",37,0,2
@@ -49,15 +49,14 @@
 "Sen Lu","senlu@google.com","Google","2016-12-01",469,4354,23
 "Shashidhara T D","shashidhara.td@huawei.com","Huawei","2017-05-01",345,191,11
 "Tim Hockin","thockin@google.com","Google","2016-12-01",10,4,1
-"spxtr","spxtr@google.com","Google","2017-03-01",1317,381,31
-"spxtr","spxtr@google.com","Google","2016-08-01",2967,2236,23
-"Cole Wagner","colew@google.com","Google","2017-05-01",425,302,15
+"Cole Wagner","colew@google.com","Google","2017-05-01",855,337,18
 "Wojciech Tyczynski","wojtekt@google.com","Google","2016-07-01",11,6,6
 "Marek Grabowski","gmarek@google.com","Google","2017-04-01",6,9,2
 "Jess Frazelle","acidburn@google.com","Google","2016-12-01",70,9,5
 "Sen Lu","senlu@google.com","Google","2017-02-01",3906,8371,45
 "bprashanth","beeps@google.com","Google","2016-11-01",1,886,3
 "Anthony Yeh","enisoc@google.com","Google","2017-03-01",1,1,1
+"Cole Wagner","colew@google.com","Google","2017-06-01",4,4,1
 "Random-Liu","lantaol@google.com","Google","2016-09-01",62,9,5
 "Jeff Grafton","jgrafton@google.com","Google","2016-11-01",98,44,8
 "Jess Frazelle","acidburn@google.com","Google","2016-11-01",11,7,2
@@ -68,7 +67,7 @@
 "Chao Xu","xuchao@google.com","Google","2016-02-01",36,1,2
 "BenTheElder","ben.the.elder@gmail.com","Slack","2015-05-01",1,1,1
 "Nikhil Jindal","nikhiljindal@google.com","Google","2016-06-01",1,0,1
-"Joe Finney","spxtr@users.noreply.github.com","Google","2017-05-01",57,0,1
+"Joe Finney","spxtr@google.com","Google","2017-05-01",269,80,12
 "Filipe Brandenburger","filbranden@google.com","Google","2015-02-01",62,158,6
 "Jeff Dempsey","jeffml@google.com","Google","2016-12-01",2,0,1
 "Ryan Hitchman","rmmh@google.com","Google","2016-05-01",1328,410,17
@@ -79,6 +78,7 @@
 "Lee Verberne","verb@google.com","Google","2017-04-01",3,3,2
 "Marek Grabowski","gmarek@google.com","Google","2017-01-01",3,3,2
 "Marcin Wielgus","mwielgus@google.com","Google","2016-05-01",2,1,1
+"Joe Finney","spxtr@google.com","Google","2017-06-01",218,24,4
 "Marek Grabowski","gmarek@google.com","Google","2016-07-01",4,8,4
 "Michelle Au","msau@google.com","Google","2017-05-01",2,4,1
 "David McMahon","djmm@google.com","Google","2016-09-01",0,66,1
@@ -88,14 +88,15 @@
 "caleb miles","calebamiles@users.noreply.github.com","Ceph","2017-02-01",1,1,2
 "Jeff Grafton","jgrafton@google.com","Google","2016-12-01",44,38,10
 "bprashanth","beeps@google.com","Google","2016-12-01",1,0,1
+"Joe Finney","spxtr@google.com","Google","2017-03-01",1317,381,31
 "Angus Salkeld","asalkeld@mirantis.com","Mirantis","2016-07-01",2,2,1
-"Nikhil Jindal","nikhiljindal@google.com","Google","2016-10-01",19,22,3
+"Joe Finney","spxtr@google.com","Google","2016-02-01",512,198,16
 "Jeff Grafton","jgrafton@google.com","Google","2017-03-01",2490,3188,23
 "Matt Liggett","mml@google.com","Google","2016-07-01",3,4,1
 "Jeff Grafton","jgrafton@google.com","Google","2017-01-01",33,15,7
 "Random-Liu","lantaol@google.com","Google","2016-07-01",98,22,2
 "bprashanth","beeps@google.com","Google","2016-02-01",7,5,3
-"Anthony Yeh","enisoc@google.com","Google","2017-06-01",0,1,1
+"Anthony Yeh","enisoc@google.com","Google","2017-06-01",0,4,2
 "Andy Lindeman","andy@lindeman.io","Pardot","2017-01-01",210,7,1
 "Phillip Wittrock","pwittroc@google.com","Google","2016-04-01",2,2,2
 "Brendan Burns","brendan.d.burns@gmail.com","Microsoft","2017-02-01",343,22,3
@@ -103,23 +104,24 @@
 "Marie Shaw","mnshaw@andrew.cmu.edu","Google","2016-08-01",301,167,11
 "Daniel Wang","wonderfly@google.com","Google","2016-06-01",201,241,3
 "Harry Zhang","harryzhang@zju.edu.cn","Docker","2016-01-01",1,0,1
+"Joe Finney","spxtr@google.com","Google","2016-01-01",401,6,9
 "Antoine Pelisse","apelisse@google.com","Google","2017-02-01",729,644,9
 "Dawn Chen","dawnchen@google.com","Google","2016-09-01",16,2,1
 "Garrett Rodrigues","grod@google.com","Google","2016-10-01",714,147,9
 "Marek Grabowski","gmarek@google.com","Google","2016-04-01",908,257,12
 "Vishnu Kannan","vishnuk@google.com","Google","2016-01-01",1,1,2
-"spxtr","spxtr@google.com","Google","2016-11-01",3525,2301,49
 "Anirudh Ramanathan","ramanathana@google.com","Google","2017-02-01",95,34,4
+"Joe Finney","spxtr@google.com","Google","2016-04-01",889,115,20
 "Vic Iglesias","viglesiasce@gmail.com","Google","2016-08-01",108,7,5
 "David McMahon","djmm@google.com","Google","2016-08-01",5,10,3
 "Daniel Smith","dbsmith@google.com","Google","2016-02-01",21,2,2
 "Daniel Wang","wonderfly@google.com","Google","2016-02-01",192,88,2
-"Joe Finney","spxtr@users.noreply.github.com","Google","2016-08-01",7,4,2
+"Joe Finney","spxtr@users.noreply.github.com","Google","2016-08-01",2974,2240,25
 "Jeff Dempsey","jeffml@google.com","Google","2016-10-01",12,10,2
 "mikewu","keer236@gmail.com","(Unknown)","2017-06-01",15,28,1
 "Anirudh Ramanathan","foxish@users.noreply.github.com","Google","2016-11-01",716,160,17
 "Eric Paris","eparis@redhat.com","Red Hat","2016-06-01",338,777,12
-"spxtr","spxtr@google.com","Google","2016-07-01",2055,49,8
+"spxtr","spextear@gmail.com","Google","2016-07-01",115,0,1
 "Ryan Hitchman","rmmh@google.com","Google","2017-02-01",437,92,18
 "Jonathan MacMillan","dvorak@google.com","Google","2017-03-01",11,1,1
 "Kris","krousey@google.com","Google","2016-06-01",4,0,2
@@ -131,16 +133,15 @@
 "Girish Kalele","gkalele@google.com","Google","2016-06-01",32,8,2
 "Eric Paris","eparis@redhat.com","Red Hat","2015-12-01",120,92,6
 "Erick Fejta","fejta@google.com","Google","2016-06-01",2711,1659,25
-"Antoine Pelisse","apelisse@google.com","Google","2017-06-01",339,81,6
+"Antoine Pelisse","apelisse@google.com","Google","2017-06-01",370,209,8
 "Paul Morie","pmorie@gmail.com","Red Hat","2016-01-01",5,0,1
 "Colin Hom","colin.hom@coreos.com","CoreOS","2016-06-01",2,1,1
 "David Ashpole","dashpole@google.com","Google","2017-03-01",17,0,1
 "Erick Fejta","fejta@google.com","Google","2017-04-01",2861,2799,35
 "Aleksandra Malinowska","aleksandram@google.com","Google","2017-04-01",51,2,3
-"colhom","colhom@gmail.com","(Unknown)","2016-09-01",1,1,1
+"colhom","colhom@gmail.com","NotFound","2016-09-01",1,1,1
 "Ryan Hitchman","rmmh@google.com","Google","2017-04-01",932,449,37
-"spxtr","spxtr@google.com","Google","2016-01-01",401,6,9
-"Saied Kazemi","saied@google.com","Google","2017-04-01",86,0,1
+"Anthony Yeh","enisoc@google.com","Google","2017-05-01",6,3,1
 "Chao Xu","xuchao@google.com","Google","2017-01-01",85,58,1
 "Bowei Du","bowei.du@gmail.com","Google","2017-04-01",74,0,2
 "Garrett Rodrigues","grod@google.com","Google","2016-12-01",267,47,5
@@ -159,6 +160,7 @@
 "Justin Santa Barbara","justin@fathomdb.com","FathomDB","2017-06-01",8,8,4
 "Piotr Szczesniak","pszczesniak@google.com","Google","2016-08-01",8,0,1
 "Eric Paris","eparis@redhat.com","Red Hat","2016-04-01",1765,568,22
+"Christian Bell","csbell@google.com","Google","2017-06-01",2,3,1
 "Garrett Rodrigues","grod@google.com","Google","2016-09-01",40,19,1
 "Michelle","michelle192837@users.noreply.github.com","(Unknown)","2016-12-01",297,62,1
 "Mike Danese","mikedanese@google.com","Google","2016-06-01",202,121,6
@@ -167,7 +169,6 @@
 "Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-03-01",3,3,1
 "Anirudh Ramanathan","ramanathana@google.com","Google","2016-07-01",1394,269,13
 "Edward Hyunkoo Jee","edjee@google.com","Google","2016-09-01",10,33,2
-"spxtr","spxtr@google.com","Google","2015-12-01",283,37,9
 "Michelle Au","msau@google.com","Google","2017-04-01",13,11,5
 "Charles Butler","chuck@dasroot.net","Canonical","2016-12-01",1,1,1
 "Phillip Wittrock","pwittroc@google.com","Google","2016-09-01",3,3,2
@@ -175,13 +176,13 @@
 "Erick Fejta","fejta@google.com","Google","2016-10-01",3703,2868,51
 "Maciej Szulik","maszulik@redhat.com","Red Hat","2016-08-01",4,0,2
 "Michael Taufen","mtaufen@google.com","Google","2016-09-01",1279,195,30
-"Joe Finney","spxtr@users.noreply.github.com","Google","2016-10-01",1679,802,19
+"Joe Finney","spxtr@google.com","Google","2016-10-01",3508,1168,34
 "Jeff Dempsey","jeffml@google.com","Google","2016-08-01",9,0,1
 "Vishnu Kannan","vishnuk@google.com","Google","2016-04-01",2,2,1
 "Erick Fejta","fejta@google.com","Google","2016-12-01",3809,7031,26
 "Eric Paris","eparis@redhat.com","Red Hat","2016-01-01",447,145,13
 "Vishnu Kannan","vishnuk@google.com","Google","2016-08-01",418,105,8
-"Sen Lu","senlu@google.com","Google","2017-06-01",4675,1309,16
+"Sen Lu","senlu@google.com","Google","2017-06-01",7127,2407,23
 "Shyam Jeedigunta","shyamjvs@google.com","Google","2017-04-01",9,1,2
 "Alex Robinson","arob@google.com","Google","2016-04-01",11,1,2
 "Daniel Wang","wonderfly@google.com","Google","2016-10-01",29,7,1
@@ -199,12 +200,10 @@
 "Brendan Burns","brendan.d.burns@gmail.com","Microsoft","2017-04-01",201,14,4
 "Phillip Wittrock","pwittroc@google.com","Google","2016-02-01",219,27,4
 "Shashidhara T D","shashidhara.td@huawei.com","Huawei","2017-02-01",78,189,3
-"Tamer Tas","contact@tmrts.com","(Unknown)","2016-05-01",1,0,1
-"spxtr","spxtr@google.com","Google","2017-01-01",5772,1538,84
-"Matt Liggett","mml@google.com","Google","2016-08-01",1,1,1
+"Tamer Tas","contact@tmrts.com","Self","2016-05-01",1,0,1
 "Jess Frazelle","me@jessfraz.com","Google","2016-09-01",16,0,1
 "Tim St. Clair","stclair@google.com","Google","2016-02-01",17,1,1
-"Joe Finney","spxtr@users.noreply.github.com","Google","2017-02-01",79,22,2
+"Joe Finney","spxtr@google.com","Google","2017-02-01",1846,1306,34
 "Nicholas Sledgianowski","nicksledgian@gmail.com","Kenzan","2017-03-01",15,180,5
 "Minhan Xia","mixia@google.com","Google","2016-05-01",81,16,2
 "Paul Morie","pmorie@gmail.com","Red Hat","2016-02-01",8,1,2
@@ -229,16 +228,16 @@
 "Wojciech Tyczynski","wojtekt@google.com","Google","2016-09-01",129,46,23
 "Jeff Grafton","jgrafton@google.com","Google","2016-02-01",12,10,2
 "Tim St. Clair","stclair@google.com","Google","2017-05-01",28,0,1
-"Antoine Pelisse","apelisse@gmail.com","(Unknown)","2017-05-01",1727,722,10
-"Joe Finney","spxtr@users.noreply.github.com","Google","2016-05-01",1,1,1
-"spxtr","spxtr@google.com","Google","2017-05-01",212,80,11
+"Antoine Pelisse","apelisse@gmail.com","Embedded Systems, ECE","2017-05-01",1727,722,10
+"Joe Finney","spxtr@google.com","Google","2016-05-01",894,609,10
+"Vic Iglesias","viglesias@google.com","Google","2016-09-01",1,1,1
 "Madhusudan.C.S","madhusudancs@google.com","Google","2016-09-01",34,5,4
 "Tim Hockin","thockin@google.com","Google","2016-07-01",1,1,1
 "Sen Lu","senlu@google.com","Google","2017-04-01",4203,964,16
 "Dawn Chen","dawnchen@google.com","Google","2016-07-01",0,23,1
 "Peter Zhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2017-02-01",2704,9601,15
 "Jeff Dempsey","jeffml@google.com","Google","2016-11-01",3,1,2
-"Christoph Blecker","admin@toph.ca","Kelowna","2017-04-01",10,6,1
+"Joe Finney","spxtr@google.com","Google","2016-09-01",3104,2182,41
 "Garrett Rodrigues","grod@google.com","Google","2016-08-01",175,51,10
 "Kris","krousey@google.com","Google","2017-03-01",19,6,3
 "Daniel Smith","dbsmith@google.com","Google","2016-08-01",411,269,9
@@ -264,8 +263,9 @@
 "Charles Butler","chuck@dasroot.net","Canonical","2016-11-01",12,0,1
 "He Simei","hesimei@zju.edu.cn","Docker","2015-10-01",1,0,1
 "Jerzy Szczepkowski","jsz@google.com","Google","2016-05-01",18,4,4
-"Ryan Hitchman","rmmh@google.com","Google","2017-05-01",971,406,28
+"Ryan Hitchman","rmmh@google.com","Google","2017-05-01",978,407,29
 "Zihong Zheng","zihongz@google.com","Google","2016-11-01",14,2,1
+"Joe Finney","spxtr@google.com","Google","2016-03-01",780,64,29
 "Ryan Hitchman","rmmh@google.com","Google","2016-07-01",1838,382,19
 "Antoine Pelisse","apelisse@google.com","Google","2017-01-01",206,182,13
 "Antoine Pelisse","apelisse@google.com","Google","2016-07-01",1134,327,24
@@ -277,21 +277,21 @@
 "Anirudh Ramanathan","ramanathana@google.com","Google","2016-08-01",1586,285,23
 "Madhusudan.C.S","madhusudancs@google.com","Google","2016-12-01",3,1,1
 "Jordan Liggitt","jliggitt@redhat.com","Red Hat","2017-03-01",249,0,1
-"spxtr","spxtr@google.com","Google","2016-10-01",1829,366,15
-"spxtr","spxtr@google.com","Google","2016-12-01",949,975,56
+"Wojciech Tyczynski","wojtekt@google.com","Google","2016-10-01",174,80,35
 "Jeff Grafton","jgrafton@google.com","Google","2017-05-01",332,113,20
-"Vic Iglesias","viglesias@google.com","Google","2016-09-01",1,1,1
 "Erick Fejta","fejta@google.com","Google","2017-03-01",2471,1527,35
 "Yu-Ju Hong","yjhong@google.com","Google","2016-12-01",2356,374,5
 "Shawn Smith","shawnpsmith@gmail.com","Signal Sciences Corp","2015-05-01",1,1,1
 "Justin Santa Barbara","justin@fathomdb.com","FathomDB","2017-02-01",15,10,2
 "Brendan Burns","bburns@google.com","Microsoft","2016-02-01",44,10,1
 "Yu-Ju Hong","yjhong@google.com","Google","2017-03-01",20,1092,3
+"Michael Taufen","mtaufen@users.noreply.github.com","Google","2017-06-01",75,15,1
 "Yang Guo","ygg@google.com","Google","2017-05-01",1429,30,8
 "Brendan Burns","bburns@google.com","Microsoft","2015-01-01",1,1,1
 "Yutong Zhang","yutongz@google.com","Google","2017-05-01",2,2,2
 "Bowei Du","bowei.du@gmail.com","Google","2017-05-01",400,188,2
 "Eric Paris","eparis@redhat.com","Red Hat","2016-03-01",7541,48517,47
+"Mike Danese","mikedanese@google.com","Google","2017-05-01",2,2,1
 "Quinton Hoole","quinton@google.com","Google","2016-06-01",4,4,2
 "Zach Loafman","zml@google.com","Google","2016-08-01",93,73,9
 "Jerzy Szczepkowski","jsz@google.com","Google","2016-11-01",90,3,2
@@ -320,7 +320,6 @@
 "Zach Loafman","zml@google.com","Google","2016-04-01",14,0,3
 "Antoine Pelisse","apelisse@google.com","Google","2016-12-01",4,2,1
 "Zhou Fang","zhoufang@google.com","Google","2016-08-01",10,1,1
-"spxtr","spxtr@google.com","Google","2017-04-01",2281,2609,40
 "Marek Grabowski","gmarek@google.com","Google","2016-09-01",110,59,11
 "Anthony Yeh","enisoc@google.com","Google","2017-01-01",4,2,1
 "Wojciech Tyczynski","wojtekt@google.com","Google","2016-06-01",26,20,10
@@ -337,14 +336,15 @@
 "Brendan Burns","bburns@google.com","Microsoft","2015-09-01",54,23,4
 "Alex Robinson","arob@google.com","Google","2014-12-01",96,10,1
 "Daniel Wang","wonderfly@google.com","Google","2016-03-01",343,165,5
+"Christoph Blecker","admin@toph.ca","Kelowna","2017-04-01",10,6,1
 "Jakob","beacham@google.com","Google","2017-05-01",162,100,2
 "Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-02-01",16,6,1
 "Zach Loafman","zml@google.com","Google","2017-03-01",68,14,5
 "Justin Santa Barbara","justin@fathomdb.com","FathomDB","2016-05-01",8,1,1
+"Joe Finney","spxtr@google.com","Google","2015-12-01",283,37,9
 "Sen Lu","senlu@google.com","Google","2017-01-01",4814,11978,32
 "Kris","krousey@google.com","Google","2017-02-01",123,0,1
 "Daniel Wang","wonderfly@google.com","Google","2016-05-01",122,91,3
-"spxtr","spxtr@google.com","Google","2017-02-01",1767,1284,32
 "Dan Lorenc","lorenc.d@gmail.com","Google","2016-05-01",7,1,1
 "Sharon","captainshar@gmail.com","Heptio","2017-05-01",2,1,1
 "Erick Fejta","fejta@google.com","Google","2016-07-01",1006,754,12
@@ -368,9 +368,9 @@
 "Vish Kannan","vishh@users.noreply.github.com","Google","2017-05-01",60,1,2
 "Michael Taufen","mtaufen@google.com","Google","2016-12-01",79,0,1
 "Wojciech Tyczynski","wojtekt@google.com","Google","2017-01-01",21,50,11
-"Daniel Wang","wonderfly@users.noreply.github.com","(Unknown)","2017-05-01",68,38,1
+"Daniel Wang","wonderfly@users.noreply.github.com","Self","2017-05-01",68,38,1
 "Mike Danese","mikedanese@gmail.com","Google","2016-10-01",1,1,1
-"Erick Fejta","fejta@google.com","Google","2017-06-01",1154,1004,11
+"Erick Fejta","fejta@google.com","Google","2017-06-01",2044,1522,13
 "Cole Wagner","colew@google.com","Google","2017-04-01",4607,2172,7
 "Jess Frazelle","acidburn@google.com","Google","2017-03-01",209,32,6
 "Marcin Wielgus","mwielgus@google.com","Google","2016-03-01",3,2,2
@@ -387,18 +387,20 @@
 "Jeff Grafton","jgrafton@google.com","Google","2016-03-01",22,25,7
 "Christoph Blecker","admin@toph.ca","Kelowna","2017-03-01",33,43,3
 "Random-Liu","lantaol@google.com","Google","2016-08-01",16,5,4
-"Anthony Yeh","enisoc@google.com","Google","2017-05-01",6,3,1
+"Saied Kazemi","saied@google.com","Google","2017-04-01",86,0,1
 "Rohit Jnagal","jnagal@google.com","Google","2015-01-01",1,1,1
 "Brendan Burns","brendan.d.burns@gmail.com","Microsoft","2017-01-01",25264,0,1
 "Benjamin Bauer","bdbauer@google.com","Google","2016-09-01",140,10,4
 "Jeff Grafton","ixdy@users.noreply.github.com","(Unknown)","2016-06-01",395,132,14
+"Joe Finney","spxtr@google.com","Google","2017-04-01",2281,2609,40
+"Srini Brahmaroutu","srbrahma@us.ibm.com","IBM","2017-05-01",51,0,1
 "Anirudh Ramanathan","ramanathana@google.com","Google","2016-12-01",19,7,3
 "Vishnu Kannan","vishnuk@google.com","Google","2015-08-01",2,0,1
 "Mike Danese","mikedanese@google.com","Google","2017-03-01",82,6,2
 "Christoph Blecker","admin@toph.ca","Kelowna","2017-06-01",3,344,3
 "Random-Liu","lantaol@google.com","Google","2016-11-01",21,6,2
 "Ryan Hitchman","rmmh@google.com","Google","2017-03-01",3517,145,15
-"spxtr","spxtr@google.com","Google","2016-02-01",512,198,16
+"Matt Liggett","mml@google.com","Google","2016-08-01",1,1,1
 "Joe Beda","joe.github@bedafamily.com","Google","2014-11-01",4,0,1
 "caleb miles","caselim@gmail.com","(Unknown)","2017-05-01",1,1,1
 "Timothy St. Clair","tstclair@redhat.com","Red Hat","2016-08-01",1,0,1
@@ -415,9 +417,8 @@
 "Saad Ali","saadali@google.com","Google","2016-11-01",2,2,2
 "Colin Hom","colin.hom@coreos.com","CoreOS","2016-05-01",40,3,2
 "Jeff Grafton","ixdy@users.noreply.github.com","(Unknown)","2016-05-01",422,151,15
-"spxtr","spxtr@google.com","Google","2016-04-01",889,115,20
 "Jeff Dempsey","jeffml@google.com","Google","2016-09-01",40,8,5
-"Joe Finney","spxtr@users.noreply.github.com","Google","2016-11-01",394,186,7
+"Joe Finney","spxtr@google.com","Google","2016-11-01",3919,2487,56
 "Jeff Grafton","jgrafton@google.com","Google","2015-09-01",10,0,2
 "Daniel Smith","dbsmith@google.com","Google","2016-09-01",1,1,1
 "Erick Fejta","fejta@google.com","Google","2017-05-01",1985,1375,19
@@ -430,7 +431,7 @@
 "Matthew Wong","wongma7@users.noreply.github.com","Red Hat","2017-03-01",16,3,1
 "Alexander Kanevskiy","alexander.kanevskiy@intel.com","Intel","2016-12-01",2,2,1
 "Phillip Wittrock","pwittroc@google.com","Google","2016-08-01",249,22,4
-"Joe Finney","spxtr@users.noreply.github.com","Google","2016-12-01",2172,150,18
+"Joe Finney","spxtr@google.com","Google","2016-12-01",3121,1125,74
 "Kris","krousey@google.com","Google","2016-03-01",74,0,1
 "David Ashpole","dashpole@google.com","Google","2017-05-01",0,16,1
 "Wojciech Tyczynski","wojtekt@google.com","Google","2016-03-01",9,12,4
@@ -451,12 +452,11 @@
 "Jeff Dempsey","jeffml@google.com","Google","2016-03-01",5,7,3
 "Chao Xu","xuchao@google.com","Google","2017-02-01",216,214,1
 "Euan Kemp","euan.kemp@coreos.com","CoreOS","2016-06-01",1,1,1
-"Joe Finney","spxtr@users.noreply.github.com","Google","2016-07-01",1,1,1
+"Joe Finney","spxtr@google.com","Google","2016-07-01",1941,50,8
 "Max Forbes","maxforbes@google.com","Google","2014-12-01",1,1,1
 "David Oppenheimer","davidopp@google.com","Google","2015-12-01",3,0,1
 "Daniel Wang","wonderfly@google.com","Google","2016-08-01",80,50,2
 "Daniel Wang","wonderfly@google.com","Google","2016-04-01",21,0,1
-"Wojciech Tyczynski","wojtekt@google.com","Google","2016-10-01",174,80,35
 "deads2k","deads@redhat.com","Red Hat","2016-11-01",30,1,1
 "Garrett Rodrigues","grod@google.com","Google","2017-03-01",301,147,7
 "vorlonofportland","vorlon@debian.org","Debian","2017-05-01",5,0,1
@@ -469,9 +469,10 @@
 "Jeff Dempsey","jeffml@google.com","Google","2016-07-01",1,1,1
 "Marek Grabowski","gmarek@google.com","Google","2017-02-01",42,8,2
 "Marcin Wielgus","mwielgus@google.com","Google","2016-06-01",14,6,5
-"spxtr","spextear@gmail.com","Google","2016-05-01",941,631,10
+"spxtr","spextear@gmail.com","Google","2016-05-01",48,23,1
 "Daniel Smith","dbsmith@google.com","Google","2015-11-01",419,4,1
 "Jeff Dempsey","jeffml@google.com","Google","2017-05-01",0,308,1
+"Joe Finney","spxtr@google.com","Google","2017-01-01",5772,1538,84
 "Chao Xu","xuchao@google.com","Google","2016-06-01",76,0,1
 "Shyam Jeedigunta","shyamjvs@google.com","Google","2017-02-01",6,0,2
 "Garrett Rodrigues","grod@google.com","Google","2017-05-01",207,16,3
@@ -482,25 +483,23 @@
 "Madhusudan.C.S","madhusudancs@google.com","Google","2017-01-01",11,8,2
 "Tim Hockin","thockin@google.com","Google","2016-10-01",791,2,3
 "Madhusudan.C.S","madhusudancs@google.com","Google","2016-10-01",10,10,1
-"spxtr","spxtr@google.com","Google","2016-09-01",3104,2182,41
 "Eric Paris","eparis@redhat.com","Red Hat","2016-08-01",48,37,4
 "Zach Loafman","zml@google.com","Google","2015-01-01",35,7,3
 "Minhan Xia","mixia@google.com","Google","2016-06-01",289,34,5
 "Jeff Grafton","jgrafton@google.com","Google","2016-10-01",242,201,18
-"Joe Finney","spxtr@users.noreply.github.com","Google","2016-06-01",62,306,3
+"Joe Finney","spxtr@users.noreply.github.com","Google","2016-06-01",1519,1042,27
 "Tim St. Clair","stclair@google.com","Google","2017-06-01",2,2,1
-"spxtr","spxtr@google.com","Google","2017-06-01",3,3,1
 "Minhan Xia","mixia@google.com","Google","2016-02-01",5,0,1
 "Dan Etter","dettervt@gmail.com","Cisco","2017-04-01",300,3,2
 "Mike Danese","mikedanese@google.com","Google","2016-05-01",2,1,1
 "Sebastien Vas","sebastienvas@google.com","Google","2017-03-01",12,0,1
-"Lantao Liu","taotaotheripper@gmail.com","(Unknown)","2016-10-01",70,6,1
+"Lantao Liu","taotaotheripper@gmail.com","Self","2016-10-01",70,6,1
 "Jerzy Szczepkowski","jsz@google.com","Google","2017-01-01",4,4,2
 "Jess Frazelle","acidburn@google.com","Google","2016-10-01",1,1,1
 "Vishnu Kannan","vishnuk@google.com","Google","2016-09-01",11,4,3
 "Brendan Burns","bburns@google.com","Microsoft","2015-10-01",2,2,1
 "Wojciech Tyczynski","wojtekt@google.com","Google","2017-02-01",172,74,29
-"Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-06-01",1,7,1
+"Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-06-01",27,29,5
 "Marek Grabowski","gmarek@google.com","Google","2016-06-01",2,2,2
 "Erick Fejta","fejta@google.com","Google","2016-11-01",9686,3215,54
 "Maisem Ali","maisem@google.com","Google","2016-07-01",2,2,1
@@ -550,10 +549,10 @@
 "Jun Xiang Tee","juntee@google.com","Google","2017-04-01",1334,92,6
 "Nikhil Jindal","nikhiljindal@google.com","Google","2017-04-01",6,173,2
 "Aleksandra Malinowska","aleksandram@google.com","Google","2017-05-01",2,0,1
-"spxtr","spxtr@google.com","Google","2016-03-01",780,64,29
 "Chao Xu","xuchao@google.com","Google","2017-03-01",981,249,7
 "Haney Maxwell","hmrmaxwell@gmail.com","Google","2014-11-01",1,3,1
 "Garrett Rodrigues","grod@google.com","Google","2016-07-01",531,0,1
 "Jeff Dempsey","jeffml@google.com","Google","2017-03-01",33,20,2
+"Nikhil Jindal","nikhiljindal@google.com","Google","2016-10-01",19,22,3
 "Veres Lajos","vlajos@gmail.com","DrEd Online Doctor","2015-08-01",1,1,1
 "Madhusudan.C.S","madhusudancs@google.com","Google","2016-08-01",3,3,2

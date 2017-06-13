@@ -38,6 +38,7 @@ FileFilter = None
 InvertFilter = False
 CSVFile = None
 CSVPrefix = None
+AffFile = None
 DumpDB = 0
 CFName = 'gitdm.config-cncf'
 DirName = ''
@@ -51,17 +52,23 @@ DebugHalt = False
 DateFrom = datetime.datetime(1970, 1, 1)
 DateTo = datetime.datetime(2069, 1, 1)
 BotEmails = [
-    "k8s.production.user@gmail.com",
+    "abbott@squareup.com",
+    "containers-bot@bitnami.com",
+    "hudson@openstack.org",
+    "info@bitergia.com",
+    "infra-root@openstack.org",
     "jenkins@openstack.org",
     "jenkins@review.openstack.org",
-    "openstack-infra@lists.openstack.org",
-    "k8s-publish-robot@users.noreply.github.com",
-    "containers-bot@bitnami.com",
-    "abbott@squareup.com",
-    "nfdmergebot@intel.com",
-    "minikube-bot@google.com",
     "k8s-merge-robot@users.noreply.github.com",
-    "support@greenkeeper.io"
+    "k8s-publish-robot@users.noreply.github.com",
+    "k8s.production.user@gmail.com",
+    "minikube-bot@google.com",
+    "nfdmergebot@intel.com",
+    "openstack-infra@lists.openstack.org",
+    "review@openstack.org",
+    "support@greenkeeper.io",
+    "zuul@openstack.org",
+    "zuul@zuul.openstack.org"
 ]
 
 #
@@ -95,10 +102,10 @@ def ParseOpts ():
     global MapUnknown, DevReports
     global DateStats, AuthorSOBs, FileFilter, InvertFilter, DumpDB
     global CFName, CSVFile, CSVPrefix, DirName, Aggregate, Numstat
-    global ReportByFileType, ReportUnknowns
+    global ReportByFileType, ReportUnknowns, AffFile
     global InputData, InputDataIsFile, DebugHalt, DateFrom, DateTo
 
-    opts, rest = getopt.getopt (sys.argv[1:], 'i:b:dc:Dh:l:no:p:r:stUumwx:yzXf:e:R')
+    opts, rest = getopt.getopt (sys.argv[1:], 'a:i:b:dc:Dh:l:no:p:r:stUumwx:yzXf:e:R')
     for opt in opts:
         if opt[0] == '-b':
             DirName = opt[1]
@@ -136,6 +143,9 @@ def ParseOpts ():
         elif opt[0] == '-x':
             CSVFile = open (opt[1], 'w')
             print "open output file " + opt[1] + "\n"
+        elif opt[0] == '-a':
+            AffFile = open (opt[1], 'w')
+            print "Save all affiliations in " + opt[1] + "\n"
         elif opt [0] == '-w':
             Aggregate = 'week'
         elif opt [0] == '-y':
@@ -622,6 +632,9 @@ DebugUnknowns()
 #
 hlist = database.AllHackers ()
 elist = database.AllEmployers ()
+# 'erick@fejta.com' in set(sum(map(lambda el: el.email, hlist), []))
+# sum(map(lambda el: el.email, hlist), [])
+# pdb.set_trace()
 ndev = nempl = 0
 for h in hlist:
     if len (h.patches) > 0:
@@ -645,6 +658,10 @@ if CSVPrefix:
 if CSVFile:
     csvdump.OutputCSV (CSVFile)
     CSVFile.close ()
+
+if AffFile:
+    database.AllAffsCSV(AffFile, hlist)
+    AffFile.close ()
 
 if DevReports:
     reports.DevReports (hlist, TotalChanged, CSCount, TotalRemoved)

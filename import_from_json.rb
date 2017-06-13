@@ -35,13 +35,21 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
   end
 
   # email,company,final_company,date_from,date_to
+  # email,company,date_to
   affs = {}
+  spec_affs = {}
   CSV.foreach(csv_file, headers: true) do |row|
     h = row.to_h
     e = h['email']
     d = h['date_to']
     c = h['company']
-    next if ['(Unknown)', 'NotFound', 'Not Found', 'Self'].include?(c)
+    if ['(Unknown)', 'NotFound', 'Self'].include?(c)
+      unless c == '(Unknown)'
+        spec_affs[e] = {} unless spec_affs.key?(e)
+        spec_affs[e][d] = c
+      end
+      next
+    end
     affs[e] = {} unless affs.key?(e)
     affs[e][d] = c
   end
@@ -152,6 +160,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
   # domain-map [domain name [< YYYY-MM-DD]
   if c == 'y'
     File.open(new_domain_map, 'w') do |file|
+      file.write("# Here is a set of mappings of domain names onto employer names.\n")
       file.write("# domain-map [domain name [< YYYY-MM-DD]\n")
       doms.each do |d, list|
         list.each do |row|
@@ -205,7 +214,9 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
       cs.each do |c|
         next if skip
         cn = c['company_name']
-        next if ['*independent', '*robots'].include?(cn.strip)
+        cn = 'Self' if cn.strip == '*independent'
+        cn = '(Robots)' if cn.strip == '*robots'
+        # next if ['*robots'].include?(cn.strip)
         cn = remap[cn] if remap.key?(cn)
         cd = c['end_date'] ? Date.parse(c['end_date']).to_s : ''
         if affs.key?(e)
@@ -280,6 +291,21 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
     end
   end
 
+  spec_affs.each do |email, data|
+    data.each do |date, company|
+      if affs.key?(email)
+        if affs[email].key?(date)
+          puts "Updated special case: email '#{email}' end-date '#{date}' company '#{company}' -> '#{affs[email][date]}'"
+        else
+          affs[email][date] = company
+        end
+      else
+        affs[email] = {}
+        affs[email][date] = company
+      end
+    end
+  end
+
   # Do we need to write remap_emails.csv file?
   puts "Write new remap_emails.csv file? (y/n)"
   c = mgetc
@@ -296,7 +322,8 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
   # Write new domain mapping
   # [user@]domain  employer  [< yyyy-mm-dd]
   File.open(new_email_map, 'w') do |file|
-    file.write("# [user@]domain  employer  [< yyyy-mm-dd]")
+    file.write("# Here is a set of mappings of domain names\n")
+    file.write("# [user@]domain  employer  [< yyyy-mm-dd]\n")
     affs.keys.sort.each do |email|
       dct = affs[email]
       uvals = {}

@@ -1,88 +1,20 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/minikube.csv
 
-WARNING: duplicate email/empl for pekowski@gmail.com
-WARNING: duplicate email/empl for thingee@gmail.com
-WARNING: duplicate email/empl for t.trifonov@gmail.com
-WARNING: duplicate email/empl for lyz@princessleia.com
-WARNING: duplicate email/empl for robertc@robertcollins.net
-WARNING: duplicate email/empl for clint@fewbar.com
-WARNING: duplicate email/empl for andrew@linuxjedi.co.uk
-WARNING: duplicate email/empl for duncan.thomas@gmail.com
-WARNING: duplicate email/empl for kiall@managedit.ie
-WARNING: duplicate email/empl for devananda.vdv@gmail.com
-WARNING: duplicate email/empl for zaro0508@gmail.com
-WARNING: duplicate email/empl for shrewsbury.dave@gmail.com
-WARNING: duplicate email/empl for j3p0uk@hotmail.com
-WARNING: duplicate email/empl for me@mark.atwood.name
-WARNING: duplicate email/empl for slicknik@gmail.com
-WARNING: duplicate email/empl for cmsj@tenshu.net
-WARNING: duplicate email/empl for anteaya@anteaya.info
-WARNING: duplicate email/empl for greg@greghaynes.net
-WARNING: duplicate email/empl for matt@mattfarina.com
-WARNING: duplicate email/empl for jp@jamezpolley.com
-WARNING: duplicate email/empl for steven@wedontsleep.org
-WARNING: duplicate email/empl for gleebix@gmail.com
-WARNING: duplicate email/empl for code@gentlydownthe.net
-WARNING: duplicate email/empl for morgan.fainberg@gmail.com
-WARNING: duplicate email/empl for jeblair@hp.com
-WARNING: duplicate email/empl for juliaashleykreger@gmail.com
-WARNING: duplicate email/empl for stephane@alum.mit.edu
-WARNING: duplicate email/empl for kragniz@gmail.com
-WARNING: duplicate email/empl for wchrisjohnson@gmail.com
-WARNING: duplicate email/empl for daisy.ycguo@gmail.com
-WARNING: duplicate email/empl for mordred@inaugust.com
-WARNING: duplicate email/empl for zxkuqyb@gmail.com
-WARNING: duplicate email/empl for amigliaccio@internap.com
-WARNING: duplicate email/empl for yorik.sar@gmail.com
-WARNING: duplicate email/empl for e0ne@e0ne.info
-WARNING: duplicate email/empl for gabriel@strikeawe.com
-WARNING: duplicate email/empl for heckj@mac.com
-WARNING: duplicate email/empl for ke.wu@ibeca.me
-WARNING: duplicate email/empl for rushi.agr@gmail.com
-WARNING: duplicate email/empl for salv.orlando@gmail.com
-WARNING: duplicate email/empl for tushar.vitthal.patil@gmail.com
-WARNING: duplicate email/empl for jmckenty@gmail.com
-WARNING: duplicate email/empl for anne@openstack.org
-WARNING: duplicate email/empl for breu@breu.org
-WARNING: duplicate email/empl for cbehrens@codestud.com
-WARNING: duplicate email/empl for clay.gerrard@gmail.com
-WARNING: duplicate email/empl for corywright@gmail.com
-WARNING: duplicate email/empl for cp16net@gmail.com
-WARNING: duplicate email/empl for cthier@gmail.com
-WARNING: duplicate email/empl for darren.birkett@gmail.com
-WARNING: duplicate email/empl for dolph.mathews@gmail.com
-WARNING: duplicate email/empl for ed@leafe.com
-WARNING: duplicate email/empl for github@highbridgellc.com
-WARNING: duplicate email/empl for greglange@gmail.com
-WARNING: duplicate email/empl for hugh@wherenow.org
-WARNING: duplicate email/empl for imsplitbit@gmail.com
-WARNING: duplicate email/empl for jason@koelker.net
-WARNING: duplicate email/empl for jcruz7@gmail.com
-WARNING: duplicate email/empl for josh@jk0.org
-WARNING: duplicate email/empl for mattt@defunct.ca
-WARNING: duplicate email/empl for mbasnight@gmail.com
-WARNING: duplicate email/empl for mike@weirdlooking.com
-WARNING: duplicate email/empl for msherborne@gmail.com
-WARNING: duplicate email/empl for naveedm9@gmail.com
-WARNING: duplicate email/empl for paul@openstack.org
-WARNING: duplicate email/empl for rnirmal@gmail.com
-WARNING: duplicate email/empl for rconradharris@gmail.com
-WARNING: duplicate email/empl for thierry@openstack.org
-WARNING: duplicate email/empl for throughnothing@gmail.com
-WARNING: duplicate email/empl for yoga80@yahoo.com
-WARNING: duplicate email/empl for mark.washenberger@markwash.net
-WARNING: duplicate email/empl for p@draigbrady.com
-WARNING: duplicate email/empl for zaitcev@kotori.zaitcev.us
-WARNING: duplicate email/empl for julie.pichon@gmail.com
-WARNING: duplicate email/empl for ghe@debian.org
-WARNING: duplicate email/empl for sorrison@gmail.com
 unknown@hacker.net Unknown hacker
 m@rickard.email Matt Rickard
 	unknown [27231, 22414]
 	devel-doc [805, 1087]
-	code [513, 435]
+	code [537, 452]
 	build [184, 122]
+dlorenc@google.com dlorenc
+	unknown [18510, 12753]
+	devel-doc [574, 98]
+	code [632, 176]
+	build [266, 106]
+	documentation [60, 0]
+me@gbraad.nl Gerard Braad
+	unknown [1, 1]
 michelle@deis.com Michelle Noorali
 	unknown [2, 2]
 slokas@upmc.edu Steve Sloka
@@ -98,14 +30,12 @@ aprindle@google.com Aaron Prindle
 	code [684, 165]
 	build [264, 88]
 	image [0, 0]
-dlorenc@google.com dlorenc
-	unknown [18510, 12753]
-	devel-doc [574, 98]
-	code [632, 176]
-	build [265, 105]
-	documentation [60, 0]
+thibaut.demaret@radiofrance.com Thibaut Demaret
+	unknown [4, 7]
 nkubala@users.noreply.github.com Nick Kubala
 	unknown [8, 8]
+59pilgrim@gmail.com Thibaut Démaret
+	unknown [4, 1]
 maciaszczykm@users.noreply.github.com Marcin Maciaszczyk
 	unknown [8, 8]
 andreas.kohn@gmail.com Andreas Kohn
@@ -321,9 +251,9 @@ vishh@users.noreply.github.com Vish Kannan
 	devel-doc [206, 2]
 devel-doc 3072 2199
 	m@rickard.email Matt Rickard: [805, 1087]
+	dlorenc@google.com dlorenc: [574, 98]
 	slokas@upmc.edu Steve Sloka: [4, 2]
 	aprindle@google.com Aaron Prindle: [357, 283]
-	dlorenc@google.com dlorenc: [574, 98]
 	andreas.kohn@gmail.com Andreas Kohn: [3, 3]
 	sukantgujar@yahoo.com SukantGujar: [1, 1]
 	tgraf@suug.ch Thomas Graf: [2, 2]
@@ -362,10 +292,10 @@ devel-doc 3072 2199
 	james.strachan@gmail.com James Strachan: [17, 3]
 	dan@redspread.com Dan Gillespie: [1, 1]
 	vishh@users.noreply.github.com Vish Kannan: [206, 2]
-code 2046 851
-	m@rickard.email Matt Rickard: [513, 435]
-	aprindle@google.com Aaron Prindle: [684, 165]
+code 2070 868
+	m@rickard.email Matt Rickard: [537, 452]
 	dlorenc@google.com dlorenc: [632, 176]
+	aprindle@google.com Aaron Prindle: [684, 165]
 	gianrubio@gmail.com Giancarlo Rubio: [1, 1]
 	sur@coreos.com Sergiusz Urbaniak: [36, 36]
 	jimmidyson@gmail.com Jimmi Dyson: [3, 3]
@@ -373,15 +303,18 @@ code 2046 851
 	rodcloutier@gmail.com Rod Cloutier: [42, 0]
 	luxas@users.noreply.github.com Lucas Käldström: [67, 5]
 	dan@redspread.com Dan Gillespie: [41, 1]
-unknown 82279 51968
+unknown 82288 51977
 	m@rickard.email Matt Rickard: [27231, 22414]
+	dlorenc@google.com dlorenc: [18510, 12753]
+	me@gbraad.nl Gerard Braad: [1, 1]
 	michelle@deis.com Michelle Noorali: [2, 2]
 	slokas@upmc.edu Steve Sloka: [639, 284]
 	runcom@redhat.com Antonio Murdaca: [2, 2]
 	su3g4284zo6y7@gmail.com tz70s: [3, 0]
 	aprindle@google.com Aaron Prindle: [20811, 9248]
-	dlorenc@google.com dlorenc: [18510, 12753]
+	thibaut.demaret@radiofrance.com Thibaut Demaret: [4, 7]
 	nkubala@users.noreply.github.com Nick Kubala: [8, 8]
+	59pilgrim@gmail.com Thibaut Démaret: [4, 1]
 	maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [8, 8]
 	andreas.kohn@gmail.com Andreas Kohn: [7, 6]
 	budhram.gurung01@gmail.com Budh Ram Gurung: [11, 11]
@@ -442,10 +375,10 @@ image 118 0
 	victoria.domalik@gmail.com Victoria Domalik: [118, 0]
 documentation 60 0
 	dlorenc@google.com dlorenc: [60, 0]
-build 1856 458
+build 1857 459
 	m@rickard.email Matt Rickard: [184, 122]
+	dlorenc@google.com dlorenc: [266, 106]
 	aprindle@google.com Aaron Prindle: [264, 88]
-	dlorenc@google.com dlorenc: [265, 105]
 	dale.hamel@shopify.com Dale Hamel: [2, 0]
 	tgraf@suug.ch Thomas Graf: [26, 24]
 	giovanni.tirloni@gmail.com Giovanni Tirloni: [3, 0]
@@ -465,8 +398,8 @@ build 1856 458
 	mbauer@us.ibm.com Morgan Bauer: [3, 4]
 	shailesh.pant@gmail.com Shailesh Pant: [1, 1]
 devel-doc 3072 2199
-code 2046 851
-unknown 82279 51968
+code 2070 868
+unknown 82288 51977
 image 118 0
 documentation 60 0
-build 1856 458
+build 1857 459

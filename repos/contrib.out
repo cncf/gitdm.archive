@@ -1,83 +1,9 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/contrib.csv
 
-WARNING: duplicate email/empl for pekowski@gmail.com
-WARNING: duplicate email/empl for thingee@gmail.com
-WARNING: duplicate email/empl for t.trifonov@gmail.com
-WARNING: duplicate email/empl for lyz@princessleia.com
-WARNING: duplicate email/empl for robertc@robertcollins.net
-WARNING: duplicate email/empl for clint@fewbar.com
-WARNING: duplicate email/empl for andrew@linuxjedi.co.uk
-WARNING: duplicate email/empl for duncan.thomas@gmail.com
-WARNING: duplicate email/empl for kiall@managedit.ie
-WARNING: duplicate email/empl for devananda.vdv@gmail.com
-WARNING: duplicate email/empl for zaro0508@gmail.com
-WARNING: duplicate email/empl for shrewsbury.dave@gmail.com
-WARNING: duplicate email/empl for j3p0uk@hotmail.com
-WARNING: duplicate email/empl for me@mark.atwood.name
-WARNING: duplicate email/empl for slicknik@gmail.com
-WARNING: duplicate email/empl for cmsj@tenshu.net
-WARNING: duplicate email/empl for anteaya@anteaya.info
-WARNING: duplicate email/empl for greg@greghaynes.net
-WARNING: duplicate email/empl for matt@mattfarina.com
-WARNING: duplicate email/empl for jp@jamezpolley.com
-WARNING: duplicate email/empl for steven@wedontsleep.org
-WARNING: duplicate email/empl for gleebix@gmail.com
-WARNING: duplicate email/empl for code@gentlydownthe.net
-WARNING: duplicate email/empl for morgan.fainberg@gmail.com
-WARNING: duplicate email/empl for jeblair@hp.com
-WARNING: duplicate email/empl for juliaashleykreger@gmail.com
-WARNING: duplicate email/empl for stephane@alum.mit.edu
-WARNING: duplicate email/empl for kragniz@gmail.com
-WARNING: duplicate email/empl for wchrisjohnson@gmail.com
-WARNING: duplicate email/empl for daisy.ycguo@gmail.com
-WARNING: duplicate email/empl for mordred@inaugust.com
-WARNING: duplicate email/empl for zxkuqyb@gmail.com
-WARNING: duplicate email/empl for amigliaccio@internap.com
-WARNING: duplicate email/empl for yorik.sar@gmail.com
-WARNING: duplicate email/empl for e0ne@e0ne.info
-WARNING: duplicate email/empl for gabriel@strikeawe.com
-WARNING: duplicate email/empl for heckj@mac.com
-WARNING: duplicate email/empl for ke.wu@ibeca.me
-WARNING: duplicate email/empl for rushi.agr@gmail.com
-WARNING: duplicate email/empl for salv.orlando@gmail.com
-WARNING: duplicate email/empl for tushar.vitthal.patil@gmail.com
-WARNING: duplicate email/empl for jmckenty@gmail.com
-WARNING: duplicate email/empl for anne@openstack.org
-WARNING: duplicate email/empl for breu@breu.org
-WARNING: duplicate email/empl for cbehrens@codestud.com
-WARNING: duplicate email/empl for clay.gerrard@gmail.com
-WARNING: duplicate email/empl for corywright@gmail.com
-WARNING: duplicate email/empl for cp16net@gmail.com
-WARNING: duplicate email/empl for cthier@gmail.com
-WARNING: duplicate email/empl for darren.birkett@gmail.com
-WARNING: duplicate email/empl for dolph.mathews@gmail.com
-WARNING: duplicate email/empl for ed@leafe.com
-WARNING: duplicate email/empl for github@highbridgellc.com
-WARNING: duplicate email/empl for greglange@gmail.com
-WARNING: duplicate email/empl for hugh@wherenow.org
-WARNING: duplicate email/empl for imsplitbit@gmail.com
-WARNING: duplicate email/empl for jason@koelker.net
-WARNING: duplicate email/empl for jcruz7@gmail.com
-WARNING: duplicate email/empl for josh@jk0.org
-WARNING: duplicate email/empl for mattt@defunct.ca
-WARNING: duplicate email/empl for mbasnight@gmail.com
-WARNING: duplicate email/empl for mike@weirdlooking.com
-WARNING: duplicate email/empl for msherborne@gmail.com
-WARNING: duplicate email/empl for naveedm9@gmail.com
-WARNING: duplicate email/empl for paul@openstack.org
-WARNING: duplicate email/empl for rnirmal@gmail.com
-WARNING: duplicate email/empl for rconradharris@gmail.com
-WARNING: duplicate email/empl for thierry@openstack.org
-WARNING: duplicate email/empl for throughnothing@gmail.com
-WARNING: duplicate email/empl for yoga80@yahoo.com
-WARNING: duplicate email/empl for mark.washenberger@markwash.net
-WARNING: duplicate email/empl for p@draigbrady.com
-WARNING: duplicate email/empl for zaitcev@kotori.zaitcev.us
-WARNING: duplicate email/empl for julie.pichon@gmail.com
-WARNING: duplicate email/empl for ghe@debian.org
-WARNING: duplicate email/empl for sorrison@gmail.com
 unknown@hacker.net Unknown hacker
+loburm@google.com Marian Lobur
+	unknown [27, 6]
 vmik@google.com Mik Vyatskov
 	code [29, 74]
 	unknown [2384, 165]
@@ -95,8 +21,6 @@ pszczesniak@google.com Piotr Szczesniak
 maciejborsz@google.com Maciej Borsz
 	unknown [648, 22]
 	documentation [2, 0]
-loburm@google.com Marian Lobur
-	unknown [22, 6]
 mikedanese@gmail.com Mike Danese
 	devel-doc [55166, 2529]
 	code [12996, 496]
@@ -145,9 +69,18 @@ mwielgus@google.com Marcin Wielgus
 	documentation [4538, 1]
 kangh@us.ibm.com Hui Kang
 	devel-doc [2, 1]
+mkumatag@in.ibm.com Manjunath A Kumatagi
+	unknown [37, 4]
+	devel-doc [1, 1]
+	code [7, 1]
 comp_@gmx.net isavin
 	unknown [6, 1]
 	documentation [1, 0]
+kowens0826@gmail.com Kenneth Owens
+	unknown [570, 46]
+	devel-doc [612, 26]
+	code [273, 78]
+	build [28, 2]
 dbsmith@google.com Daniel Smith
 	code [169, 14]
 	unknown [4651, 1246]
@@ -347,11 +280,6 @@ rmmh@google.com Ryan Hitchman
 	unknown [1705, 143]
 	code [24960, 58]
 	documentation [24, 9]
-owensk@google.com Kenneth Owens
-	unknown [238, 9]
-	devel-doc [258, 11]
-	code [273, 78]
-	build [15, 2]
 thebigjc@gmail.com thebigjc
 	unknown [498, 44]
 	devel-doc [4, 2]
@@ -380,10 +308,6 @@ saadali@google.com Saad Ali
 francois-github@ctrlaltdel.ch François Deppierraz
 	unknown [1, 1]
 dawnchen@google.com Dawn Chen
-mkumatag@in.ibm.com Manjunath A Kumatagi
-	unknown [36, 3]
-	devel-doc [1, 1]
-	code [7, 1]
 marcin@owsiany.pl Marcin Owsiany
 	devel-doc [1, 1]
 grodrigues3@users.noreply.github.com grodrigues3
@@ -761,7 +685,7 @@ sgallagh@redhat.com Stephen Gallagher
 	unknown [1, 0]
 ben.the.elder@gmail.com BenTheElder
 	unknown [249, 0]
-devel-doc 119166 57311
+devel-doc 119520 57326
 	vmik@google.com Mik Vyatskov: [112, 56]
 	pszczesniak@google.com Piotr Szczesniak: [636, 26]
 	mikedanese@gmail.com Mike Danese: [55166, 2529]
@@ -771,6 +695,8 @@ devel-doc 119166 57311
 	qlee@google.com Quintin Lee: [231, 84]
 	mwielgus@google.com Marcin Wielgus: [8052, 325]
 	kangh@us.ibm.com Hui Kang: [2, 1]
+	mkumatag@in.ibm.com Manjunath A Kumatagi: [1, 1]
+	kowens0826@gmail.com Kenneth Owens: [612, 26]
 	dbsmith@google.com Daniel Smith: [18, 2]
 	jchaloup@redhat.com Jan Chaloupka: [345, 38]
 	li.xialong@zte.com.cn Peter Lee: [1, 1]
@@ -806,13 +732,11 @@ devel-doc 119166 57311
 	dusty@dustymabe.com Dusty Mabe: [2, 2]
 	ysooolt@gmail.com Zsolt Molnar: [6, 14]
 	ghe@debian.org Ghe Rivero: [1, 1]
-	owensk@google.com Kenneth Owens: [258, 11]
 	thebigjc@gmail.com thebigjc: [4, 2]
 	hiroshi3110@gmail.com Hiroshi Saito: [2, 2]
 	shubham@linux.com Shubham: [1, 1]
 	fbranczyk@gmail.com Frederic Branczyk: [16, 76]
 	etune@google.com Eric Tune: [33, 9]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [1, 1]
 	marcin@owsiany.pl Marcin Owsiany: [1, 1]
 	grodrigues3@users.noreply.github.com grodrigues3: [6, 0]
 	andy.xning@gmail.com andy xie: [1, 1]
@@ -873,6 +797,8 @@ code 73860 42205
 	stclair@google.com Tim St. Clair: [196, 0]
 	qlee@google.com Quintin Lee: [31, 0]
 	mwielgus@google.com Marcin Wielgus: [414, 103]
+	mkumatag@in.ibm.com Manjunath A Kumatagi: [7, 1]
+	kowens0826@gmail.com Kenneth Owens: [273, 78]
 	dbsmith@google.com Daniel Smith: [169, 14]
 	jchaloup@redhat.com Jan Chaloupka: [453, 122]
 	li.xialong@zte.com.cn Peter Lee: [1, 1]
@@ -896,10 +822,8 @@ code 73860 42205
 	meybohm@traum-ferienwohnungen.de Janis Meybohm: [1, 1]
 	eparis@redhat.com Eric Paris: [1672, 570]
 	rmmh@google.com Ryan Hitchman: [24960, 58]
-	owensk@google.com Kenneth Owens: [273, 78]
 	lucascegatti@gmail.com Lucas Cegatti: [2, 1]
 	fbranczyk@gmail.com Frederic Branczyk: [0, 103]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [7, 1]
 	xuchao@google.com Chao Xu: [213, 39]
 	lantaol@google.com Random-Liu: [2787, 2647]
 	zihongz@google.com MrHohn: [92, 0]
@@ -929,12 +853,12 @@ package 0 0
 	aledbf@gmail.com Manuel de Brito Fontes: [0, 0]
 	lantaol@google.com Random-Liu: [0, 0]
 	bburns@google.com Brendan Burns: [0, 0]
-unknown 6495891 3404109
+unknown 6496229 3404147
+	loburm@google.com Marian Lobur: [27, 6]
 	vmik@google.com Mik Vyatskov: [2384, 165]
 	cfarquhar@cfarquhar.com Charles Farquhar: [1, 1]
 	pszczesniak@google.com Piotr Szczesniak: [73128, 6266]
 	maciejborsz@google.com Maciej Borsz: [648, 22]
-	loburm@google.com Marian Lobur: [22, 6]
 	mikedanese@gmail.com Mike Danese: [2544322, 198624]
 	robertbailey@google.com Robert Bailey: [19, 9]
 	verb@google.com Lee Verberne: [1, 1]
@@ -944,7 +868,9 @@ unknown 6495891 3404109
 	qlee@google.com Quintin Lee: [3136, 701]
 	gyliu513@gmail.com Guangya Liu: [1, 1]
 	mwielgus@google.com Marcin Wielgus: [502524, 24669]
+	mkumatag@in.ibm.com Manjunath A Kumatagi: [37, 4]
 	comp_@gmx.net isavin: [6, 1]
+	kowens0826@gmail.com Kenneth Owens: [570, 46]
 	dbsmith@google.com Daniel Smith: [4651, 1246]
 	jchaloup@redhat.com Jan Chaloupka: [1033, 660]
 	li.xialong@zte.com.cn Peter Lee: [57, 28]
@@ -987,7 +913,6 @@ unknown 6495891 3404109
 	dusty@dustymabe.com Dusty Mabe: [2, 2]
 	ghe@debian.org Ghe Rivero: [1, 1]
 	rmmh@google.com Ryan Hitchman: [1705, 143]
-	owensk@google.com Kenneth Owens: [238, 9]
 	thebigjc@gmail.com thebigjc: [498, 44]
 	lucascegatti@gmail.com Lucas Cegatti: [57, 28]
 	lvnilesh@users.noreply.github.com Nilesh Londhe: [13, 0]
@@ -996,7 +921,6 @@ unknown 6495891 3404109
 	fejta@google.com Erick Fejta: [106, 85]
 	saadali@google.com Saad Ali: [2, 2]
 	francois-github@ctrlaltdel.ch François Deppierraz: [1, 1]
-	mkumatag@in.ibm.com Manjunath A Kumatagi: [36, 3]
 	grodrigues3@users.noreply.github.com grodrigues3: [6, 2]
 	marian.schwarz@sap.com Marian Schwarz: [3, 2]
 	michael.a.scheetz@gmail.com Michael Scheetz: [11, 0]
@@ -1162,7 +1086,7 @@ documentation 73147 41461
 	chiachenk@google.com Janet Kuo: [5099, 33]
 	mvdan@mvdan.cc Daniel Martí: [1, 0]
 	james@mesosphere.io James DeFelice: [3, 0]
-build 7014 3137
+build 7027 3137
 	vmik@google.com Mik Vyatskov: [88, 88]
 	pszczesniak@google.com Piotr Szczesniak: [69, 8]
 	mikedanese@gmail.com Mike Danese: [1236, 39]
@@ -1172,6 +1096,7 @@ build 7014 3137
 	stclair@google.com Tim St. Clair: [40, 27]
 	qlee@google.com Quintin Lee: [240, 44]
 	mwielgus@google.com Marcin Wielgus: [191, 35]
+	kowens0826@gmail.com Kenneth Owens: [28, 2]
 	dbsmith@google.com Daniel Smith: [18, 13]
 	jchaloup@redhat.com Jan Chaloupka: [104, 8]
 	bowei@google.com Bowei Du: [162, 248]
@@ -1186,7 +1111,6 @@ build 7014 3137
 	apelisse@google.com Antoine Pelisse: [18, 4]
 	spxtr@google.com Joe Finney: [2, 2]
 	eparis@redhat.com Eric Paris: [165, 250]
-	owensk@google.com Kenneth Owens: [15, 2]
 	wojtekt@google.com Wojciech Tyczynski: [5, 5]
 	xuchao@google.com Chao Xu: [4, 1]
 	rhyde@hydenetworks.com Trey Hyde: [3, 2]
@@ -1216,10 +1140,10 @@ build 7014 3137
 	roque@juniper.net Pedro Roque Marques: [117, 0]
 	krancourt@engineyard.com Kent Rancourt: [4, 0]
 	chiachenk@google.com Janet Kuo: [192, 0]
-devel-doc 119166 57311
+devel-doc 119520 57326
 code 73860 42205
 package 0 0
-unknown 6495891 3404109
+unknown 6496229 3404147
 image 0 0
 documentation 73147 41461
-build 7014 3137
+build 7027 3137

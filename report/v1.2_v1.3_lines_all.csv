@@ -1,17 +1,17 @@
 idx,company,n,percent
-0,(All known 68),488046,97.78
-1,Google,313678,62.8
+0,(All known 70),496644,99.5
+1,Google,313691,62.8
 2,HP,61253,12.3
 3,Red Hat,43483,8.7
 4,CoreOS,30885,6.2
-5,(Unknown),11080,2.2
-6,Gmail *,10644,2.1
-7,Huawei,9255,1.9
-8,taotaotheripper@gmail.com,8194,1.6
-9,Apache,4086,0.8
-10,IBM,3445,0.7
-11,CERN,3153,0.6
-12,GoGoVan,2905,0.6
+5,Huawei,9255,1.9
+6,(Self),8369,1.7
+7,Apache,4086,0.8
+8,IBM,3445,0.7
+9,CERN,3153,0.6
+10,GoGoVan,2905,0.6
+11,(Unknown),2482,0.5
+12,Gmail *,2237,0.4
 13,tyangliu@gmail.com,2012,0.4
 14,Canonical,1971,0.4
 15,eBay,1698,0.3
@@ -31,86 +31,71 @@ idx,company,n,percent
 29,Amadeus,286,0.1
 30,Cockroach,270,0.1
 31,Intel,233,0.0
-32,tobias.adamson@gmail.com,189,0.0
-33,thinkstep,172,0.0
-34,Sky *,169,0.0
-35,nakayamakenjiro@gmail.com,137,0.0
+32,(Not Found),216,0.0
+33,tobias.adamson@gmail.com,189,0.0
+34,thinkstep,172,0.0
+35,Sky *,169,0.0
 36,appOrbit,129,0.0
 37,christopher.batey@sky.uk,128,0.0
 38,CenturyLink,99,0.0
 39,Samsung,94,0.0
 40,Mirantis,87,0.0
 41,Cisco,80,0.0
-42,Tmrts *,64,0.0
-43,contact@tmrts.com,64,0.0
-44,ttr314@googlemail.com,59,0.0
-45,uluyol0@gmail.com,59,0.0
-46,Googlemail *,59,0.0
-47,Aperian Global,55,0.0
-48,Hyper.sh,53,0.0
-49,mcluseau@isi.nc,52,0.0
-50,Isi *,52,0.0
-51,Mesosphere,50,0.0
-52,james.ravn@sky.uk,41,0.0
-53,Diamanti,39,0.0
-54,Ahead4 Limited,39,0.0
-55,matt@nowprovision.com,26,0.0
-56,Nowprovision *,26,0.0
-57,ZTE Corporation,25,0.0
-58,Apcera,19,0.0
-59,tgraf@suug.ch,18,0.0
-60,Suug *,18,0.0
-61,rodrigo@sdfg.com.ar,18,0.0
-62,SdfgCom *,18,0.0
-63,Reevoo,17,0.0
-64,tommy.murphy@gmail.com,16,0.0
-65,Eon Cloud,16,0.0
-66,aledbf@gmail.com,16,0.0
-67,Fejta *,13,0.0
-68,erick@fejta.com,13,0.0
-69,inovex GmbH,11,0.0
-70,Box,11,0.0
-71,Bitnami,10,0.0
-72,Infraly,10,0.0
-73,Dataman,9,0.0
-74,meng.mobile@gmail.com,8,0.0
-75,ThousandEyes,7,0.0
-76,Jollyturns,7,0.0
-77,Outlook *,6,0.0
-78,iamthemuffinman@outlook.com,6,0.0
-79,onorua@gmail.com,6,0.0
-80,CYSO,5,0.0
-81,GmxCo *,3,0.0
-82,zellster@gmail.com,3,0.0
-83,jimmyjones2@gmx.co.uk,3,0.0
-84,Citrix,3,0.0
-85,yangbaohua@gmail.com,2,0.0
-86,Advance-leap *,2,0.0
-87,Oszi *,2,0.0
-88,Cormann *,2,0.0
-89,Tradesy,2,0.0
-90,Imaginea,2,0.0
-91,"Comparative Bioinformatics, CRG",2,0.0
-92,devel@oszi.one,2,0.0
-93,development@advance-leap.com,2,0.0
-94,lars@cormann.biz,2,0.0
+42,Googlemail *,59,0.0
+43,ttr314@googlemail.com,59,0.0
+44,Aperian Global,55,0.0
+45,Hyper.sh,53,0.0
+46,Mesosphere,50,0.0
+47,james.ravn@sky.uk,41,0.0
+48,Diamanti,39,0.0
+49,Ahead4 Limited,39,0.0
+50,ZTE Corporation,25,0.0
+51,Apcera,19,0.0
+52,Reevoo,17,0.0
+53,tommy.murphy@gmail.com,16,0.0
+54,Eon Cloud,16,0.0
+55,Box,11,0.0
+56,inovex GmbH,11,0.0
+57,Infraly,10,0.0
+58,Bitnami,10,0.0
+59,Dataman,9,0.0
+60,meng.mobile@gmail.com,8,0.0
+61,ThousandEyes,7,0.0
+62,Jollyturns,7,0.0
+63,Outlook *,6,0.0
+64,onorua@gmail.com,6,0.0
+65,iamthemuffinman@outlook.com,6,0.0
+66,CYSO,5,0.0
+67,GmxCo *,3,0.0
+68,Citrix,3,0.0
+69,jimmyjones2@gmx.co.uk,3,0.0
+70,zellster@gmail.com,3,0.0
+71,Imaginea,2,0.0
+72,Oszi *,2,0.0
+73,Advance-leap *,2,0.0
+74,devel@oszi.one,2,0.0
+75,yangbaohua@gmail.com,2,0.0
+76,development@advance-leap.com,2,0.0
+77,lars@cormann.biz,2,0.0
+78,Cormann *,2,0.0
+79,"Comparative Bioinformatics, CRG",2,0.0
+80,Tradesy,2,0.0
+81,Freelance,1,0.0
+82,khoa.le@hrboss.com,1,0.0
+83,R&R,1,0.0
+84,Photobox,1,0.0
+85,Teralytics,1,0.0
+86,Tinkerbox,1,0.0
+87,Weaveworks,1,0.0
+88,CentOS,1,0.0
+89,KAYAK,1,0.0
+90,Matty Williams,1,0.0
+91,"Kensho, GAuthify",1,0.0
+92,Signal Sciences Corp,1,0.0
+93,Bright Pixel,1,0.0
+94,Free *,1,0.0
 95,Hrboss *,1,0.0
-96,Bright Pixel,1,0.0
-97,Signal Sciences Corp,1,0.0
-98,"Kensho, GAuthify",1,0.0
-99,khoa.le@hrboss.com,1,0.0
-100,Matty Williams,1,0.0
-101,Freelance,1,0.0
-102,R&R,1,0.0
-103,Photobox,1,0.0
-104,Teralytics,1,0.0
-105,Tinkerbox,1,0.0
-106,KAYAK,1,0.0
-107,mtaufen@gmail.com,1,0.0
-108,CentOS,1,0.0
-109,zcq8989@gmail.com,1,0.0
-110,Weaveworks,1,0.0
-111,v.behar@free.fr,1,0.0
-112,Devops,1,0.0
-113,ApresMIDI AB,1,0.0
-114,Free *,1,0.0
+96,ApresMIDI AB,1,0.0
+97,Devops,1,0.0
+98,v.behar@free.fr,1,0.0
+99,mtaufen@gmail.com,1,0.0

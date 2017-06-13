@@ -1,99 +1,28 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/service-catalog.csv
 
-WARNING: duplicate email/empl for pekowski@gmail.com
-WARNING: duplicate email/empl for thingee@gmail.com
-WARNING: duplicate email/empl for t.trifonov@gmail.com
-WARNING: duplicate email/empl for lyz@princessleia.com
-WARNING: duplicate email/empl for robertc@robertcollins.net
-WARNING: duplicate email/empl for clint@fewbar.com
-WARNING: duplicate email/empl for andrew@linuxjedi.co.uk
-WARNING: duplicate email/empl for duncan.thomas@gmail.com
-WARNING: duplicate email/empl for kiall@managedit.ie
-WARNING: duplicate email/empl for devananda.vdv@gmail.com
-WARNING: duplicate email/empl for zaro0508@gmail.com
-WARNING: duplicate email/empl for shrewsbury.dave@gmail.com
-WARNING: duplicate email/empl for j3p0uk@hotmail.com
-WARNING: duplicate email/empl for me@mark.atwood.name
-WARNING: duplicate email/empl for slicknik@gmail.com
-WARNING: duplicate email/empl for cmsj@tenshu.net
-WARNING: duplicate email/empl for anteaya@anteaya.info
-WARNING: duplicate email/empl for greg@greghaynes.net
-WARNING: duplicate email/empl for matt@mattfarina.com
-WARNING: duplicate email/empl for jp@jamezpolley.com
-WARNING: duplicate email/empl for steven@wedontsleep.org
-WARNING: duplicate email/empl for gleebix@gmail.com
-WARNING: duplicate email/empl for code@gentlydownthe.net
-WARNING: duplicate email/empl for morgan.fainberg@gmail.com
-WARNING: duplicate email/empl for jeblair@hp.com
-WARNING: duplicate email/empl for juliaashleykreger@gmail.com
-WARNING: duplicate email/empl for stephane@alum.mit.edu
-WARNING: duplicate email/empl for kragniz@gmail.com
-WARNING: duplicate email/empl for wchrisjohnson@gmail.com
-WARNING: duplicate email/empl for daisy.ycguo@gmail.com
-WARNING: duplicate email/empl for mordred@inaugust.com
-WARNING: duplicate email/empl for zxkuqyb@gmail.com
-WARNING: duplicate email/empl for amigliaccio@internap.com
-WARNING: duplicate email/empl for yorik.sar@gmail.com
-WARNING: duplicate email/empl for e0ne@e0ne.info
-WARNING: duplicate email/empl for gabriel@strikeawe.com
-WARNING: duplicate email/empl for heckj@mac.com
-WARNING: duplicate email/empl for ke.wu@ibeca.me
-WARNING: duplicate email/empl for rushi.agr@gmail.com
-WARNING: duplicate email/empl for salv.orlando@gmail.com
-WARNING: duplicate email/empl for tushar.vitthal.patil@gmail.com
-WARNING: duplicate email/empl for jmckenty@gmail.com
-WARNING: duplicate email/empl for anne@openstack.org
-WARNING: duplicate email/empl for breu@breu.org
-WARNING: duplicate email/empl for cbehrens@codestud.com
-WARNING: duplicate email/empl for clay.gerrard@gmail.com
-WARNING: duplicate email/empl for corywright@gmail.com
-WARNING: duplicate email/empl for cp16net@gmail.com
-WARNING: duplicate email/empl for cthier@gmail.com
-WARNING: duplicate email/empl for darren.birkett@gmail.com
-WARNING: duplicate email/empl for dolph.mathews@gmail.com
-WARNING: duplicate email/empl for ed@leafe.com
-WARNING: duplicate email/empl for github@highbridgellc.com
-WARNING: duplicate email/empl for greglange@gmail.com
-WARNING: duplicate email/empl for hugh@wherenow.org
-WARNING: duplicate email/empl for imsplitbit@gmail.com
-WARNING: duplicate email/empl for jason@koelker.net
-WARNING: duplicate email/empl for jcruz7@gmail.com
-WARNING: duplicate email/empl for josh@jk0.org
-WARNING: duplicate email/empl for mattt@defunct.ca
-WARNING: duplicate email/empl for mbasnight@gmail.com
-WARNING: duplicate email/empl for mike@weirdlooking.com
-WARNING: duplicate email/empl for msherborne@gmail.com
-WARNING: duplicate email/empl for naveedm9@gmail.com
-WARNING: duplicate email/empl for paul@openstack.org
-WARNING: duplicate email/empl for rnirmal@gmail.com
-WARNING: duplicate email/empl for rconradharris@gmail.com
-WARNING: duplicate email/empl for thierry@openstack.org
-WARNING: duplicate email/empl for throughnothing@gmail.com
-WARNING: duplicate email/empl for yoga80@yahoo.com
-WARNING: duplicate email/empl for mark.washenberger@markwash.net
-WARNING: duplicate email/empl for p@draigbrady.com
-WARNING: duplicate email/empl for zaitcev@kotori.zaitcev.us
-WARNING: duplicate email/empl for julie.pichon@gmail.com
-WARNING: duplicate email/empl for ghe@debian.org
-WARNING: duplicate email/empl for sorrison@gmail.com
 unknown@hacker.net Unknown hacker
-kibbles-n-bytes@users.noreply.github.com Michael Kibbe
+mbauer@us.ibm.com Morgan Bauer
+	unknown [9336, 4420]
+	devel-doc [30, 0]
+	code [122, 6]
+	build [110, 61]
+mkibbe@google.com Michael Kibbe
 	unknown [789, 165]
-	devel-doc [2, 2]
+	devel-doc [4, 3]
 	code [1379, 1139]
 	build [1, 1]
+pmorie@redhat.com Paul Morie
+	code [406, 82]
+	unknown [29610, 26460]
+	devel-doc [417, 336]
+	documentation [60, 5]
+	build [125, 77]
 arschles@gmail.com Aaron Schlesinger
 	unknown [10639, 4142]
 	devel-doc [87, 32]
 	code [36, 5]
 	build [102, 34]
-pmorie@redhat.com Paul Morie
-	code [406, 82]
-	unknown [28857, 26323]
-	devel-doc [417, 336]
-	documentation [60, 5]
-	build [125, 77]
 decarr@redhat.com Derek Carr
 	unknown [2245, 1455]
 	code [1, 0]
@@ -120,11 +49,9 @@ kent.rancourt@microsoft.com Kent Rancourt
 	unknown [5412, 3911]
 	documentation [0, 0]
 	build [179, 219]
-mbauer@us.ibm.com Morgan Bauer
-	unknown [9336, 4420]
-	devel-doc [30, 0]
-	code [122, 6]
-	build [110, 61]
+agonzalezro@gmail.com Álex González
+	unknown [7, 5]
+	build [13, 15]
 jpeeler@redhat.com Jeff Peeler
 	unknown [19932, 12282]
 	devel-doc [26, 20]
@@ -152,8 +79,6 @@ leungs@us.ibm.com Simon Leung
 	devel-doc [278, 45]
 	code [1, 1]
 	build [1, 1]
-agonzalezro@gmail.com Alexandre González
-	unknown [7, 5]
 jforrest@redhat.com Jessica Forrester
 	unknown [8, 0]
 jvallejo@redhat.com Juan Vallejo
@@ -183,14 +108,14 @@ jhansen@deis.com Jason Hansen
 	devel-doc [43, 5]
 sarah.novotny@gmail.com sarahnovotny
 	devel-doc [202, 0]
-devel-doc 2531 1716
-	kibbles-n-bytes@users.noreply.github.com Michael Kibbe: [2, 2]
-	arschles@gmail.com Aaron Schlesinger: [87, 32]
+devel-doc 2533 1717
+	mbauer@us.ibm.com Morgan Bauer: [30, 0]
+	mkibbe@google.com Michael Kibbe: [4, 3]
 	pmorie@redhat.com Paul Morie: [417, 336]
+	arschles@gmail.com Aaron Schlesinger: [87, 32]
 	vaikas-google@users.noreply.github.com Ville Aikas: [0, 47]
 	dug@us.ibm.com Doug Davis: [117, 146]
 	kent.rancourt@microsoft.com Kent Rancourt: [194, 1079]
-	mbauer@us.ibm.com Morgan Bauer: [30, 0]
 	jpeeler@redhat.com Jeff Peeler: [26, 20]
 	sross@redhat.com Solly Ross: [4, 0]
 	gyliu513@gmail.com Guang Ya Liu: [5, 4]
@@ -199,13 +124,13 @@ devel-doc 2531 1716
 	jhansen@deis.com Jason Hansen: [43, 5]
 	sarah.novotny@gmail.com sarahnovotny: [202, 0]
 code 5169 3127
-	kibbles-n-bytes@users.noreply.github.com Michael Kibbe: [1379, 1139]
-	arschles@gmail.com Aaron Schlesinger: [36, 5]
+	mbauer@us.ibm.com Morgan Bauer: [122, 6]
+	mkibbe@google.com Michael Kibbe: [1379, 1139]
 	pmorie@redhat.com Paul Morie: [406, 82]
+	arschles@gmail.com Aaron Schlesinger: [36, 5]
 	decarr@redhat.com Derek Carr: [1, 0]
 	dug@us.ibm.com Doug Davis: [484, 443]
 	kent.rancourt@microsoft.com Kent Rancourt: [26, 1350]
-	mbauer@us.ibm.com Morgan Bauer: [122, 6]
 	jpeeler@redhat.com Jeff Peeler: [157, 0]
 	sross@redhat.com Solly Ross: [11, 2]
 	leungs@us.ibm.com Simon Leung: [1, 1]
@@ -214,17 +139,18 @@ code 5169 3127
 package 0 0
 	kent.rancourt@microsoft.com Kent Rancourt: [0, 0]
 	mmaly@google.com Martin Maly: [0, 0]
-unknown 106280 62090
-	kibbles-n-bytes@users.noreply.github.com Michael Kibbe: [789, 165]
+unknown 107033 62227
+	mbauer@us.ibm.com Morgan Bauer: [9336, 4420]
+	mkibbe@google.com Michael Kibbe: [789, 165]
+	pmorie@redhat.com Paul Morie: [29610, 26460]
 	arschles@gmail.com Aaron Schlesinger: [10639, 4142]
-	pmorie@redhat.com Paul Morie: [28857, 26323]
 	decarr@redhat.com Derek Carr: [2245, 1455]
 	vaikas-google@users.noreply.github.com Ville Aikas: [6840, 5938]
 	nilebox@users.noreply.github.com Nail Islamov: [5, 1]
 	dma@redhat.com DeShuai Ma: [292, 56]
 	dug@us.ibm.com Doug Davis: [1225, 484]
 	kent.rancourt@microsoft.com Kent Rancourt: [5412, 3911]
-	mbauer@us.ibm.com Morgan Bauer: [9336, 4420]
+	agonzalezro@gmail.com Álex González: [7, 5]
 	jpeeler@redhat.com Jeff Peeler: [19932, 12282]
 	sjenning@redhat.com Seth Jennings: [939, 120]
 	marko.luksa@gmail.com Marko Lukša: [444, 271]
@@ -233,7 +159,6 @@ unknown 106280 62090
 	gyliu513@gmail.com Guang Ya Liu: [6, 5]
 	apelisse@google.com Antoine Pelisse: [35, 2]
 	leungs@us.ibm.com Simon Leung: [343, 50]
-	agonzalezro@gmail.com Alexandre González: [7, 5]
 	jforrest@redhat.com Jessica Forrester: [8, 0]
 	jvallejo@redhat.com Juan Vallejo: [7734, 0]
 	richardfung@google.com Richard Fung: [727, 371]
@@ -250,15 +175,16 @@ documentation 65 65
 	dug@us.ibm.com Doug Davis: [0, 60]
 	kent.rancourt@microsoft.com Kent Rancourt: [0, 0]
 	mmaly@google.com Martin Maly: [5, 0]
-build 1394 1064
-	kibbles-n-bytes@users.noreply.github.com Michael Kibbe: [1, 1]
-	arschles@gmail.com Aaron Schlesinger: [102, 34]
+build 1407 1079
+	mbauer@us.ibm.com Morgan Bauer: [110, 61]
+	mkibbe@google.com Michael Kibbe: [1, 1]
 	pmorie@redhat.com Paul Morie: [125, 77]
+	arschles@gmail.com Aaron Schlesinger: [102, 34]
 	decarr@redhat.com Derek Carr: [1, 1]
 	vaikas-google@users.noreply.github.com Ville Aikas: [3, 21]
 	dug@us.ibm.com Doug Davis: [402, 626]
 	kent.rancourt@microsoft.com Kent Rancourt: [179, 219]
-	mbauer@us.ibm.com Morgan Bauer: [110, 61]
+	agonzalezro@gmail.com Álex González: [13, 15]
 	jpeeler@redhat.com Jeff Peeler: [18, 7]
 	sjenning@redhat.com Seth Jennings: [6, 0]
 	marko.luksa@gmail.com Marko Lukša: [3, 0]
@@ -266,10 +192,10 @@ build 1394 1064
 	jvallejo@redhat.com Juan Vallejo: [16, 2]
 	bmelville@google.com Brendan Melville: [39, 0]
 	mmaly@google.com Martin Maly: [388, 14]
-devel-doc 2531 1716
+devel-doc 2533 1717
 code 5169 3127
 package 0 0
-unknown 106280 62090
+unknown 107033 62227
 image 0 0
 documentation 65 65
-build 1394 1064
+build 1407 1079

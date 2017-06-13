@@ -1,92 +1,19 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/cri-containerd.csv
 
-WARNING: duplicate email/empl for pekowski@gmail.com
-WARNING: duplicate email/empl for thingee@gmail.com
-WARNING: duplicate email/empl for t.trifonov@gmail.com
-WARNING: duplicate email/empl for lyz@princessleia.com
-WARNING: duplicate email/empl for robertc@robertcollins.net
-WARNING: duplicate email/empl for clint@fewbar.com
-WARNING: duplicate email/empl for andrew@linuxjedi.co.uk
-WARNING: duplicate email/empl for duncan.thomas@gmail.com
-WARNING: duplicate email/empl for kiall@managedit.ie
-WARNING: duplicate email/empl for devananda.vdv@gmail.com
-WARNING: duplicate email/empl for zaro0508@gmail.com
-WARNING: duplicate email/empl for shrewsbury.dave@gmail.com
-WARNING: duplicate email/empl for j3p0uk@hotmail.com
-WARNING: duplicate email/empl for me@mark.atwood.name
-WARNING: duplicate email/empl for slicknik@gmail.com
-WARNING: duplicate email/empl for cmsj@tenshu.net
-WARNING: duplicate email/empl for anteaya@anteaya.info
-WARNING: duplicate email/empl for greg@greghaynes.net
-WARNING: duplicate email/empl for matt@mattfarina.com
-WARNING: duplicate email/empl for jp@jamezpolley.com
-WARNING: duplicate email/empl for steven@wedontsleep.org
-WARNING: duplicate email/empl for gleebix@gmail.com
-WARNING: duplicate email/empl for code@gentlydownthe.net
-WARNING: duplicate email/empl for morgan.fainberg@gmail.com
-WARNING: duplicate email/empl for jeblair@hp.com
-WARNING: duplicate email/empl for juliaashleykreger@gmail.com
-WARNING: duplicate email/empl for stephane@alum.mit.edu
-WARNING: duplicate email/empl for kragniz@gmail.com
-WARNING: duplicate email/empl for wchrisjohnson@gmail.com
-WARNING: duplicate email/empl for daisy.ycguo@gmail.com
-WARNING: duplicate email/empl for mordred@inaugust.com
-WARNING: duplicate email/empl for zxkuqyb@gmail.com
-WARNING: duplicate email/empl for amigliaccio@internap.com
-WARNING: duplicate email/empl for yorik.sar@gmail.com
-WARNING: duplicate email/empl for e0ne@e0ne.info
-WARNING: duplicate email/empl for gabriel@strikeawe.com
-WARNING: duplicate email/empl for heckj@mac.com
-WARNING: duplicate email/empl for ke.wu@ibeca.me
-WARNING: duplicate email/empl for rushi.agr@gmail.com
-WARNING: duplicate email/empl for salv.orlando@gmail.com
-WARNING: duplicate email/empl for tushar.vitthal.patil@gmail.com
-WARNING: duplicate email/empl for jmckenty@gmail.com
-WARNING: duplicate email/empl for anne@openstack.org
-WARNING: duplicate email/empl for breu@breu.org
-WARNING: duplicate email/empl for cbehrens@codestud.com
-WARNING: duplicate email/empl for clay.gerrard@gmail.com
-WARNING: duplicate email/empl for corywright@gmail.com
-WARNING: duplicate email/empl for cp16net@gmail.com
-WARNING: duplicate email/empl for cthier@gmail.com
-WARNING: duplicate email/empl for darren.birkett@gmail.com
-WARNING: duplicate email/empl for dolph.mathews@gmail.com
-WARNING: duplicate email/empl for ed@leafe.com
-WARNING: duplicate email/empl for github@highbridgellc.com
-WARNING: duplicate email/empl for greglange@gmail.com
-WARNING: duplicate email/empl for hugh@wherenow.org
-WARNING: duplicate email/empl for imsplitbit@gmail.com
-WARNING: duplicate email/empl for jason@koelker.net
-WARNING: duplicate email/empl for jcruz7@gmail.com
-WARNING: duplicate email/empl for josh@jk0.org
-WARNING: duplicate email/empl for mattt@defunct.ca
-WARNING: duplicate email/empl for mbasnight@gmail.com
-WARNING: duplicate email/empl for mike@weirdlooking.com
-WARNING: duplicate email/empl for msherborne@gmail.com
-WARNING: duplicate email/empl for naveedm9@gmail.com
-WARNING: duplicate email/empl for paul@openstack.org
-WARNING: duplicate email/empl for rnirmal@gmail.com
-WARNING: duplicate email/empl for rconradharris@gmail.com
-WARNING: duplicate email/empl for thierry@openstack.org
-WARNING: duplicate email/empl for throughnothing@gmail.com
-WARNING: duplicate email/empl for yoga80@yahoo.com
-WARNING: duplicate email/empl for mark.washenberger@markwash.net
-WARNING: duplicate email/empl for p@draigbrady.com
-WARNING: duplicate email/empl for zaitcev@kotori.zaitcev.us
-WARNING: duplicate email/empl for julie.pichon@gmail.com
-WARNING: duplicate email/empl for ghe@debian.org
-WARNING: duplicate email/empl for sorrison@gmail.com
 unknown@hacker.net Unknown hacker
 taotaotheripper@gmail.com Lantao Liu
 	devel-doc [30, 234]
 	code [3, 2]
-	unknown [9876, 898]
+	unknown [10213, 941]
 	image [0, 0]
 	documentation [0, 0]
 	build [3, 3]
 crazykev@zju.edu.cn Crazykev
-	unknown [78, 89]
+	unknown [250, 121]
+21521209@zju.edu.cn heartlock
+	unknown [455, 13]
+	build [1, 1]
 xlgao@zju.edu.cn Xianglin Gao
 	unknown [510, 52]
 21621232@zju.edu.cn mozhuli
@@ -99,9 +26,6 @@ mikebrow@users.noreply.github.com Mike Brown
 	code [685, 274]
 	build [126, 9]
 	documentation [58, 0]
-21521209@zju.edu.cn heartlock
-	unknown [350, 0]
-	build [1, 1]
 cmluciano@us.ibm.com Christopher M. Luciano
 	unknown [108, 1]
 	build [16, 2]
@@ -114,14 +38,14 @@ devel-doc 565 331
 code 688 276
 	taotaotheripper@gmail.com Lantao Liu: [3, 2]
 	mikebrow@users.noreply.github.com Mike Brown: [685, 274]
-unknown 12271 1361
-	taotaotheripper@gmail.com Lantao Liu: [9876, 898]
-	crazykev@zju.edu.cn Crazykev: [78, 89]
+unknown 12885 1449
+	taotaotheripper@gmail.com Lantao Liu: [10213, 941]
+	crazykev@zju.edu.cn Crazykev: [250, 121]
+	21521209@zju.edu.cn heartlock: [455, 13]
 	xlgao@zju.edu.cn Xianglin Gao: [510, 52]
 	21621232@zju.edu.cn mozhuli: [218, 28]
 	weidonglee27@gmail.com mozhulee: [164, 0]
 	mikebrow@users.noreply.github.com Mike Brown: [967, 293]
-	21521209@zju.edu.cn heartlock: [350, 0]
 	cmluciano@us.ibm.com Christopher M. Luciano: [108, 1]
 image 0 0
 	taotaotheripper@gmail.com Lantao Liu: [0, 0]
@@ -130,12 +54,12 @@ documentation 58 0
 	mikebrow@users.noreply.github.com Mike Brown: [58, 0]
 build 146 15
 	taotaotheripper@gmail.com Lantao Liu: [3, 3]
-	mikebrow@users.noreply.github.com Mike Brown: [126, 9]
 	21521209@zju.edu.cn heartlock: [1, 1]
+	mikebrow@users.noreply.github.com Mike Brown: [126, 9]
 	cmluciano@us.ibm.com Christopher M. Luciano: [16, 2]
 devel-doc 565 331
 code 688 276
-unknown 12271 1361
+unknown 12885 1449
 image 0 0
 documentation 58 0
 build 146 15
