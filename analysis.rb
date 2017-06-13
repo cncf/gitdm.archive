@@ -5,15 +5,18 @@ require 'pry'
 def make_summary(prefix, data)
   data.keys.each do |key|
     sum = 0
+    unknown = 0
     perc = 100.0
     n = data[key].keys.length
-    if data[key].key?('(Unknown)')
-      data[key].each do |name, value|
-        sum += value[0] unless name == '(Unknown)'
+    data[key].each do |name, value|
+      if ['(Unknown)', '(Not Found)'].include?(name)
+        unknown += value[0]
+        n -= 1
+      else
+        sum += value[0]
       end
-      n -= 1
-      perc = sum * 100.0 / (sum + data[key]['(Unknown)'][0])
     end
+    perc = sum * 100.0 / (sum + unknown)
 
     hdr = ['N companies', 'sum', 'percent']
     fn = "report/#{prefix}_#{key}_sum.csv"
@@ -23,6 +26,8 @@ def make_summary(prefix, data)
     end
 
     data[key]["(All known #{n})"] = [sum, perc.round(2)]
+    # [key, n, sum, unknown, perc, "(All known #{n})", data[key]["(All known #{n})"]]
+    # binding.pry
   end
 end
 
