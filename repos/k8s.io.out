@@ -1,77 +1,77 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/k8s.io.csv
 
-unknown@hacker.net Unknown hacker
-thockin@google.com Tim Hockin
+(Unknown) unknown@hacker.net Unknown hacker
+Google thockin@google.com Tim Hockin
 	unknown [555, 49]
 	devel-doc [599, 0]
 	code [153, 79]
 	build [1, 1]
-mwielgus@google.com Marcin Wielgus
+Google mwielgus@google.com Marcin Wielgus
 	unknown [5, 0]
-jgrafton@google.com Jeff Grafton
+Google jgrafton@google.com Jeff Grafton
 	unknown [129, 241]
 	devel-doc [10, 0]
 	code [96, 62]
 	build [5, 0]
-fejta@google.com Erick Fejta
+Google fejta@google.com Erick Fejta
 	unknown [3, 1]
 	code [6, 0]
-sross@redhat.com Solly Ross
+Red Hat sross@redhat.com Solly Ross
 	unknown [5, 0]
-deads@redhat.com deads2k
+Red Hat deads@redhat.com deads2k
 	unknown [20, 0]
-euank@euank.com Euan Kemp
+(Unknown) euank@euank.com Euan Kemp
 	unknown [6, 0]
-dbsmith@google.com Daniel Smith
+Google dbsmith@google.com Daniel Smith
 	unknown [5, 0]
-rmmh@google.com Ryan Hitchman
+Google rmmh@google.com Ryan Hitchman
 	unknown [506, 2]
 	devel-doc [28, 7]
 	code [232, 3]
 	build [27, 6]
-spxtr@google.com Joe Finney
+Google spxtr@google.com Joe Finney
 	unknown [5, 0]
-techtonik@gmail.com anatoly techtonik
+Pear techtonik@gmail.com anatoly techtonik
 	devel-doc [44, 10]
-joe.github@bedafamily.com Joe Beda
+Google joe.github@bedafamily.com Joe Beda
 	unknown [9, 0]
 	code [8, 0]
-mikedanese@google.com Mike Danese
+Google mikedanese@google.com Mike Danese
 	unknown [8, 1]
 	code [11, 4]
-xuchao@google.com Chao Xu
+Google xuchao@google.com Chao Xu
 	unknown [5, 0]
 unknown 1261 294
-	thockin@google.com Tim Hockin: [555, 49]
-	mwielgus@google.com Marcin Wielgus: [5, 0]
-	jgrafton@google.com Jeff Grafton: [129, 241]
-	fejta@google.com Erick Fejta: [3, 1]
-	sross@redhat.com Solly Ross: [5, 0]
-	deads@redhat.com deads2k: [20, 0]
-	euank@euank.com Euan Kemp: [6, 0]
-	dbsmith@google.com Daniel Smith: [5, 0]
-	rmmh@google.com Ryan Hitchman: [506, 2]
-	spxtr@google.com Joe Finney: [5, 0]
-	joe.github@bedafamily.com Joe Beda: [9, 0]
-	mikedanese@google.com Mike Danese: [8, 1]
-	xuchao@google.com Chao Xu: [5, 0]
+	Google thockin@google.com Tim Hockin: [555, 49]
+	Google mwielgus@google.com Marcin Wielgus: [5, 0]
+	Google jgrafton@google.com Jeff Grafton: [129, 241]
+	Google fejta@google.com Erick Fejta: [3, 1]
+	Red Hat sross@redhat.com Solly Ross: [5, 0]
+	Red Hat deads@redhat.com deads2k: [20, 0]
+	(Unknown) euank@euank.com Euan Kemp: [6, 0]
+	Google dbsmith@google.com Daniel Smith: [5, 0]
+	Google rmmh@google.com Ryan Hitchman: [506, 2]
+	Google spxtr@google.com Joe Finney: [5, 0]
+	Google joe.github@bedafamily.com Joe Beda: [9, 0]
+	Google mikedanese@google.com Mike Danese: [8, 1]
+	Google xuchao@google.com Chao Xu: [5, 0]
 devel-doc 681 17
-	thockin@google.com Tim Hockin: [599, 0]
-	jgrafton@google.com Jeff Grafton: [10, 0]
-	rmmh@google.com Ryan Hitchman: [28, 7]
-	techtonik@gmail.com anatoly techtonik: [44, 10]
+	Google thockin@google.com Tim Hockin: [599, 0]
+	Google jgrafton@google.com Jeff Grafton: [10, 0]
+	Google rmmh@google.com Ryan Hitchman: [28, 7]
+	Pear techtonik@gmail.com anatoly techtonik: [44, 10]
 code 506 148
-	thockin@google.com Tim Hockin: [153, 79]
-	jgrafton@google.com Jeff Grafton: [96, 62]
-	fejta@google.com Erick Fejta: [6, 0]
-	rmmh@google.com Ryan Hitchman: [232, 3]
-	joe.github@bedafamily.com Joe Beda: [8, 0]
-	mikedanese@google.com Mike Danese: [11, 4]
+	Google thockin@google.com Tim Hockin: [153, 79]
+	Google jgrafton@google.com Jeff Grafton: [96, 62]
+	Google fejta@google.com Erick Fejta: [6, 0]
+	Google rmmh@google.com Ryan Hitchman: [232, 3]
+	Google joe.github@bedafamily.com Joe Beda: [8, 0]
+	Google mikedanese@google.com Mike Danese: [11, 4]
 build 33 7
-	thockin@google.com Tim Hockin: [1, 1]
-	jgrafton@google.com Jeff Grafton: [5, 0]
-	rmmh@google.com Ryan Hitchman: [27, 6]
+	Google thockin@google.com Tim Hockin: [1, 1]
+	Google jgrafton@google.com Jeff Grafton: [5, 0]
+	Google rmmh@google.com Ryan Hitchman: [27, 6]
 unknown 1261 294
 devel-doc 681 17
 code 506 148

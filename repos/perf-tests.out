@@ -1,81 +1,81 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/perf-tests.csv
 
-unknown@hacker.net Unknown hacker
-shyamjvs@google.com Shyam JVS
+(Unknown) unknown@hacker.net Unknown hacker
+Google shyamjvs@google.com Shyam JVS
 	code [14, 6]
 	unknown [11667, 4142]
 	devel-doc [25, 0]
 	documentation [1173, 0]
 	build [65, 19]
-gmarek@google.com Marek Grabowski
+Google gmarek@google.com Marek Grabowski
 	code [609, 42]
 	unknown [2641, 30]
 	devel-doc [226, 1]
 	documentation [52, 0]
 	build [38, 3]
-wojtekt@google.com Wojciech Tyczynski
+Google wojtekt@google.com Wojciech Tyczynski
 	unknown [14, 8]
 	devel-doc [1, 1]
 	code [43, 3]
-seb@stianj.ug Sebastian Jug
+Red Hat seb@stianj.ug Sebastian Jug
 	unknown [5792, 1112]
 	devel-doc [81, 0]
 	code [25, 0]
-bowei.du@gmail.com Bowei Du
+Google bowei.du@gmail.com Bowei Du
 	devel-doc [245, 44]
 	code [1294, 0]
 	unknown [451, 112]
 	documentation [39, 0]
 	ui [279, 0]
 	build [76, 10]
-tomas.dohnalek@firma.seznam.cz Tomas Dohnalek
+Seznam.cz tomas.dohnalek@firma.seznam.cz Tomas Dohnalek
 	unknown [1, 1]
-timothysc@users.noreply.github.com Timothy St. Clair
-rlourenc@redhat.com Ricardo Lourenco
+(Unknown) timothysc@users.noreply.github.com Timothy St. Clair
+Red Hat rlourenc@redhat.com Ricardo Lourenco
 	unknown [99, 26]
 	devel-doc [168, 0]
-thockin@google.com Tim Hockin
-gkalele@google.com Girish Kalele
+Google thockin@google.com Tim Hockin
+Google gkalele@google.com Girish Kalele
 	unknown [1144, 0]
 	devel-doc [152, 0]
 	code [28, 0]
 	build [102, 0]
 devel-doc 898 46
-	shyamjvs@google.com Shyam JVS: [25, 0]
-	gmarek@google.com Marek Grabowski: [226, 1]
-	wojtekt@google.com Wojciech Tyczynski: [1, 1]
-	seb@stianj.ug Sebastian Jug: [81, 0]
-	bowei.du@gmail.com Bowei Du: [245, 44]
-	rlourenc@redhat.com Ricardo Lourenco: [168, 0]
-	gkalele@google.com Girish Kalele: [152, 0]
+	Google shyamjvs@google.com Shyam JVS: [25, 0]
+	Google gmarek@google.com Marek Grabowski: [226, 1]
+	Google wojtekt@google.com Wojciech Tyczynski: [1, 1]
+	Red Hat seb@stianj.ug Sebastian Jug: [81, 0]
+	Google bowei.du@gmail.com Bowei Du: [245, 44]
+	Red Hat rlourenc@redhat.com Ricardo Lourenco: [168, 0]
+	Google gkalele@google.com Girish Kalele: [152, 0]
 code 2013 51
-	shyamjvs@google.com Shyam JVS: [14, 6]
-	gmarek@google.com Marek Grabowski: [609, 42]
-	wojtekt@google.com Wojciech Tyczynski: [43, 3]
-	seb@stianj.ug Sebastian Jug: [25, 0]
-	bowei.du@gmail.com Bowei Du: [1294, 0]
-	gkalele@google.com Girish Kalele: [28, 0]
+	Google shyamjvs@google.com Shyam JVS: [14, 6]
+	Google gmarek@google.com Marek Grabowski: [609, 42]
+	Google wojtekt@google.com Wojciech Tyczynski: [43, 3]
+	Red Hat seb@stianj.ug Sebastian Jug: [25, 0]
+	Google bowei.du@gmail.com Bowei Du: [1294, 0]
+	Google gkalele@google.com Girish Kalele: [28, 0]
 unknown 21809 5431
-	shyamjvs@google.com Shyam JVS: [11667, 4142]
-	gmarek@google.com Marek Grabowski: [2641, 30]
-	wojtekt@google.com Wojciech Tyczynski: [14, 8]
-	seb@stianj.ug Sebastian Jug: [5792, 1112]
-	bowei.du@gmail.com Bowei Du: [451, 112]
-	tomas.dohnalek@firma.seznam.cz Tomas Dohnalek: [1, 1]
-	rlourenc@redhat.com Ricardo Lourenco: [99, 26]
-	gkalele@google.com Girish Kalele: [1144, 0]
+	Google shyamjvs@google.com Shyam JVS: [11667, 4142]
+	Google gmarek@google.com Marek Grabowski: [2641, 30]
+	Google wojtekt@google.com Wojciech Tyczynski: [14, 8]
+	Red Hat seb@stianj.ug Sebastian Jug: [5792, 1112]
+	Google bowei.du@gmail.com Bowei Du: [451, 112]
+	Seznam.cz tomas.dohnalek@firma.seznam.cz Tomas Dohnalek: [1, 1]
+	Red Hat rlourenc@redhat.com Ricardo Lourenco: [99, 26]
+	Google gkalele@google.com Girish Kalele: [1144, 0]
 documentation 1264 0
-	shyamjvs@google.com Shyam JVS: [1173, 0]
-	gmarek@google.com Marek Grabowski: [52, 0]
-	bowei.du@gmail.com Bowei Du: [39, 0]
+	Google shyamjvs@google.com Shyam JVS: [1173, 0]
+	Google gmarek@google.com Marek Grabowski: [52, 0]
+	Google bowei.du@gmail.com Bowei Du: [39, 0]
 ui 279 0
-	bowei.du@gmail.com Bowei Du: [279, 0]
+	Google bowei.du@gmail.com Bowei Du: [279, 0]
 build 281 32
-	shyamjvs@google.com Shyam JVS: [65, 19]
-	gmarek@google.com Marek Grabowski: [38, 3]
-	bowei.du@gmail.com Bowei Du: [76, 10]
-	gkalele@google.com Girish Kalele: [102, 0]
+	Google shyamjvs@google.com Shyam JVS: [65, 19]
+	Google gmarek@google.com Marek Grabowski: [38, 3]
+	Google bowei.du@gmail.com Bowei Du: [76, 10]
+	Google gkalele@google.com Girish Kalele: [102, 0]
 devel-doc 898 46
 code 2013 51
 unknown 21809 5431

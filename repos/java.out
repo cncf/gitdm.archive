@@ -1,32 +1,32 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/java.csv
 
-unknown@hacker.net Unknown hacker
-bburns@microsoft.com Brendan Burns
+(Unknown) unknown@hacker.net Unknown hacker
+Microsoft bburns@microsoft.com Brendan Burns
 	unknown [15, 2]
 	devel-doc [13, 0]
 	code [921, 97]
 	documentation [143, 17]
-lwander@google.com Lars Wander
+Google lwander@google.com Lars Wander
 	code [4, 16]
-mehdy@google.com Mehdy Bohlool
+Google mehdy@google.com Mehdy Bohlool
 	unknown [80575, 0]
 	devel-doc [1195, 0]
 	code [143353, 0]
 	documentation [220, 0]
 unknown 80590 2
-	bburns@microsoft.com Brendan Burns: [15, 2]
-	mehdy@google.com Mehdy Bohlool: [80575, 0]
+	Microsoft bburns@microsoft.com Brendan Burns: [15, 2]
+	Google mehdy@google.com Mehdy Bohlool: [80575, 0]
 devel-doc 1208 0
-	bburns@microsoft.com Brendan Burns: [13, 0]
-	mehdy@google.com Mehdy Bohlool: [1195, 0]
+	Microsoft bburns@microsoft.com Brendan Burns: [13, 0]
+	Google mehdy@google.com Mehdy Bohlool: [1195, 0]
 code 144278 113
-	bburns@microsoft.com Brendan Burns: [921, 97]
-	lwander@google.com Lars Wander: [4, 16]
-	mehdy@google.com Mehdy Bohlool: [143353, 0]
+	Microsoft bburns@microsoft.com Brendan Burns: [921, 97]
+	Google lwander@google.com Lars Wander: [4, 16]
+	Google mehdy@google.com Mehdy Bohlool: [143353, 0]
 documentation 363 17
-	bburns@microsoft.com Brendan Burns: [143, 17]
-	mehdy@google.com Mehdy Bohlool: [220, 0]
+	Microsoft bburns@microsoft.com Brendan Burns: [143, 17]
+	Google mehdy@google.com Mehdy Bohlool: [220, 0]
 unknown 80590 2
 devel-doc 1208 0
 code 144278 113
