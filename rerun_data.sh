@@ -1,6 +1,7 @@
 #!/bin/sh
 echo "Consider running: pull_kubernetes.sh, update_all_repos.sh and manually check ~/dev/go/src/k8s.io/kubernetes/ (rebase.sh there)"
 echo "Update PULL_DATE after this, and update datasheet dates and report dates to PULL_DATE"
+echo "Also update last_processed.txt with last processed unknown/not found affliation from repos/combined.txt"
 rm -f ./other_repos/*
 echo "All with map to (Unknown)"
 ./all.sh
