@@ -2,22 +2,41 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-aggregator.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
-Red Hat ccoleman@redhat.com Clayton Coleman
-	unknown [0, 4]
-Google mehdy@google.com mbohlool
-	unknown [501, 2863]
-	devel-doc [20, 23]
-	code [4, 4]
+Google jgrafton@google.com Jeff Grafton
+	devel-doc [2, 1]
 Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski
-	unknown [291, 80]
-	devel-doc [1, 0]
+	unknown [344, 268]
+	devel-doc [1, 3]
 	code [0, 10]
+Google mehdy@google.com mbohlool
+	unknown [689, 2863]
+	devel-doc [23, 23]
+	code [4, 4]
+Google dashpole@google.com David Ashpole
+	unknown [12, 4]
+Red Hat ccoleman@redhat.com Clayton Coleman
+	unknown [3, 7]
+Google wfender@google.com Walter Fender
+	unknown [107, 25]
+	devel-doc [1, 0]
+Red Hat sross@redhat.com Solly Ross
+	unknown [52, 53]
+Red Hat deads@redhat.com deads2k
+	unknown [13559, 1330]
+	devel-doc [342, 15]
+	code [545, 42]
+Google thockin@google.com Tim Hockin
+	unknown [1, 1]
+Google stclair@google.com Tim St. Clair
+	unknown [8, 20]
+	devel-doc [1, 0]
+Red Hat shiywang@redhat.com shiywang
+	unknown [232, 0]
+	devel-doc [7, 1]
+Fujitsu chenr.fnst@cn.fujitsu.com xilabao
+	unknown [2, 2]
 Kelowna admin@toph.ca Christoph Blecker
 	unknown [14, 2]
-Red Hat deads@redhat.com deads2k
-	unknown [13388, 817]
-	devel-doc [341, 5]
-	code [545, 42]
 IBM madaxa@cn.ibm.com Klaus Ma
 	unknown [46, 0]
 Google xuchao@google.com Chao Xu
@@ -49,8 +68,6 @@ Zalando m@moscar.net Mikkel Oscar Lyderik Larsen
 	unknown [1, 1]
 Red Hat maszulik@redhat.com Maciej Szulik
 	unknown [0, 41]
-Fujitsu chenr.fnst@cn.fujitsu.com xilabao
-	unknown [1, 1]
 Red Hat jliggitt@redhat.com Jordan Liggitt
 	unknown [4, 4]
 Google wojtekt@google.com Wojciech Tyczynski
@@ -61,12 +78,19 @@ Red Hat sjenning@redhat.com Seth Jennings
 	unknown [4, 109]
 CoreOS eric.chiang.m@gmail.com Eric Chiang
 	unknown [0, 2]
-unknown 14463 5076
-	Red Hat ccoleman@redhat.com Clayton Coleman: [0, 4]
-	Google mehdy@google.com mbohlool: [501, 2863]
-	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [291, 80]
+unknown 15291 5884
+	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [344, 268]
+	Google mehdy@google.com mbohlool: [689, 2863]
+	Google dashpole@google.com David Ashpole: [12, 4]
+	Red Hat ccoleman@redhat.com Clayton Coleman: [3, 7]
+	Google wfender@google.com Walter Fender: [107, 25]
+	Red Hat sross@redhat.com Solly Ross: [52, 53]
+	Red Hat deads@redhat.com deads2k: [13559, 1330]
+	Google thockin@google.com Tim Hockin: [1, 1]
+	Google stclair@google.com Tim St. Clair: [8, 20]
+	Red Hat shiywang@redhat.com shiywang: [232, 0]
+	Fujitsu chenr.fnst@cn.fujitsu.com xilabao: [2, 2]
 	Kelowna admin@toph.ca Christoph Blecker: [14, 2]
-	Red Hat deads@redhat.com deads2k: [13388, 817]
 	IBM madaxa@cn.ibm.com Klaus Ma: [46, 0]
 	Google xuchao@google.com Chao Xu: [65, 1055]
 	ASG Consulting andy.goldstein@gmail.com Andy Goldstein: [52, 7]
@@ -79,24 +103,27 @@ unknown 14463 5076
 	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [2, 1]
 	Zalando m@moscar.net Mikkel Oscar Lyderik Larsen: [1, 1]
 	Red Hat maszulik@redhat.com Maciej Szulik: [0, 41]
-	Fujitsu chenr.fnst@cn.fujitsu.com xilabao: [1, 1]
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [4, 4]
 	Google wojtekt@google.com Wojciech Tyczynski: [24, 24]
 	Google chiachenk@google.com Janet Kuo: [4, 4]
 	Red Hat sjenning@redhat.com Seth Jennings: [4, 109]
 	CoreOS eric.chiang.m@gmail.com Eric Chiang: [0, 2]
-devel-doc 1236 35
-	Google mehdy@google.com mbohlool: [20, 23]
-	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [1, 0]
-	Red Hat deads@redhat.com deads2k: [341, 5]
+devel-doc 1251 50
+	Google jgrafton@google.com Jeff Grafton: [2, 1]
+	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [1, 3]
+	Google mehdy@google.com mbohlool: [23, 23]
+	Google wfender@google.com Walter Fender: [1, 0]
+	Red Hat deads@redhat.com deads2k: [342, 15]
+	Google stclair@google.com Tim St. Clair: [1, 0]
+	Red Hat shiywang@redhat.com shiywang: [7, 1]
 	Google xuchao@google.com Chao Xu: [2, 7]
 	ASG Consulting andy.goldstein@gmail.com Andy Goldstein: [2, 0]
 	Google mikedanese@google.com Mike Danese: [870, 0]
 code 550 57
-	Google mehdy@google.com mbohlool: [4, 4]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [0, 10]
+	Google mehdy@google.com mbohlool: [4, 4]
 	Red Hat deads@redhat.com deads2k: [545, 42]
 	Red Hat dcbw@redhat.com Dan Williams: [1, 1]
-unknown 14463 5076
-devel-doc 1236 35
+unknown 15291 5884
+devel-doc 1251 50
 code 550 57

@@ -3,14 +3,29 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/charts.csv
 
 Oops...funky email (none)
 (Unknown) unknown@hacker.net Unknown hacker
-Mirantis me@slukjanov.name Sergey Lukjanov
-	unknown [4, 4]
+Basekamp scott@r6by.com Scott Rigby
+	unknown [324, 178]
+	devel-doc [50, 0]
+	documentation [15, 5]
 Google ramanathana@google.com Anirudh Ramanathan
 	unknown [674, 40]
 	devel-doc [201, 0]
-	code [158, 3]
+	code [166, 8]
 	build [40, 0]
 	documentation [13, 0]
+Teslabit pfeodrippe@gmail.com Paulo Rafael Feodrippe
+	unknown [19, 2]
+	devel-doc [20, 1]
+Microsoft kris@nivenly.com Kris Nova
+	unknown [6, 5]
+(Unknown) cody.lundquist@gmail.com Cody Lundquist
+	unknown [492, 0]
+	devel-doc [142, 0]
+	code [104, 0]
+	build [30, 0]
+	documentation [33, 0]
+Mirantis me@slukjanov.name Sergey Lukjanov
+	unknown [4, 4]
 クラウドワークス ykuoka@gmail.com KUOKA Yusuke
 	unknown [3, 3]
 Microsoft lachie83@users.noreply.github.com Lachlan Evenson
@@ -22,10 +37,6 @@ Cockroach alexdwanerobinson@gmail.com Alex Robinson
 	unknown [275, 32]
 	devel-doc [209, 19]
 	documentation [28, 1]
-Basekamp scott@r6by.com Scott Rigby
-	unknown [298, 177]
-	devel-doc [34, 0]
-	documentation [15, 5]
 Weaveworks errordeveloper@gmail.com Ilya Dmitrichenko
 	unknown [438, 0]
 	devel-doc [42, 0]
@@ -133,9 +144,6 @@ Codecentric AG unguiculus@gmail.com Reinhard Nägele
 	devel-doc [163, 41]
 	documentation [31, 12]
 	build [1, 1]
-Teslabit pfeodrippe@gmail.com Paulo Rafael Feodrippe
-	unknown [19, 2]
-	devel-doc [20, 1]
 (Unknown) robin@kearney.co.uk Robin Kearney
 	unknown [9, 1]
 	devel-doc [1, 0]
@@ -552,11 +560,13 @@ Engine Yard jhansen@engineyard.com Jason Hansen
 Engine Yard gmonroy@engineyard.com Gabriel Monroy
 	unknown [246, 0]
 	devel-doc [37, 2]
-devel-doc 11605 2656
+devel-doc 11763 2656
+	Basekamp scott@r6by.com Scott Rigby: [50, 0]
 	Google ramanathana@google.com Anirudh Ramanathan: [201, 0]
+	Teslabit pfeodrippe@gmail.com Paulo Rafael Feodrippe: [20, 1]
+	(Unknown) cody.lundquist@gmail.com Cody Lundquist: [142, 0]
 	Microsoft lachie83@users.noreply.github.com Lachlan Evenson: [1068, 55]
 	Cockroach alexdwanerobinson@gmail.com Alex Robinson: [209, 19]
-	Basekamp scott@r6by.com Scott Rigby: [34, 0]
 	Weaveworks errordeveloper@gmail.com Ilya Dmitrichenko: [42, 0]
 	clibs sameer@damagehead.com Sameer Naik: [1671, 52]
 	Project Calico dan@projectcalico.org Dan (Turk): [11, 0]
@@ -585,7 +595,6 @@ devel-doc 11605 2656
 	Microsoft vadice@microsoft.com Vaughn Dice: [45, 0]
 	(Unknown) jesse@thefortytwo.net Jesse Dubay: [4, 3]
 	Codecentric AG unguiculus@gmail.com Reinhard Nägele: [163, 41]
-	Teslabit pfeodrippe@gmail.com Paulo Rafael Feodrippe: [20, 1]
 	(Unknown) robin@kearney.co.uk Robin Kearney: [1, 0]
 	Bitnami adnan@prydoni.us Adnan Abdulhussein: [1124, 857]
 	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [127, 3]
@@ -676,8 +685,9 @@ devel-doc 11605 2656
 	NotFound rmocius@gmail.com Rimantas Mocevicius: [50, 0]
 	Engine Yard jhansen@engineyard.com Jason Hansen: [36, 0]
 	Engine Yard gmonroy@engineyard.com Gabriel Monroy: [37, 2]
-code 1712 1143
-	Google ramanathana@google.com Anirudh Ramanathan: [158, 3]
+code 1824 1148
+	Google ramanathana@google.com Anirudh Ramanathan: [166, 8]
+	(Unknown) cody.lundquist@gmail.com Cody Lundquist: [104, 0]
 	Microsoft lachie83@users.noreply.github.com Lachlan Evenson: [35, 35]
 	Weaveworks errordeveloper@gmail.com Ilya Dmitrichenko: [16, 0]
 	clibs sameer@damagehead.com Sameer Naik: [0, 0]
@@ -696,13 +706,16 @@ code 1712 1143
 	DEIS seth@deis.com Seth Goings: [280, 45]
 	Google zml@google.com Zach Loafman: [50, 0]
 	Google leenders@google.com Robert Leenders: [310, 0]
-unknown 39124 8015
-	Mirantis me@slukjanov.name Sergey Lukjanov: [4, 4]
+unknown 39648 8021
+	Basekamp scott@r6by.com Scott Rigby: [324, 178]
 	Google ramanathana@google.com Anirudh Ramanathan: [674, 40]
+	Teslabit pfeodrippe@gmail.com Paulo Rafael Feodrippe: [19, 2]
+	Microsoft kris@nivenly.com Kris Nova: [6, 5]
+	(Unknown) cody.lundquist@gmail.com Cody Lundquist: [492, 0]
+	Mirantis me@slukjanov.name Sergey Lukjanov: [4, 4]
 	クラウドワークス ykuoka@gmail.com KUOKA Yusuke: [3, 3]
 	Microsoft lachie83@users.noreply.github.com Lachlan Evenson: [2626, 291]
 	Cockroach alexdwanerobinson@gmail.com Alex Robinson: [275, 32]
-	Basekamp scott@r6by.com Scott Rigby: [298, 177]
 	Weaveworks errordeveloper@gmail.com Ilya Dmitrichenko: [438, 0]
 	clibs sameer@damagehead.com Sameer Naik: [4934, 149]
 	Project Calico dan@projectcalico.org Dan (Turk): [44, 3]
@@ -729,7 +742,6 @@ unknown 39124 8015
 	Microsoft vadice@microsoft.com Vaughn Dice: [112, 0]
 	(Unknown) jesse@thefortytwo.net Jesse Dubay: [9, 2]
 	Codecentric AG unguiculus@gmail.com Reinhard Nägele: [685, 282]
-	Teslabit pfeodrippe@gmail.com Paulo Rafael Feodrippe: [19, 2]
 	(Unknown) robin@kearney.co.uk Robin Kearney: [9, 1]
 	Bitnami adnan@prydoni.us Adnan Abdulhussein: [2365, 1105]
 	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [310, 10]
@@ -854,11 +866,12 @@ unknown 39124 8015
 	Engine Yard gmonroy@engineyard.com Gabriel Monroy: [246, 0]
 image 0 0
 	(Unknown) seanknox@users.noreply.github.com Sean Knox: [0, 0]
-documentation 2646 292
+documentation 2679 292
+	Basekamp scott@r6by.com Scott Rigby: [15, 5]
 	Google ramanathana@google.com Anirudh Ramanathan: [13, 0]
+	(Unknown) cody.lundquist@gmail.com Cody Lundquist: [33, 0]
 	Microsoft lachie83@users.noreply.github.com Lachlan Evenson: [108, 9]
 	Cockroach alexdwanerobinson@gmail.com Alex Robinson: [28, 1]
-	Basekamp scott@r6by.com Scott Rigby: [15, 5]
 	Weaveworks errordeveloper@gmail.com Ilya Dmitrichenko: [28, 0]
 	clibs sameer@damagehead.com Sameer Naik: [521, 24]
 	(Unknown) ianburrell@gmail.com Ian Burrell: [4, 2]
@@ -917,8 +930,9 @@ documentation 2646 292
 	(Unknown) ipedrazas@gmail.com Ivan Pedrazas: [7, 6]
 	(Unknown) mvantricht@expandonline.nl Michael van Tricht: [14, 0]
 	(Unknown) mikkeloscar@users.noreply.github.com Mikkel Oscar Lyderik: [25, 0]
-build 52 25
+build 82 25
 	Google ramanathana@google.com Anirudh Ramanathan: [40, 0]
+	(Unknown) cody.lundquist@gmail.com Cody Lundquist: [30, 0]
 	clibs sameer@damagehead.com Sameer Naik: [0, 0]
 	Codecentric AG unguiculus@gmail.com Reinhard Nägele: [1, 1]
 	commercetools admin.sa@gmail.com Sergey Melnik: [2, 15]
@@ -926,9 +940,9 @@ build 52 25
 	DEIS michelle@deis.com Michelle Noorali: [0, 7]
 	(Unknown) travis.cline@gmail.com Travis Cline: [0, 0]
 	DEIS seth@deis.com Seth Goings: [9, 2]
-devel-doc 11605 2656
-code 1712 1143
-unknown 39124 8015
+devel-doc 11763 2656
+code 1824 1148
+unknown 39648 8021
 image 0 0
-documentation 2646 292
-build 52 25
+documentation 2679 292
+build 82 25

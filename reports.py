@@ -476,6 +476,10 @@ def IsUnknown(h):
     empl = h.employer[0][0][1].name
     return h.email[0] == empl or empl == '(Unknown)' or empl == 'NotFound'
 
+def IsSelf(h):
+    empl = h.employer[0][0][1].name
+    return empl == 'Self'
+
 def ReportUnknowns(hlist, cscount):
     #
     # Trim the list to just the unknowns; try to work properly whether
@@ -485,6 +489,20 @@ def ReportUnknowns(hlist, cscount):
     ulist.sort(ComparePCount)
     count = 0
     BeginReport('Developers with unknown affiliation')
+    for h in ulist:
+        pcount = len(h.patches)
+        if pcount > 0:
+            ReportLine(h.full_name_with_aff(), pcount, (pcount*100.0)/cscount)
+            count += 1
+        if count >= ListCount:
+            break
+    EndReport()
+
+def ReportSelfs(hlist, cscount):
+    ulist = [ h for h in hlist if IsSelf(h) ]
+    ulist.sort(ComparePCount)
+    count = 0
+    BeginReport('Developers working on their own behalf')
     for h in ulist:
         pcount = len(h.patches)
         if pcount > 0:

@@ -667,6 +667,7 @@ if DevReports:
     reports.DevReports (hlist, TotalChanged, CSCount, TotalRemoved)
 if ReportUnknowns:
     reports.ReportUnknowns(hlist, CSCount)
+    reports.ReportSelfs(hlist, CSCount)
 reports.EmplReports (elist, TotalChanged, CSCount)
 
 if ReportByFileType and Numstat:

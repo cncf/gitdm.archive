@@ -2,6 +2,13 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-state-metrics.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+CoreOS fab.reinartz@gmail.com Fabian Reinartz
+	unknown [896, 435]
+	devel-doc [18, 9]
+	build [26, 0]
+China Mobile International Limited zounengren@cmss.chinamobile.com zouyee
+	unknown [266, 13]
+	devel-doc [9, 2]
 CoreOS fbranczyk@gmail.com Frederic Branczyk
 	unknown [2835, 1688]
 	devel-doc [137, 139]
@@ -12,16 +19,9 @@ CoreOS fbranczyk@gmail.com Frederic Branczyk
 (Unknown) robsonpeixoto@gmail.com Robson Roberto Souza Peixoto
 	unknown [4, 4]
 	devel-doc [11, 11]
-(Unknown) zouyee1989@gmail.com zouyee
-	unknown [266, 13]
-	devel-doc [8, 2]
-NotFound andy.xning@gmail.com Andy Xie
+Self andy.xning@gmail.com Andy Xie
 	unknown [20, 12]
 	build [5, 3]
-CoreOS fab.reinartz@gmail.com Fabian Reinartz
-	unknown [896, 435]
-	devel-doc [18, 9]
-	build [26, 0]
 SAP arno.uhlig@sap.com Arno Uhlig
 	unknown [177, 7]
 	devel-doc [3, 0]
@@ -75,12 +75,12 @@ Google vishh@users.noreply.github.com Vish Kannan
 Google bgrant0607@users.noreply.github.com Brian Grant
 	devel-doc [203, 0]
 unknown 8411 2531
+	CoreOS fab.reinartz@gmail.com Fabian Reinartz: [896, 435]
+	China Mobile International Limited zounengren@cmss.chinamobile.com zouyee: [266, 13]
 	CoreOS fbranczyk@gmail.com Frederic Branczyk: [2835, 1688]
 	(Unknown) davidoff@qedmf.net Andrew Davidoff: [1611, 343]
 	(Unknown) robsonpeixoto@gmail.com Robson Roberto Souza Peixoto: [4, 4]
-	(Unknown) zouyee1989@gmail.com zouyee: [266, 13]
-	NotFound andy.xning@gmail.com Andy Xie: [20, 12]
-	CoreOS fab.reinartz@gmail.com Fabian Reinartz: [896, 435]
+	Self andy.xning@gmail.com Andy Xie: [20, 12]
 	SAP arno.uhlig@sap.com Arno Uhlig: [177, 7]
 	(Unknown) nv@kuende.com Nicolae Vartolomei: [13, 0]
 	JustWatch dominik.schulz@gauner.org Dominik Schulz: [528, 12]
@@ -96,12 +96,12 @@ unknown 8411 2531
 	Wombat Software UG mail@wombatsoftware.de Daniel Sachse: [43, 1]
 	LeadPages greg.dallavalle@ave81.com Greg Dallavalle: [49, 1]
 	Box sam@box.com Sam Ghods: [1547, 0]
-devel-doc 564 212
+devel-doc 565 212
+	CoreOS fab.reinartz@gmail.com Fabian Reinartz: [18, 9]
+	China Mobile International Limited zounengren@cmss.chinamobile.com zouyee: [9, 2]
 	CoreOS fbranczyk@gmail.com Frederic Branczyk: [137, 139]
 	(Unknown) davidoff@qedmf.net Andrew Davidoff: [3, 0]
 	(Unknown) robsonpeixoto@gmail.com Robson Roberto Souza Peixoto: [11, 11]
-	(Unknown) zouyee1989@gmail.com zouyee: [8, 2]
-	CoreOS fab.reinartz@gmail.com Fabian Reinartz: [18, 9]
 	SAP arno.uhlig@sap.com Arno Uhlig: [3, 0]
 	(Unknown) nv@kuende.com Nicolae Vartolomei: [1, 0]
 	Datadog haissam.kaj@gmail.com Haissam Kaj: [7, 7]
@@ -119,9 +119,9 @@ devel-doc 564 212
 	Box sam@box.com Sam Ghods: [91, 18]
 	Google bgrant0607@users.noreply.github.com Brian Grant: [203, 0]
 build 35 6
-	CoreOS fbranczyk@gmail.com Frederic Branczyk: [4, 3]
-	NotFound andy.xning@gmail.com Andy Xie: [5, 3]
 	CoreOS fab.reinartz@gmail.com Fabian Reinartz: [26, 0]
+	CoreOS fbranczyk@gmail.com Frederic Branczyk: [4, 3]
+	Self andy.xning@gmail.com Andy Xie: [5, 3]
 unknown 8411 2531
-devel-doc 564 212
+devel-doc 565 212
 build 35 6

@@ -2,12 +2,26 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kubernetes.github.io.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Bitnami adnan@prydoni.us Adnan Abdulhussein
+	unknown [2, 0]
+	build [11, 10]
+Google pwittroc+github@google.com Phillip Wittrock
+	devel-doc [19754, 0]
+	code [368834, 1694]
+	unknown [249338, 126480]
+	image [19482, 0]
+	documentation [357288, 19175]
+	ui [426, 0]
+	build [336, 0]
 Google steveperry-53@users.noreply.github.com Steve Perry
 	code [4, 0]
 	unknown [23110, 22279]
 	devel-doc [171, 11]
 	documentation [441, 113]
 	build [499, 93]
+Huawei irfan.rehman@huawei.com irfanurrehman
+	unknown [1, 1]
+	code [1, 1]
 Hitachi Data Systems mitsuhiro.tanino@hds.com Mitsuhiro Tanino
 	unknown [40, 0]
 Socrata jaescobar.cell@gmail.com Alejandro Escobar
@@ -61,14 +75,6 @@ CoreOS kenny.lee_sin_cheong@coreos.com Kenny Lee Sin Cheong
 	build [1, 1]
 (Unknown) sublimino@gmail.com Andrew Martin
 	unknown [4, 2]
-Google pwittroc@google.com Phillip Wittrock
-	devel-doc [19754, 0]
-	code [368834, 1694]
-	unknown [249338, 126480]
-	image [19482, 0]
-	documentation [357288, 19175]
-	ui [426, 0]
-	build [336, 0]
 Google ramanathana@google.com Anirudh Ramanathan
 	unknown [2445, 528]
 	build [15, 0]
@@ -76,8 +82,6 @@ IBM kakronst@us.ibm.com kKronstainBrown
 	unknown [1, 1]
 Self tgraf@suug.ch Thomas Graf
 	unknown [9, 0]
-Huawei irfan.rehman@huawei.com Irfan Ur Rehman
-	unknown [1, 1]
 Google vmik@google.com Mik Vyatskov
 	unknown [1268, 405]
 	image [0, 0]
@@ -1613,6 +1617,7 @@ Atlassian jtblin@atlassian.com Jerome Touffe-Blin
 	unknown [2, 2]
 	devel-doc [2, 2]
 devel-doc 70297 49477
+	Google pwittroc+github@google.com Phillip Wittrock: [19754, 0]
 	Google steveperry-53@users.noreply.github.com Steve Perry: [171, 11]
 	(Unknown) vsmax@users.noreply.github.com Michal Cwienczek: [2, 2]
 	(Unknown) onuralptaner@gmail.com Onuralp Taner: [16, 0]
@@ -1621,7 +1626,6 @@ devel-doc 70297 49477
 	Kelowna admin@toph.ca Christoph Blecker: [20, 19]
 	Red Hat jordan@liggitt.net Jordan Liggitt: [4, 4]
 	Pear techtonik@gmail.com anatoly techtonik: [6, 17]
-	Google pwittroc@google.com Phillip Wittrock: [19754, 0]
 	Google vmik@google.com Mik Vyatskov: [0, 12]
 	IBM spzala@us.ibm.com Sahdev P. Zala: [1, 1]
 	Factotum craig.box@gmail.com craigbox: [395, 201]
@@ -1655,12 +1659,13 @@ devel-doc 70297 49477
 	Mirantis dshulyak@mirantis.com Dmitry Shulyak: [3, 0]
 	Google johndylan@johndylan-macbookpro2.roam.corp.google.com John Mulhausen: [4138, 1697]
 	Atlassian jtblin@atlassian.com Jerome Touffe-Blin: [2, 2]
-code 438494 69133
+code 438495 69134
+	Google pwittroc+github@google.com Phillip Wittrock: [368834, 1694]
 	Google steveperry-53@users.noreply.github.com Steve Perry: [4, 0]
+	Huawei irfan.rehman@huawei.com irfanurrehman: [1, 1]
 	Google ahmetb@google.com Ahmet Alp Balkan: [61, 59]
 	Google chenopis@users.noreply.github.com Andrew Chen: [254, 123]
 	Red Hat jordan@liggitt.net Jordan Liggitt: [1, 1]
-	Google pwittroc@google.com Phillip Wittrock: [368834, 1694]
 	Google marklam@google.com mlambert890b: [238, 6]
 	(Unknown) pauljuliusmartinez@gmail.com PaulJuliusMartinez: [85, 0]
 	Google chiachenk@google.com Janet Kuo: [95, 27]
@@ -1692,8 +1697,11 @@ code 438494 69133
 	Fujitsu higashi.isao@jp.fujitsu.com higashi: [2, 2]
 package 0 0
 	Google johndylan@google.com johndmulhausen: [0, 0]
-unknown 2214564 2017741
+unknown 2214566 2017741
+	Bitnami adnan@prydoni.us Adnan Abdulhussein: [2, 0]
+	Google pwittroc+github@google.com Phillip Wittrock: [249338, 126480]
 	Google steveperry-53@users.noreply.github.com Steve Perry: [23110, 22279]
+	Huawei irfan.rehman@huawei.com irfanurrehman: [1, 1]
 	Hitachi Data Systems mitsuhiro.tanino@hds.com Mitsuhiro Tanino: [40, 0]
 	Socrata jaescobar.cell@gmail.com Alejandro Escobar: [18, 9]
 	(Unknown) karthequian@users.noreply.github.com Karthik Gaekwad: [3, 2]
@@ -1711,11 +1719,9 @@ unknown 2214564 2017741
 	Pear techtonik@gmail.com anatoly techtonik: [12, 12]
 	CoreOS kenny.lee_sin_cheong@coreos.com Kenny Lee Sin Cheong: [1, 1]
 	(Unknown) sublimino@gmail.com Andrew Martin: [4, 2]
-	Google pwittroc@google.com Phillip Wittrock: [249338, 126480]
 	Google ramanathana@google.com Anirudh Ramanathan: [2445, 528]
 	IBM kakronst@us.ibm.com kKronstainBrown: [1, 1]
 	Self tgraf@suug.ch Thomas Graf: [9, 0]
-	Huawei irfan.rehman@huawei.com Irfan Ur Rehman: [1, 1]
 	Google vmik@google.com Mik Vyatskov: [1268, 405]
 	Fujitsu chenr.fnst@cn.fujitsu.com Charlie R.C: [64, 12]
 	Red Hat mkargaki@redhat.com Michail Kargakis: [578, 258]
@@ -2368,7 +2374,7 @@ unknown 2214564 2017741
 	Stack Overflow matt@stackoverflow.com Matt Sherman: [1, 1]
 	Atlassian jtblin@atlassian.com Jerome Touffe-Blin: [2, 2]
 image 58708 24763
-	Google pwittroc@google.com Phillip Wittrock: [19482, 0]
+	Google pwittroc+github@google.com Phillip Wittrock: [19482, 0]
 	Google vmik@google.com Mik Vyatskov: [0, 0]
 	Google marklam@google.com mlambert890b: [0, 0]
 	IBM mkorejo@gmail.com Murad Korejo: [242, 401]
@@ -2401,11 +2407,11 @@ image 58708 24763
 	ElasticBox matt@elasticbox.com Matt Nickles: [2, 2]
 	Stack Overflow matt@stackoverflow.com Matt Sherman: [0, 0]
 documentation 859528 343973
+	Google pwittroc+github@google.com Phillip Wittrock: [357288, 19175]
 	Google steveperry-53@users.noreply.github.com Steve Perry: [441, 113]
 	Google ahmetb@google.com Ahmet Alp Balkan: [18, 4]
 	Google chenopis@users.noreply.github.com Andrew Chen: [10729, 2761]
 	NotFound mcginnisrr@gmail.com Ryan McGinnis: [6, 4]
-	Google pwittroc@google.com Phillip Wittrock: [357288, 19175]
 	ZTE Corporation zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang: [5, 5]
 	Factotum craig.box@gmail.com craigbox: [2, 2]
 	Google ddonnelly@google.com devin-donnelly: [43, 18]
@@ -2467,15 +2473,16 @@ documentation 859528 343973
 	(Unknown) jdubay@discogsinc.com Jesse Dubay: [1, 1]
 	Stack Overflow matt@stackoverflow.com Matt Sherman: [1, 1]
 ui 501 75
-	Google pwittroc@google.com Phillip Wittrock: [426, 0]
+	Google pwittroc+github@google.com Phillip Wittrock: [426, 0]
 	Google johndylan@google.com johndmulhausen: [75, 75]
-build 14259 12166
+build 14270 12176
+	Bitnami adnan@prydoni.us Adnan Abdulhussein: [11, 10]
+	Google pwittroc+github@google.com Phillip Wittrock: [336, 0]
 	Google steveperry-53@users.noreply.github.com Steve Perry: [499, 93]
 	Google chenopis@users.noreply.github.com Andrew Chen: [227, 99]
 	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [1, 0]
 	Red Hat jordan@liggitt.net Jordan Liggitt: [36, 14]
 	CoreOS kenny.lee_sin_cheong@coreos.com Kenny Lee Sin Cheong: [1, 1]
-	Google pwittroc@google.com Phillip Wittrock: [336, 0]
 	Google ramanathana@google.com Anirudh Ramanathan: [15, 0]
 	Google vmik@google.com Mik Vyatskov: [0, 40]
 	ZTE Corporation zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang: [15, 15]
@@ -2503,10 +2510,10 @@ build 14259 12166
 	Google johndylan@google.com johndmulhausen: [10877, 11208]
 	Google johndylan@johndylan-macbookpro2.roam.corp.google.com John Mulhausen: [945, 366]
 devel-doc 70297 49477
-code 438494 69133
+code 438495 69134
 package 0 0
-unknown 2214564 2017741
+unknown 2214566 2017741
 image 58708 24763
 documentation 859528 343973
 ui 501 75
-build 14259 12166
+build 14270 12176

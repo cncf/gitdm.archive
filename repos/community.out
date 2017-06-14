@@ -2,40 +2,51 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/community.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Hyper.sh feiskyer@users.noreply.github.com Pengfei Ni
+	unknown [314, 3]
+Google sarah.novotny@gmail.com sarahnovotny
+	unknown [60, 3]
+	devel-doc [35, 28]
+Google vishnuk@google.com Vishnu Kannan
+	unknown [2427, 427]
+	devel-doc [32, 25]
+	documentation [8, 0]
+	build [1, 1]
+	image [0, 0]
+Kelowna admin@toph.ca Christoph Blecker
+	unknown [27, 51]
+	devel-doc [4, 4]
+Microsoft bburns@microsoft.com Brendan Burns
+	unknown [876, 21]
+	devel-doc [2, 0]
+Google joe.github@bedafamily.com Joe Beda
+	unknown [464, 33]
+	devel-doc [54, 7]
+	build [32, 7]
+	image [0, 0]
 (Unknown) ttr314@googlemail.com Timo Reimann
 	unknown [2, 0]
 Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski
 	unknown [721, 12]
+Rackspace jamie.hannaford@rackspace.com Jamie Hannaford
+	unknown [1219, 383]
+	devel-doc [702, 511]
+	code [38, 0]
+	build [20, 5]
+	documentation [62, 7]
 Red Hat jordan@liggitt.net Jordan Liggitt
 	unknown [388, 57]
-Google sarah.novotny@gmail.com sarahnovotny
-	unknown [60, 3]
-	devel-doc [35, 28]
 DEIS jdumars@gmail.com Jason Singer DuMars
 	unknown [47, 22]
 	devel-doc [34, 3]
 Red Hat bchilds@redhat.com bradley childs
 	unknown [1, 1]
-Google joe.github@bedafamily.com Joe Beda
-	unknown [457, 30]
-	devel-doc [42, 6]
-	build [32, 7]
-	image [0, 0]
-Rackspace jamie.hannaford@rackspace.com Jamie Hannaford
-	unknown [1205, 381]
-	devel-doc [702, 511]
-	code [38, 0]
-	build [20, 5]
-	documentation [62, 7]
 Canonical marco@ceppi.net Marco Ceppi
 	unknown [6, 3]
 Red Hat pmorie@redhat.com Paul Morie
 	unknown [4248, 801]
 	devel-doc [56, 31]
 	build [14, 0]
-Kelowna admin@toph.ca Christoph Blecker
-	unknown [27, 51]
-	devel-doc [4, 4]
 (Unknown) timothysc@users.noreply.github.com Timothy St. Clair
 	unknown [145, 0]
 Samsung spiffxp@gmail.com Aaron Crickenberger
@@ -167,8 +178,6 @@ Red Hat directxman12+github@gmail.com Solly Ross
 	devel-doc [1, 1]
 Google chenopis@users.noreply.github.com Andrew Chen
 	devel-doc [4, 4]
-Hyper.sh feiskyer@users.noreply.github.com Pengfei Ni
-	unknown [314, 3]
 Pear techtonik@gmail.com anatoly techtonik
 	unknown [1, 1]
 Google erick@fejta.com Erick Fejta
@@ -185,9 +194,6 @@ IBM cmluciano@us.ibm.com Christopher M. Luciano
 Red Hat hekumar@redhat.com Hemant Kumar
 	unknown [235, 30]
 	devel-doc [1, 1]
-Microsoft brendan.d.burns@gmail.com Brendan Burns
-	unknown [875, 20]
-	devel-doc [2, 0]
 ZTE Corporation zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang
 	devel-doc [2, 2]
 Google enisoc@google.com Anthony Yeh
@@ -259,9 +265,6 @@ CoreOS euan.kemp@coreos.com Euan Kemp
 	devel-doc [1, 1]
 Apache jay@apache.org jay vyas
 	unknown [159, 29]
-Google vishnuk@google.com Vishnu kannan
-	unknown [2321, 416]
-	image [0, 0]
 BetterWorks diwu1989@users.noreply.github.com Di Wu
 	unknown [5, 5]
 (Unknown) mml@users.noreply.github.com Matt Liggett
@@ -803,13 +806,15 @@ Yext meirfischer@gmail.com Meir Fischer
 	unknown [3, 3]
 Google kouhei@google.com Kouhei Ueno
 	unknown [1, 1]
-devel-doc 3842 1846
+devel-doc 3886 1872
 	Google sarah.novotny@gmail.com sarahnovotny: [35, 28]
-	DEIS jdumars@gmail.com Jason Singer DuMars: [34, 3]
-	Google joe.github@bedafamily.com Joe Beda: [42, 6]
-	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [702, 511]
-	Red Hat pmorie@redhat.com Paul Morie: [56, 31]
+	Google vishnuk@google.com Vishnu Kannan: [32, 25]
 	Kelowna admin@toph.ca Christoph Blecker: [4, 4]
+	Microsoft bburns@microsoft.com Brendan Burns: [2, 0]
+	Google joe.github@bedafamily.com Joe Beda: [54, 7]
+	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [702, 511]
+	DEIS jdumars@gmail.com Jason Singer DuMars: [34, 3]
+	Red Hat pmorie@redhat.com Paul Morie: [56, 31]
 	Samsung spiffxp@gmail.com Aaron Crickenberger: [267, 109]
 	IBM gyliu513@gmail.com Guang Ya Liu: [6, 3]
 	IBM mspreitz@us.ibm.com Mike Spreitzer: [2, 0]
@@ -841,7 +846,6 @@ devel-doc 3842 1846
 	Google chenopis@users.noreply.github.com Andrew Chen: [4, 4]
 	Red Hat eparis@redhat.com Eric Paris: [5, 5]
 	Red Hat hekumar@redhat.com Hemant Kumar: [1, 1]
-	Microsoft brendan.d.burns@gmail.com Brendan Burns: [2, 0]
 	ZTE Corporation zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang: [2, 2]
 	Google mehdy@google.com Mehdy Bohlool: [9, 5]
 	CNM Consulting clove@cnmconsulting.net chrislovecnm: [28, 13]
@@ -910,18 +914,21 @@ devel-doc 3842 1846
 	Google mikejeffrey@users.noreply.github.com MikeJeffrey: [19, 0]
 code 38 0
 	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [38, 0]
-unknown 94132 37504
+unknown 94260 37521
+	Hyper.sh feiskyer@users.noreply.github.com Pengfei Ni: [314, 3]
+	Google sarah.novotny@gmail.com sarahnovotny: [60, 3]
+	Google vishnuk@google.com Vishnu Kannan: [2427, 427]
+	Kelowna admin@toph.ca Christoph Blecker: [27, 51]
+	Microsoft bburns@microsoft.com Brendan Burns: [876, 21]
+	Google joe.github@bedafamily.com Joe Beda: [464, 33]
 	(Unknown) ttr314@googlemail.com Timo Reimann: [2, 0]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [721, 12]
+	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [1219, 383]
 	Red Hat jordan@liggitt.net Jordan Liggitt: [388, 57]
-	Google sarah.novotny@gmail.com sarahnovotny: [60, 3]
 	DEIS jdumars@gmail.com Jason Singer DuMars: [47, 22]
 	Red Hat bchilds@redhat.com bradley childs: [1, 1]
-	Google joe.github@bedafamily.com Joe Beda: [457, 30]
-	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [1205, 381]
 	Canonical marco@ceppi.net Marco Ceppi: [6, 3]
 	Red Hat pmorie@redhat.com Paul Morie: [4248, 801]
-	Kelowna admin@toph.ca Christoph Blecker: [27, 51]
 	(Unknown) timothysc@users.noreply.github.com Timothy St. Clair: [145, 0]
 	Samsung spiffxp@gmail.com Aaron Crickenberger: [284, 71]
 	IBM gyliu513@gmail.com Guang Ya Liu: [32, 33]
@@ -968,7 +975,6 @@ unknown 94132 37504
 	Google vishh@users.noreply.github.com Vish Kannan: [9, 6]
 	Google zihongz@google.com Zihong Zheng: [61, 1]
 	Red Hat directxman12+github@gmail.com Solly Ross: [743, 0]
-	Hyper.sh feiskyer@users.noreply.github.com Pengfei Ni: [314, 3]
 	Pear techtonik@gmail.com anatoly techtonik: [1, 1]
 	Google erick@fejta.com Erick Fejta: [330, 118]
 	Red Hat eparis@redhat.com Eric Paris: [163, 199]
@@ -976,7 +982,6 @@ unknown 94132 37504
 	IBM cmluciano@us.ibm.com Christopher M. Luciano: [1, 1]
 	(Unknown) soltysh@gmail.com Maciej Szulik: [831, 61]
 	Red Hat hekumar@redhat.com Hemant Kumar: [235, 30]
-	Microsoft brendan.d.burns@gmail.com Brendan Burns: [875, 20]
 	Google enisoc@google.com Anthony Yeh: [402, 83]
 	Red Hat deads@redhat.com deads2k: [996, 7]
 	Google mehdy@google.com Mehdy Bohlool: [321, 12]
@@ -1006,7 +1011,6 @@ unknown 94132 37504
 	Google ygg@google.com Yang Guo: [1, 1]
 	CoreOS euan.kemp@coreos.com Euan Kemp: [423, 51]
 	Apache jay@apache.org jay vyas: [159, 29]
-	Google vishnuk@google.com Vishnu kannan: [2321, 416]
 	BetterWorks diwu1989@users.noreply.github.com Di Wu: [5, 5]
 	(Unknown) mml@users.noreply.github.com Matt Liggett: [17, 17]
 	ZTE Corporation li.guangxu@zte.com.cn guangxuli: [3, 3]
@@ -1227,12 +1231,12 @@ unknown 94132 37504
 	(Unknown) pnowaczyk.mail@gmail.com Przemo Nowaczyk: [3, 3]
 	Google kouhei@google.com Kouhei Ueno: [1, 1]
 image 2493 550
+	Google vishnuk@google.com Vishnu Kannan: [0, 0]
 	Google joe.github@bedafamily.com Joe Beda: [0, 0]
 	Google stclair@google.com Tim St. Clair: [0, 0]
 	Google etune@google.com Eric Tune: [113, 0]
 	Google gmarek@google.com Marek Grabowski: [0, 0]
 	CoreOS brandon.philips@coreos.com Brandon Philips: [0, 0]
-	Google vishnuk@google.com Vishnu kannan: [0, 0]
 	Google yjhong@google.com Yu-Ju Hong: [0, 0]
 	Google quinton@google.com Quinton Hoole: [0, 0]
 	Google filipg@google.com Filip Grzadkowski: [0, 0]
@@ -1246,18 +1250,20 @@ image 2493 550
 	Huawei wangzefeng@huawei.com Kevin: [0, 0]
 	Connectifier ben@connectifier.com Ben McCann: [49, 49]
 	Google freighttrain@google.com Jeffrey Paine: [0, 0]
-documentation 62 7
+documentation 70 7
+	Google vishnuk@google.com Vishnu Kannan: [8, 0]
 	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [62, 7]
 	Red Hat jberkus@redhat.com Josh Berkus: [0, 0]
-build 69 13
+build 70 14
+	Google vishnuk@google.com Vishnu Kannan: [1, 1]
 	Google joe.github@bedafamily.com Joe Beda: [32, 7]
 	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [20, 5]
 	Red Hat pmorie@redhat.com Paul Morie: [14, 0]
 	Google djmm@google.com David McMahon: [1, 1]
 	ZTE Corporation wang.yuexiao@zte.com.cn yuexiao-wang: [2, 0]
-devel-doc 3842 1846
+devel-doc 3886 1872
 code 38 0
-unknown 94132 37504
+unknown 94260 37521
 image 2493 550
-documentation 62 7
-build 69 13
+documentation 70 7
+build 70 14

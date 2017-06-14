@@ -2,6 +2,10 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/other_repos/kubernetes_range_unknown_2017-03-01_2017-04-01.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Red Hat dcbw@redhat.com Dan Williams
+	unknown [419, 261]
+	devel-doc [0, 1]
+	code [114, 136]
 Red Hat ffranz@redhat.com Fabiano Franz
 	code [17, 0]
 	unknown [361, 7]
@@ -20,10 +24,6 @@ Google mtaufen@google.com Michael Taufen
 	build [58, 0]
 Red Hat ppospisi@redhat.com pospispa
 	unknown [39, 9]
-Red Hat dcbw@redhat.com Dan Williams
-	unknown [403, 247]
-	devel-doc [0, 1]
-	code [114, 136]
 Red Hat ccoleman@redhat.com Clayton Coleman
 	unknown [192, 113]
 	devel-doc [29, 0]
@@ -529,10 +529,10 @@ zlabjp kazuki.suda@gmail.com Kazuki Suda
 (Unknown) 409107750@qq.com mlmhl
 	unknown [2, 2]
 devel-doc 7860 2691
+	Red Hat dcbw@redhat.com Dan Williams: [0, 1]
 	Red Hat ffranz@redhat.com Fabiano Franz: [9, 1]
 	Red Hat danw@redhat.com Dan Winship: [49, 0]
 	Google mtaufen@google.com Michael Taufen: [81, 0]
-	Red Hat dcbw@redhat.com Dan Williams: [0, 1]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [29, 0]
 	Huawei shashidhara.td@huawei.com shashidharatd: [37, 3]
 	Red Hat shiywang@redhat.com shiywang: [0, 1]
@@ -611,9 +611,9 @@ devel-doc 7860 2691
 	(Unknown) yong.tang.github@outlook.com Yong Tang: [3, 3]
 	Google acidburn@google.com Jess Frazelle: [827, 0]
 code 1784 621
+	Red Hat dcbw@redhat.com Dan Williams: [114, 136]
 	Red Hat ffranz@redhat.com Fabiano Franz: [17, 0]
 	Red Hat danw@redhat.com Dan Winship: [1, 0]
-	Red Hat dcbw@redhat.com Dan Williams: [114, 136]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [7, 2]
 	Huawei shashidhara.td@huawei.com shashidharatd: [12, 23]
 	Red Hat shiywang@redhat.com shiywang: [4, 0]
@@ -664,13 +664,13 @@ code 1784 621
 	Google nikhiljindal@google.com nikhiljindal: [15, 2]
 	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [4, 0]
 	Hitachi Data Systems mitsuhiro.tanino@hds.com mtanino: [1, 1]
-unknown 69049 31524
+unknown 69065 31538
+	Red Hat dcbw@redhat.com Dan Williams: [419, 261]
 	Red Hat ffranz@redhat.com Fabiano Franz: [361, 7]
 	JD.COM ailusazh@126.com ailusazh: [4, 1]
 	Red Hat danw@redhat.com Dan Winship: [1662, 15]
 	Google mtaufen@google.com Michael Taufen: [553, 0]
 	Red Hat ppospisi@redhat.com pospispa: [39, 9]
-	Red Hat dcbw@redhat.com Dan Williams: [403, 247]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [192, 113]
 	Huawei shashidhara.td@huawei.com shashidharatd: [196, 122]
 	Red Hat shiywang@redhat.com shiywang: [195, 187]
@@ -878,7 +878,7 @@ translation 6980 354
 	Microsoft bburns@google.com Brendan Burns: [6980, 354]
 devel-doc 7860 2691
 code 1784 621
-unknown 69049 31524
+unknown 69065 31538
 documentation 19 7
 build 177 150
 translation 6980 354
