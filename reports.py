@@ -72,7 +72,7 @@ def ReportLine (text, count, pct):
     global HTMLclass
     if count == 0:
         return
-    Outfile.write ('%-45s %4d (%.1f%%)\n' % (text, count, pct))
+    Outfile.write ('%-80s %4d (%.1f%%)\n' % (text, count, pct))
     if HTMLfile:
         HTMLfile.write (TRow % (HClasses[HTMLclass], text, count, pct))
         HTMLclass ^= 1
@@ -81,7 +81,7 @@ def ReportLineStr (text, count, extra):
     global HTMLclass
     if count == 0:
         return
-    Outfile.write ('%-45s %4d %s\n' % (text, count, extra))
+    Outfile.write ('%-80s %4d %s\n' % (text, count, extra))
     if HTMLfile:
         HTMLfile.write (TRowStr % (HClasses[HTMLclass], text, count, extra))
         HTMLclass ^= 1

@@ -1,5 +1,5 @@
 idx,company,n,percent
-0,(All known 84),284,81.38
+0,(All known 85),285,81.66
 1,Google,73,20.9
 2,(Unknown),61,17.5
 3,Red Hat,39,11.2
@@ -8,31 +8,31 @@ idx,company,n,percent
 6,(Self),13,3.7
 7,IBM,12,3.4
 8,CoreOS,10,2.9
-9,VMware,7,2.0
-10,Canonical,7,2.0
-11,Microsoft,6,1.7
-12,Mirantis,6,1.7
+9,Canonical,7,2.0
+10,VMware,7,2.0
+11,Mirantis,6,1.7
+12,Microsoft,6,1.7
 13,Huawei,5,1.4
 14,Fujitsu,4,1.1
-15,(Not Found),4,1.1
-16,Tencent,3,0.9
-17,Cisco,3,0.9
+15,Cisco,3,0.9
+16,(Not Found),3,0.9
+17,Tencent,3,0.9
 18,EasyStack,3,0.9
-19,Qq *,2,0.6
-20,Live *,2,0.6
-21,Outlook *,2,0.6
-22,DaoCloud,2,0.6
-23,Weaveworks,2,0.6
-24,Hyper.sh,2,0.6
-25,Apache,2,0.6
-26,Rackspace,2,0.6
-27,Caicloud,2,0.6
-28,Atlassian,2,0.6
-29,Net EASE 网易有态度,2,0.6
-30,SalesForce,2,0.6
-31,HP,2,0.6
-32,UsersNoreplyGithub *,2,0.6
-33,Hotmail *,2,0.6
+19,Atlassian,2,0.6
+20,Net EASE 网易有态度,2,0.6
+21,SalesForce,2,0.6
+22,HP,2,0.6
+23,Live *,2,0.6
+24,Outlook *,2,0.6
+25,Qq *,2,0.6
+26,Hotmail *,2,0.6
+27,UsersNoreplyGithub *,2,0.6
+28,DaoCloud,2,0.6
+29,Weaveworks,2,0.6
+30,Hyper.sh,2,0.6
+31,Apache,2,0.6
+32,Rackspace,2,0.6
+33,Caicloud,2,0.6
 34,globo.com,1,0.3
 35,Ceph,1,0.3
 36,Juju Ecosystem,1,0.3
@@ -55,127 +55,128 @@ idx,company,n,percent
 53,RightScale,1,0.3
 54,ocadotechnology,1,0.3
 55,Compose,1,0.3
-56,Loodse GmbH,1,0.3
-57,Ruby Together,1,0.3
-58,jobandtalent,1,0.3
-59,Jd.Com,1,0.3
-60,Fedoraproject *,1,0.3
-61,Amazon *,1,0.3
-62,Kutsevol *,1,0.3
-63,Cornell *,1,0.3
-64,Portworx *,1,0.3
-65,ZlabCo *,1,0.3
-66,Coit *,1,0.3
-67,Gradiant *,1,0.3
-68,Nordstrom *,1,0.3
-69,Michali *,1,0.3
-70,Primeton *,1,0.3
-71,Ancestry *,1,0.3
-72,Uswitch *,1,0.3
-73,Henrik-schmidt *,1,0.3
-74,Itsvit *,1,0.3
-75,Brkt *,1,0.3
-76,Yandex *,1,0.3
-77,Cruwe *,1,0.3
-78,Asiainfo *,1,0.3
-79,Adrianmacneil *,1,0.3
-80,StudUni-heidelberg *,1,0.3
-81,Q42 *,1,0.3
-82,Pulsifer *,1,0.3
-83,Omeid *,1,0.3
-84,Rstor *,1,0.3
-85,fabiand@fedoraproject.org,1,0.3
-86,sidvin@amazon.com,1,0.3
-87,djosborne10@gmail.com,1,0.3
-88,max@kutsevol.com,1,0.3
-89,sdw35@cornell.edu,1,0.3
-90,nikitaraghunath@gmail.com,1,0.3
-91,alberto.garcial@hotmail.com,1,0.3
-92,shiyang.wang@outlook.com,1,0.3
-93,harsh@portworx.com,1,0.3
-94,tousami@zlab.co.jp,1,0.3
-95,suyogbarve@gmail.com,1,0.3
-96,kmter@live.com,1,0.3
-97,ravi.gadde@gmail.com,1,0.3
-98,horwitzja@gmail.com,1,0.3
-99,fgimenez@coit.es,1,0.3
-100,talk.to.waseem@gmail.com,1,0.3
-101,luk.burchard@gmail.com,1,0.3
-102,emaildanwilson@gmail.com,1,0.3
-103,xxiaozhou@gmail.com,1,0.3
-104,dconstenla@gradiant.org,1,0.3
-105,andrew.oneill@nordstrom.com,1,0.3
-106,pc@michali.net,1,0.3
-107,shaynexwang@gmail.com,1,0.3
-108,dima.shmakov87@gmail.com,1,0.3
-109,ancosen@gmail.com,1,0.3
-110,licl@primeton.com,1,0.3
-111,nbutton@ancestry.com,1,0.3
-112,klausenbusk@hotmail.com,1,0.3
-113,ninkendo@gmail.com,1,0.3
-114,fabrizio.pandini@gmail.com,1,0.3
-115,matthew.potter@uswitch.com,1,0.3
-116,henrik@henrik-schmidt.de,1,0.3
-117,kb@itsvit.org,1,0.3
-118,bvanzant@brkt.com,1,0.3
-119,crassirostris@yandex.com,1,0.3
-120,sky.captin@gmail.com,1,0.3
-121,cjr@cruwe.de,1,0.3
-122,nathan.button@gmail.com,1,0.3
-123,weiwei.inf@gmail.com,1,0.3
-124,marton.natko@gmail.com,1,0.3
-125,robertojrojas@gmail.com,1,0.3
-126,yasstij11@gmail.com,1,0.3
-127,1585370057@qq.com,1,0.3
-128,liuxu@asiainfo.com,1,0.3
-129,vivekbhat@live.com,1,0.3
-130,jinsenorita@gmail.com,1,0.3
-131,adrian@adrianmacneil.com,1,0.3
-132,tnozicka@gmail.com,1,0.3
-133,sidharthamn@gmail.com,1,0.3
-134,matthias.greiner@stud.uni-heidelberg.de,1,0.3
-135,yong.tang.github@outlook.com,1,0.3
-136,ypwebstuff@gmail.com,1,0.3
-137,hufeng1987@gmail.com,1,0.3
-138,public@omeid.me,1,0.3
-139,jonathan@pulsifer.ca,1,0.3
-140,yencheng.chou@gmail.com,1,0.3
-141,nitisht@users.noreply.github.com,1,0.3
-142,davidewatson@gmail.com,1,0.3
-143,girikuncoro@users.noreply.github.com,1,0.3
-144,sanderp@q42.nl,1,0.3
-145,geekard@qq.com,1,0.3
-146,rober.morales@rstor.io,1,0.3
-147,Inuits,1,0.3
-148,Heptio,1,0.3
-149,Rancher Labs,1,0.3
-150,ASG Consulting,1,0.3
-151,Kelowna,1,0.3
-152,"Styra, Inc.",1,0.3
-153,Tata Consultancy Services,1,0.3
-154,Rook,1,0.3
-155,Amadeus,1,0.3
-156,Airbnb,1,0.3
-157,Elisa,1,0.3
-158,42,1,0.3
-159,JPMorgan Chase & Co.,1,0.3
-160,Samsung,1,0.3
-161,Concur,1,0.3
-162,Apprenda,1,0.3
-163,Wattpad,1,0.3
-164,Socrata,1,0.3
-165,Tigera,1,0.3
-166,Zalando,1,0.3
-167,eBay,1,0.3
-168,Hitachi Data Systems,1,0.3
-169,Pardot,1,0.3
-170,FathomDB,1,0.3
-171,Tyk,1,0.3
-172,Feedtrail,1,0.3
-173,zlabjp,1,0.3
-174,TravelSky Technology Limited,1,0.3
-175,Cockroach,1,0.3
-176,Igneous Systems,1,0.3
-177,Bits Working,1,0.3
-178,FOSSEE,1,0.3
-179,China Mobile International Limited,1,0.3
+56,Alternative Storage,1,0.3
+57,Loodse GmbH,1,0.3
+58,Ruby Together,1,0.3
+59,jobandtalent,1,0.3
+60,Jd.Com,1,0.3
+61,Fedoraproject *,1,0.3
+62,Amazon *,1,0.3
+63,Kutsevol *,1,0.3
+64,Cornell *,1,0.3
+65,Portworx *,1,0.3
+66,ZlabCo *,1,0.3
+67,Coit *,1,0.3
+68,Gradiant *,1,0.3
+69,Nordstrom *,1,0.3
+70,Michali *,1,0.3
+71,Primeton *,1,0.3
+72,Ancestry *,1,0.3
+73,Uswitch *,1,0.3
+74,Henrik-schmidt *,1,0.3
+75,Itsvit *,1,0.3
+76,Brkt *,1,0.3
+77,Yandex *,1,0.3
+78,Cruwe *,1,0.3
+79,Asiainfo *,1,0.3
+80,Adrianmacneil *,1,0.3
+81,StudUni-heidelberg *,1,0.3
+82,Q42 *,1,0.3
+83,Pulsifer *,1,0.3
+84,Omeid *,1,0.3
+85,Rstor *,1,0.3
+86,fabiand@fedoraproject.org,1,0.3
+87,sidvin@amazon.com,1,0.3
+88,djosborne10@gmail.com,1,0.3
+89,max@kutsevol.com,1,0.3
+90,sdw35@cornell.edu,1,0.3
+91,nikitaraghunath@gmail.com,1,0.3
+92,alberto.garcial@hotmail.com,1,0.3
+93,shiyang.wang@outlook.com,1,0.3
+94,harsh@portworx.com,1,0.3
+95,tousami@zlab.co.jp,1,0.3
+96,suyogbarve@gmail.com,1,0.3
+97,kmter@live.com,1,0.3
+98,ravi.gadde@gmail.com,1,0.3
+99,horwitzja@gmail.com,1,0.3
+100,fgimenez@coit.es,1,0.3
+101,talk.to.waseem@gmail.com,1,0.3
+102,luk.burchard@gmail.com,1,0.3
+103,emaildanwilson@gmail.com,1,0.3
+104,xxiaozhou@gmail.com,1,0.3
+105,dconstenla@gradiant.org,1,0.3
+106,andrew.oneill@nordstrom.com,1,0.3
+107,pc@michali.net,1,0.3
+108,shaynexwang@gmail.com,1,0.3
+109,dima.shmakov87@gmail.com,1,0.3
+110,ancosen@gmail.com,1,0.3
+111,licl@primeton.com,1,0.3
+112,nbutton@ancestry.com,1,0.3
+113,klausenbusk@hotmail.com,1,0.3
+114,ninkendo@gmail.com,1,0.3
+115,fabrizio.pandini@gmail.com,1,0.3
+116,matthew.potter@uswitch.com,1,0.3
+117,henrik@henrik-schmidt.de,1,0.3
+118,kb@itsvit.org,1,0.3
+119,bvanzant@brkt.com,1,0.3
+120,crassirostris@yandex.com,1,0.3
+121,sky.captin@gmail.com,1,0.3
+122,cjr@cruwe.de,1,0.3
+123,nathan.button@gmail.com,1,0.3
+124,weiwei.inf@gmail.com,1,0.3
+125,marton.natko@gmail.com,1,0.3
+126,robertojrojas@gmail.com,1,0.3
+127,yasstij11@gmail.com,1,0.3
+128,1585370057@qq.com,1,0.3
+129,liuxu@asiainfo.com,1,0.3
+130,vivekbhat@live.com,1,0.3
+131,jinsenorita@gmail.com,1,0.3
+132,adrian@adrianmacneil.com,1,0.3
+133,tnozicka@gmail.com,1,0.3
+134,sidharthamn@gmail.com,1,0.3
+135,matthias.greiner@stud.uni-heidelberg.de,1,0.3
+136,yong.tang.github@outlook.com,1,0.3
+137,ypwebstuff@gmail.com,1,0.3
+138,hufeng1987@gmail.com,1,0.3
+139,public@omeid.me,1,0.3
+140,jonathan@pulsifer.ca,1,0.3
+141,yencheng.chou@gmail.com,1,0.3
+142,nitisht@users.noreply.github.com,1,0.3
+143,davidewatson@gmail.com,1,0.3
+144,girikuncoro@users.noreply.github.com,1,0.3
+145,sanderp@q42.nl,1,0.3
+146,geekard@qq.com,1,0.3
+147,rober.morales@rstor.io,1,0.3
+148,Inuits,1,0.3
+149,Heptio,1,0.3
+150,Rancher Labs,1,0.3
+151,ASG Consulting,1,0.3
+152,Kelowna,1,0.3
+153,"Styra, Inc.",1,0.3
+154,Tata Consultancy Services,1,0.3
+155,Rook,1,0.3
+156,Amadeus,1,0.3
+157,Airbnb,1,0.3
+158,Elisa,1,0.3
+159,42,1,0.3
+160,JPMorgan Chase & Co.,1,0.3
+161,Samsung,1,0.3
+162,Concur,1,0.3
+163,Apprenda,1,0.3
+164,Wattpad,1,0.3
+165,Socrata,1,0.3
+166,Tigera,1,0.3
+167,Zalando,1,0.3
+168,eBay,1,0.3
+169,Hitachi Data Systems,1,0.3
+170,Pardot,1,0.3
+171,FathomDB,1,0.3
+172,Tyk,1,0.3
+173,Feedtrail,1,0.3
+174,zlabjp,1,0.3
+175,TravelSky Technology Limited,1,0.3
+176,Cockroach,1,0.3
+177,Igneous Systems,1,0.3
+178,Bits Working,1,0.3
+179,FOSSEE,1,0.3
+180,China Mobile International Limited,1,0.3
