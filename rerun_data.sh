@@ -1,4 +1,5 @@
 #!/bin/sh
+rm -f ./other_repos/*
 echo "All with map to (Unknown)"
 ./all.sh
 echo "All without mapping"
