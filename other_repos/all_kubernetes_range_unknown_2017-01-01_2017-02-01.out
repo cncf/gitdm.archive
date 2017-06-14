@@ -3,6 +3,11 @@ open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_u
 
 yarntime@163.com is an author name, probably not what you want
 (Unknown) unknown@hacker.net Unknown hacker
+FathomDB justin@fathomdb.com Justin Santa Barbara
+	unknown [7896, 2997]
+	devel-doc [122, 5]
+	code [73, 10]
+	build [40, 38]
 IBM liamwhite@uk.ibm.com Liam White
 	unknown [344, 40]
 	devel-doc [2, 0]
@@ -59,6 +64,9 @@ Apprenda pires@apprenda.com Paulo Pires
 	unknown [559, 707]
 	devel-doc [3, 7]
 	documentation [1, 0]
+IBM mbauer@us.ibm.com Morgan Bauer
+	unknown [1007, 71]
+	build [3, 3]
 eBay zhouhaibing089@gmail.com zhouhaibing089
 	unknown [160, 43]
 	devel-doc [5, 1]
@@ -93,11 +101,6 @@ CoreOS hongchaodeng1@gmail.com Hongchao Deng
 	build [7, 0]
 (Unknown) norlund@gmail.com jmn
 	unknown [1, 1]
-FathomDB justin@fathomdb.com Justin Santa Barbara
-	unknown [7892, 2993]
-	devel-doc [122, 5]
-	code [73, 10]
-	build [40, 38]
 WIDEN mgoodness@gmail.com Michael Goodness
 	unknown [158, 5]
 	devel-doc [73, 0]
@@ -257,9 +260,6 @@ Google dashpole@google.com David Ashpole
 	devel-doc [80499, 79622]
 (Unknown) michmike@users.noreply.github.com Michael Michael
 	devel-doc [4, 4]
-IBM mbauer@us.ibm.com Morgan Bauer
-	unknown [1000, 70]
-	build [3, 3]
 Google msau@google.com Michelle Au
 	unknown [264, 231]
 Samsung spiffxp@gmail.com Aaron Crickenberger
@@ -1251,7 +1251,7 @@ Self glaubitz@physik.fu-berlin.de John Paul Adrian Glaubitz
 	unknown [2, 1]
 Content Analyst Company brandon.l.gauthier@gmail.com Brandon L. Gauthier
 	unknown [19, 5]
-NotFound andy.xning@gmail.com Andy Xie
+Self andy.xning@gmail.com Andy Xie
 	unknown [39, 22]
 	devel-doc [2, 1]
 Codigami aps.sids@gmail.com Amanpreet Singh
@@ -1285,6 +1285,7 @@ Google saied@google.com Saied Kazemi
 	unknown [30, 0]
 	code [222, 0]
 devel-doc 120727 112795
+	FathomDB justin@fathomdb.com Justin Santa Barbara: [122, 5]
 	IBM liamwhite@uk.ibm.com Liam White: [2, 0]
 	Google wojtekt@google.com Wojciech Tyczynski: [87, 14]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [2522, 2722]
@@ -1300,7 +1301,6 @@ devel-doc 120727 112795
 	Wattpad andrew@wattpad.com andrewsykim: [128, 12]
 	Google jgrafton@google.com Jeff Grafton: [15312, 81]
 	CoreOS brandon@ifup.org Brandon Philips: [1, 1]
-	FathomDB justin@fathomdb.com Justin Santa Barbara: [122, 5]
 	WIDEN mgoodness@gmail.com Michael Goodness: [73, 0]
 	(Unknown) javishi@gmail.com Ravi Mehra: [2, 0]
 	DarkDNA git@amanda.darkdna.net Amanda Cameron: [41, 39]
@@ -1448,10 +1448,11 @@ devel-doc 120727 112795
 	(Unknown) jeffmendoza@users.noreply.github.com Jeff Mendoza: [13, 0]
 	Google aprindle@google.com Aaron Prindle: [2, 1]
 	UPMC slokas@upmc.edu Steve Sloka: [2, 2]
-	NotFound andy.xning@gmail.com Andy Xie: [2, 1]
+	Self andy.xning@gmail.com Andy Xie: [2, 1]
 	Codigami aps.sids@gmail.com Amanpreet Singh: [6, 4]
 	IBM dug@us.ibm.com Doug Davis: [6, 0]
 code 118893 64996
+	FathomDB justin@fathomdb.com Justin Santa Barbara: [73, 10]
 	Google wojtekt@google.com Wojciech Tyczynski: [334, 526]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [332, 55]
 	Google mehdy@google.com mbohlool: [20154, 17695]
@@ -1463,7 +1464,6 @@ code 118893 64996
 	Google jgrafton@google.com Jeff Grafton: [167, 80]
 	CoreOS me@quentin-machu.fr Quentin Machu: [80, 37]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [6, 1]
-	FathomDB justin@fathomdb.com Justin Santa Barbara: [73, 10]
 	Bitnami adnan@prydoni.us Adnan Abdulhussein: [2, 2]
 	Google viglesias@google.com Vic Iglesias: [171, 13]
 	Datapipe shanestarcher@gmail.com Shane Starcher: [2, 1]
@@ -1564,7 +1564,8 @@ code 118893 64996
 	Google saied@google.com Saied Kazemi: [222, 0]
 package 0 0
 	Google shyamjvs@google.com Shyam JVS: [0, 0]
-unknown 401022 958846
+unknown 401033 958851
+	FathomDB justin@fathomdb.com Justin Santa Barbara: [7896, 2997]
 	IBM liamwhite@uk.ibm.com Liam White: [344, 40]
 	Zalando m@moscar.net Mikkel Oscar Lyderik Larsen: [9, 9]
 	Google wojtekt@google.com Wojciech Tyczynski: [1637, 190]
@@ -1581,6 +1582,7 @@ unknown 401022 958846
 	Google nikhiljindal@google.com nikhiljindal: [32, 106]
 	Google grod@google.com Garrett Rodrigues: [421, 199]
 	Apprenda pires@apprenda.com Paulo Pires: [559, 707]
+	IBM mbauer@us.ibm.com Morgan Bauer: [1007, 71]
 	eBay zhouhaibing089@gmail.com zhouhaibing089: [160, 43]
 	EastBanc Technologies oatamanenko@eastbanctech.com Oleg Atamanenko: [2320, 4]
 	Google mwielgus@google.com Marcin Wielgus: [4015, 1993]
@@ -1591,7 +1593,6 @@ unknown 401022 958846
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [178, 81]
 	CoreOS hongchaodeng1@gmail.com Hongchao Deng: [82, 52]
 	(Unknown) norlund@gmail.com jmn: [1, 1]
-	FathomDB justin@fathomdb.com Justin Santa Barbara: [7892, 2993]
 	WIDEN mgoodness@gmail.com Michael Goodness: [158, 5]
 	(Unknown) javishi@gmail.com Ravi Mehra: [13, 1]
 	DarkDNA git@amanda.darkdna.net Amanda Cameron: [576, 291]
@@ -1634,7 +1635,6 @@ unknown 401022 958846
 	Google ramanathana@google.com Anirudh: [279, 22520]
 	Google pszczesniak@google.com Piotr Szczesniak: [136, 2641]
 	Google dashpole@google.com David Ashpole: [570, 274]
-	IBM mbauer@us.ibm.com Morgan Bauer: [1000, 70]
 	Google msau@google.com Michelle Au: [264, 231]
 	Google vishnuk@google.com Vishnu Kannan: [542, 160]
 	Google minhan.xia@gmail.com Minhan Xia: [1199, 184]
@@ -1960,7 +1960,7 @@ unknown 401022 958846
 	Wattpad paulo@wattpad.com Paulo Bittencourt: [1, 1]
 	Self glaubitz@physik.fu-berlin.de John Paul Adrian Glaubitz: [2, 1]
 	Content Analyst Company brandon.l.gauthier@gmail.com Brandon L. Gauthier: [19, 5]
-	NotFound andy.xning@gmail.com Andy Xie: [39, 22]
+	Self andy.xning@gmail.com Andy Xie: [39, 22]
 	Red Hat rlourenc@redhat.com Ricardo Lourenco: [73, 0]
 	CoreOS casey.callendrello@coreos.com Casey Callendrello: [383, 326]
 	IBM dug@us.ibm.com Doug Davis: [655, 167]
@@ -2047,19 +2047,19 @@ ui 212 0
 	Google spxtr@google.com Joe Finney: [6, 0]
 	Google fejta@google.com Erick Fejta: [3, 0]
 build 2226 2392
+	FathomDB justin@fathomdb.com Justin Santa Barbara: [40, 38]
 	Google wojtekt@google.com Wojciech Tyczynski: [3, 1]
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [101, 37]
+	IBM mbauer@us.ibm.com Morgan Bauer: [3, 3]
 	Google jgrafton@google.com Jeff Grafton: [130, 116]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [2, 2]
 	CoreOS hongchaodeng1@gmail.com Hongchao Deng: [7, 0]
-	FathomDB justin@fathomdb.com Justin Santa Barbara: [40, 38]
 	(Unknown) javishi@gmail.com Ravi Mehra: [1, 1]
 	(Unknown) krancour@users.noreply.github.com Kent Rancourt: [88, 129]
 	IBM dims@linux.vnet.ibm.com Davanum Srinivas: [46, 11]
 	Google pwittroc@google.com Phillip Wittrock: [84, 3]
 	Google ramanathana@google.com Anirudh: [0, 144]
 	Google pszczesniak@google.com Piotr Szczesniak: [2, 2]
-	IBM mbauer@us.ibm.com Morgan Bauer: [3, 3]
 	Red Hat jpeeler@redhat.com Jeff Peeler: [15, 3]
 	Google beeps@google.com Prashanth B: [77, 3]
 	Google shyamjvs@google.com Shyam JVS: [31, 320]
@@ -2122,7 +2122,7 @@ translation 2791 1406
 devel-doc 120727 112795
 code 118893 64996
 package 0 0
-unknown 401022 958846
+unknown 401033 958851
 image 3248 0
 documentation 54513 22114
 ui 212 0

@@ -4,6 +4,11 @@ open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_u
 Carl B. beethoven1110@gmail.com is an author name, probably not what you want
 yarntime@163.com is an author name, probably not what you want
 (Unknown) unknown@hacker.net Unknown hacker
+Red Hat ccoleman@redhat.com Clayton Coleman
+	unknown [9574, 4880]
+	devel-doc [378, 441]
+	code [15, 15]
+	documentation [4, 0]
 Bulletproof gus@inodes.org Angus Lees
 	unknown [113, 159]
 	devel-doc [25, 25]
@@ -300,7 +305,7 @@ Google gmarek@google.com gmarek
 	documentation [2, 0]
 SAP marian.schwarz@sap.com Marian Schwarz
 	unknown [3, 2]
-NotFound andy.xning@gmail.com andy xie
+Self andy.xning@gmail.com andy xie
 	unknown [186, 57]
 	devel-doc [1, 1]
 	build [12, 7]
@@ -392,11 +397,6 @@ NotFound leave24534@gmail.com foliage
 	unknown [2, 2]
 Giant Swarm marian@giantswarm.io Marian Steinbach
 	documentation [1, 1]
-Red Hat ccoleman@redhat.com Clayton Coleman
-	unknown [8889, 4719]
-	devel-doc [376, 440]
-	code [15, 15]
-	documentation [4, 0]
 Red Hat mkhan@redhat.com Monis Khan
 	unknown [924, 1624]
 	devel-doc [40, 99]
@@ -1178,7 +1178,8 @@ Google krousey@users.noreply.github.com krousey
 Self wonderfly@users.noreply.github.com Daniel Wang
 Google mikewu@google.com Ke Wu
 	unknown [9, 9]
-devel-doc 21595 8628
+devel-doc 21597 8629
+	Red Hat ccoleman@redhat.com Clayton Coleman: [378, 441]
 	Bulletproof gus@inodes.org Angus Lees: [25, 25]
 	Google apelisse@google.com Antoine Pelisse: [5, 0]
 	Google mwielgus@google.com Marcin Wielgus: [309, 211]
@@ -1232,7 +1233,7 @@ devel-doc 21595 8628
 	Google etune@google.com Eric Tune: [33, 9]
 	IBM mkumatag@in.ibm.com Manjunath A Kumatagi: [1, 1]
 	Google gmarek@google.com gmarek: [49, 15]
-	NotFound andy.xning@gmail.com andy xie: [1, 1]
+	Self andy.xning@gmail.com andy xie: [1, 1]
 	Google spxtr@google.com Joe Finney: [64, 38]
 	Google mtaufen@google.com Michael Taufen: [14, 0]
 	Red Hat mpatel@redhat.com Mrunal Patel: [16, 0]
@@ -1242,7 +1243,6 @@ devel-doc 21595 8628
 	Huawei zhangwei555@huawei.com Zhang Wei: [1, 0]
 	Google bryk@google.com Piotr Bryk: [9, 4]
 	Fujitsu christoph.held@est.fujitsu.com Christoph Held: [27, 26]
-	Red Hat ccoleman@redhat.com Clayton Coleman: [376, 440]
 	Red Hat mkhan@redhat.com Monis Khan: [40, 99]
 	Red Hat sttts@redhat.com Dr. Stefan Schimanski: [1, 2]
 	Red Hat deads@redhat.com deads2k: [49, 264]
@@ -1329,6 +1329,7 @@ devel-doc 21595 8628
 	Google mmaly@google.com Martin Maly: [1126, 0]
 	DEIS jhansen@deis.com Jason Hansen: [13, 1]
 code 205228 46522
+	Red Hat ccoleman@redhat.com Clayton Coleman: [15, 15]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [23, 12]
 	CoreOS xiangli.cs@gmail.com Xiang Li: [0, 1]
 	(Unknown) hongchaodeng@users.noreply.github.com Hongchao Deng: [5, 3]
@@ -1377,7 +1378,6 @@ code 205228 46522
 	Fujitsu s.florek91@gmail.com Sebastian Florek: [627, 470]
 	Fujitsu batikanu@yahoo.com Batikan Urcan: [276, 1]
 	Fujitsu denis.poisson@ts.fujitsu.com Denis Poisson: [5, 1413]
-	Red Hat ccoleman@redhat.com Clayton Coleman: [15, 15]
 	Red Hat sttts@redhat.com Dr. Stefan Schimanski: [80, 44]
 	Red Hat deads@redhat.com deads2k: [20, 2]
 	Google wojtekt@google.com Wojciech Tyczynski: [195, 98]
@@ -1453,7 +1453,8 @@ code 205228 46522
 package 0 0
 	DEIS kent@deis.com Kent Rancourt: [0, 0]
 	Google mmaly@google.com Martin Maly: [0, 0]
-unknown 473803 114134
+unknown 474488 114295
+	Red Hat ccoleman@redhat.com Clayton Coleman: [9574, 4880]
 	Bulletproof gus@inodes.org Angus Lees: [113, 159]
 	Google apelisse@google.com Antoine Pelisse: [3714, 1040]
 	Google mwielgus@google.com Marcin Wielgus: [10559, 1669]
@@ -1526,7 +1527,7 @@ unknown 473803 114134
 	Google foxish@users.noreply.github.com Anirudh Ramanathan: [14, 27]
 	Google gmarek@google.com gmarek: [923, 505]
 	SAP marian.schwarz@sap.com Marian Schwarz: [3, 2]
-	NotFound andy.xning@gmail.com andy xie: [186, 57]
+	Self andy.xning@gmail.com andy xie: [186, 57]
 	Google spxtr@google.com Joe Finney: [3713, 2860]
 	(Unknown) michael.a.scheetz@gmail.com Michael Scheetz: [22, 0]
 	Google mtaufen@google.com Michael Taufen: [299, 225]
@@ -1550,7 +1551,6 @@ unknown 473803 114134
 	Fujitsu batikanu@yahoo.com Batikan Urcan: [202, 263]
 	Fujitsu denis.poisson@ts.fujitsu.com Denis Poisson: [645, 9]
 	NotFound leave24534@gmail.com foliage: [2, 2]
-	Red Hat ccoleman@redhat.com Clayton Coleman: [8889, 4719]
 	Red Hat mkhan@redhat.com Monis Khan: [924, 1624]
 	Red Hat sttts@redhat.com Dr. Stefan Schimanski: [1212, 587]
 	Red Hat deads@redhat.com deads2k: [4369, 1840]
@@ -1820,6 +1820,7 @@ image 6671 405
 	NotFound ankurshukla16@gmail.com ankurshukla: [0, 0]
 	(Unknown) baldwin@stackpointcloud.com Matt Baldwin: [0, 0]
 documentation 91398 1669
+	Red Hat ccoleman@redhat.com Clayton Coleman: [4, 0]
 	Bulletproof gus@inodes.org Angus Lees: [3, 3]
 	Google mwielgus@google.com Marcin Wielgus: [23, 0]
 	Bitnami sameer@bitnami.com Sameer Naik: [124, 19]
@@ -1854,7 +1855,6 @@ documentation 91398 1669
 	Fujitsu batikanu@yahoo.com Batikan Urcan: [99, 11]
 	Fujitsu denis.poisson@ts.fujitsu.com Denis Poisson: [339, 362]
 	Giant Swarm marian@giantswarm.io Marian Steinbach: [1, 1]
-	Red Hat ccoleman@redhat.com Clayton Coleman: [4, 0]
 	Red Hat deads@redhat.com deads2k: [8, 0]
 	Google wojtekt@google.com Wojciech Tyczynski: [5, 4]
 	(Unknown) mrevilgnome@gmail.com Matthew Stump: [2, 2]
@@ -1919,7 +1919,7 @@ build 2089 1639
 	Google senlu@google.com Sen Lu: [1, 1]
 	Google zml@google.com Zach Loafman: [3, 3]
 	Google beeps@google.com Prashanth B: [3, 1]
-	NotFound andy.xning@gmail.com andy xie: [12, 7]
+	Self andy.xning@gmail.com andy xie: [12, 7]
 	Google spxtr@google.com Joe Finney: [69, 62]
 	Red Hat mheon@redhat.com Matthew Heon: [5, 1]
 	Red Hat runcom@redhat.com Antonio Murdaca: [4, 2]
@@ -1964,10 +1964,10 @@ build 2089 1639
 	Google mmaly@google.com Martin Maly: [383, 10]
 	Red Hat pmorie@redhat.com Paul Morie: [14, 0]
 	Engine Yard arschles@gmail.com Aaron Schlesinger: [12, 12]
-devel-doc 21595 8628
+devel-doc 21597 8629
 code 205228 46522
 package 0 0
-unknown 473803 114134
+unknown 474488 114295
 image 6671 405
 documentation 91398 1669
 ui 293 0

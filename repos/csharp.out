@@ -2,12 +2,21 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/csharp.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Microsoft bburns@microsoft.com Brendan Burns
+	unknown [42485, 0]
+	devel-doc [26, 0]
+	code [166316, 0]
 Google mehdy@google.com Mehdy Bohlool
 	unknown [7, 0]
 	devel-doc [203, 0]
-unknown 7 0
+unknown 42492 0
+	Microsoft bburns@microsoft.com Brendan Burns: [42485, 0]
 	Google mehdy@google.com Mehdy Bohlool: [7, 0]
-devel-doc 203 0
+devel-doc 229 0
+	Microsoft bburns@microsoft.com Brendan Burns: [26, 0]
 	Google mehdy@google.com Mehdy Bohlool: [203, 0]
-unknown 7 0
-devel-doc 203 0
+code 166316 0
+	Microsoft bburns@microsoft.com Brendan Burns: [166316, 0]
+unknown 42492 0
+devel-doc 229 0
+code 166316 0

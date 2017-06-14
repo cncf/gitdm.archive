@@ -2,48 +2,85 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/apiserver.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng
+	unknown [85, 55]
+	devel-doc [2, 1]
+Red Hat jliggitt@redhat.com Jordan Liggitt
+	unknown [1031, 560]
+	devel-doc [7, 8]
 Red Hat ccoleman@redhat.com Clayton Coleman
-	unknown [1107, 599]
-	devel-doc [59, 39]
+	unknown [3188, 907]
+	devel-doc [117, 56]
+Computer Science and Engineering, IIT Kanpur saksham0808@gmail.com Saksham Sharma
+	unknown [706, 56]
+	devel-doc [53, 0]
+Google wojtekt@google.com Wojciech Tyczynski
+	unknown [306, 253]
+	devel-doc [8, 6]
+Red Hat deads@redhat.com deads2k
+	unknown [37330, 3424]
+	devel-doc [452, 242]
+	code [175, 0]
+(Unknown) stuart.warren@ocado.com stuart.warren
+	unknown [7, 7]
+(Unknown) sdw35@cornell.edu Scott Weiss
+	unknown [461, 0]
+	devel-doc [7, 0]
+Kelowna admin@toph.ca Christoph Blecker
+	unknown [31, 17]
+Red Hat ffranz@redhat.com Fabiano Franz
+	unknown [6, 0]
+	devel-doc [7, 0]
+Google stclair@google.com Tim St. Clair
+	unknown [12839, 598]
+	devel-doc [215, 3]
 Google mehdy@google.com mbohlool
-	unknown [179, 25]
-	devel-doc [37, 22]
+	unknown [1412, 162]
+	devel-doc [52, 25]
+Google dashpole@google.com David Ashpole
+	unknown [32, 27]
+Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski
+	unknown [43319, 1641]
+	devel-doc [1925, 549]
+	code [102, 0]
+Google xuchao@google.com Chao Xu
+	unknown [519, 491]
+	devel-doc [18, 17]
+CoreOS eric.chiang.m@gmail.com Eric Chiang
+	unknown [882, 35]
+	devel-doc [62, 0]
+Self lukasz.szaszkiewicz@gmail.com p0lyn0mial
+	unknown [965, 87]
+	devel-doc [92, 24]
+Google wfender@google.com Walter Fender
+	unknown [236, 0]
+	devel-doc [12, 1]
+Red Hat mkhan@redhat.com Monis Khan
+	unknown [47, 5]
+Google thockin@google.com Tim Hockin
+	unknown [1, 1]
+Fujitsu mashimiao.fnst@cn.fujitsu.com Ma Shimiao
+Fujitsu chenr.fnst@cn.fujitsu.com xilabao
+	unknown [2, 6]
+IBM mbauer@us.ibm.com Morgan Bauer
+	unknown [7, 1]
+	devel-doc [3, 2]
+Self stephenhsu90@gmail.com Di Xu
+	unknown [7, 7]
+(Unknown) deads2k@users.noreply.github.com David Eads
+(Unknown) tpetr@hubspot.com Tom Petr
+	devel-doc [1, 1]
 ZTE Corporation yu.peng36@zte.com.cn yupengzte
 	unknown [1, 1]
 Google shyamjvs@google.com Shyam Jeedigunta
 	unknown [3, 2]
-Google stclair@google.com Tim St. Clair
-	unknown [8549, 18]
-	devel-doc [129, 1]
-Kelowna admin@toph.ca Christoph Blecker
-	unknown [23, 9]
-Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski
-	unknown [41088, 1066]
-	devel-doc [1835, 546]
-	code [102, 0]
-Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng
-	unknown [63, 30]
-	devel-doc [1, 1]
-Red Hat deads@redhat.com deads2k
-	unknown [37190, 3246]
-	devel-doc [451, 242]
-	code [175, 0]
-Self lukasz.szaszkiewicz@gmail.com p0lyn0mial
-	unknown [371, 31]
-	devel-doc [15, 1]
 Google nikhiljindal@google.com nikhiljindal
 	unknown [204, 45]
-Google xuchao@google.com Chao Xu
-	unknown [444, 491]
-	devel-doc [16, 17]
 Atlassian nislamov@atlassian.com Nail Islamov
 	unknown [5, 5]
 Google rmmh@google.com Ryan Hitchman
 	unknown [92, 4]
 	devel-doc [6, 1]
-(Unknown) deads2k@users.noreply.github.com David Eads
-IBM mbauer@us.ibm.com Morgan Bauer
-	devel-doc [3, 2]
 ZTE Corporation zhao.xiangpeng@zte.com.cn xiangpengzhao
 	unknown [2, 2]
 Google mikedanese@google.com Mike Danese
@@ -61,21 +98,14 @@ Apache jwhitlock@apache.org Jeremy Whitlock
 	code [107, 0]
 Google enisoc@google.com Anthony Yeh
 	unknown [71, 16]
-Red Hat mkhan@redhat.com Monis Khan
-	unknown [10, 0]
 eBay zhouhaibing089@gmail.com zhouhaibing089
 	unknown [48, 6]
-Red Hat jliggitt@redhat.com Jordan Liggitt
-	unknown [339, 71]
-	devel-doc [2, 0]
 Red Hat marun@redhat.com Maru Newby
 	unknown [42, 43]
 Google gmarek@google.com gmarek
 	unknown [15, 9]
 Elisa jesse.haka@elisa.fi Jesse Haka
 	unknown [7, 7]
-Fujitsu chenr.fnst@cn.fujitsu.com xilabao
-	unknown [1, 5]
 Google mml@google.com Matt Liggett
 	unknown [23, 3]
 IBM spzala@us.ibm.com Sahdev P. Zala
@@ -102,13 +132,8 @@ Google mengqiy@google.com ymqytw
 	unknown [34, 2]
 Red Hat maszulik@redhat.com Maciej Szulik
 	unknown [0, 88]
-CoreOS eric.chiang.m@gmail.com Eric Chiang
-	unknown [26, 8]
 Red Hat decarr@redhat.com Derek Carr
 	unknown [4, 3]
-Google wojtekt@google.com Wojciech Tyczynski
-	unknown [195, 173]
-	devel-doc [8, 6]
 Google chiachenk@google.com Janet Kuo
 	unknown [4, 4]
 Red Hat sjenning@redhat.com Seth Jennings
@@ -121,19 +146,33 @@ Red Hat rrati@redhat.com Robert Rati
 	unknown [2, 0]
 HarmonyCloud chenjg@harmonycloud.cn fate-grand-order
 	unknown [1, 1]
-unknown 91547 6630
-	Red Hat ccoleman@redhat.com Clayton Coleman: [1107, 599]
-	Google mehdy@google.com mbohlool: [179, 25]
+unknown 105381 9198
+	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [85, 55]
+	Red Hat jliggitt@redhat.com Jordan Liggitt: [1031, 560]
+	Red Hat ccoleman@redhat.com Clayton Coleman: [3188, 907]
+	Computer Science and Engineering, IIT Kanpur saksham0808@gmail.com Saksham Sharma: [706, 56]
+	Google wojtekt@google.com Wojciech Tyczynski: [306, 253]
+	Red Hat deads@redhat.com deads2k: [37330, 3424]
+	(Unknown) stuart.warren@ocado.com stuart.warren: [7, 7]
+	(Unknown) sdw35@cornell.edu Scott Weiss: [461, 0]
+	Kelowna admin@toph.ca Christoph Blecker: [31, 17]
+	Red Hat ffranz@redhat.com Fabiano Franz: [6, 0]
+	Google stclair@google.com Tim St. Clair: [12839, 598]
+	Google mehdy@google.com mbohlool: [1412, 162]
+	Google dashpole@google.com David Ashpole: [32, 27]
+	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [43319, 1641]
+	Google xuchao@google.com Chao Xu: [519, 491]
+	CoreOS eric.chiang.m@gmail.com Eric Chiang: [882, 35]
+	Self lukasz.szaszkiewicz@gmail.com p0lyn0mial: [965, 87]
+	Google wfender@google.com Walter Fender: [236, 0]
+	Red Hat mkhan@redhat.com Monis Khan: [47, 5]
+	Google thockin@google.com Tim Hockin: [1, 1]
+	Fujitsu chenr.fnst@cn.fujitsu.com xilabao: [2, 6]
+	IBM mbauer@us.ibm.com Morgan Bauer: [7, 1]
+	Self stephenhsu90@gmail.com Di Xu: [7, 7]
 	ZTE Corporation yu.peng36@zte.com.cn yupengzte: [1, 1]
 	Google shyamjvs@google.com Shyam Jeedigunta: [3, 2]
-	Google stclair@google.com Tim St. Clair: [8549, 18]
-	Kelowna admin@toph.ca Christoph Blecker: [23, 9]
-	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [41088, 1066]
-	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [63, 30]
-	Red Hat deads@redhat.com deads2k: [37190, 3246]
-	Self lukasz.szaszkiewicz@gmail.com p0lyn0mial: [371, 31]
 	Google nikhiljindal@google.com nikhiljindal: [204, 45]
-	Google xuchao@google.com Chao Xu: [444, 491]
 	Atlassian nislamov@atlassian.com Nail Islamov: [5, 5]
 	Google rmmh@google.com Ryan Hitchman: [92, 4]
 	ZTE Corporation zhao.xiangpeng@zte.com.cn xiangpengzhao: [2, 2]
@@ -143,13 +182,10 @@ unknown 91547 6630
 	Rook lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [1, 1]
 	Apache jwhitlock@apache.org Jeremy Whitlock: [821, 0]
 	Google enisoc@google.com Anthony Yeh: [71, 16]
-	Red Hat mkhan@redhat.com Monis Khan: [10, 0]
 	eBay zhouhaibing089@gmail.com zhouhaibing089: [48, 6]
-	Red Hat jliggitt@redhat.com Jordan Liggitt: [339, 71]
 	Red Hat marun@redhat.com Maru Newby: [42, 43]
 	Google gmarek@google.com gmarek: [15, 9]
 	Elisa jesse.haka@elisa.fi Jesse Haka: [7, 7]
-	Fujitsu chenr.fnst@cn.fujitsu.com xilabao: [1, 5]
 	Google mml@google.com Matt Liggett: [23, 3]
 	IBM spzala@us.ibm.com Sahdev P. Zala: [14, 0]
 	Heptio timothysc@gmail.com Timothy St. Clair: [387, 345]
@@ -162,35 +198,39 @@ unknown 91547 6630
 	JustWatch dominik.schulz@gauner.org Dominik Schulz: [47, 1]
 	Google mengqiy@google.com ymqytw: [34, 2]
 	Red Hat maszulik@redhat.com Maciej Szulik: [0, 88]
-	CoreOS eric.chiang.m@gmail.com Eric Chiang: [26, 8]
 	Red Hat decarr@redhat.com Derek Carr: [4, 3]
-	Google wojtekt@google.com Wojciech Tyczynski: [195, 173]
 	Google chiachenk@google.com Janet Kuo: [4, 4]
 	Red Hat sjenning@redhat.com Seth Jennings: [4, 70]
 	Self 21521209@zju.edu.cn jg Chen: [1, 1]
 	Bulletproof gus@inodes.org Angus Lees: [2, 2]
 	Red Hat rrati@redhat.com Robert Rati: [2, 0]
 	HarmonyCloud chenjg@harmonycloud.cn fate-grand-order: [1, 1]
-devel-doc 5487 880
-	Red Hat ccoleman@redhat.com Clayton Coleman: [59, 39]
-	Google mehdy@google.com mbohlool: [37, 22]
-	Google stclair@google.com Tim St. Clair: [129, 1]
-	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [1835, 546]
-	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [1, 1]
-	Red Hat deads@redhat.com deads2k: [451, 242]
-	Self lukasz.szaszkiewicz@gmail.com p0lyn0mial: [15, 1]
-	Google xuchao@google.com Chao Xu: [16, 17]
-	Google rmmh@google.com Ryan Hitchman: [6, 1]
+devel-doc 5964 938
+	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [2, 1]
+	Red Hat jliggitt@redhat.com Jordan Liggitt: [7, 8]
+	Red Hat ccoleman@redhat.com Clayton Coleman: [117, 56]
+	Computer Science and Engineering, IIT Kanpur saksham0808@gmail.com Saksham Sharma: [53, 0]
+	Google wojtekt@google.com Wojciech Tyczynski: [8, 6]
+	Red Hat deads@redhat.com deads2k: [452, 242]
+	(Unknown) sdw35@cornell.edu Scott Weiss: [7, 0]
+	Red Hat ffranz@redhat.com Fabiano Franz: [7, 0]
+	Google stclair@google.com Tim St. Clair: [215, 3]
+	Google mehdy@google.com mbohlool: [52, 25]
+	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [1925, 549]
+	Google xuchao@google.com Chao Xu: [18, 17]
+	CoreOS eric.chiang.m@gmail.com Eric Chiang: [62, 0]
+	Self lukasz.szaszkiewicz@gmail.com p0lyn0mial: [92, 24]
+	Google wfender@google.com Walter Fender: [12, 1]
 	IBM mbauer@us.ibm.com Morgan Bauer: [3, 2]
+	(Unknown) tpetr@hubspot.com Tom Petr: [1, 1]
+	Google rmmh@google.com Ryan Hitchman: [6, 1]
 	Google mikedanese@google.com Mike Danese: [2905, 0]
 	Apache jwhitlock@apache.org Jeremy Whitlock: [18, 0]
-	Red Hat jliggitt@redhat.com Jordan Liggitt: [2, 0]
 	Self jmyue@hotmail.com supereagle: [2, 2]
-	Google wojtekt@google.com Wojciech Tyczynski: [8, 6]
 code 384 0
-	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [102, 0]
 	Red Hat deads@redhat.com deads2k: [175, 0]
+	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [102, 0]
 	Apache jwhitlock@apache.org Jeremy Whitlock: [107, 0]
-unknown 91547 6630
-devel-doc 5487 880
+unknown 105381 9198
+devel-doc 5964 938
 code 384 0

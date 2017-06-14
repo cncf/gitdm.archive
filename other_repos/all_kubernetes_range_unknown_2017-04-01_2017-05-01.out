@@ -2,6 +2,11 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_unknown_2017-04-01_2017-05-01.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Google mikedanese@google.com Mike Danese
+	unknown [392, 1372]
+	devel-doc [27625, 6220]
+	code [7, 1475]
+	build [8, 254]
 Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski
 	unknown [100, 56]
 	devel-doc [2, 0]
@@ -16,18 +21,13 @@ Rackspace jamie.hannaford@rackspace.com Jamie Hannaford
 	devel-doc [45, 1]
 	documentation [0, 0]
 Red Hat ccoleman@redhat.com Clayton Coleman
-	unknown [741, 324]
+	unknown [1085, 493]
 	devel-doc [3, 0]
 	documentation [0, 0]
 Red Hat deads@redhat.com deads2k
 	unknown [5832, 2652]
 	devel-doc [9, 2]
 	code [34, 4]
-Google mikedanese@google.com Mike Danese
-	unknown [360, 1372]
-	devel-doc [27576, 6214]
-	code [7, 1475]
-	build [8, 254]
 Google xuchao@google.com Chao Xu
 	unknown [9547, 8308]
 	devel-doc [846, 406]
@@ -64,6 +64,13 @@ NotFound 1004815462@qq.com knightXun
 	unknown [21, 25]
 Google mengqiy@google.com ymqytw
 	unknown [1144, 217]
+Google wfender@google.com Walter Fender
+	unknown [643, 32]
+	devel-doc [26, 2]
+	documentation [1, 0]
+	build [2, 0]
+Self stephenhsu90@gmail.com Di Xu
+	unknown [44, 44]
 ZTE Corporation zhao.xiangpeng@zte.com.cn xiangpengzhao
 	unknown [224, 201]
 	devel-doc [1, 1]
@@ -258,6 +265,10 @@ HP patg@patg.net Patrick Galbraith
 Self c-knowles@users.noreply.github.com Chris Knowles
 	unknown [142, 40]
 	devel-doc [1, 1]
+Red Hat jpeeler@redhat.com Jeff Peeler
+	unknown [8302, 11816]
+	devel-doc [26, 20]
+	build [3, 4]
 Mirantis yashulyak@gmail.com Dmitry Shulyak
 	unknown [1584, 38]
 	devel-doc [116, 51]
@@ -895,35 +906,26 @@ SAP arno.uhlig@sap.com Arno Uhlig
 	devel-doc [1, 0]
 Datadog haissam.kaj@gmail.com Haissam Kaj
 	devel-doc [7, 7]
-NotFound andy.xning@gmail.com Andy Xie
+Self andy.xning@gmail.com Andy Xie
 	unknown [6, 6]
+Red Hat dcbw@redhat.com Dan Williams
+	unknown [425, 48]
+	devel-doc [10, 0]
 (Unknown) adrian@adrianmacneil.com Adrian Macneil
 	unknown [3, 3]
 (Unknown) ravi.gadde@gmail.com Ravi Gadde
 	unknown [200, 21]
 	devel-doc [2, 0]
-Red Hat jpeeler@redhat.com Jeff Peeler
-	unknown [8296, 11816]
-	devel-doc [26, 20]
-	build [3, 4]
 Styra, Inc. torinsandall@gmail.com Torin Sandall
 	unknown [945, 0]
 	devel-doc [72, 0]
 (Unknown) horwitzja@gmail.com Josh Horwitz
 	unknown [187, 1]
-Google wfender@google.com Walter Fender
-	unknown [327, 18]
-	devel-doc [13, 1]
-	documentation [1, 0]
-	build [2, 0]
 Google cxing@google.com Cheng Xing
 	unknown [559, 7]
 	devel-doc [10, 1]
 (Unknown) harsh@portworx.com Harsh Desai
 	unknown [71, 23]
-Red Hat dcbw@redhat.com Dan Williams
-	unknown [299, 24]
-	devel-doc [10, 0]
 SalesForce mayank.kumar@salesforce.com Mayank Kumar
 	unknown [128, 64]
 	devel-doc [2, 0]
@@ -933,6 +935,9 @@ Ruby Together radcliffe.david@gmail.com David Radcliffe
 	unknown [2, 1]
 (Unknown) pc@michali.net Paul Michali
 	unknown [21, 9]
+Microsoft cosmc@microsoft.com Cosmin Cojocar
+	unknown [504, 0]
+	devel-doc [78, 0]
 Self christiankoep@gmail.com Christian Koep
 	unknown [15, 9]
 	code [4, 4]
@@ -1040,8 +1045,6 @@ CoreOS robertguenzler@kinvolk.io Robert Günzler
 Self jmyue@hotmail.com supereagle
 	unknown [4, 4]
 	documentation [2, 2]
-Self stephenhsu90@gmail.com Di Xu
-	unknown [37, 37]
 Self rodrigo@sdfg.com.ar Rodrigo Campos
 	unknown [2, 122]
 	devel-doc [0, 64]
@@ -1373,18 +1376,19 @@ Red Hat skuznets@redhat.com Steve Kuznetsov
 Google jeffml@google.com Jeff Dempsey
 	unknown [2, 0]
 Google krousey@users.noreply.github.com krousey
-devel-doc 141360 102120
+devel-doc 141500 102127
+	Google mikedanese@google.com Mike Danese: [27625, 6220]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [2, 0]
 	Google mehdy@google.com mbohlool: [1759, 165]
 	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [45, 1]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [3, 0]
 	Red Hat deads@redhat.com deads2k: [9, 2]
-	Google mikedanese@google.com Mike Danese: [27576, 6214]
 	Google xuchao@google.com Chao Xu: [846, 406]
 	ASG Consulting andy.goldstein@gmail.com Andy Goldstein: [34, 56]
 	Rook lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [2, 176]
 	IBM gyliu513@gmail.com Guangya Liu: [6, 5]
 	Heptio timothysc@gmail.com Timothy St. Clair: [2358, 1644]
+	Google wfender@google.com Walter Fender: [26, 2]
 	ZTE Corporation zhao.xiangpeng@zte.com.cn xiangpengzhao: [1, 1]
 	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [2, 2]
 	Google pwittroc@google.com Phillip Wittrock: [10026, 5]
@@ -1418,6 +1422,7 @@ devel-doc 141360 102120
 	Huawei shashidhara.td@huawei.com Shashidhara T D: [84, 14]
 	HP patg@patg.net Patrick Galbraith: [90, 0]
 	Self c-knowles@users.noreply.github.com Chris Knowles: [1, 1]
+	Red Hat jpeeler@redhat.com Jeff Peeler: [26, 20]
 	Mirantis yashulyak@gmail.com Dmitry Shulyak: [116, 51]
 	EasyStack nickren19@gmail.com NickrenREN: [55, 0]
 	Red Hat sross@redhat.com Solly Ross: [4, 0]
@@ -1505,13 +1510,12 @@ devel-doc 141360 102120
 	SAP arno.uhlig@sap.com Arno Uhlig: [3, 0]
 	(Unknown) nv@kuende.com Nicolae Vartolomei: [1, 0]
 	Datadog haissam.kaj@gmail.com Haissam Kaj: [7, 7]
-	(Unknown) ravi.gadde@gmail.com Ravi Gadde: [2, 0]
-	Red Hat jpeeler@redhat.com Jeff Peeler: [26, 20]
-	Styra, Inc. torinsandall@gmail.com Torin Sandall: [72, 0]
-	Google wfender@google.com Walter Fender: [13, 1]
-	Google cxing@google.com Cheng Xing: [10, 1]
 	Red Hat dcbw@redhat.com Dan Williams: [10, 0]
+	(Unknown) ravi.gadde@gmail.com Ravi Gadde: [2, 0]
+	Styra, Inc. torinsandall@gmail.com Torin Sandall: [72, 0]
+	Google cxing@google.com Cheng Xing: [10, 1]
 	SalesForce mayank.kumar@salesforce.com Mayank Kumar: [2, 0]
+	Microsoft cosmc@microsoft.com Cosmin Cojocar: [78, 0]
 	Huawei irfan.rehman@huawei.com Irfan Ur Rehman: [50, 2]
 	Fujitsu chenr.fnst@cn.fujitsu.com xilabao: [1, 0]
 	Google dvorak@google.com Jonathan MacMillan: [7, 79]
@@ -1563,10 +1567,10 @@ devel-doc 141360 102120
 	Google senlu@google.com Sen Lu: [355, 0]
 	Cisco dettervt@gmail.com Dan Etter: [46, 0]
 code 336325 24405
+	Google mikedanese@google.com Mike Danese: [7, 1475]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [2, 2]
 	Google mehdy@google.com mbohlool: [141943, 12510]
 	Red Hat deads@redhat.com deads2k: [34, 4]
-	Google mikedanese@google.com Mike Danese: [7, 1475]
 	Google xuchao@google.com Chao Xu: [4, 0]
 	ASG Consulting andy.goldstein@gmail.com Andy Goldstein: [13, 5]
 	CoreOS yifan.gu@coreos.com Yifan Gu: [76, 26]
@@ -1662,13 +1666,13 @@ code 336325 24405
 	Google colew@google.com Cole Wagner: [196, 456]
 	Google fejta@google.com Erick Fejta: [607, 272]
 	Google senlu@google.com Sen Lu: [46, 10]
-unknown 387457 148318
+unknown 388792 148532
+	Google mikedanese@google.com Mike Danese: [392, 1372]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [100, 56]
 	Google mehdy@google.com mbohlool: [108298, 12406]
 	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [2434, 1304]
-	Red Hat ccoleman@redhat.com Clayton Coleman: [741, 324]
+	Red Hat ccoleman@redhat.com Clayton Coleman: [1085, 493]
 	Red Hat deads@redhat.com deads2k: [5832, 2652]
-	Google mikedanese@google.com Mike Danese: [360, 1372]
 	Google xuchao@google.com Chao Xu: [9547, 8308]
 	ASG Consulting andy.goldstein@gmail.com Andy Goldstein: [2484, 1709]
 	CoreOS yifan.gu@coreos.com Yifan Gu: [109, 88]
@@ -1678,6 +1682,8 @@ unknown 387457 148318
 	Heptio timothysc@gmail.com Timothy St. Clair: [21189, 20078]
 	NotFound 1004815462@qq.com knightXun: [21, 25]
 	Google mengqiy@google.com ymqytw: [1144, 217]
+	Google wfender@google.com Walter Fender: [643, 32]
+	Self stephenhsu90@gmail.com Di Xu: [44, 44]
 	ZTE Corporation zhao.xiangpeng@zte.com.cn xiangpengzhao: [224, 201]
 	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [128, 62]
 	Google pwittroc@google.com Phillip Wittrock: [83748, 8666]
@@ -1734,6 +1740,7 @@ unknown 387457 148318
 	Self egeland@gmail.com Frode Egeland: [16, 4]
 	HP patg@patg.net Patrick Galbraith: [244, 0]
 	Self c-knowles@users.noreply.github.com Chris Knowles: [142, 40]
+	Red Hat jpeeler@redhat.com Jeff Peeler: [8302, 11816]
 	Mirantis yashulyak@gmail.com Dmitry Shulyak: [1584, 38]
 	Pardot andy@lindeman.io Andy Lindeman: [208, 146]
 	EasyStack nickren19@gmail.com NickrenREN: [239, 551]
@@ -1941,20 +1948,19 @@ unknown 387457 148318
 	CoreOS fbranczyk@gmail.com Frederic Branczyk: [329, 32]
 	SAP arno.uhlig@sap.com Arno Uhlig: [177, 7]
 	(Unknown) nv@kuende.com Nicolae Vartolomei: [13, 0]
-	NotFound andy.xning@gmail.com Andy Xie: [6, 6]
+	Self andy.xning@gmail.com Andy Xie: [6, 6]
+	Red Hat dcbw@redhat.com Dan Williams: [425, 48]
 	(Unknown) adrian@adrianmacneil.com Adrian Macneil: [3, 3]
 	(Unknown) ravi.gadde@gmail.com Ravi Gadde: [200, 21]
-	Red Hat jpeeler@redhat.com Jeff Peeler: [8296, 11816]
 	Styra, Inc. torinsandall@gmail.com Torin Sandall: [945, 0]
 	(Unknown) horwitzja@gmail.com Josh Horwitz: [187, 1]
-	Google wfender@google.com Walter Fender: [327, 18]
 	Google cxing@google.com Cheng Xing: [559, 7]
 	(Unknown) harsh@portworx.com Harsh Desai: [71, 23]
-	Red Hat dcbw@redhat.com Dan Williams: [299, 24]
 	SalesForce mayank.kumar@salesforce.com Mayank Kumar: [128, 64]
 	(Unknown) luk.burchard@gmail.com realfake: [156, 16]
 	Ruby Together radcliffe.david@gmail.com David Radcliffe: [2, 1]
 	(Unknown) pc@michali.net Paul Michali: [21, 9]
+	Microsoft cosmc@microsoft.com Cosmin Cojocar: [504, 0]
 	Self christiankoep@gmail.com Christian Koep: [15, 9]
 	Huawei irfan.rehman@huawei.com Irfan Ur Rehman: [262, 206]
 	Fujitsu chenr.fnst@cn.fujitsu.com xilabao: [119, 18]
@@ -1990,7 +1996,6 @@ unknown 387457 148318
 	Canonical jacek.nykis@canonical.com Jacek Nykis: [85, 1]
 	CoreOS robertguenzler@kinvolk.io Robert Günzler: [25, 0]
 	Self jmyue@hotmail.com supereagle: [4, 4]
-	Self stephenhsu90@gmail.com Di Xu: [37, 37]
 	Self rodrigo@sdfg.com.ar Rodrigo Campos: [2, 122]
 	ZTE Corporation xu.zhanwei@zte.com.cn weizhanxu: [2, 4]
 	(Unknown) shiyang.wang@outlook.com Shiyang Wang: [16, 16]
@@ -2115,6 +2120,7 @@ documentation 140184 1630
 	Red Hat ccoleman@redhat.com Clayton Coleman: [0, 0]
 	ASG Consulting andy.goldstein@gmail.com Andy Goldstein: [1, 0]
 	Heptio timothysc@gmail.com Timothy St. Clair: [0, 232]
+	Google wfender@google.com Walter Fender: [1, 0]
 	ZTE Corporation zhao.xiangpeng@zte.com.cn xiangpengzhao: [2, 4]
 	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [1, 0]
 	Google pwittroc@google.com Phillip Wittrock: [125395, 0]
@@ -2166,7 +2172,6 @@ documentation 140184 1630
 	Vendavo martin.stiborsky@gmail.com Martin Stiborsky: [1, 1]
 	Google mtaufen@google.com Michael Taufen: [0, 1]
 	Mirantis sgolovatiuk@mirantis.com Sergii Golovatiuk: [2, 13]
-	Google wfender@google.com Walter Fender: [1, 0]
 	Red Hat ffranz@redhat.com Fabiano Franz: [3, 0]
 	Google verb@google.com Lee Verberne: [1, 0]
 	Google rmmh@google.com Ryan Hitchman: [54, 6]
@@ -2190,6 +2195,7 @@ build 1742 1087
 	Rook lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [6, 47]
 	Zalando m@moscar.net Mikkel Oscar Lyderik Larsen: [4, 0]
 	Heptio timothysc@gmail.com Timothy St. Clair: [0, 276]
+	Google wfender@google.com Walter Fender: [2, 0]
 	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [1, 0]
 	Google pwittroc@google.com Phillip Wittrock: [369, 107]
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [36, 14]
@@ -2200,6 +2206,7 @@ build 1742 1087
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [6, 38]
 	Google foxish@users.noreply.github.com Anirudh Ramanathan: [15, 0]
 	commercetools admin.sa@gmail.com Sergey Melnik: [0, 0]
+	Red Hat jpeeler@redhat.com Jeff Peeler: [3, 4]
 	Google thockin@google.com Tim Hockin: [16, 0]
 	Red Hat decarr@redhat.com Derek Carr: [1, 1]
 	IBM cmluciano@us.ibm.com Christopher M. Luciano: [16, 2]
@@ -2232,8 +2239,6 @@ build 1742 1087
 	Bar Bouchee eric.hole@gmail.com Eric Hole: [1, 1]
 	VMware miaol@vmware.com Miao Luo: [0, 6]
 	Apple camil@me.com Camil Blanaru: [21, 0]
-	Red Hat jpeeler@redhat.com Jeff Peeler: [3, 4]
-	Google wfender@google.com Walter Fender: [2, 0]
 	Self christiankoep@gmail.com Christian Koep: [5, 5]
 	Google jgrafton@google.com Jeff Grafton: [1, 1]
 	Google vmik@google.com Mik Vyatskov: [0, 6]
@@ -2260,9 +2265,9 @@ build 1742 1087
 	Google fejta@google.com Erick Fejta: [4, 4]
 	Google senlu@google.com Sen Lu: [51, 6]
 	Cisco dettervt@gmail.com Dan Etter: [1, 1]
-devel-doc 141360 102120
+devel-doc 141500 102127
 code 336325 24405
-unknown 387457 148318
+unknown 388792 148532
 image 9983 401
 documentation 140184 1630
 ui 214 1

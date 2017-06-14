@@ -2,6 +2,11 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_unknown_2017-03-01_2017-04-01.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Red Hat ffranz@redhat.com Fabiano Franz
+	code [17, 0]
+	unknown [577, 154]
+	devel-doc [17, 2]
+	documentation [0, 0]
 Rancher Labs sid@rancher.com wlan0
 	unknown [1686, 102]
 	devel-doc [270, 0]
@@ -402,11 +407,6 @@ Google jinxu@google.com Jing Xu
 Google yjhong@google.com Yu-Ju Hong
 	unknown [844, 9128]
 	devel-doc [1, 71]
-Red Hat ffranz@redhat.com Fabiano Franz
-	code [17, 0]
-	unknown [361, 7]
-	devel-doc [10, 2]
-	documentation [0, 0]
 Mirantis ihor@dvoretskyi.com Ihor Dvoretskyi
 	unknown [756, 317]
 	devel-doc [6, 2]
@@ -522,7 +522,7 @@ Red Hat mpatel@redhat.com Mrunal Patel
 	code [43, 0]
 	build [15, 8]
 Red Hat dcbw@redhat.com Dan Williams
-	unknown [404, 247]
+	unknown [420, 261]
 	devel-doc [0, 1]
 	code [156, 137]
 	build [58, 55]
@@ -712,7 +712,7 @@ Egnyte jedroadam@gmail.com Adam Jedro
 Contentful johannes.wuerbach@googlemail.com Johannes Würbach
 	unknown [663, 7]
 	build [4, 1]
-NotFound andy.xning@gmail.com Andy Xie
+Self andy.xning@gmail.com Andy Xie
 	unknown [114, 9]
 Red Hat mwringe@redhat.com mwringe
 	unknown [126, 4]
@@ -1498,7 +1498,8 @@ Google sebastienvas@google.com Sebastien Vas
 	unknown [12, 0]
 HarmonyCloud chenjg@harmonycloud.cn fate-grand-order
 	unknown [3, 3]
-devel-doc 26209 5782
+devel-doc 26216 5782
+	Red Hat ffranz@redhat.com Fabiano Franz: [17, 2]
 	Rancher Labs sid@rancher.com wlan0: [270, 0]
 	Google enisoc@google.com Anthony Yeh: [2144, 689]
 	Kelowna admin@toph.ca Christoph Blecker: [8, 13]
@@ -1569,7 +1570,6 @@ devel-doc 26209 5782
 	(Unknown) ixdy@users.noreply.github.com Jeff Grafton: [4, 1]
 	Red Hat haowang@redhat.com Haoran Wang: [2, 0]
 	Google yjhong@google.com Yu-Ju Hong: [1, 71]
-	Red Hat ffranz@redhat.com Fabiano Franz: [10, 2]
 	Mirantis ihor@dvoretskyi.com Ihor Dvoretskyi: [6, 2]
 	Self pjpires@gmail.com Paulo Pires: [1, 0]
 	Google acidburn@google.com Jess Frazelle: [827, 0]
@@ -1700,6 +1700,7 @@ devel-doc 26209 5782
 	Google apelisse@google.com Antoine Pelisse: [251, 92]
 	Google senlu@google.com Sen Lu: [13, 0]
 code 200225 9645
+	Red Hat ffranz@redhat.com Fabiano Franz: [17, 0]
 	Google enisoc@google.com Anthony Yeh: [0, 4]
 	Kelowna admin@toph.ca Christoph Blecker: [55, 51]
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [148, 30]
@@ -1737,7 +1738,6 @@ code 200225 9645
 	Google beacham@google.com Jacob Beacham: [134, 31]
 	Google erick@fejta.com Erick Fejta: [965, 1274]
 	(Unknown) ixdy@users.noreply.github.com Jeff Grafton: [116, 57]
-	Red Hat ffranz@redhat.com Fabiano Franz: [17, 0]
 	Google acidburn@google.com Jess Frazelle: [26, 4]
 	Google nikhiljindal@google.com Nikhil Jindal: [15, 2]
 	Google vishnuk@google.com Vishnu kannan: [9, 0]
@@ -1815,7 +1815,8 @@ code 200225 9645
 	Google senlu@google.com Sen Lu: [366, 373]
 package 0 0
 	Intel qin.wang@intel.com Qin Wang: [0, 0]
-unknown 314543 151771
+unknown 314775 151932
+	Red Hat ffranz@redhat.com Fabiano Franz: [577, 154]
 	Rancher Labs sid@rancher.com wlan0: [1686, 102]
 	globo.com cezarsa@gmail.com Cezar Sa Espinola: [62, 4]
 	Google enisoc@google.com Anthony Yeh: [1607, 1038]
@@ -1930,7 +1931,6 @@ unknown 314543 151771
 	Red Hat haowang@redhat.com Haoran Wang: [728, 3]
 	Google jinxu@google.com Jing Xu: [65, 16]
 	Google yjhong@google.com Yu-Ju Hong: [844, 9128]
-	Red Hat ffranz@redhat.com Fabiano Franz: [361, 7]
 	Mirantis ihor@dvoretskyi.com Ihor Dvoretskyi: [756, 317]
 	Google acidburn@google.com Jess Frazelle: [6758, 28]
 	CoreOS brandon@ifup.org Brandon Philips: [22, 18]
@@ -1965,7 +1965,7 @@ unknown 314543 151771
 	Intel sameo@linux.intel.com Samuel Ortiz: [175, 71]
 	SUSE/Novell asarai@suse.de Aleksa Sarai: [109, 12]
 	Red Hat mpatel@redhat.com Mrunal Patel: [452, 82]
-	Red Hat dcbw@redhat.com Dan Williams: [404, 247]
+	Red Hat dcbw@redhat.com Dan Williams: [420, 261]
 	Red Hat surajssd009005@gmail.com Suraj Deshmukh: [26, 13]
 	Red Hat nalin@redhat.com Nalin Dahyabhai: [4, 0]
 	Igneous Systems andrewpilloud@igneoussystems.com Andrew Pilloud: [58, 51]
@@ -2023,7 +2023,7 @@ unknown 314543 151771
 	ZTE Corporation pu.junqi@zte.com.cn 10138035: [14, 36]
 	Egnyte jedroadam@gmail.com Adam Jedro: [58, 64]
 	Contentful johannes.wuerbach@googlemail.com Johannes Würbach: [663, 7]
-	NotFound andy.xning@gmail.com Andy Xie: [114, 9]
+	Self andy.xning@gmail.com Andy Xie: [114, 9]
 	Red Hat mwringe@redhat.com mwringe: [126, 4]
 	ZTE Corporation liu.hao89@zte.com.cn foxyriver: [3, 3]
 	Mirantis maciej.iai@gmail.com Maciej Kwiek: [1191, 198]
@@ -2299,6 +2299,7 @@ image 10063 0
 	Endocode vincent.schwarzer@yahoo.de Vincent Schwarzer: [0, 0]
 	(Unknown) nickleefly@gmail.com Xiuyu Li: [0, 0]
 documentation 150921 105057
+	Red Hat ffranz@redhat.com Fabiano Franz: [0, 0]
 	Rancher Labs sid@rancher.com wlan0: [1, 0]
 	Kelowna admin@toph.ca Christoph Blecker: [275, 98]
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [0, 0]
@@ -2336,7 +2337,6 @@ documentation 150921 105057
 	Red Hat jsafrane@redhat.com Jan Safranek: [0, 0]
 	Red Hat dhodovsk@redhat.com Dominika Hodovska: [2, 2]
 	Red Hat haowang@redhat.com Haoran Wang: [2, 0]
-	Red Hat ffranz@redhat.com Fabiano Franz: [0, 0]
 	Google acidburn@google.com Jess Frazelle: [0, 0]
 	Google pwittroc+github@google.com Phillip Wittrock: [141512, 2724]
 	WELLINGTON & KING charle.demers@gmail.com Charle Demers: [4, 3]
@@ -2463,10 +2463,10 @@ build 1658 797
 	Google senlu@google.com Sen Lu: [1, 1]
 translation 6980 354
 	Microsoft brendan.d.burns@gmail.com Brendan Burns: [6980, 354]
-devel-doc 26209 5782
+devel-doc 26216 5782
 code 200225 9645
 package 0 0
-unknown 314543 151771
+unknown 314775 151932
 image 10063 0
 documentation 150921 105057
 ui 213 0

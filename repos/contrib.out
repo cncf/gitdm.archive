@@ -2,6 +2,12 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/contrib.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Google jgrafton@google.com Jeff Grafton
+	unknown [55, 14812]
+	devel-doc [54, 1557]
+	code [4, 226]
+	build [52, 157]
+	documentation [2, 452]
 Google loburm@google.com Marian Lobur
 	unknown [27, 6]
 Google vmik@google.com Mik Vyatskov
@@ -176,12 +182,6 @@ Red Hat mhrivnak@hrivnak.org Michael Hrivnak
 	build [5, 1]
 (Unknown) contact@stephane-klein.info Stéphane Klein
 	devel-doc [6, 6]
-Google jgrafton@google.com Jeff Grafton
-	unknown [55, 14812]
-	devel-doc [54, 1557]
-	code [4, 226]
-	build [47, 152]
-	documentation [2, 452]
 SalesForce me@philkates.com Phil Kates
 	unknown [2, 1]
 IBM rdmello@us.ibm.com Ryan D'Mello
@@ -315,7 +315,7 @@ Google grodrigues3@users.noreply.github.com grodrigues3
 	devel-doc [6, 0]
 SAP marian.schwarz@sap.com Marian Schwarz
 	unknown [3, 2]
-NotFound andy.xning@gmail.com andy xie
+Self andy.xning@gmail.com andy xie
 	devel-doc [1, 1]
 (Unknown) michael.a.scheetz@gmail.com Michael Scheetz
 	unknown [11, 0]
@@ -686,6 +686,7 @@ Red Hat sgallagh@redhat.com Stephen Gallagher
 Slack ben.the.elder@gmail.com BenTheElder
 	unknown [249, 0]
 devel-doc 119520 57326
+	Google jgrafton@google.com Jeff Grafton: [54, 1557]
 	Google vmik@google.com Mik Vyatskov: [112, 56]
 	Google pszczesniak@google.com Piotr Szczesniak: [636, 26]
 	Google mikedanese@gmail.com Mike Danese: [55166, 2529]
@@ -712,7 +713,6 @@ devel-doc 119520 57326
 	Google thockin@google.com Tim Hockin: [13, 73]
 	Red Hat mhrivnak@hrivnak.org Michael Hrivnak: [1, 1]
 	(Unknown) contact@stephane-klein.info Stéphane Klein: [6, 6]
-	Google jgrafton@google.com Jeff Grafton: [54, 1557]
 	Red Hat jbrooks@redhat.com Jason Brooks: [0, 4]
 	ZTE Corporation warmchang@outlook.com William Chang: [1, 1]
 	Google beeps@google.com Prashanth B: [7842, 8255]
@@ -739,7 +739,7 @@ devel-doc 119520 57326
 	Google etune@google.com Eric Tune: [33, 9]
 	Google marcin@owsiany.pl Marcin Owsiany: [1, 1]
 	Google grodrigues3@users.noreply.github.com grodrigues3: [6, 0]
-	NotFound andy.xning@gmail.com andy xie: [1, 1]
+	Self andy.xning@gmail.com andy xie: [1, 1]
 	(Unknown) coltonmorris94@gmail.com Colton Morris: [2, 2]
 	Futurequest service@futurequest.net TerraTech: [1, 1]
 	(Unknown) maxnowack@users.noreply.github.com Max Nowack: [1, 1]
@@ -789,6 +789,7 @@ devel-doc 119520 57326
 	Google chiachenk@google.com Janet Kuo: [1772, 3]
 	Smartcoder Ltd. v.antonovich@gmail.com Victor Antonovich: [5, 1]
 code 73860 42205
+	Google jgrafton@google.com Jeff Grafton: [4, 226]
 	Google vmik@google.com Mik Vyatskov: [29, 74]
 	Google pszczesniak@google.com Piotr Szczesniak: [40, 0]
 	Google mikedanese@gmail.com Mike Danese: [12996, 496]
@@ -810,7 +811,6 @@ code 73860 42205
 	Red Hat talset55@gmail.com talset: [4, 0]
 	(Unknown) guillaume@monzo.com Guillaume Breton: [10, 10]
 	Google thockin@google.com Tim Hockin: [940, 115]
-	Google jgrafton@google.com Jeff Grafton: [4, 226]
 	Red Hat jbrooks@redhat.com Jason Brooks: [1, 1]
 	Google beeps@google.com Prashanth B: [629, 2570]
 	Self aledbf@gmail.com Manuel de Brito Fontes: [1248, 6558]
@@ -854,6 +854,7 @@ package 0 0
 	Google lantaol@google.com Random-Liu: [0, 0]
 	Microsoft bburns@google.com Brendan Burns: [0, 0]
 unknown 6496229 3404147
+	Google jgrafton@google.com Jeff Grafton: [55, 14812]
 	Google loburm@google.com Marian Lobur: [27, 6]
 	Google vmik@google.com Mik Vyatskov: [2384, 165]
 	Rackspace cfarquhar@cfarquhar.com Charles Farquhar: [1, 1]
@@ -893,7 +894,6 @@ unknown 6496229 3404147
 	Joulee mrbryanbecker@gmail.com Bryan Becker: [8, 4]
 	(Unknown) psyacca@gmail.com Daniele Santoro: [14, 5]
 	クラウドワークス ykuoka@gmail.com Yusuke Kuoka: [1650, 682]
-	Google jgrafton@google.com Jeff Grafton: [55, 14812]
 	SalesForce me@philkates.com Phil Kates: [2, 1]
 	Red Hat jbrooks@redhat.com Jason Brooks: [110, 35]
 	Google beeps@google.com Prashanth B: [748908, 279134]
@@ -1033,6 +1033,7 @@ image 0 0
 	Red Hat eparis@redhat.com Eric Paris: [0, 0]
 	Google lantaol@google.com Random-Liu: [0, 0]
 documentation 73147 41461
+	Google jgrafton@google.com Jeff Grafton: [2, 452]
 	Google vmik@google.com Mik Vyatskov: [13, 6]
 	Google pszczesniak@google.com Piotr Szczesniak: [13, 0]
 	Google maciejborsz@google.com Maciej Borsz: [2, 0]
@@ -1050,7 +1051,6 @@ documentation 73147 41461
 	Google shyamjvs@google.com Shyam Jeedigunta: [1, 7604]
 	NotFound kay.diam@gmail.com kayrus: [2, 2]
 	Google thockin@google.com Tim Hockin: [21, 55]
-	Google jgrafton@google.com Jeff Grafton: [2, 452]
 	Google beeps@google.com Prashanth B: [461, 468]
 	Self aledbf@gmail.com Manuel de Brito Fontes: [12630, 19434]
 	Google ramanathana@google.com Anirudh: [23, 837]
@@ -1086,7 +1086,8 @@ documentation 73147 41461
 	Google chiachenk@google.com Janet Kuo: [5099, 33]
 	Tyk mvdan@mvdan.cc Daniel Martí: [1, 0]
 	Mesosphere james@mesosphere.io James DeFelice: [3, 0]
-build 7027 3137
+build 7032 3142
+	Google jgrafton@google.com Jeff Grafton: [52, 157]
 	Google vmik@google.com Mik Vyatskov: [88, 88]
 	Google pszczesniak@google.com Piotr Szczesniak: [69, 8]
 	Google mikedanese@gmail.com Mike Danese: [1236, 39]
@@ -1103,7 +1104,6 @@ build 7027 3137
 	Google shyamjvs@google.com Shyam Jeedigunta: [0, 314]
 	Google thockin@google.com Tim Hockin: [4, 20]
 	クラウドワークス ykuoka@gmail.com Yusuke Kuoka: [5, 1]
-	Google jgrafton@google.com Jeff Grafton: [47, 152]
 	IBM rdmello@us.ibm.com Ryan D'Mello: [4, 1]
 	Google beeps@google.com Prashanth B: [465, 83]
 	Self aledbf@gmail.com Manuel de Brito Fontes: [2430, 1075]
@@ -1146,4 +1146,4 @@ package 0 0
 unknown 6496229 3404147
 image 0 0
 documentation 73147 41461
-build 7027 3137
+build 7032 3142

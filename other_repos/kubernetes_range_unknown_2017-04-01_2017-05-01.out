@@ -2,6 +2,9 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/other_repos/kubernetes_range_unknown_2017-04-01_2017-05-01.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Red Hat dcbw@redhat.com Dan Williams
+	unknown [425, 48]
+	devel-doc [10, 0]
 (Unknown) adrian@adrianmacneil.com Adrian Macneil
 	unknown [3, 3]
 (Unknown) ravi.gadde@gmail.com Ravi Gadde
@@ -39,9 +42,6 @@ Google cxing@google.com Cheng Xing
 	devel-doc [10, 1]
 (Unknown) harsh@portworx.com Harsh Desai
 	unknown [71, 23]
-Red Hat dcbw@redhat.com Dan Williams
-	unknown [299, 24]
-	devel-doc [10, 0]
 SalesForce mayank.kumar@salesforce.com Mayank Kumar
 	unknown [128, 64]
 	devel-doc [2, 0]
@@ -76,6 +76,9 @@ Ruby Together radcliffe.david@gmail.com David Radcliffe
 	unknown [2, 1]
 (Unknown) pc@michali.net Paul Michali
 	unknown [21, 9]
+Microsoft cosmc@microsoft.com Cosmin Cojocar
+	unknown [504, 0]
+	devel-doc [78, 0]
 Kelowna admin@toph.ca Christoph Blecker
 	unknown [1, 1]
 	devel-doc [1, 0]
@@ -523,7 +526,8 @@ CoreOS caleb.miles@coreos.com caleb miles
 	devel-doc [3, 3]
 Red Hat vsemushi@redhat.com Slava Semushin
 	devel-doc [7, 1]
-unknown 47165 30262
+unknown 47795 30286
+	Red Hat dcbw@redhat.com Dan Williams: [425, 48]
 	(Unknown) adrian@adrianmacneil.com Adrian Macneil: [3, 3]
 	(Unknown) ravi.gadde@gmail.com Ravi Gadde: [200, 21]
 	Red Hat jpeeler@redhat.com Jeff Peeler: [96, 3]
@@ -537,7 +541,6 @@ unknown 47165 30262
 	Red Hat mkargaki@redhat.com Michail Kargakis: [641, 407]
 	Google cxing@google.com Cheng Xing: [559, 7]
 	(Unknown) harsh@portworx.com Harsh Desai: [71, 23]
-	Red Hat dcbw@redhat.com Dan Williams: [299, 24]
 	SalesForce mayank.kumar@salesforce.com Mayank Kumar: [128, 64]
 	Google msau@google.com Michelle Au: [881, 26]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [699, 324]
@@ -549,6 +552,7 @@ unknown 47165 30262
 	Mirantis ishvedunov@mirantis.com Ivan Shvedunov: [9, 4]
 	Ruby Together radcliffe.david@gmail.com David Radcliffe: [2, 1]
 	(Unknown) pc@michali.net Paul Michali: [21, 9]
+	Microsoft cosmc@microsoft.com Cosmin Cojocar: [504, 0]
 	Kelowna admin@toph.ca Christoph Blecker: [1, 1]
 	Google ahmetb@google.com Ahmet Alp Balkan: [302, 457]
 	Google jregan@google.com Jeffrey Regan: [106, 12]
@@ -699,7 +703,8 @@ unknown 47165 30262
 	Google krousey@google.com Kris: [6, 3]
 	Net EASE 网易有态度 dong008259@163.com ddongchen: [3, 1]
 	HP tpot@hpe.com Tim Potter: [1, 1]
-devel-doc 112274 99580
+devel-doc 112352 99580
+	Red Hat dcbw@redhat.com Dan Williams: [10, 0]
 	(Unknown) ravi.gadde@gmail.com Ravi Gadde: [2, 0]
 	Styra, Inc. torinsandall@gmail.com Torin Sandall: [72, 0]
 	Huawei shashidhara.td@huawei.com shashidharatd: [2, 14]
@@ -707,12 +712,12 @@ devel-doc 112274 99580
 	Red Hat mawong@redhat.com Matthew Wong: [2, 3]
 	Red Hat mkargaki@redhat.com Michail Kargakis: [1, 0]
 	Google cxing@google.com Cheng Xing: [10, 1]
-	Red Hat dcbw@redhat.com Dan Williams: [10, 0]
 	SalesForce mayank.kumar@salesforce.com Mayank Kumar: [2, 0]
 	Google msau@google.com Michelle Au: [1, 0]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [3, 0]
 	Google vishnuk@google.com Vishnu kannan: [79, 2]
 	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [23, 1]
+	Microsoft cosmc@microsoft.com Cosmin Cojocar: [78, 0]
 	Kelowna admin@toph.ca Christoph Blecker: [1, 0]
 	Google jregan@google.com Jeffrey Regan: [657, 54]
 	Mirantis yashulyak@gmail.com Dmitry Shulyak: [51, 51]
@@ -860,8 +865,8 @@ documentation 12 117
 	Google bsalamat@google.com Bobby Salamat: [1, 0]
 	Red Hat maszulik@redhat.com Maciej Szulik: [0, 0]
 	Red Hat danw@redhat.com Dan Winship: [0, 0]
-unknown 47165 30262
-devel-doc 112274 99580
+unknown 47795 30286
+devel-doc 112352 99580
 code 943 3819
 build 101 489
 documentation 12 117

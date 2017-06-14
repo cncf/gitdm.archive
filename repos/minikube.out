@@ -3,16 +3,27 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/minikube.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
 Google m@rickard.email Matt Rickard
-	unknown [27231, 22414]
+	unknown [27234, 22415]
 	devel-doc [805, 1087]
 	code [537, 452]
 	build [184, 122]
 Google dlorenc@google.com dlorenc
-	unknown [18510, 12753]
+	unknown [18511, 12754]
 	devel-doc [574, 98]
 	code [632, 176]
 	build [266, 106]
 	documentation [60, 0]
+Google nkubala@google.com Nick Kubala
+	unknown [102, 53]
+	build [5, 1]
+Google aprindle@google.com Aaron Prindle
+	unknown [20811, 9248]
+	devel-doc [357, 283]
+	code [684, 165]
+	build [264, 88]
+	image [0, 0]
+Weaveworks roli@weave.works Roland Schilter
+	unknown [3, 3]
 UnitedStack me@gbraad.nl Gerard Braad
 	unknown [1, 1]
 DEIS michelle@deis.com Michelle Noorali
@@ -24,16 +35,8 @@ Red Hat runcom@redhat.com Antonio Murdaca
 	unknown [2, 2]
 (Unknown) su3g4284zo6y7@gmail.com tz70s
 	unknown [3, 0]
-Google aprindle@google.com Aaron Prindle
-	unknown [20811, 9248]
-	devel-doc [357, 283]
-	code [684, 165]
-	build [264, 88]
-	image [0, 0]
 (Unknown) thibaut.demaret@radiofrance.com Thibaut Demaret
 	unknown [4, 7]
-(Unknown) nkubala@users.noreply.github.com Nick Kubala
-	unknown [8, 8]
 (Unknown) 59pilgrim@gmail.com Thibaut Démaret
 	unknown [4, 1]
 Fujitsu maciaszczykm@users.noreply.github.com Marcin Maciaszczyk
@@ -252,8 +255,8 @@ Google vishh@users.noreply.github.com Vish Kannan
 devel-doc 3072 2199
 	Google m@rickard.email Matt Rickard: [805, 1087]
 	Google dlorenc@google.com dlorenc: [574, 98]
-	UPMC slokas@upmc.edu Steve Sloka: [4, 2]
 	Google aprindle@google.com Aaron Prindle: [357, 283]
+	UPMC slokas@upmc.edu Steve Sloka: [4, 2]
 	Collaborne andreas.kohn@gmail.com Andreas Kohn: [3, 3]
 	(Unknown) sukantgujar@yahoo.com SukantGujar: [1, 1]
 	Self tgraf@suug.ch Thomas Graf: [2, 2]
@@ -303,17 +306,18 @@ code 2070 868
 	Ubisoft rodcloutier@gmail.com Rod Cloutier: [42, 0]
 	Rook luxas@users.noreply.github.com Lucas Käldström: [67, 5]
 	Redspread dan@redspread.com Dan Gillespie: [41, 1]
-unknown 82288 51977
-	Google m@rickard.email Matt Rickard: [27231, 22414]
-	Google dlorenc@google.com dlorenc: [18510, 12753]
+unknown 82389 52027
+	Google m@rickard.email Matt Rickard: [27234, 22415]
+	Google dlorenc@google.com dlorenc: [18511, 12754]
+	Google nkubala@google.com Nick Kubala: [102, 53]
+	Google aprindle@google.com Aaron Prindle: [20811, 9248]
+	Weaveworks roli@weave.works Roland Schilter: [3, 3]
 	UnitedStack me@gbraad.nl Gerard Braad: [1, 1]
 	DEIS michelle@deis.com Michelle Noorali: [2, 2]
 	UPMC slokas@upmc.edu Steve Sloka: [639, 284]
 	Red Hat runcom@redhat.com Antonio Murdaca: [2, 2]
 	(Unknown) su3g4284zo6y7@gmail.com tz70s: [3, 0]
-	Google aprindle@google.com Aaron Prindle: [20811, 9248]
 	(Unknown) thibaut.demaret@radiofrance.com Thibaut Demaret: [4, 7]
-	(Unknown) nkubala@users.noreply.github.com Nick Kubala: [8, 8]
 	(Unknown) 59pilgrim@gmail.com Thibaut Démaret: [4, 1]
 	Fujitsu maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [8, 8]
 	Collaborne andreas.kohn@gmail.com Andreas Kohn: [7, 6]
@@ -375,9 +379,10 @@ image 118 0
 	Wercker victoria.domalik@gmail.com Victoria Domalik: [118, 0]
 documentation 60 0
 	Google dlorenc@google.com dlorenc: [60, 0]
-build 1857 459
+build 1862 460
 	Google m@rickard.email Matt Rickard: [184, 122]
 	Google dlorenc@google.com dlorenc: [266, 106]
+	Google nkubala@google.com Nick Kubala: [5, 1]
 	Google aprindle@google.com Aaron Prindle: [264, 88]
 	(Unknown) dale.hamel@shopify.com Dale Hamel: [2, 0]
 	Self tgraf@suug.ch Thomas Graf: [26, 24]
@@ -399,7 +404,7 @@ build 1857 459
 	Cisco shailesh.pant@gmail.com Shailesh Pant: [1, 1]
 devel-doc 3072 2199
 code 2070 868
-unknown 82288 51977
+unknown 82389 52027
 image 118 0
 documentation 60 0
-build 1857 459
+build 1862 460

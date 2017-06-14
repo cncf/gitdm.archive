@@ -4,6 +4,10 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/examples.csv
 (Unknown) unknown@hacker.net Unknown hacker
 Bitnami runseb@gmail.com sebgoa
 	devel-doc [21, 13]
+(Unknown) mikhail.plavskiy@quest.com Mike Plavsky
+	devel-doc [2, 2]
+(Unknown) nikitaraghunath@gmail.com Nikhita Raghunath
+	unknown [13, 13]
 Google ahmetb@google.com Ahmet Alp Balkan
 	devel-doc [13, 13]
 	code [0, 0]
@@ -831,8 +835,9 @@ Google brian@dorseys.org Brian Dorsey
 	unknown [50, 444]
 Google brianlynch@gmail.com Brian Lynch
 	unknown [1, 1]
-devel-doc 30770 20518
+devel-doc 30772 20520
 	Bitnami runseb@gmail.com sebgoa: [21, 13]
+	(Unknown) mikhail.plavskiy@quest.com Mike Plavsky: [2, 2]
 	Google ahmetb@google.com Ahmet Alp Balkan: [13, 13]
 	Google bgrant0607@users.noreply.github.com Brian Grant: [210, 3]
 	Cockroach alexdwanerobinson@gmail.com Alex Robinson: [367, 123]
@@ -1107,7 +1112,8 @@ code 6803 4524
 	Gurpartap Singh contact@gurpartap.com Gurpartap Singh: [242, 72]
 	Google proppy@google.com Johan Euphrosine: [1, 12]
 	Google maxforbes@google.com Max Forbes: [48, 21]
-unknown 65307 56456
+unknown 65320 56469
+	(Unknown) nikitaraghunath@gmail.com Nikhita Raghunath: [13, 13]
 	Google ahmetb@google.com Ahmet Alp Balkan: [8, 162]
 	(Unknown) sky.captin@gmail.com Werner: [15, 14]
 	(Unknown) rober.morales@rstor.io Rober Morales-Chaparro: [1, 1]
@@ -1379,9 +1385,9 @@ build 4630 2620
 	(Unknown) shaunrparker@gmail.com Shaun Parker: [1, 1]
 	Google satnam@google.com Satnam Singh: [27, 21]
 	Red Hat jayunit100@gmail.com jayunit100: [2397, 2259]
-devel-doc 30770 20518
+devel-doc 30772 20520
 code 6803 4524
-unknown 65307 56456
+unknown 65320 56469
 image 9564 9564
 documentation 841 551
 build 4630 2620

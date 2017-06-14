@@ -2,25 +2,25 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/gen.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
-Google mehdy@google.com Mehdy Bohlool
-	unknown [240, 0]
-	devel-doc [245, 5]
-	code [527, 58]
-	documentation [172, 52]
-Microsoft brendan.d.burns@gmail.com Brendan Burns
+Microsoft bburns@microsoft.com Brendan Burns
 	code [100, 0]
 	documentation [130, 2]
+Google mehdy@google.com Mehdy Bohlool
+	unknown [240, 0]
+	devel-doc [245, 7]
+	code [527, 58]
+	documentation [172, 52]
 unknown 240 0
 	Google mehdy@google.com Mehdy Bohlool: [240, 0]
-devel-doc 245 5
-	Google mehdy@google.com Mehdy Bohlool: [245, 5]
+devel-doc 245 7
+	Google mehdy@google.com Mehdy Bohlool: [245, 7]
 code 627 58
+	Microsoft bburns@microsoft.com Brendan Burns: [100, 0]
 	Google mehdy@google.com Mehdy Bohlool: [527, 58]
-	Microsoft brendan.d.burns@gmail.com Brendan Burns: [100, 0]
 documentation 302 54
+	Microsoft bburns@microsoft.com Brendan Burns: [130, 2]
 	Google mehdy@google.com Mehdy Bohlool: [172, 52]
-	Microsoft brendan.d.burns@gmail.com Brendan Burns: [130, 2]
 unknown 240 0
-devel-doc 245 5
+devel-doc 245 7
 code 627 58
 documentation 302 54

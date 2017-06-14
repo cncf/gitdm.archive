@@ -2,6 +2,12 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/external-dns.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Zalando yerken.tussupbekov@zalando.de Yerken
+	unknown [5175, 1630]
+	devel-doc [29, 25]
+	code [392, 392]
+	build [36, 16]
+	documentation [54, 52]
 Datapipe shanestarcher@gmail.com Shane Starcher
 	unknown [29, 0]
 Zalando linki@users.noreply.github.com Martin Linkhorst
@@ -13,12 +19,6 @@ Zalando linki@users.noreply.github.com Martin Linkhorst
 MIT ismith@mit.edu Ian Smith
 	unknown [243, 18]
 	devel-doc [4, 0]
-Zalando yerken.tussupbekov@zalando.de Yerken
-	unknown [5113, 1573]
-	devel-doc [29, 25]
-	code [392, 392]
-	build [36, 16]
-	documentation [54, 52]
 Zalando henning@jacobs1.de Henning Jacobs
 	unknown [13, 1]
 	devel-doc [37, 4]
@@ -39,12 +39,12 @@ Collanthropy, LLC iterion@gmail.com Adam Sunderland
 	devel-doc [13, 0]
 Google sarah.novotny@gmail.com sarahnovotny
 	devel-doc [202, 0]
-unknown 15732 5566
+unknown 15794 5623
+	Zalando yerken.tussupbekov@zalando.de Yerken: [5175, 1630]
 	Datapipe shanestarcher@gmail.com Shane Starcher: [29, 0]
 	Zalando linki@users.noreply.github.com Martin Linkhorst: [8589, 3764]
 	(Unknown) peter@segfault.guru Peter Huene: [1032, 100]
 	MIT ismith@mit.edu Ian Smith: [243, 18]
-	Zalando yerken.tussupbekov@zalando.de Yerken: [5113, 1573]
 	Zalando henning@jacobs1.de Henning Jacobs: [13, 1]
 	Heroku omarkj@gmail.com Omar Yasin: [1, 1]
 	(Unknown) mikkeloscar@users.noreply.github.com Mikkel Oscar Lyderik Larsen: [450, 40]
@@ -52,9 +52,9 @@ unknown 15732 5566
 	FathomDB justin@fathomdb.com Justin Santa Barbara: [223, 40]
 	Collanthropy, LLC iterion@gmail.com Adam Sunderland: [14, 4]
 devel-doc 564 169
+	Zalando yerken.tussupbekov@zalando.de Yerken: [29, 25]
 	Zalando linki@users.noreply.github.com Martin Linkhorst: [241, 110]
 	MIT ismith@mit.edu Ian Smith: [4, 0]
-	Zalando yerken.tussupbekov@zalando.de Yerken: [29, 25]
 	Zalando henning@jacobs1.de Henning Jacobs: [37, 4]
 	Zalando lauri.apple@zalando.de Lauri Apple: [38, 30]
 	(Unknown) difazio.raffaele@gmail.com Raffaele Di Fazio: [13, 0]
@@ -62,13 +62,13 @@ devel-doc 564 169
 code 392 392
 	Zalando yerken.tussupbekov@zalando.de Yerken: [392, 392]
 build 97 31
-	Zalando linki@users.noreply.github.com Martin Linkhorst: [37, 15]
 	Zalando yerken.tussupbekov@zalando.de Yerken: [36, 16]
+	Zalando linki@users.noreply.github.com Martin Linkhorst: [37, 15]
 	(Unknown) mikkeloscar@users.noreply.github.com Mikkel Oscar Lyderik Larsen: [4, 0]
 	FathomDB justin@fathomdb.com Justin Santa Barbara: [20, 0]
 documentation 54 52
 	Zalando yerken.tussupbekov@zalando.de Yerken: [54, 52]
-unknown 15732 5566
+unknown 15794 5623
 devel-doc 564 169
 code 392 392
 build 97 31
