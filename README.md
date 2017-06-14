@@ -199,3 +199,6 @@ Last month: 30227,21371,4645,1741,2470,451
 - Top developer stats are here: `stats/all_key.csv` (for all repos), `stats/kubernetes_key.csv` (for main repo) and `stats/v1.x_key.csv` per versions.
 - Import those to last 3 sheets in data sheet
 - Per verion data: `report/v1.x_v1.y_key_top.csv`, key: changesets, lines, developers, import to data sheet for all versions: 7 x 3 = 21 imports
+
+For some developers I was doing my best to find their affiliation, found something but I'm not 100%$ sure.
+They are: in `uncertain.csv` file.
