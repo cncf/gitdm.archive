@@ -32,6 +32,9 @@ class Hacker:
     def full_name(self):
         return self.email[0] + ' ' + self.name
 
+    def full_name_with_aff(self):
+        return self.employer[0][0][1].name + ' ' + self.email[0] + ' ' + self.name
+
     def repr(self):
         return ('Hacker', self.id, self.name, 'Email', self.email[0], 'Employers', len(self.employer))
 

@@ -1,62 +1,62 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/cri-containerd.csv
 
-unknown@hacker.net Unknown hacker
-taotaotheripper@gmail.com Lantao Liu
+(Unknown) unknown@hacker.net Unknown hacker
+Self taotaotheripper@gmail.com Lantao Liu
 	devel-doc [30, 234]
 	code [3, 2]
 	unknown [10213, 941]
 	image [0, 0]
 	documentation [0, 0]
 	build [3, 3]
-crazykev@zju.edu.cn Crazykev
+Self crazykev@zju.edu.cn Crazykev
 	unknown [250, 121]
-21521209@zju.edu.cn heartlock
+Self 21521209@zju.edu.cn heartlock
 	unknown [455, 13]
 	build [1, 1]
-xlgao@zju.edu.cn Xianglin Gao
+Self xlgao@zju.edu.cn Xianglin Gao
 	unknown [510, 52]
-21621232@zju.edu.cn mozhuli
+Zhejiang University 21621232@zju.edu.cn mozhuli
 	unknown [218, 28]
-weidonglee27@gmail.com mozhulee
+(Unknown) weidonglee27@gmail.com mozhulee
 	unknown [164, 0]
-mikebrow@users.noreply.github.com Mike Brown
+IBM mikebrow@users.noreply.github.com Mike Brown
 	unknown [967, 293]
 	devel-doc [333, 97]
 	code [685, 274]
 	build [126, 9]
 	documentation [58, 0]
-cmluciano@us.ibm.com Christopher M. Luciano
+IBM cmluciano@us.ibm.com Christopher M. Luciano
 	unknown [108, 1]
 	build [16, 2]
-sarah.novotny@gmail.com sarahnovotny
+Google sarah.novotny@gmail.com sarahnovotny
 	devel-doc [202, 0]
 devel-doc 565 331
-	taotaotheripper@gmail.com Lantao Liu: [30, 234]
-	mikebrow@users.noreply.github.com Mike Brown: [333, 97]
-	sarah.novotny@gmail.com sarahnovotny: [202, 0]
+	Self taotaotheripper@gmail.com Lantao Liu: [30, 234]
+	IBM mikebrow@users.noreply.github.com Mike Brown: [333, 97]
+	Google sarah.novotny@gmail.com sarahnovotny: [202, 0]
 code 688 276
-	taotaotheripper@gmail.com Lantao Liu: [3, 2]
-	mikebrow@users.noreply.github.com Mike Brown: [685, 274]
+	Self taotaotheripper@gmail.com Lantao Liu: [3, 2]
+	IBM mikebrow@users.noreply.github.com Mike Brown: [685, 274]
 unknown 12885 1449
-	taotaotheripper@gmail.com Lantao Liu: [10213, 941]
-	crazykev@zju.edu.cn Crazykev: [250, 121]
-	21521209@zju.edu.cn heartlock: [455, 13]
-	xlgao@zju.edu.cn Xianglin Gao: [510, 52]
-	21621232@zju.edu.cn mozhuli: [218, 28]
-	weidonglee27@gmail.com mozhulee: [164, 0]
-	mikebrow@users.noreply.github.com Mike Brown: [967, 293]
-	cmluciano@us.ibm.com Christopher M. Luciano: [108, 1]
+	Self taotaotheripper@gmail.com Lantao Liu: [10213, 941]
+	Self crazykev@zju.edu.cn Crazykev: [250, 121]
+	Self 21521209@zju.edu.cn heartlock: [455, 13]
+	Self xlgao@zju.edu.cn Xianglin Gao: [510, 52]
+	Zhejiang University 21621232@zju.edu.cn mozhuli: [218, 28]
+	(Unknown) weidonglee27@gmail.com mozhulee: [164, 0]
+	IBM mikebrow@users.noreply.github.com Mike Brown: [967, 293]
+	IBM cmluciano@us.ibm.com Christopher M. Luciano: [108, 1]
 image 0 0
-	taotaotheripper@gmail.com Lantao Liu: [0, 0]
+	Self taotaotheripper@gmail.com Lantao Liu: [0, 0]
 documentation 58 0
-	taotaotheripper@gmail.com Lantao Liu: [0, 0]
-	mikebrow@users.noreply.github.com Mike Brown: [58, 0]
+	Self taotaotheripper@gmail.com Lantao Liu: [0, 0]
+	IBM mikebrow@users.noreply.github.com Mike Brown: [58, 0]
 build 146 15
-	taotaotheripper@gmail.com Lantao Liu: [3, 3]
-	21521209@zju.edu.cn heartlock: [1, 1]
-	mikebrow@users.noreply.github.com Mike Brown: [126, 9]
-	cmluciano@us.ibm.com Christopher M. Luciano: [16, 2]
+	Self taotaotheripper@gmail.com Lantao Liu: [3, 3]
+	Self 21521209@zju.edu.cn heartlock: [1, 1]
+	IBM mikebrow@users.noreply.github.com Mike Brown: [126, 9]
+	IBM cmluciano@us.ibm.com Christopher M. Luciano: [16, 2]
 devel-doc 565 331
 code 688 276
 unknown 12885 1449

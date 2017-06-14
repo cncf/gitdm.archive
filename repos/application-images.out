@@ -1,46 +1,46 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/application-images.csv
 
-unknown@hacker.net Unknown hacker
-foxish@users.noreply.github.com Anirudh Ramanathan
+(Unknown) unknown@hacker.net Unknown hacker
+Google foxish@users.noreply.github.com Anirudh Ramanathan
 	devel-doc [5, 0]
-ramanathana@google.com Anirudh
+Google ramanathana@google.com Anirudh
 	unknown [21, 0]
 	devel-doc [40, 0]
 	code [52, 0]
 	build [18, 0]
-matt@redhat.com Matthew Farrellee
+Red Hat matt@redhat.com Matthew Farrellee
 	unknown [3, 44]
 	devel-doc [0, 37]
 	code [0, 22]
 	build [13, 32]
 	documentation [0, 0]
-zml@google.com Zach Loafman
+Google zml@google.com Zach Loafman
 	unknown [196, 2]
 	devel-doc [280, 1]
 	code [141, 0]
 	build [69, 3]
 	documentation [19, 0]
 unknown 220 46
-	ramanathana@google.com Anirudh: [21, 0]
-	matt@redhat.com Matthew Farrellee: [3, 44]
-	zml@google.com Zach Loafman: [196, 2]
+	Google ramanathana@google.com Anirudh: [21, 0]
+	Red Hat matt@redhat.com Matthew Farrellee: [3, 44]
+	Google zml@google.com Zach Loafman: [196, 2]
 devel-doc 325 38
-	foxish@users.noreply.github.com Anirudh Ramanathan: [5, 0]
-	ramanathana@google.com Anirudh: [40, 0]
-	matt@redhat.com Matthew Farrellee: [0, 37]
-	zml@google.com Zach Loafman: [280, 1]
+	Google foxish@users.noreply.github.com Anirudh Ramanathan: [5, 0]
+	Google ramanathana@google.com Anirudh: [40, 0]
+	Red Hat matt@redhat.com Matthew Farrellee: [0, 37]
+	Google zml@google.com Zach Loafman: [280, 1]
 code 193 22
-	ramanathana@google.com Anirudh: [52, 0]
-	matt@redhat.com Matthew Farrellee: [0, 22]
-	zml@google.com Zach Loafman: [141, 0]
+	Google ramanathana@google.com Anirudh: [52, 0]
+	Red Hat matt@redhat.com Matthew Farrellee: [0, 22]
+	Google zml@google.com Zach Loafman: [141, 0]
 build 100 35
-	ramanathana@google.com Anirudh: [18, 0]
-	matt@redhat.com Matthew Farrellee: [13, 32]
-	zml@google.com Zach Loafman: [69, 3]
+	Google ramanathana@google.com Anirudh: [18, 0]
+	Red Hat matt@redhat.com Matthew Farrellee: [13, 32]
+	Google zml@google.com Zach Loafman: [69, 3]
 documentation 19 0
-	matt@redhat.com Matthew Farrellee: [0, 0]
-	zml@google.com Zach Loafman: [19, 0]
+	Red Hat matt@redhat.com Matthew Farrellee: [0, 0]
+	Google zml@google.com Zach Loafman: [19, 0]
 unknown 220 46
 devel-doc 325 38
 code 193 22

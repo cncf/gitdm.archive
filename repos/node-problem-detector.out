@@ -1,76 +1,76 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/node-problem-detector.csv
 
-unknown@hacker.net Unknown hacker
-dawnchen@google.com Dawn Chen
+(Unknown) unknown@hacker.net Unknown hacker
+Google dawnchen@google.com Dawn Chen
 	devel-doc [203, 0]
-lantaol@google.com Random-Liu
+Google lantaol@google.com Random-Liu
 	unknown [5574, 1653]
 	devel-doc [284, 60]
 	code [66, 0]
 	build [175, 41]
-taotaotheripper@gmail.com Lantao Liu
+Self taotaotheripper@gmail.com Lantao Liu
 	unknown [1, 1]
-jmilan@redhat.com Julius Milan
+Red Hat jmilan@redhat.com Julius Milan
 	unknown [39, 1]
 	devel-doc [1, 0]
-zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang
+ZTE Corporation zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang
 	devel-doc [1, 1]
-euan.kemp@coreos.com Euan Kemp
+CoreOS euan.kemp@coreos.com Euan Kemp
 	unknown [315, 4]
 	devel-doc [11, 9]
 	build [11, 2]
-andy.xning@gmail.com Andy Xie
+NotFound andy.xning@gmail.com Andy Xie
 	unknown [890, 416]
 	devel-doc [35, 10]
 	build [13, 9]
-chenjg@harmonycloud.cn fate-grand-order
+HarmonyCloud chenjg@harmonycloud.cn fate-grand-order
 	unknown [3, 3]
-aps.sids@gmail.com Amanpreet Singh
+Codigami aps.sids@gmail.com Amanpreet Singh
 	devel-doc [6, 4]
-shyamjvs@google.com Shyam Jeedigunta
+Google shyamjvs@google.com Shyam Jeedigunta
 	unknown [1, 1]
-thecantero@users.noreply.github.com thecantero
+(Unknown) thecantero@users.noreply.github.com thecantero
 	devel-doc [1, 1]
-coolhzb@163.com AdoHe
+Net EASE 网易有态度 coolhzb@163.com AdoHe
 	unknown [140, 102]
-johannes.scheuermann@inovex.de Johannes Scheuermann
+inovex GmbH johannes.scheuermann@inovex.de Johannes Scheuermann
 	devel-doc [1, 1]
-gkalele@google.com Girish Kalele
+Google gkalele@google.com Girish Kalele
 	unknown [149, 0]
 	devel-doc [29, 0]
 	build [42, 0]
-edwardam@interlix.com Edward Muller
+Heroku edwardam@interlix.com Edward Muller
 	unknown [9, 13]
 unknown 7121 2194
-	lantaol@google.com Random-Liu: [5574, 1653]
-	taotaotheripper@gmail.com Lantao Liu: [1, 1]
-	jmilan@redhat.com Julius Milan: [39, 1]
-	euan.kemp@coreos.com Euan Kemp: [315, 4]
-	andy.xning@gmail.com Andy Xie: [890, 416]
-	chenjg@harmonycloud.cn fate-grand-order: [3, 3]
-	shyamjvs@google.com Shyam Jeedigunta: [1, 1]
-	coolhzb@163.com AdoHe: [140, 102]
-	gkalele@google.com Girish Kalele: [149, 0]
-	edwardam@interlix.com Edward Muller: [9, 13]
+	Google lantaol@google.com Random-Liu: [5574, 1653]
+	Self taotaotheripper@gmail.com Lantao Liu: [1, 1]
+	Red Hat jmilan@redhat.com Julius Milan: [39, 1]
+	CoreOS euan.kemp@coreos.com Euan Kemp: [315, 4]
+	NotFound andy.xning@gmail.com Andy Xie: [890, 416]
+	HarmonyCloud chenjg@harmonycloud.cn fate-grand-order: [3, 3]
+	Google shyamjvs@google.com Shyam Jeedigunta: [1, 1]
+	Net EASE 网易有态度 coolhzb@163.com AdoHe: [140, 102]
+	Google gkalele@google.com Girish Kalele: [149, 0]
+	Heroku edwardam@interlix.com Edward Muller: [9, 13]
 devel-doc 572 86
-	dawnchen@google.com Dawn Chen: [203, 0]
-	lantaol@google.com Random-Liu: [284, 60]
-	jmilan@redhat.com Julius Milan: [1, 0]
-	zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang: [1, 1]
-	euan.kemp@coreos.com Euan Kemp: [11, 9]
-	andy.xning@gmail.com Andy Xie: [35, 10]
-	aps.sids@gmail.com Amanpreet Singh: [6, 4]
-	thecantero@users.noreply.github.com thecantero: [1, 1]
-	johannes.scheuermann@inovex.de Johannes Scheuermann: [1, 1]
-	gkalele@google.com Girish Kalele: [29, 0]
+	Google dawnchen@google.com Dawn Chen: [203, 0]
+	Google lantaol@google.com Random-Liu: [284, 60]
+	Red Hat jmilan@redhat.com Julius Milan: [1, 0]
+	ZTE Corporation zhang.xiaoyu33@zte.com.cn Xiaoyu Zhang: [1, 1]
+	CoreOS euan.kemp@coreos.com Euan Kemp: [11, 9]
+	NotFound andy.xning@gmail.com Andy Xie: [35, 10]
+	Codigami aps.sids@gmail.com Amanpreet Singh: [6, 4]
+	(Unknown) thecantero@users.noreply.github.com thecantero: [1, 1]
+	inovex GmbH johannes.scheuermann@inovex.de Johannes Scheuermann: [1, 1]
+	Google gkalele@google.com Girish Kalele: [29, 0]
 code 66 0
-	lantaol@google.com Random-Liu: [66, 0]
+	Google lantaol@google.com Random-Liu: [66, 0]
 build 241 52
-	lantaol@google.com Random-Liu: [175, 41]
-	euan.kemp@coreos.com Euan Kemp: [11, 2]
-	andy.xning@gmail.com Andy Xie: [13, 9]
-	gkalele@google.com Girish Kalele: [42, 0]
+	Google lantaol@google.com Random-Liu: [175, 41]
+	CoreOS euan.kemp@coreos.com Euan Kemp: [11, 2]
+	NotFound andy.xning@gmail.com Andy Xie: [13, 9]
+	Google gkalele@google.com Girish Kalele: [42, 0]
 unknown 7121 2194
 devel-doc 572 86
 code 66 0

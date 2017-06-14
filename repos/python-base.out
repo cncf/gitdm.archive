@@ -1,23 +1,23 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/python-base.csv
 
-unknown@hacker.net Unknown hacker
-mehdy@google.com Mehdy Bohlool
+(Unknown) unknown@hacker.net Unknown hacker
+Google mehdy@google.com Mehdy Bohlool
 	unknown [129, 1]
 	devel-doc [214, 2]
 	code [2828, 114]
 	build [12, 1]
-sergi@koolpi.com Sergi Almacellas Abellana
+(Unknown) sergi@koolpi.com Sergi Almacellas Abellana
 	code [38, 4]
 unknown 129 1
-	mehdy@google.com Mehdy Bohlool: [129, 1]
+	Google mehdy@google.com Mehdy Bohlool: [129, 1]
 devel-doc 214 2
-	mehdy@google.com Mehdy Bohlool: [214, 2]
+	Google mehdy@google.com Mehdy Bohlool: [214, 2]
 code 2866 118
-	mehdy@google.com Mehdy Bohlool: [2828, 114]
-	sergi@koolpi.com Sergi Almacellas Abellana: [38, 4]
+	Google mehdy@google.com Mehdy Bohlool: [2828, 114]
+	(Unknown) sergi@koolpi.com Sergi Almacellas Abellana: [38, 4]
 build 12 1
-	mehdy@google.com Mehdy Bohlool: [12, 1]
+	Google mehdy@google.com Mehdy Bohlool: [12, 1]
 unknown 129 1
 devel-doc 214 2
 code 2866 118

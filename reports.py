@@ -107,7 +107,7 @@ def ReportByPCount (hlist, cscount):
         changed = max(h.added, h.removed)
         delta = h.added - h.removed
         if pcount > 0:
-            ReportLine (h.full_name(), pcount, Pct(pcount, cscount))
+            ReportLine (h.full_name_with_aff(), pcount, Pct(pcount, cscount))
             reported += pcount
         count += 1
         if count >= ListCount:
@@ -124,7 +124,7 @@ def ReportByBCount (hlist, totalbugs):
     for h in hlist:
         bcount = len (h.bugsfixed)
         if bcount > 0:
-            ReportLine (h.full_name(), bcount, Pct(bcount, totalbugs))
+            ReportLine (h.full_name_with_aff(), bcount, Pct(bcount, totalbugs))
             reported += bcount
         count += 1
         if count >= ListCount:
@@ -143,7 +143,7 @@ def ReportByLChanged (hlist, totalchanged):
         changed = max(h.added, h.removed)
         delta = h.added - h.removed
         if (h.added + h.removed) > 0:
-            ReportLine (h.full_name(), changed, Pct(changed, totalchanged))
+            ReportLine (h.full_name_with_aff(), changed, Pct(changed, totalchanged))
             reported += changed
         count += 1
         if count >= ListCount:
@@ -162,7 +162,7 @@ def ReportByLRemoved (hlist, totalremoved):
         changed = max(h.added, h.removed)
         delta = h.added - h.removed
         if delta < 0:
-            ReportLine (h.full_name(), -delta, Pct(-delta, totalremoved))
+            ReportLine (h.full_name_with_aff(), -delta, Pct(-delta, totalremoved))
             reported += -delta
         count += 1
         if count >= ListCount:
@@ -232,7 +232,7 @@ def ReportBySOBs (hlist):
     for h in hlist:
         scount = len (h.signoffs)
         if scount > 0:
-            ReportLine (h.full_name(), scount, Pct(scount, totalsobs))
+            ReportLine (h.full_name_with_aff(), scount, Pct(scount, totalsobs))
             reported += scount
         count += 1
         if count >= ListCount:
@@ -255,7 +255,7 @@ def ReportByRevs (hlist):
     for h in hlist:
         scount = len (h.reviews)
         if scount > 0:
-            ReportLine (h.full_name(), scount, Pct(scount, totalrevs))
+            ReportLine (h.full_name_with_aff(), scount, Pct(scount, totalrevs))
             reported += scount
         count += 1
         if count >= ListCount:
@@ -298,7 +298,7 @@ def ReportByTests (hlist):
     for h in hlist:
         scount = len (h.tested)
         if scount > 0:
-            ReportLine (h.full_name(), scount, Pct(scount, totaltests))
+            ReportLine (h.full_name_with_aff(), scount, Pct(scount, totaltests))
             reported += scount
         count += 1
         if count >= ListCount:
@@ -317,7 +317,7 @@ def ReportByTestCreds (hlist):
     BeginReport ('Developers who gave the most tested-by credits (total %d)' % totaltests)
     for h in hlist:
         if h.testcred > 0:
-            ReportLine (h.full_name(), h.testcred, Pct(h.testcred, totaltests))
+            ReportLine (h.full_name_with_aff(), h.testcred, Pct(h.testcred, totaltests))
             reported += h.testcred
         count += 1
         if count >= ListCount:
@@ -342,7 +342,7 @@ def ReportByReports (hlist):
     for h in hlist:
         scount = len (h.reports)
         if scount > 0:
-            ReportLine (h.full_name(), scount, Pct(scount, totalreps))
+            ReportLine (h.full_name_with_aff(), scount, Pct(scount, totalreps))
             report += scount
         count += 1
         if count >= ListCount:
@@ -361,7 +361,7 @@ def ReportByRepCreds (hlist):
     BeginReport ('Developers who gave the most report credits (total %d)' % totalreps)
     for h in hlist:
         if h.repcred > 0:
-            ReportLine (h.full_name(), h.repcred, Pct(h.repcred, totalreps))
+            ReportLine (h.full_name_with_aff(), h.repcred, Pct(h.repcred, totalreps))
             reported += h.repcred
         count += 1
         if count >= ListCount:
@@ -391,7 +391,7 @@ def ReportVersions (hlist):
     count = 0
     allversions = hlist[0].versions
     for h in hlist:
-        ReportLineStr (h.full_name(), len (h.versions), MissedVersions (h.versions, allversions))
+        ReportLineStr (h.full_name_with_aff(), len (h.versions), MissedVersions (h.versions, allversions))
         count += 1
         if count >= ListCount:
             break
@@ -474,7 +474,7 @@ def EmplReviews (elist, totalreviews):
 def IsUnknown(h):
     # LG: need to take a look
     empl = h.employer[0][0][1].name
-    return h.email[0] == empl or empl == '(Unknown)'
+    return h.email[0] == empl or empl == '(Unknown)' or empl == 'NotFound'
 
 def ReportUnknowns(hlist, cscount):
     #
@@ -488,7 +488,7 @@ def ReportUnknowns(hlist, cscount):
     for h in ulist:
         pcount = len(h.patches)
         if pcount > 0:
-            ReportLine(h.full_name(), pcount, (pcount*100.0)/cscount)
+            ReportLine(h.full_name_with_aff(), pcount, (pcount*100.0)/cscount)
             count += 1
         if count >= ListCount:
             break
@@ -518,12 +518,12 @@ def ReportByFileType (hacker_list):
                     total[filetype] = [added, removed, []]
 
         # Print a summary by hacker
-        print h.full_name()
+        print h.full_name_with_aff()
         for filetype, counters in by_hacker.iteritems():
             print '\t', filetype, counters
             h_added = by_hacker[filetype][patch.ADDED]
             h_removed = by_hacker[filetype][patch.REMOVED]
-            total[filetype][2].append ([h.full_name(), h_added, h_removed])
+            total[filetype][2].append ([h.full_name_with_aff(), h_added, h_removed])
 
     # Print the global summary
     BeginReport ('Contributions by type and developers')

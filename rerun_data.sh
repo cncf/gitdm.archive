@@ -27,4 +27,3 @@ echo "New devs"
 
 echo "Multi repos"
 ./kubernetes_repos.sh
-
