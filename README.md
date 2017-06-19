@@ -202,3 +202,15 @@ Last month: 30227,21371,4645,1741,2470,451
 
 For some developers I was doing my best to find their affiliation, found something but I'm not 100%$ sure.
 They are: in `uncertain.csv` file.
+
+# You can pull GitHub users using Octokit GiHub API.
+To do this call:
+`ruby ghusers.rb`
+You need to have:
+- Standard GitHub OAuth token: https://github.com/settings/tokens --> Personal access tokens, put it in `/etc/github/oauth` file.
+- GitHub Application to increase rate limit from 60 to 5000 (60 is not enough to process kubernetes, 5000 is enough).
+- See: https://github.com/settings/ --> OAuth application, put Your client_id and client_secret in `/ect/github/client_id`, `/etc/github/client_secret` files.
+- This tool will cache all GitHub calls (save them as JSON files in `./ghusers/`) 
+- Final JSON will be saved in `./github_users.json` (next calls will use data from this file, so to reset cache just remove this file and all files from `ghusers/` directory
+- To actually generate new mapping You shoul manually process this JSON (and do some mapping of company names - GitHub users are putting strange stuff here)
+- I've did that by iterativelly using new tool: `import_from_github_users.sh`, `import_from_github_users.rb` with mapping file (that tries to map GiHub user company names into something more accurate): `company-names-mapping`
