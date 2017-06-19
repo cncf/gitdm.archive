@@ -197,7 +197,6 @@ def ghusers(repos, start_date)
         if email2github.key?(email)
           if email2github[email][0] != login
             puts "Too bad, we already have email2github[#{email}] = #{email2github[email][0]}, and now new value: #{login}"
-            binding.pry
           else
             email2github[email][1] += 1
           end
@@ -215,23 +214,39 @@ def ghusers(repos, start_date)
   users = users.sort_by { |u| -u[2] }
 
   # Process distinct GitHub users
-  # 1 point/user --> will take 3000 points
+  # 1 point/user --> took 3100 points
   final = []
   n_users = users.count
+  data = {}
+  begin
+    json = JSON.parse File.read 'github_users.json'
+    json.each do |usr|
+      data[usr['email']] = usr
+    end
+  rescue Errno::ENOENT => e
+    puts "No JSON saved yet, generating new one"
+  end
+
   users.each_with_index do |usr, index|
     begin
       rate_limit()
-      puts "Asking for #{index}/#{n_users}: #{usr[1]}, #{usr[0]}, commits: #{usr[2]}"
-      u = Octokit.user usr[1]
-      u[:email] = usr[0]
-      u[:commits] = usr[2]
-      puts "Got name: #{u[:name]}, login: #{u[:login]}"
+      puts "Asking for #{index}/#{n_users}: GitHub: #{usr[1]}, email: #{usr[0]}, commits: #{usr[2]}"
+      u = nil
+      if data.key?(usr[0])
+        # Check saved JSON by email (JSON unique)
+        u = data[usr[0]]
+      else
+        # Ask GitHub by login (github unique)
+        u = Octokit.user usr[1]
+      end
+      u['email'] = usr[0]
+      u['commits'] = usr[2]
+      puts "Got name: #{u[:name] || u['name']}, login: #{u[:login] || u['login']}"
       h = u.to_h
       final << h
     rescue Octokit::TooManyRequests => err2
       td = rate_limit()
       puts "Too many GitHub requests, sleeping for #{td} seconds"
-      binding.pry
       sleep td
       retry
     rescue => err2
@@ -239,10 +254,8 @@ def ghusers(repos, start_date)
       binding.pry
     end
   end
-  binding.pry
   json = JSON.pretty_generate final
   File.write 'github_users.json', json
-  binding.pry
 end
 
 ghusers(repos, start_date)
