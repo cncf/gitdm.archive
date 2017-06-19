@@ -143,7 +143,7 @@ def ghusers(repos, start_date)
 
   # Process each repository's commits
   # 56k commits took 162/5000 points
-  # After processed all 70 repos I had xxxx/5000 points remaining
+  # After processed all 70 repos I had ~3900/5000 points remaining
   comms = []
   hs.each do |repo|
     begin
@@ -167,7 +167,6 @@ def ghusers(repos, start_date)
       rescue Octokit::TooManyRequests => err2
         td = rate_limit()
         puts "Too many GitHub requests, sleeping for #{td} seconds"
-        binding.pry
         sleep td
         retry
       rescue => err2
@@ -176,6 +175,73 @@ def ghusers(repos, start_date)
       end
     end
   end
+
+  # Now analysis of different authors
+  email2github = {}
+  n_commits = 0
+  n_processed = 0
+  comms.each do |repo_commits|
+    repo_commits.each do |comm|
+      n_commits += 1
+      next unless comm['committer'] && comm['author']
+      n_processed += 1
+      author = comm['commit']['author'] || comm[:commit][:author]
+      committer = comm['commit']['committer'] || comm[:commit][:committer]
+      committer['login'] = comm['committer']['login'] || comm[:committer][:login]
+      author['login'] = comm['author']['login'] || comm[:author][:login]
+
+      h = {}
+      h[author['email']] = author['login']
+      h[committer['email']] = committer['login']
+      h.each do |email, login|
+        if email2github.key?(email)
+          if email2github[email][0] != login
+            puts "Too bad, we already have email2github[#{email}] = #{email2github[email][0]}, and now new value: #{login}"
+            binding.pry
+          else
+            email2github[email][1] += 1
+          end
+        else
+          email2github[email] = [login, 1]
+        end
+      end
+    end
+  end
+  puts "Processed #{n_processed}/#{n_commits} commits"
+  users = []
+  email2github.each do |email, data|
+    users << [email, data[0], data[1]]
+  end
+  users = users.sort_by { |u| -u[2] }
+
+  # Process distinct GitHub users
+  # 1 point/user --> will take 3000 points
+  final = []
+  n_users = users.count
+  users.each_with_index do |usr, index|
+    begin
+      rate_limit()
+      puts "Asking for #{index}/#{n_users}: #{usr[1]}, #{usr[0]}, commits: #{usr[2]}"
+      u = Octokit.user usr[1]
+      u[:email] = usr[0]
+      u[:commits] = usr[2]
+      puts "Got name: #{u[:name]}, login: #{u[:login]}"
+      h = u.to_h
+      final << h
+    rescue Octokit::TooManyRequests => err2
+      td = rate_limit()
+      puts "Too many GitHub requests, sleeping for #{td} seconds"
+      binding.pry
+      sleep td
+      retry
+    rescue => err2
+      puts "Uups, somethis bad happened, check `err2` variable!"
+      binding.pry
+    end
+  end
+  binding.pry
+  json = JSON.pretty_generate final
+  File.write 'github_users.json', json
   binding.pry
 end
 
