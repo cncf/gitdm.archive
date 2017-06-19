@@ -92,7 +92,7 @@ def ghusers(repos, start_date)
   Octokit.auto_paginate = true
 
   # Login with standard OAuth token
-  # https://github.com/settings/tokens --> Persona access tokens
+  # https://github.com/settings/tokens --> Personal access tokens
   client = Octokit::Client.new access_token: File.read('/etc/github/oauth').strip
   user = client.user
   user.login
