@@ -2,6 +2,11 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/helm.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Nike thomastaylor312@gmail.com Taylor Thomas
+	unknown [1224, 619]
+	devel-doc [164, 9]
+42 julien.balestra@gmail.com Julien Balestra
+	unknown [1, 1]
 Microsoft adamreese@users.noreply.github.com Adam Reese
 	devel-doc [502, 534]
 	code [1471, 838]
@@ -32,9 +37,6 @@ Microsoft minooral@microsoft.com Michelle Noorali
 	image [0, 0]
 	documentation [6, 2]
 	build [124, 92]
-Nike thomastaylor312@gmail.com Taylor Thomas
-	unknown [1224, 619]
-	devel-doc [164, 9]
 AT&T bjozsa@jinkit.com Brandon B. Jozsa
 	unknown [2, 2]
 Kelowna admin@toph.ca Christoph Blecker
@@ -457,12 +459,12 @@ GoGoVan eric.ho@gogotech.hk Eric Ho
 Google vaikas@vaikas-glaptop.roam.corp.google.com vaikas
 	unknown [10, 4]
 devel-doc 6442 3902
+	Nike thomastaylor312@gmail.com Taylor Thomas: [164, 9]
 	Microsoft adamreese@users.noreply.github.com Adam Reese: [502, 534]
 	Microsoft matt.butcher@microsoft.com Matt Butcher: [2642, 2168]
 	(Unknown) seh@panix.com Steven E. Harris: [89, 92]
 	(Unknown) lukaseichler1@googlemail.com Lukas Eichler: [0, 0]
 	Microsoft minooral@microsoft.com Michelle Noorali: [186, 22]
-	Nike thomastaylor312@gmail.com Taylor Thomas: [164, 9]
 	Kelowna admin@toph.ca Christoph Blecker: [8, 7]
 	Microsoft lachlan.evenson@microsoft.com Lachlan Evenson: [3, 3]
 	SUSE/Novell sushil.kumar@suse.com Sushil Kumar: [90, 8]
@@ -545,13 +547,14 @@ package 0 0
 	Nokia huszty.gergo@digitaltrip.hu Gergo Huszty: [0, 0]
 	Intel qin.wang@intel.com Qin Wang: [0, 0]
 	Google jackgr@google.com jackgr: [0, 0]
-unknown 132561 70405
+unknown 132562 70406
+	Nike thomastaylor312@gmail.com Taylor Thomas: [1224, 619]
+	42 julien.balestra@gmail.com Julien Balestra: [1, 1]
 	Microsoft adamreese@users.noreply.github.com Adam Reese: [10591, 6741]
 	Microsoft matt.butcher@microsoft.com Matt Butcher: [52660, 34367]
 	(Unknown) seh@panix.com Steven E. Harris: [379, 115]
 	(Unknown) lukaseichler1@googlemail.com Lukas Eichler: [135, 14]
 	Microsoft minooral@microsoft.com Michelle Noorali: [10022, 3524]
-	Nike thomastaylor312@gmail.com Taylor Thomas: [1224, 619]
 	AT&T bjozsa@jinkit.com Brandon B. Jozsa: [2, 2]
 	Kelowna admin@toph.ca Christoph Blecker: [1246, 380]
 	Microsoft lachlan.evenson@microsoft.com Lachlan Evenson: [18, 9]
@@ -751,7 +754,7 @@ build 1443 1124
 devel-doc 6442 3902
 code 9379 8801
 package 0 0
-unknown 132561 70405
+unknown 132562 70406
 image 72 48
 documentation 7588 4017
 build 1443 1124

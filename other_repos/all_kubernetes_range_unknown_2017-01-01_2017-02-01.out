@@ -4,7 +4,7 @@ open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_u
 yarntime@163.com is an author name, probably not what you want
 (Unknown) unknown@hacker.net Unknown hacker
 FathomDB justin@fathomdb.com Justin Santa Barbara
-	unknown [7896, 2997]
+	unknown [7928, 3036]
 	devel-doc [122, 5]
 	code [73, 10]
 	build [40, 38]
@@ -70,6 +70,12 @@ IBM mbauer@us.ibm.com Morgan Bauer
 eBay zhouhaibing089@gmail.com zhouhaibing089
 	unknown [160, 43]
 	devel-doc [5, 1]
+Google vmik@google.com Mik Vyatskov
+	unknown [592, 416]
+	image [0, 0]
+	code [0, 6]
+	build [16, 47]
+	devel-doc [0, 12]
 EastBanc Technologies oatamanenko@eastbanctech.com Oleg Atamanenko
 	unknown [2320, 4]
 	devel-doc [2, 0]
@@ -85,7 +91,7 @@ Google jgrafton@google.com Jeff Grafton
 	devel-doc [15312, 81]
 	code [167, 80]
 	ui [4, 0]
-	build [130, 116]
+	build [131, 117]
 CoreOS me@quentin-machu.fr Quentin Machu
 	unknown [414, 78]
 	code [80, 37]
@@ -365,12 +371,6 @@ Google shyamjvs@google.com Shyam JVS
 	image [0, 0]
 	documentation [1105, 7604]
 	build [31, 320]
-Google vmik@google.com Mik Vyatskov
-	unknown [588, 411]
-	image [0, 0]
-	code [0, 6]
-	build [15, 46]
-	devel-doc [0, 12]
 Self aledbf@gmail.com Manuel de Brito Fontes
 	unknown [1290, 577]
 	devel-doc [91, 4]
@@ -1297,6 +1297,7 @@ devel-doc 120727 112795
 	Google grod@google.com Garrett Rodrigues: [14, 0]
 	Apprenda pires@apprenda.com Paulo Pires: [3, 7]
 	eBay zhouhaibing089@gmail.com zhouhaibing089: [5, 1]
+	Google vmik@google.com Mik Vyatskov: [0, 12]
 	EastBanc Technologies oatamanenko@eastbanctech.com Oleg Atamanenko: [2, 0]
 	Wattpad andrew@wattpad.com andrewsykim: [128, 12]
 	Google jgrafton@google.com Jeff Grafton: [15312, 81]
@@ -1353,7 +1354,6 @@ devel-doc 120727 112795
 	sb++ galexrt@googlemail.com Alexander Trost: [2, 0]
 	Google beeps@google.com Prashanth B: [466, 14]
 	Google shyamjvs@google.com Shyam JVS: [21, 16947]
-	Google vmik@google.com Mik Vyatskov: [0, 12]
 	Self aledbf@gmail.com Manuel de Brito Fontes: [91, 4]
 	ZTE Corporation warmchang@outlook.com William Chang: [1, 1]
 	Google senlu@google.com krzyzacy: [26, 10]
@@ -1460,6 +1460,7 @@ code 118893 64996
 	Red Hat deads@redhat.com deads2k: [427, 157]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [19, 4]
 	Google nikhiljindal@google.com nikhiljindal: [2, 2]
+	Google vmik@google.com Mik Vyatskov: [0, 6]
 	EastBanc Technologies oatamanenko@eastbanctech.com Oleg Atamanenko: [1, 1]
 	Google jgrafton@google.com Jeff Grafton: [167, 80]
 	CoreOS me@quentin-machu.fr Quentin Machu: [80, 37]
@@ -1487,7 +1488,6 @@ code 118893 64996
 	sb++ galexrt@googlemail.com Alexander Trost: [17, 7]
 	Google beeps@google.com Prashanth B: [223, 0]
 	Google shyamjvs@google.com Shyam JVS: [1154, 1426]
-	Google vmik@google.com Mik Vyatskov: [0, 6]
 	Self aledbf@gmail.com Manuel de Brito Fontes: [2, 2]
 	Google senlu@google.com krzyzacy: [703, 11556]
 	Google mikedanese@gmail.com Mike Danese: [55, 2]
@@ -1564,8 +1564,8 @@ code 118893 64996
 	Google saied@google.com Saied Kazemi: [222, 0]
 package 0 0
 	Google shyamjvs@google.com Shyam JVS: [0, 0]
-unknown 401033 958851
-	FathomDB justin@fathomdb.com Justin Santa Barbara: [7896, 2997]
+unknown 401069 958895
+	FathomDB justin@fathomdb.com Justin Santa Barbara: [7928, 3036]
 	IBM liamwhite@uk.ibm.com Liam White: [344, 40]
 	Zalando m@moscar.net Mikkel Oscar Lyderik Larsen: [9, 9]
 	Google wojtekt@google.com Wojciech Tyczynski: [1637, 190]
@@ -1584,6 +1584,7 @@ unknown 401033 958851
 	Apprenda pires@apprenda.com Paulo Pires: [559, 707]
 	IBM mbauer@us.ibm.com Morgan Bauer: [1007, 71]
 	eBay zhouhaibing089@gmail.com zhouhaibing089: [160, 43]
+	Google vmik@google.com Mik Vyatskov: [592, 416]
 	EastBanc Technologies oatamanenko@eastbanctech.com Oleg Atamanenko: [2320, 4]
 	Google mwielgus@google.com Marcin Wielgus: [4015, 1993]
 	Wattpad andrew@wattpad.com andrewsykim: [24, 26]
@@ -1662,7 +1663,6 @@ unknown 401033 958851
 	sb++ galexrt@googlemail.com Alexander Trost: [314, 201]
 	Google beeps@google.com Prashanth B: [885, 31]
 	Google shyamjvs@google.com Shyam JVS: [7377, 638675]
-	Google vmik@google.com Mik Vyatskov: [588, 411]
 	Self aledbf@gmail.com Manuel de Brito Fontes: [1290, 577]
 	(Unknown) comp_@gmx.net Ion Savin: [6, 1]
 	Google senlu@google.com krzyzacy: [4063, 410]
@@ -1971,11 +1971,11 @@ unknown 401033 958851
 	Google xuchao@google.com Chao Xu: [78, 52]
 	Google saied@google.com Saied Kazemi: [30, 0]
 image 3248 0
+	Google vmik@google.com Mik Vyatskov: [0, 0]
 	(Unknown) seanknox@users.noreply.github.com Sean Knox: [0, 0]
 	Google pwittroc@google.com Phillip Wittrock: [3247, 0]
 	Google ramanathana@google.com Anirudh: [0, 0]
 	Google shyamjvs@google.com Shyam JVS: [0, 0]
-	Google vmik@google.com Mik Vyatskov: [0, 0]
 	(Unknown) mlamina09@gmail.com Marco Lamina: [0, 0]
 	Microsoft oguzp@microsoft.com Oguz Pastirmaci: [0, 0]
 	Tremolo Security marc.boorshtein@tremolosecurity.com Marc Boorshtein: [1, 0]
@@ -2046,12 +2046,13 @@ ui 212 0
 	Google pwittroc@google.com Phillip Wittrock: [199, 0]
 	Google spxtr@google.com Joe Finney: [6, 0]
 	Google fejta@google.com Erick Fejta: [3, 0]
-build 2226 2392
+build 2228 2394
 	FathomDB justin@fathomdb.com Justin Santa Barbara: [40, 38]
 	Google wojtekt@google.com Wojciech Tyczynski: [3, 1]
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [101, 37]
 	IBM mbauer@us.ibm.com Morgan Bauer: [3, 3]
-	Google jgrafton@google.com Jeff Grafton: [130, 116]
+	Google vmik@google.com Mik Vyatskov: [16, 47]
+	Google jgrafton@google.com Jeff Grafton: [131, 117]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [2, 2]
 	CoreOS hongchaodeng1@gmail.com Hongchao Deng: [7, 0]
 	(Unknown) javishi@gmail.com Ravi Mehra: [1, 1]
@@ -2063,7 +2064,6 @@ build 2226 2392
 	Red Hat jpeeler@redhat.com Jeff Peeler: [15, 3]
 	Google beeps@google.com Prashanth B: [77, 3]
 	Google shyamjvs@google.com Shyam JVS: [31, 320]
-	Google vmik@google.com Mik Vyatskov: [15, 46]
 	Self aledbf@gmail.com Manuel de Brito Fontes: [2, 2]
 	Google senlu@google.com krzyzacy: [26, 3]
 	Google mikedanese@gmail.com Mike Danese: [33, 2]
@@ -2122,9 +2122,9 @@ translation 2791 1406
 devel-doc 120727 112795
 code 118893 64996
 package 0 0
-unknown 401033 958851
+unknown 401069 958895
 image 3248 0
 documentation 54513 22114
 ui 212 0
-build 2226 2392
+build 2228 2394
 translation 2791 1406

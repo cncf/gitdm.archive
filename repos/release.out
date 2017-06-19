@@ -3,9 +3,14 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/release.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
 Google djmm@google.com David McMahon
-	unknown [2223, 390]
-	devel-doc [1003, 57]
-	code [2706, 444]
+	unknown [2230, 393]
+	devel-doc [1009, 59]
+	code [2763, 481]
+Google dclaar@google.com Doug Claar
+	unknown [4, 5]
+Google enisoc@google.com Anthony Yeh
+	unknown [9, 1]
+	code [7, 3]
 (Unknown) ixdy@users.noreply.github.com Jeff Grafton
 	unknown [49, 29]
 	devel-doc [40, 17]
@@ -50,8 +55,6 @@ Google erick@fejta.com Erick Fejta
 	unknown [21, 5]
 Google madhusudancs@google.com Madhusudan.C.S
 	code [1, 1]
-Google enisoc@google.com Anthony Yeh
-	code [7, 3]
 Google zml@google.com Zach Loafman
 	code [7, 0]
 Google rmmh@google.com Ryan Hitchman
@@ -92,8 +95,10 @@ Google pwittroc+github@google.com Phillip Wittrock
 Google robertbailey@google.com Robert Bailey
 Google bgrant0607@users.noreply.github.com Brian Grant
 	devel-doc [203, 0]
-unknown 3376 725
-	Google djmm@google.com David McMahon: [2223, 390]
+unknown 3396 734
+	Google djmm@google.com David McMahon: [2230, 393]
+	Google dclaar@google.com Doug Claar: [4, 5]
+	Google enisoc@google.com Anthony Yeh: [9, 1]
 	(Unknown) ixdy@users.noreply.github.com Jeff Grafton: [49, 29]
 	Google mikedanese@gmail.com Mike Danese: [690, 70]
 	Google beacham@google.com Jacob Beacham: [1, 1]
@@ -109,8 +114,8 @@ unknown 3376 725
 	Google mtaufen@users.noreply.github.com Michael Taufen: [7, 7]
 	Luke Marsden me@lukemarsden.net Luke Marsden: [3, 1]
 	Mirantis eli@mirantis.com Evgeny L: [10, 12]
-devel-doc 1442 114
-	Google djmm@google.com David McMahon: [1003, 57]
+devel-doc 1448 116
+	Google djmm@google.com David McMahon: [1009, 59]
 	(Unknown) ixdy@users.noreply.github.com Jeff Grafton: [40, 17]
 	Google mikedanese@gmail.com Mike Danese: [109, 11]
 	Red Hat dgoodwin@redhat.com Devan Goodwin: [21, 9]
@@ -120,8 +125,9 @@ devel-doc 1442 114
 	American Express marciopuga@gmail.com Marcio Puga: [1, 1]
 	Mirantis mmosesohn@mirantis.com Matthew Mosesohn: [42, 15]
 	Google bgrant0607@users.noreply.github.com Brian Grant: [203, 0]
-code 3389 828
-	Google djmm@google.com David McMahon: [2706, 444]
+code 3446 865
+	Google djmm@google.com David McMahon: [2763, 481]
+	Google enisoc@google.com Anthony Yeh: [7, 3]
 	(Unknown) ixdy@users.noreply.github.com Jeff Grafton: [229, 79]
 	Kelowna admin@toph.ca Christoph Blecker: [3, 1]
 	Google mikedanese@gmail.com Mike Danese: [215, 196]
@@ -133,7 +139,6 @@ code 3389 828
 	IBM mkumatag@in.ibm.com Manjunath A Kumatagi: [33, 9]
 	Google erick@fejta.com Erick Fejta: [15, 10]
 	Google madhusudancs@google.com Madhusudan.C.S: [1, 1]
-	Google enisoc@google.com Anthony Yeh: [7, 3]
 	Google zml@google.com Zach Loafman: [7, 0]
 	Google rmmh@google.com Ryan Hitchman: [27, 56]
 	Google saadali@google.com saadali: [1, 0]
@@ -155,7 +160,7 @@ build 532 229
 	Weaveworks errordeveloper@gmail.com Ilya Dmitrichenko: [31, 22]
 	Mirantis mmosesohn@mirantis.com Matthew Mosesohn: [22, 15]
 	Mirantis eli@mirantis.com Evgeny L: [4, 1]
-unknown 3376 725
-devel-doc 1442 114
-code 3389 828
+unknown 3396 734
+devel-doc 1448 116
+code 3446 865
 build 532 229

@@ -8,6 +8,12 @@ Google mwielgus@google.com Marcin Wielgus
 	devel-doc [12, 7]
 	documentation [2, 5]
 	build [12, 0]
+Google wojtekt@google.com Wojciech Tyczynski
+	unknown [1069, 521]
+	devel-doc [38, 216]
+	code [198, 65]
+	build [48, 10]
+	documentation [16, 10]
 Wattpad andrew@wattpad.com andrewsykim
 	devel-doc [158, 0]
 (Unknown) osxi@users.noreply.github.com osxi
@@ -262,12 +268,6 @@ Google apelisse@google.com Antoine Pelisse
 	code [13, 2]
 	build [14, 0]
 	documentation [4, 0]
-Google wojtekt@google.com Wojciech Tyczynski
-	unknown [1022, 510]
-	devel-doc [38, 216]
-	code [198, 65]
-	build [46, 8]
-	documentation [16, 10]
 Google grod@google.com Garrett Rodrigues
 	code [10, 38]
 	unknown [291, 63]
@@ -1003,6 +1003,7 @@ Google cjcullen@google.com CJ Cullen
 	unknown [2, 1]
 devel-doc 23583 8166
 	Google mwielgus@google.com Marcin Wielgus: [12, 7]
+	Google wojtekt@google.com Wojciech Tyczynski: [38, 216]
 	Wattpad andrew@wattpad.com andrewsykim: [158, 0]
 	Google pszczesniak@google.com Piotr Szczesniak: [50, 975]
 	Microsoft lachie83@users.noreply.github.com Lachlan Evenson: [413, 0]
@@ -1048,7 +1049,6 @@ devel-doc 23583 8166
 	Google zhoufang@google.com Zhou Fang: [650, 2]
 	Google qlee@google.com Quintin Lee: [141, 1]
 	Google apelisse@google.com Antoine Pelisse: [26, 7]
-	Google wojtekt@google.com Wojciech Tyczynski: [38, 216]
 	Google grod@google.com Garrett Rodrigues: [20, 2]
 	NotFound kay.diam@gmail.com kayrus: [4, 0]
 	Red Hat jchaloup@redhat.com Jan Chaloupka: [53, 0]
@@ -1124,6 +1124,7 @@ devel-doc 23583 8166
 	Google senlu@google.com Sen Lu: [27, 0]
 code 63261 12706
 	Google mwielgus@google.com Marcin Wielgus: [11, 0]
+	Google wojtekt@google.com Wojciech Tyczynski: [198, 65]
 	Google pszczesniak@google.com Piotr Szczesniak: [11, 0]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [2, 52]
 	CoreOS dghubble@gmail.com Dalton Hubble: [1, 1]
@@ -1157,7 +1158,6 @@ code 63261 12706
 	Google qlee@google.com Quintin Lee: [3, 1]
 	Red Hat jbrooks@redhat.com Jason Brooks: [1, 1]
 	Google apelisse@google.com Antoine Pelisse: [13, 2]
-	Google wojtekt@google.com Wojciech Tyczynski: [198, 65]
 	Google grod@google.com Garrett Rodrigues: [10, 38]
 	Red Hat jchaloup@redhat.com Jan Chaloupka: [256, 7]
 	Google jgrafton@google.com Jeff Grafton: [140, 134]
@@ -1234,8 +1234,9 @@ code 63261 12706
 	Google aprindle@google.com Aaron Prindle: [14, 3]
 package 0 0
 	Engine Yard mbutcher@engineyard.com Matt Butcher: [0, 0]
-unknown 376661 223926
+unknown 376708 223937
 	Google mwielgus@google.com Marcin Wielgus: [3736, 784]
+	Google wojtekt@google.com Wojciech Tyczynski: [1069, 521]
 	(Unknown) osxi@users.noreply.github.com osxi: [18, 0]
 	Google pszczesniak@google.com Piotr Szczesniak: [1459, 923]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [177, 91]
@@ -1298,7 +1299,6 @@ unknown 376661 223926
 	Google qlee@google.com Quintin Lee: [354, 18]
 	Red Hat jbrooks@redhat.com Jason Brooks: [2, 2]
 	Google apelisse@google.com Antoine Pelisse: [5141, 219]
-	Google wojtekt@google.com Wojciech Tyczynski: [1022, 510]
 	Google grod@google.com Garrett Rodrigues: [291, 63]
 	NotFound kay.diam@gmail.com kayrus: [91, 68]
 	Red Hat dma@redhat.com mdshuai: [0, 3]
@@ -1537,6 +1537,7 @@ image 9346 3125
 	Wercker victoria.domalik@gmail.com Victoria Domalik: [118, 0]
 documentation 92226 11373
 	Google mwielgus@google.com Marcin Wielgus: [2, 5]
+	Google wojtekt@google.com Wojciech Tyczynski: [16, 10]
 	Google pszczesniak@google.com Piotr Szczesniak: [2, 0]
 	Google jeffmendoza@google.com Jeff Mendoza: [0, 76]
 	Google xuchao@google.com Chao Xu: [3492, 0]
@@ -1555,7 +1556,6 @@ documentation 92226 11373
 	Google zhoufang@google.com Zhou Fang: [701, 161]
 	Google qlee@google.com Quintin Lee: [2, 0]
 	Google apelisse@google.com Antoine Pelisse: [4, 0]
-	Google wojtekt@google.com Wojciech Tyczynski: [16, 10]
 	Google grod@google.com Garrett Rodrigues: [33, 2]
 	Google jgrafton@google.com Jeff Grafton: [3, 3]
 	Google robertbailey@google.com Robert Bailey: [3, 3]
@@ -1601,8 +1601,9 @@ documentation 92226 11373
 	SourceClear md@stoi.cc Matthew L Daniel: [2, 2]
 ui 1 0
 	Google pdabkowski@google.com Piotr Dabkowski: [1, 0]
-build 2788 1233
+build 2790 1235
 	Google mwielgus@google.com Marcin Wielgus: [12, 0]
+	Google wojtekt@google.com Wojciech Tyczynski: [48, 10]
 	Google pszczesniak@google.com Piotr Szczesniak: [36, 4]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [4, 4]
 	Google gkalele@google.com Girish Kalele: [1, 1]
@@ -1626,7 +1627,6 @@ build 2788 1233
 	Google zhoufang@google.com Zhou Fang: [26, 8]
 	Google qlee@google.com Quintin Lee: [158, 17]
 	Google apelisse@google.com Antoine Pelisse: [14, 0]
-	Google wojtekt@google.com Wojciech Tyczynski: [46, 8]
 	Google jgrafton@google.com Jeff Grafton: [5, 5]
 	Self dj199008@gmail.com m1093782566: [79, 15]
 	Red Hat tstclair@redhat.com Timothy St. Clair: [7, 7]
@@ -1677,8 +1677,8 @@ build 2788 1233
 devel-doc 23583 8166
 code 63261 12706
 package 0 0
-unknown 376661 223926
+unknown 376708 223937
 image 9346 3125
 documentation 92226 11373
 ui 1 0
-build 2788 1233
+build 2790 1235

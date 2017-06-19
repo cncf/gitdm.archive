@@ -11,11 +11,16 @@ Wattpad andrew@wattpad.com andrewsykim
 Luizalabs arnaldo@luizalabs.com Arnaldo de Moraes Pereira
 	devel-doc [2, 2]
 Red Hat jchaloup@redhat.com Jan Chaloupka
-	unknown [1510, 721]
+	unknown [1516, 727]
 	devel-doc [76, 17]
 	code [137, 100]
 	build [1, 7]
 	documentation [3, 3]
+Google wojtekt@google.com Wojciech Tyczynski
+	code [59, 32]
+	unknown [1361, 928]
+	documentation [2, 0]
+	build [8, 7]
 Google wael.nasreddine@gmail.com Wael M. Nasreddine
 	unknown [9, 1]
 CoreOS pb@coreos.com Patrick Baxter
@@ -220,11 +225,6 @@ Hyper.sh harryz@hyper.sh harry zhang
 Google ciwang@google.com Cindy Wang
 	unknown [1104, 0]
 	image [0, 0]
-Google wojtekt@google.com Wojciech Tyczynski
-	code [59, 32]
-	unknown [1360, 927]
-	documentation [2, 0]
-	build [7, 6]
 Google djmm@google.com David McMahon
 	unknown [730, 514]
 	devel-doc [583, 256]
@@ -1151,6 +1151,7 @@ devel-doc 23011 12864
 	Google senlu@google.com Sen Lu: [3, 2]
 code 65941 4590
 	Red Hat jchaloup@redhat.com Jan Chaloupka: [137, 100]
+	Google wojtekt@google.com Wojciech Tyczynski: [59, 32]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [69, 45]
 	CoreOS dghubble@gmail.com Dalton Hubble: [1, 1]
 	Google viglesias@google.com Vic Iglesias: [53, 16]
@@ -1168,7 +1169,6 @@ code 65941 4590
 	Google vishnuk@google.com Vishnu kannan: [29, 22]
 	Google bryk@google.com Piotr Bryk: [2473, 315]
 	IBM dims@linux.vnet.ibm.com Davanum Srinivas: [5, 1]
-	Google wojtekt@google.com Wojciech Tyczynski: [59, 32]
 	Google djmm@google.com David McMahon: [52, 95]
 	Google mikedanese@google.com Mike Danese: [185, 195]
 	Google joe.github@bedafamily.com Joe Beda: [5, 3]
@@ -1247,10 +1247,11 @@ code 65941 4590
 	Google edjee@google.com Edward Hyunkoo Jee: [10, 0]
 package 0 0
 	Engine Yard mbutcher@engineyard.com Matt Butcher: [0, 0]
-unknown 433652 560003
+unknown 433659 560010
 	Google mwielgus@google.com Marcin Wielgus: [769, 85]
 	Wattpad andrew@wattpad.com andrewsykim: [26, 2]
-	Red Hat jchaloup@redhat.com Jan Chaloupka: [1510, 721]
+	Red Hat jchaloup@redhat.com Jan Chaloupka: [1516, 727]
+	Google wojtekt@google.com Wojciech Tyczynski: [1361, 928]
 	Google wael.nasreddine@gmail.com Wael M. Nasreddine: [9, 1]
 	CoreOS pb@coreos.com Patrick Baxter: [323, 424]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [144, 113]
@@ -1304,7 +1305,6 @@ unknown 433652 560003
 	IBM dims@linux.vnet.ibm.com Davanum Srinivas: [169, 112]
 	Hyper.sh harryz@hyper.sh harry zhang: [17, 10]
 	Google ciwang@google.com Cindy Wang: [1104, 0]
-	Google wojtekt@google.com Wojciech Tyczynski: [1360, 927]
 	Google djmm@google.com David McMahon: [730, 514]
 	Google mikedanese@google.com Mike Danese: [1749, 1022]
 	Google joe.github@bedafamily.com Joe Beda: [81, 0]
@@ -1571,6 +1571,7 @@ image 12882 4
 	(Unknown) balaji.warft@gmail.com Balaji Subramaniam: [0, 0]
 documentation 151448 5634
 	Red Hat jchaloup@redhat.com Jan Chaloupka: [3, 3]
+	Google wojtekt@google.com Wojciech Tyczynski: [2, 0]
 	CoreOS brandon@ifup.org Brandon Philips: [0, 0]
 	Bitnami adnan@bitnami.com Adnan Abdulhussein: [56, 0]
 	Bitnami migmartri@gmail.com Miguel Ángel Martínez Triviño: [32, 0]
@@ -1587,7 +1588,6 @@ documentation 151448 5634
 	Google bryk@google.com Piotr Bryk: [446, 317]
 	Google mml@google.com Matt Liggett: [0, 0]
 	IBM dims@linux.vnet.ibm.com Davanum Srinivas: [1, 0]
-	Google wojtekt@google.com Wojciech Tyczynski: [2, 0]
 	Self aledbf@gmail.com Manuel de Brito Fontes: [108, 12]
 	Google qlee@google.com Quintin Lee: [3, 2]
 	NotFound kay.diam@gmail.com kayrus: [4, 4]
@@ -1629,8 +1629,9 @@ documentation 151448 5634
 	Google ankurz@google.com ankurshukla: [3, 0]
 ui 1 1
 	Google bryk@google.com Piotr Bryk: [1, 1]
-build 10834 1138
+build 10835 1139
 	Red Hat jchaloup@redhat.com Jan Chaloupka: [1, 7]
+	Google wojtekt@google.com Wojciech Tyczynski: [8, 7]
 	CoreOS dan.gillespie@coreos.com Dan Gillespie: [23, 11]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [17, 18]
 	CoreOS eric.chiang.m@gmail.com Eric Chiang: [3, 9]
@@ -1645,7 +1646,6 @@ build 10834 1138
 	Google spxtr@google.com Joe Finney: [99, 80]
 	Google vishh@users.noreply.github.com Vish Kannan: [2, 2]
 	Google vishnuk@google.com Vishnu kannan: [9, 8]
-	Google wojtekt@google.com Wojciech Tyczynski: [7, 6]
 	Google mikedanese@google.com Mike Danese: [30, 4]
 	Google joe.github@bedafamily.com Joe Beda: [1, 1]
 	Self aledbf@gmail.com Manuel de Brito Fontes: [3, 3]
@@ -1700,8 +1700,8 @@ build 10834 1138
 devel-doc 23011 12864
 code 65941 4590
 package 0 0
-unknown 433652 560003
+unknown 433659 560010
 image 12882 4
 documentation 151448 5634
 ui 1 1
-build 10834 1138
+build 10835 1139

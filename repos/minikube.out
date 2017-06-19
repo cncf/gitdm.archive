@@ -2,26 +2,48 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/minikube.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
-Google m@rickard.email Matt Rickard
-	unknown [27234, 22415]
-	devel-doc [805, 1087]
-	code [537, 452]
-	build [184, 122]
-Google dlorenc@google.com dlorenc
-	unknown [18511, 12754]
-	devel-doc [574, 98]
-	code [632, 176]
-	build [266, 106]
-	documentation [60, 0]
-Google nkubala@google.com Nick Kubala
-	unknown [102, 53]
-	build [5, 1]
 Google aprindle@google.com Aaron Prindle
-	unknown [20811, 9248]
+	unknown [20822, 9250]
 	devel-doc [357, 283]
 	code [684, 165]
 	build [264, 88]
 	image [0, 0]
+(Unknown) xrsquared@gmail.com XrXr
+	unknown [5, 0]
+(Unknown) goodwillcoding@users.noreply.github.com goodwillcoding
+	unknown [2, 2]
+Google dlorenc@google.com dlorenc
+	unknown [18566, 12874]
+	devel-doc [574, 98]
+	code [632, 176]
+	build [270, 107]
+	documentation [60, 0]
+Google m@rickard.email Matt Rickard
+	unknown [27235, 22416]
+	devel-doc [805, 1087]
+	code [537, 452]
+	build [184, 122]
+Microsoft matt.fisher@microsoft.com Matthew Fisher
+	unknown [58, 1]
+	devel-doc [9, 0]
+Red Hat budhram.gurung01@gmail.com Budh Ram Gurung
+	unknown [48, 48]
+	devel-doc [1, 1]
+	code [3, 3]
+	build [1, 1]
+Rackspace jamie.hannaford@rackspace.com Jamie Hannaford
+	unknown [5, 0]
+(Unknown) shane.ramey@gmail.com Shane Ramey
+	unknown [10, 9]
+Red Hat lmohanty@redhat.com Lalatendu Mohanty
+	unknown [9, 0]
+Self aledbf@gmail.com Manuel de Brito Fontes
+	unknown [1, 1]
+Google atisdale@atisdale.sfo.corp.google.com Abby Tisdale
+	unknown [370, 4]
+Google nkubala@google.com Nick Kubala
+	unknown [102, 53]
+	build [5, 1]
 Weaveworks roli@weave.works Roland Schilter
 	unknown [3, 3]
 UnitedStack me@gbraad.nl Gerard Braad
@@ -44,8 +66,6 @@ Fujitsu maciaszczykm@users.noreply.github.com Marcin Maciaszczyk
 Collaborne andreas.kohn@gmail.com Andreas Kohn
 	unknown [7, 6]
 	devel-doc [3, 3]
-Red Hat budhram.gurung01@gmail.com Budh Ram Gurung
-	unknown [11, 11]
 Digidentity gianrubio@gmail.com Giancarlo Rubio
 	unknown [5, 5]
 	code [1, 1]
@@ -131,8 +151,6 @@ UK Home Office chris@cns.me.uk Chris Nesbitt-Smith
 	unknown [1, 1]
 Dynatrace LLC m.etmajer@gmail.com Martin Etmajer
 	unknown [1, 0]
-DEIS mfisher@deis.com Matthew Fisher
-	devel-doc [9, 0]
 CoreOS sur@coreos.com Sergiusz Urbaniak
 	unknown [686, 189]
 	devel-doc [396, 277]
@@ -252,10 +270,12 @@ Redspread dan@redspread.com Dan Gillespie
 Red Hat eparis@redhat.com Eric Paris
 Google vishh@users.noreply.github.com Vish Kannan
 	devel-doc [206, 2]
-devel-doc 3072 2199
-	Google m@rickard.email Matt Rickard: [805, 1087]
-	Google dlorenc@google.com dlorenc: [574, 98]
+devel-doc 3073 2200
 	Google aprindle@google.com Aaron Prindle: [357, 283]
+	Google dlorenc@google.com dlorenc: [574, 98]
+	Google m@rickard.email Matt Rickard: [805, 1087]
+	Microsoft matt.fisher@microsoft.com Matthew Fisher: [9, 0]
+	Red Hat budhram.gurung01@gmail.com Budh Ram Gurung: [1, 1]
 	UPMC slokas@upmc.edu Steve Sloka: [4, 2]
 	Collaborne andreas.kohn@gmail.com Andreas Kohn: [3, 3]
 	(Unknown) sukantgujar@yahoo.com SukantGujar: [1, 1]
@@ -277,7 +297,6 @@ devel-doc 3072 2199
 	clypd bfallik@gmail.com Brian Fallik: [2, 2]
 	Target kjkurtz@gmail.com Kyle Kurtz: [1, 1]
 	Google ensonic@google.com Stefan Sauer: [9, 0]
-	DEIS mfisher@deis.com Matthew Fisher: [9, 0]
 	CoreOS sur@coreos.com Sergiusz Urbaniak: [396, 277]
 	Red Hat jimmidyson@gmail.com Jimmi Dyson: [51, 22]
 	Google waprin@google.com Bill Prin: [2, 0]
@@ -295,10 +314,11 @@ devel-doc 3072 2199
 	Red Hat james.strachan@gmail.com James Strachan: [17, 3]
 	Redspread dan@redspread.com Dan Gillespie: [1, 1]
 	Google vishh@users.noreply.github.com Vish Kannan: [206, 2]
-code 2070 868
-	Google m@rickard.email Matt Rickard: [537, 452]
-	Google dlorenc@google.com dlorenc: [632, 176]
+code 2073 871
 	Google aprindle@google.com Aaron Prindle: [684, 165]
+	Google dlorenc@google.com dlorenc: [632, 176]
+	Google m@rickard.email Matt Rickard: [537, 452]
+	Red Hat budhram.gurung01@gmail.com Budh Ram Gurung: [3, 3]
 	Digidentity gianrubio@gmail.com Giancarlo Rubio: [1, 1]
 	CoreOS sur@coreos.com Sergiusz Urbaniak: [36, 36]
 	Red Hat jimmidyson@gmail.com Jimmi Dyson: [3, 3]
@@ -306,11 +326,20 @@ code 2070 868
 	Ubisoft rodcloutier@gmail.com Rod Cloutier: [42, 0]
 	Rook luxas@users.noreply.github.com Lucas Käldström: [67, 5]
 	Redspread dan@redspread.com Dan Gillespie: [41, 1]
-unknown 82389 52027
-	Google m@rickard.email Matt Rickard: [27234, 22415]
-	Google dlorenc@google.com dlorenc: [18511, 12754]
+unknown 82953 52204
+	Google aprindle@google.com Aaron Prindle: [20822, 9250]
+	(Unknown) xrsquared@gmail.com XrXr: [5, 0]
+	(Unknown) goodwillcoding@users.noreply.github.com goodwillcoding: [2, 2]
+	Google dlorenc@google.com dlorenc: [18566, 12874]
+	Google m@rickard.email Matt Rickard: [27235, 22416]
+	Microsoft matt.fisher@microsoft.com Matthew Fisher: [58, 1]
+	Red Hat budhram.gurung01@gmail.com Budh Ram Gurung: [48, 48]
+	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [5, 0]
+	(Unknown) shane.ramey@gmail.com Shane Ramey: [10, 9]
+	Red Hat lmohanty@redhat.com Lalatendu Mohanty: [9, 0]
+	Self aledbf@gmail.com Manuel de Brito Fontes: [1, 1]
+	Google atisdale@atisdale.sfo.corp.google.com Abby Tisdale: [370, 4]
 	Google nkubala@google.com Nick Kubala: [102, 53]
-	Google aprindle@google.com Aaron Prindle: [20811, 9248]
 	Weaveworks roli@weave.works Roland Schilter: [3, 3]
 	UnitedStack me@gbraad.nl Gerard Braad: [1, 1]
 	DEIS michelle@deis.com Michelle Noorali: [2, 2]
@@ -321,7 +350,6 @@ unknown 82389 52027
 	(Unknown) 59pilgrim@gmail.com Thibaut Démaret: [4, 1]
 	Fujitsu maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [8, 8]
 	Collaborne andreas.kohn@gmail.com Andreas Kohn: [7, 6]
-	Red Hat budhram.gurung01@gmail.com Budh Ram Gurung: [11, 11]
 	Digidentity gianrubio@gmail.com Giancarlo Rubio: [5, 5]
 	(Unknown) dale.hamel@shopify.com Dale Hamel: [137, 28]
 	(Unknown) bryan@larsen.st Bryan Larsen: [2, 2]
@@ -379,11 +407,12 @@ image 118 0
 	Wercker victoria.domalik@gmail.com Victoria Domalik: [118, 0]
 documentation 60 0
 	Google dlorenc@google.com dlorenc: [60, 0]
-build 1862 460
-	Google m@rickard.email Matt Rickard: [184, 122]
-	Google dlorenc@google.com dlorenc: [266, 106]
-	Google nkubala@google.com Nick Kubala: [5, 1]
+build 1867 462
 	Google aprindle@google.com Aaron Prindle: [264, 88]
+	Google dlorenc@google.com dlorenc: [270, 107]
+	Google m@rickard.email Matt Rickard: [184, 122]
+	Red Hat budhram.gurung01@gmail.com Budh Ram Gurung: [1, 1]
+	Google nkubala@google.com Nick Kubala: [5, 1]
 	(Unknown) dale.hamel@shopify.com Dale Hamel: [2, 0]
 	Self tgraf@suug.ch Thomas Graf: [26, 24]
 	(Unknown) giovanni.tirloni@gmail.com Giovanni Tirloni: [3, 0]
@@ -402,9 +431,9 @@ build 1862 460
 	Rook luxas@users.noreply.github.com Lucas Käldström: [76, 18]
 	IBM mbauer@us.ibm.com Morgan Bauer: [3, 4]
 	Cisco shailesh.pant@gmail.com Shailesh Pant: [1, 1]
-devel-doc 3072 2199
-code 2070 868
-unknown 82389 52027
+devel-doc 3073 2200
+code 2073 871
+unknown 82953 52204
 image 118 0
 documentation 60 0
-build 1862 460
+build 1867 462

@@ -2,18 +2,23 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/ingress.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
-Google nicksardo@users.noreply.github.com Nick Sardo
-	unknown [1806, 697]
-	devel-doc [141, 14]
-	build [2, 2]
-Self aledbf@gmail.com Manuel de Brito Fontes
-	devel-doc [4683, 6743]
+Self aledbf@gmail.com Manuel Alejandro de Brito Fontes
+	devel-doc [4716, 6743]
 	code [324, 674]
 	package [0, 0]
-	unknown [105749, 413876]
+	unknown [107019, 414077]
 	image [0, 0]
-	documentation [1063, 2779]
+	documentation [1064, 2780]
 	build [336, 500]
+Google nicksardo@users.noreply.github.com Nick Sardo
+	unknown [1903, 717]
+	devel-doc [142, 15]
+	build [3, 3]
+(Unknown) hoogendijk09@gmail.com TheCodeAssassin
+	devel-doc [1, 1]
+Google rmmh@google.com Ryan Hitchman
+	unknown [511, 1]
+	build [62, 60]
 Google jgrafton@google.com Jeff Grafton
 	unknown [1, 1]
 	build [7, 7]
@@ -296,9 +301,10 @@ Photobox andrew@ajohnstone.com Andrew Johnstone
 	unknown [1, 1]
 MOVE Guides joonathan@gmail.com Joonathan Mägi
 	devel-doc [1, 1]
-devel-doc 23997 12647
-	Google nicksardo@users.noreply.github.com Nick Sardo: [141, 14]
-	Self aledbf@gmail.com Manuel de Brito Fontes: [4683, 6743]
+devel-doc 24032 12649
+	Self aledbf@gmail.com Manuel Alejandro de Brito Fontes: [4716, 6743]
+	Google nicksardo@users.noreply.github.com Nick Sardo: [142, 15]
+	(Unknown) hoogendijk09@gmail.com TheCodeAssassin: [1, 1]
 	Digidentity gianrubio@gmail.com Giancarlo Rubio: [443, 0]
 	Zendesk development@stp-ip.net Michael Grosser: [13, 56]
 	SERPRO jcmoraisjr@gmail.com Joao Morais: [829, 156]
@@ -344,18 +350,19 @@ devel-doc 23997 12647
 	Jetstack simon@swine.de Christian Simon: [70, 7]
 	MOVE Guides joonathan@gmail.com Joonathan Mägi: [1, 1]
 code 4066 3271
-	Self aledbf@gmail.com Manuel de Brito Fontes: [324, 674]
+	Self aledbf@gmail.com Manuel Alejandro de Brito Fontes: [324, 674]
 	Digidentity gianrubio@gmail.com Giancarlo Rubio: [1, 1]
 	IBM mkumatag@in.ibm.com Manjunath A Kumatagi: [51, 22]
 	Grafana dcech@grafana.com Dan Cech: [3, 3]
 	Google beeps@google.com Prashanth B: [3686, 2570]
 	Red Hat jchaloup@redhat.com Jan Chaloupka: [1, 1]
 package 0 0
-	Self aledbf@gmail.com Manuel de Brito Fontes: [0, 0]
+	Self aledbf@gmail.com Manuel Alejandro de Brito Fontes: [0, 0]
 	Google beeps@google.com Prashanth B: [0, 0]
-unknown 1208156 584330
-	Google nicksardo@users.noreply.github.com Nick Sardo: [1806, 697]
-	Self aledbf@gmail.com Manuel de Brito Fontes: [105749, 413876]
+unknown 1210034 584552
+	Self aledbf@gmail.com Manuel Alejandro de Brito Fontes: [107019, 414077]
+	Google nicksardo@users.noreply.github.com Nick Sardo: [1903, 717]
+	Google rmmh@google.com Ryan Hitchman: [511, 1]
 	Google jgrafton@google.com Jeff Grafton: [1, 1]
 	Digidentity gianrubio@gmail.com Giancarlo Rubio: [1165, 239]
 	Self fabian@progra.de Fabian Ruff: [7, 0]
@@ -434,10 +441,10 @@ unknown 1208156 584330
 	Photobox andrew@ajohnstone.com Andrew Johnstone: [1, 1]
 	(Unknown) github@cutterslade.ca Wesley Hartford: [1, 1]
 image 0 0
-	Self aledbf@gmail.com Manuel de Brito Fontes: [0, 0]
+	Self aledbf@gmail.com Manuel Alejandro de Brito Fontes: [0, 0]
 	Digidentity gianrubio@gmail.com Giancarlo Rubio: [0, 0]
-documentation 8112 3365
-	Self aledbf@gmail.com Manuel de Brito Fontes: [1063, 2779]
+documentation 8113 3366
+	Self aledbf@gmail.com Manuel Alejandro de Brito Fontes: [1064, 2780]
 	Digidentity gianrubio@gmail.com Giancarlo Rubio: [26, 37]
 	FathomDB justin@fathomdb.com Justin Santa Barbara: [4, 5]
 	(Unknown) coryfklein@gmail.com Cory Klein: [1, 1]
@@ -470,9 +477,10 @@ documentation 8112 3365
 	Vy-Shane shane@node.mu Vy-Shane Xie: [1, 0]
 	BENGLER alex@bengler.no Alexander Staubo: [1, 0]
 	Jetstack simon@swine.de Christian Simon: [6, 4]
-build 1254 622
-	Google nicksardo@users.noreply.github.com Nick Sardo: [2, 2]
-	Self aledbf@gmail.com Manuel de Brito Fontes: [336, 500]
+build 1317 683
+	Self aledbf@gmail.com Manuel Alejandro de Brito Fontes: [336, 500]
+	Google nicksardo@users.noreply.github.com Nick Sardo: [3, 3]
+	Google rmmh@google.com Ryan Hitchman: [62, 60]
 	Google jgrafton@google.com Jeff Grafton: [7, 7]
 	ZTE Corporation chen.tao3@zte.com.cn chentao1596: [1, 1]
 	IBM mkumatag@in.ibm.com Manjunath A Kumatagi: [183, 20]
@@ -483,10 +491,10 @@ build 1254 622
 	Google stclair@google.com Tim St. Clair: [1, 1]
 	Google beeps@google.com Prashanth B: [661, 79]
 	Solinea robertspencersmith@gmail.com Spencer Smith: [1, 1]
-devel-doc 23997 12647
+devel-doc 24032 12649
 code 4066 3271
 package 0 0
-unknown 1208156 584330
+unknown 1210034 584552
 image 0 0
-documentation 8112 3365
-build 1254 622
+documentation 8113 3366
+build 1317 683
