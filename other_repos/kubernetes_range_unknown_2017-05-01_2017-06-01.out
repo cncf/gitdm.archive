@@ -3,8 +3,20 @@ open output file /Users/lukasz/dev/cncf/gitdm/other_repos/kubernetes_range_unkno
 
 kb@itsvit.org is an author name, probably not what you want
 (Unknown) unknown@hacker.net Unknown hacker
+SalesForce mayank.kumar@salesforce.com Mayank Kumar
+	unknown [28, 9]
+Red Hat jvallejo@redhat.com juanvallejo
+	unknown [271, 148]
+	devel-doc [1, 0]
+	code [18, 0]
 IBM cmluciano@us.ibm.com Christopher M. Luciano
 	unknown [9, 2]
+Google cxing@google.com Cheng Xing
+	unknown [123, 14]
+	devel-doc [1, 0]
+Google krousey@google.com Kris
+	unknown [400, 87]
+	devel-doc [66, 2]
 Tigera casey@tigera.io Casey Davenport
 	unknown [2, 4]
 	devel-doc [0, 7]
@@ -164,9 +176,6 @@ Google enisoc@google.com Anthony Yeh
 	unknown [196, 21]
 	devel-doc [469, 303]
 	code [104, 5]
-Google cxing@google.com Cheng Xing
-	unknown [117, 8]
-	devel-doc [1, 0]
 Kelowna admin@toph.ca Christoph Blecker
 	unknown [16, 15]
 	code [10, 9]
@@ -623,7 +632,10 @@ IBM dims@linux.vnet.ibm.com Davanum Srinivas
 	code [14, 4]
 Telemetry.com ivanov.maxim@gmail.com Maxim Ivanov
 	unknown [9, 5]
-devel-doc 8402 5364
+devel-doc 8469 5366
+	Red Hat jvallejo@redhat.com juanvallejo: [1, 0]
+	Google cxing@google.com Cheng Xing: [1, 0]
+	Google krousey@google.com Kris: [66, 2]
 	Tigera casey@tigera.io Casey Davenport: [0, 7]
 	Red Hat haowang@redhat.com Haoran Wang: [69, 73]
 	Red Hat shiywang@redhat.com Shiyang Wang: [12, 1]
@@ -654,7 +666,6 @@ devel-doc 8402 5364
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [98, 13]
 	Fujitsu chenr.fnst@cn.fujitsu.com xilabao: [9, 1]
 	Google enisoc@google.com Anthony Yeh: [469, 303]
-	Google cxing@google.com Cheng Xing: [1, 0]
 	Huawei shashidhara.td@huawei.com shashidharatd: [106, 14]
 	IBM madaxa@cn.ibm.com Klaus Ma: [130, 20]
 	Google dbsmith@google.com Daniel Smith: [14, 10]
@@ -720,7 +731,8 @@ devel-doc 8402 5364
 	Red Hat ravisantoshgudimetla@gmail.com ravisantoshgudimetla: [4, 1]
 	(Unknown) public@omeid.me O'meid: [1, 1]
 	Feedtrail haka.jesse@gmail.com Jesse Haka: [2, 0]
-code 1368 394
+code 1386 394
+	Red Hat jvallejo@redhat.com juanvallejo: [18, 0]
 	Red Hat haowang@redhat.com Haoran Wang: [1, 1]
 	Red Hat shiywang@redhat.com Shiyang Wang: [1, 1]
 	Google xuchao@google.com Chao Xu: [16, 19]
@@ -779,8 +791,12 @@ code 1368 394
 	Google colew@google.com Cole Wagner: [1, 3]
 	Google djmm@google.com David McMahon: [15, 9]
 	IBM dims@linux.vnet.ibm.com Davanum Srinivas: [14, 4]
-unknown 114876 42224
+unknown 115581 42474
+	SalesForce mayank.kumar@salesforce.com Mayank Kumar: [28, 9]
+	Red Hat jvallejo@redhat.com juanvallejo: [271, 148]
 	IBM cmluciano@us.ibm.com Christopher M. Luciano: [9, 2]
+	Google cxing@google.com Cheng Xing: [123, 14]
+	Google krousey@google.com Kris: [400, 87]
 	Tigera casey@tigera.io Casey Davenport: [2, 4]
 	Red Hat haowang@redhat.com Haoran Wang: [26, 36]
 	Red Hat shiywang@redhat.com Shiyang Wang: [467, 24]
@@ -821,7 +837,6 @@ unknown 114876 42224
 	Fujitsu chenr.fnst@cn.fujitsu.com xilabao: [693, 32]
 	Self stephenhsu90@gmail.com Di Xu: [11, 23]
 	Google enisoc@google.com Anthony Yeh: [196, 21]
-	Google cxing@google.com Cheng Xing: [117, 8]
 	Kelowna admin@toph.ca Christoph Blecker: [16, 15]
 	Huawei shashidhara.td@huawei.com shashidharatd: [179, 114]
 	IBM madaxa@cn.ibm.com Klaus Ma: [1134, 247]
@@ -1041,9 +1056,9 @@ translation 275 7
 	ZTE Corporation zhang.wanmin@zte.com.cn William Chang: [89, 0]
 	(Unknown) girikuncoro@users.noreply.github.com Giri Kuncoro: [93, 1]
 	Fujitsu chenr.fnst@cn.fujitsu.com xilabao: [3, 5]
-devel-doc 8402 5364
-code 1368 394
-unknown 114876 42224
+devel-doc 8469 5366
+code 1386 394
+unknown 115581 42474
 documentation 39 11
 ui 10 6
 build 1549 1584

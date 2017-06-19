@@ -2,8 +2,18 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/apiserver.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Google mml@google.com Matt Liggett
+	unknown [27, 4]
+Caicloud 393926893@qq.com zhengjiajin
+	unknown [2, 2]
+Computer Science and Engineering, IIT Kanpur saksham0808@gmail.com Saksham Sharma
+	unknown [707, 57]
+	devel-doc [53, 0]
+Google stclair@google.com Tim St. Clair
+	unknown [12869, 615]
+	devel-doc [215, 3]
 Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng
-	unknown [85, 55]
+	unknown [87, 56]
 	devel-doc [2, 1]
 Red Hat jliggitt@redhat.com Jordan Liggitt
 	unknown [1031, 560]
@@ -11,9 +21,6 @@ Red Hat jliggitt@redhat.com Jordan Liggitt
 Red Hat ccoleman@redhat.com Clayton Coleman
 	unknown [3188, 907]
 	devel-doc [117, 56]
-Computer Science and Engineering, IIT Kanpur saksham0808@gmail.com Saksham Sharma
-	unknown [706, 56]
-	devel-doc [53, 0]
 Google wojtekt@google.com Wojciech Tyczynski
 	unknown [306, 253]
 	devel-doc [8, 6]
@@ -31,9 +38,6 @@ Kelowna admin@toph.ca Christoph Blecker
 Red Hat ffranz@redhat.com Fabiano Franz
 	unknown [6, 0]
 	devel-doc [7, 0]
-Google stclair@google.com Tim St. Clair
-	unknown [12839, 598]
-	devel-doc [215, 3]
 Google mehdy@google.com mbohlool
 	unknown [1412, 162]
 	devel-doc [52, 25]
@@ -106,8 +110,6 @@ Google gmarek@google.com gmarek
 	unknown [15, 9]
 Elisa jesse.haka@elisa.fi Jesse Haka
 	unknown [7, 7]
-Google mml@google.com Matt Liggett
-	unknown [23, 3]
 IBM spzala@us.ibm.com Sahdev P. Zala
 	unknown [14, 0]
 Heptio timothysc@gmail.com Timothy St. Clair
@@ -146,18 +148,20 @@ Red Hat rrati@redhat.com Robert Rati
 	unknown [2, 0]
 HarmonyCloud chenjg@harmonycloud.cn fate-grand-order
 	unknown [1, 1]
-unknown 105381 9198
-	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [85, 55]
+unknown 105420 9220
+	Google mml@google.com Matt Liggett: [27, 4]
+	Caicloud 393926893@qq.com zhengjiajin: [2, 2]
+	Computer Science and Engineering, IIT Kanpur saksham0808@gmail.com Saksham Sharma: [707, 57]
+	Google stclair@google.com Tim St. Clair: [12869, 615]
+	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [87, 56]
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [1031, 560]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [3188, 907]
-	Computer Science and Engineering, IIT Kanpur saksham0808@gmail.com Saksham Sharma: [706, 56]
 	Google wojtekt@google.com Wojciech Tyczynski: [306, 253]
 	Red Hat deads@redhat.com deads2k: [37330, 3424]
 	(Unknown) stuart.warren@ocado.com stuart.warren: [7, 7]
 	(Unknown) sdw35@cornell.edu Scott Weiss: [461, 0]
 	Kelowna admin@toph.ca Christoph Blecker: [31, 17]
 	Red Hat ffranz@redhat.com Fabiano Franz: [6, 0]
-	Google stclair@google.com Tim St. Clair: [12839, 598]
 	Google mehdy@google.com mbohlool: [1412, 162]
 	Google dashpole@google.com David Ashpole: [32, 27]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [43319, 1641]
@@ -186,7 +190,6 @@ unknown 105381 9198
 	Red Hat marun@redhat.com Maru Newby: [42, 43]
 	Google gmarek@google.com gmarek: [15, 9]
 	Elisa jesse.haka@elisa.fi Jesse Haka: [7, 7]
-	Google mml@google.com Matt Liggett: [23, 3]
 	IBM spzala@us.ibm.com Sahdev P. Zala: [14, 0]
 	Heptio timothysc@gmail.com Timothy St. Clair: [387, 345]
 	IBM a10gupta@linux.vnet.ibm.com Abhishek Dasgupta: [79, 76]
@@ -206,15 +209,15 @@ unknown 105381 9198
 	Red Hat rrati@redhat.com Robert Rati: [2, 0]
 	HarmonyCloud chenjg@harmonycloud.cn fate-grand-order: [1, 1]
 devel-doc 5964 938
+	Computer Science and Engineering, IIT Kanpur saksham0808@gmail.com Saksham Sharma: [53, 0]
+	Google stclair@google.com Tim St. Clair: [215, 3]
 	Fujitsu caosf.fnst@cn.fujitsu.com Cao Shufeng: [2, 1]
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [7, 8]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [117, 56]
-	Computer Science and Engineering, IIT Kanpur saksham0808@gmail.com Saksham Sharma: [53, 0]
 	Google wojtekt@google.com Wojciech Tyczynski: [8, 6]
 	Red Hat deads@redhat.com deads2k: [452, 242]
 	(Unknown) sdw35@cornell.edu Scott Weiss: [7, 0]
 	Red Hat ffranz@redhat.com Fabiano Franz: [7, 0]
-	Google stclair@google.com Tim St. Clair: [215, 3]
 	Google mehdy@google.com mbohlool: [52, 25]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [1925, 549]
 	Google xuchao@google.com Chao Xu: [18, 17]
@@ -231,6 +234,6 @@ code 384 0
 	Red Hat deads@redhat.com deads2k: [175, 0]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [102, 0]
 	Apache jwhitlock@apache.org Jeremy Whitlock: [107, 0]
-unknown 105381 9198
+unknown 105420 9220
 devel-doc 5964 938
 code 384 0

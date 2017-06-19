@@ -3,11 +3,15 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/external-storage.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
 Red Hat wongma7@users.noreply.github.com Matthew Wong
-	unknown [26299, 18979]
-	devel-doc [2854, 1135]
-	code [1015, 262]
-	build [539, 286]
+	unknown [26312, 18991]
+	devel-doc [2866, 1136]
+	code [1061, 262]
+	build [616, 326]
 	documentation [80, 49]
+Google msau@google.com Michelle Au
+	unknown [2212, 453]
+	devel-doc [246, 50]
+	build [75, 27]
 Google deyuan@caicloud.io Deyuan Deng
 	unknown [179, 83]
 	devel-doc [2, 2]
@@ -17,10 +21,6 @@ Red Hat jsafrane@redhat.com Jan Safranek
 	devel-doc [27, 5]
 (Unknown) kent.wang@cheanjia.com Kent Wang
 	unknown [3, 3]
-Google msau@google.com Michelle Au
-	unknown [2211, 450]
-	devel-doc [243, 45]
-	build [51, 0]
 (Unknown) yangwangxing@nationsky.com yangwangxing
 	unknown [1, 0]
 Red Hat hchiramm@redhat.com Humble Chirammal
@@ -65,12 +65,12 @@ Gavrie Philipson gavrie@philipson.co.il Gavrie Philipson
 	build [2, 1]
 Google sarah.novotny@gmail.com sarahnovotny
 	devel-doc [202, 0]
-unknown 32291 20879
-	Red Hat wongma7@users.noreply.github.com Matthew Wong: [26299, 18979]
+unknown 32305 20894
+	Red Hat wongma7@users.noreply.github.com Matthew Wong: [26312, 18991]
+	Google msau@google.com Michelle Au: [2212, 453]
 	Google deyuan@caicloud.io Deyuan Deng: [179, 83]
 	Red Hat jsafrane@redhat.com Jan Safranek: [51, 13]
 	(Unknown) kent.wang@cheanjia.com Kent Wang: [3, 3]
-	Google msau@google.com Michelle Au: [2211, 450]
 	(Unknown) yangwangxing@nationsky.com yangwangxing: [1, 0]
 	Red Hat hchiramm@redhat.com Humble Chirammal: [1363, 451]
 	CentOS humble.devassy@gmail.com Humble Devassy Chirammal: [2, 1]
@@ -83,11 +83,11 @@ unknown 32291 20879
 	Google dlorenc@google.com dlorenc: [14, 2]
 	IBM pramod@us.ibm.com Nagapramod Mandagere: [104, 39]
 	Gavrie Philipson gavrie@philipson.co.il Gavrie Philipson: [30, 39]
-devel-doc 3583 1229
-	Red Hat wongma7@users.noreply.github.com Matthew Wong: [2854, 1135]
+devel-doc 3598 1235
+	Red Hat wongma7@users.noreply.github.com Matthew Wong: [2866, 1136]
+	Google msau@google.com Michelle Au: [246, 50]
 	Google deyuan@caicloud.io Deyuan Deng: [2, 2]
 	Red Hat jsafrane@redhat.com Jan Safranek: [27, 5]
-	Google msau@google.com Michelle Au: [243, 45]
 	Red Hat hchiramm@redhat.com Humble Chirammal: [130, 22]
 	Red Hat obnox@redhat.com Michael Adam: [9, 9]
 	CentOS humble.devassy@gmail.com Humble Devassy Chirammal: [2, 2]
@@ -97,24 +97,24 @@ devel-doc 3583 1229
 	andrewklau andrew@andrewklau.com Andrew Lau: [3, 1]
 	Google dlorenc@google.com dlorenc: [7, 1]
 	Google sarah.novotny@gmail.com sarahnovotny: [202, 0]
-code 1477 263
-	Red Hat wongma7@users.noreply.github.com Matthew Wong: [1015, 262]
+code 1523 263
+	Red Hat wongma7@users.noreply.github.com Matthew Wong: [1061, 262]
 	Red Hat hchiramm@redhat.com Humble Chirammal: [13, 0]
 	FUSEIM jackie.space@gmail.com Jackie Li: [17, 1]
 	Red Hat hchen@redhat.com Huamin Chen: [299, 0]
 	Red Hat bchilds@redhat.com childsb: [133, 0]
-build 793 332
-	Red Hat wongma7@users.noreply.github.com Matthew Wong: [539, 286]
+build 894 399
+	Red Hat wongma7@users.noreply.github.com Matthew Wong: [616, 326]
+	Google msau@google.com Michelle Au: [75, 27]
 	Google deyuan@caicloud.io Deyuan Deng: [3, 0]
-	Google msau@google.com Michelle Au: [51, 0]
 	Red Hat hchiramm@redhat.com Humble Chirammal: [69, 0]
 	Red Hat bchilds@redhat.com childsb: [115, 45]
 	Google dlorenc@google.com dlorenc: [14, 0]
 	Gavrie Philipson gavrie@philipson.co.il Gavrie Philipson: [2, 1]
 documentation 80 49
 	Red Hat wongma7@users.noreply.github.com Matthew Wong: [80, 49]
-unknown 32291 20879
-devel-doc 3583 1229
-code 1477 263
-build 793 332
+unknown 32305 20894
+devel-doc 3598 1235
+code 1523 263
+build 894 399
 documentation 80 49

@@ -2,6 +2,8 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/apimachinery.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Caicloud 393926893@qq.com zhengjiajin
+	unknown [5, 7]
 Red Hat ccoleman@redhat.com Clayton Coleman
 	unknown [6701, 975]
 	devel-doc [94, 3]
@@ -38,8 +40,6 @@ Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski
 	devel-doc [55, 54]
 CoreOS alex.crawford@coreos.com Alex Crawford
 	unknown [3, 3]
-Caicloud 393926893@qq.com zhengjiajin
-	unknown [3, 5]
 Google stclair@google.com Tim St. Clair
 	unknown [41, 0]
 ZTE Corporation yu.peng36@zte.com.cn yupengzte
@@ -124,7 +124,8 @@ Google grod@google.com Garrett Rodrigues
 	unknown [0, 1]
 Apprenda pires@apprenda.com Paulo Pires
 	unknown [4, 4]
-unknown 73473 6903
+unknown 73475 6905
+	Caicloud 393926893@qq.com zhengjiajin: [5, 7]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [6701, 975]
 	Red Hat avagarwa@redhat.com Avesh Agarwal: [56, 0]
 	Kelowna admin@toph.ca Christoph Blecker: [82, 41]
@@ -140,7 +141,6 @@ unknown 73473 6903
 	Red Hat xychu2008@gmail.com Ethan Chu: [39, 16]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [10916, 388]
 	CoreOS alex.crawford@coreos.com Alex Crawford: [3, 3]
-	Caicloud 393926893@qq.com zhengjiajin: [3, 5]
 	Google stclair@google.com Tim St. Clair: [41, 0]
 	ZTE Corporation yu.peng36@zte.com.cn yupengzte: [1, 1]
 	FathomDB justin@fathomdb.com Justin Santa Barbara: [5, 5]
@@ -193,6 +193,6 @@ devel-doc 2213 69
 	IBM liamwhite@uk.ibm.com Liam White: [1, 0]
 code 140 9
 	Red Hat deads@redhat.com deads2k: [140, 9]
-unknown 73473 6903
+unknown 73475 6905
 devel-doc 2213 69
 code 140 9

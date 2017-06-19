@@ -2,6 +2,10 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-aggregator.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Red Hat deads@redhat.com deads2k
+	unknown [13781, 1482]
+	devel-doc [342, 15]
+	code [545, 42]
 Google jgrafton@google.com Jeff Grafton
 	devel-doc [2, 1]
 Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski
@@ -21,10 +25,6 @@ Google wfender@google.com Walter Fender
 	devel-doc [1, 0]
 Red Hat sross@redhat.com Solly Ross
 	unknown [52, 53]
-Red Hat deads@redhat.com deads2k
-	unknown [13559, 1330]
-	devel-doc [342, 15]
-	code [545, 42]
 Google thockin@google.com Tim Hockin
 	unknown [1, 1]
 Google stclair@google.com Tim St. Clair
@@ -78,14 +78,14 @@ Red Hat sjenning@redhat.com Seth Jennings
 	unknown [4, 109]
 CoreOS eric.chiang.m@gmail.com Eric Chiang
 	unknown [0, 2]
-unknown 15291 5884
+unknown 15513 6036
+	Red Hat deads@redhat.com deads2k: [13781, 1482]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [344, 268]
 	Google mehdy@google.com mbohlool: [689, 2863]
 	Google dashpole@google.com David Ashpole: [12, 4]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [3, 7]
 	Google wfender@google.com Walter Fender: [107, 25]
 	Red Hat sross@redhat.com Solly Ross: [52, 53]
-	Red Hat deads@redhat.com deads2k: [13559, 1330]
 	Google thockin@google.com Tim Hockin: [1, 1]
 	Google stclair@google.com Tim St. Clair: [8, 20]
 	Red Hat shiywang@redhat.com shiywang: [232, 0]
@@ -109,21 +109,21 @@ unknown 15291 5884
 	Red Hat sjenning@redhat.com Seth Jennings: [4, 109]
 	CoreOS eric.chiang.m@gmail.com Eric Chiang: [0, 2]
 devel-doc 1251 50
+	Red Hat deads@redhat.com deads2k: [342, 15]
 	Google jgrafton@google.com Jeff Grafton: [2, 1]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [1, 3]
 	Google mehdy@google.com mbohlool: [23, 23]
 	Google wfender@google.com Walter Fender: [1, 0]
-	Red Hat deads@redhat.com deads2k: [342, 15]
 	Google stclair@google.com Tim St. Clair: [1, 0]
 	Red Hat shiywang@redhat.com shiywang: [7, 1]
 	Google xuchao@google.com Chao Xu: [2, 7]
 	ASG Consulting andy.goldstein@gmail.com Andy Goldstein: [2, 0]
 	Google mikedanese@google.com Mike Danese: [870, 0]
 code 550 57
+	Red Hat deads@redhat.com deads2k: [545, 42]
 	Red Hat stefan.schimanski@gmail.com Dr. Stefan Schimanski: [0, 10]
 	Google mehdy@google.com mbohlool: [4, 4]
-	Red Hat deads@redhat.com deads2k: [545, 42]
 	Red Hat dcbw@redhat.com Dan Williams: [1, 1]
-unknown 15291 5884
+unknown 15513 6036
 devel-doc 1251 50
 code 550 57

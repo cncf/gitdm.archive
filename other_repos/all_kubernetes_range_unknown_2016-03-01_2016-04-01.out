@@ -3,6 +3,12 @@ open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_u
 
 tiwillia@redhat.com is an author name, probably not what you want
 (Unknown) unknown@hacker.net Unknown hacker
+Google qlee@google.com Quintin Lee
+	code [7, 4]
+	unknown [1929, 201]
+	devel-doc [187, 17]
+	documentation [3, 0]
+	build [116, 12]
 Aperian Global aaronjlevy@gmail.com Aaron Levy
 	unknown [1456, 91]
 	devel-doc [268, 0]
@@ -182,12 +188,6 @@ Google abshah@google.com Abhishek Shah
 eNovance florian.lambert@enovance.com talset
 	unknown [106, 0]
 	devel-doc [1, 1]
-Google qlee@google.com Quintin Lee
-	code [7, 4]
-	unknown [1127, 145]
-	devel-doc [96, 11]
-	documentation [3, 0]
-	build [64, 12]
 Google bgrant0607@users.noreply.github.com Brian Grant
 	devel-doc [404, 0]
 Google ihmccreery@google.com Isaac Hollander McCreery
@@ -712,7 +712,8 @@ Stack Overflow matt@stackoverflow.com Matt Sherman
 Atlassian jtblin@atlassian.com Jerome Touffe-Blin
 	unknown [2, 2]
 	devel-doc [2, 2]
-devel-doc 99856 63135
+devel-doc 99947 63141
+	Google qlee@google.com Quintin Lee: [187, 17]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [268, 0]
 	Bitnami runseb@gmail.com Sebastien Goasguen: [87, 47]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [1, 0]
@@ -738,7 +739,6 @@ devel-doc 99856 63135
 	Google thockin@google.com Tim Hockin: [76, 126]
 	Google abshah@google.com Abhishek Shah: [19, 0]
 	eNovance florian.lambert@enovance.com talset: [1, 1]
-	Google qlee@google.com Quintin Lee: [96, 11]
 	Google bgrant0607@users.noreply.github.com Brian Grant: [404, 0]
 	(Unknown) sebastien.coavoux@nuance.com Sebastien Coavoux: [34368, 4]
 	Google bryk@google.com bryk: [25, 16]
@@ -795,6 +795,7 @@ devel-doc 99856 63135
 	Ben Hall ben@benhall.me.uk Ben Hall: [1, 1]
 	Atlassian jtblin@atlassian.com Jerome Touffe-Blin: [2, 2]
 code 73298 67021
+	Google qlee@google.com Quintin Lee: [7, 4]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [10, 6]
 	Bitnami runseb@gmail.com Sebastien Goasguen: [1676, 1609]
 	Red Hat eparis@redhat.com Eric Paris: [391, 246]
@@ -821,7 +822,6 @@ code 73298 67021
 	IBM mspreitz@us.ibm.com Mike Spreitzer: [1, 1]
 	Google thockin@google.com Tim Hockin: [860, 9]
 	Google abshah@google.com Abhishek Shah: [14, 3]
-	Google qlee@google.com Quintin Lee: [7, 4]
 	Google ihmccreery@google.com Isaac Hollander McCreery: [39, 15]
 	(Unknown) sebastien.coavoux@nuance.com Sebastien Coavoux: [13, 7]
 	Google bryk@google.com bryk: [150, 109]
@@ -887,7 +887,8 @@ package 0 0
 	Google jackgr@google.com jackgr: [0, 0]
 	Microsoft adamreese@users.noreply.github.com Adam Reese: [0, 0]
 	Google johndylan@google.com johndmulhausen: [0, 0]
-unknown 2056515 2356608
+unknown 2057317 2356664
+	Google qlee@google.com Quintin Lee: [1929, 201]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [1456, 91]
 	Bitnami runseb@gmail.com Sebastien Goasguen: [397, 180]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [3666, 237]
@@ -933,7 +934,6 @@ unknown 2056515 2356608
 	Google thockin@google.com Tim Hockin: [463, 41]
 	Google abshah@google.com Abhishek Shah: [381, 153]
 	eNovance florian.lambert@enovance.com talset: [106, 0]
-	Google qlee@google.com Quintin Lee: [1127, 145]
 	Google ihmccreery@google.com Isaac Hollander McCreery: [427, 266]
 	(Unknown) sebastien.coavoux@nuance.com Sebastien Coavoux: [43311, 8013]
 	Google bryk@google.com bryk: [177, 167]
@@ -1103,6 +1103,7 @@ image 24601 18375
 	ElasticBox matt@elasticbox.com Matt Nickles: [2, 2]
 	Stack Overflow matt@stackoverflow.com Matt Sherman: [0, 0]
 documentation 305230 135817
+	Google qlee@google.com Quintin Lee: [3, 0]
 	Red Hat ccoleman@redhat.com Clayton Coleman: [0, 0]
 	Red Hat eparis@redhat.com Eric Paris: [1704, 9172]
 	Google xuchao@google.com Chao Xu: [0, 0]
@@ -1118,7 +1119,6 @@ documentation 305230 135817
 	Google krousey@google.com Kris: [1, 0]
 	Google pwittroc@google.com Phillip Wittrock: [1, 1]
 	Google thockin@google.com Tim Hockin: [1, 1]
-	Google qlee@google.com Quintin Lee: [3, 0]
 	Google ihmccreery@google.com Isaac Hollander McCreery: [1, 0]
 	(Unknown) sebastien.coavoux@nuance.com Sebastien Coavoux: [32, 2]
 	Google bryk@google.com bryk: [99, 76]
@@ -1164,7 +1164,8 @@ ui 78 90
 	Fujitsu atanas.mirchev@est.fujitsu.com Atanas Mirchev: [1, 3]
 	Canonical chuck@dasroot.net Charles Butler: [0, 10]
 	Google johndylan@google.com johndmulhausen: [75, 75]
-build 13239 12939
+build 13291 12939
+	Google qlee@google.com Quintin Lee: [116, 12]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [26, 4]
 	Bitnami runseb@gmail.com Sebastien Goasguen: [10, 1]
 	Red Hat eparis@redhat.com Eric Paris: [72, 292]
@@ -1182,7 +1183,6 @@ build 13239 12939
 	Google pwittroc@google.com Phillip Wittrock: [39, 2]
 	IBM mspreitz@us.ibm.com Mike Spreitzer: [14, 8]
 	Google abshah@google.com Abhishek Shah: [8, 0]
-	Google qlee@google.com Quintin Lee: [64, 12]
 	(Unknown) sebastien.coavoux@nuance.com Sebastien Coavoux: [5, 3]
 	Fujitsu batikan.urcan@est.fujitsu.com urcan: [1, 1]
 	Red Hat hchen@redhat.com Huamin Chen: [1, 1]
@@ -1211,11 +1211,11 @@ build 13239 12939
 	Weaveworks errordeveloper@gmail.com Ilya Dmitrichenko: [89, 12]
 	Huawei huruifeng@huawei.com Victor HU: [302, 0]
 	Google johndylan@google.com johndmulhausen: [11009, 10912]
-devel-doc 99856 63135
+devel-doc 99947 63141
 code 73298 67021
 package 0 0
-unknown 2056515 2356608
+unknown 2057317 2356664
 image 24601 18375
 documentation 305230 135817
 ui 78 90
-build 13239 12939
+build 13291 12939

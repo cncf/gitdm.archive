@@ -2,6 +2,10 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/contrib.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Self taotaotheripper@gmail.com Lantao Liu
+Google ygg@google.com Yang Guo
+	unknown [367, 318]
+	build [2, 2]
 Google jgrafton@google.com Jeff Grafton
 	unknown [55, 14812]
 	devel-doc [54, 1557]
@@ -546,7 +550,6 @@ Photobox andrew@ajohnstone.com Andrew Johnstone
 	unknown [3, 3]
 CloudLinux telepenin.nikolay@gmail.com Telepenin Nikolay
 	unknown [19, 34]
-Self taotaotheripper@gmail.com Lantao Liu
 CoreOS aleks.saul@coreos.com Aleks Saul
 	documentation [2, 2]
 Cisco joji@cisco.com Joji Mekkatt
@@ -853,7 +856,8 @@ package 0 0
 	Self aledbf@gmail.com Manuel de Brito Fontes: [0, 0]
 	Google lantaol@google.com Random-Liu: [0, 0]
 	Microsoft bburns@google.com Brendan Burns: [0, 0]
-unknown 6496229 3404147
+unknown 6496596 3404465
+	Google ygg@google.com Yang Guo: [367, 318]
 	Google jgrafton@google.com Jeff Grafton: [55, 14812]
 	Google loburm@google.com Marian Lobur: [27, 6]
 	Google vmik@google.com Mik Vyatskov: [2384, 165]
@@ -1086,7 +1090,8 @@ documentation 73147 41461
 	Google chiachenk@google.com Janet Kuo: [5099, 33]
 	Tyk mvdan@mvdan.cc Daniel Martí: [1, 0]
 	Mesosphere james@mesosphere.io James DeFelice: [3, 0]
-build 7032 3142
+build 7034 3144
+	Google ygg@google.com Yang Guo: [2, 2]
 	Google jgrafton@google.com Jeff Grafton: [52, 157]
 	Google vmik@google.com Mik Vyatskov: [88, 88]
 	Google pszczesniak@google.com Piotr Szczesniak: [69, 8]
@@ -1143,7 +1148,7 @@ build 7032 3142
 devel-doc 119520 57326
 code 73860 42205
 package 0 0
-unknown 6496229 3404147
+unknown 6496596 3404465
 image 0 0
 documentation 73147 41461
-build 7032 3142
+build 7034 3144

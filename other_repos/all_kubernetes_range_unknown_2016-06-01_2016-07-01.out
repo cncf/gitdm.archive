@@ -18,10 +18,15 @@ Google zml@google.com Zach Loafman
 	code [181, 112]
 	build [21, 4]
 Google pszczesniak@google.com Piotr Szczesniak
-	unknown [892, 541]
-	devel-doc [19, 6]
+	unknown [1584, 576]
+	devel-doc [24, 6]
 	code [22, 14]
-	build [23, 15]
+	build [25, 17]
+Google wojtekt@google.com Wojciech Tyczynski
+	unknown [1968, 1378]
+	code [39, 16]
+	build [3, 3]
+	documentation [1, 2]
 Google filipg@google.com Filip Grzadkowski
 	unknown [276, 124]
 	documentation [5, 2]
@@ -247,11 +252,6 @@ Google goltermann@google.com goltermann
 	unknown [12, 12]
 (Unknown) ahmad.aabed.m@gmail.com Aabed
 	unknown [6, 5]
-Google wojtekt@google.com Wojciech Tyczynski
-	unknown [1927, 1374]
-	code [39, 16]
-	build [2, 2]
-	documentation [1, 2]
 (Unknown) louis-paul@processout.com Louis-Paul Dareau
 	unknown [1, 0]
 Google yjhong@google.com Yu-Ju Hong
@@ -801,10 +801,10 @@ Google apelisse@google.com Antoine Pelisse
 Google robertbailey@google.com Robert Bailey
 Google krousey@users.noreply.github.com krousey
 	unknown [0, 2]
-devel-doc 18074 16163
+devel-doc 18079 16163
 	Google mwielgus@google.com Marcin Wielgus: [6, 6]
 	Google zml@google.com Zach Loafman: [3862, 888]
-	Google pszczesniak@google.com Piotr Szczesniak: [19, 6]
+	Google pszczesniak@google.com Piotr Szczesniak: [24, 6]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [108, 100]
 	CoreOS brandon@ifup.org Brandon Philips: [458, 6]
 	CoreOS derek.parker@coreos.com Derek Parker: [17, 1]
@@ -886,6 +886,7 @@ code 18091 10595
 	Google mwielgus@google.com Marcin Wielgus: [27, 21]
 	Google zml@google.com Zach Loafman: [181, 112]
 	Google pszczesniak@google.com Piotr Szczesniak: [22, 14]
+	Google wojtekt@google.com Wojciech Tyczynski: [39, 16]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [371, 121]
 	CoreOS derek.parker@coreos.com Derek Parker: [49, 19]
 	Bitnami runseb@gmail.com runseb: [0, 85]
@@ -919,7 +920,6 @@ code 18091 10595
 	Google nikhiljindal@google.com nikhiljindal: [190, 149]
 	Rook luxas@users.noreply.github.com Lucas Käldström: [94, 37]
 	Google goltermann@google.com goltermann: [52, 16]
-	Google wojtekt@google.com Wojciech Tyczynski: [39, 16]
 	Google yjhong@google.com Yu-Ju Hong: [22, 0]
 	Fujitsu christoph.held@est.fujitsu.com Christoph Held: [61, 4]
 	Google bryk@google.com Piotr Bryk: [2899, 2044]
@@ -990,11 +990,12 @@ package 0 0
 	DEIS michelle@deis.com migmartri-michelleN: [0, 0]
 	Google hitchmanr@gmail.com Ryan Hitchman: [0, 0]
 	Engine Yard mbutcher@engineyard.com Matt Butcher: [0, 0]
-unknown 217687 389727
+unknown 218420 389766
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [610, 55]
 	Google mwielgus@google.com Marcin Wielgus: [863, 256]
 	Google zml@google.com Zach Loafman: [11364, 3123]
-	Google pszczesniak@google.com Piotr Szczesniak: [892, 541]
+	Google pszczesniak@google.com Piotr Szczesniak: [1584, 576]
+	Google wojtekt@google.com Wojciech Tyczynski: [1968, 1378]
 	Google filipg@google.com Filip Grzadkowski: [276, 124]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [1641, 1336]
 	CoreOS brandon@ifup.org Brandon Philips: [326, 32]
@@ -1045,7 +1046,6 @@ unknown 217687 389727
 	Google goltermann@google.com goltermann: [70, 33]
 	(Unknown) coryfklein@gmail.com Cory Klein: [12, 12]
 	(Unknown) ahmad.aabed.m@gmail.com Aabed: [6, 5]
-	Google wojtekt@google.com Wojciech Tyczynski: [1927, 1374]
 	(Unknown) louis-paul@processout.com Louis-Paul Dareau: [1, 0]
 	Google yjhong@google.com Yu-Ju Hong: [312, 138]
 	Fujitsu christoph.held@est.fujitsu.com Christoph Held: [17, 7]
@@ -1236,6 +1236,7 @@ image 4 8
 documentation 3006 12822
 	Red Hat jliggitt@redhat.com Jordan Liggitt: [0, 0]
 	Google mwielgus@google.com Marcin Wielgus: [1, 1]
+	Google wojtekt@google.com Wojciech Tyczynski: [1, 2]
 	Google filipg@google.com Filip Grzadkowski: [5, 2]
 	Google buddhap@google.com Buddha Prakash: [1, 0]
 	Google thockin@google.com Tim Hockin: [3, 69]
@@ -1255,7 +1256,6 @@ documentation 3006 12822
 	Google hitchmanr@gmail.com Ryan Hitchman: [136, 37]
 	Google nikhiljindal@google.com nikhiljindal: [2, 0]
 	Google goltermann@google.com goltermann: [18, 0]
-	Google wojtekt@google.com Wojciech Tyczynski: [1, 2]
 	Google bryk@google.com Piotr Bryk: [726, 491]
 	Fujitsu atanas.mirchev@est.fujitsu.com Atanas Mirchev: [273, 253]
 	Fujitsu sebastian.florek@ts.fujitsu.com Sebastian Florek: [650, 151]
@@ -1291,10 +1291,11 @@ documentation 3006 12822
 	Google ankurz@google.com ankurshukla: [14, 2]
 ui 0 65
 	Google thockin@google.com Tim Hockin: [0, 65]
-build 2811 4949
+build 2814 4952
 	Google mwielgus@google.com Marcin Wielgus: [6, 6]
 	Google zml@google.com Zach Loafman: [21, 4]
-	Google pszczesniak@google.com Piotr Szczesniak: [23, 15]
+	Google pszczesniak@google.com Piotr Szczesniak: [25, 17]
+	Google wojtekt@google.com Wojciech Tyczynski: [3, 3]
 	Aperian Global aaronjlevy@gmail.com Aaron Levy: [6, 6]
 	CoreOS derek.parker@coreos.com Derek Parker: [15, 7]
 	Google buddhap@google.com Buddha Prakash: [1, 0]
@@ -1317,7 +1318,6 @@ build 2811 4949
 	Google nikhiljindal@google.com nikhiljindal: [14, 14]
 	Rook luxas@users.noreply.github.com Lucas Käldström: [175, 105]
 	Google goltermann@google.com goltermann: [12, 0]
-	Google wojtekt@google.com Wojciech Tyczynski: [2, 2]
 	Engine Yard mbutcher@engineyard.com Matt Butcher: [6, 3]
 	Microsoft adam@reese.io Adam Reese: [4, 4]
 	Bitnami miguel@bitnami.com Miguel Martinez: [3, 3]
@@ -1344,11 +1344,11 @@ build 2811 4949
 	Google dlorenc@google.com dlorenc: [12, 11]
 	Google lorenc.d@gmail.com Dan Lorenc: [4, 4]
 	Cisco shailesh.pant@gmail.com Shailesh Pant: [1, 1]
-devel-doc 18074 16163
+devel-doc 18079 16163
 code 18091 10595
 package 0 0
-unknown 217687 389727
+unknown 218420 389766
 image 4 8
 documentation 3006 12822
 ui 0 65
-build 2811 4949
+build 2814 4952

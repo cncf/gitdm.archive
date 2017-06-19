@@ -2,6 +2,19 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/service-catalog.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Microsoft kent.rancourt@microsoft.com Kent Rancourt
+	devel-doc [194, 1079]
+	code [27, 1351]
+	package [0, 0]
+	unknown [5412, 3911]
+	documentation [0, 0]
+	build [179, 219]
+Red Hat pmorie@redhat.com Paul Morie
+	code [406, 82]
+	unknown [29613, 26463]
+	devel-doc [420, 339]
+	documentation [60, 5]
+	build [125, 77]
 Red Hat decarr@redhat.com Derek Carr
 	unknown [2606, 1625]
 	code [1, 0]
@@ -25,12 +38,6 @@ Google mkibbe@google.com Michael Kibbe
 	devel-doc [4, 3]
 	code [1379, 1139]
 	build [1, 1]
-Red Hat pmorie@redhat.com Paul Morie
-	code [406, 82]
-	unknown [29610, 26460]
-	devel-doc [417, 336]
-	documentation [60, 5]
-	build [125, 77]
 Google vaikas-google@users.noreply.github.com Ville Aikas
 	unknown [6840, 5938]
 	devel-doc [0, 47]
@@ -46,13 +53,6 @@ IBM dug@us.ibm.com Doug Davis
 	image [0, 0]
 	documentation [0, 60]
 	build [402, 626]
-Microsoft kent.rancourt@microsoft.com Kent Rancourt
-	devel-doc [194, 1079]
-	code [26, 1350]
-	package [0, 0]
-	unknown [5412, 3911]
-	documentation [0, 0]
-	build [179, 219]
 jobandtalent agonzalezro@gmail.com Álex González
 	unknown [7, 5]
 	build [13, 15]
@@ -108,30 +108,30 @@ DEIS jhansen@deis.com Jason Hansen
 	devel-doc [43, 5]
 Google sarah.novotny@gmail.com sarahnovotny
 	devel-doc [202, 0]
-devel-doc 2533 1717
+devel-doc 2536 1720
+	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [194, 1079]
+	Red Hat pmorie@redhat.com Paul Morie: [420, 339]
 	Engine Yard arschles@gmail.com Aaron Schlesinger: [87, 32]
 	Red Hat directxman12+github@gmail.com Solly Ross: [4, 0]
 	IBM mbauer@us.ibm.com Morgan Bauer: [30, 0]
 	Google mkibbe@google.com Michael Kibbe: [4, 3]
-	Red Hat pmorie@redhat.com Paul Morie: [417, 336]
 	Google vaikas-google@users.noreply.github.com Ville Aikas: [0, 47]
 	IBM dug@us.ibm.com Doug Davis: [117, 146]
-	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [194, 1079]
 	Red Hat jpeeler@redhat.com Jeff Peeler: [26, 20]
 	IBM gyliu513@gmail.com Guang Ya Liu: [5, 4]
 	IBM leungs@us.ibm.com Simon Leung: [278, 45]
 	Google mmaly@google.com Martin Maly: [1126, 0]
 	DEIS jhansen@deis.com Jason Hansen: [43, 5]
 	Google sarah.novotny@gmail.com sarahnovotny: [202, 0]
-code 5169 3127
+code 5170 3128
+	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [27, 1351]
+	Red Hat pmorie@redhat.com Paul Morie: [406, 82]
 	Red Hat decarr@redhat.com Derek Carr: [1, 0]
 	Engine Yard arschles@gmail.com Aaron Schlesinger: [36, 5]
 	Red Hat directxman12+github@gmail.com Solly Ross: [11, 2]
 	IBM mbauer@us.ibm.com Morgan Bauer: [122, 6]
 	Google mkibbe@google.com Michael Kibbe: [1379, 1139]
-	Red Hat pmorie@redhat.com Paul Morie: [406, 82]
 	IBM dug@us.ibm.com Doug Davis: [484, 443]
-	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [26, 1350]
 	Red Hat jpeeler@redhat.com Jeff Peeler: [157, 0]
 	IBM leungs@us.ibm.com Simon Leung: [1, 1]
 	Google bmelville@google.com Brendan Melville: [1, 90]
@@ -139,18 +139,18 @@ code 5169 3127
 package 0 0
 	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [0, 0]
 	Google mmaly@google.com Martin Maly: [0, 0]
-unknown 108004 62408
+unknown 108007 62411
+	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [5412, 3911]
+	Red Hat pmorie@redhat.com Paul Morie: [29613, 26463]
 	Red Hat decarr@redhat.com Derek Carr: [2606, 1625]
 	Engine Yard arschles@gmail.com Aaron Schlesinger: [11242, 4152]
 	Red Hat directxman12+github@gmail.com Solly Ross: [421, 57]
 	IBM mbauer@us.ibm.com Morgan Bauer: [9336, 4420]
 	Google mkibbe@google.com Michael Kibbe: [789, 165]
-	Red Hat pmorie@redhat.com Paul Morie: [29610, 26460]
 	Google vaikas-google@users.noreply.github.com Ville Aikas: [6840, 5938]
 	(Unknown) nilebox@users.noreply.github.com Nail Islamov: [5, 1]
 	Red Hat dma@redhat.com DeShuai Ma: [292, 56]
 	IBM dug@us.ibm.com Doug Davis: [1225, 484]
-	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [5412, 3911]
 	jobandtalent agonzalezro@gmail.com Álex González: [7, 5]
 	Red Hat jpeeler@redhat.com Jeff Peeler: [19932, 12282]
 	Red Hat sjenning@redhat.com Seth Jennings: [939, 120]
@@ -171,19 +171,19 @@ unknown 108004 62408
 image 0 0
 	IBM dug@us.ibm.com Doug Davis: [0, 0]
 documentation 65 65
+	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [0, 0]
 	Red Hat pmorie@redhat.com Paul Morie: [60, 5]
 	IBM dug@us.ibm.com Doug Davis: [0, 60]
-	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [0, 0]
 	Google mmaly@google.com Martin Maly: [5, 0]
 build 1410 1079
+	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [179, 219]
+	Red Hat pmorie@redhat.com Paul Morie: [125, 77]
 	Red Hat decarr@redhat.com Derek Carr: [4, 1]
 	Engine Yard arschles@gmail.com Aaron Schlesinger: [102, 34]
 	IBM mbauer@us.ibm.com Morgan Bauer: [110, 61]
 	Google mkibbe@google.com Michael Kibbe: [1, 1]
-	Red Hat pmorie@redhat.com Paul Morie: [125, 77]
 	Google vaikas-google@users.noreply.github.com Ville Aikas: [3, 21]
 	IBM dug@us.ibm.com Doug Davis: [402, 626]
-	Microsoft kent.rancourt@microsoft.com Kent Rancourt: [179, 219]
 	jobandtalent agonzalezro@gmail.com Álex González: [13, 15]
 	Red Hat jpeeler@redhat.com Jeff Peeler: [18, 7]
 	Red Hat sjenning@redhat.com Seth Jennings: [6, 0]
@@ -192,10 +192,10 @@ build 1410 1079
 	Red Hat jvallejo@redhat.com Juan Vallejo: [16, 2]
 	Google bmelville@google.com Brendan Melville: [39, 0]
 	Google mmaly@google.com Martin Maly: [388, 14]
-devel-doc 2533 1717
-code 5169 3127
+devel-doc 2536 1720
+code 5170 3128
 package 0 0
-unknown 108004 62408
+unknown 108007 62411
 image 0 0
 documentation 65 65
 build 1410 1079

@@ -3,13 +3,17 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/apiserver-builder.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
 Google pwittroc+github@google.com Phillip Wittrock
-	devel-doc [3547, 3470]
-	code [61838, 61795]
-	unknown [46139, 38159]
+	devel-doc [3617, 3471]
+	code [61854, 61795]
+	unknown [46617, 38278]
 	image [3247, 3247]
 	documentation [20764, 20748]
 	ui [71, 71]
 	build [272, 225]
+Virtuozzo ibazhitov@virtuozzo.com Igor Bazhitov
+	unknown [12, 8]
+Virtuozzo avagin@virtuozzo.com Andrei Vagin
+	unknown [1, 1]
 Red Hat sross@redhat.com Solly Ross
 	unknown [253, 1]
 	devel-doc [9, 0]
@@ -25,15 +29,17 @@ CoreOS xiangli.cs@gmail.com Xiang
 Ceph calebamiles@users.noreply.github.com caleb miles
 	unknown [16, 0]
 	devel-doc [282, 2]
-devel-doc 3851 3486
-	Google pwittroc+github@google.com Phillip Wittrock: [3547, 3470]
+devel-doc 3921 3487
+	Google pwittroc+github@google.com Phillip Wittrock: [3617, 3471]
 	Red Hat sross@redhat.com Solly Ross: [9, 0]
 	Google alexanderhcampbell@gmail.com Alexander Campbell: [13, 14]
 	Ceph calebamiles@users.noreply.github.com caleb miles: [282, 2]
-code 61838 61795
-	Google pwittroc+github@google.com Phillip Wittrock: [61838, 61795]
-unknown 46893 38499
-	Google pwittroc+github@google.com Phillip Wittrock: [46139, 38159]
+code 61854 61795
+	Google pwittroc+github@google.com Phillip Wittrock: [61854, 61795]
+unknown 47384 38627
+	Google pwittroc+github@google.com Phillip Wittrock: [46617, 38278]
+	Virtuozzo ibazhitov@virtuozzo.com Igor Bazhitov: [12, 8]
+	Virtuozzo avagin@virtuozzo.com Andrei Vagin: [1, 1]
 	Red Hat sross@redhat.com Solly Ross: [253, 1]
 	Google alexanderhcampbell@gmail.com Alexander Campbell: [183, 275]
 	Red Hat jimmidyson@gmail.com Jimmi Dyson: [26, 21]
@@ -49,9 +55,9 @@ build 298 227
 	Google pwittroc+github@google.com Phillip Wittrock: [272, 225]
 	Google alexanderhcampbell@gmail.com Alexander Campbell: [24, 0]
 	CoreOS xiangli.cs@gmail.com Xiang: [2, 2]
-devel-doc 3851 3486
-code 61838 61795
-unknown 46893 38499
+devel-doc 3921 3487
+code 61854 61795
+unknown 47384 38627
 image 3247 3247
 documentation 20764 20748
 ui 71 71

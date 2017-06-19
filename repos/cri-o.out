@@ -3,26 +3,26 @@ open output file /Users/lukasz/dev/cncf/gitdm/repos/cri-o.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
 Red Hat runcom@users.noreply.github.com Antonio Murdaca
-	unknown [7774, 5050]
+	unknown [8016, 5095]
 	devel-doc [146, 90]
-	code [1252, 311]
-	build [214, 46]
-Apple mrunal@me.com Mrunal Patel
-	unknown [4425, 934]
-	devel-doc [343, 227]
-	code [1353, 423]
+	code [1460, 314]
+	build [215, 47]
+Red Hat mpatel@redhat.com Mrunal Patel
+	unknown [4438, 941]
+	devel-doc [344, 228]
+	code [1365, 424]
 	build [80, 64]
 Intel sameo@linux.intel.com Samuel Ortiz
-	unknown [1305, 396]
+	unknown [1435, 438]
 	devel-doc [45, 10]
 	code [263, 72]
+Red Hat alexl@redhat.com Alexander Larsson
+	unknown [73, 28]
+	devel-doc [0, 2]
+	code [555, 335]
+	build [3, 3]
 Igneous Systems andrewpilloud@igneoussystems.com Andrew Pilloud
 	unknown [114, 66]
-Red Hat alexl@redhat.com Alexander Larsson
-	unknown [0, 3]
-	devel-doc [0, 2]
-	code [485, 318]
-	build [3, 3]
 Red Hat dwalsh@redhat.com Daniel J Walsh
 	unknown [843, 412]
 	devel-doc [22, 17]
@@ -126,12 +126,12 @@ Red Hat hmeng@redhat.com Haiyan Meng
 	devel-doc [15, 0]
 Google sarah.novotny@gmail.com sarahnovotny
 	devel-doc [203, 0]
-unknown 21008 8593
-	Red Hat runcom@users.noreply.github.com Antonio Murdaca: [7774, 5050]
-	Apple mrunal@me.com Mrunal Patel: [4425, 934]
-	Intel sameo@linux.intel.com Samuel Ortiz: [1305, 396]
+unknown 21466 8712
+	Red Hat runcom@users.noreply.github.com Antonio Murdaca: [8016, 5095]
+	Red Hat mpatel@redhat.com Mrunal Patel: [4438, 941]
+	Intel sameo@linux.intel.com Samuel Ortiz: [1435, 438]
+	Red Hat alexl@redhat.com Alexander Larsson: [73, 28]
 	Igneous Systems andrewpilloud@igneoussystems.com Andrew Pilloud: [114, 66]
-	Red Hat alexl@redhat.com Alexander Larsson: [0, 3]
 	Red Hat dwalsh@redhat.com Daniel J Walsh: [843, 412]
 	Red Hat vbatts@hashbangbash.com Vincent Batts: [233, 226]
 	Red Hat jbieren@redhat.com Johnny Bieren: [27, 0]
@@ -156,9 +156,9 @@ unknown 21008 8593
 	Fujitsu omarapazanadi@gmail.com Gao feng: [49, 41]
 	appOrbit spotter@gmail.com Shaya Potter: [13, 1]
 	Red Hat hmeng@redhat.com Haiyan Meng: [1175, 99]
-devel-doc 995 448
+devel-doc 996 449
 	Red Hat runcom@users.noreply.github.com Antonio Murdaca: [146, 90]
-	Apple mrunal@me.com Mrunal Patel: [343, 227]
+	Red Hat mpatel@redhat.com Mrunal Patel: [344, 228]
 	Intel sameo@linux.intel.com Samuel Ortiz: [45, 10]
 	Red Hat alexl@redhat.com Alexander Larsson: [0, 2]
 	Red Hat dwalsh@redhat.com Daniel J Walsh: [22, 17]
@@ -179,11 +179,11 @@ devel-doc 995 448
 	Red Hat ccoleman@redhat.com Clayton Coleman: [6, 0]
 	Red Hat hmeng@redhat.com Haiyan Meng: [15, 0]
 	Google sarah.novotny@gmail.com sarahnovotny: [203, 0]
-code 5338 1888
-	Red Hat runcom@users.noreply.github.com Antonio Murdaca: [1252, 311]
-	Apple mrunal@me.com Mrunal Patel: [1353, 423]
+code 5628 1909
+	Red Hat runcom@users.noreply.github.com Antonio Murdaca: [1460, 314]
+	Red Hat mpatel@redhat.com Mrunal Patel: [1365, 424]
 	Intel sameo@linux.intel.com Samuel Ortiz: [263, 72]
-	Red Hat alexl@redhat.com Alexander Larsson: [485, 318]
+	Red Hat alexl@redhat.com Alexander Larsson: [555, 335]
 	Red Hat dwalsh@redhat.com Daniel J Walsh: [366, 365]
 	Red Hat mheon@redhat.com Matthew Heon: [4, 4]
 	Red Hat dcbw@redhat.com Dan Williams: [57, 0]
@@ -194,9 +194,9 @@ code 5338 1888
 	Self xlgao@zju.edu.cn Xianglin Gao: [320, 57]
 	Self crazykev@zju.edu.cn Crazykev: [171, 1]
 	GNU alvaro@gnu.org Alvaro Lopez Ortega: [23, 32]
-build 796 384
-	Red Hat runcom@users.noreply.github.com Antonio Murdaca: [214, 46]
-	Apple mrunal@me.com Mrunal Patel: [80, 64]
+build 797 385
+	Red Hat runcom@users.noreply.github.com Antonio Murdaca: [215, 47]
+	Red Hat mpatel@redhat.com Mrunal Patel: [80, 64]
 	Red Hat alexl@redhat.com Alexander Larsson: [3, 3]
 	Red Hat dwalsh@redhat.com Daniel J Walsh: [204, 73]
 	Red Hat vbatts@hashbangbash.com Vincent Batts: [1, 1]
@@ -215,8 +215,8 @@ build 796 384
 	GNU alvaro@gnu.org Alvaro Lopez Ortega: [2, 2]
 image 322 0
 	Red Hat duffy@redhat.com Máirín Duffy: [322, 0]
-unknown 21008 8593
-devel-doc 995 448
-code 5338 1888
-build 796 384
+unknown 21466 8712
+devel-doc 996 449
+code 5628 1909
+build 797 385
 image 322 0

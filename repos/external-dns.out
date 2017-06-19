@@ -2,6 +2,15 @@ Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/external-dns.csv
 
 (Unknown) unknown@hacker.net Unknown hacker
+Collanthropy, LLC iterion@gmail.com Adam Sunderland
+	unknown [14, 4]
+	devel-doc [1, 1]
+Zalando linki@users.noreply.github.com Martin Linkhorst
+	unknown [8672, 3771]
+	devel-doc [243, 110]
+	build [37, 15]
+(Unknown) nick@juni.io Nick Jüttner
+	unknown [1617, 14]
 Zalando yerken.tussupbekov@zalando.de Yerken
 	unknown [5175, 1630]
 	devel-doc [29, 25]
@@ -10,10 +19,6 @@ Zalando yerken.tussupbekov@zalando.de Yerken
 	documentation [54, 52]
 Datapipe shanestarcher@gmail.com Shane Starcher
 	unknown [29, 0]
-Zalando linki@users.noreply.github.com Martin Linkhorst
-	unknown [8589, 3764]
-	devel-doc [241, 110]
-	build [37, 15]
 (Unknown) peter@segfault.guru Peter Huene
 	unknown [1032, 100]
 MIT ismith@mit.edu Ian Smith
@@ -33,16 +38,16 @@ Zalando lauri.apple@zalando.de Lauri Apple
 FathomDB justin@fathomdb.com Justin Santa Barbara
 	unknown [223, 40]
 	build [20, 0]
-Collanthropy, LLC iterion@gmail.com Adam Sunderland
-	unknown [14, 4]
 (Unknown) difazio.raffaele@gmail.com Raffaele Di Fazio
 	devel-doc [13, 0]
 Google sarah.novotny@gmail.com sarahnovotny
 	devel-doc [202, 0]
-unknown 15794 5623
+unknown 17494 5644
+	Collanthropy, LLC iterion@gmail.com Adam Sunderland: [14, 4]
+	Zalando linki@users.noreply.github.com Martin Linkhorst: [8672, 3771]
+	(Unknown) nick@juni.io Nick Jüttner: [1617, 14]
 	Zalando yerken.tussupbekov@zalando.de Yerken: [5175, 1630]
 	Datapipe shanestarcher@gmail.com Shane Starcher: [29, 0]
-	Zalando linki@users.noreply.github.com Martin Linkhorst: [8589, 3764]
 	(Unknown) peter@segfault.guru Peter Huene: [1032, 100]
 	MIT ismith@mit.edu Ian Smith: [243, 18]
 	Zalando henning@jacobs1.de Henning Jacobs: [13, 1]
@@ -50,10 +55,10 @@ unknown 15794 5623
 	(Unknown) mikkeloscar@users.noreply.github.com Mikkel Oscar Lyderik Larsen: [450, 40]
 	Zalando lauri.apple@zalando.de Lauri Apple: [25, 25]
 	FathomDB justin@fathomdb.com Justin Santa Barbara: [223, 40]
-	Collanthropy, LLC iterion@gmail.com Adam Sunderland: [14, 4]
-devel-doc 564 169
+devel-doc 567 170
+	Collanthropy, LLC iterion@gmail.com Adam Sunderland: [1, 1]
+	Zalando linki@users.noreply.github.com Martin Linkhorst: [243, 110]
 	Zalando yerken.tussupbekov@zalando.de Yerken: [29, 25]
-	Zalando linki@users.noreply.github.com Martin Linkhorst: [241, 110]
 	MIT ismith@mit.edu Ian Smith: [4, 0]
 	Zalando henning@jacobs1.de Henning Jacobs: [37, 4]
 	Zalando lauri.apple@zalando.de Lauri Apple: [38, 30]
@@ -62,14 +67,14 @@ devel-doc 564 169
 code 392 392
 	Zalando yerken.tussupbekov@zalando.de Yerken: [392, 392]
 build 97 31
-	Zalando yerken.tussupbekov@zalando.de Yerken: [36, 16]
 	Zalando linki@users.noreply.github.com Martin Linkhorst: [37, 15]
+	Zalando yerken.tussupbekov@zalando.de Yerken: [36, 16]
 	(Unknown) mikkeloscar@users.noreply.github.com Mikkel Oscar Lyderik Larsen: [4, 0]
 	FathomDB justin@fathomdb.com Justin Santa Barbara: [20, 0]
 documentation 54 52
 	Zalando yerken.tussupbekov@zalando.de Yerken: [54, 52]
-unknown 15794 5623
-devel-doc 564 169
+unknown 17494 5644
+devel-doc 567 170
 code 392 392
 build 97 31
 documentation 54 52
