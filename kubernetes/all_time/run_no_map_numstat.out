@@ -1,6 +1,8 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/run_no_map_numstat.csv
 
+WARNING: duplicate email/empl for sandeeppissay@users.noreply.github.com
+WARNING: duplicate email/empl for ssrinivas@vmware.com
 kb@itsvit.org is an author name, probably not what you want
 yarntime@163.com is an author name, probably not what you want
 henry.nash@uk.ibm.com is an author name, probably not what you want
@@ -543,7 +545,7 @@ Google mtaufen@google.com Michael Taufen
 	devel-doc [133, 36]
 	documentation [11, 12]
 	build [70, 12]
-licl@primeton.com licl@primeton.com lichunlong
+Primeton licl@primeton.com lichunlong
 	unknown [96, 52]
 IBM xingzhou@cn.ibm.com Xing Zhou
 	unknown [1619, 226]
@@ -772,7 +774,7 @@ Red Hat ppospisi@redhat.com pospispa
 	devel-doc [6, 4]
 xxiaozhou@gmail.com xxiaozhou@gmail.com Author xiao-zhou
 	unknown [136, 0]
-robertojrojas@gmail.com robertojrojas@gmail.com Roberto J Rojas
+Chariot Solutions robertojrojas@gmail.com Roberto J Rojas
 	unknown [11, 6]
 Google etune@google.com Eric Tune
 	devel-doc [1582, 1358]
@@ -1751,7 +1753,7 @@ CoreOS jonathan.boulle@coreos.com Jonathan Boulle
 	unknown [438, 393]
 	devel-doc [7, 7]
 	code [8, 5]
-NotFound likexu@harmonycloud.cn Aaron.L.Xu
+Self likexu@harmonycloud.cn Aaron.L.Xu
 	unknown [76, 76]
 	devel-doc [4, 4]
 	code [5, 5]
@@ -2014,7 +2016,7 @@ CNCF dan@dankohn.com Dan Kohn
 	unknown [1, 54]
 Carrot Creative slang800@gmail.com Sean Lang
 	devel-doc [1, 1]
-walter.david@gmail.com walter.david@gmail.com davidwalter0
+Cisco walter.david@gmail.com davidwalter0
 	unknown [112, 112]
 	devel-doc [10, 10]
 jansel0@gmail.com jansel0@gmail.com Jason Ansel
@@ -2039,7 +2041,7 @@ Google davidopp@google.com David Oppenheimer
 	code [36, 57]
 	image [0, 0]
 	build [26, 13]
-jm.carp@gmail.com jm.carp@gmail.com Joshua Carp
+18F jm.carp@gmail.com Joshua Carp
 	unknown [36, 18]
 HP graham.hayes@hpe.com Graham Hayes
 	unknown [272, 31]
@@ -2415,7 +2417,7 @@ HP daniel.allegood@hpe.com dkalleg
 	unknown [35, 11]
 Intel piotr.prokop@intel.com pprokop
 	unknown [11, 2]
-NotFound matt@nowprovision.com Matt Freeman
+OpenRuko matt@nowprovision.com Matt Freeman
 	unknown [116, 18]
 Google sarah.novotny@gmail.com sarahnovotny
 Google qzheng@google.com Andy Zheng
@@ -2652,7 +2654,7 @@ Huawei dinghaiyang@huawei.com HaiyangDING
 	unknown [1592, 284]
 	devel-doc [131, 103]
 	documentation [1, 0]
-jimmyjones2@gmx.co.uk jimmyjones2@gmx.co.uk Jimmy Jones
+NotFound jimmyjones2@gmx.co.uk Jimmy Jones
 	unknown [4, 0]
 IBM zhangjm@cn.ibm.com Jian Ming Zhang
 	code [15, 2]
@@ -2810,7 +2812,7 @@ SAP michael02.schmidt@sap.com Michael Schmidt
 	unknown [66, 18]
 	devel-doc [1, 0]
 	documentation [0, 0]
-thibserot@gmail.com thibserot@gmail.com Thibault Serot
+NotFound thibserot@gmail.com Thibault Serot
 	unknown [30, 3]
 	code [168, 10]
 andrei.kopats@gmail.com andrei.kopats@gmail.com Andrei Kopats
@@ -2824,7 +2826,7 @@ CoreOS rob.szumski@coreos.com Rob Szumski
 chris@krypton.io chris@krypton.io Christopher Eck
 	unknown [7, 2]
 	build [8, 4]
-laurie.malau@gmail.com laurie.malau@gmail.com laushinka
+Immobilien Scout GmbH laurie.malau@gmail.com laushinka
 	unknown [109, 109]
 	devel-doc [8, 8]
 	code [27, 27]
@@ -2832,9 +2834,9 @@ laurie.malau@gmail.com laurie.malau@gmail.com laushinka
 	documentation [1, 1]
 Red Hat jawnsy@redhat.com Jonathan Yu
 	unknown [9, 0]
-ckleban@gmail.com ckleban@gmail.com ckleban
+Google ckleban@gmail.com ckleban
 	unknown [11, 13]
-markdevilliers@gmail.com markdevilliers@gmail.com Mark deVilliers
+Thingful markdevilliers@gmail.com Mark deVilliers
 	unknown [13, 6]
 Atlassian jtblin@gmail.com Jerome Touffe-Blin
 	unknown [162, 31]
@@ -3850,11 +3852,11 @@ Red Hat mrunalp@gmail.com Mrunal Patel
 	documentation [2, 2]
 Samsung marcandre.tr@gmail.com Marc Tremblay
 	unknown [1, 1]
-david.calavera@gmail.com david.calavera@gmail.com David Calavera
+Netlify david.calavera@gmail.com David Calavera
 	unknown [2, 1]
 Automattic landers.robert@gmail.com Rob Landers
 	code [3, 5]
-parthoberoi@hotmail.com parthoberoi@hotmail.com Parth Oberoi
+Self parthoberoi@hotmail.com Parth Oberoi
 	unknown [3, 3]
 	devel-doc [1, 1]
 arb77@hotmail.com arb77@hotmail.com codemonkey77
@@ -4422,7 +4424,7 @@ devel-doc 548293 343960
 	Mozilla diparfitt@gmail.com Dave Parfitt: [11, 0]
 	Jetstack simon@swine.de Christian Simon: [2, 2]
 	CoreOS jonathan.boulle@coreos.com Jonathan Boulle: [7, 7]
-	NotFound likexu@harmonycloud.cn Aaron.L.Xu: [4, 4]
+	Self likexu@harmonycloud.cn Aaron.L.Xu: [4, 4]
 	Red Hat asalkeld@mirantis.com Angus Salkeld: [13, 6]
 	AT&T mf6510@att.com Ciello89: [1, 1]
 	CoreOS xiangli.cs@gmail.com Xiang Li: [87, 0]
@@ -4453,7 +4455,7 @@ devel-doc 548293 343960
 	Google lantaol@google.com Random Liu: [280, 23]
 	Hewlett Packard davideagnello@gmail.com Davide Agnello: [1202, 0]
 	Carrot Creative slang800@gmail.com Sean Lang: [1, 1]
-	walter.david@gmail.com walter.david@gmail.com davidwalter0: [10, 10]
+	Cisco walter.david@gmail.com davidwalter0: [10, 10]
 	allan.caffee@gmail.com allan.caffee@gmail.com Allan Caffee: [1, 1]
 	IBM mspreitz@us.ibm.com Mike Spreitzer: [8, 0]
 	CERN mathieu.velten@cern.ch Mathieu Velten: [199, 0]
@@ -4534,7 +4536,7 @@ devel-doc 548293 343960
 	Mirantis ihor.dvoretskyi@gmail.com Ihor Dvoretskyi: [1, 1]
 	Box sam@box.com Sam Ghods: [1112, 360]
 	SAP michael02.schmidt@sap.com Michael Schmidt: [1, 0]
-	laurie.malau@gmail.com laurie.malau@gmail.com laushinka: [8, 8]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [8, 8]
 	Atlassian jtblin@gmail.com Jerome Touffe-Blin: [34, 40]
 	Red Hat yak@iki.fi Michael Burman: [203, 0]
 	Red Hat matt@redhat.com Matthew Farrellee: [345, 40]
@@ -4642,7 +4644,7 @@ devel-doc 548293 343960
 	antmanler@gmail.com antmanler@gmail.com Antmanler: [106, 0]
 	adam@nine.net adam@nine.net Adam Durana: [1, 1]
 	Red Hat mrunalp@gmail.com Mrunal Patel: [7, 2]
-	parthoberoi@hotmail.com parthoberoi@hotmail.com Parth Oberoi: [1, 1]
+	Self parthoberoi@hotmail.com Parth Oberoi: [1, 1]
 	arb77@hotmail.com arb77@hotmail.com codemonkey77: [1, 1]
 	Google ukai@google.com Fumitoshi Ukai: [318, 0]
 	Fedora Project aditya@adityapatawari.com Aditya Patawari: [3, 0]
@@ -4885,7 +4887,7 @@ code 400973 330700
 	Huawei pjt73651@gmail.com DjangoPeng: [2, 2]
 	ContainerStack.io remon.lam@lamnet.nl Remon Lam: [1, 0]
 	CoreOS jonathan.boulle@coreos.com Jonathan Boulle: [8, 5]
-	NotFound likexu@harmonycloud.cn Aaron.L.Xu: [5, 5]
+	Self likexu@harmonycloud.cn Aaron.L.Xu: [5, 5]
 	Red Hat asalkeld@mirantis.com Angus Salkeld: [85, 8]
 	CoreOS xiangli.cs@gmail.com Xiang Li: [1, 2]
 	Bitnami runseb@gmail.com sebgoa: [2, 2]
@@ -5034,10 +5036,10 @@ code 400973 330700
 	Box sam@box.com Sam Ghods: [32, 28]
 	Imaginea nagarjung.g@gmail.com Nagarjun: [2, 3]
 	Apalia o.lemasle@gmail.com Olivier Lemasle: [23, 1]
-	thibserot@gmail.com thibserot@gmail.com Thibault Serot: [168, 10]
+	NotFound thibserot@gmail.com Thibault Serot: [168, 10]
 	andrei.kopats@gmail.com andrei.kopats@gmail.com Andrei Kopats: [6, 1]
 	NTT mitake.hitoshi@gmail.com Hitoshi Mitake: [0, 52]
-	laurie.malau@gmail.com laurie.malau@gmail.com laushinka: [27, 27]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [27, 27]
 	bjoern.erik.strand@gmail.com bjoern.erik.strand@gmail.com golvteppe: [6, 1]
 	Eldarion, Inc. brian@brosner.com Brian Rosner: [1, 1]
 	Red Hat matt@redhat.com Matthew Farrellee: [0, 141]
@@ -5319,7 +5321,7 @@ unknown 5533679 3334933
 	Google mikewu@google.com Ke Wu: [17, 2]
 	VMware gkuncoro@vmware.com Giri Kuncoro: [10247, 10110]
 	Google mtaufen@google.com Michael Taufen: [4524, 2514]
-	licl@primeton.com licl@primeton.com lichunlong: [96, 52]
+	Primeton licl@primeton.com lichunlong: [96, 52]
 	IBM xingzhou@cn.ibm.com Xing Zhou: [1619, 226]
 	Atlassian mmazurskiy@atlassian.com Mikhail Mazurskiy: [201, 28]
 	Google vishnuk@google.com Vishnu kannan: [19442, 7109]
@@ -5380,7 +5382,7 @@ unknown 5533679 3334933
 	Rackspace jamie.hannaford@rackspace.com Jamie Hannaford: [1269, 776]
 	Red Hat ppospisi@redhat.com pospispa: [216, 70]
 	xxiaozhou@gmail.com xxiaozhou@gmail.com Author xiao-zhou: [136, 0]
-	robertojrojas@gmail.com robertojrojas@gmail.com Roberto J Rojas: [11, 6]
+	Chariot Solutions robertojrojas@gmail.com Roberto J Rojas: [11, 6]
 	Google etune@google.com Eric Tune: [27823, 7840]
 	Google aleksandram@google.com Aleksandra Malinowska: [412, 218]
 	IBM seharris@us.ibm.com Steven E. Harris: [14, 18]
@@ -5656,7 +5658,7 @@ unknown 5533679 3334933
 	Jetstack simon@swine.de Christian Simon: [1381, 387]
 	Red Hat marko.luksa@gmail.com Marko Luksa: [29, 10]
 	CoreOS jonathan.boulle@coreos.com Jonathan Boulle: [438, 393]
-	NotFound likexu@harmonycloud.cn Aaron.L.Xu: [76, 76]
+	Self likexu@harmonycloud.cn Aaron.L.Xu: [76, 76]
 	Red Hat asalkeld@mirantis.com Angus Salkeld: [4805, 1474]
 	Feenix GmbH da.colonel@gmail.com Denis Andrejew: [3, 3]
 	CoreOS xiangli.cs@gmail.com Xiang Li: [3817, 977]
@@ -5732,12 +5734,12 @@ unknown 5533679 3334933
 	git@hiltunen.io git@hiltunen.io Sami Hiltunen: [10, 3]
 	Hewlett Packard davideagnello@gmail.com Davide Agnello: [2027, 798]
 	CNCF dan@dankohn.com Dan Kohn: [1, 54]
-	walter.david@gmail.com walter.david@gmail.com davidwalter0: [112, 112]
+	Cisco walter.david@gmail.com davidwalter0: [112, 112]
 	IBM mspreitz@us.ibm.com Mike Spreitzer: [17, 6]
 	Mirantis pigmej@gmail.com Jędrzej Nowak: [176, 176]
 	CERN mathieu.velten@cern.ch Mathieu Velten: [121, 88]
 	Google davidopp@google.com David Oppenheimer: [4392, 1749]
-	jm.carp@gmail.com jm.carp@gmail.com Joshua Carp: [36, 18]
+	18F jm.carp@gmail.com Joshua Carp: [36, 18]
 	HP graham.hayes@hpe.com Graham Hayes: [272, 31]
 	Fujitsu atanas.mirchev@est.fujitsu.com Atanas Mirchev: [241, 126]
 	NASA pskieu@gmail.com Phu Kieu: [11, 2]
@@ -5849,7 +5851,7 @@ unknown 5533679 3334933
 	Apcera oleg@apcera.com Oleg Shaldybin: [831, 352]
 	HP daniel.allegood@hpe.com dkalleg: [35, 11]
 	Intel piotr.prokop@intel.com pprokop: [11, 2]
-	NotFound matt@nowprovision.com Matt Freeman: [116, 18]
+	OpenRuko matt@nowprovision.com Matt Freeman: [116, 18]
 	Google qzheng@google.com Andy Zheng: [1441, 519]
 	HP abitha.palaniappan@hp.com Abitha Palaniappan: [110369, 115]
 	iamthemuffinman@outlook.com iamthemuffinman@outlook.com Robert Deusser: [8, 7]
@@ -5911,7 +5913,7 @@ unknown 5533679 3334933
 	Google deyuan.deng@gmail.com Deyuan Deng: [9067, 4739]
 	khoa.le@hrboss.com khoa.le@hrboss.com Khoa Le: [1, 0]
 	Huawei dinghaiyang@huawei.com HaiyangDING: [1592, 284]
-	jimmyjones2@gmx.co.uk jimmyjones2@gmx.co.uk Jimmy Jones: [4, 0]
+	NotFound jimmyjones2@gmx.co.uk Jimmy Jones: [4, 0]
 	Ahead4 Limited maclof@gmail.com Marc Lough: [171, 74]
 	Google amyu@google.com Amy Unruh: [602, 380]
 	Google johndylan@google.com johndmulhausen: [1, 1]
@@ -5957,15 +5959,15 @@ unknown 5533679 3334933
 	yoseph.sultan@sky.uk yoseph.sultan@sky.uk Dogan Narinc and Yoseph Samuel: [2, 2]
 	hughes.matt@gmail.com hughes.matt@gmail.com Matt Hughes: [4, 0]
 	SAP michael02.schmidt@sap.com Michael Schmidt: [66, 18]
-	thibserot@gmail.com thibserot@gmail.com Thibault Serot: [30, 3]
+	NotFound thibserot@gmail.com Thibault Serot: [30, 3]
 	andrei.kopats@gmail.com andrei.kopats@gmail.com Andrei Kopats: [4, 2]
 	NTT mitake.hitoshi@gmail.com Hitoshi Mitake: [1, 1]
 	CoreOS rob.szumski@coreos.com Rob Szumski: [77, 16]
 	chris@krypton.io chris@krypton.io Christopher Eck: [7, 2]
-	laurie.malau@gmail.com laurie.malau@gmail.com laushinka: [109, 109]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [109, 109]
 	Red Hat jawnsy@redhat.com Jonathan Yu: [9, 0]
-	ckleban@gmail.com ckleban@gmail.com ckleban: [11, 13]
-	markdevilliers@gmail.com markdevilliers@gmail.com Mark deVilliers: [13, 6]
+	Google ckleban@gmail.com ckleban: [11, 13]
+	Thingful markdevilliers@gmail.com Mark deVilliers: [13, 6]
 	Atlassian jtblin@gmail.com Jerome Touffe-Blin: [162, 31]
 	Oblong Industries vsimon@gmail.com Vicken Simonian: [3, 3]
 	PreviousNext nick@myschuch.com Nick Schuch: [160, 5]
@@ -6276,8 +6278,8 @@ unknown 5533679 3334933
 	Tencent eyniy@qq.com Ye Yin: [117, 0]
 	Red Hat mrunalp@gmail.com Mrunal Patel: [628, 184]
 	Samsung marcandre.tr@gmail.com Marc Tremblay: [1, 1]
-	david.calavera@gmail.com david.calavera@gmail.com David Calavera: [2, 1]
-	parthoberoi@hotmail.com parthoberoi@hotmail.com Parth Oberoi: [3, 3]
+	Netlify david.calavera@gmail.com David Calavera: [2, 1]
+	Self parthoberoi@hotmail.com Parth Oberoi: [3, 3]
 	Red Hat walters@verbum.org Colin Walters: [3, 3]
 	MapD dev@aas.io Andrew Seidl: [29, 29]
 	Google ukai@google.com Fumitoshi Ukai: [46793, 3074]
@@ -6655,7 +6657,7 @@ documentation 116473 72468
 	Huawei jiangfeihu@huawei.com feihujiang: [120, 49]
 	Box sam@box.com Sam Ghods: [187, 12]
 	SAP michael02.schmidt@sap.com Michael Schmidt: [0, 0]
-	laurie.malau@gmail.com laurie.malau@gmail.com laushinka: [1, 1]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [1, 1]
 	PreviousNext nick@myschuch.com Nick Schuch: [0, 0]
 	Red Hat yak@iki.fi Michael Burman: [1, 0]
 	Red Hat matt@redhat.com Matthew Farrellee: [0, 19]
@@ -6908,7 +6910,7 @@ build 37095 25419
 	Tradesy matt@tradesy.com Matt Margolin: [1, 0]
 	Huawei jiangfeihu@huawei.com feihujiang: [70, 34]
 	chris@krypton.io chris@krypton.io Christopher Eck: [8, 4]
-	laurie.malau@gmail.com laurie.malau@gmail.com laushinka: [3, 3]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [3, 3]
 	Red Hat matt@redhat.com Matthew Farrellee: [17, 75]
 	Self arsen@mamikonyan.am Arsen Mamikonyan: [2, 2]
 	Wikimedia Foundation yuvipanda@gmail.com YuviPanda: [1, 1]

@@ -1,6 +1,8 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/output_numstat.csv
 
+WARNING: duplicate email/empl for sandeeppissay@users.noreply.github.com
+WARNING: duplicate email/empl for ssrinivas@vmware.com
 Hacker * unknown@hacker.net Unknown hacker
 Google djmm@google.com David McMahon
 	code [204, 71]
@@ -463,7 +465,7 @@ Huawei dinghaiyang@huawei.com dingh
 	documentation [1, 0]
 Fujitsu lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski
 	unknown [1, 1]
-Gmail * thibserot@gmail.com Thibault Serot
+NotFound thibserot@gmail.com Thibault Serot
 	unknown [30, 3]
 	code [168, 10]
 Shippable joe@bedafamily.com Joe Beda
@@ -486,7 +488,7 @@ CoreOS rob.szumski@coreos.com Rob Szumski
 	unknown [7, 2]
 Krypton * chris@krypton.io Christopher Eck
 	build [8, 4]
-Gmail * laurie.malau@gmail.com laushinka
+Immobilien Scout GmbH laurie.malau@gmail.com laushinka
 	unknown [109, 109]
 	devel-doc [8, 8]
 	code [27, 27]
@@ -494,13 +496,13 @@ Gmail * laurie.malau@gmail.com laushinka
 	documentation [1, 1]
 Red Hat jawnsy@redhat.com Jonathan Yu
 	unknown [9, 0]
-Gmail * ckleban@gmail.com ckleban
+Google ckleban@gmail.com ckleban
 	unknown [11, 13]
 Red Hat pweil@redhat.com Paul Weil
 	unknown [2744, 731]
 	devel-doc [3, 1]
 	documentation [0, 0]
-Gmail * markdevilliers@gmail.com Mark deVilliers
+Thingful markdevilliers@gmail.com Mark deVilliers
 	unknown [3, 3]
 Atlassian jtblin@gmail.com Jerome Touffe-Blin
 	unknown [162, 31]
@@ -1153,7 +1155,7 @@ devel-doc 69425 20881
 	Huawei dinghaiyang@huawei.com dingh: [67, 43]
 	Shippable joe@bedafamily.com Joe Beda: [1, 1]
 	Microsoft bburns@google.com Brendan Burns: [48, 23]
-	Gmail * laurie.malau@gmail.com laushinka: [8, 8]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [8, 8]
 	Red Hat pweil@redhat.com Paul Weil: [3, 1]
 	Atlassian jtblin@gmail.com Jerome Touffe-Blin: [34, 40]
 	Red Hat yak@iki.fi Michael Burman: [203, 0]
@@ -1281,12 +1283,12 @@ code 26250 14053
 	Google dbsmith@google.com Daniel Smith: [255, 74]
 	Red Hat jsafrane@redhat.com Jan Safranek: [32, 0]
 	CoreOS eric.chiang@coreos.com Eric Chiang: [103, 1]
-	Gmail * thibserot@gmail.com Thibault Serot: [168, 10]
+	NotFound thibserot@gmail.com Thibault Serot: [168, 10]
 	Shippable joe@bedafamily.com Joe Beda: [8, 8]
 	Microsoft bburns@google.com Brendan Burns: [314, 43]
 	Gmail * andrei.kopats@gmail.com Andrei Kopats: [6, 1]
 	NTT mitake.hitoshi@gmail.com Hitoshi Mitake: [0, 52]
-	Gmail * laurie.malau@gmail.com laushinka: [27, 27]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [27, 27]
 	Cisco aanm90@gmail.com André Martins: [31, 23]
 	Gmail * bjoern.erik.strand@gmail.com golvteppe: [6, 1]
 	Google wonderfly@google.com Daniel Wang: [141, 13]
@@ -1471,17 +1473,17 @@ unknown 949749 539457
 	CoreOS eric.chiang@coreos.com Eric Chiang: [1172, 63]
 	Huawei dinghaiyang@huawei.com dingh: [492, 34]
 	Fujitsu lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [1, 1]
-	Gmail * thibserot@gmail.com Thibault Serot: [30, 3]
+	NotFound thibserot@gmail.com Thibault Serot: [30, 3]
 	Shippable joe@bedafamily.com Joe Beda: [55, 21]
 	Microsoft bburns@google.com Brendan Burns: [5581, 1439]
 	Gmail * andrei.kopats@gmail.com Andrei Kopats: [4, 2]
 	NTT mitake.hitoshi@gmail.com Hitoshi Mitake: [1, 1]
 	CoreOS rob.szumski@coreos.com Rob Szumski: [7, 2]
-	Gmail * laurie.malau@gmail.com laushinka: [109, 109]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [109, 109]
 	Red Hat jawnsy@redhat.com Jonathan Yu: [9, 0]
-	Gmail * ckleban@gmail.com ckleban: [11, 13]
+	Google ckleban@gmail.com ckleban: [11, 13]
 	Red Hat pweil@redhat.com Paul Weil: [2744, 731]
-	Gmail * markdevilliers@gmail.com Mark deVilliers: [3, 3]
+	Thingful markdevilliers@gmail.com Mark deVilliers: [3, 3]
 	Atlassian jtblin@gmail.com Jerome Touffe-Blin: [162, 31]
 	CoreOS george.tankersley@coreos.com George Tankersley: [1, 1]
 	Oblong Industries vsimon@gmail.com Vicken Simonian: [1, 1]
@@ -1731,7 +1733,7 @@ documentation 9298 3776
 	CoreOS eric.chiang@coreos.com Eric Chiang: [2, 0]
 	Huawei dinghaiyang@huawei.com dingh: [1, 0]
 	Microsoft bburns@google.com Brendan Burns: [459, 8]
-	Gmail * laurie.malau@gmail.com laushinka: [1, 1]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [1, 1]
 	Red Hat pweil@redhat.com Paul Weil: [0, 0]
 	PreviousNext nick@myschuch.com Nick Schuch: [0, 0]
 	Red Hat yak@iki.fi Michael Burman: [1, 0]
@@ -1805,7 +1807,7 @@ build 7368 1128
 	Red Hat jsafrane@redhat.com Jan Safranek: [1, 0]
 	Microsoft bburns@google.com Brendan Burns: [51, 8]
 	Krypton * chris@krypton.io Christopher Eck: [8, 4]
-	Gmail * laurie.malau@gmail.com laushinka: [3, 3]
+	Immobilien Scout GmbH laurie.malau@gmail.com laushinka: [3, 3]
 	Amadeus salvatore-dario.minonne@amadeus.com Salvatore Dario Minonne: [2, 2]
 	Red Hat matt@redhat.com Matthew Farrellee: [15, 73]
 	Red Hat jimmidyson@gmail.com Jimmi Dyson: [31, 35]

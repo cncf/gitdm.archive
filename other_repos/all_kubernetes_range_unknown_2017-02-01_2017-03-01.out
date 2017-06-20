@@ -1,6 +1,8 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_unknown_2017-02-01_2017-03-01.csv
 
+WARNING: duplicate email/empl for sandeeppissay@users.noreply.github.com
+WARNING: duplicate email/empl for ssrinivas@vmware.com
 (Unknown) unknown@hacker.net Unknown hacker
 Google gmarek@google.com gmarek
 	unknown [3707, 353]
@@ -160,7 +162,7 @@ CoreOS yifan.gu@coreos.com Yifan Gu
 	unknown [17, 2]
 CoreOS me@quentin-machu.fr Quentin Machu
 	unknown [97, 52]
-(Unknown) adieu@adieu.me adieu
+Self adieu@adieu.me adieu
 	unknown [3, 0]
 (Unknown) bzub@users.noreply.github.com bzub
 	unknown [3, 3]
@@ -736,7 +738,7 @@ DEIS vaughn@deis.com Vaughn Dice
 Intel justin.a.scott@intel.com Justin Scott
 	unknown [954, 108]
 	devel-doc [18, 0]
-(Unknown) wilkers.steve@gmail.com wilkers-steve
+AT&T wilkers.steve@gmail.com wilkers-steve
 	unknown [96, 0]
 	devel-doc [31, 0]
 Azure seanknox@users.noreply.github.com Sean Knox
@@ -950,7 +952,7 @@ Schibsted ole.skudsvik@gmail.com Ole Fredrik Skudsvik
 	unknown [33, 10]
 (Unknown) me@cheungpat.com Kwok-kuen Cheung
 	unknown [6, 6]
-(Unknown) jeremydeininger@gmail.com Jeremy Deininger
+Checkr jeremydeininger@gmail.com Jeremy Deininger
 	unknown [7, 0]
 CoreOS fab.reinartz@gmail.com Fabian Reinartz
 CoreOS fbranczyk@gmail.com Frederic Branczyk
@@ -1292,7 +1294,7 @@ Platform9 Systems rparikh@platform9.net roopakparikh
 	unknown [5, 1]
 (Unknown) andres.via@gmail.com Andres Villarroel
 	unknown [4, 6]
-(Unknown) nickleefly@gmail.com Xiuyu Li
+Self nickleefly@gmail.com Xiuyu Li
 	unknown [2, 2]
 ZTE Corporation 10110918@zte.com.cn ztewyk
 	unknown [8, 8]
@@ -1362,7 +1364,7 @@ CoreOS ben.spoon@coreos.com Ben Spoon
 	unknown [2, 2]
 Self xcompass@gmail.com Pan Luo
 	unknown [6, 6]
-(Unknown) david.calavera@gmail.com David Calavera
+Netlify david.calavera@gmail.com David Calavera
 	code [100, 0]
 Thoughtworks wma@thoughtworks.com Wei Ma
 	unknown [2, 2]
@@ -1591,7 +1593,7 @@ devel-doc 30159 23173
 	Huawei joseph.zhoutao@huawei.com Tao Zhou: [1, 1]
 	Microsoft adamreese@users.noreply.github.com Adam Reese: [3, 3]
 	Intel justin.a.scott@intel.com Justin Scott: [18, 0]
-	(Unknown) wilkers.steve@gmail.com wilkers-steve: [31, 0]
+	AT&T wilkers.steve@gmail.com wilkers-steve: [31, 0]
 	Nokia gergo.huszty@nokia.com Gergo Huszty: [1, 1]
 	HP matt@mattfarina.com Matt Farina: [4, 0]
 	Digidentity gianrubio@gmail.com Giancarlo Rubio: [8, 3]
@@ -1785,7 +1787,7 @@ code 11874 26704
 	Google ramanathana@google.com foxish: [15, 2]
 	Red Hat berrange@redhat.com Daniel P. Berrange: [2, 2]
 	Google marklam@google.com mlambert890b: [108, 2]
-	(Unknown) david.calavera@gmail.com David Calavera: [100, 0]
+	Netlify david.calavera@gmail.com David Calavera: [100, 0]
 	Google aprindle@google.com Aaron Prindle: [74, 0]
 	Google mrick@google.com Matt Rickard: [23, 228]
 	Google lorenc.d@gmail.com Dan Lorenc: [1, 0]
@@ -1837,7 +1839,7 @@ unknown 431158 452890
 	CoreOS hongchaodeng1@gmail.com Hongchao Deng: [21, 19]
 	CoreOS yifan.gu@coreos.com Yifan Gu: [17, 2]
 	CoreOS me@quentin-machu.fr Quentin Machu: [97, 52]
-	(Unknown) adieu@adieu.me adieu: [3, 0]
+	Self adieu@adieu.me adieu: [3, 0]
 	(Unknown) bzub@users.noreply.github.com bzub: [3, 3]
 	Basekamp scottrigby@users.noreply.github.com Scott Rigby: [73, 73]
 	WIDEN mgoodness@gmail.com Michael Goodness: [1136, 130]
@@ -2006,7 +2008,7 @@ unknown 431158 452890
 	Intel jose.g.aguirre@intel.com Jose Aguirre: [1, 0]
 	DEIS vaughn@deis.com Vaughn Dice: [673, 371]
 	Intel justin.a.scott@intel.com Justin Scott: [954, 108]
-	(Unknown) wilkers.steve@gmail.com wilkers-steve: [96, 0]
+	AT&T wilkers.steve@gmail.com wilkers-steve: [96, 0]
 	Azure seanknox@users.noreply.github.com Sean Knox: [1, 0]
 	Nokia gergo.huszty@nokia.com Gergo Huszty: [5, 5]
 	(Unknown) larry.rensing@gmail.com Larry Rensing: [136, 38]
@@ -2084,7 +2086,7 @@ unknown 431158 452890
 	Schibsted ole.skudsvik@gmail.com Ole Fredrik Skudsvik: [80, 11]
 	(Unknown) pwillie@users.noreply.github.com pwillie: [33, 10]
 	(Unknown) me@cheungpat.com Kwok-kuen Cheung: [6, 6]
-	(Unknown) jeremydeininger@gmail.com Jeremy Deininger: [7, 0]
+	Checkr jeremydeininger@gmail.com Jeremy Deininger: [7, 0]
 	CoreOS fbranczyk@gmail.com Frederic Branczyk: [515, 136]
 	Self pjpires@gmail.com Paulo Pires: [30, 8]
 	Google jacobsimpson@google.com Jacob Simpson: [1820, 60]
@@ -2191,7 +2193,7 @@ unknown 431158 452890
 	Google jeffmendoza@google.com Jeff Mendoza: [4, 0]
 	Platform9 Systems rparikh@platform9.net roopakparikh: [5, 1]
 	(Unknown) andres.via@gmail.com Andres Villarroel: [4, 6]
-	(Unknown) nickleefly@gmail.com Xiuyu Li: [2, 2]
+	Self nickleefly@gmail.com Xiuyu Li: [2, 2]
 	ZTE Corporation 10110918@zte.com.cn ztewyk: [8, 8]
 	CoreOS elijah.caine@coreos.com Elijah C. Voigt: [186, 2]
 	OrusPay rmaugusto@gmail.com Ricardo M. Augusto: [4, 4]

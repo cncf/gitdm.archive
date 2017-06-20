@@ -1,6 +1,8 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/kube-deploy.csv
 
+WARNING: duplicate email/empl for sandeeppissay@users.noreply.github.com
+WARNING: duplicate email/empl for ssrinivas@vmware.com
 (Unknown) unknown@hacker.net Unknown hacker
 Google robertbailey@google.com Robert Bailey
 	code [48, 7]
@@ -22,7 +24,7 @@ CNM Consulting clove@cnmconsulting.net chrislovecnm
 	unknown [5, 0]
 	devel-doc [1, 0]
 	code [42, 5]
-(Unknown) andrew.basson@gmail.com Andrew Basson
+Devops andrew.basson@gmail.com Andrew Basson
 	unknown [9, 9]
 NStack jonathanboulle@gmail.com Jonathan Boulle
 	devel-doc [1, 1]
@@ -35,7 +37,7 @@ Schibsted ivan.ilves@gmail.com Ivan Ilves
 	code [5, 3]
 Easy Learn Code nampnq@gmail.com Phạm Ngọc Quang Nam
 	devel-doc [7, 0]
-(Unknown) comp_@gmx.net Ion Savin
+NotFound comp_@gmx.net Ion Savin
 	code [19, 14]
 	build [5, 5]
 TheNatureOfSoftware lars.mogren@gmail.com Lars Mogren
@@ -141,7 +143,7 @@ code 3418 2664
 	CNM Consulting clove@cnmconsulting.net chrislovecnm: [42, 5]
 	Fujitsu lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [553, 376]
 	Schibsted ivan.ilves@gmail.com Ivan Ilves: [5, 3]
-	(Unknown) comp_@gmx.net Ion Savin: [19, 14]
+	NotFound comp_@gmx.net Ion Savin: [19, 14]
 	TheNatureOfSoftware lars.mogren@gmail.com Lars Mogren: [14, 14]
 	Google mikedanese@gmail.com Mike Danese: [40, 40]
 	Fujitsu christoph.held@est.fujitsu.com Christoph Held: [1, 1]
@@ -171,7 +173,7 @@ unknown 43577 40558
 	Rook lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [481, 681]
 	FathomDB justin@fathomdb.com Justin Santa Barbara: [41088, 38018]
 	CNM Consulting clove@cnmconsulting.net chrislovecnm: [5, 0]
-	(Unknown) andrew.basson@gmail.com Andrew Basson: [9, 9]
+	Devops andrew.basson@gmail.com Andrew Basson: [9, 9]
 	Fujitsu lukasz.zajaczkowski@ts.fujitsu.com Lukasz Zajaczkowski: [349, 220]
 	DEIS jhansen@deis.com Jason Hansen: [4, 4]
 	Google mikedanese@gmail.com Mike Danese: [1153, 1498]
@@ -200,7 +202,7 @@ documentation 4 4
 build 712 529
 	Rook lucas.kaldstrom@hotmail.co.uk Lucas Käldström: [112, 0]
 	FathomDB justin@fathomdb.com Justin Santa Barbara: [171, 163]
-	(Unknown) comp_@gmx.net Ion Savin: [5, 5]
+	NotFound comp_@gmx.net Ion Savin: [5, 5]
 	Google mikedanese@gmail.com Mike Danese: [424, 361]
 devel-doc 1213 841
 code 3418 2664

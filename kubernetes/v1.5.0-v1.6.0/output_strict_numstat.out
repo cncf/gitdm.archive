@@ -1,6 +1,8 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/output_strict_numstat.csv
 
+WARNING: duplicate email/empl for sandeeppissay@users.noreply.github.com
+WARNING: duplicate email/empl for ssrinivas@vmware.com
 yarntime@163.com is an author name, probably not what you want
 henry.nash@uk.ibm.com is an author name, probably not what you want
 (Unknown) unknown@hacker.net Unknown hacker
@@ -954,7 +956,7 @@ Red Hat ppospisi@redhat.com pospispa
 	unknown [53, 0]
 CoreOS jonathan.boulle@coreos.com Jonathan Boulle
 	unknown [96, 32]
-NotFound likexu@harmonycloud.cn Aaron.L.Xu
+Self likexu@harmonycloud.cn Aaron.L.Xu
 	unknown [76, 76]
 	devel-doc [4, 4]
 	code [5, 5]
@@ -1282,7 +1284,7 @@ devel-doc 143138 121150
 	Microsoft oguzp@microsoft.com Oguz Pastirmaci: [61, 0]
 	Mozilla diparfitt@gmail.com Dave Parfitt: [11, 0]
 	Mirantis yashulyak@gmail.com Dmitry Shulyak: [0, 1]
-	NotFound likexu@harmonycloud.cn Aaron.L.Xu: [4, 4]
+	Self likexu@harmonycloud.cn Aaron.L.Xu: [4, 4]
 	Red Hat asalkeld@mirantis.com Angus Salkeld: [8, 0]
 	AT&T mf6510@att.com Ciello89: [1, 1]
 	CoreOS xiangli.cs@gmail.com Xiang Li: [87, 0]
@@ -1422,7 +1424,7 @@ code 15108 17066
 	Net EASE 网易有态度 coolhzb@163.com AdoHe: [16, 0]
 	Huawei pjt73651@gmail.com DjangoPeng: [2, 2]
 	ContainerStack.io remon.lam@lamnet.nl Remon Lam: [1, 0]
-	NotFound likexu@harmonycloud.cn Aaron.L.Xu: [5, 5]
+	Self likexu@harmonycloud.cn Aaron.L.Xu: [5, 5]
 	Red Hat asalkeld@mirantis.com Angus Salkeld: [13, 0]
 	Amadeus salvatore-dario.minonne@amadeus.com Salvatore Dario Minonne: [63, 5]
 	CoreOS xiangli.cs@gmail.com Xiang Li: [0, 1]
@@ -1705,7 +1707,7 @@ unknown 472400 637568
 	Red Hat marko.luksa@gmail.com Marko Luksa: [28, 9]
 	Red Hat ppospisi@redhat.com pospispa: [53, 0]
 	CoreOS jonathan.boulle@coreos.com Jonathan Boulle: [96, 32]
-	NotFound likexu@harmonycloud.cn Aaron.L.Xu: [76, 76]
+	Self likexu@harmonycloud.cn Aaron.L.Xu: [76, 76]
 	Red Hat asalkeld@mirantis.com Angus Salkeld: [598, 57]
 	ZTE Corporation yu.peng36@zte.com.cn yupeng: [50, 50]
 	Feenix GmbH da.colonel@gmail.com Denis Andrejew: [3, 3]

@@ -1,6 +1,8 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/output_strict_numstat.csv
 
+WARNING: duplicate email/empl for sandeeppissay@users.noreply.github.com
+WARNING: duplicate email/empl for ssrinivas@vmware.com
 (Unknown) unknown@hacker.net Unknown hacker
 Google pwittroc@google.com Phillip Wittrock
 	unknown [969, 122]
@@ -790,7 +792,7 @@ Intel piotr.prokop@intel.com pprokop
 	unknown [11, 2]
 Self christiankoep@gmail.com Christian Koep
 	unknown [3, 6]
-NotFound matt@nowprovision.com Matt Freeman
+OpenRuko matt@nowprovision.com Matt Freeman
 	unknown [65, 14]
 Juniper Networks weixu@appformix.com Weixu Zhuang
 	unknown [382, 45]
@@ -1278,7 +1280,7 @@ unknown 415264 226482
 	HP daniel.allegood@hpe.com dkalleg: [35, 11]
 	Intel piotr.prokop@intel.com pprokop: [11, 2]
 	Self christiankoep@gmail.com Christian Koep: [3, 6]
-	NotFound matt@nowprovision.com Matt Freeman: [65, 14]
+	OpenRuko matt@nowprovision.com Matt Freeman: [65, 14]
 	Juniper Networks weixu@appformix.com Weixu Zhuang: [382, 45]
 	Red Hat mkhan@redhat.com enj: [54, 2]
 	eBay jliu23@ebay.com Jing Liu: [42, 24]
