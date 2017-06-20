@@ -1,6 +1,8 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/repos/contrib.csv
 
+WARNING: duplicate email/empl for sandeeppissay@users.noreply.github.com
+WARNING: duplicate email/empl for ssrinivas@vmware.com
 (Unknown) unknown@hacker.net Unknown hacker
 Google taotaotheripper@gmail.com Lantao Liu
 Google ygg@google.com Yang Guo
@@ -83,7 +85,7 @@ IBM mkumatag@in.ibm.com Manjunath A Kumatagi
 	unknown [37, 4]
 	devel-doc [1, 1]
 	code [7, 1]
-(Unknown) comp_@gmx.net isavin
+NotFound comp_@gmx.net isavin
 	unknown [6, 1]
 	documentation [1, 0]
 Google kowens0826@gmail.com Kenneth Owens
@@ -874,7 +876,7 @@ unknown 6496596 3404465
 	IBM gyliu513@gmail.com Guangya Liu: [1, 1]
 	Google mwielgus@google.com Marcin Wielgus: [502524, 24669]
 	IBM mkumatag@in.ibm.com Manjunath A Kumatagi: [37, 4]
-	(Unknown) comp_@gmx.net isavin: [6, 1]
+	NotFound comp_@gmx.net isavin: [6, 1]
 	Google kowens0826@gmail.com Kenneth Owens: [570, 46]
 	Google dbsmith@google.com Daniel Smith: [4651, 1246]
 	Red Hat jchaloup@redhat.com Jan Chaloupka: [1033, 660]
@@ -1046,7 +1048,7 @@ documentation 73147 41461
 	Google gmarek@google.com Marek Grabowski: [8335, 715]
 	Google qlee@google.com Quintin Lee: [11, 3]
 	Google mwielgus@google.com Marcin Wielgus: [4538, 1]
-	(Unknown) comp_@gmx.net isavin: [1, 0]
+	NotFound comp_@gmx.net isavin: [1, 0]
 	Google dbsmith@google.com Daniel Smith: [101, 25]
 	Red Hat jchaloup@redhat.com Jan Chaloupka: [3, 3]
 	Google maciekpytel@google.com Maciej Pytel: [1, 0]
