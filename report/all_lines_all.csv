@@ -1,10 +1,10 @@
 idx,company,n,percent
-0,(All known 466),5496172,99.79
+0,(All known 472),5498731,99.84
 1,Google,2805506,50.9
 2,Red Hat,910320,16.5
 3,Microsoft,351431,6.4
 4,CoreOS,301991,5.5
-5,(Self),200212,3.6
+5,(Self),200224,3.6
 6,Kismatic,123314,2.2
 7,Mesosphere,111562,2.0
 8,PHP,89226,1.6
@@ -26,32 +26,32 @@ idx,company,n,percent
 24,Weaveworks,12375,0.2
 25,Hyper.sh,12199,0.2
 26,Rancher Labs,11526,0.2
-27,(Unknown),10749,0.2
-28,Chef,9762,0.2
-29,Mercari,9245,0.2
-30,Canonical,8306,0.2
+27,Chef,9762,0.2
+28,Mercari,9245,0.2
+29,Canonical,8306,0.2
+30,(Unknown),8189,0.1
 31,CERN,6545,0.1
-32,Gmail *,5887,0.1
-33,Apprenda,5740,0.1
-34,Dell,5671,0.1
-35,eBay,5450,0.1
-36,Rook,5353,0.1
-37,Amadeus,4973,0.1
-38,Clarifai,4913,0.1
-39,Docker,4563,0.1
-40,Portworx,4460,0.1
-41,JPMorgan Chase & Co.,4247,0.1
-42,USwitch,4188,0.1
-43,storageos,3919,0.1
-44,Net EASE 网易有态度,3841,0.1
+32,Apprenda,5740,0.1
+33,Dell,5671,0.1
+34,eBay,5450,0.1
+35,Rook,5353,0.1
+36,Amadeus,4973,0.1
+37,Clarifai,4913,0.1
+38,Docker,4563,0.1
+39,Portworx,4460,0.1
+40,JPMorgan Chase & Co.,4247,0.1
+41,USwitch,4188,0.1
+42,storageos,3919,0.1
+43,Net EASE 网易有态度,3841,0.1
+44,Gmail *,3705,0.1
 45,Fujitsu,3625,0.1
 46,"Embedded Systems, ECE",3423,0.1
-47,GoGoVan,2905,0.1
-48,Caicloud,2905,0.1
+47,Caicloud,2905,0.1
+48,GoGoVan,2905,0.1
 49,Diamanti,2690,0.0
 50,Tigera,2664,0.0
 51,ZTE Corporation,2325,0.0
-52,tyangliu@gmail.com,2012,0.0
+52,Spec Deas HR Consulting,2012,0.0
 53,Rackspace,1986,0.0
 54,Kelowna,1955,0.0
 55,EasyStack,1887,0.0
@@ -70,7 +70,7 @@ idx,company,n,percent
 68,Slack,875,0.0
 69,Jetstack,847,0.0
 70,jobandtalent,831,0.0
-71,(Not Found),800,0.0
+71,(Not Found),801,0.0
 72,karol.kraskiewicz@gmail.com,781,0.0
 73,Outlook *,764,0.0
 74,Tyk,759,0.0
@@ -98,650 +98,643 @@ idx,company,n,percent
 96,ActiveVideo,395,0.0
 97,Udacity,386,0.0
 98,Hitachi,353,0.0
-99,Andrewrynhard *,350,0.0
-100,andrew@andrewrynhard.com,350,0.0
-101,Bitnami,343,0.0
-102,Yext,324,0.0
-103,Square,288,0.0
-104,FACE IT,278,0.0
-105,Manhattan Associates,274,0.0
-106,SoundCloud,254,0.0
-107,NetWatcher,243,0.0
-108,Socrata,240,0.0
-109,sdw35@cornell.edu,237,0.0
-110,Cornell *,237,0.0
-111,Oracle,236,0.0
-112,Concur,233,0.0
+99,Logic Monitor,350,0.0
+100,Bitnami,343,0.0
+101,Yext,324,0.0
+102,Square,288,0.0
+103,FACE IT,278,0.0
+104,Manhattan Associates,274,0.0
+105,SoundCloud,254,0.0
+106,NetWatcher,243,0.0
+107,Socrata,240,0.0
+108,sdw35@cornell.edu,237,0.0
+109,Cornell *,237,0.0
+110,Oracle,236,0.0
+111,Concur,233,0.0
+112,Airbnb,228,0.0
 113,NetEase,228,0.0
-114,Airbnb,228,0.0
-115,42,224,0.0
+114,42,224,0.0
+115,Alternative Storage,220,0.0
 116,kmter@live.com,220,0.0
-117,Alternative Storage,220,0.0
+117,CSE IIT KANPUR,219,0.0
 118,Entelo,219,0.0
-119,CSE IIT KANPUR,219,0.0
-120,Elisa,218,0.0
-121,Gini,215,0.0
-122,tobias.adamson@gmail.com,189,0.0
+119,Elisa,218,0.0
+120,Gini,215,0.0
+121,tobias.adamson@gmail.com,189,0.0
+122,Juju Ecosystem,187,0.0
 123,zlabjp,187,0.0
-124,Juju Ecosystem,187,0.0
-125,Devops,183,0.0
-126,ISI.nc,182,0.0
-127,Sky *,182,0.0
-128,james.ravn@sky.uk,181,0.0
-129,Capgemini,179,0.0
-130,thinkstep,173,0.0
-131,EMC,172,0.0
-132,Dropbox,169,0.0
-133,Eficode,167,0.0
-134,mrevilgnome@gmail.com,165,0.0
+124,Devops,183,0.0
+125,ISI.nc,182,0.0
+126,Sky *,182,0.0
+127,james.ravn@sky.uk,181,0.0
+128,Capgemini,179,0.0
+129,thinkstep,173,0.0
+130,EMC,172,0.0
+131,Dropbox,169,0.0
+132,Eficode,167,0.0
+133,mrevilgnome@gmail.com,165,0.0
+134,zulily,161,0.0
 135,The Elegant Monkeys Ltd.,161,0.0
-136,zulily,161,0.0
-137,Luke Marsden,158,0.0
-138,chbatey,145,0.0
-139,antmanler@gmail.com,143,0.0
-140,portworx,139,0.0
-141,suyogbarve@gmail.com,138,0.0
-142,Wattpad,137,0.0
-143,Petback,129,0.0
-144,appOrbit,129,0.0
-145,Zalando,128,0.0
-146,crondevelopment,127,0.0
-147,DrEd Online Doctor,124,0.0
-148,Tencent,120,0.0
+136,Luke Marsden,158,0.0
+137,chbatey,145,0.0
+138,antmanler@gmail.com,143,0.0
+139,portworx,139,0.0
+140,suyogbarve@gmail.com,138,0.0
+141,Wattpad,137,0.0
+142,Petback,129,0.0
+143,appOrbit,129,0.0
+144,Zalando,128,0.0
+145,crondevelopment,127,0.0
+146,DrEd Online Doctor,124,0.0
+147,Tencent,120,0.0
+148,loodse,119,0.0
 149,zhaohuizhi@gmail.com,119,0.0
-150,loodse,119,0.0
-151,Immobilien Scout GmbH,117,0.0
-152,Project Calico,115,0.0
-153,Georgia Tech,114,0.0
-154,"Computer Science and Engineering, IIT Kanpur",114,0.0
-155,saratk@gmail.com,110,0.0
+150,Immobilien Scout GmbH,117,0.0
+151,Project Calico,115,0.0
+152,Georgia Tech,114,0.0
+153,"Computer Science and Engineering, IIT Kanpur",114,0.0
+154,saratk@gmail.com,110,0.0
+155,Apple,110,0.0
 156,kynan.rilee@gmail.com,110,0.0
-157,Apple,110,0.0
-158,ravi.gadde@gmail.com,109,0.0
-159,UPMC,107,0.0
-160,kevin807359@gmail.com,102,0.0
-161,Fabiano Franz,100,0.0
-162,CenturyLink,99,0.0
+157,ravi.gadde@gmail.com,109,0.0
+158,UPMC,107,0.0
+159,Rev.com,102,0.0
+160,Fabiano Franz,100,0.0
+161,CenturyLink,99,0.0
+162,Seznam.cz,98,0.0
 163,Supership Inc.,98,0.0
-164,Seznam.cz,98,0.0
+164,Engine Yard,94,0.0
 165,Ocado,94,0.0
-166,Engine Yard,94,0.0
-167,Q42,93,0.0
-168,talk.to.waseem@gmail.com,89,0.0
-169,Ahead4 Limited,88,0.0
-170,christopher.m.crane@gmail.com,87,0.0
-171,PreviousNext,83,0.0
+166,Q42,93,0.0
+167,talk.to.waseem@gmail.com,89,0.0
+168,Ahead4 Limited,88,0.0
+169,christopher.m.crane@gmail.com,87,0.0
+170,PreviousNext,83,0.0
+171,Aperian Global,80,0.0
 172,Hitachi Data Systems,80,0.0
-173,Aperian Global,80,0.0
-174,Nordstrom,78,0.0
-175,matthias.bertschy@gmail.com,77,0.0
+173,Nordstrom,78,0.0
+174,matthias.bertschy@gmail.com,77,0.0
+175,stephen.kriss@gmail.com,75,0.0
 176,dukexar@gmail.com,75,0.0
-177,stephen.kriss@gmail.com,75,0.0
-178,Accelerant Mobile Corp,74,0.0
-179,andrew@areed.io,73,0.0
+177,Accelerant Mobile Corp,74,0.0
+178,andrew@areed.io,73,0.0
+179,ListHub,73,0.0
 180,Areed *,73,0.0
-181,ListHub,73,0.0
-182,Imaginea,71,0.0
-183,Codigami,70,0.0
-184,xxiaozhou@gmail.com,68,0.0
+181,Imaginea,71,0.0
+182,Codigami,70,0.0
+183,xxiaozhou@gmail.com,68,0.0
+184,Gradiant *,67,0.0
 185,dconstenla@gradiant.org,67,0.0
-186,Gradiant *,67,0.0
-187,Primeton,65,0.0
-188,Sky,62,0.0
-189,chenchun.feed@gmail.com,60,0.0
-190,holidaycheck,59,0.0
-191,OpenRuko,59,0.0
-192,jsdirv@gmail.com,58,0.0
-193,Jimmy Cuadra,56,0.0
+186,Primeton,65,0.0
+187,Sky,62,0.0
+188,chenchun.feed@gmail.com,60,0.0
+189,holidaycheck,59,0.0
+190,OpenRuko,59,0.0
+191,jsdirv@gmail.com,58,0.0
+192,Jimmy Cuadra,56,0.0
+193,tamnd87@gmail.com,54,0.0
 194,Uber,54,0.0
-195,tamnd87@gmail.com,54,0.0
-196,Pardot,54,0.0
-197,Benincosa *,53,0.0
-198,vallard@benincosa.com,53,0.0
-199,in.gottwald@gmail.com,51,0.0
-200,Orange,50,0.0
-201,gleamglom@gmail.com,48,0.0
-202,Robots and Pencils,48,0.0
+195,Pardot,54,0.0
+196,Benincosa *,53,0.0
+197,vallard@benincosa.com,53,0.0
+198,HolidayCheck Group AG,51,0.0
+199,Orange,50,0.0
+200,gleamglom@gmail.com,48,0.0
+201,Robots and Pencils,48,0.0
+202,daniel@schonfeld.org,47,0.0
 203,China Mobile International Limited,47,0.0
-204,daniel@schonfeld.org,47,0.0
-205,Schonfeld *,47,0.0
+204,Schonfeld *,47,0.0
+205,Bigstep,46,0.0
 206,FOSSEE,46,0.0
-207,Bigstep,46,0.0
-208,Dutchcoders,45,0.0
-209,Connectifier,44,0.0
-210,MyFitnessPal,43,0.0
-211,Tagged,42,0.0
-212,Feedtrail,40,0.0
-213,NHN,40,0.0
-214,SAP,40,0.0
-215,shaynexwang@gmail.com,37,0.0
-216,imgix,37,0.0
-217,Jaconda,37,0.0
-218,ClusterHQ,36,0.0
-219,Spotify,36,0.0
-220,dima.shmakov87@gmail.com,35,0.0
+207,Dutchcoders,45,0.0
+208,Connectifier,44,0.0
+209,MyFitnessPal,43,0.0
+210,Tagged,42,0.0
+211,SAP,40,0.0
+212,NHN,40,0.0
+213,Feedtrail,40,0.0
+214,imgix,37,0.0
+215,Jaconda,37,0.0
+216,shaynexwang@gmail.com,37,0.0
+217,ClusterHQ,36,0.0
+218,Spotify,36,0.0
+219,dima.shmakov87@gmail.com,35,0.0
+220,ChinaNetCenter,34,0.0
 221,Iteam Solutions AB,34,0.0
-222,ChinaNetCenter,34,0.0
-223,"Tech9 Computer Solutions, LLC",33,0.0
-224,Igneous Systems,32,0.0
-225,Kalon,32,0.0
-226,Uninett AS,31,0.0
-227,Whitepages,31,0.0
-228,jbhurat@gmail.com,30,0.0
+222,"Tech9 Computer Solutions, LLC",33,0.0
+223,Igneous Systems,32,0.0
+224,Kalon,32,0.0
+225,Uninett AS,31,0.0
+226,Whitepages,31,0.0
+227,jbhurat@gmail.com,30,0.0
+228,Uninett *,30,0.0
 229,gurvinder.singh@uninett.no,30,0.0
-230,Uninett *,30,0.0
-231,Transwarp,28,0.0
-232,madis.nomme@gmail.com,28,0.0
-233,UsersNoreplyGithub *,27,0.0
-234,Ancestry.com,27,0.0
-235,NTT,27,0.0
-236,CNCF,27,0.0
-237,MuleSoft,27,0.0
-238,Reevoo,26,0.0
-239,JustWatch,26,0.0
-240,MapD,26,0.0
-241,hvolkmer@gmail.com,26,0.0
-242,Irian Solutions,26,0.0
-243,Yahoo,26,0.0
-244,BrianKetelsen.com,25,0.0
-245,Shippable,25,0.0
-246,Inuits,25,0.0
-247,TravelSky Technology Limited,24,0.0
-248,Yandex *,23,0.0
-249,Revinate,23,0.0
+230,Transwarp,28,0.0
+231,madis.nomme@gmail.com,28,0.0
+232,UsersNoreplyGithub *,27,0.0
+233,NTT,27,0.0
+234,CNCF,27,0.0
+235,MuleSoft,27,0.0
+236,Ancestry.com,27,0.0
+237,hvolkmer@gmail.com,26,0.0
+238,Irian Solutions,26,0.0
+239,Yahoo,26,0.0
+240,Reevoo,26,0.0
+241,MapD,26,0.0
+242,JustWatch,26,0.0
+243,Shippable,25,0.0
+244,Inuits,25,0.0
+245,BrianKetelsen.com,25,0.0
+246,TravelSky Technology Limited,24,0.0
+247,Yandex *,23,0.0
+248,Revinate,23,0.0
+249,Devsisters,22,0.0
 250,DigitalOcean,22,0.0
 251,Hotmail *,22,0.0
 252,Funio,22,0.0
-253,Devsisters,22,0.0
-254,hackmh,21,0.0
-255,crassirostris@yandex.com,21,0.0
-256,Walmart,20,0.0
-257,klausenbusk@hotmail.com,20,0.0
-258,nearForm,20,0.0
+253,hackmh,21,0.0
+254,crassirostris@yandex.com,21,0.0
+255,nearForm,20,0.0
+256,klausenbusk@hotmail.com,20,0.0
+257,Walmart,20,0.0
+258,Bits Working,19,0.0
 259,Shopify,19,0.0
 260,Wikimedia Foundation,19,0.0
-261,Bits Working,19,0.0
-262,ninkendo@gmail.com,19,0.0
-263,Heroku,19,0.0
-264,UnitedHealth Group,17,0.0
-265,wikiwi,17,0.0
-266,globo.com,17,0.0
-267,fabrizio.pandini@gmail.com,17,0.0
-268,18F,17,0.0
-269,Eon Cloud,17,0.0
-270,Skillshare,16,0.0
-271,matthew.potter@uswitch.com,16,0.0
-272,F24 Ag,16,0.0
-273,dcarney@gmail.com,16,0.0
-274,Uswitch *,16,0.0
-275,konzems@gmail.com,16,0.0
-276,siefert.david@gmail.com,16,0.0
-277,ZJU-SEL,15,0.0
-278,GoDaddy,15,0.0
-279,DaoCloud,15,0.0
-280,Apalia,15,0.0
-281,北京天威诚信电子商务服务有限公司,15,0.0
-282,Henrik-schmidt *,14,0.0
-283,Workiva,14,0.0
-284,10clouds,14,0.0
-285,Elastic,14,0.0
-286,i@am.so-aweso.me,14,0.0
-287,henrik@henrik-schmidt.de,14,0.0
-288,robert.lindstaedt@gmail.com,14,0.0
-289,wbin00@gmail.com,14,0.0
-290,kevin@ie.suberic.net,14,0.0
-291,IeSuberic *,14,0.0
-292,AmSo-aweso *,14,0.0
-293,Anadea inc.,13,0.0
-294,Way2clever *,13,0.0
+261,ninkendo@gmail.com,19,0.0
+262,Heroku,19,0.0
+263,UnitedHealth Group,17,0.0
+264,wikiwi,17,0.0
+265,fabrizio.pandini@gmail.com,17,0.0
+266,18F,17,0.0
+267,globo.com,17,0.0
+268,Eon Cloud,17,0.0
+269,Movable Ink,16,0.0
+270,Federal Reserve Board,16,0.0
+271,F24 Ag,16,0.0
+272,Skillshare,16,0.0
+273,siefert.david@gmail.com,16,0.0
+274,dcarney@gmail.com,16,0.0
+275,北京天威诚信电子商务服务有限公司,15,0.0
+276,GoDaddy,15,0.0
+277,DaoCloud,15,0.0
+278,Apalia,15,0.0
+279,ZJU-SEL,15,0.0
+280,Henrik-schmidt *,14,0.0
+281,Workiva,14,0.0
+282,10clouds,14,0.0
+283,Elastic,14,0.0
+284,i@am.so-aweso.me,14,0.0
+285,robert.lindstaedt@gmail.com,14,0.0
+286,wbin00@gmail.com,14,0.0
+287,kevin@ie.suberic.net,14,0.0
+288,IeSuberic *,14,0.0
+289,AmSo-aweso *,14,0.0
+290,henrik@henrik-schmidt.de,14,0.0
+291,WillCall,13,0.0
+292,Anadea inc.,13,0.0
+293,caesarxuchao@gmail.com,13,0.0
+294,martin@way2clever.com,13,0.0
 295,Loodse GmbH,13,0.0
-296,WillCall,13,0.0
+296,Way2clever *,13,0.0
 297,IT Svit,13,0.0
-298,caesarxuchao@gmail.com,13,0.0
-299,martin@way2clever.com,13,0.0
-300,ValuationUp,12,0.0
-301,Walt Disney,12,0.0
-302,Buildbot,12,0.0
-303,Signal Sciences Corp,11,0.0
-304,Blizzard,11,0.0
-305,litus81@gmail.com,11,0.0
-306,dunnhumby,11,0.0
-307,ForgeRock,11,0.0
-308,Zesty.io,11,0.0
-309,CDNetworks Korea,11,0.0
-310,JetThoughts,11,0.0
-311,Dynatrace LLC,11,0.0
-312,yuanying@fraction.jp,10,0.0
-313,Ubisoft,10,0.0
-314,Universidade Federal de Campina Grande,10,0.0
-315,Infraly,10,0.0
-316,Bracket Computing,10,0.0
-317,Layer 10,10,0.0
-318,Hortonworks,10,0.0
-319,Fraction *,10,0.0
-320,real.cost.info@gmail.com,10,0.0
-321,xh@decbug.com,9,0.0
-322,pronix,9,0.0
-323,Dataman,9,0.0
-324,en.N cloud,9,0.0
-325,marc.cyprien@esigetel.net,9,0.0
-326,matt@bodgit-n-scarper.com,9,0.0
-327,OJOHome,9,0.0
-328,Directi,9,0.0
-329,Bodgit-n-scarper *,9,0.0
-330,Yahoo *,9,0.0
-331,Decbug *,9,0.0
-332,combcloud@gmail.com,9,0.0
-333,meng.mobile@gmail.com,9,0.0
-334,Esigetel *,9,0.0
-335,tmrts@users.noreply.github.com,8,0.0
-336,cjr@cruwe.de,8,0.0
-337,chris@krypton.io,8,0.0
-338,ej.simeon@gmail.com,8,0.0
-339,yong.tang.github@outlook.com,8,0.0
-340,CT Lab,8,0.0
-341,Naver,8,0.0
-342,Vungle,8,0.0
-343,Palantir Technologies,8,0.0
-344,StackPointCloud,8,0.0
-345,Krypton *,8,0.0
-346,Cruwe *,8,0.0
-347,YY,8,0.0
-348,Alberta Energy,7,0.0
-349,Sourcepoint,7,0.0
-350,Schroders,7,0.0
-351,Jollyturns,7,0.0
+298,Walt Disney,12,0.0
+299,ValuationUp,12,0.0
+300,Buildbot,12,0.0
+301,ForgeRock,11,0.0
+302,dunnhumby,11,0.0
+303,Blizzard,11,0.0
+304,Dynatrace LLC,11,0.0
+305,Signal Sciences Corp,11,0.0
+306,litus81@gmail.com,11,0.0
+307,JetThoughts,11,0.0
+308,CDNetworks Korea,11,0.0
+309,Zesty.io,11,0.0
+310,Hortonworks,10,0.0
+311,Bracket Computing,10,0.0
+312,Layer 10,10,0.0
+313,Infraly,10,0.0
+314,real.cost.info@gmail.com,10,0.0
+315,Universidade Federal de Campina Grande,10,0.0
+316,Ubisoft,10,0.0
+317,Dataman,9,0.0
+318,matt@bodgit-n-scarper.com,9,0.0
+319,marc.cyprien@esigetel.net,9,0.0
+320,combcloud@gmail.com,9,0.0
+321,meng.mobile@gmail.com,9,0.0
+322,xh@decbug.com,9,0.0
+323,Yahoo *,9,0.0
+324,Decbug *,9,0.0
+325,Esigetel *,9,0.0
+326,Bodgit-n-scarper *,9,0.0
+327,pronix,9,0.0
+328,en.N cloud,9,0.0
+329,Directi,9,0.0
+330,OJOHome,9,0.0
+331,chris@krypton.io,8,0.0
+332,StackPointCloud,8,0.0
+333,Palantir Technologies,8,0.0
+334,Vungle,8,0.0
+335,Naver,8,0.0
+336,CT Lab,8,0.0
+337,YY,8,0.0
+338,Cruwe *,8,0.0
+339,Krypton *,8,0.0
+340,yong.tang.github@outlook.com,8,0.0
+341,tmrts@users.noreply.github.com,8,0.0
+342,cjr@cruwe.de,8,0.0
+343,ej.simeon@gmail.com,8,0.0
+344,Thingful,7,0.0
+345,JD.COM,7,0.0
+346,Virtu Financial LLC,7,0.0
+347,Telemetry.com,7,0.0
+348,ocadotechnology,7,0.0
+349,Klarna,7,0.0
+350,ThousandEyes,7,0.0
+351,RealNames,7,0.0
 352,AppsCode,7,0.0
-353,RealNames,7,0.0
-354,ThousandEyes,7,0.0
-355,Klarna,7,0.0
-356,ocadotechnology,7,0.0
-357,Telemetry.com,7,0.0
-358,Virtu Financial LLC,7,0.0
-359,Thingful,7,0.0
-360,JD.COM,7,0.0
+353,Jollyturns,7,0.0
+354,Schroders,7,0.0
+355,Sourcepoint,7,0.0
+356,Alberta Energy,7,0.0
+357,ShareThis,7,0.0
+358,cephaslr@yahoo.com,7,0.0
+359,robertcboll@gmail.com,7,0.0
+360,weiwei.inf@gmail.com,7,0.0
 361,daniele.testa@gmail.com,7,0.0
-362,cephaslr@yahoo.com,7,0.0
-363,robertcboll@gmail.com,7,0.0
-364,weiwei.inf@gmail.com,7,0.0
-365,ShareThis,7,0.0
-366,Teradata Aster,6,0.0
-367,Mozilla,6,0.0
-368,D2C Media,6,0.0
-369,AnchorFree,6,0.0
-370,Spotify *,6,0.0
-371,nvartolomei@gmail.com,6,0.0
-372,iamthemuffinman@outlook.com,6,0.0
-373,shanse@gmail.com,6,0.0
-374,dano@spotify.com,6,0.0
-375,zhgwenming@gmail.com,6,0.0
-376,xudifsd@gmail.com,6,0.0
-377,Puppet,6,0.0
-378,Met Office Informatics Lab,6,0.0
-379,Atlas Informatics,6,0.0
-380,RightScale,6,0.0
+362,AnchorFree,6,0.0
+363,dano@spotify.com,6,0.0
+364,shanse@gmail.com,6,0.0
+365,iamthemuffinman@outlook.com,6,0.0
+366,nvartolomei@gmail.com,6,0.0
+367,Spotify *,6,0.0
+368,Puppet,6,0.0
+369,Met Office Informatics Lab,6,0.0
+370,Atlas Informatics,6,0.0
+371,Teradata Aster,6,0.0
+372,xudifsd@gmail.com,6,0.0
+373,zhgwenming@gmail.com,6,0.0
+374,RightScale,6,0.0
+375,Mozilla,6,0.0
+376,D2C Media,6,0.0
+377,andrei.kopats@gmail.com,5,0.0
+378,git@hiltunen.io,5,0.0
+379,marton.natko@gmail.com,5,0.0
+380,Qq *,5,0.0
 381,Freeletics,5,0.0
-382,Always Move Fast,5,0.0
-383,Reddit,5,0.0
-384,Luxiar,5,0.0
-385,Reizwerk GmbH,5,0.0
-386,Indigo Biosystems,5,0.0
-387,NASA,5,0.0
-388,Chariot Solutions,5,0.0
-389,CYSO,5,0.0
-390,Dollar Shave Club,5,0.0
-391,Okori Group,5,0.0
-392,Hiltunen *,5,0.0
-393,Aliyun *,5,0.0
-394,Springer *,5,0.0
-395,Qq *,5,0.0
-396,alex.chesser@gmail.com,5,0.0
-397,marton.natko@gmail.com,5,0.0
-398,git@hiltunen.io,5,0.0
-399,piotr.komborski@springer.com,5,0.0
-400,lzw19860818@aliyun.com,5,0.0
-401,andrei.kopats@gmail.com,5,0.0
-402,Fedora Project,4,0.0
-403,GatsbyJS,4,0.0
-404,jernej@kos.mx,4,0.0
-405,liuxu@asiainfo.com,4,0.0
-406,The-kramers *,4,0.0
-407,Asiainfo *,4,0.0
-408,parikh.yash21@gmail.com,4,0.0
-409,adam@the-kramers.net,4,0.0
-410,yangm3ng@gmail.com,4,0.0
-411,suhasanand@users.noreply.github.com,4,0.0
-412,1585370057@qq.com,4,0.0
-413,OpenBet,4,0.0
-414,Lohi Labs,4,0.0
-415,IEEE Computer Society,4,0.0
-416,Zen.ly,4,0.0
-417,Funky,4,0.0
-418,ioGlue,4,0.0
-419,moovel,4,0.0
-420,Kos *,4,0.0
-421,Matrix,4,0.0
-422,Faille *,4,0.0
-423,Return Path,4,0.0
-424,ALTA Language Services,4,0.0
-425,PyConJP,4,0.0
-426,michael@faille.io,4,0.0
-427,colmomonks@gmail.com,4,0.0
-428,yasstij11@gmail.com,4,0.0
-429,Pressly,4,0.0
-430,ZeMoSo Technologies,3,0.0
-431,HarmonyCloud,3,0.0
-432,volleylabs,3,0.0
-433,Feenix GmbH,3,0.0
-434,Oblong Industries,3,0.0
-435,satnam6502@gmail.com,3,0.0
-436,anthony.elizondo@gmail.com,3,0.0
-437,bjoern.erik.strand@gmail.com,3,0.0
-438,vivekbhat@live.com,3,0.0
-439,Cyrus Biotechnology,3,0.0
-440,pnowaczyk.mail@gmail.com,3,0.0
-441,nan@chinadtrace.org,3,0.0
-442,rcw@wehnerortega.net,3,0.0
-443,petermd@gmail.com,3,0.0
-444,ty.w.martin@gmail.com,3,0.0
-445,piotr.komborski@gmail.com,3,0.0
-446,mazswojejzony@users.noreply.github.com,3,0.0
-447,dalanlan925@gmail.com,3,0.0
-448,tianli8954@gmail.com,3,0.0
-449,yves.junqueira@gmail.com,3,0.0
+382,NASA,5,0.0
+383,Always Move Fast,5,0.0
+384,Hiltunen *,5,0.0
+385,Reddit,5,0.0
+386,Aliyun *,5,0.0
+387,Springer *,5,0.0
+388,Okori Group,5,0.0
+389,Dollar Shave Club,5,0.0
+390,CYSO,5,0.0
+391,Chariot Solutions,5,0.0
+392,Luxiar,5,0.0
+393,Reizwerk GmbH,5,0.0
+394,Indigo Biosystems,5,0.0
+395,piotr.komborski@springer.com,5,0.0
+396,lzw19860818@aliyun.com,5,0.0
+397,alex.chesser@gmail.com,5,0.0
+398,Matrix,4,0.0
+399,The-kramers *,4,0.0
+400,Asiainfo *,4,0.0
+401,Kos *,4,0.0
+402,Faille *,4,0.0
+403,OpenBet,4,0.0
+404,Lohi Labs,4,0.0
+405,IEEE Computer Society,4,0.0
+406,Zen.ly,4,0.0
+407,Funky,4,0.0
+408,ioGlue,4,0.0
+409,moovel,4,0.0
+410,Return Path,4,0.0
+411,ALTA Language Services,4,0.0
+412,PyConJP,4,0.0
+413,GatsbyJS,4,0.0
+414,Fedora Project,4,0.0
+415,Pressly,4,0.0
+416,jernej@kos.mx,4,0.0
+417,liuxu@asiainfo.com,4,0.0
+418,parikh.yash21@gmail.com,4,0.0
+419,adam@the-kramers.net,4,0.0
+420,yangm3ng@gmail.com,4,0.0
+421,suhasanand@users.noreply.github.com,4,0.0
+422,1585370057@qq.com,4,0.0
+423,michael@faille.io,4,0.0
+424,colmomonks@gmail.com,4,0.0
+425,yasstij11@gmail.com,4,0.0
+426,LinkedIn,3,0.0
+427,Rochester Institute of Technology,3,0.0
+428,Lazada Group,3,0.0
+429,Gynzy,3,0.0
+430,Citrix,3,0.0
+431,Ensighten,3,0.0
+432,petermd@gmail.com,3,0.0
+433,rcw@wehnerortega.net,3,0.0
+434,nan@chinadtrace.org,3,0.0
+435,pnowaczyk.mail@gmail.com,3,0.0
+436,zellster@gmail.com,3,0.0
+437,vivekbhat@live.com,3,0.0
+438,bjoern.erik.strand@gmail.com,3,0.0
+439,anthony.elizondo@gmail.com,3,0.0
+440,satnam6502@gmail.com,3,0.0
+441,Automattic,3,0.0
+442,Oblong Industries,3,0.0
+443,Feenix GmbH,3,0.0
+444,volleylabs,3,0.0
+445,HarmonyCloud,3,0.0
+446,ZeMoSo Technologies,3,0.0
+447,Opsview Ltd,3,0.0
+448,wellcometrust,3,0.0
+449,Chinadtrace *,3,0.0
 450,Wehnerortega *,3,0.0
-451,Chinadtrace *,3,0.0
-452,Lazada Group,3,0.0
-453,Gynzy,3,0.0
-454,Citrix,3,0.0
-455,Ensighten,3,0.0
-456,Automattic,3,0.0
-457,Rochester Institute of Technology,3,0.0
-458,veritone,3,0.0
-459,LinkedIn,3,0.0
-460,Cloudera,3,0.0
-461,inovex,3,0.0
-462,Happy Dog Web Productions,3,0.0
-463,Stack Exchange,3,0.0
-464,zellster@gmail.com,3,0.0
-465,wellcometrust,3,0.0
-466,Opsview Ltd,3,0.0
-467,fangying068@gmail.com,2,0.0
-468,bwbrowning@gmail.com,2,0.0
-469,m@qse.no,2,0.0
-470,yangbaohua@gmail.com,2,0.0
-471,Kende,2,0.0
-472,Peek,2,0.0
-473,OpenCredo,2,0.0
-474,Netlify,2,0.0
-475,Readify,2,0.0
-476,Tradesy,2,0.0
-477,On Center Software,2,0.0
-478,Zeet,2,0.0
-479,Avametric,2,0.0
-480,Lasse Schuirmann,2,0.0
-481,mixpanel,2,0.0
-482,FINN.no,2,0.0
-483,eDigitalResearch,2,0.0
-484,Yola.com,2,0.0
-485,Bluescape,2,0.0
-486,root@fox.dumbain.net,2,0.0
-487,Z Lab Corporation,2,0.0
-488,Appear TV AS,2,0.0
-489,FounderFuel,2,0.0
-490,eleme,2,0.0
-491,Databricks,2,0.0
-492,Redspread,2,0.0
-493,ZE PowerGroup,2,0.0
-494,SaltStack,2,0.0
-495,Ubuntu,2,0.0
-496,jet tsang,2,0.0
-497,Paradigma Tecnológico,2,0.0
-498,Imaginea Technologies Inc.,2,0.0
-499,Stylify Your Blog,2,0.0
-500,indiehosters,2,0.0
-501,Operable,2,0.0
-502,cafebazaar,2,0.0
-503,Noraneko Inc.,2,0.0
-504,StudUni-heidelberg *,2,0.0
-505,ZenlyCo *,2,0.0
-506,FoxDumbain *,2,0.0
-507,Try2 *,2,0.0
-508,Marhubi *,2,0.0
-509,Adrianmacneil *,2,0.0
-510,Bharr *,2,0.0
-511,LodgeGlasgownet *,2,0.0
-512,Cormann *,2,0.0
-513,Qse *,2,0.0
-514,SECful,2,0.0
-515,99cloud,2,0.0
-516,Virginia Tech,2,0.0
-517,Comparative Bioinformatics,2,0.0
-518,Avatao,2,0.0
-519,"Eldarion, Inc.",2,0.0
-520,Douyu.com,2,0.0
-521,Stacktical,2,0.0
-522,Code Coup,2,0.0
-523,CSC,2,0.0
-524,ContaAzul,2,0.0
-525,Skedulo,2,0.0
-526,Teads,2,0.0
-527,salestock,2,0.0
-528,Ustream,2,0.0
-529,ales.nosek@gmail.com,2,0.0
-530,hsatac@gmail.com,2,0.0
-531,matthias.greiner@stud.uni-heidelberg.de,2,0.0
+451,Cyrus Biotechnology,3,0.0
+452,Stack Exchange,3,0.0
+453,ty.w.martin@gmail.com,3,0.0
+454,piotr.komborski@gmail.com,3,0.0
+455,mazswojejzony@users.noreply.github.com,3,0.0
+456,dalanlan925@gmail.com,3,0.0
+457,tianli8954@gmail.com,3,0.0
+458,yves.junqueira@gmail.com,3,0.0
+459,Happy Dog Web Productions,3,0.0
+460,inovex,3,0.0
+461,Cloudera,3,0.0
+462,veritone,3,0.0
+463,On Center Software,2,0.0
+464,Readify,2,0.0
+465,Netlify,2,0.0
+466,OpenCredo,2,0.0
+467,Peek,2,0.0
+468,Kende,2,0.0
+469,Ustream,2,0.0
+470,salestock,2,0.0
+471,Teads,2,0.0
+472,Skedulo,2,0.0
+473,ContaAzul,2,0.0
+474,CSC,2,0.0
+475,Code Coup,2,0.0
+476,Stacktical,2,0.0
+477,Douyu.com,2,0.0
+478,"Eldarion, Inc.",2,0.0
+479,Avatao,2,0.0
+480,Comparative Bioinformatics,2,0.0
+481,Virginia Tech,2,0.0
+482,99cloud,2,0.0
+483,SECful,2,0.0
+484,Noraneko Inc.,2,0.0
+485,cafebazaar,2,0.0
+486,Operable,2,0.0
+487,indiehosters,2,0.0
+488,Stylify Your Blog,2,0.0
+489,Imaginea Technologies Inc.,2,0.0
+490,Paradigma Tecnológico,2,0.0
+491,jet tsang,2,0.0
+492,Ubuntu,2,0.0
+493,SaltStack,2,0.0
+494,ZE PowerGroup,2,0.0
+495,Redspread,2,0.0
+496,Databricks,2,0.0
+497,eleme,2,0.0
+498,FounderFuel,2,0.0
+499,Appear TV AS,2,0.0
+500,Z Lab Corporation,2,0.0
+501,Pierre Mavro,2,0.0
+502,Bluescape,2,0.0
+503,Yola.com,2,0.0
+504,eDigitalResearch,2,0.0
+505,FINN.no,2,0.0
+506,mixpanel,2,0.0
+507,Lasse Schuirmann,2,0.0
+508,Avametric,2,0.0
+509,Zeet,2,0.0
+510,Tradesy,2,0.0
+511,yangbaohua@gmail.com,2,0.0
+512,m@qse.no,2,0.0
+513,bwbrowning@gmail.com,2,0.0
+514,fangying068@gmail.com,2,0.0
+515,hughes.matt@gmail.com,2,0.0
+516,root@fox.dumbain.net,2,0.0
+517,jjyruby@gmail.com,2,0.0
+518,emve.dev@yandex.ru,2,0.0
+519,albatross0@gmail.com,2,0.0
+520,rahn.jonathan@gmail.com,2,0.0
+521,jinsenorita@gmail.com,2,0.0
+522,kamal@marhubi.com,2,0.0
+523,justinclayton@users.noreply.github.com,2,0.0
+524,doug@zenly.co.uk,2,0.0
+525,adrian@adrianmacneil.com,2,0.0
+526,mgannholm@users.noreply.github.com,2,0.0
+527,sidharthamn@gmail.com,2,0.0
+528,hallucynogenyc@gmail.com,2,0.0
+529,nowprovision@users.noreply.github.com,2,0.0
+530,lars@cormann.biz,2,0.0
+531,mail@bharr.is,2,0.0
 532,mikael@try2.se,2,0.0
-533,mail@bharr.is,2,0.0
-534,lars@cormann.biz,2,0.0
-535,nowprovision@users.noreply.github.com,2,0.0
-536,hallucynogenyc@gmail.com,2,0.0
-537,sidharthamn@gmail.com,2,0.0
-538,mgannholm@users.noreply.github.com,2,0.0
-539,adrian@adrianmacneil.com,2,0.0
-540,doug@zenly.co.uk,2,0.0
-541,justinclayton@users.noreply.github.com,2,0.0
-542,kamal@marhubi.com,2,0.0
-543,jinsenorita@gmail.com,2,0.0
-544,rahn.jonathan@gmail.com,2,0.0
-545,kyle@lodge.glasgownet.com,2,0.0
-546,albatross0@gmail.com,2,0.0
-547,emve.dev@yandex.ru,2,0.0
-548,jjyruby@gmail.com,2,0.0
-549,Pierre Mavro,2,0.0
-550,hughes.matt@gmail.com,2,0.0
-551,Mediamath *,1,0.0
-552,AT&T,1,0.0
-553,Zendesk,1,0.0
-554,Rudd-O,1,0.0
-555,recruit-mp,1,0.0
-556,Tumblr,1,0.0
-557,Singlewire Software,1,0.0
-558,Traum-Ferienwohnungen,1,0.0
-559,DoubleDutch,1,0.0
-560,Rombit,1,0.0
-561,Dave Mueller,1,0.0
-562,SparkTC,1,0.0
-563,Compose,1,0.0
-564,Cloud Genius,1,0.0
-565,MiWay Insurance,1,0.0
-566,ApresMIDI AB,1,0.0
-567,FactSet Research Systems,1,0.0
-568,Digital Origin,1,0.0
-569,twitch.tv,1,0.0
-570,pachyderm,1,0.0
-571,Bright Pixel,1,0.0
-572,athenahealth,1,0.0
-573,TripTravel,1,0.0
-574,NFLabs,1,0.0
-575,ADEO,1,0.0
-576,Unicon,1,0.0
-577,Eric Wright,1,0.0
-578,Nikolai Prokoschenko,1,0.0
-579,SORINT.lab,1,0.0
-580,Beldougie Ltd,1,0.0
-581,ElementAI,1,0.0
-582,ContainerStack.io,1,0.0
-583,SocialExplorer,1,0.0
-584,rstorcloud,1,0.0
-585,SolarWinds,1,0.0
-586,"Kensho, GAuthify",1,0.0
-587,Time Inc. UK,1,0.0
-588,Sourcegraph.com,1,0.0
-589,heartbeats.jp,1,0.0
-590,Virtuozzo / OpenVZ,1,0.0
-591,One.com,1,0.0
-592,Oregon State Network Enginerring,1,0.0
-593,Yammer,1,0.0
-594,OfferUp,1,0.0
-595,Matty Williams,1,0.0
-596,AdapTechSolutions.net,1,0.0
-597,G&L Digital Media Engineering,1,0.0
-598,Mayflower GmbH,1,0.0
-599,Treasure Data,1,0.0
-600,Ruby Together,1,0.0
-601,Software & Things,1,0.0
-602,iFix,1,0.0
-603,SantoshSahoo.com,1,0.0
-604,Jd.Com,1,0.0
-605,ViaNett AS,1,0.0
-606,zesty.io,1,0.0
-607,R&R,1,0.0
-608,CiscoSpark,1,0.0
-609,adesso AG,1,0.0
-610,"Gremlin, Inc.",1,0.0
-611,Emerging Stack,1,0.0
-612,BENGLER,1,0.0
-613,Cupid plc,1,0.0
-614,Viavi Solutions,1,0.0
-615,OPES Software,1,0.0
-616,opentargets,1,0.0
-617,"SPARCS, KAIST",1,0.0
-618,minio,1,0.0
-619,Mike Zupan,1,0.0
-620,Smile Open Source Solutions,1,0.0
-621,Information Security,1,0.0
-622,Outlook.com,1,0.0
-623,Atish Narlawar,1,0.0
-624,Encyclopaedia Britannica,1,0.0
-625,aporeto-inc,1,0.0
-626,Netflix,1,0.0
-627,MaestroDev,1,0.0
-628,Univa,1,0.0
-629,Assurity,1,0.0
-630,StepStone,1,0.0
-631,ksyun,1,0.0
-632,カブク,1,0.0
-633,PayPal,1,0.0
-634,leanovate,1,0.0
-635,kickstarter,1,0.0
-636,Pretty Robots,1,0.0
-637,Photobox,1,0.0
-638,EVRY,1,0.0
-639,Ionic Security,1,0.0
-640,Teralytics,1,0.0
-641,Freeformers,1,0.0
-642,iconectiv,1,0.0
-643,Tinkerbox,1,0.0
-644,BookMyShow,1,0.0
-645,Storyful,1,0.0
-646,Hotels.com,1,0.0
-647,modernmsg,1,0.0
-648,CentOS,1,0.0
-649,KAYAK,1,0.0
-650,Xoom,1,0.0
-651,Mind Scratch,1,0.0
-652,Activision,1,0.0
-653,Carrot Creative,1,0.0
-654,Qwil,1,0.0
-655,tom@haddons.net,1,0.0
-656,ypwebstuff@gmail.com,1,0.0
-657,chris@lollyrock.com,1,0.0
-658,boris.de.vloed@gmail.com,1,0.0
-659,ferdinand.huebner@gmail.com,1,0.0
-660,zhupengbupt@gmail.com,1,0.0
-661,iam.asm89@gmail.com,1,0.0
-662,mdschiller@gmail.com,1,0.0
-663,clkao@clkao.org,1,0.0
-664,robert.wilson1717@gmail.com,1,0.0
-665,leitzler@gmail.com,1,0.0
-666,borismattijssen@gmail.com,1,0.0
-667,andy@andyspohn.com,1,0.0
-668,mperez@mediamath.com,1,0.0
-669,prateekgogia@hotmail.com,1,0.0
-670,slowlight@yeah.net,1,0.0
-671,cmaser@gmx.de,1,0.0
-672,ziyadbasheer213@gmail.com,1,0.0
-673,yancey1989@gmail.com,1,0.0
-674,m.chmielarski@gmail.com,1,0.0
-675,yoseph.sultan@sky.uk,1,0.0
-676,zakir.exe@gmail.com,1,0.0
-677,adi.ofry@gmail.com,1,0.0
-678,v.behar@free.fr,1,0.0
-679,public@omeid.me,1,0.0
-680,raffo_uppuiu@yahoo.it,1,0.0
-681,mtaufen@gmail.com,1,0.0
-682,ihile@users.noreply.github.com,1,0.0
-683,jansel0@gmail.com,1,0.0
-684,williams.andrew@gmail.com,1,0.0
-685,korniste@kornisteui-macbook-pro.local,1,0.0
-686,martinvladev@gmail.com,1,0.0
-687,github@seanborman.com,1,0.0
-688,khoa.le@hrboss.com,1,0.0
-689,argregoryian@gmail.com,1,0.0
-690,misc@zarb.org,1,0.0
-691,409107750@qq.com,1,0.0
-692,evan.flynn@gmail.com,1,0.0
-693,lparam@users.noreply.github.com,1,0.0
-694,adam@nine.net,1,0.0
-695,ripcurld.github@gmail.com,1,0.0
-696,ashley@victorianfox.com,1,0.0
-697,beeradb@gmail.com,1,0.0
-698,yencheng.chou@gmail.com,1,0.0
-699,mbonaci@users.noreply.github.com,1,0.0
-700,roel.vannyen@virdata.com,1,0.0
-701,kieranom@gmail.com,1,0.0
-702,mbessolov@users.noreply.github.com,1,0.0
-703,doriordan@gmail.com,1,0.0
-704,andor@pierdelacabeza.com,1,0.0
-705,unicell@gmail.com,1,0.0
-706,minhongz@gmail.com,1,0.0
-707,arb77@hotmail.com,1,0.0
-708,r.gajdulewicz@gmail.com,1,0.0
-709,martin@mwl.dk,1,0.0
-710,sanderp@q42.nl,1,0.0
-711,arisu1000@gmail.com,1,0.0
-712,mail@marcelhauf.name,1,0.0
-713,ashw7n@gmail.com,1,0.0
-714,jason-riddle@users.noreply.github.com,1,0.0
-715,saturnism@users.noreply.github.com,1,0.0
-716,orangain@gmail.com,1,0.0
-717,ironstorm@gmail.com,1,0.0
-718,meybohm@traum-ferienwohnungen.de,1,0.0
-719,oz.tiram@mobilityhouse.com,1,0.0
-720,thom_may@external.mckinsey.com,1,0.0
-721,taariql@gmail.com,1,0.0
-722,allan.caffee@gmail.com,1,0.0
-723,mattnenterprise@yahoo.com,1,0.0
-724,Mwl *,1,0.0
-725,Andyspohn *,1,0.0
-726,Haddons *,1,0.0
-727,Yeah *,1,0.0
-728,Q42 *,1,0.0
-729,Mobilityhouse *,1,0.0
-730,Omeid *,1,0.0
-731,Pierdelacabeza *,1,0.0
-732,Virdata *,1,0.0
-733,Marcelhauf *,1,0.0
-734,ExternalMckinsey *,1,0.0
-735,Traum-ferienwohnungen *,1,0.0
-736,Free *,1,0.0
-737,Nine *,1,0.0
-738,Victorianfox *,1,0.0
-739,Lollyrock *,1,0.0
-740,Zarb *,1,0.0
-741,Gmx *,1,0.0
-742,Clkao *,1,0.0
-743,Kornisteui-macbook-pro *,1,0.0
-744,Hrboss *,1,0.0
-745,Seanborman *,1,0.0
+533,matthias.greiner@stud.uni-heidelberg.de,2,0.0
+534,hsatac@gmail.com,2,0.0
+535,ales.nosek@gmail.com,2,0.0
+536,Qse *,2,0.0
+537,Cormann *,2,0.0
+538,Bharr *,2,0.0
+539,Adrianmacneil *,2,0.0
+540,Marhubi *,2,0.0
+541,Try2 *,2,0.0
+542,FoxDumbain *,2,0.0
+543,ZenlyCo *,2,0.0
+544,StudUni-heidelberg *,2,0.0
+545,Outlook.com,1,0.0
+546,Smile Open Source Solutions,1,0.0
+547,Mike Zupan,1,0.0
+548,minio,1,0.0
+549,"SPARCS, KAIST",1,0.0
+550,opentargets,1,0.0
+551,OPES Software,1,0.0
+552,Viavi Solutions,1,0.0
+553,Cupid plc,1,0.0
+554,BENGLER,1,0.0
+555,Emerging Stack,1,0.0
+556,"Gremlin, Inc.",1,0.0
+557,adesso AG,1,0.0
+558,CiscoSpark,1,0.0
+559,R&R,1,0.0
+560,zesty.io,1,0.0
+561,ViaNett AS,1,0.0
+562,Jd.Com,1,0.0
+563,SantoshSahoo.com,1,0.0
+564,iFix,1,0.0
+565,Software & Things,1,0.0
+566,Ruby Together,1,0.0
+567,Treasure Data,1,0.0
+568,Mayflower GmbH,1,0.0
+569,G&L Digital Media Engineering,1,0.0
+570,AdapTechSolutions.net,1,0.0
+571,Matty Williams,1,0.0
+572,OfferUp,1,0.0
+573,Yammer,1,0.0
+574,Oregon State Network Enginerring,1,0.0
+575,One.com,1,0.0
+576,Virtuozzo / OpenVZ,1,0.0
+577,heartbeats.jp,1,0.0
+578,Zendesk,1,0.0
+579,AT&T,1,0.0
+580,Victorianfox *,1,0.0
+581,Lollyrock *,1,0.0
+582,Zarb *,1,0.0
+583,Gmx *,1,0.0
+584,Clkao *,1,0.0
+585,Kornisteui-macbook-pro *,1,0.0
+586,Hrboss *,1,0.0
+587,Seanborman *,1,0.0
+588,Mediamath *,1,0.0
+589,Mwl *,1,0.0
+590,Andyspohn *,1,0.0
+591,Haddons *,1,0.0
+592,Yeah *,1,0.0
+593,Q42 *,1,0.0
+594,Mobilityhouse *,1,0.0
+595,Omeid *,1,0.0
+596,Pierdelacabeza *,1,0.0
+597,Virdata *,1,0.0
+598,Marcelhauf *,1,0.0
+599,ExternalMckinsey *,1,0.0
+600,Traum-ferienwohnungen *,1,0.0
+601,Free *,1,0.0
+602,Nine *,1,0.0
+603,tom@haddons.net,1,0.0
+604,ypwebstuff@gmail.com,1,0.0
+605,chris@lollyrock.com,1,0.0
+606,boris.de.vloed@gmail.com,1,0.0
+607,ferdinand.huebner@gmail.com,1,0.0
+608,iam.asm89@gmail.com,1,0.0
+609,mdschiller@gmail.com,1,0.0
+610,clkao@clkao.org,1,0.0
+611,robert.wilson1717@gmail.com,1,0.0
+612,leitzler@gmail.com,1,0.0
+613,borismattijssen@gmail.com,1,0.0
+614,andy@andyspohn.com,1,0.0
+615,mperez@mediamath.com,1,0.0
+616,prateekgogia@hotmail.com,1,0.0
+617,slowlight@yeah.net,1,0.0
+618,cmaser@gmx.de,1,0.0
+619,ziyadbasheer213@gmail.com,1,0.0
+620,yancey1989@gmail.com,1,0.0
+621,m.chmielarski@gmail.com,1,0.0
+622,yoseph.sultan@sky.uk,1,0.0
+623,zakir.exe@gmail.com,1,0.0
+624,adi.ofry@gmail.com,1,0.0
+625,v.behar@free.fr,1,0.0
+626,public@omeid.me,1,0.0
+627,raffo_uppuiu@yahoo.it,1,0.0
+628,mtaufen@gmail.com,1,0.0
+629,ihile@users.noreply.github.com,1,0.0
+630,jansel0@gmail.com,1,0.0
+631,williams.andrew@gmail.com,1,0.0
+632,korniste@kornisteui-macbook-pro.local,1,0.0
+633,martinvladev@gmail.com,1,0.0
+634,github@seanborman.com,1,0.0
+635,khoa.le@hrboss.com,1,0.0
+636,argregoryian@gmail.com,1,0.0
+637,misc@zarb.org,1,0.0
+638,409107750@qq.com,1,0.0
+639,evan.flynn@gmail.com,1,0.0
+640,lparam@users.noreply.github.com,1,0.0
+641,adam@nine.net,1,0.0
+642,ripcurld.github@gmail.com,1,0.0
+643,ashley@victorianfox.com,1,0.0
+644,beeradb@gmail.com,1,0.0
+645,yencheng.chou@gmail.com,1,0.0
+646,mbonaci@users.noreply.github.com,1,0.0
+647,roel.vannyen@virdata.com,1,0.0
+648,kieranom@gmail.com,1,0.0
+649,mbessolov@users.noreply.github.com,1,0.0
+650,doriordan@gmail.com,1,0.0
+651,andor@pierdelacabeza.com,1,0.0
+652,unicell@gmail.com,1,0.0
+653,minhongz@gmail.com,1,0.0
+654,arb77@hotmail.com,1,0.0
+655,r.gajdulewicz@gmail.com,1,0.0
+656,martin@mwl.dk,1,0.0
+657,sanderp@q42.nl,1,0.0
+658,arisu1000@gmail.com,1,0.0
+659,mail@marcelhauf.name,1,0.0
+660,ashw7n@gmail.com,1,0.0
+661,jason-riddle@users.noreply.github.com,1,0.0
+662,saturnism@users.noreply.github.com,1,0.0
+663,orangain@gmail.com,1,0.0
+664,ironstorm@gmail.com,1,0.0
+665,meybohm@traum-ferienwohnungen.de,1,0.0
+666,oz.tiram@mobilityhouse.com,1,0.0
+667,thom_may@external.mckinsey.com,1,0.0
+668,taariql@gmail.com,1,0.0
+669,allan.caffee@gmail.com,1,0.0
+670,mattnenterprise@yahoo.com,1,0.0
+671,Sourcegraph.com,1,0.0
+672,Time Inc. UK,1,0.0
+673,"Kensho, GAuthify",1,0.0
+674,SolarWinds,1,0.0
+675,rstorcloud,1,0.0
+676,SocialExplorer,1,0.0
+677,ContainerStack.io,1,0.0
+678,ElementAI,1,0.0
+679,Beldougie Ltd,1,0.0
+680,SORINT.lab,1,0.0
+681,Nikolai Prokoschenko,1,0.0
+682,Eric Wright,1,0.0
+683,Unicon,1,0.0
+684,NFLabs,1,0.0
+685,TripTravel,1,0.0
+686,athenahealth,1,0.0
+687,Bright Pixel,1,0.0
+688,pachyderm,1,0.0
+689,twitch.tv,1,0.0
+690,Digital Origin,1,0.0
+691,FactSet Research Systems,1,0.0
+692,ApresMIDI AB,1,0.0
+693,MiWay Insurance,1,0.0
+694,Cloud Genius,1,0.0
+695,Compose,1,0.0
+696,SparkTC,1,0.0
+697,Dave Mueller,1,0.0
+698,Rombit,1,0.0
+699,DoubleDutch,1,0.0
+700,Traum-Ferienwohnungen,1,0.0
+701,Singlewire Software,1,0.0
+702,Tumblr,1,0.0
+703,recruit-mp,1,0.0
+704,Rudd-O,1,0.0
+705,Qwil,1,0.0
+706,Carrot Creative,1,0.0
+707,Activision,1,0.0
+708,Mind Scratch,1,0.0
+709,Xoom,1,0.0
+710,KAYAK,1,0.0
+711,CentOS,1,0.0
+712,modernmsg,1,0.0
+713,Hotels.com,1,0.0
+714,Storyful,1,0.0
+715,BookMyShow,1,0.0
+716,Tinkerbox,1,0.0
+717,iconectiv,1,0.0
+718,Freeformers,1,0.0
+719,Teralytics,1,0.0
+720,Ionic Security,1,0.0
+721,ADEO,1,0.0
+722,EVRY,1,0.0
+723,Photobox,1,0.0
+724,Pretty Robots,1,0.0
+725,kickstarter,1,0.0
+726,leanovate,1,0.0
+727,PayPal,1,0.0
+728,カブク,1,0.0
+729,ksyun,1,0.0
+730,StepStone,1,0.0
+731,Assurity,1,0.0
+732,Univa,1,0.0
+733,MaestroDev,1,0.0
+734,Netflix,1,0.0
+735,aporeto-inc,1,0.0
+736,Encyclopaedia Britannica,1,0.0
+737,Atish Narlawar,1,0.0
+738,Information Security,1,0.0
