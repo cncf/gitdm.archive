@@ -1,9 +1,9 @@
 idx,company,n,percent
-0,(All known 106),588582,99.7
-1,Google,334932,56.7
+0,(All known 106),588711,99.72
+1,Google,335042,56.8
 2,CoreOS,118374,20.1
 3,Red Hat,48145,8.2
-4,Heptio,17144,2.9
+4,Heptio,17163,2.9
 5,VMware,14962,2.5
 6,Microsoft,11796,2.0
 7,Rancher Labs,11005,1.9
@@ -13,8 +13,8 @@ idx,company,n,percent
 11,(Self),1909,0.3
 12,Hyper.sh,1897,0.3
 13,Kelowna,1790,0.3
-14,(Unknown),1773,0.3
-15,Apache,1713,0.3
+14,Apache,1713,0.3
+15,(Unknown),1640,0.3
 16,Fujitsu,1570,0.3
 17,EasyStack,1411,0.2
 18,ASG Consulting,1224,0.2
@@ -23,10 +23,10 @@ idx,company,n,percent
 21,Canonical,1013,0.2
 22,Caicloud,700,0.1
 23,Mirantis,650,0.1
-24,Gmail *,644,0.1
-25,max@kutsevol.com,632,0.1
-26,Kutsevol *,632,0.1
-27,ZTE Corporation,551,0.1
+24,max@kutsevol.com,632,0.1
+25,Kutsevol *,632,0.1
+26,ZTE Corporation,551,0.1
+27,Gmail *,515,0.1
 28,"Styra, Inc.",509,0.1
 29,Tata Consultancy Services,442,0.1
 30,Atlassian,414,0.1
@@ -52,107 +52,103 @@ idx,company,n,percent
 50,Live *,125,0.0
 51,kmter@live.com,122,0.0
 52,loodse,119,0.0
-53,kynan.rilee@gmail.com,110,0.0
-54,"Computer Science and Engineering, IIT Kanpur",109,0.0
-55,ravi.gadde@gmail.com,109,0.0
-56,Oracle,108,0.0
-57,Wattpad,107,0.0
-58,Socrata,106,0.0
-59,Cisco,102,0.0
-60,Zalando,96,0.0
-61,Ocado,94,0.0
-62,talk.to.waseem@gmail.com,89,0.0
-63,Hitachi Data Systems,80,0.0
-64,xxiaozhou@gmail.com,68,0.0
-65,dconstenla@gradiant.org,67,0.0
-66,Gradiant *,67,0.0
-67,eBay,66,0.0
-68,Primeton,65,0.0
-69,Nordstrom,64,0.0
-70,Pardot,52,0.0
-71,Tyk,43,0.0
-72,Feedtrail,40,0.0
-73,shaynexwang@gmail.com,37,0.0
-74,dima.shmakov87@gmail.com,35,0.0
-75,Ancestry.com,27,0.0
-76,Diamanti,25,0.0
-77,Inuits,25,0.0
+53,"Computer Science and Engineering, IIT Kanpur",109,0.0
+54,ravi.gadde@gmail.com,109,0.0
+55,Oracle,108,0.0
+56,Wattpad,107,0.0
+57,Socrata,106,0.0
+58,Cisco,102,0.0
+59,Zalando,96,0.0
+60,Ocado,94,0.0
+61,talk.to.waseem@gmail.com,89,0.0
+62,Hitachi Data Systems,80,0.0
+63,xxiaozhou@gmail.com,68,0.0
+64,dconstenla@gradiant.org,67,0.0
+65,Gradiant *,67,0.0
+66,eBay,66,0.0
+67,Primeton,65,0.0
+68,Nordstrom,64,0.0
+69,Pardot,52,0.0
+70,Tyk,43,0.0
+71,Feedtrail,40,0.0
+72,shaynexwang@gmail.com,37,0.0
+73,dima.shmakov87@gmail.com,35,0.0
+74,Ancestry.com,27,0.0
+75,Diamanti,25,0.0
+76,Inuits,25,0.0
+77,(Not Found),24,0.0
 78,TravelSky Technology Limited,23,0.0
-79,Igneous Systems,21,0.0
-80,Cockroach,21,0.0
+79,Cockroach,21,0.0
+80,Igneous Systems,21,0.0
 81,Hotmail *,20,0.0
 82,klausenbusk@hotmail.com,20,0.0
-83,(Not Found),20,0.0
-84,ninkendo@gmail.com,19,0.0
-85,Bits Working,19,0.0
-86,FOSSEE,18,0.0
-87,fabrizio.pandini@gmail.com,17,0.0
-88,globo.com,17,0.0
-89,China Mobile International Limited,17,0.0
-90,Movable Ink,16,0.0
-91,Ceph,15,0.0
-92,DaoCloud,15,0.0
-93,Henrik-schmidt *,14,0.0
-94,henrik@henrik-schmidt.de,14,0.0
-95,IT Svit,13,0.0
-96,Juju Ecosystem,11,0.0
-97,Bracket Computing,10,0.0
-98,crassirostris@yandex.com,10,0.0
-99,Yandex *,10,0.0
-100,Universidade Federal de Campina Grande,10,0.0
-101,Tencent,10,0.0
-102,en.N cloud,9,0.0
+83,Bits Working,19,0.0
+84,FOSSEE,18,0.0
+85,globo.com,17,0.0
+86,fabrizio.pandini@gmail.com,17,0.0
+87,China Mobile International Limited,17,0.0
+88,Movable Ink,16,0.0
+89,DaoCloud,15,0.0
+90,Ceph,15,0.0
+91,Henrik-schmidt *,14,0.0
+92,henrik@henrik-schmidt.de,14,0.0
+93,IT Svit,13,0.0
+94,Juju Ecosystem,11,0.0
+95,crassirostris@yandex.com,10,0.0
+96,Bracket Computing,10,0.0
+97,Tencent,10,0.0
+98,Yandex *,10,0.0
+99,Universidade Federal de Campina Grande,10,0.0
+100,en.N cloud,9,0.0
+101,cjr@cruwe.de,8,0.0
+102,Cruwe *,8,0.0
 103,CT Lab,8,0.0
-104,Cruwe *,8,0.0
-105,cjr@cruwe.de,8,0.0
-106,weiwei.inf@gmail.com,7,0.0
-107,Telemetry.com,7,0.0
-108,HP,6,0.0
-109,Chariot Solutions,5,0.0
-110,marton.natko@gmail.com,5,0.0
-111,SoundCloud,4,0.0
-112,liuxu@asiainfo.com,4,0.0
-113,1585370057@qq.com,4,0.0
+104,weiwei.inf@gmail.com,7,0.0
+105,Telemetry.com,7,0.0
+106,HP,6,0.0
+107,marton.natko@gmail.com,5,0.0
+108,Chariot Solutions,5,0.0
+109,SoundCloud,4,0.0
+110,Aperian Global,4,0.0
+111,IEEE Computer Society,4,0.0
+112,Clarifai,4,0.0
+113,Asiainfo *,4,0.0
 114,yasstij11@gmail.com,4,0.0
-115,JD.COM,4,0.0
-116,Clarifai,4,0.0
-117,IEEE Computer Society,4,0.0
-118,Aperian Global,4,0.0
-119,Qq *,4,0.0
-120,Asiainfo *,4,0.0
-121,inovex,3,0.0
-122,Intel,3,0.0
-123,vivekbhat@live.com,3,0.0
+115,liuxu@asiainfo.com,4,0.0
+116,JD.COM,4,0.0
+117,vivekbhat@live.com,3,0.0
+118,inovex,3,0.0
+119,Intel,3,0.0
+120,Outlook *,2,0.0
+121,Adrianmacneil *,2,0.0
+122,yong.tang.github@outlook.com,2,0.0
+123,jinsenorita@gmail.com,2,0.0
 124,adrian@adrianmacneil.com,2,0.0
-125,RightScale,2,0.0
-126,FINN.no,2,0.0
-127,Outlook *,2,0.0
-128,Adrianmacneil *,2,0.0
-129,StudUni-heidelberg *,2,0.0
-130,indiehosters,2,0.0
-131,Douyu.com,2,0.0
-132,Code Coup,2,0.0
-133,ContaAzul,2,0.0
+125,sidharthamn@gmail.com,2,0.0
+126,matthias.greiner@stud.uni-heidelberg.de,2,0.0
+127,RightScale,2,0.0
+128,FINN.no,2,0.0
+129,indiehosters,2,0.0
+130,Douyu.com,2,0.0
+131,StudUni-heidelberg *,2,0.0
+132,ContaAzul,2,0.0
+133,Code Coup,2,0.0
 134,HarmonyCloud,2,0.0
 135,Amazon,2,0.0
-136,yong.tang.github@outlook.com,2,0.0
-137,jinsenorita@gmail.com,2,0.0
-138,sidharthamn@gmail.com,2,0.0
-139,matthias.greiner@stud.uni-heidelberg.de,2,0.0
-140,ocadotechnology,1,0.0
-141,sanderp@q42.nl,1,0.0
-142,rstorcloud,1,0.0
-143,Shopify,1,0.0
-144,Alternative Storage,1,0.0
-145,Loodse GmbH,1,0.0
-146,Ruby Together,1,0.0
-147,ksyun,1,0.0
-148,ypwebstuff@gmail.com,1,0.0
-149,public@omeid.me,1,0.0
+136,jobandtalent,1,0.0
+137,ypwebstuff@gmail.com,1,0.0
+138,Q42 *,1,0.0
+139,Omeid *,1,0.0
+140,Loodse GmbH,1,0.0
+141,Alternative Storage,1,0.0
+142,Shopify,1,0.0
+143,rstorcloud,1,0.0
+144,Compose,1,0.0
+145,ocadotechnology,1,0.0
+146,sanderp@q42.nl,1,0.0
+147,public@omeid.me,1,0.0
+148,yencheng.chou@gmail.com,1,0.0
+149,ksyun,1,0.0
 150,minio,1,0.0
-151,jobandtalent,1,0.0
-152,Jd.Com,1,0.0
-153,Omeid *,1,0.0
-154,Q42 *,1,0.0
-155,yencheng.chou@gmail.com,1,0.0
-156,Compose,1,0.0
+151,Jd.Com,1,0.0
+152,Ruby Together,1,0.0
