@@ -1,6 +1,8 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/output_strict_numstat.csv
 
+WARNING: duplicate email/empl for sandeeppissay@users.noreply.github.com
+WARNING: duplicate email/empl for ssrinivas@vmware.com
 kb@itsvit.org is an author name, probably not what you want
 (Unknown) unknown@hacker.net Unknown hacker
 Google xuchao@silkubi.fra.corp.google.com Chao Xu
@@ -371,7 +373,7 @@ Google mtaufen@google.com Michael Taufen
 	devel-doc [117, 34]
 	documentation [9, 9]
 	build [58, 2]
-(Unknown) licl@primeton.com lichunlong
+Primeton licl@primeton.com lichunlong
 	unknown [96, 52]
 IBM xingzhou@cn.ibm.com Xing Zhou
 	unknown [326, 43]
@@ -595,7 +597,7 @@ Red Hat ppospisi@redhat.com pospispa
 SalesForce mayank.kumar@salesforce.com Mayank Kumar
 	unknown [128, 64]
 	devel-doc [2, 0]
-(Unknown) robertojrojas@gmail.com Roberto J Rojas
+Chariot Solutions robertojrojas@gmail.com Roberto J Rojas
 	unknown [11, 6]
 Google etune@google.com Eric Tune
 	unknown [22, 31]
@@ -1466,7 +1468,7 @@ unknown 275162 129877
 	Google mikewu@google.com Ke Wu: [17, 2]
 	VMware gkuncoro@vmware.com Giri Kuncoro: [10247, 10110]
 	Google mtaufen@google.com Michael Taufen: [1294, 687]
-	(Unknown) licl@primeton.com lichunlong: [96, 52]
+	Primeton licl@primeton.com lichunlong: [96, 52]
 	IBM xingzhou@cn.ibm.com Xing Zhou: [326, 43]
 	Atlassian mmazurskiy@atlassian.com Mikhail Mazurskiy: [172, 20]
 	Google mml@google.com Matt Liggett: [118, 8]
@@ -1534,7 +1536,7 @@ unknown 275162 129877
 	Red Hat ppospisi@redhat.com pospispa: [149, 23]
 	(Unknown) xxiaozhou@gmail.com Author xiao-zhou: [136, 0]
 	SalesForce mayank.kumar@salesforce.com Mayank Kumar: [128, 64]
-	(Unknown) robertojrojas@gmail.com Roberto J Rojas: [11, 6]
+	Chariot Solutions robertojrojas@gmail.com Roberto J Rojas: [11, 6]
 	Google etune@google.com Eric Tune: [22, 31]
 	Google aleksandram@google.com Aleksandra Malinowska: [338, 37]
 	IBM seharris@us.ibm.com Steven E. Harris: [5, 12]

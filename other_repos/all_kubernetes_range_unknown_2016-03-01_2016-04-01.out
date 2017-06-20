@@ -1,6 +1,8 @@
 Filter on "^vendor/|/vendor/"
 open output file /Users/lukasz/dev/cncf/gitdm/other_repos/all_kubernetes_range_unknown_2016-03-01_2016-04-01.csv
 
+WARNING: duplicate email/empl for sandeeppissay@users.noreply.github.com
+WARNING: duplicate email/empl for ssrinivas@vmware.com
 tiwillia@redhat.com is an author name, probably not what you want
 (Unknown) unknown@hacker.net Unknown hacker
 Google qlee@google.com Quintin Lee
@@ -228,7 +230,7 @@ Fujitsu denis.poisson@ts.fujitsu.com Denis Poisson
 Fujitsu christoph.held@est.fujitsu.com Christoph Held
 	unknown [201, 0]
 	code [15, 12]
-(Unknown) markdevilliers@gmail.com Mark deVilliers
+Thingful markdevilliers@gmail.com Mark deVilliers
 	devel-doc [2, 2]
 Fujitsu higashi.isao@jp.fujitsu.com higashi
 	unknown [1594, 716]
@@ -536,7 +538,7 @@ Red Hat jsafrane@redhat.com Jan Safranek
 	unknown [44, 38]
 	code [2, 2]
 	build [2, 2]
-(Unknown) jimmyjones2@gmx.co.uk Jimmy Jones
+NotFound jimmyjones2@gmx.co.uk Jimmy Jones
 	unknown [2, 0]
 Canonical chuck@dasroot.net Charles Butler
 	devel-doc [78, 309]
@@ -664,7 +666,7 @@ Google johndylan@google.com johndmulhausen
 	documentation [131693, 116885]
 	ui [75, 75]
 	build [11009, 10912]
-(Unknown) ckleban@gmail.com ckleban
+Google ckleban@gmail.com ckleban
 	unknown [402, 65]
 Luminis marc@slintes.net Marc Sluiter
 	unknown [1, 1]
@@ -690,11 +692,11 @@ ElasticBox matt@elasticbox.com Matt Nickles
 	unknown [2, 2]
 Atlassian ssaasen@atlassian.com Stefan Saasen
 	unknown [3, 3]
-Romana chris@paninetworks.com Chris Marino
+New Networking chris@paninetworks.com Chris Marino
 	unknown [2, 1]
 Red Hat cben@redhat.com Beni Cherniavsky-Paskin
 	unknown [1, 1]
-(Unknown) chrismarino@users.noreply.github.com chrismarino
+New Networking chrismarino@users.noreply.github.com chrismarino
 	unknown [6, 3]
 	devel-doc [3, 3]
 USwitch r.dahlen@gmail.com Ragnar Dahlén
@@ -745,7 +747,7 @@ devel-doc 99947 63141
 	Fujitsu sebastian.florek@ts.fujitsu.com Sebastian Florek: [1, 1]
 	Fujitsu maciaszczykm@users.noreply.github.com Marcin Maciaszczyk: [3, 2]
 	(Unknown) zhomart@users.noreply.github.com Zhomart Mukhamejanov: [3, 0]
-	(Unknown) markdevilliers@gmail.com Mark deVilliers: [2, 2]
+	Thingful markdevilliers@gmail.com Mark deVilliers: [2, 2]
 	Fujitsu higashi.isao@jp.fujitsu.com higashi: [202, 0]
 	Fujitsu atanas.mirchev@est.fujitsu.com Atanas Mirchev: [444, 0]
 	Google etune@google.com Eric Tune: [12, 1618]
@@ -791,7 +793,7 @@ devel-doc 99947 63141
 	(Unknown) mikeb@squaremobius.net Michael Bridgen: [10, 10]
 	Huawei huruifeng@huawei.com Victor HU: [594, 39]
 	Google johndylan@google.com johndmulhausen: [43155, 42780]
-	(Unknown) chrismarino@users.noreply.github.com chrismarino: [3, 3]
+	New Networking chrismarino@users.noreply.github.com chrismarino: [3, 3]
 	Ben Hall ben@benhall.me.uk Ben Hall: [1, 1]
 	Atlassian jtblin@atlassian.com Jerome Touffe-Blin: [2, 2]
 code 73298 67021
@@ -1029,7 +1031,7 @@ unknown 2057317 2356664
 	AnchorFree onorua@gmail.com Yaroslav Molocko: [6, 1]
 	Red Hat sross@redhat.com Solly Ross: [7, 1]
 	Red Hat jsafrane@redhat.com Jan Safranek: [44, 38]
-	(Unknown) jimmyjones2@gmx.co.uk Jimmy Jones: [2, 0]
+	NotFound jimmyjones2@gmx.co.uk Jimmy Jones: [2, 0]
 	Canonical chuck@dasroot.net Charles Butler: [517, 350]
 	Google miguel.frde@gmail.com Miguel Flores Ruiz de Eguino: [9, 0]
 	Google spxtr@google.com Joe Finney: [875, 434]
@@ -1068,7 +1070,7 @@ unknown 2057317 2356664
 	Gangefors Programmering AB gangefors@users.noreply.github.com Stefan Gangefors: [18, 0]
 	Red Hat alr@alrubinger.com Andrew Lee Rubinger: [2, 2]
 	Google johndylan@google.com johndmulhausen: [1685347, 1683299]
-	(Unknown) ckleban@gmail.com ckleban: [402, 65]
+	Google ckleban@gmail.com ckleban: [402, 65]
 	Luminis marc@slintes.net Marc Sluiter: [1, 1]
 	United Creations scott@unitedcreations.com scotty: [1554, 668]
 	uberous jeroenvisser101@users.noreply.github.com Jeroen Visser: [1, 1]
@@ -1078,9 +1080,9 @@ unknown 2057317 2356664
 	Virtu Financial LLC me@andrewmichaelsmith.com Andrew Smith: [16, 37]
 	(Unknown) aleks.saul@gmail.com Aleks Saul: [2, 2]
 	Atlassian ssaasen@atlassian.com Stefan Saasen: [3, 3]
-	Romana chris@paninetworks.com Chris Marino: [2, 1]
+	New Networking chris@paninetworks.com Chris Marino: [2, 1]
 	Red Hat cben@redhat.com Beni Cherniavsky-Paskin: [1, 1]
-	(Unknown) chrismarino@users.noreply.github.com chrismarino: [6, 3]
+	New Networking chrismarino@users.noreply.github.com chrismarino: [6, 3]
 	USwitch r.dahlen@gmail.com Ragnar Dahlén: [3, 3]
 	Mirantis ihor.dvoretskyi@gmail.com Ihor Dvoretskyi: [23, 1]
 	Stack Overflow matt@stackoverflow.com Matt Sherman: [1, 1]
