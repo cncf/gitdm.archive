@@ -31,3 +31,6 @@ echo "New devs"
 
 echo "Multi repos"
 ./kubernetes_repos.sh
+
+echo "Generate all.txt file and all_affs.csv"
+./manual_run.sh
