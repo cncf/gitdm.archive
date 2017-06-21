@@ -34,3 +34,6 @@ echo "Multi repos"
 
 echo "Generate all.txt file and all_affs.csv"
 ./manual_run.sh
+
+echo "Enchance JSON"
+./enchance_json.sh
