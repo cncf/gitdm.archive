@@ -32,6 +32,7 @@ def enchance_json(json_file, csv_file)
   # Enchance JSON
   n_users = data.count
   enchanced = not_found = 0
+  unks = []
   data.each do |user|
     e = user['email']
     v = '?'
@@ -40,10 +41,13 @@ def enchance_json(json_file, csv_file)
       v = affs[e]
     else
       not_found += 1
+      unks << e
     end
     user['affiliation'] = v
   end
   puts "Processed #{n_users} users, enchanced: #{enchanced}, not found: #{not_found}."
+  puts "Unknown emails (VIM search pattern):"
+  puts unks.join '\|'
 
   # Write JSON back
   json = JSON.pretty_generate data
