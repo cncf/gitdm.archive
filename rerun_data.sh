@@ -33,7 +33,7 @@ echo "Multi repos"
 ./kubernetes_repos.sh
 
 echo "Generate all.txt file and all_affs.csv"
-./manual_run.sh
+./manual_all.sh
 
 echo "Enchance JSON"
 ./enchance_json.sh
