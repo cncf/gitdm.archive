@@ -112,9 +112,10 @@ def ghusers(repos, start_date)
 
   # Process repositories general info
   hs = []
-  repos.each do |repo_name|
+  n_repos = repos.count
+  repos.each_with_index do |repo_name, repo_index|
     begin
-      puts "Processing #{repo_name}"
+      puts "Processing #{repo_index + 1}/#{n_repos} #{repo_name}"
       fn = 'ghusers/' + repo_name.gsub('/', '__')
       f = File.read(fn)
       puts "Got repository JSON from saved file"
@@ -145,10 +146,11 @@ def ghusers(repos, start_date)
   # 56k commits took 162/5000 points
   # After processed all 70 repos I had ~3900/5000 points remaining
   comms = []
-  hs.each do |repo|
+  n_repos = hs.count
+  hs.each_with_index do |repo, repo_index|
     begin
       repo_name = repo['full_name'] || repo[:full_name]
-      puts "Getting commits from #{repo_name}"
+      puts "Getting commits from #{repo_index + 1}/#{n_repos} #{repo_name}"
       fn = 'ghusers/' + repo_name.gsub('/', '__') + '__commits'
       f = File.read(fn)
       puts "Got commits JSON from saved file"
@@ -177,6 +179,7 @@ def ghusers(repos, start_date)
   end
 
   # Now analysis of different authors
+  puts "Commits analysis..."
   email2github = {}
   n_commits = 0
   n_processed = 0
@@ -215,8 +218,10 @@ def ghusers(repos, start_date)
 
   # Process distinct GitHub users
   # 1 point/user --> took 3100 points
+  # I had 3896 points left after getting all repos metadata & commits
   final = []
   n_users = users.count
+  puts "#{n_users} users"
   data = {}
   begin
     json = JSON.parse File.read 'github_users.json'
@@ -256,6 +261,8 @@ def ghusers(repos, start_date)
   end
   json = JSON.pretty_generate final
   File.write 'github_users.json', json
+  puts "All done."
+  # I had 908/5000 points left when running < 1 hour
 end
 
 ghusers(repos, start_date)
