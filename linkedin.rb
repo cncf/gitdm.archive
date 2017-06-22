@@ -39,6 +39,9 @@ end
 get '/affiliations' do
   # Continue here only if got "VETTED API ACCESS"
   # Like this: `account_exists = linkedin_client.profile email: 'email=lukaszgryglicki@o2.pl'`
+  # Also module LinkedIn::search (discover if granted VETTED API ACCESS) 
+  # https://github.com/hexgnu/linkedin
+  # https://www.linkedin.com/developer/apps/5197056/auth
   binding.pry
 end
 

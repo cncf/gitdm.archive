@@ -117,6 +117,11 @@ def LookupID (id):
     except KeyError:
         return None
 
+def ReverseAlias(email):
+    if not email in EmailAliases.values():
+        return []
+    return [em_key for em_key, em_val in EmailAliases.items() if em_val == email and em_key != email]
+
 def AllAffsCSV(file, hlist):
     if file is None:
         return
@@ -124,6 +129,7 @@ def AllAffsCSV(file, hlist):
     writer.writerow (['email', 'company', 'date_to'])
     emails = list(set(sum(map(lambda el: el.email, hlist), [])))
     emails.sort()
+    pdb.set_trace()
     for email in emails:
         if email == 'unknown@hacker.net':
             continue
@@ -135,6 +141,11 @@ def AllAffsCSV(file, hlist):
                 datestr = ''
             emplstr = empl.name.replace ('"', '.').replace ('\\', '.')
             writer.writerow ([email, emplstr, datestr])
+            for em in ReverseAlias(email):
+                if em in emails:
+                    print 'This is bad, reverse email already in emails, check: `em`, `email`, `emails`'
+                    pdb.set_trace()
+                writer.writerow ([em, emplstr, datestr])
 
 def AllHackers ():
     return HackersByID.values ()
