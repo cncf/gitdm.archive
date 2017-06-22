@@ -661,7 +661,7 @@ if CSVFile:
 
 if AffFile:
     database.AllAffsCSV(AffFile, hlist)
-    AffFile.close ()
+    AffFile.close()
 
 if DevReports:
     reports.DevReports (hlist, TotalChanged, CSCount, TotalRemoved)

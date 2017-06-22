@@ -22,5 +22,5 @@ cat $FN | ~/dev/cncf/gitdm/cncfdm.py -r '^vendor/|/vendor/' -R -n -b ~/dev/cncf/
 cat $FN | ~/dev/cncf/gitdm/cncfdm.py -r '^vendor/|/vendor/' -R -n -b ~/dev/cncf/gitdm/ -t -z -d -D -U -h $F2.html -o $F2.txt -x $F2.csv > $F2.out
 cat $FN | ~/dev/cncf/gitdm/cncfdm.py -r '^vendor/|/vendor/' -R -n -b ~/dev/cncf/gitdm/ -t -z -d -D -U -m -h $F3.html -o $F3.txt -x $F3.csv > $F3.out
 ./commits_in_default_ranges.sh all_kubernetes $FN
-rm -f $FN
+#rm -f $FN
 #xz -9 $FN
