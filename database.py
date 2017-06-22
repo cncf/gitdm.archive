@@ -129,7 +129,6 @@ def AllAffsCSV(file, hlist):
     writer.writerow (['email', 'company', 'date_to'])
     emails = list(set(sum(map(lambda el: el.email, hlist), [])))
     emails.sort()
-    pdb.set_trace()
     for email in emails:
         if email == 'unknown@hacker.net':
             continue
