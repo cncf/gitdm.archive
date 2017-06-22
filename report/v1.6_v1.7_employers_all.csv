@@ -1,24 +1,24 @@
 idx,company,n,percent
-0,(All known 108),332,92.48
-1,Google,76,21.2
-2,Red Hat,43,12.0
-3,(Unknown),25,7.0
-4,ZTE Corporation,15,4.2
+0,(All known 108),333,91.99
+1,Google,77,21.3
+2,Red Hat,43,11.9
+3,(Unknown),27,7.5
+4,ZTE Corporation,15,4.1
 5,(Self),14,3.9
 6,IBM,13,3.6
-7,Gmail *,12,3.3
-8,CoreOS,11,3.1
+7,Gmail *,13,3.6
+8,CoreOS,11,3.0
 9,Canonical,8,2.2
-10,VMware,7,1.9
-11,Huawei,7,1.9
+10,Huawei,7,1.9
+11,VMware,7,1.9
 12,Microsoft,7,1.9
 13,Mirantis,6,1.7
 14,Cisco,4,1.1
 15,Fujitsu,4,1.1
 16,Tencent,3,0.8
-17,EasyStack,3,0.8
-18,HP,3,0.8
-19,Concur,2,0.6
+17,HP,3,0.8
+18,EasyStack,3,0.8
+19,Samsung,2,0.6
 20,DaoCloud,2,0.6
 21,Weaveworks,2,0.6
 22,Heptio,2,0.6
@@ -30,13 +30,13 @@ idx,company,n,percent
 28,Atlassian,2,0.6
 29,Net EASE 网易有态度,2,0.6
 30,SalesForce,2,0.6
-31,Live *,2,0.6
-32,Samsung,2,0.6
+31,Concur,2,0.6
+32,Hotmail *,2,0.6
 33,zlabjp,2,0.6
 34,Nordstrom,2,0.6
 35,(Not Found),2,0.6
 36,Douyu.com,2,0.6
-37,Igneous Systems,1,0.3
+37,Live *,2,0.6
 38,Bits Working,1,0.3
 39,FOSSEE,1,0.3
 40,China Mobile International Limited,1,0.3
@@ -79,72 +79,74 @@ idx,company,n,percent
 77,Kutsevol *,1,0.3
 78,Cornell *,1,0.3
 79,Gradiant *,1,0.3
-80,Hotmail *,1,0.3
-81,Henrik-schmidt *,1,0.3
-82,Cruwe *,1,0.3
-83,Asiainfo *,1,0.3
-84,Adrianmacneil *,1,0.3
-85,StudUni-heidelberg *,1,0.3
-86,Q42 *,1,0.3
-87,Omeid *,1,0.3
-88,max@kutsevol.com,1,0.3
-89,sdw35@cornell.edu,1,0.3
-90,kmter@live.com,1,0.3
-91,ravi.gadde@gmail.com,1,0.3
-92,talk.to.waseem@gmail.com,1,0.3
-93,xxiaozhou@gmail.com,1,0.3
-94,dconstenla@gradiant.org,1,0.3
-95,dima.shmakov87@gmail.com,1,0.3
-96,klausenbusk@hotmail.com,1,0.3
-97,fabrizio.pandini@gmail.com,1,0.3
-98,henrik@henrik-schmidt.de,1,0.3
-99,cjr@cruwe.de,1,0.3
-100,weiwei.inf@gmail.com,1,0.3
-101,marton.natko@gmail.com,1,0.3
-102,yasstij11@gmail.com,1,0.3
-103,liuxu@asiainfo.com,1,0.3
-104,vivekbhat@live.com,1,0.3
-105,jinsenorita@gmail.com,1,0.3
-106,adrian@adrianmacneil.com,1,0.3
-107,sidharthamn@gmail.com,1,0.3
-108,matthias.greiner@stud.uni-heidelberg.de,1,0.3
-109,ypwebstuff@gmail.com,1,0.3
+80,Henrik-schmidt *,1,0.3
+81,Cruwe *,1,0.3
+82,Asiainfo *,1,0.3
+83,Adrianmacneil *,1,0.3
+84,StudUni-heidelberg *,1,0.3
+85,Q42 *,1,0.3
+86,Omeid *,1,0.3
+87,max@kutsevol.com,1,0.3
+88,sdw35@cornell.edu,1,0.3
+89,kmter@live.com,1,0.3
+90,ravi.gadde@gmail.com,1,0.3
+91,talk.to.waseem@gmail.com,1,0.3
+92,xxiaozhou@gmail.com,1,0.3
+93,dconstenla@gradiant.org,1,0.3
+94,dima.shmakov87@gmail.com,1,0.3
+95,klausenbusk@hotmail.com,1,0.3
+96,fabrizio.pandini@gmail.com,1,0.3
+97,henrik@henrik-schmidt.de,1,0.3
+98,cjr@cruwe.de,1,0.3
+99,weiwei.inf@gmail.com,1,0.3
+100,marton.natko@gmail.com,1,0.3
+101,yasstij11@gmail.com,1,0.3
+102,liuxu@asiainfo.com,1,0.3
+103,vivekbhat@live.com,1,0.3
+104,jinsenorita@gmail.com,1,0.3
+105,adrian@adrianmacneil.com,1,0.3
+106,sidharthamn@gmail.com,1,0.3
+107,matthias.greiner@stud.uni-heidelberg.de,1,0.3
+108,ypwebstuff@gmail.com,1,0.3
+109,prateekgogia@hotmail.com,1,0.3
 110,public@omeid.me,1,0.3
-111,yencheng.chou@gmail.com,1,0.3
-112,sanderp@q42.nl,1,0.3
-113,Amazon,1,0.3
-114,Inuits,1,0.3
-115,Rancher Labs,1,0.3
-116,storageos,1,0.3
-117,Kelowna,1,0.3
-118,ASG Consulting,1,0.3
-119,"Styra, Inc.",1,0.3
-120,Tata Consultancy Services,1,0.3
-121,FathomDB,1,0.3
-122,Rook,1,0.3
-123,Amadeus,1,0.3
-124,Airbnb,1,0.3
-125,Elisa,1,0.3
-126,42,1,0.3
-127,JPMorgan Chase & Co.,1,0.3
-128,Capgemini,1,0.3
-129,portworx,1,0.3
-130,Walmart,1,0.3
-131,Apprenda,1,0.3
-132,loodse,1,0.3
-133,"Computer Science and Engineering, IIT Kanpur",1,0.3
-134,Oracle,1,0.3
-135,Wattpad,1,0.3
-136,Socrata,1,0.3
-137,Zalando,1,0.3
-138,Ocado,1,0.3
-139,Hitachi Data Systems,1,0.3
-140,eBay,1,0.3
-141,Primeton,1,0.3
-142,Pardot,1,0.3
-143,Tyk,1,0.3
-144,Feedtrail,1,0.3
-145,Ancestry.com,1,0.3
-146,Diamanti,1,0.3
-147,TravelSky Technology Limited,1,0.3
-148,Cockroach,1,0.3
+111,chenchun.feed@gmail.com,1,0.3
+112,yencheng.chou@gmail.com,1,0.3
+113,sanderp@q42.nl,1,0.3
+114,Amazon,1,0.3
+115,Inuits,1,0.3
+116,Rancher Labs,1,0.3
+117,storageos,1,0.3
+118,Kelowna,1,0.3
+119,ASG Consulting,1,0.3
+120,FathomDB,1,0.3
+121,"Styra, Inc.",1,0.3
+122,Tata Consultancy Services,1,0.3
+123,Rook,1,0.3
+124,Amadeus,1,0.3
+125,Oracle,1,0.3
+126,Airbnb,1,0.3
+127,Elisa,1,0.3
+128,42,1,0.3
+129,JPMorgan Chase & Co.,1,0.3
+130,Capgemini,1,0.3
+131,portworx,1,0.3
+132,Walmart,1,0.3
+133,Apprenda,1,0.3
+134,loodse,1,0.3
+135,"Computer Science and Engineering, IIT Kanpur",1,0.3
+136,Wattpad,1,0.3
+137,Socrata,1,0.3
+138,Zalando,1,0.3
+139,Ocado,1,0.3
+140,Hitachi Data Systems,1,0.3
+141,eBay,1,0.3
+142,Primeton,1,0.3
+143,Pardot,1,0.3
+144,Tyk,1,0.3
+145,Feedtrail,1,0.3
+146,Ancestry.com,1,0.3
+147,Diamanti,1,0.3
+148,TravelSky Technology Limited,1,0.3
+149,Cockroach,1,0.3
+150,Igneous Systems,1,0.3
