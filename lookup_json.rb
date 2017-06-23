@@ -8,7 +8,7 @@ def lookup_json(json_file, args)
   key = nil
   args.each_with_index do |arg, index|
     if index % 2 == 0
-      key = arg
+      key = arg.split(',').map(&:strip)
     else
       filters[key] = arg.to_regexp
     end
@@ -24,8 +24,20 @@ def lookup_json(json_file, args)
   data.each do |user|
     n += 1
     match = true
-    filters.each do |key, re|
-      unless user[key].match(re)
+    filters.each do |keys, re|
+      mode = :all?
+      index = 0
+      if keys.first.include?(':')
+        index = 1
+        mode = keys.first[1..-1].to_sym
+      end
+      matches = []
+      keys.each_with_index do |key, i|
+        next if i < index
+        matches << (user[key] || '').match(re)
+      end
+      matched = matches.send(mode)
+      unless matched
         match = false
         break
       end
@@ -33,6 +45,10 @@ def lookup_json(json_file, args)
     next unless match
     users << user
     m += 1
+  end
+  if m < 1
+    puts "Match not found in #{json_file}"
+    return
   end
 
   # Write matched JSON back
