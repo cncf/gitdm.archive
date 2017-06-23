@@ -13,6 +13,7 @@ def lookup_json(json_file, args)
       filters[key] = arg.to_regexp
     end
   end
+  output_json = args[-1]
 
   # Parse JSON
   data = JSON.parse File.read json_file
@@ -36,8 +37,8 @@ def lookup_json(json_file, args)
 
   # Write matched JSON back
   json = JSON.pretty_generate users
-  File.write 'matched.json', json
-  puts "Matched #{m}/#{n} users, saved to matched.json"
+  File.write output_json, json
+  puts "Matched #{m}/#{n} users, saved to #{output_json}"
 end
 
 if ARGV.size < 3
