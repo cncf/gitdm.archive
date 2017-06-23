@@ -37,3 +37,6 @@ echo "Generate all.txt file and all_affs.csv"
 
 echo "Enchance JSON"
 ./enchance_json.sh
+
+echo 'Progress Report'
+./progress_report.sh
