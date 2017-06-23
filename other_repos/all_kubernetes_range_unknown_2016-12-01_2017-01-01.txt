@@ -1,5 +1,5 @@
 Processed 2797 csets from 424 developers
-160 employers found
+161 employers found
 A total of 486938 lines added, 303464 removed (delta 183474)
 
 Developers with unknown affiliation
@@ -17,7 +17,6 @@ NotFound brad.beam@b-rad.info Brad Beam                                         
 (Unknown) johncarlhofman@gmail.com John Hofman                                      1 (0.0%)
 (Unknown) swebber68@gmail.com Scott Webber                                          1 (0.0%)
 (Unknown) mrwacky42@users.noreply.github.com Sharif Nassar                          1 (0.0%)
-NotFound kmoving@gmail.com yancl                                                    1 (0.0%)
 (Unknown) slaws@users.noreply.github.com slaws                                      1 (0.0%)
 (Unknown) dconstenla@gradiant.org David Constenla                                   1 (0.0%)
 (Unknown) zhaohuizhi@gmail.com Hui-Zhi                                              1 (0.0%)
@@ -35,7 +34,6 @@ NotFound kmoving@gmail.com yancl                                                
 
 Developers working on their own behalf
 Self ablock84@gmail.com Alexander Block                                            29 (1.0%)
-Self aledbf@gmail.com Manuel de Brito Fontes                                       15 (0.5%)
 Self crazykev@zju.edu.cn Crazykev                                                  11 (0.4%)
 Self nikolay.makhotkin@gmail.com Nikolay Mahotkin                                  10 (0.4%)
 Self xihuanbo_0521@zju.edu.cn Xinbo Weng                                            8 (0.3%)
@@ -55,10 +53,10 @@ Self stkevintan@zju.edu.cn stkevintan                                           
 Self guohaifang@zju.edu.cn guohaifang                                               1 (0.0%)
 
 Top changeset contributors by employer
-Google                                                                            954 (34.1%)
+Google                                                                            955 (34.1%)
 Red Hat                                                                           486 (17.4%)
 FathomDB                                                                          142 (5.1%)
-Self                                                                              111 (4.0%)
+Self                                                                               96 (3.4%)
 Microsoft                                                                          90 (3.2%)
 Mirantis                                                                           81 (2.9%)
 CoreOS                                                                             72 (2.6%)
@@ -77,6 +75,7 @@ Fujitsu                                                                         
 CNM Consulting                                                                     19 (0.7%)
 VMware                                                                             17 (0.6%)
 GitHub                                                                             17 (0.6%)
+SOFICOM                                                                            15 (0.5%)
 Aperian Global                                                                     15 (0.5%)
 EasyStack                                                                          15 (0.5%)
 Ceph                                                                               13 (0.5%)
@@ -87,8 +86,8 @@ Net EASE 网易有态度                                                        
 Bitnami                                                                            10 (0.4%)
 Center for Open Science                                                            10 (0.4%)
 Pindrop                                                                             9 (0.3%)
-NotFound                                                                            9 (0.3%)
 Practo                                                                              9 (0.3%)
+NotFound                                                                            8 (0.3%)
 Socrata                                                                             7 (0.3%)
 JPMorgan Chase & Co.                                                                7 (0.3%)
 LucidWorks                                                                          6 (0.2%)
@@ -199,11 +198,11 @@ opentargets                                                                     
 Giant Swarm                                                                         1 (0.0%)
 FINN.no                                                                             1 (0.0%)
 Goonswarm                                                                           1 (0.0%)
+Teradata Aster                                                                      1 (0.0%)
 Siemens                                                                             1 (0.0%)
 Welltok                                                                             1 (0.0%)
 PLUMgrid                                                                            1 (0.0%)
 StackPointCloud                                                                     1 (0.0%)
-Teradata Aster                                                                      1 (0.0%)
 ReactiveOps                                                                         1 (0.0%)
 YesMastr                                                                            1 (0.0%)
 Superbalist                                                                         1 (0.0%)
@@ -218,13 +217,13 @@ Bigstep                                                                         
 Covers 100.000000% of changesets
 
 Top lines changed by employer
-Google                                                                           507086 (71.7%)
+Google                                                                           507088 (71.7%)
 Red Hat                                                                          61778 (8.7%)
 DEIS                                                                             41996 (5.9%)
 FathomDB                                                                         19925 (2.8%)
-Self                                                                             8002 (1.1%)
 クラウドワークス                                                         6998 (1.0%)
 CoreOS                                                                           6958 (1.0%)
+Self                                                                             6621 (0.9%)
 Microsoft                                                                        5838 (0.8%)
 Mirantis                                                                         4602 (0.7%)
 CNM Consulting                                                                   3598 (0.5%)
@@ -235,6 +234,7 @@ Huawei                                                                          
 clibs                                                                            2005 (0.3%)
 Intel                                                                            1550 (0.2%)
 VMware                                                                           1529 (0.2%)
+SOFICOM                                                                          1381 (0.2%)
 Ceph                                                                             1360 (0.2%)
 GitHub                                                                           1274 (0.2%)
 Hyper.sh                                                                         1252 (0.2%)
@@ -259,8 +259,8 @@ LucidWorks                                                                      
 Ubisoft                                                                           315 (0.0%)
 Pindrop                                                                           312 (0.0%)
 Morphlabs                                                                         294 (0.0%)
-NotFound                                                                          270 (0.0%)
 CaseWare                                                                          270 (0.0%)
+NotFound                                                                          268 (0.0%)
 Sapho                                                                             258 (0.0%)
 Reddit                                                                            243 (0.0%)
 2GIS                                                                              223 (0.0%)
@@ -399,10 +399,10 @@ JD.COM                                                                          
 Covers 100.000000% of signoffs
 
 Employers with the most hackers (total 432)
-Google                                                                             79 (18.3%)
+Google                                                                             80 (18.5%)
 Red Hat                                                                            47 (10.9%)
 (Unknown)                                                                          28 (6.5%)
-Self                                                                               19 (4.4%)
+Self                                                                               18 (4.2%)
 CoreOS                                                                             17 (3.9%)
 Mirantis                                                                           10 (2.3%)
 ZTE Corporation                                                                    10 (2.3%)
@@ -417,7 +417,6 @@ Bitnami                                                                         
 Tencent                                                                             3 (0.7%)
 Huawei                                                                              3 (0.7%)
 Fujitsu                                                                             3 (0.7%)
-NotFound                                                                            3 (0.7%)
 HP                                                                                  3 (0.7%)
 AT&T                                                                                3 (0.7%)
 Hyper.sh                                                                            2 (0.5%)
@@ -427,6 +426,7 @@ Wattpad                                                                         
 Linux                                                                               2 (0.5%)
 Datapipe                                                                            2 (0.5%)
 CaseWare                                                                            2 (0.5%)
+NotFound                                                                            2 (0.5%)
 Schibsted                                                                           2 (0.5%)
 Apache                                                                              2 (0.5%)
 Tigera                                                                              2 (0.5%)
@@ -441,6 +441,7 @@ FathomDB                                                                        
 CNM Consulting                                                                      1 (0.2%)
 Portworx                                                                            1 (0.2%)
 clibs                                                                               1 (0.2%)
+SOFICOM                                                                             1 (0.2%)
 Ceph                                                                                1 (0.2%)
 GitHub                                                                              1 (0.2%)
 Aperian Global                                                                      1 (0.2%)

@@ -44,7 +44,7 @@ def lookup_json(json_file, args, output_json)
       keys.each_with_index do |key, i|
         # skip ruby method name if needed and also value can be nil so value || ''
         next if i < index
-        matches << (user[key] || '').match(re)
+        matches << (user[key] || '').match?(re)
       end
       # now we have array of match results and apply ruby method to it (default :all?) and get final match for all keys
       matched = matches.send(mode)
@@ -69,7 +69,7 @@ def lookup_json(json_file, args, output_json)
 end
 
 if ARGV.size < 3
-  puts "Missing arguments: JSON_file key1 regexp1 [key2 regexp2 ...]"
+  puts "Missing arguments: json_file key1 regexp1 [key2 regexp2 ...] json_output"
   exit(1)
 end
 
