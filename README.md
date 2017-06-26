@@ -214,3 +214,10 @@ You need to have:
 - Final JSON will be saved in `./github_users.json` (next calls will use data from this file, so to reset cache just remove this file and all files from `ghusers/` directory
 - To actually generate new mapping You shoul manually process this JSON (and do some mapping of company names - GitHub users are putting strange stuff here)
 - I've did that by iterativelly using new tool: `import_from_github_users.sh`, `import_from_github_users.rb` with mapping file (that tries to map GiHub user company names into something more accurate): `company-names-mapping`
+
+To enchance this json with already existing affiliations call: `./enchance_json.sh`
+To generate JSON with some filtered data (like all unknown devs with location or linkedin profile link or just blog entry) call: `./lookup_json.sh` (see script for details, also lookup_json.rb have a lot of comments hwo to use it).
+To generate progress report (report about how many Not Found, Unknowns and Self employment devs are defined in our affiliation, call: `./progress_report.sh`).
+
+All those tools are automatically called when running full data regenerating script: `./rerun_data.sh`
+
