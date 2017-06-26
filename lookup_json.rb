@@ -66,6 +66,12 @@ def lookup_json(json_file, args, output_json)
   json = JSON.pretty_generate users
   File.write output_json, json
   puts "Matched #{m}/#{n} users, saved to #{output_json}"
+  output_dat = output_json.split('.')[0] + '.dat'
+  File.open(output_dat, 'w') do |file|
+    users.each do |user|
+      file.write("#{user['html_url']} #{user['login']} #{user['name']} #{user['location']} #{user['email']}\n")
+    end
+  end
 end
 
 if ARGV.size < 3
