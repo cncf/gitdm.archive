@@ -14,7 +14,7 @@ ruby topdevs.rb kubernetes/v1.5.0-v1.6.0/output_strict_patch.csv
 head -n 101 added.csv > stats/v1.6_added.csv
 head -n 101 removed.csv > stats/v1.6_removed.csv
 head -n 101 changesets.csv > stats/v1.6_changesets.csv
-echo "Stats kubernetes/kubernetes v1.7.0-beta.3"
+echo "Stats kubernetes/kubernetes v1.7.0-rc.1"
 ruby topdevs.rb kubernetes/v1.6.0-v1.7.0/output_strict_patch.csv
 head -n 101 added.csv > stats/v1.7_added.csv
 head -n 101 removed.csv > stats/v1.7_removed.csv

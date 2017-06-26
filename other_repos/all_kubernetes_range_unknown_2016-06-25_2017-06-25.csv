@@ -8,6 +8,7 @@
 "Dan Paik","danpaik@gmail.com","Google","2017-06-01",2,2,1
 "juanvallejo","jvallejo@redhat.com","Red Hat","2016-08-01",278,93,8
 "Brad Beam","brad.beam@b-rad.info","NotFound","2017-05-01",3,6,2
+"Weihua Meng","wmeng@redhat.com","Red Hat","2017-06-01",8,6,1
 "Piotr Szczesniak","pszczesniak@google.com","Google","2017-02-01",797,3,6
 "Michail Kargakis","mkargaki@redhat.com","Red Hat","2016-07-01",405,92,6
 "Michael Nelson","absoludity@gmail.com","Canonical","2017-01-01",10,0,1
@@ -17,7 +18,7 @@
 "nikhiljindal","nikhiljindal@google.com","Google","2017-02-01",934,284,16
 "Madhusudan.C.S","madhusudancs@google.com","Google","2016-11-01",820,209,15
 "Łukasz Oleś","lukaszoles@gmail.com","Mirantis","2016-09-01",1,0,1
-"Chao Xu","xuchao@google.com","Google","2016-06-01",298,24,2
+"Chao Xu","xuchao@google.com","Google","2016-06-01",293,23,1
 "Doug Davis","dug@us.ibm.com","IBM","2017-05-01",39,109,2
 "Ivan Ilves","ivan.ilves@gmail.com","Schibsted","2016-08-01",7,5,2
 "Tanner Bruce","tanner.bruce@farmersedge.ca","Farmers Edge","2017-06-01",2,2,1
@@ -26,11 +27,10 @@
 "zhouhaibing089","zhouhaibing089@gmail.com","eBay","2017-05-01",18,6,1
 "Joe Beda","joe.github@bedafamily.com","Google","2017-06-01",19,4,1
 "Dawn Chen","dawnchen@google.com","Google","2016-11-01",1,7,1
-"Dan Williams","dcbw@redhat.com","Red Hat","2016-06-01",56,36,2
 "deads2k","deads@redhat.com","Red Hat","2016-09-01",146294,38411,84
 "tamal","tamal@appscode.com","AppsCode","2016-09-01",3,0,1
 "Zihong Zheng","zihongz@google.com","Google","2016-12-01",3026,2098,16
-"Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2017-06-01",443,148,13
+"Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2017-06-01",444,149,14
 "devin-donnelly","ddonnelly@google.com","Google","2017-03-01",69,61,6
 "John Shanahan","shanahan.jrs@gmail.com","Self","2017-05-01",1,1,1
 "Cole Mickens","cole.mickens@gmail.com","Microsoft","2016-07-01",1279,30,7
@@ -52,7 +52,7 @@
 "Bowei Du","bowei@google.com","Google","2017-06-01",10,5,2
 "Ben Spoon","ben.spoon@coreos.com","CoreOS","2017-02-01",2,0,2
 "Dhilip","dhilip.kumar.s@huawei.com","Huawei","2017-02-01",470,76,1
-"Yang Guo","ygg@google.com","Google","2017-06-01",2767,1084,16
+"Yang Guo","ygg@google.com","Google","2017-06-01",2861,1084,17
 "blankenhaus","matthias@hoopla.net","Hoopla","2016-11-01",1,1,1
 "Aleksa Sarai","asarai@suse.de","SUSE/Novell","2017-01-01",13,11,2
 "Jan Safranek","jsafrane@redhat.com","Red Hat","2017-03-01",6896,1090,27
@@ -65,11 +65,11 @@
 "Andrew Pilloud","andrewpilloud@igneoussystems.com","Igneous Systems","2017-02-01",59,49,6
 "Matthew Wong","mawong@redhat.com","Red Hat","2017-04-01",812,623,28
 "isavin","comp_@gmx.net","NotFound","2017-01-01",7,1,1
-"mdshuai","dma@redhat.com","Red Hat","2016-07-01",1,1,1
+"rkouj","rkouj@google.com","Google","2016-10-01",118,16,2
 "stkevintan","stkevintan@zju.edu.cn","Self","2016-12-01",463,463,1
 "Maciej Szulik","maszulik@redhat.com","Red Hat","2016-11-01",1437,1154,12
 "Solly Ross","sross@redhat.com","Red Hat","2017-04-01",553,58,6
-"Sen Lu","senlu@google.com","Google","2017-05-01",6511,4151,36
+"Giovanni Tirloni","giovanni.tirloni@gmail.com","(Unknown)","2017-06-01",77,13,1
 "Madhusudan.C.S","madhusudancs@google.com","Google","2017-03-01",716,307,22
 "jg Chen","21521209@zju.edu.cn","Self","2017-06-01",198,63,5
 "Dong Liu","doliu@microsoft.com","Microsoft","2017-05-01",641,147,7
@@ -88,7 +88,7 @@
 "Cole Mickens","cole.mickens@gmail.com","Microsoft","2016-10-01",87,41,7
 "Christopher M. Luciano","cmluciano@us.ibm.com","IBM","2017-01-01",1,1,1
 "moonfang(房孝敬)","moonfang@tencent.com","Tencent","2016-12-01",12,0,1
-"Haoran Wang","haowang@redhat.com","Red Hat","2017-06-01",22,0,1
+"Haoran Wang","haowang@redhat.com","Red Hat","2017-06-01",22,57,2
 "Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2017-02-01",24,22,5
 "Chris Love","clove@cnmconsulting.net","CNM Consulting","2016-12-01",3593,164,19
 "Edward Hyunkoo Jee","edjee@google.com","Google","2016-09-01",10,33,2
@@ -103,12 +103,12 @@
 "Zac Blazic","zacblazic@gmail.com","ZappiStore","2017-02-01",40,8,7
 "Ebrahim Byagowi","ebrahim@gnu.org","GNU","2016-08-01",168,54,2
 "deads2k","deads@redhat.com","Red Hat","2016-11-01",4446,2106,45
-"Piotr Bryk","bryk@google.com","Google","2016-08-01",2462,1576,17
+"Sam Stoelinga","sammiestoel@gmail.com","Mirantis","2016-09-01",4,11,1
 "Nagapramod Mandagere","pramod@us.ibm.com","IBM","2017-01-01",166,52,4
 "Spencer Smith","robertspencersmith@gmail.com","Solinea","2016-11-01",8,8,6
 "Yassine TIJANI","yasstij11@gmail.com","(Unknown)","2017-05-01",4,7,2
 "Suraj Deshmukh","surajssd009005@gmail.com","Red Hat","2016-11-01",257,194,2
-"Janet Kuo","chiachenk@google.com","Google","2016-06-01",4,0,1
+"Dragons","xiaolong@caicloud.io","Caicloud","2017-06-01",1225,0,1
 "David Radcliffe","radcliffe.david@gmail.com","Ruby Together","2017-04-01",2,1,1
 "Sergey Vasilenko","svasilenko@mirantis.com","Mirantis","2016-11-01",12,2,1
 "dhilipsiva","dhilipsiva@gmail.com","Appknox","2016-12-01",1,1,1
@@ -134,8 +134,8 @@
 "Jordan Liggitt","jliggitt@redhat.com","Red Hat","2016-07-01",125,19,3
 "Timothy St. Clair","tstclair@redhat.com","Red Hat","2016-12-01",4,39,2
 "Charlie Drage","charlie@charliedrage.com","Red Hat","2016-09-01",38,0,1
-"David Newswanger","gamma.dave@gmail.com","Berea College","2016-11-01",6,4,1
-"Sylwester Brzeczkowski","sylwek1992@gmail.com","10clouds","2016-06-01",22,2,1
+"Brad Bowman","beeradb@gmail.com","DRUD Tech","2017-01-01",1,1,1
+"Anton Nerozya","nerozya.anton@gmail.com","(Unknown)","2017-06-01",122,0,1
 "Matthias Greiner","matthias.greiner@stud.uni-heidelberg.de","(Unknown)","2017-05-01",2,2,1
 "TonyAdo","coolhzb@163.com","Net EASE 网易有态度","2017-01-01",136,64,1
 "Kale Blankenship","kale@lemnisys.com","ACME AtronOmatic","2017-05-01",1,1,1
@@ -144,12 +144,12 @@
 "Yancey1989","yancey1989@gmail.com","(Unknown)","2016-09-01",2,2,1
 "Anthony Yeh","enisoc@google.com","Google","2017-03-01",3759,1731,46
 "Kent Rancourt","kent@deis.com","DEIS","2016-11-01",462,1032,8
-"Vishnu Kannan","vishnuk@google.com","Google","2016-06-01",42,20,5
+"Vishnu Kannan","vishnuk@google.com","Google","2016-06-01",28,14,1
 "Random-Liu","lantaol@google.com","Google","2016-09-01",268,103,11
 "Michael Grosser","development@stp-ip.net","Zendesk","2017-06-01",115,56,1
 "Jeff Grafton","jgrafton@google.com","Google","2016-11-01",208,103,22
 "Christopher M. Luciano","cmluciano@us.ibm.com","IBM","2017-05-01",13,2,2
-"Justin Santa Barbara","justin@fathomdb.com","FathomDB","2016-06-01",12963,39087,72
+"Justin Santa Barbara","justin@fathomdb.com","FathomDB","2016-06-01",12593,38818,63
 "Matt Fellows","matt.fellows@onegeek.com.au","DiUS Computing","2016-12-01",1,0,1
 "Suraj Deshmukh","surajssd009005@gmail.com","Red Hat","2016-12-01",329,79,6
 "Brendan Burns","bburns@google.com","Microsoft","2016-08-01",294,34,7
@@ -165,7 +165,7 @@
 "Huamin Chen","hchen@redhat.com","Red Hat","2016-08-01",823,114,9
 "Greg Lyons","glyons@box.com","Box","2016-07-01",119,29,1
 "Maciej Kwiek","maciej.iai@gmail.com","Mirantis","2016-11-01",4,4,4
-"Alexander Campbell","alexanderhcampbell@gmail.com","Google","2017-06-01",62,49,8
+"Alexander Campbell","alexanderhcampbell@gmail.com","Google","2017-06-01",62,239,9
 "Suraj Deshmukh","surajssd009005@gmail.com","Red Hat","2017-03-01",26,13,2
 "Piotr Bryk","bryk@google.com","Google","2016-10-01",1560,1371,11
 "Dan Bode","bodepd@gmail.com","Bodeco.io","2017-06-01",3,3,1
@@ -179,7 +179,6 @@
 "Antonio Murdaca","runcom@redhat.com","Red Hat","2016-12-01",798,241,22
 "Timothy St. Clair","timothysc@gmail.com","Heptio","2017-04-01",23547,24813,14
 "Martin Linkhorst","martin.linkhorst+github.com@posteo.de","Zalando","2017-04-01",3515,2009,25
-"André Martins","aanm90@gmail.com","Cisco","2017-02-01",34,3,2
 "George Kraft","george.kraft@canonical.com","Canonical","2017-04-01",57,72,3
 "DJ Mountney","david.mountney@twkie.net","Self","2017-02-01",4,4,1
 "Ricky Pai","rickyp999@gmail.com","Airbnb","2016-09-01",1,1,1
@@ -187,9 +186,10 @@
 "Luke Marsden","me@lukemarsden.net","Luke Marsden","2016-09-01",416,111,16
 "Andrew Greenwood","andrew.greenwood@autodata.net","Autodata Solutions","2017-02-01",293,111,3
 "Xianglin Gao","xlgao@zju.edu.cn","Self","2017-05-01",981,232,7
-"Jing Xu","jinxu@google.com","Google","2016-06-01",1101,239,2
+"Jing Xu","jinxu@google.com","Google","2016-06-01",112,2,1
 "Victor Häggqvist","victor@snilius.com","(Unknown)","2016-09-01",26,0,1
 "Wilson, Dan","danw@concur.com","Concur","2017-01-01",309,12,1
+"Ian Beringer","ian@ianberinger.com","Ian Beringer","2017-02-01",14,1,1
 "Miao Luo","miaol@vmware.com","VMware","2016-11-01",2746,76,5
 "Adnan Abdulhussein","adnan@prydoni.us","Bitnami","2016-12-01",2,0,1
 "Jun Xiang Tee","juntee@google.com","Google","2017-05-01",870,130,5
@@ -218,7 +218,7 @@
 "Eric Hole","eric.hole@gmail.com","Bar Bouchee","2017-01-01",745,358,12
 "Seth Goings","sgoings@engineyard.com","Engine Yard","2016-07-01",1,2,1
 "Ryan McGinnis","mcginnisrr@gmail.com","Google","2017-03-01",1,1,1
-"Philip Champon","pchampon@gmail.com","Adaptly","2017-06-01",15,1,1
+"Philip Champon","pchampon@gmail.com","Adaptly","2017-06-01",103,31,2
 "Jimmi Dyson","jimmidyson@gmail.com","Red Hat","2017-01-01",6,0,1
 "Matt Condon","matt@skillshare.com","Skillshare","2016-12-01",6,5,1
 "jianglingxia","jiang.lingxia@zte.com.cn","ZTE Corporation","2017-03-01",16,16,13
@@ -237,12 +237,12 @@
 "Abhishek","abhishek@linux.com","Linux","2017-03-01",1530,1219,5
 "Dan Williams","dcbw@redhat.com","Red Hat","2016-09-01",15,9,3
 "Garrett Rodrigues","grod@google.com","Google","2016-10-01",1387,221,18
-"Matt Butcher","mbutcher@engineyard.com","Engine Yard","2016-06-01",2543,158,19
+"Matt Butcher","mbutcher@engineyard.com","Engine Yard","2016-06-01",865,110,5
 "stuart.warren","stuart.warren@ocado.com","Ocado","2017-06-01",14,14,2
 "Łukasz Oleś","lukaszoles@gmail.com","Mirantis","2017-03-01",420,62,5
 "Joe Beda","joe.github@bedafamily.com","Google","2016-09-01",89,5,5
 "Scott Rigby","scottrigby@users.noreply.github.com","Basekamp","2017-04-01",85,15,3
-"Nitish Tiwari","nitisht@users.noreply.github.com","minio","2017-06-01",2,2,1
+"Nitish Tiwari","tiwari.nitish@gmail.com","Tata Consultancy Services","2017-06-01",22,4,2
 "Luke Mallon","luke@mallon.io","Axonista","2016-12-01",16,10,1
 "Matt Liggett","mml@google.com","Google","2017-02-01",637,7,5
 "wlan0","sid@rancher.com","Rancher Labs","2016-10-01",572,57,1
@@ -261,7 +261,8 @@
 "gajju26","graut@us.ibm.com","IBM","2016-11-01",97,23,2
 "Zihong Zheng","zihongz@google.com","Google","2017-03-01",123,18,8
 "Kris","krousey@google.com","Google","2017-05-01",466,89,4
-"André Martins","aanm90@gmail.com","Cisco","2016-09-01",4,3,2
+"Eric Paris","eparis@redhat.com","Red Hat","2017-01-01",22,11,2
+"Jeff Mendoza","jeffmendoza@google.com","Google","2017-02-01",4,0,3
 "Wayne Brantley","wayne@waynebrantley.com","(Unknown)","2016-11-01",1,1,1
 "Philipp T","philippt@users.noreply.github.com","virtualop","2017-02-01",3,3,3
 "Yusuke Kuoka","ykuoka@gmail.com","クラウドワークス","2016-11-01",3135,954,38
@@ -269,13 +270,15 @@
 "Henrique Truta","henrique@lsd.ufcg.edu.br","Universidade Federal de Campina Grande","2017-05-01",94,13,4
 "Piotr Szczesniak","pszczesniak@google.com","Google","2016-08-01",1558,1902,27
 "Jesse Dubay","jesse@thefortytwo.net","Discogs","2017-01-01",8,1,1
+"Peter","anagiop@gmail.com","(Unknown)","2017-06-01",46,38,1
 "Anirudh Ramanathan","foxish@users.noreply.github.com","Google","2016-11-01",14,27,11
 "Jeremy Whitlock","jwhitlock@apache.org","Apache","2017-02-01",1892,0,2
 "goodwillcoding","goodwillcoding@users.noreply.github.com","(Unknown)","2017-06-01",2,2,1
+"Sander van Harmelen","sander@xanzy.io","Schuberg Philis","2016-07-01",958,427,2
 "Marcio Puga","marciopuga@gmail.com","American Express","2016-10-01",1,1,1
 "Adam Sunderland","iterion@gmail.com","Collanthropy, LLC","2017-02-01",14,4,3
 "Davanum Srinivas","davanum@gmail.com","Mirantis","2016-10-01",65,20,3
-"Eric Paris","eparis@redhat.com","Red Hat","2016-06-01",180,85,6
+"Matthew Wong","mawong@redhat.com","Red Hat","2016-09-01",11703,3465,102
 "xilabao","chenr.fnst@cn.fujitsu.com","Fujitsu","2017-01-01",30,14,9
 "xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2016-12-01",59,15,5
 "Ritesh H Shukla","sritesh@vmware.com","VMware","2017-01-01",8,0,1
@@ -285,7 +288,7 @@
 "Derek Carr","decarr@redhat.com","Red Hat","2017-06-01",660,467,13
 "Jonathan MacMillan","dvorak@google.com","Google","2017-03-01",360,92,8
 "Hemant Kumar","hekumar@redhat.com","Red Hat","2017-03-01",420,242,9
-"zhengjiajin","393926893@qq.com","Caicloud","2017-06-01",134,74,5
+"zhengjiajin","393926893@qq.com","Caicloud","2017-06-01",202,86,8
 "David Oppenheimer","davidopp@google.com","Google","2016-12-01",1,0,1
 "Joe Beda","joe.github@bedafamily.com","Google","2016-10-01",264,137,13
 "Alexey Alexandrov","aalexand@google.com","Google","2016-08-01",16,12,1
@@ -312,11 +315,10 @@
 "Amey Deshpande","ameyd@google.com","Google","2016-12-01",249,9,2
 "joe2far","joe2farrell@gmail.com","Ammeon","2016-10-01",12,12,1
 "Eli Mallon","eli@iame.li","Eli Mallon","2016-12-01",57,2,2
-"Yusuke Kuoka","ykuoka@gmail.com","クラウドワークス","2017-06-01",6,4,3
+"Yusuke Kuoka","ykuoka@gmail.com","クラウドワークス","2017-06-01",514,261,6
 "Tim Hockin","thockin@google.com","Google","2017-01-01",1274,368,31
 "Euan Kemp","euank@euank.com","CoreOS","2017-01-01",255,471,13
 "Jeffrey Regan","jregan@google.com","Google","2017-03-01",366,304,3
-"gmarek","gmarek@google.com","Google","2017-06-01",4,3,2
 "Nikhita Raghunath","nikitaraghunath@gmail.com","Self","2017-05-01",371,64,6
 "architect.bian","greatbsky@163.com","Net EASE 网易有态度","2017-02-01",2,2,2
 "Albert Vaca","albertvaka@gmail.com","Verse Technologies","2017-02-01",4,4,3
@@ -334,7 +336,6 @@
 "Michael Taufen","mtaufen@google.com","Google","2016-07-01",974,967,7
 "olekzabl","olekz@google.com","Google","2017-03-01",2,2,1
 "Justin Nauman","justin.r.nauman+github@gmail.com","Slalom Consulting","2017-06-01",34,1,2
-"Daniel Wang","wonderfly@google.com","Google","2016-06-01",4,2,2
 "mcorbin","corbin.math@gmail.com","Zenika","2017-01-01",1,2,1
 "Jonas Kint","kint.jonas@gmail.com","Amplidata","2017-04-01",1,0,1
 "Random-Liu","lantaol@google.com","Google","2016-08-01",70,38,8
@@ -355,20 +356,19 @@
 "Andrew Johnstone","andrew@ajohnstone.com","Photobox","2016-10-01",2,0,1
 "Cedric Ziel","cedric@cedric-ziel.com","dreipunktnull","2016-11-01",1,1,1
 "Faraaz Khan","faraaz@rationalizeit.us","WellMatch","2017-03-01",13,10,1
-"Daniel J Walsh","dwalsh@redhat.com","Red Hat","2017-02-01",9,9,1
 "Aditya Dani","aditya@portworx.com","Portworx","2016-12-01",3376,0,2
 "Yamagami-Takuma","yamagami-takuma@users.noreply.github.com","Fujitsu","2016-09-01",208,208,3
 "Andy Goldstein","andy.goldstein@gmail.com","ASG Consulting","2017-04-01",2542,1770,20
 "Johnny Bieren","jbieren@redhat.com","Red Hat","2016-09-01",4,4,2
 "zdj6373","zhang.dongjie@zte.com.cn","ZTE Corporation","2016-11-01",9,12,5
-"Chris Bell","alostengineer@users.noreply.github.com","(Unknown)","2016-06-01",8,6,2
+"Matt Marchetti","mmarchetti@hearst.com","(Unknown)","2017-06-01",19,0,1
 "Ken Simon","ninkendo@gmail.com","Heptio","2017-05-01",76,42,2
 "Kazuki Suda","kazuki.suda@gmail.com","zlabjp","2016-09-01",1,1,1
 "Philibert Dugas","philibert.dugas@gmail.com","Shopify","2016-09-01",27,22,2
 "Will Sean Don","willdon@nerdondon.com","NotFound","2017-03-01",185,51,2
 "Clayton Coleman","ccoleman@redhat.com","Red Hat","2016-11-01",9971,5336,29
 "Seth Jennings","sjenning@redhat.com","Red Hat","2017-04-01",925,120,4
-"Oleg Shalygin","oshalygin@gmail.com","(Unknown)","2017-01-01",2,2,1
+"Erick Fejta","fejta@google.com","Google","2017-01-01",2641,3303,16
 "Jonathan Yu","jawnsy@redhat.com","Red Hat","2017-01-01",132,117,4
 "Arjan Schaaf","arjan.schaaf@luminis.eu","Luminis","2017-05-01",0,3,1
 "Fabio Yeon","fabioy@google.com","Google","2016-07-01",12,1,1
@@ -378,6 +378,7 @@
 "Joseph Hollinshead","jhollinshead@hotels.com","Hotels.com","2017-03-01",24,24,3
 "Theotime Leveque","theotime.leveque@dailymotion.com","Dailymotion","2016-10-01",1,1,1
 "Steffen Hanikel","steffen.hanikel@gmail.com","(Unknown)","2017-01-01",3,1,1
+"mdshuai","dma@redhat.com","Red Hat","2017-05-01",292,56,1
 "Rober Morales-Chaparro","rober.morales@rstor.io","rstorcloud","2017-06-01",1,1,1
 "dlorenc","dlorenc@google.com","Google","2017-03-01",426,345,8
 "Ronald Petty","ronald.petty@minimumdistance.com","Minimum Distance","2016-12-01",2,2,1
@@ -387,11 +388,12 @@
 "bruceauyeung","ouyang.qinhua@zte.com.cn","ZTE Corporation","2016-10-01",38,13,2
 "carlory","baofa.fan@daocloud.io","DaoCloud","2017-05-01",3,3,3
 "Evan Pease","evan.pease@gmail.com","LucidWorks","2017-01-01",239,68,6
+"Matej Baćo","matejbaco@gmail.com","(Unknown)","2017-06-01",1,1,1
 "Sebastian Florek","sebastian.florek@ts.fujitsu.com","Fujitsu","2016-10-01",1494,1407,2
 "Jackie Li","jackie.space@gmail.com","FUSEIM","2017-04-01",304,10,4
 "Anton Klautsan","dukexar@gmail.com","(Unknown)","2017-01-01",150,25,2
 "Matt Liggett","mml@google.com","Google","2017-05-01",12,2,3
-"Devan Goodwin","dgoodwin@redhat.com","Red Hat","2017-02-01",13,12,1
+"Christian Bell","csbell@google.com","Google","2017-06-01",8,9,2
 "Christopher Rigor","crigor@gmail.com","Engine Yard","2017-02-01",2,2,1
 "deads2k","deads@redhat.com","Red Hat","2017-03-01",21209,4800,84
 "tobilarscheid","tobilarscheid@gmail.com","IBM","2017-05-01",5,1,2
@@ -403,10 +405,9 @@
 "Gorka Lerchundi Osa","glertxundi@gmail.com","(Unknown)","2017-03-01",271,18,1
 "Sharif Nassar","mrwacky42@users.noreply.github.com","(Unknown)","2016-12-01",1,1,1
 "James Ravn","james@r-vn.org","Sky","2017-01-01",18,14,1
-"Jing Xu","jinxu@google.com","Google","2016-11-01",779,94,11
 "Lucas Käldström","lucas.kaldstrom@hotmail.co.uk","Rook","2016-10-01",328,1215,20
 "Shubham","shubham@linux.com","Linux","2016-12-01",601,17,3
-"Joe Beda","joe@bedafamily.com","Shippable","2016-06-01",9,0,1
+"Huamin Chen","hchen@redhat.com","Red Hat","2016-07-01",1649,2,3
 "Joseph Hollinshead","jhollinshead@hotels.com","Hotels.com","2017-02-01",282,2,3
 "neith00","ja.lauricella@gmail.com","IRT SystemX","2017-06-01",1,1,1
 "Christopher Pauley","cmpauley@gmail.com","Devops","2017-01-01",6,6,3
@@ -416,7 +417,7 @@
 "Babajide Fowotade","jide.b.tade@gmail.com","quinncia","2016-09-01",4,4,1
 "Kenan Karamehmedovic","kenan.karamehmedovic@est.fujitsu.com","Fujitsu","2017-04-01",2,2,1
 "Mourad Maatoug","mr.maatoug@gmail.com","cy-play","2017-06-01",1,1,1
-"rkouj","rkouj@google.com","Google","2016-10-01",118,16,2
+"Connor Doyle","connor.p.doyle@intel.com","Intel","2016-10-01",171,150,4
 "Marcin Maciaszczyk","maciaszczykm@users.noreply.github.com","Fujitsu","2017-06-01",836,3220,2
 "Martijn van Iersel","martijni@topdesk.com","TOPdesk","2016-12-01",21,16,1
 "henry.nash@uk.ibm.com","henry.nash@uk.ibm.com","IBM","2017-02-01",2,2,2
@@ -426,7 +427,7 @@
 "Charles Butler","chuck@dasroot.net","Canonical","2016-12-01",1,1,1
 "Lv Lv","github@lvlv.email","Transwarp","2016-12-01",179,0,2
 "Allan Lei","allanlei@helveticode.com","17media","2016-07-01",1,1,1
-"Jeff Mendoza","jeffmendoza@google.com","Google","2017-02-01",4,0,3
+"Vincent","github@fleeto.us","(Unknown)","2017-06-01",8,7,1
 "Robert Ross","robert@creativequeries.com","Namely","2016-10-01",3,0,1
 "Andrew Davidoff","davidoff@qedmf.net","Ontolo","2017-04-01",280,0,1
 "Nicholas Sledgianowski","nicksledgian@gmail.com","Kenzan","2017-03-01",15,180,5
@@ -442,7 +443,7 @@
 "Mike Brown","brownwm@us.ibm.com","IBM","2017-01-01",3,1,1
 "Lauri Apple","lauri.apple@zalando.de","Zalando","2017-04-01",63,55,1
 "Yu-Ju Hong","yjhong@google.com","Google","2017-04-01",7,1,3
-"Balaji Subramaniam","balaji.subramaniam@intel.com","Intel","2016-12-01",256,73,5
+"Ihor Dvoretskyi","ihor@dvoretskyi.com","Mirantis","2017-06-01",35,23,1
 "Jared","jaredbhatti@users.noreply.github.com","Google","2016-12-01",8,7,5
 "Andrew Lau","andrew@andrewklau.com","andrewklau","2017-03-01",3,1,2
 "Slava Semushin","vsemushi@redhat.com","Red Hat","2017-06-01",3,3,1
@@ -453,7 +454,7 @@
 "zhengjiajin","393926893@qq.com","Caicloud","2017-04-01",245,0,2
 "Shyam Jeedigunta","shyamjvs@google.com","Google","2017-04-01",2770,17,10
 "Olve S. Hansen","olvesh@gmail.com","Vimond Media Solutions","2017-05-01",16,1,2
-"gmarek","gmarek@google.com","Google","2016-06-01",15,26,3
+"Sen Lu","senlu@google.com","Google","2016-09-01",1230,767,6
 "Antonio Murdaca","runcom@redhat.com","Red Hat","2016-09-01",2637,2097,60
 "Cyril Jouve","jv.cyril@gmail.com","Capgemini","2016-10-01",11,9,2
 "Lucas Serven","lserven@gmail.com","National Geographic","2017-02-01",941,242,8
@@ -461,11 +462,10 @@
 "Tony Hsu","gosharplite@gmail.com","Ubisoft","2017-01-01",12,13,10
 "Jason Lock","hello@jasonjlock.com","PORCELANE","2016-12-01",8,4,4
 "Stephenie Swope","steph@epiphenie.com","Amazon","2017-05-01",98,373,2
-"Brandon Philips","brandon@ifup.org","CoreOS","2016-06-01",660,18,10
+"Brandon Philips","brandon@ifup.org","CoreOS","2016-06-01",6,8,4
 "Clenimar Filemon","clenimar.filemon@gmail.com","(Unknown)","2017-04-01",9,9,2
 "Jimmi Dyson","jimmidyson@gmail.com","Red Hat","2017-05-01",26,21,4
 "Ginwala","jinsenorita@gmail.com","(Unknown)","2017-05-01",2,2,1
-"Vinit Mahedia","vinit.mahedia@gmail.com","(Unknown)","2017-05-01",9,12,1
 "Wang Jie","wangjie5@chinaskycloud.com","Self","2017-02-01",82,77,20
 "Aleksandr Didenko","adidenko@mirantis.com","Mirantis","2016-07-01",20,12,2
 "Erick Fejta","fejta@google.com","Google","2016-09-01",1118,484,20
@@ -500,6 +500,7 @@
 "Jack Zampolin","jack.zampolin@gmail.com","InfluxData","2016-11-01",1708,56,10
 "David Ashpole","dashpole@google.com","Google","2017-02-01",1541,266,11
 "Matt Liggett","mml@google.com","Google","2016-08-01",7407,22362,14
+"Erick Fejta","fejta@google.com","Google","2016-06-01",230,110,3
 "Sushil Kumar","sushil.kumar@suse.com","SUSE/Novell","2017-05-01",928,89,19
 "Jess Frazelle","me@jessfraz.com","Google","2016-09-01",53,41,4
 "Aaron Rice","cube@sneakybox.com","Wercker","2016-09-01",1,1,1
@@ -509,6 +510,7 @@
 "Daniel Sachse","mail@wombatsoftware.de","Wombat Software UG","2016-09-01",69,7,2
 "Saad Ali","saadali@google.com","Google","2017-03-01",176,65,7
 "Thomas Peitz","tsupertramp90@gmail.com","InVision AG","2017-01-01",169,126,10
+"Drew Rapenchuk","rapenchukd@gmail.com","Bloomberg LP","2016-08-01",1,1,1
 "Steel Brain","steelbrain@users.noreply.github.com","(Unknown)","2016-10-01",2,2,1
 "Antonio Murdaca","runcom@redhat.com","Red Hat","2016-08-01",10,3,1
 "Lucas Käldström","lucas.kaldstrom@hotmail.co.uk","Rook","2016-12-01",1164,761,26
@@ -522,15 +524,16 @@
 "Kraig Amador","kraig.amador@ticketmaster.com","Ticketmaster","2017-02-01",9,0,1
 "Alex Robinson","arob@google.com","Google","2016-07-01",44,100070,5
 "Adam Reese","adam@reese.io","Microsoft","2016-10-01",796,631,26
-"Pengfei Ni","feiskyer@gmail.com","Hyper.sh","2017-06-01",1843,1502,17
+"Pengfei Ni","feiskyer@gmail.com","Hyper.sh","2017-06-01",2670,2157,20
 "Clemens Tolboom","clemens@build2be.com","build2be","2016-10-01",3,1,2
 "scotty","scott@unitedcreations.com","United Creations","2016-11-01",53,4,3
 "Carl B. beethoven1110@gmail.com","beethoven1110@gmail.com","(Unknown)","2016-11-01",5,2,1
 "Wael M. Nasreddine","wael.nasreddine@gmail.com","Google","2016-09-01",9,1,1
 "Doug Davis","dug@us.ibm.com","IBM","2017-01-01",1117,245,20
+"Brendan Melville","bmelville@google.com","Google","2016-12-01",1169,1065,8
 "supereagle","jmyue@hotmail.com","Self","2017-03-01",10,11,4
 "Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2016-11-01",460,221,17
-"Klaus Ma","madaxa@cn.ibm.com","IBM","2017-06-01",19,16,6
+"Klaus Ma","madaxa@cn.ibm.com","IBM","2017-06-01",19,22,7
 "kayrus","kay.diam@gmail.com","Devops","2016-08-01",95,68,6
 "Jie Luo","luo612@zju.edu.cn","Zhejiang University","2016-12-01",14,14,3
 "Mrunal Patel","mrunalp@gmail.com","Red Hat","2017-01-01",430,296,5
@@ -568,6 +571,7 @@
 "Lorenzo Fontana","fontanalorenz@gmail.com","kiratech","2017-02-01",1,1,1
 "Bryan Boreham","bjboreham@gmail.com","Weaveworks","2017-04-01",7,5,1
 "Maciej Szulik","maszulik@redhat.com","Red Hat","2017-03-01",1170,870,18
+"Martin Maly","mmaly@google.com","Google","2016-12-01",334,393,9
 "Jonathan Chauncey","jonathan.chauncey@microsoft.com","Microsoft","2017-05-01",4,4,1
 "MichalMankowski","michal.mankowski@intel.com","Intel","2016-10-01",11,4,3
 "Yamagami-Takuma","yamagami.takuma@jp.fujitsu.com","Fujitsu","2016-07-01",8,8,1
@@ -576,7 +580,6 @@
 "zhangmingld","zhang.ming5@zte.com.cn","ZTE Corporation","2017-05-01",2,2,2
 "Kris","krousey@google.com","Google","2017-03-01",383,156,16
 "Daniel Wang","wonderfly@google.com","Google","2017-02-01",25,183,4
-"Mrunal Patel","mrunal@me.com","Apple","2016-06-01",201,1,2
 "Brandon L. Gauthier","brandon.l.gauthier@gmail.com","Content Analyst Company","2017-01-01",19,5,1
 "Maciej Borsz","maciejborsz@google.com","Google","2017-05-01",650,22,3
 "Brad Ison","bison@coreos.com","CoreOS","2016-09-01",48,1,2
@@ -587,6 +590,7 @@
 "Christoph Held","christoph.held@est.fujitsu.com","Fujitsu","2016-09-01",19,18,2
 "Yang Guan","yangguan@google.com","Google","2017-05-01",1,1,1
 "Alexander Brand","abrand@apprenda.com","Apprenda","2016-07-01",601,3,3
+"Kami Gerami","kami.gerami@gmail.com","Self","2016-10-01",5,5,1
 "Kamal Marhubi","kamal@marhubi.com","Google","2017-05-01",14,12,2
 "Mike Spreitzer","mspreitz@us.ibm.com","IBM","2017-05-01",14,1,2
 "Irfan Ur Rehman","irfan.rehman@huawei.com","Huawei","2016-11-01",238,55,9
@@ -605,7 +609,7 @@
 "Slava Semushin","vsemushi@redhat.com","Red Hat","2017-02-01",10,21,3
 "Christopher A. Baumbauer","cab@skippbox.com","CABNetworks","2016-10-01",1,1,1
 "Ivan Ilves","ivan.ilves@gmail.com","Schibsted","2017-06-01",93,14,1
-"Kiichiro Okano","kiichirookano@gmail.com","Vodafone","2017-05-01",1,1,1
+"Sergio Sisternes","sesispla@outlook.com","everis","2017-06-01",60,0,1
 "Guillaume Breton","guillaume@monzo.com","Monzo Bank","2017-02-01",14,14,3
 "jotadrilo","jotadrilo@users.noreply.github.com","Bitnami","2016-12-01",13,13,6
 "Steve Sloka","slokas@upmc.edu","UPMC","2016-12-01",60,0,1
@@ -633,7 +637,7 @@
 "Ben Breslauer","bbreslauer@google.com","Google","2016-08-01",8,6,1
 "Derek McQuay","dmcquay@apprenda.com","Apprenda","2016-12-01",8,9,2
 "Stephen Kriss","stephen.kriss@gmail.com","Heptio","2017-02-01",148,0,1
-"Gerti Poppel","gerti.poppel@est.fujitsu.com","Fujitsu","2016-06-01",5,5,1
+"Jian Zhang","zjianbjz@cn.ibm.com","IBM","2017-06-01",7,4,2
 "Aaron Mills","aaron.mills@returnpath.com","Return Path","2016-07-01",14,14,2
 "Filipe Varela","fcvarela@gmail.com","Thomson-Reuters","2016-07-01",34,12,2
 "Mike Spreitzer","mspreitz@us.ibm.com","IBM","2016-10-01",36,10,2
@@ -673,7 +677,7 @@
 "Jimmy Cuadra","jimmy@jimmycuadra.com","Jimmy Cuadra","2016-11-01",2,2,1
 "Madhusudan.C.S","madhusudancs@google.com","Google","2016-12-01",134,78,20
 "Greg Dallavalle","greg.dallavalle@ave81.com","LeadPages","2016-09-01",50,1,2
-"Adam Reese","adam@reese.io","Microsoft","2016-06-01",931,363,20
+"Adam Reese","adam@reese.io","Microsoft","2016-06-01",915,355,17
 "Charlie Drage","charlie@charliedrage.com","Red Hat","2016-07-01",1,1,1
 "Tomas Kral","tkral@redhat.com","Red Hat","2017-04-01",346,93,5
 "Brian Fallik","bfallik@gmail.com","clypd","2016-07-01",1,1,1
@@ -686,12 +690,12 @@
 "Ajanthan","balaajanthan@gmail.com","WSO2","2016-10-01",23,5,1
 "Ravi Mehra","javishi@gmail.com","Aruba Networks","2017-02-01",6,16,1
 "lixiaobing10051267","li.xiaobing1@zte.com.cn","ZTE Corporation","2016-07-01",64,49,43
+"Sergiusz Urbaniak","sur@coreos.com","CoreOS","2016-08-01",1478,3,7
 "Michael Fraenkel","fraenkel@us.ibm.com","IBM","2016-08-01",330,278,5
 "Chris Riviere","criviere@cisco.com","Cisco","2016-11-01",4,3,3
-"SRaddict","qishen@zju.edu.cn","Zhejiang University","2016-12-01",67,67,4
 "LouZhengwei","lzw19860818@aliyun.com","(Unknown)","2016-11-01",0,2,1
 "Daisuke Fujita","dtanshi45@gmail.com","Wantedly","2017-06-01",2,4,1
-"Kir Shatrov","kirs@users.noreply.github.com","Shopify","2017-02-01",2,0,1
+"Oleg Shalygin","oshalygin@gmail.com","(Unknown)","2017-01-01",2,2,1
 "Yu-Ju Hong","yjhong@google.com","Google","2016-12-01",2392,414,9
 "Charlie Drage","charlie@charliedrage.com","Red Hat","2016-10-01",91,39,7
 "Brian Grant","bgrant0607@users.noreply.github.com","Google","2016-10-01",0,4,1
@@ -719,7 +723,7 @@
 "Erik Bean","erikbean08@gmail.com","(Unknown)","2017-02-01",2,2,2
 "Cristian Pop","cristian.pop@bigstep.com","Bigstep","2016-12-01",42,10,1
 "Chris Knowles","c-knowles@users.noreply.github.com","Self","2017-06-01",2,1,1
-"Xiang","xiangli.cs@gmail.com","CoreOS","2016-10-01",2,2,1
+"Gurvinder Singh","gurvindersinghdahiya@gmail.com","UNINETT","2016-07-01",1,1,1
 "yupengzte","yu.peng36@zte.com.cn","ZTE Corporation","2017-04-01",2,2,1
 "Vladimir Rutsky","vladimir@rutsky.org","Buildbot","2016-12-01",5,2,2
 "Christian Bell","csbell@google.com","Google","2017-02-01",480,201,4
@@ -739,10 +743,9 @@
 "Wade Lee","mozhuli@users.noreply.github.com","Self","2017-06-01",116,9,1
 "Aaron Crickenberger","spiffxp@gmail.com","Samsung","2017-02-01",46,15,5
 "tolleiv","github@tolleiv.de","AOE","2017-01-01",21,6,6
-"nikhiljindal","nikhiljindal@google.com","Google","2016-06-01",1233,722,10
+"Vojtech Vitek","vojtech.vitek@pressly.com","Pressly","2017-03-01",5,5,2
 "Chris Machler","chris.machler@evergreenitco.com","TEKsystems","2016-11-01",4,2,1
 "Jan Jungnickel","jan@jungnickel.com","SGM-Media","2016-11-01",63,10,2
-"Aditya Kali","adityakali@google.com","Google","2016-06-01",1,1,1
 "Taras Glek","github@glek.net","(Unknown)","2017-05-01",12,2,1
 "Elson Rodriguez","elson.rodriguez@gmail.com","Intel","2016-06-01",14,6,2
 "Sharif Nassar","mrwacky42@users.noreply.github.com","(Unknown)","2016-11-01",42,31,1
@@ -752,7 +755,7 @@
 "Michael Vilensky","michael@secful.com","SECful","2016-07-01",3,2,1
 "James Gregory","james@jagregory.com","ThoughtWorks","2017-02-01",8,8,2
 "David Ashpole","dashpole@google.com","Google","2016-09-01",305,37,2
-"Daniel J Walsh","dwalsh@redhat.com","Red Hat","2016-10-01",315,113,14
+"Helin Wang","helinwang@baidu.com","Baidu","2017-01-01",6,0,1
 "gmarek","gmarek@google.com","Google","2016-10-01",5394,3468,42
 "Matthew Fisher","mfisher@deis.com","DEIS","2016-11-01",23,23,1
 "Maarten Hoogendoorn","maarten@moretea.nl","Self","2016-08-01",95,52,5
@@ -762,7 +765,7 @@
 "Matthew Mosesohn","mmosesohn@mirantis.com","Mirantis","2017-03-01",734,276,35
 "John Felten","john@zenzic.com","Zenzic","2017-03-01",2,2,1
 "Joe Beda","joe@bedafamily.com","Shippable","2016-07-01",5,1,3
-"Aleksandra Malinowska","aleksandram@google.com","Google","2017-06-01",20,13,1
+"Aleksandra Malinowska","aleksandram@google.com","Google","2017-06-01",113,24,5
 "Aleksey Kasatkin","akasatkin@mirantis.com","Mirantis","2017-04-01",12,0,1
 "Suraj Deshmukh","surajssd009005@gmail.com","Red Hat","2016-07-01",2994,48,3
 "Lee Verberne","verb@google.com","Google","2017-01-01",112,98,4
@@ -780,18 +783,19 @@
 "Nagapramod Mandagere","pramod@us.ibm.com","IBM","2017-02-01",42,26,2
 "Théo Chamley","theo.ch@mley.fr","Oxalide","2017-01-01",213,0,1
 "Quinton Hoole","quinton@google.com","Google","2017-01-01",2,0,1
-"Jing Xu","jinxu@google.com","Google","2017-03-01",65,16,3
+"deads2k","deads@redhat.com","Red Hat","2016-10-01",6222,17876,55
 "Adam Stankiewicz","sheerun@sher.pl","Ada","2017-03-01",3,1,2
 "Rod Cloutier","rodcloutier@gmail.com","Ubisoft","2017-05-01",7,3,1
-"Kazuki Suda","kazuki.suda@gmail.com","zlabjp","2017-05-01",11,1,1
+"Kazuki Suda","kazuki.suda@gmail.com","zlabjp","2017-05-01",12,2,2
 "Mayank Kumar","mayank.kumar@salesforce.com","SalesForce","2016-10-01",382,17,1
 "Keith Bartholomew","keith.bartholomew@rackspace.com","Rackspace","2017-03-01",2,2,1
 "Johannes Würbach","johannes.wuerbach@googlemail.com","Contentful","2017-02-01",5,1,1
-"Maciej Pytel","maciekpytel@google.com","Google","2017-03-01",2002,392,39
+"Crazykev","crazykev@zju.edu.cn","Self","2016-11-01",1364,89,17
 "Bradley","bwilsonhunt@gmail.com","FACEIT","2017-05-01",11,10,4
 "Cole Wagner","colew@google.com","Google","2017-05-01",856,341,19
 "Shyam Jeedigunta","shyamjvs@google.com","Google","2017-03-01",455,12,4
 "Dong Liu","doliu@microsoft.com","Microsoft","2017-04-01",2,2,1
+"Kevin","wangzefeng@huawei.com","Huawei","2016-11-01",12,12,1
 "bruceauyeung","ouyang.qinhua@zte.com.cn","ZTE Corporation","2017-04-01",2,2,1
 "Matt Baldwin","baldwin@stackpointcloud.com","StackPointCloud","2016-08-01",6,0,2
 "Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2017-05-01",27,37,4
@@ -823,10 +827,11 @@
 "Zach Loafman","zml@google.com","Google","2016-09-01",574,252,12
 "Johannes Würbach","johannes.wuerbach@googlemail.com","Contentful","2017-06-01",1,1,1
 "Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2016-12-01",163,130,8
+"TAKAHASHI Yuto","ytaka23dev@gmail.com","(Unknown)","2017-06-01",3,1,1
 "Dalton Hubble","dghubble@gmail.com","CoreOS","2017-02-01",344,67,4
-"Sergiusz Urbaniak","sur@coreos.com","CoreOS","2016-08-01",1478,3,7
+"simt2","miku@miku.io","(Unknown)","2017-05-01",91,0,1
 "Peter Novotnak","peter@cyrusbio.com","Cyrus Biotechnology","2016-08-01",5,1,1
-"Jamie Hannaford","jamie.hannaford@rackspace.com","Rackspace","2017-06-01",793,546,8
+"Jamie Hannaford","jamie.hannaford@rackspace.com","Rackspace","2017-06-01",795,547,9
 "Pengfei Ni","feiskyer@gmail.com","Hyper.sh","2017-02-01",1294,20,11
 "Chris Hager","chris@linuxuser.at","Bits Working","2017-03-01",72,74,2
 "Samuel Cozannet","samuel.cozannet@canonical.com","Canonical","2017-01-01",350,52,7
@@ -841,7 +846,7 @@
 "Chuanjian Wang","me@ckeyer.net","Sina","2017-05-01",3,1,2
 "Logan Attwood","logan.attwood@gmail.com","SecurityScorecard","2016-09-01",4,4,1
 "Ryan McGinnis","mcginnisrr@gmail.com","Google","2017-04-01",1,1,1
-"Marian Lobur","loburm@google.com","Google","2017-06-01",3,3,1
+"Marian Lobur","loburm@google.com","Google","2017-06-01",75,67,2
 "James Gregory","james@jagregory.com","ThoughtWorks","2016-12-01",1,1,1
 "Vishnu Kannan","vishnuk@google.com","Google","2016-07-01",922,296,13
 "Erick Fejta","fejta@google.com","Google","2016-07-01",1483,1111,20
@@ -876,6 +881,7 @@
 "Di Xu","stephenhsu90@gmail.com","Self","2017-04-01",44,44,2
 "Michelle Shepardson","amerai@google.com","Google","2017-02-01",69,56,1
 "Himanshu Raj","rhim@users.noreply.github.com","(Unknown)","2017-02-01",2,0,2
+"William Chang","zhang.wanmin@zte.com.cn","ZTE Corporation","2017-05-01",224,1,2
 "Piotr Szczesniak","pszczesniak@google.com","Google","2016-10-01",12,8954,5
 "Dalton Hubble","dghubble@gmail.com","CoreOS","2016-10-01",165,14,2
 "Carlos Alexandro Becker","caarlos0@users.noreply.github.com","ContaAzul","2017-01-01",4,2,2
@@ -892,12 +898,13 @@
 "Shane Starcher","shanestarcher@gmail.com","Datapipe","2017-01-01",57,50,3
 "Dan Romlein","dromlein@apprenda.com","Apprenda","2016-12-01",1,1,1
 "Michal Fojtik","mfojtik@redhat.com","Red Hat","2016-11-01",2,1,1
+"Bobby (Babak) Salamat","bsalamat@google.com","Google","2017-06-01",0,69,2
 "tianshapjq","pu.junqi@zte.com.cn","ZTE Corporation","2017-02-01",10,25,4
 "Josh Wood","j@coreos.com","CoreOS","2016-07-01",206,204,1
 "Darren Mutz","darren.mutz@appfolio.com","AppFolio","2017-04-01",2,2,1
 "Luit van Drongelen","luitvd@gmail.com","Devhouse Spindle","2017-04-01",1,2,1
 "David Pratt","david.pratt@gmail.com","OJOHome","2017-04-01",29,4,1
-"Nitish Tiwari","nitisht@users.noreply.github.com","minio","2017-05-01",49,41,1
+"Nitish Tiwari","nitisht@users.noreply.github.com","minio","2017-05-01",57,65,3
 "Shane Starcher","shanestarcher@gmail.com","Datapipe","2017-05-01",1,1,1
 "Hemant Kumar","hekumar@redhat.com","Red Hat","2017-04-01",166,66,2
 "fibonacci1729","brian@deis.com","DEIS","2016-10-01",966,186,7
@@ -926,9 +933,9 @@
 "Christoph Blecker","admin@toph.ca","Kelowna","2017-03-01",746,369,22
 "Klaus Ma","klaus1982.cn@gmail.com","IBM","2017-01-01",489,218,10
 "Saied Kazemi","saied@google.com","Google","2017-04-01",86,0,1
-"Mrunal Patel","mrunalp@gmail.com","Red Hat","2017-06-01",158,23,13
+"Mrunal Patel","mpatel@redhat.com","Red Hat","2017-06-01",172,35,17
 "Hui Kang","hkang.sunysb@gmail.com","IBM","2017-05-01",2,2,1
-"Erick Fejta","fejta@google.com","Google","2017-01-01",2641,3303,16
+"Harry Zhang","harryz@hyper.sh","Hyper.sh","2017-05-01",49,3,4
 "Dhawal Patel","dhawal55@gmail.com","Nordstrom","2017-02-01",87,8,1
 "Piotr Szczesniak","pszczesniak@google.com","Google","2017-04-01",309,530,4
 "George Kraft","george.kraft@canonical.com","Canonical","2017-06-01",5,2,2
@@ -943,8 +950,9 @@
 "Alexander Brand","abrand@apprenda.com","Apprenda","2016-10-01",7,5,1
 "Sebastian Laskawiec","slaskawi@redhat.com","Red Hat","2017-02-01",13,1,1
 "Ricardo Pchevuzinske Katz","ricardo.katz@serpro.gov.br","Serpro","2017-02-01",1108,354,11
+"MaciekPytel","maciekpytel@google.com","Google","2017-03-01",2002,392,39
 "Gediminas Šedbaras","gediminas.sedbaras@gmail.com","VONQ","2017-01-01",14,9,3
-"Brendan Melville","bmelville@google.com","Google","2016-12-01",1169,1065,8
+"Janet Kuo","chiachenk@google.com","Google","2016-12-01",81103,7965,17
 "dlorenc","dlorenc@google.com","Google","2017-04-01",325,99,9
 "Brad Moylan","bmoylan@palantir.com","Palantir Technologies","2016-08-01",17,8,4
 "Jesse Dubay","jesse@thefortytwo.net","Discogs","2017-06-01",18,1,1
@@ -959,6 +967,7 @@
 "Ronnie Maor","ronnie.maor@gmail.com","Consumer Physics, Inc.","2016-08-01",3,3,1
 "David McMahon","djmm@google.com","Google","2016-10-01",320,91,13
 "Casper CY Chiang","cychiang0823@gmail.com","OH!COOL","2016-12-01",1,1,1
+"Luca Bruno","lucab@debian.org","CoreOS","2017-04-01",17,9,2
 "fengyun.pan","fengyun.pan@easystack.cn","EasyStack","2017-03-01",27,17,4
 "Derek Carr","decarr@redhat.com","Red Hat","2017-01-01",422,30,4
 "Monis Khan","mkhan@redhat.com","Red Hat","2016-11-01",964,1723,2
@@ -972,7 +981,7 @@
 "Jamie Hannaford","jamie.hannaford@rackspace.com","Rackspace","2017-02-01",568,345,4
 "Mikkel Oscar Lyderik Larsen","m@moscar.net","Zalando","2017-01-01",9,9,5
 "David Lyle","david.lyle@intel.com","Intel","2016-11-01",1,1,1
-"Ajit Kumar","kumaraji@google.com","Google","2017-06-01",14,2,1
+"Ajit Kumar","kumaraji@google.com","Google","2017-06-01",26,13,2
 "Joerg Schad","joerg@mesosphere.io","Mesosphere","2016-11-01",1,0,1
 "Dan Williams","dcbw@redhat.com","Red Hat","2016-10-01",1,0,1
 "Dr. Stefan Schimanski","stefan.schimanski@gmail.com","Red Hat","2017-04-01",104,58,12
@@ -993,7 +1002,7 @@
 "Michelle Au","msau@google.com","Google","2017-03-01",200,277,8
 "SongRuixia","song.ruixia@zte.com.cn","ZTE Corporation","2017-03-01",5,5,4
 "George Tankersley","george.tankersley@coreos.com","CoreOS","2016-08-01",129,0,1
-"xilabao","chenr.fnst@cn.fujitsu.com","Fujitsu","2017-06-01",16,4,3
+"xilabao","chenr.fnst@cn.fujitsu.com","Fujitsu","2017-06-01",50,7,5
 "ant31","2t.antoine@gmail.com","CoreOS","2016-12-01",84,6,2
 "Scott Rigby","scott@r6by.com","Basekamp","2017-03-01",54,3,3
 "Martino Visintin","vise890@gmail.com","(Unknown)","2017-02-01",1,1,1
@@ -1004,15 +1013,15 @@
 "Batikan Urcan","batikanu@yahoo.com","Fujitsu","2016-11-01",577,275,2
 "Yaser Alraddadi","gam-phon@users.noreply.github.com","(Unknown)","2017-03-01",3,3,1
 "Jon Cope","jcope@redhat.com","Red Hat","2017-01-01",20,20,2
+"Josh Conant","deathbeforedishes@gmail.com","EMC","2017-01-01",1063,2,1
 "Ke Wu","mikewu@google.com","Google","2016-11-01",9,9,1
 "ngtuna","ng.tuna@gmail.com","Apache","2016-10-01",1745,639,17
 "Phillip Wittrock","pwittroc@google.com","Google","2016-08-01",80056,6170,18
 "Luke Kysow","lkysow@gmail.com","Hootsuite","2017-02-01",1,1,1
 "Vishnu Kannan","vishnuk@google.com","Google","2017-05-01",46,30,3
 "Jan Chaloupka","jchaloup@redhat.com","Red Hat","2017-03-01",9,1,2
-"William Chang","zhang.wanmin@zte.com.cn","ZTE Corporation","2017-05-01",224,1,2
-"Hanfei Shen","qqshfox@gmail.com","ALO7 爱乐奇","2016-10-01",25,8,4
-"Andrew Pilloud","andrewpilloud@igneoussystems.com","Igneous Systems","2017-06-01",39,3,1
+"stresler","stresler@users.noreply.github.com","Tresler","2017-02-01",2,2,2
+"Andrew Pilloud","andrewpilloud@igneoussystems.com","Igneous Systems","2017-06-01",272,51,6
 "neith00","ja.lauricella@gmail.com","IRT SystemX","2017-01-01",1,1,1
 "Zachary Adam Kaplan","razic@viralkitty.com","viralkitty","2016-12-01",62,1,2
 "Itamar Ostricher","itamarost@gmail.com","Yowza Ltd.","2017-05-01",1,1,1
@@ -1039,8 +1048,6 @@
 "Morgan Bauer","mbauer@us.ibm.com","IBM","2016-12-01",1017,88,6
 "chentao1596","chen.tao3@zte.com.cn","ZTE Corporation","2017-02-01",747,29,7
 "sarahnovotny","sarah.novotny@gmail.com","Google","2016-06-01",58,3,3
-"yarntime@163.com","yarntime@163.com","Net EASE 网易有态度","2016-10-01",72,0,1
-"Tony Hsu","gosharplite@gmail.com","Ubisoft","2016-06-01",1,1,1
 "Sergiusz Urbaniak","sur@coreos.com","CoreOS","2016-09-01",235,31,17
 "kfox1111","kevin.fox@pnnl.gov","Self","2017-03-01",4,0,1
 "Jesse Johnston","jjohnston@istreamplanet.com","iStreamPlanet","2017-02-01",2,2,2
@@ -1060,7 +1067,7 @@
 "Reinhard Nägele","unguiculus@gmail.com","Codecentric AG","2017-01-01",13,77,11
 "Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2016-09-01",263,179,14
 "Takashi Kusumi","takashi.kusumi@gmail.com","Yahoo","2016-09-01",3,3,1
-"zhengjiajin","393926893@qq.com","Caicloud","2017-05-01",654,140,32
+"zhengjiajin","393926893@qq.com","Caicloud","2017-05-01",714,140,33
 "haoyuan","haoyuan.ge@caicloud.io","Caicloud","2017-05-01",0,38,1
 "Wojciech Tyczynski","wojtekt@google.com","Google","2017-04-01",1789,1181,11
 "Ihor Dvoretskyi","ihor@dvoretskyi.com","Mirantis","2017-04-01",73,28,11
@@ -1088,14 +1095,14 @@
 "tanshanshan","tan.shanshan@zte.com.cn","ZTE Corporation","2017-02-01",132,17,15
 "Aaron Prindle","aprindle@google.com","Google","2016-07-01",1682,1126,16
 "Boris Schrijver","bschrijver@schubergphilis.com","Schuberg Philis","2016-10-01",8,3,1
-"Ashley Penney","ashley.penney@maxwellhealth.com","Maxwell Health","2017-02-01",13,2,3
+"yarntime@163.com","yarntime@163.com","Net EASE 网易有态度","2016-10-01",72,0,1
 "Evan Pease","evan.pease@gmail.com","LucidWorks","2017-02-01",32,19,1
 "Rober Morales-Chaparro","rober.morales@rstor.io","rstorcloud","2017-05-01",2,2,2
 "Sophie Haskins","sophaskins@github.com","(Unknown)","2017-03-01",3,5,1
 "Gytis","gytisgreitai@users.noreply.github.com","TripCreator","2017-04-01",1,1,1
 "Michał Żyłowski","michal.zylowski@intel.com","Intel","2016-10-01",6,2,1
 "Frode Egeland","egeland@gmail.com","Self","2017-04-01",16,4,1
-"Derek Parker","derek.parker@coreos.com","CoreOS","2016-06-01",29,10,3
+"Derek Parker","derek.parker@coreos.com","CoreOS","2016-06-01",16,0,1
 "craigbox","craig.box@gmail.com","Factotum","2017-03-01",22,22,2
 "Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2017-03-01",57,44,8
 "Daniele Santoro","psyacca@gmail.com","NotFound","2017-02-01",3,3,1
@@ -1135,7 +1142,7 @@
 "Cao Shufeng","caosf.fnst@cn.fujitsu.com","Fujitsu","2017-04-01",132,64,14
 "Rimantas Mocevicius","rmocius@gmail.com","StackPointCloud","2016-09-01",33,3,2
 "Rodrigo Campos","rodrigo@sdfg.com.ar","Self","2017-04-01",2,186,1
-"Tim St. Clair","stclair@google.com","Google","2017-06-01",390,62,7
+"Tim St. Clair","stclair@google.com","Google","2017-06-01",400,70,9
 "Jason Hansen","jhansen@deis.com","DEIS","2016-11-01",19,6,1
 "jianhuiz","jianhui@outlook.com","Huawei","2016-07-01",1087,22,4
 "Aliaksandr Pliutau","pliutau.aliaksandr@lazada.com","Lazada Group","2016-08-01",6,5,1
@@ -1148,9 +1155,8 @@
 "Sarat Kamisetty","saratk@gmail.com","(Unknown)","2017-01-01",222,72,2
 "Cindy Wang","ciwang@google.com","Google","2016-07-01",227,25,1
 "Antonio Murdaca","runcom@redhat.com","Red Hat","2016-11-01",3032,1285,8
-"Łukasz Oleś","lukaszoles@gmail.com","Mirantis","2016-06-01",2,1,2
 "lixiaobing10051267","li.xiaobing1@zte.com.cn","ZTE Corporation","2016-08-01",31,31,19
-"Kara Alexandra","kalexandra@us.ibm.com","IBM","2016-08-01",92,59,3
+"weizhanxu","xu.zhanwei@zte.com.cn","ZTE Corporation","2017-04-01",2,4,1
 "Jerzy Szczepkowski","jsz@google.com","Google","2016-11-01",669,43,17
 "Christian Koep","christiankoep@gmail.com","Self","2016-09-01",2,2,2
 "Jesse Dubay","jesse@jessedubay.com","Discogs","2016-08-01",1,1,1
@@ -1178,15 +1184,15 @@
 "Sahdev P. Zala","spzala@us.ibm.com","IBM","2017-05-01",2,2,1
 "Jeremy Deininger","jeremydeininger@gmail.com","Checkr","2017-02-01",7,0,1
 "David Calavera","david.calavera@gmail.com","Netlify","2016-09-01",160,14,1
-"johndmulhausen","johndylan@google.com","Google","2016-06-01",68,83,4
+"johndmulhausen","johndylan@google.com","Google","2016-06-01",45,82,2
 "Robert Bailey","robertbailey@google.com","Google","2016-08-01",42,3,1
 "Marcin Maciaszczyk","maciaszczykm@users.noreply.github.com","Fujitsu","2017-05-01",1710,462,9
 "Bilgin Ibryam","bibryam@gmail.com","Red Hat","2017-01-01",1,1,1
 "NickrenREN","nickren19@gmail.com","EasyStack","2016-10-01",1,1,1
 "Anubhav Mishra","anubhavmishra@me.com","Apple","2017-04-01",0,1,1
-"Antonio Murdaca","runcom@redhat.com","Red Hat","2017-06-01",661,1141,25
+"Antonio Murdaca","runcom@redhat.com","Red Hat","2017-06-01",755,1182,27
 "xilabao","chenr.fnst@cn.fujitsu.com","Fujitsu","2016-10-01",9,2,3
-"mbohlool","mehdy@google.com","Google","2016-09-01",49498,675,13
+"Fabian Ruff","fabian@progra.de","SAP","2016-11-01",24,1,2
 "Vincent Ambo","tazjin@gmail.com","Goonswarm","2017-04-01",8,3,1
 "Antoine Legrand","antoine.legrand@coreos.com","CoreOS","2017-03-01",15,2,2
 "dlorenc","dlorenc@google.com","Google","2016-10-01",110,52,10
@@ -1214,11 +1220,11 @@
 "Aaron Prindle","aprindle@google.com","Google","2016-11-01",815,196,8
 "Adam Kaplan","abkaplan07@gmail.com","Findyr","2017-05-01",37,22,1
 "Kenneth D. Evensen","kevensen@redhat.com","Red Hat","2016-07-01",23,8,3
-"Ville Aikas","vaikas-google@users.noreply.github.com","Google","2017-03-01",2682,2819,6
 "Muharem Hrnjadovic","arbeit@lbox.cc","Monetas","2017-01-01",1,1,1
 "Adam Hawkins","hi@ahawkins.me","Saltside","2017-02-01",66,0,2
 "Erik Stidham","estidham@gmail.com","(Unknown)","2017-03-01",1,1,1
 "Paulo Pires","pires@apprenda.com","Apprenda","2017-01-01",563,714,23
+"Jonas Kongslund","jonas@kongslund.net","(Unknown)","2017-05-01",8,8,1
 "Bhargav Nookala","nooknb@gmail.com","Microsoft","2017-06-01",40,19,2
 "Michael Fraenkel","michael.fraenkel@gmail.com","JPMorgan Chase & Co.","2016-10-01",1274,405,3
 "Chris Love","clove@cnmconsulting.net","CNM Consulting","2016-08-01",31,11,3
@@ -1242,7 +1248,7 @@
 "Naveen","nsrinivasan1976@gmail.com","Self","2016-08-01",7,3,2
 "Jacek J. Łakis","jacek.lakis@intel.com","Intel","2016-09-01",26,6,1
 "Janet Kuo","chiachenk@google.com","Google","2017-04-01",2,5,2
-"Saad Ali","saadali@google.com","Google","2016-06-01",640,117,4
+"Saad Ali","saadali@google.com","Google","2016-06-01",632,112,3
 "Jacob Beacham","beacham@google.com","Google","2016-11-01",562,101,12
 "Slava Semushin","vsemushi@redhat.com","Red Hat","2017-05-01",3,2,2
 "vorlonofportland","vorlon@debian.org","Debian","2017-05-01",5,0,1
@@ -1252,6 +1258,7 @@
 "mbohlool","mehdy@google.com","Google","2017-05-01",241609,13542,73
 "Stevo Slavić","sslavic@gmail.com","SAP","2017-05-01",1,1,1
 "Aleksa Sarai","asarai@suse.de","SUSE/Novell","2017-04-01",369,159,10
+"Stijn De Haes","stijn.de.haes@gmail.com","(Unknown)","2017-06-01",205,1,2
 "Fabiano Franz","ffranz@redhat.com","Red Hat","2017-02-01",4,0,1
 "Andrzej Wasylkowski","wasylkowski@google.com","Google","2017-06-01",220,44,10
 "Nalin Dahyabhai","nalin@redhat.com","Red Hat","2016-12-01",371,2,3
@@ -1272,7 +1279,7 @@
 "Rajat Chopra","rchopra@redhat.com","Red Hat","2016-09-01",72,11,2
 "Tim Hockin","thockin@google.com","Google","2016-08-01",11314,140173,81
 "Euan Kemp","euank@coreos.com","CoreOS","2016-08-01",235,64,7
-"Yu-Ju Hong","yjhong@google.com","Google","2016-06-01",51,8,7
+"Yu-Ju Hong","yjhong@google.com","Google","2016-06-01",41,3,5
 "caleb miles","calebamiles@users.noreply.github.com","Ceph","2017-02-01",1339,1313,10
 "Derek Carr","decarr@redhat.com","Red Hat","2017-02-01",3382,532,25
 "Alejandro Escobar","jaescobar.cell@gmail.com","Socrata","2017-02-01",196,119,7
@@ -1281,7 +1288,7 @@
 "Cory Klein","coryfklein@gmail.com","Domo","2017-05-01",6,1,1
 "Slava Semushin","vsemushi@redhat.com","Red Hat","2017-01-01",20,24,7
 "Random-Liu","lantaol@google.com","Google","2016-12-01",83,48,8
-"Alexander Larsson","alexl@redhat.com","Red Hat","2017-06-01",751,449,17
+"Alexander Larsson","alexl@redhat.com","Red Hat","2017-06-01",1207,907,29
 "Steve Wilkerson","wilkers.steve@gmail.com","AT&T","2017-02-01",127,0,1
 "Marc-Antoine Ross","marc@proze.net","FounderFuel","2017-01-01",2,2,1
 "Vipul Sabhaya","vipul.sabhaya@hp.com","HP","2016-08-01",48,16,1
@@ -1364,7 +1371,7 @@
 "Justin Johnson","justin@balduncle.com","(Unknown)","2017-04-01",1,1,1
 "cheyang","cheyang@163.com","Net EASE 网易有态度","2016-10-01",6,0,1
 "Bernard Van De Walle","bernard@bvandewa.com","aporeto-inc","2016-10-01",1,1,1
-"Christoph Held","christoph.held@est.fujitsu.com","Fujitsu","2016-06-01",78,11,2
+"Dan Walsh","dwalsh@redhat.com","Red Hat","2017-05-01",677,677,1
 "steveperry-53","stevepe@google.com","Google","2016-09-01",36938,285,11
 "Christian Bell","csbell@google.com","Google","2017-01-01",157,5,2
 "Casey Davenport","casey@tigera.io","Tigera","2016-08-01",176,522,2
@@ -1388,7 +1395,7 @@
 "Patrick Baxter","pb@coreos.com","CoreOS","2016-12-01",64,52,3
 "Maciej Strzelecki","maciej.strzelecki@gmail.com","Schibsted","2016-10-01",2,2,1
 "Nalin Dahyabhai","nalin@redhat.com","Red Hat","2017-01-01",272,32,5
-"Adam Jedro","jedroadam@gmail.com","Egnyte","2017-03-01",58,64,1
+"riverzhang","rong.zhang@easystack.cn","EasyStack","2017-06-01",15,12,1
 "Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2016-10-01",244,115,18
 "Ihor Dvoretskyi","ihor@dvoretskyi.com","Mirantis","2017-03-01",762,319,13
 "Oguz Pastirmaci","oguzp@microsoft.com","Microsoft","2017-01-01",182,0,2
@@ -1414,13 +1421,13 @@
 "Justin Scott","justin.a.scott@intel.com","Intel","2017-02-01",972,108,9
 "adieu","adieu@adieu.me","Self","2016-09-01",1603,1603,2
 "foxyriver","liu.hao89@zte.com.cn","ZTE Corporation","2016-10-01",1,1,1
-"deads2k","deads@redhat.com","Red Hat","2016-10-01",6222,17876,55
+"Piotr Bryk","bryk@google.com","Google","2016-08-01",2462,1576,17
 "Marcin Wielgus","mwielgus@google.com","Google","2016-10-01",9530,1097,43
 "Solly Ross","sross@redhat.com","Red Hat","2016-08-01",252,129,8
 "Matt Tucker","ultimateboy@gmail.com","DEIS","2017-02-01",346,0,1
 "Sebastian Scheele","sebastian@loodse.com","Loodse GmbH","2017-01-01",23,7,1
-"Shyam Jeedigunta","shyamjvs@google.com","Google","2017-02-01",802,425,17
-"Daniel Beruben","daniel.beruben@gmail.com","Devops","2016-08-01",8,0,1
+"bindata-mockuser","ronl@google.com","Google","2016-06-01",85,81,2
+"flynnduism","flynnduism@gmail.com","(Unknown)","2017-06-01",3,3,1
 "Wang Jie","wangjie5@chinaskycloud.com","Self","2017-01-01",39,36,20
 "Adam Worrall","abw@google.com","Google","2017-05-01",116,9,1
 "Wojciech Tyczynski","wojtekt@google.com","Google","2016-07-01",3582,4291,66
@@ -1470,11 +1477,10 @@
 "Ben Hall","ben@benhall.me.uk","Ben Hall","2017-01-01",16,7,1
 "Crazykev","crazykev@zju.edu.cn","Self","2017-05-01",3213,814,8
 "sadlil","sadlil@appscode.com","AppsCode","2017-01-01",305,68,3
-"Sam Stoelinga","sammiestoel@gmail.com","Mirantis","2016-09-01",4,11,1
-"xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2017-05-01",81,47,8
+"xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2017-05-01",84,48,10
 "Nick Stott","nick@nickstott.com","Compose","2017-04-01",1,1,1
 "Dalton Hubble","dghubble@gmail.com","CoreOS","2016-08-01",53,50,2
-"Robin Percy","robin@trinimbus.com","TriNimbus","2017-03-01",62,48,2
+"ngtuna","ng.tuna@gmail.com","Apache","2016-06-01",2620,32,8
 "Levi Blackstone","levi.blackstone@rackspace.com","Rackspace","2017-03-01",83,36,7
 "Fan Lin","linfan.china@gmail.com","Tieto","2016-11-01",3,1,1
 "lojies","lu.zhenxing@zte.com.cn","ZTE Corporation","2016-08-01",32,30,6
@@ -1488,9 +1494,9 @@
 "Casey Davenport","casey@tigera.io","Tigera","2016-12-01",46,4,2
 "Phanindra Pydisetty","phanindra.nitw@gmail.com","log-os","2017-03-01",1,1,1
 "xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2016-07-01",384,75,20
-"Sebastian Florek","sebastian.florek@ts.fujitsu.com","Fujitsu","2016-06-01",641,122,5
+"Sebastian Florek","sebastian.florek@ts.fujitsu.com","Fujitsu","2016-06-01",53,2,1
 "Michal Cwienczek","vsmax@users.noreply.github.com","(Unknown)","2017-06-01",2,2,1
-"Chao Xu","xuchao@google.com","Google","2017-05-01",23721,5256,74
+"Chao Xu","xuchao@google.com","Google","2017-05-01",23760,5326,77
 "Chris Baumbauer","cab@cabnetworks.net","CABNetworks","2016-09-01",1,1,1
 "Mike Danese","mikedanese@gmail.com","Google","2016-11-01",1988,747,26
 "better88","better0332@163.com","Net EASE 网易有态度","2016-08-01",2,2,2
@@ -1508,19 +1514,18 @@
 "Nicolas Lamirault","nicolas.lamirault@gmail.com","Orange","2017-03-01",4,2,1
 "Random-Liu","lantaol@google.com","Google","2016-07-01",626,233,5
 "Rene Saenz","rene.saenz@gmail.com","Walmart","2017-01-01",26,26,2
-"Brad Bowman","beeradb@gmail.com","DRUD Tech","2017-01-01",1,1,1
+"NickrenREN","renyuquan1@163.com","Net EASE 网易有态度","2017-06-01",21,14,4
 "Manuel de Brito Fontes","aledbf@gmail.com","SOFICOM","2016-12-01",1325,547,15
 "Casey Callendrello","c1@caseyc.net","CoreOS","2016-11-01",86,45,2
 "Dan Osborne","djosborne10@gmail.com","Tigera","2016-10-01",1729,0,1
 "Federico Gimenez","fgimenez@coit.es","Canonical","2017-02-01",184,0,1
-"Nitish","tiwari.nitish@gmail.com","Tata Consultancy Services","2017-05-01",8,24,2
 "Brendan Burns","bburns@google.com","Microsoft","2017-02-01",2449,91,7
 "Seth Goings","sgoings@engineyard.com","Engine Yard","2017-02-01",3,2,1
 "Keegan Carruthers-Smith","keegan.csmith@gmail.com","Sourcegraph.com","2016-07-01",2,2,2
-"Nitish","tiwari.nitish@gmail.com","Tata Consultancy Services","2017-03-01",476,554,4
-"Jacob Beacham","beacham@google.com","Google","2017-06-01",291,42,7
+"Doug Davis","dug@us.ibm.com","IBM","2016-12-01",765,1196,17
+"Maxim Ivanov","ivanov.maxim@gmail.com","Telemetry.com","2017-06-01",54,23,3
 "tamal","tamal@appscode.com","AppsCode","2016-12-01",1,0,1
-"Maciej Pytel","maciekpytel@google.com","Google","2017-04-01",1297,207,22
+"Dan Walsh","dwalsh@redhat.com","Red Hat","2016-12-01",193,7,1
 "Dan Winship","danw@redhat.com","Red Hat","2016-12-01",10,24,5
 "Luke Stutters","lukestuts@gmail.com","(Unknown)","2017-05-01",1,1,1
 "Davanum Srinivas","davanum@gmail.com","Mirantis","2016-09-01",1441,119,7
@@ -1528,10 +1533,10 @@
 "Oleg Atamanenko","oleg.atamanenko@gmail.com","Eastbanc Technologies","2016-10-01",3,3,1
 "Tim St. Clair","stclair@google.com","Google","2017-01-01",1,1,1
 "Elson Rodriguez","elson.rodriguez@gmail.com","Intel","2016-09-01",340,114,2
-"Quinton Hoole","quinton.hoole@huawei.com","Huawei","2017-06-01",2,0,1
+"jzhoucliqr","jzhou@cliqr.com","CliQr Technologies","2017-06-01",1,1,1
 "Kevin Wang","wang.kanghua@zte.com.cn","ZTE Corporation","2016-07-01",10,16,2
-"Jonathan Yu","jawnsy@redhat.com","Red Hat","2016-09-01",11,12,3
-"Justin Santa Barbara","justin@fathomdb.com","FathomDB","2017-02-01",13079,3820,83
+"Sebastien Boeuf","sebastien.boeuf@intel.com","Intel","2017-06-01",4,1,1
+"Justin Santa Barbara","justin@fathomdb.com","FathomDB","2017-02-01",13143,3868,84
 "Piotr Bryk","bryk@google.com","Google","2016-07-01",17830,327415,14
 "divyenpatel","divyenp@vmware.com","VMware","2017-04-01",183,12,3
 "Simon Wydooghe","simon@wydooghe.com","MEDIALAAN","2017-03-01",1,1,1
@@ -1544,7 +1549,7 @@
 "knightXun","1004815462@qq.com","Huawei","2017-04-01",21,25,6
 "Raees Bhatti","raees.bhatti@gmail.com","The Websmith Co.","2016-10-01",1,0,1
 "Shane Starcher","shanestarcher@gmail.com","Datapipe","2017-02-01",113,9,1
-"Nitish Tiwari","nitisht@users.noreply.github.com","minio","2017-02-01",2,0,2
+"Nitish Tiwari","nitisht@users.noreply.github.com","minio","2017-02-01",1210,148,18
 "Kenny Lee Sin Cheong","kenny.lee_sin_cheong@coreos.com","CoreOS","2017-06-01",1,1,1
 "Brandon Philips","brandon.philips@coreos.com","CoreOS","2016-12-01",204,51,7
 "David Eads","deads2k@users.noreply.github.com","Red Hat","2016-10-01",1,0,1
@@ -1564,7 +1569,7 @@
 "Adam Reese","adam@reese.io","Microsoft","2016-08-01",266,238,13
 "Joe Finney","spxtr@google.com","Google","2016-08-01",2989,2248,28
 "Steve Kuznetsov","skuznets@redhat.com","Red Hat","2017-02-01",6,1,1
-"Andy Goldstein","agoldste@redhat.com","Red Hat","2016-06-01",233,172,4
+"Andy Goldstein","agoldste@redhat.com","Red Hat","2016-06-01",17,0,1
 "Catalin Jora","catalin.jora@container-solutions.com","Container Solutions","2016-07-01",60002,231,14
 "Seth Jennings","sjenning@redhat.com","Red Hat","2016-07-01",67,48,4
 "Taylor Thomas","thomastaylor312@gmail.com","Nike","2017-04-01",181,33,2
@@ -1603,20 +1608,20 @@
 "Quintin Lee","qlee@google.com","Google","2017-05-01",383,33,6
 "Duncan McNaught","duncan.mcnaught@welltok.com","Welltok","2016-12-01",24,8,1
 "Amanpreet Singh","aps.sids@gmail.com","Codigami","2016-12-01",10,11,2
-"Adnan Abdulhussein","adnan@prydoni.us","Bitnami","2017-06-01",13,10,1
 "Jeff Lowdermilk","jeffml@google.com","Google","2016-07-01",1,1,1
 "Tomas Dohnalek","tomas.dohnalek@firma.seznam.cz","Seznam.cz","2017-03-01",1,1,1
 "Vladimir Rutsky","vladimir@rutsky.org","Buildbot","2017-02-01",47,18,15
 "Aaron Prindle","aprindle@google.com","Google","2016-10-01",821,231,13
 "Jan Safranek","jsafrane@redhat.com","Red Hat","2016-10-01",1294,484,9
 "ravisantoshgudimetla","ravisantoshgudimetla@gmail.com","Red Hat","2017-05-01",159,37,2
-"Matthew Wong","mawong@redhat.com","Red Hat","2017-06-01",1478,325,28
+"Matthew Wong","mawong@redhat.com","Red Hat","2017-06-01",1484,331,29
 "Michail Kargakis","mkargaki@redhat.com","Red Hat","2016-12-01",1238,298,25
 "Abhishek","abhishek@linux.com","Linux","2016-10-01",25,0,2
 "Prashanth B","beeps@google.com","Google","2016-07-01",784,380,15
 "Dr. Stefan Schimanski","stefan.schimanski@gmail.com","Red Hat","2016-12-01",2419,1670,39
 "Quinton Hoole","quinton@google.com","Google","2016-11-01",20,6,2
 "German","gskgoskk@gmail.com","CMD","2016-09-01",1,1,1
+"Bogdan Dobrelya","bogdando@mail.ru","Mirantis","2017-01-01",516,1086,18
 "Bingo Huang","770581715@qq.com","Net EASE 网易有态度","2017-01-01",1,1,1
 "Dmitry Shulyak","yashulyak@gmail.com","Mirantis","2017-05-01",222,453,7
 "明扬","my@famer.me","Nadileaf","2017-05-01",1,1,1
@@ -1625,7 +1630,6 @@
 "kayrus","kay.diam@gmail.com","Devops","2016-11-01",12,0,1
 "Mik Vyatskov","vmik@google.com","Google","2017-04-01",110,23,8
 "Hemant Kumar","gethemant@gmail.com","Red Hat","2016-10-01",12,2,2
-"Maciej Szulik","maszulik@redhat.com","Red Hat","2016-09-01",1000,262,17
 "Eirikur S. Hrafnsson","eiki@greenqloud.com","Greenqloud","2016-12-01",8,8,1
 "Jainish Shah","jainishshah@yahoo.com","JFrog","2016-11-01",108,55,6
 "Vyacheslav Semushin","slava.semushin@gmail.com","Red Hat","2017-04-01",5,0,1
@@ -1647,12 +1651,13 @@
 "Vaughn Dice","vaughn@deis.com","DEIS","2016-12-01",32,18,1
 "Jacob Beacham","beacham@google.com","Google","2017-02-01",700,46,7
 "Antonio Murdaca","runcom@redhat.com","Red Hat","2017-02-01",107,14,5
+"Selvi K","selvik@users.noreply.github.com","(Unknown)","2017-06-01",1,1,1
 "Leah Petersen","leahnpetersen@gmail.com","Samsung","2017-01-01",1,1,1
 "Waseem Ahmad","talk.to.waseem@gmail.com","(Unknown)","2017-05-01",182,96,1
 "Dominika Hodovska","dhodovsk@redhat.com","Red Hat","2016-08-01",211,219,6
 "Jędrzej Nowak","pigmej@gmail.com","Mirantis","2016-07-01",1,1,1
 "Aaron Schlesinger","arschles@gmail.com","Engine Yard","2016-10-01",37,0,1
-"Johannes Scheuermann","johannes.scheuermann@inovex.de","inovex GmbH","2016-06-01",9,2,2
+"André Martins","aanm90@gmail.com","Cisco","2016-09-01",4,3,2
 "Quentin Machu","me@quentin-machu.fr","CoreOS","2016-12-01",25,28,1
 "Dale Hamel","daleha@gmail.com","(Unknown)","2017-03-01",10,1,1
 "fate-grand-order","chenjg@harmonycloud.cn","HarmonyCloud","2017-01-01",32,19,18
@@ -1669,14 +1674,14 @@
 "Janet Kuo","chiachenk@google.com","Google","2016-11-01",4774,977,37
 "Michael Adam","obnox@redhat.com","Red Hat","2016-12-01",762,40,7
 "Quinton Hoole","quinton@google.com","Google","2016-08-01",1218,162,2
-"Mik Vyatskov","vmik@google.com","Google","2017-06-01",18,17,6
-"Jun Xiang Tee","juntee@google.com","Google","2017-04-01",1386,96,7
+"Mik Vyatskov","vmik@google.com","Google","2017-06-01",19,18,7
+"Qiu Jian","gothicqiujian@gmail.com","IBM","2017-06-01",107,10,1
 "mlambert890b","marklam@google.com","Google","2017-02-01",108,2,1
 "Kevin J. Qiu","kevinjqiu@users.noreply.github.com","Points International","2017-05-01",1,1,1
 "gmarek","gmarek@google.com","Google","2017-03-01",80,160,13
 "Avesh Agarwal","avagarwa@redhat.com","Red Hat","2016-10-01",2,1,2
 "Clayton Coleman","ccoleman@redhat.com","Red Hat","2017-04-01",1088,493,7
-"Quinton Hoole","quinton@google.com","Google","2016-06-01",492,243,8
+"Quinton Hoole","quinton@google.com","Google","2016-06-01",168,29,5
 "Matthew Wong","mawong@redhat.com","Red Hat","2017-02-01",2998,1519,43
 "Timothy St. Clair","tstclair@redhat.com","Red Hat","2016-11-01",949,1244,3
 "Lantao Liu","taotaotheripper@gmail.com","Google","2017-04-01",150,30,3
@@ -1710,7 +1715,7 @@
 "xialonglee","li.xialong@zte.com.cn","ZTE Corporation","2017-05-01",1,1,1
 "ant31","2t.antoine@gmail.com","CoreOS","2016-11-01",29,30,1
 "Lalatendu Mohanty","lmohanty@redhat.com","Red Hat","2017-06-01",9,0,1
-"Reinhard Nägele","unguiculus@gmail.com","Codecentric AG","2017-06-01",55,37,3
+"Reinhard Nägele","unguiculus@gmail.com","Codecentric AG","2017-06-01",242,148,6
 "Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-03-01",379,312,14
 "Vic Iglesias","viglesias@google.com","Google","2016-12-01",254,13,6
 "kabakaev","kabakaev@gmail.com","Devops","2017-02-01",2,2,1
@@ -1719,22 +1724,23 @@
 "Ville Aikas","vaikas@google.com","Google","2017-02-01",2074,1805,5
 "Janet Kuo","chiachenk@google.com","Google","2016-08-01",1615,596,40
 "mdshuai","dma@redhat.com","Red Hat","2016-11-01",12,12,3
-"Random-Liu","lantaol@google.com","Google","2017-06-01",3089,1581,28
+"Random-Liu","lantaol@google.com","Google","2017-06-01",3183,1591,30
 "System Administrator","bdontu@vmware.com","VMware","2017-05-01",2314,958,7
 "Anthony Haussmann","anthony.haussmann@arkena.com","Arkena","2016-09-01",22,23,5
 "Mayank Kumar","mayank.kumar@salesforce.com","SalesForce","2016-07-01",1,1,1
 "xilabao","chenr.fnst@cn.fujitsu.com","Fujitsu","2017-05-01",752,45,17
 "Marcin Wielgus","mwielgus@google.com","Google","2017-03-01",2600,1748,40
 "Casey Davenport","casey@tigera.io","Tigera","2017-01-01",1,1,1
+"Kara Alexandra","kalexandra@us.ibm.com","IBM","2016-08-01",92,59,3
 "Chris Knowles","c-knowles@users.noreply.github.com","Self","2017-05-01",27,0,1
 "Clayton Coleman","ccoleman@redhat.com","Red Hat","2016-07-01",1526,844,29
 "Paul Cichonski","paul.cichonski@gmail.com","Lancope","2017-03-01",1,1,1
 "Shiyang Wang","shiywang@users.noreply.github.com","Red Hat","2017-02-01",2,2,2
 "guangxuli","li.guangxu@zte.com.cn","ZTE Corporation","2016-10-01",16,10,1
-"John Mulhausen","johndylan@johndylan-macbookpro2.roam.corp.google.com","Google","2016-06-01",344,162,7
+"John Mulhausen","johndylan@johndylan-macbookpro2.roam.corp.google.com","Google","2016-06-01",301,124,3
 "steveperry-53","stevepe@google.com","Google","2016-10-01",945,951,11
 "Aleksandr Didenko","adidenko@mirantis.com","Mirantis","2017-01-01",41,60,4
-"Matthew Wong","mawong@redhat.com","Red Hat","2016-09-01",11703,3465,102
+"mdshuai","dma@redhat.com","Red Hat","2016-07-01",1,1,1
 "Abhishek","abhishek@linux.com","Linux","2016-11-01",838,71,3
 "Erick Fejta","fejta@google.com","Google","2016-12-01",3907,7088,28
 "craigbox","craig.box@gmail.com","Factotum","2016-12-01",7,2,2
@@ -1757,7 +1763,7 @@
 "David McMahon","djmm@google.com","Google","2016-09-01",1365,865,22
 "Adam Reese","adam@reese.io","Microsoft","2017-06-01",115,134,5
 "Charles Butler","chuck@dasroot.net","Canonical","2017-02-01",74,16,2
-"Joe Finney","spxtr@google.com","Google","2017-06-01",662,824,10
+"Dan Walsh","dwalsh@redhat.com","Red Hat","2017-01-01",13,2,2
 "neith00","ja.lauricella@gmail.com","IRT SystemX","2017-02-01",1,1,1
 "Ole Fredrik Skudsvik","ole.skudsvik@gmail.com","Schibsted","2017-02-01",80,11,5
 "caleb miles","calebamiles@users.noreply.github.com","Ceph","2017-06-01",10,2,3
@@ -1773,20 +1779,20 @@
 "Ciello89","mf6510@att.com","AT&T","2016-12-01",1,1,1
 "Shingo Omura","everpeace@gmail.com","O'Reilly Media","2016-12-01",1,1,1
 "Sebastien Goasguen","runseb@gmail.com","Bitnami","2016-06-01",528,8,5
-"Jordan Liggitt","jliggitt@redhat.com","Red Hat","2017-06-01",1447,1014,16
+"Jordan Liggitt","jliggitt@redhat.com","Red Hat","2017-06-01",1859,1058,21
 "Mike Danese","mikedanese@google.com","Google","2017-04-01",28032,9321,43
 "Premanand Chandrasekaran","premanandc@gmail.com","(Unknown)","2016-12-01",1,1,1
 "Erik Christensen","christensen.em@gmail.com","Spatial Networks","2016-10-01",1,1,1
 "liwenqi","vikilwq@zju.edu.cn","Self","2016-12-01",13,13,2
-"Kris","krousey@google.com","Google","2016-06-01",49,3,5
-"Lee Verberne","verb@google.com","Google","2017-05-01",110,72,5
+"Kris","krousey@google.com","Google","2016-06-01",4,0,2
+"Lee Verberne","verb@google.com","Google","2017-05-01",184,72,7
 "William Martin Stewart","zoidbergwill@gmail.com","Superbalist","2016-12-01",1,1,1
 "Yusuke Kuoka","ykuoka@gmail.com","クラウドワークス","2017-03-01",2023,714,35
 "Jeff Lowdermilk","jeffml@google.com","Google","2017-04-01",2,0,1
-"ngtuna","ng.tuna@gmail.com","Apache","2016-06-01",2620,32,8
+"Bryan T. Richardson","bryan@activeshadow.com","Self","2016-07-01",5,3,1
 "Mohamed Shahat","mshahat@computer.org","TIBCOSoftware","2017-02-01",3,0,1
 "Cao Shufeng","caosf.fnst@cn.fujitsu.com","Fujitsu","2016-11-01",30,6,4
-"Deyuan Deng","deyuan.deng@gmail.com","Caicloud","2017-06-01",799,264,13
+"Deyuan Deng","deyuan.deng@gmail.com","Caicloud","2017-06-01",827,273,15
 "Jakob Jarosch","dev@jakobjarosch.de","itdesign GmbH","2017-03-01",10,4,2
 "Miao Luo","miaol@vmware.com","VMware","2016-09-01",5,5,1
 "Rohith","gambol99@gmail.com","Devops","2016-08-01",2,2,1
@@ -1833,7 +1839,6 @@
 "Aditya Kali","adityakali@google.com","Google","2016-09-01",15,2,2
 "Hakan Baba","hakanbaba83@gmail.com","Box","2017-02-01",204,0,1
 "Alex Robinson","alexdwanerobinson@gmail.com","Cockroach","2017-05-01",49,61,6
-"Random-Liu","lantaol@google.com","Google","2017-01-01",388,105,8
 "Tomas Smetana","tsmetana@redhat.com","Red Hat","2017-01-01",63,148,1
 "andrewsykim","andrew@wattpad.com","Wattpad","2017-01-01",152,38,4
 "Paul Morie","pmorie@redhat.com","Red Hat","2017-03-01",12100,15174,35
@@ -1842,10 +1847,9 @@
 "Tim St. Clair","stclair@google.com","Google","2017-05-01",15721,1199,33
 "Mikhail Vasilenko","mvasilenko@gmail.com","(Unknown)","2017-05-01",1,1,1
 "Josh Curl","josh@curl.me","Josh Curl","2017-05-01",29,29,1
-"Scott Creeley","screeley@redhat.com","Red Hat","2016-09-01",26,0,1
 "Jack Zampolin","jack.zampolin@gmail.com","InfluxData","2017-01-01",146,72,2
 "Matt Bruzek","mbruzek@gmail.com","Juju Ecosystem","2017-04-01",10,6,2
-"Eric Chiang","eric.chiang@coreos.com","CoreOS","2016-06-01",391,168,3
+"Eric Chiang","eric.chiang@coreos.com","CoreOS","2016-06-01",159,14,2
 "wu8685","optimuswu8685@gmail.com","vipshop","2016-09-01",655,225,3
 "Francois Deppierraz","francois@ctrlaltdel.ch","Infraly","2016-11-01",1,1,1
 "Brendan Burns","bburns@google.com","Microsoft","2016-12-01",2643,167,13
@@ -1855,19 +1859,18 @@
 "Tim Hockin","thockin@google.com","Google","2016-07-01",1913,877,22
 "Walter Dolce","walterdolce@gmail.com","BBC","2016-09-01",1,1,1
 "Maisem Ali","maisem@google.com","Google","2016-07-01",20,9,2
-"Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2016-06-01",1058,892,16
+"Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2016-06-01",24,24,2
 "Jorge Salamero Sanz","bencer@users.noreply.github.com","Sysdig","2017-05-01",233,0,1
 "Walter Fender","wfender@google.com","Google","2017-04-01",672,34,3
-"Gurvinder Singh","gurvindersinghdahiya@gmail.com","UNINETT","2016-07-01",1,1,1
 "Dan Winship","danw@redhat.com","Red Hat","2017-04-01",22,54,2
 "Rob Franken","rob@rob-franken.nl","Google","2016-12-01",561,191,4
 "Patrick Clinger","pclinger@proboards.com","ProBoards Forums","2017-01-01",4,4,1
-"Marian Lobur","loburm@google.com","Google","2017-05-01",52,17,3
+"Marian Lobur","loburm@google.com","Google","2017-05-01",269,125,4
 "Andrew Davidoff","davidoff@qedmf.net","Ontolo","2017-05-01",555,104,4
 "Patrick Baxter","pb@coreos.com","CoreOS","2017-03-01",49,45,8
 "Tamer Tas","contact@tmrts.com","Self","2017-01-01",1,1,1
 "Josh Hoak","jrhoak@gmail.com","Google","2016-09-01",6,4,3
-"Phillip Wittrock","pwittroc@google.com","Google","2016-06-01",262,174,4
+"Saied Kazemi","saied@google.com","Google","2017-01-01",252,0,1
 "Justin Scott","justin.a.scott@intel.com","Intel","2017-04-01",29,8,3
 "Robert Kubis","hostirosti@users.noreply.github.com","Google","2017-02-01",4,0,2
 "Mike Danese","mikedanese@google.com","Google","2016-07-01",252,24,4
@@ -1877,7 +1880,6 @@
 "Matt Butcher","technosophos@gmail.com","Engine Yard","2017-05-01",311,5378,8
 "Ian Lewis","ianlewis@google.com","Google","2017-01-01",292,395,4
 "Tomasz Wojtuń","wojtut01@stepstone.com","StepStone","2016-10-01",1,1,1
-"prashima","prashimas@vmware.com","VMware","2017-03-01",717,202,4
 "Travis Cline","travis.cline@gmail.com","ScriptDash","2016-08-01",3,3,1
 "Jan Safranek","jsafrane@redhat.com","Red Hat","2016-06-01",71,56,4
 "Antoine Pelisse","apelisse@google.com","Google","2017-04-01",169,72,5
@@ -1885,7 +1887,6 @@
 "Iago López Galeiras","iago@kinvolk.io","CoreOS","2016-10-01",9,0,2
 "Samuel Ortiz","sameo@linux.intel.com","Intel","2017-05-01",22,19,1
 "Daniel Martins","daniel.tritone@gmail.com","Descomplica","2017-02-01",16,8,2
-"Antoine Pelisse","apelisse@google.com","Google","2016-06-01",14,8,1
 "Maciej Kwiek","mkwiek@mirantis.com","Mirantis","2017-04-01",327,61,3
 "gmarek","gmarek@google.com","Google","2016-08-01",839,1664,33
 "Harry Zhang","harryz@hyper.sh","Hyper.sh","2016-06-01",4,3,2
@@ -1894,7 +1895,7 @@
 "hchiramm","hchiramm@redhat.com","Red Hat","2017-01-01",202,33,3
 "jianhuiz","jianhui.zhou@huawei.com","Huawei","2016-11-01",24,4,2
 "Kent Rancourt","krancour@users.noreply.github.com","Microsoft","2017-03-01",2283,932,9
-"Michelle Noorali","michellemolu@gmail.com","Microsoft","2017-06-01",316,71,3
+"Michelle Noorali","michellemolu@gmail.com","Microsoft","2017-06-01",549,244,5
 "xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2017-06-01",8,6,3
 "Takeshi Takizawa","takitake.create@gmail.com","(Unknown)","2016-06-01",24,10,1
 "Michael Goodness","mgoodness@gmail.com","WIDEN","2017-03-01",836,433,7
@@ -1905,7 +1906,7 @@
 "Luca Bruno","luca.bruno@coreos.com","CoreOS","2017-01-01",100,41,7
 "craigbox","craig.box@gmail.com","Factotum","2017-04-01",27,30,2
 "andrewsykim","andrew@wattpad.com","Wattpad","2016-11-01",133,24,3
-"Daniel J Walsh","dwalsh@redhat.com","Red Hat","2016-09-01",112,11,2
+"Ashley Penney","ashley.penney@maxwellhealth.com","Maxwell Health","2017-02-01",13,2,3
 "Jorge Arco","jorge.arcoma@gmail.com","LetsBonus","2017-03-01",3,3,1
 "Yerken","yerken.tussupbekov@zalando.de","Zalando","2017-06-01",62,57,2
 "Dan Romlein","dromlein@apprenda.com","Apprenda","2017-02-01",43,17,2
@@ -1938,7 +1939,6 @@
 "Oskar Pearson","oskar@deckle.co.uk","(Unknown)","2017-01-01",3,15,1
 "Sameer Naik","sameer@damagehead.com","clibs","2016-10-01",2,2,1
 "chentao1596","chen.tao3@zte.com.cn","ZTE Corporation","2016-12-01",22,24,10
-"Fabian Ruff","fabian@progra.de","SAP","2016-11-01",24,1,2
 "Connor Doyle","connor.p.doyle@intel.com","Intel","2016-11-01",269,419,4
 "Dongsu Park","dongsu@endocode.com","Endocode","2017-02-01",93,35,8
 "Rob Paisley","github@rpaisley.com","(Unknown)","2017-03-01",1,1,1
@@ -1951,7 +1951,7 @@
 "Antonio Murdaca","runcom@redhat.com","Red Hat","2016-07-01",663,116,6
 "Sergii Golovatiuk","sgolovatiuk@mirantis.com","Mirantis","2017-03-01",184,63,6
 "Sushil Kumar","sushil.kumar@suse.com","SUSE/Novell","2017-03-01",169,7,2
-"Anirudh Ramanathan","foxish@users.noreply.github.com","Google","2016-06-01",1,1,1
+"Random-Liu","lantaol@google.com","Google","2017-01-01",388,105,8
 "Matthew Mosesohn","mmosesohn@mirantis.com","Mirantis","2016-08-01",153,164,15
 "Di Wu","diwu1989@users.noreply.github.com","BetterWorks","2017-04-01",29,27,5
 "Derek Perkins","derek@derekperkins.com","Nozzle","2017-03-01",1,0,1
@@ -1971,7 +1971,7 @@
 "Maciej Kwiek","maciej.iai@gmail.com","Mirantis","2017-01-01",247,111,5
 "Patrick Galbraith","patg@patg.net","HP","2017-05-01",5,4,1
 "miao.yanqiang10144685","miao.yanqiang@zte.com.cn","ZTE Corporation","2016-11-01",404,114,1
-"Aaron Prindle","aprindle@google.com","Google","2017-05-01",421,354,10
+"Aaron Prindle","aprindle@google.com","Google","2017-05-01",421,356,11
 "Yonathan Randolph","yonathan@liftigniter.com","LiftIgniter","2017-01-01",29,29,2
 "Lachlan Evenson","lachlan@deis.com","DEIS","2016-10-01",39,12,4
 "xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2017-02-01",2709,9602,16
@@ -2001,8 +2001,9 @@
 "Jason Hansen","jhansen@deis.com","DEIS","2016-06-01",8,8,4
 "Solly Ross","sross@redhat.com","Red Hat","2016-11-01",2304,155,2
 "Alvaro [Andor]","andor@pierdelacabeza.com","(Unknown)","2016-11-01",1,1,1
+"Jacob Beacham","beacham@google.com","Google","2017-06-01",291,42,7
 "Kenneth Owens","owensk@google.com","Google","2017-06-01",8668,1305,10
-"Dr. Stefan Schimanski","sttts@redhat.com","Red Hat","2016-06-01",121,49,2
+"Dr. Stefan Schimanski","sttts@redhat.com","Red Hat","2016-06-01",51,11,1
 "jianhuiz","jianhui.zhou@huawei.com","Huawei","2017-02-01",219,35,1
 "Manuel de Brito Fontes","aledbf@gmail.com","SOFICOM","2017-03-01",1975,1153,32
 "Ivan Shvedunov","ishvedunov@mirantis.com","Mirantis","2016-10-01",568,1313,14
@@ -2039,7 +2040,7 @@
 "Ritesh H Shukla","sritesh@vmware.com","VMware","2016-08-01",110,18,2
 "mbohlool","mehdy@google.com","Google","2017-06-01",4005,1473,18
 "Stéphane Klein","contact@stephane-klein.info","TechAngels","2017-02-01",6,6,1
-"jianglingxia","jiang.lingxia@zte.com.cn","ZTE Corporation","2017-06-01",2,2,1
+"jianglingxia","jiang.lingxia@zte.com.cn","ZTE Corporation","2017-06-01",2,5,2
 "Derek Parker","parkerderek86@gmail.com","CoreOS","2016-09-01",1,1,1
 "ymqytw","mengqiy@google.com","Google","2017-04-01",1144,217,9
 "Paulo Pires","pires@apprenda.com","Apprenda","2017-02-01",30,8,2
@@ -2048,7 +2049,7 @@
 "Adnan Abdulhussein","adnan@bitnami.com","Bitnami","2016-08-01",90,52,4
 "sarahnovotny","sarah.novotny@gmail.com","Google","2016-12-01",403,0,2
 "Tomas Kral","tkral@redhat.com","Red Hat","2016-08-01",251,177,13
-"Daniel J Walsh","dwalsh@redhat.com","Red Hat","2017-03-01",101,41,10
+"Jing Xu","jinxu@google.com","Google","2016-11-01",779,94,11
 "Paul Morie","pmorie@redhat.com","Red Hat","2017-04-01",2569,1536,25
 "Dan Williams","dcbw@redhat.com","Red Hat","2016-08-01",3,2,1
 "Henrik Schmidt","henrik@henrik-schmidt.de","(Unknown)","2017-04-01",26,11,1
@@ -2061,11 +2062,11 @@
 "keontang","ikeontang@gmail.com","Caicloud","2016-08-01",8,1,1
 "Ian Lewis","ianlewis@google.com","Google","2016-12-01",200,34,1
 "spatronis","spatronis@gmail.com","(Unknown)","2017-06-01",3,3,1
-"Fabio Yeon","fabioy@google.com","Google","2016-06-01",10,12,2
-"Brendan Burns","bburns@google.com","Microsoft","2017-05-01",2660,905,17
+"Brendan Burns","bburns@google.com","Microsoft","2017-05-01",3056,953,19
 "theairkit","theairkit@gmail.com","avito.ru","2017-02-01",1,1,1
 "codevulture","janonymous.codevulture@gmail.com","NEC","2017-06-01",1,1,1
 "zoues","zouyee1989@gmail.com","Self","2017-03-01",453,36,9
+"Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2017-06-01",3,3,1
 "Dominika Hodovska","dhodovsk@redhat.com","Red Hat","2016-11-01",1726,177,15
 "Jan Safranek","jsafrane@redhat.com","Red Hat","2017-06-01",27,5,3
 "Rudi C","therc@users.noreply.github.com","Clarifai","2016-07-01",3,3,2
@@ -2080,7 +2081,6 @@
 "Vincent Ambo","tazjin@gmail.com","Goonswarm","2016-10-01",1,1,1
 "Cameron Zahedi","czahedi@google.com","Google","2017-05-01",7,0,2
 "Vic Iglesias","viglesias@google.com","Google","2016-11-01",16,16,9
-"juanvallejo","jvallejo@redhat.com","Red Hat","2017-01-01",108,16,6
 "Steve Jernigan","sjernigan@reverbnation.com","ReverbNation","2017-02-01",6,2,1
 "sarahnovotny","sarah.novotny@gmail.com","Google","2017-06-01",2,2,2
 "Gergo Huszty","huszty.gergo@digitaltrip.hu","Nokia","2017-03-01",74,77,4
@@ -2092,11 +2092,9 @@
 "Christoph Held","christoph.held@est.fujitsu.com","Fujitsu","2017-06-01",211,36,2
 "mbohlool","mehdy@google.com","Google","2017-02-01",1507,386,14
 "Eli Young","elyscape@gmail.com","Bluescape","2016-07-01",3,2,1
-"steveperry-53","stevepe@google.com","Google","2016-11-01",286,664,7
 "Anirudh","ramanathana@google.com","Google","2016-09-01",352,116,19
 "Steve Lasker","stevenlasker@hotmail.com","Microsoft","2017-01-01",1,1,1
 "AlmogBaku","almog.baku@gmail.com","Rimoto","2016-09-01",776,194,2
-"Kevin Wang","wang.kanghua@zte.com.cn","ZTE Corporation","2016-06-01",1,1,1
 "Matthew Wong","mawong@redhat.com","Red Hat","2016-11-01",8326,2588,90
 "Angus Lees","gus@inodes.org","Bulletproof","2016-07-01",471,43,2
 "Eric Hole","eric.hole@gmail.com","Bar Bouchee","2017-04-01",71,31,5
@@ -2105,8 +2103,9 @@
 "Jessica Forrester","jforrest@redhat.com","Red Hat","2017-03-01",8,0,1
 "ymqytw","mengqiy@google.com","Google","2016-11-01",5117,4962,19
 "Kris","krousey@google.com","Google","2017-02-01",123,0,1
+"Matt Baldwin","baldwin@stackpointcloud.com","StackPointCloud","2016-12-01",206,0,1
 "jianglingxia","jiang.lingxia@zte.com.cn","ZTE Corporation","2017-02-01",7,7,7
-"Matt Rickard","mrick@google.com","Google","2017-06-01",70,101,8
+"Matt Rickard","mrick@google.com","Google","2017-06-01",73,104,9
 "Philip Champon","pchampon@gmail.com","Adaptly","2017-03-01",76,15,3
 "Aleksandra Malinowska","aleksandram@google.com","Google","2016-12-01",122,90,5
 "Michal Fojtik","mfojtik@redhat.com","Red Hat","2016-07-01",5,1,1
@@ -2126,6 +2125,7 @@
 "hchiramm","hchiramm@redhat.com","Red Hat","2016-12-01",139,5,4
 "Harry Zhang","harryz@hyper.sh","Hyper.sh","2017-06-01",1,1,1
 "Matt Rickard","mrick@google.com","Google","2016-09-01",1008,43,13
+"Yecheng Fu","fuyecheng@qiniu.com","(Unknown)","2017-06-01",51,20,2
 "Amanpreet Singh","aps.sids@gmail.com","Codigami","2016-07-01",2,2,2
 "Fabian Selles Rosa","fabian.selles@schibsted.com","Schibsted","2017-04-01",431,145,1
 "Jacob Beacham","beacham@google.com","Google","2017-05-01",445,145,10
@@ -2166,7 +2166,7 @@
 "Sameer Naik","sameer@damagehead.com","clibs","2017-06-01",120,102,12
 "Chris Love","clove@cnmconsulting.net","CNM Consulting","2017-05-01",1344,436,7
 "Jason Singer DuMars","jdumars@gmail.com","DEIS","2017-05-01",19,19,2
-"Lee Verberne","verb@google.com","Google","2016-06-01",1,1,1
+"Scott Creeley","screeley@redhat.com","Red Hat","2016-09-01",26,0,1
 "Seth Goings","segoings@microsoft.com","Microsoft","2017-05-01",1,1,1
 "Alexander Brand","abrand@apprenda.com","Apprenda","2016-09-01",10,0,2
 "Connor Doyle","connor.p.doyle@intel.com","Intel","2017-02-01",132,37,2
@@ -2178,12 +2178,14 @@
 "Ville Aikas","vaikas@google.com","Google","2016-08-01",929,223,12
 "Matthew Mosesohn","mmosesohn@mirantis.com","Mirantis","2016-07-01",271,648,12
 "Tomas Kral","tkral@redhat.com","Red Hat","2017-05-01",55,31,1
-"Jun Xiang Tee","juntee@google.com","Google","2017-06-01",10,10,4
+"Jun Xiang Tee","juntee@google.com","Google","2017-06-01",136,200,8
 "Yifan Gu","yifan.gu@coreos.com","CoreOS","2017-02-01",17,2,1
+"Isabel JC","isabel.xkjc@gmail.com","(Unknown)","2017-05-01",26,2,1
 "Mayank Kumar","mayank.kumar@salesforce.com","SalesForce","2017-02-01",110,143,1
 "Aleksandra Malinowska","aleksandram@google.com","Google","2017-03-01",299,29,5
 "x1957","fangyuhao@gmail.com","Google","2017-05-01",5,4,3
 "Jack Zampolin","jack.zampolin@gmail.com","InfluxData","2017-05-01",3,1,1
+"Brandon Philips","brandon@ifup.org","CoreOS","2016-09-01",350,424,17
 "Angus Salkeld","asalkeld@mirantis.com","Mirantis","2016-10-01",1273,866,6
 "Mrunal Patel","mpatel@redhat.com","Red Hat","2017-05-01",858,121,22
 "Dlugolecki, Jakub","jakub.dlugolecki@intel.com","Intel","2016-11-01",3,7,1
@@ -2206,9 +2208,11 @@
 "Huamin Chen","hchen@redhat.com","Red Hat","2017-02-01",454,45,5
 "Sandor Szücs","sandor.szuecs@zalando.de","(Unknown)","2017-05-01",1,0,1
 "Brendan Burns","bburns@google.com","Microsoft","2017-01-01",31238,3000,8
-"Jeff Grafton","jgrafton@google.com","Google","2016-06-01",357,129,13
+"Wei Wei","weiwei.inf@gmail.com","(Unknown)","2017-05-01",14,3,1
+"Jeff Grafton","jgrafton@google.com","Google","2016-06-01",352,127,11
 "Charles Butler","chuck@dasroot.net","Canonical","2016-08-01",5,1,2
 "Chris Seto","chriskseto@gmail.com","Center for Open Science","2016-07-01",1,1,1
+"Garrett Rodrigues","grod@google.com","Google","2017-05-01",207,16,3
 "Yerken","yerken.tussupbekov@zalando.de","Zalando","2017-02-01",1229,613,35
 "Alejandro Escobar","jaescobar.cell@gmail.com","Socrata","2017-03-01",5,2,2
 "Samuel Ortiz","sameo@linux.intel.com","Intel","2017-01-01",192,54,7
@@ -2222,7 +2226,7 @@
 "mdshuai","dma@redhat.com","Red Hat","2016-09-01",1,1,1
 "Juan Ariza Toledano","juan_ariza_cordoba@hotmail.com","Bitnami","2017-01-01",9,9,3
 "Jimmy Cuadra","jimmy@jimmycuadra.com","Jimmy Cuadra","2016-10-01",187,188,5
-"Igor Bazhitov","ibazhitov@virtuozzo.com","Virtuozzo","2017-06-01",12,8,2
+"Igor Bazhitov","ibazhitov@virtuozzo.com","Virtuozzo","2017-06-01",586,14,5
 "Thejas Krishnan","tjskrishna@gmail.com","draios","2017-04-01",5,3,1
 "hchiramm","hchiramm@redhat.com","Red Hat","2017-02-01",195,118,8
 "Erick Fejta","fejta@google.com","Google","2017-05-01",1985,2411,20
@@ -2252,6 +2256,7 @@
 "Md. Ashiquzzaman","ashiquzzaman33@users.noreply.github.com","(Unknown)","2016-10-01",1,1,1
 "Saad Ali","saadali@google.com","Google","2016-11-01",510,410,33
 "Akihiro Harai","jharai0815@gmail.com","(Unknown)","2017-03-01",1,1,1
+"Balaji Subramaniam","balaji.subramaniam@intel.com","Intel","2016-12-01",256,73,5
 "mi","nk_ysg@163.com","Net EASE 网易有态度","2017-04-01",5,5,1
 "Andrew Johnstone","andrew@ajohnstone.com","Photobox","2016-09-01",2,2,2
 "gmarek","gmarek@google.com","Google","2017-05-01",613,466,21
@@ -2261,25 +2266,24 @@
 "Tarun Chinmai","tchinmai7@gmail.com","Akamai Technologies","2016-09-01",1,2,2
 "Casey Davenport","casey@tigera.io","Tigera","2017-06-01",268,58,6
 "Jon Cope","jcope@redhat.com","Red Hat","2017-02-01",339,232,6
-"prateekgogia","prateekgogia@hotmail.com","(Unknown)","2017-06-01",1,1,1
-"Miguel Martinez","miguel@bitnami.com","Bitnami","2016-06-01",192,89,6
+"Andrej van der Zee","andrejvanderzee@gmail.com","(Unknown)","2016-12-01",7,3,2
+"Miguel Martinez","miguel@bitnami.com","Bitnami","2016-06-01",112,49,3
 "Dmitry Shulyak","yashulyak@gmail.com","Mirantis","2017-02-01",268,184,2
 "Elson Rodriguez","elson.rodriguez@gmail.com","Intel","2016-10-01",22,4,2
 "Solly Ross","sross@redhat.com","Red Hat","2017-05-01",5788,2407,19
 "Jainish Shah","jainishshah@yahoo.com","JFrog","2016-12-01",35,23,5
-"Bogdan Dobrelya","bogdando@mail.ru","Mirantis","2017-01-01",516,1086,18
+"William Chang","zhang.wanmin@zte.com.cn","ZTE Corporation","2017-06-01",7,7,2
 "Matthias Lübken","matthias.luebken@gmail.com","Red Hat","2016-09-01",1,1,1
 "Connor Doyle","connordoyle@users.noreply.github.com","Intel","2016-08-01",16,1,1
 "Mark Janssen","mark@praseodym.net","Self","2017-03-01",3,3,1
 "Chris Nesbitt-Smith","chris@cns.me.uk","UK Home Office","2017-02-01",1,1,1
 "Davanum Srinivas","davanum@gmail.com","Mirantis","2017-02-01",410,233,7
 "keglevich3","keglevich2@gmail.com","Self","2016-07-01",1,1,1
-"Mikhail Vyatskov","crassirostris@yandex.com","Google","2017-06-01",10,10,1
 "Tim St. Clair","stclair@google.com","Google","2016-11-01",1562,834,11
 "kayrus","kay.diam@gmail.com","Devops","2017-01-01",4,5,1
 "Dan Williams","dcbw@redhat.com","Red Hat","2017-05-01",240,92,4
 "Luca Bruno","luca.bruno@coreos.com","CoreOS","2017-02-01",33,33,2
-"Chao Xu","xuchao@google.com","Google","2017-06-01",1464,749,16
+"Chao Xu","xuchao@google.com","Google","2017-06-01",22456,47141,43
 "Alexander Kanevskiy","alexander.kanevskiy@intel.com","Intel","2016-12-01",16,12,4
 "Eric Tune","etune@google.com","Google","2016-09-01",25,0,2
 "Pengfei Ni","feiskyer@gmail.com","Hyper.sh","2016-11-01",3123,2293,28
@@ -2287,13 +2291,14 @@
 "Steven E. Harris","seharris@us.ibm.com","IBM","2017-05-01",10,24,4
 "Remon Lam","remon.lam@lamnet.nl","ContainerStack.io","2016-12-01",1,0,1
 "David Ashpole","dashpole@google.com","Google","2017-05-01",589,536,13
+"Timothy St. Clair","timothysc@gmail.com","Heptio","2017-06-01",42,2348,1
 "Lucas Käldström","lucas.kaldstrom@hotmail.co.uk","Rook","2017-04-01",233,2082,9
 "Brad Beam","brad.beam@b-rad.info","NotFound","2017-04-01",31,22,6
 "Antoine Pelisse","apelisse@google.com","Google","2017-03-01",4176,1656,58
 "Angus Salkeld","asalkeld@mirantis.com","Mirantis","2016-06-01",906,28,4
 "Hui-Zhi","zhaohuizhi@gmail.com","(Unknown)","2016-07-01",10,1,1
 "Matt Brown","mattbrown@spotify.com","Spotify","2017-06-01",56,56,1
-"Xiaoyu Zhang","zhang.xiaoyu33@zte.com.cn","ZTE Corporation","2017-05-01",159,84,21
+"Xiaoyu Zhang","zhang.xiaoyu33@zte.com.cn","ZTE Corporation","2017-05-01",160,88,22
 "Fabio Yeon","fabioy@google.com","Google","2016-09-01",94,73,2
 "Ian Burrell","ianburrell@gmail.com","comScore","2017-06-01",23,10,1
 "Pan Luo","xcompass@gmail.com","Self","2017-02-01",6,6,2
@@ -2301,6 +2306,7 @@
 "Mike Plavsky","mikhail.plavskiy@quest.com","Quest Software","2017-06-01",2,2,1
 "timchenxiaoyu","837829664@qq.com","NotFound","2017-03-01",16,16,13
 "Eric Chiang","eric.chiang.m@gmail.com","CoreOS","2016-09-01",463,1604,4
+"Dan Walsh","dwalsh@redhat.com","Red Hat","2017-06-01",16,8,3
 "Shashidhara T D","shashidhara.td@huawei.com","Huawei","2017-01-01",1278,684,9
 "oulinbao","oulinbao@163.com","Net EASE 网易有态度","2016-11-01",678,596,1
 "Swapnil Kulkarni","me@coolsvap.net","Xoriant","2017-05-01",1,1,1
@@ -2312,11 +2318,13 @@
 "TheCodeAssassin","hoogendijk09@gmail.com","(Unknown)","2017-06-01",1,1,1
 "Ma Shimiao","mashimiao.fnst@cn.fujitsu.com","Fujitsu","2017-05-01",1,3,2
 "System Administrator","bdontu@vmware.com","VMware","2017-02-01",148,75,4
+"Mayank Kumar","mayank.kumar@salesforce.com","SalesForce","2017-06-01",6,6,1
 "Spencer Smith","robertspencersmith@gmail.com","Solinea","2016-09-01",455,28,1
 "Tomasz Napierala","tomasz@napierala.org","Mirantis","2017-02-01",1,1,1
 "Jisoo Park","xxxyel@gmail.com","(Unknown)","2016-07-01",1,1,1
 "Sergiusz Urbaniak","sur@coreos.com","CoreOS","2016-10-01",283,477,8
 "Piotr Skamruk","pskamruk@mirantis.com","Mirantis","2016-10-01",13,6,3
+"Travis Cline","travis.cline@gmail.com","ScriptDash","2017-06-01",14,6,1
 "Mikhail Vyatskov","crassirostris@yandex.com","Google","2017-03-01",44,30,3
 "bindata-mockuser","ronl@google.com","Google","2016-07-01",1289,854,16
 "Tarvi Pillessaar","tarvi@salemove.com","SaleMove","2016-12-01",24,10,2
@@ -2327,6 +2335,7 @@
 "Aaron Schlesinger","arschles@gmail.com","Engine Yard","2017-03-01",690,213,22
 "Omer Zach","omer.zach@gmail.com","Facebook","2016-12-01",1,1,1
 "billy2180","wang.bin21@zte.com.cn","ZTE Corporation","2017-05-01",52,52,3
+"Matt Snoby","snobym@cisco.com","Cisco","2017-04-01",47,15,3
 "Jing Xu","jinxu@google.com","Google","2017-06-01",6,6,1
 "Philip Champon","pchampon@gmail.com","Adaptly","2017-04-01",1354,27,4
 "gregoplex","gregoplex@gmail.com","(Unknown)","2017-01-01",11,11,2
@@ -2388,22 +2397,22 @@
 "Matthew Wong","mawong@redhat.com","Red Hat","2016-12-01",3742,1758,80
 "Wojciech Tyczynski","wojtekt@google.com","Google","2016-12-01",4305,1693,47
 "Mik Vyatskov","vmik@google.com","Google","2017-01-01",608,481,12
-"Andrej van der Zee","andrejvanderzee@gmail.com","(Unknown)","2016-12-01",7,3,2
+"Alexander Staubo","alex@bengler.no","BENGLER","2016-07-01",3,1,3
 "Davide Agnello","davideagnello@gmail.com","HP","2016-09-01",32,0,2
 "Ramkumar Devanathan","ramd@hpe.com","HP","2017-04-01",1,1,1
 "William Denniss","wdenniss@google.com","Google","2017-03-01",8,3,2
 "Janet Kuo","chiachenk@google.com","Google","2017-03-01",1169,432,20
 "Charlie Drage","charlie@charliedrage.com","Red Hat","2016-11-01",186,39,9
-"Michelle Noorali","michelle@deis.com","DEIS","2016-06-01",168,22,8
-"Vladimir Vivien","vladimir.vivien@gmail.com","Dell","2017-03-01",159,38,4
-"Janet Kuo","chiachenk@google.com","Google","2016-12-01",81103,7965,17
+"Michelle Noorali","michelle@deis.com","DEIS","2016-06-01",135,16,7
+"Dan Walsh","dwalsh@redhat.com","Red Hat","2017-02-01",9,9,1
+"Robin Percy","robin@trinimbus.com","TriNimbus","2017-03-01",62,48,2
 "yupengzte","yu.peng36@zte.com.cn","ZTE Corporation","2017-05-01",18,15,12
 "Qin Wang","qin.wang@intel.com","Intel","2017-03-01",140,53,3
 "henry.nash@uk.ibm.com","henry.nash@uk.ibm.com","IBM","2016-12-01",1,1,1
 "Eric Paris","eparis@redhat.com","Red Hat","2016-08-01",96,74,8
 "gmarek","gmarek@google.com","Google","2017-01-01",2020,129,8
 "Kent Rancourt","kent@deis.com","DEIS","2017-04-01",859,2654,15
-"Seigo Uchida","spesnova@gmail.com","Increments","2016-06-01",2,2,1
+"Dan Walsh","dwalsh@redhat.com","Red Hat","2017-03-01",101,41,10
 "Jaipradeesh Janarthanan","jaipradeesh@gmail.com","DoSelectHQ","2017-05-01",18,4,3
 "kshafiee","kshafiee@users.noreply.github.com","Huawei","2017-05-01",1,0,1
 "gajju26","graut@us.ibm.com","IBM","2017-02-01",7,3,1
@@ -2450,14 +2459,14 @@
 "Kevin Taylor","kevtaylor@expedia.com","Expedia","2017-04-01",142,17,3
 "Smaine Kahlouch","smainklh@gmail.com","Morea","2016-08-01",98,52,5
 "Christopher M. Luciano","cmluciano@us.ibm.com","IBM","2017-04-01",125,4,4
-"Brendan Burns","bburns@microsoft.com","Microsoft","2017-06-01",208847,13,6
+"Brendan Burns","bburns@microsoft.com","Microsoft","2017-06-01",208978,23,8
 "Bruno","bcorijn@users.noreply.github.com","woorank","2017-05-01",11,4,1
 "Kevin Kirsche","kev.kirsche+github@gmail.com","Verizon","2017-06-01",1,1,1
 "Suraj Deshmukh","surajssd009005@gmail.com","Red Hat","2017-02-01",83,61,2
 "Robert Bailey","robertbailey@google.com","Google","2016-12-01",132,0,1
 "Ryan Hitchman","rmmh@google.com","Google","2017-06-01",833,107,9
 "John Felten","john@zenzic.com","Zenzic","2017-05-01",97,22,2
-"Huamin Chen","hchen@redhat.com","Red Hat","2016-07-01",1649,2,3
+"juanvallejo","jvallejo@redhat.com","Red Hat","2017-01-01",108,16,6
 "Danny Davidson","dannydavidson@users.noreply.github.com","(Unknown)","2017-01-01",21,13,1
 "David Oppenheimer","davidopp@google.com","Google","2016-10-01",41,290,2
 "Matthew Heon","mheon@redhat.com","Red Hat","2017-05-01",5,5,2
@@ -2488,7 +2497,7 @@
 "Eric Paris","eparis@redhat.com","Red Hat","2017-03-01",151,67,4
 "Ben Balter","ben.balter@github.com","GitHub","2016-12-01",985,998,17
 "Jeff Zellner","jeffz@eml.cc","Gravitational","2016-07-01",1,1,1
-"Cesarini, Daniele","daniele.cesarini@sky.uk","Sky","2017-03-01",1,1,1
+"Joao Morais","jcmoraisjr@gmail.com","SERPRO","2017-03-01",324,17,5
 "David Michael","dave.michael@ntlworld.com","Zeet","2016-12-01",1,3,1
 "William Martin Stewart","zoidbergwill@gmail.com","Superbalist","2017-06-01",9,4,2
 "Evan Pease","evan.pease@gmail.com","LucidWorks","2016-12-01",329,31,6
@@ -2498,7 +2507,7 @@
 "Ivan Shvedunov","ishvedunov@mirantis.com","Mirantis","2016-12-01",4,7,2
 "Charlie Drage","charlie@charliedrage.com","Red Hat","2017-05-01",191,118,9
 "Marvin Froeder","velo@users.noreply.github.com","(Unknown)","2017-05-01",1,1,1
-"David McMahon","djmm@google.com","Google","2016-06-01",940,164,14
+"Saad Ali","saadali@google.com","Google","2016-07-01",1268,209,8
 "Jeff Grafton","jgrafton@google.com","Google","2017-02-01",781,17299,25
 "gmarek","gmarek@google.com","Google","2016-11-01",1142,575,37
 "Ian Quick","ian.quick@gmail.com","Shopify","2017-03-01",2,2,1
@@ -2509,12 +2518,14 @@
 "n-marton","marton.natko@gmail.com","(Unknown)","2017-06-01",9,0,1
 "Connor Doyle","connor.p.doyle@intel.com","Intel","2016-09-01",896,72,3
 "du0625","leave24534@gmail.com","NotFound","2017-02-01",5,3,1
-"CJ Cullen","cjcullen@google.com","Google","2016-06-01",288,55,4
+"CJ Cullen","cjcullen@google.com","Google","2016-06-01",78,23,2
+"Cole Mickens","cole.mickens@gmail.com","Microsoft","2016-06-01",102,60,3
 "Michelle Noorali","michelle@deis.com","DEIS","2017-05-01",550,228,7
 "mwringe","mwringe@redhat.com","Red Hat","2017-03-01",126,4,1
-"Connor Doyle","connor.p.doyle@intel.com","Intel","2016-10-01",171,150,4
+"dlorenc","dlorenc@google.com","Google","2016-12-01",228,44,6
 "Jimmy Cuadra","jimmy@jimmycuadra.com","Jimmy Cuadra","2016-09-01",42,1,2
 "Angus Salkeld","asalkeld@mirantis.com","Mirantis","2016-09-01",155,57,5
+"Gary Lucas","lucas.gary@gmail.com","(Unknown)","2017-06-01",1,1,1
 "Jacek J. Łakis","jacek.lakis@intel.com","Intel","2017-03-01",7,7,1
 "Ben Gardner","bgardner@redhat.com","Red Hat","2016-07-01",104,16,4
 "Paweł Skrzyński","pawel.skrzynski@intel.com","Intel","2017-03-01",12,9,1
@@ -2523,11 +2534,10 @@
 "Michael Kibbe","mkibbe@google.com","Google","2017-04-01",207,68,6
 "Daniel Smith","dbsmith@google.com","Google","2017-05-01",865,1084,5
 "Joe Beda","joe.github@bedafamily.com","Google","2016-08-01",1016,925,6
-"Steve Gordon","stephen.a.gordon@gmail.com","Red Hat","2016-06-01",1,1,1
 "Jacek N","jacek.nykis@canonical.com","Canonical","2017-05-01",1,1,1
 "Ricardo M. Augusto","rmaugusto@gmail.com","OrusPay","2017-02-01",4,4,2
 "ZhiFeng Hu","hufeng1987@gmail.com","Douyu.com","2017-04-01",1,1,1
-"hchiramm","hchiramm@redhat.com","Red Hat","2017-06-01",53,45,4
+"hchiramm","hchiramm@redhat.com","Red Hat","2017-06-01",74,67,5
 "Scott Creeley","screeley@redhat.com","Red Hat","2017-02-01",3,1,1
 "Xing Zhou","xingzhou@cn.ibm.com","IBM","2017-02-01",642,60,5
 "Ladicle","ladiclexxx@gmail.com","NTT","2017-02-01",5,1,2
@@ -2598,13 +2608,12 @@
 "Casey Davenport","casey@tigera.io","Tigera","2017-05-01",2,19,1
 "Smaine Kahlouch","smainklh@gmail.com","Morea","2016-07-01",569,147,9
 "Itamar Ostricher","itamarost@gmail.com","Yowza Ltd.","2017-03-01",1,1,1
-"Vojtech Vitek","vojtech.vitek@pressly.com","Pressly","2017-03-01",5,5,2
 "Harsha Yalamanchili","harsha@earnest.com","Earnest","2016-10-01",1,1,1
 "yarntime@163.com","yarntime@163.com","Net EASE 网易有态度","2016-11-01",154,9,6
 "Jeff Schroeder","jeffschroeder@computer.org","IEEE Computer Society","2017-03-01",4,4,1
 "Samuel Ortiz","sameo@linux.intel.com","Intel","2017-02-01",116,52,4
 "Davanum Srinivas","davanum@gmail.com","Mirantis","2016-11-01",21,10,7
-"Zach Loafman","zml@google.com","Google","2016-06-01",174,118,17
+"Zach Loafman","zml@google.com","Google","2016-06-01",150,109,14
 "Pengfei Ni","feiskyer@gmail.com","Hyper.sh","2016-12-01",1045,884,16
 "Qiming Teng","tengqim@cn.ibm.com","IBM","2017-04-01",1,1,1
 "Dennis Webb","dennis@bluesentryit.com","Blue Sentry","2017-01-01",118,0,1
@@ -2640,16 +2649,17 @@
 "Doug Davis","dug@us.ibm.com","IBM","2016-11-01",7,48,2
 "Ghe Rivero","ghe.rivero@gmail.com","HP","2017-01-01",7,2,1
 "ravisantoshgudimetla","ravisantoshgudimetla@gmail.com","Red Hat","2017-04-01",207,112,4
-"Jeff Grafton","jgrafton@google.com","Google","2017-06-01",223,145,29
+"Jeff Grafton","jgrafton@google.com","Google","2017-06-01",315,213,36
 "Zach Loafman","zml@google.com","Google","2017-01-01",538,394,26
 "Genti Topija","genti.t@gmail.com","Banzai Media","2016-12-01",4,0,1
 "Clayton Coleman","ccoleman@redhat.com","Red Hat","2016-08-01",231,69,7
 "Random-Liu","lantaol@google.com","Google","2017-04-01",2412,256,11
-"Shyam Jeedigunta","shyamjvs@google.com","Google","2017-06-01",16,7,5
+"Shyam Jeedigunta","shyamjvs@google.com","Google","2017-06-01",18,7,6
 "Seungcheol Ko","sngchlko@gmail.com","(Unknown)","2017-05-01",1,1,1
 "Eyal Levin","eyalev@gmail.com","Breezometer","2016-07-01",3,4,4
 "Saad Ali","saadali@google.com","Google","2017-05-01",19,20,2
 "Sergey Lukjanov","me@slukjanov.name","Mirantis","2017-06-01",4,4,1
+"Paulo Bittencourt","paulo@wattpad.com","Wattpad","2017-01-01",1,1,1
 "Kasper Bentsen","kasper@firemango.dk","(Unknown)","2017-02-01",1,1,1
 "Alexander Brandstedt","alexanderbrandstedt@gmail.com","EA DICE","2017-05-01",4,4,1
 "Alexander Ilyin","alexanderilyin@users.noreply.github.com","Badoo","2017-01-01",11,7,2
@@ -2696,7 +2706,6 @@
 "Timothy St. Clair","tstclair@redhat.com","Red Hat","2016-06-01",4,2,1
 "jay vyas","jay@apache.org","Apache","2017-04-01",105,8,2
 "Xiang","xiangli.cs@gmail.com","CoreOS","2017-06-01",8,2,1
-"David Oppenheimer","davidopp@google.com","Google","2016-06-01",1,1,1
 "Bjorn Swift","bjorn@asana.com","Asana","2016-08-01",4,2,1
 "Joey Pereira","legojoey17@gmail.com","Stripe","2017-06-01",1,1,1
 "Timothy St. Clair","tstclair@redhat.com","Red Hat","2016-09-01",485,340,5
@@ -2716,7 +2725,7 @@
 "Sen Lu","senlu@google.com","Google","2017-02-01",3930,8376,49
 "Gyu-Ho Lee","gyuhox@gmail.com","CoreOS","2016-11-01",1,1,1
 "Michail Kargakis","mkargaki@redhat.com","Red Hat","2016-06-01",2179,1831,5
-"Ricky Pai","rickyp999@gmail.com","Airbnb","2017-05-01",56,8,2
+"Ricky Pai","rickyp999@gmail.com","Airbnb","2017-05-01",107,11,3
 "Luke Marsden","me@lukemarsden.net","Luke Marsden","2016-10-01",1,1,1
 "Steve Sloka","slokas@upmc.edu","UPMC","2017-02-01",500,255,4
 "Evgeny L","eli@mirantis.com","Mirantis","2016-09-01",180,50,16
@@ -2734,10 +2743,11 @@
 "Geosung Lee","github@arar.io","(Unknown)","2017-04-01",4,3,1
 "Shashidhara T D","shashidhara.td@huawei.com","Huawei","2017-06-01",41,48,6
 "Dominika Hodovska","dhodovsk@redhat.com","Red Hat","2016-12-01",27,12,3
-"Josh Conant","deathbeforedishes@gmail.com","EMC","2017-01-01",1063,2,1
+"Jonathan Yu","jawnsy@redhat.com","Red Hat","2016-09-01",11,12,3
 "Jess Frazelle","me@jessfraz.com","Google","2016-08-01",118,62,6
 "Pieter Lange","pieter@ptlc.nl","PTLC","2016-11-01",452,59,15
 "markturansky","mturansk@redhat.com","Red Hat","2016-10-01",26,19,1
+"Jeremy Visser","jeremyvisser@google.com","Google","2017-06-01",11,11,2
 "Tomas Nozicka","tnozicka@gmail.com","Red Hat","2017-06-01",7,2,1
 "Pierre Ozoux","pierre@ozoux.net","indiehosters","2017-05-01",1,1,1
 "Suraj Deshmukh","surajssd009005@gmail.com","Red Hat","2017-01-01",38,34,3
@@ -2757,15 +2767,16 @@
 "Tom von Schwerdtner","tomvons@gmail.com","CoverMyMeds","2016-11-01",2,0,1
 "Pablo Guerrero","pablo.guerrero@gmail.com","SAP","2016-09-01",2,2,1
 "Steve Perry","steveperry-53@users.noreply.github.com","Google","2017-01-01",276,97,2
+"nikhiljindal","nikhiljindal@google.com","Google","2016-06-01",1180,654,4
 "Matthew Wong","mawong@redhat.com","Red Hat","2017-01-01",6629,603,63
 "Dmitry Shulyak","yashulyak@gmail.com","Mirantis","2016-11-01",184,17,2
-"Prashanth B","beeps@google.com","Google","2016-06-01",708,193,15
+"Prashanth B","beeps@google.com","Google","2016-06-01",250,114,10
 "Greg Taylor","gtaylor@users.noreply.github.com","Reddit","2016-12-01",243,3,3
 "Matt Farina","matt@mattfarina.com","HP","2017-01-01",7,8,1
 "Paulo Pires","pjpires@gmail.com","Apprenda","2017-03-01",1,0,1
 "Amanda Cameron","git@amanda.darkdna.net","DarkDNA","2017-02-01",9,9,2
 "Anurag Goel","_@anur.ag","Stripe","2017-01-01",25,2,3
-"Phillip Wittrock","pwittroc@google.com","Google","2017-06-01",1003,379,29
+"Phillip Wittrock","pwittroc@google.com","Google","2017-06-01",2044,802,43
 "Almog Baku","almogbaku@rimoto.com","Rimoto","2016-12-01",1,1,1
 "Andrew Martin","sublimino@gmail.com","Devops","2017-06-01",2,0,1
 "foxyriver","liu.hao89@zte.com.cn","ZTE Corporation","2017-03-01",3,3,2
@@ -2773,16 +2784,15 @@
 "Manjunath A Kumatagi","mkumatag@in.ibm.com","IBM","2017-02-01",3,3,2
 "Gerd Aschemann","gerd@aschemann.net","Self","2016-07-01",26,20,3
 "pweil-","pweil@redhat.com","Red Hat","2016-08-01",1121,29,3
-"Ryan Hitchman","rmmh@google.com","Google","2016-06-01",805,263,12
+"Ryan Hitchman","rmmh@google.com","Google","2016-06-01",549,231,9
 "Richard E. Silverman","res@qoxp.net","Arcesium","2017-04-01",1,1,1
 "Daniel P. Berrange","berrange@redhat.com","Red Hat","2016-11-01",25,37,9
-"Joe Finney","spxtr@users.noreply.github.com","Google","2016-06-01",93,31,6
+"Hai Huang","haih@us.ibm.com","IBM","2016-09-01",1,1,1
 "tompizmor","tompizmor@users.noreply.github.com","tompizmor Bitnami","2017-05-01",83,12,1
 "Avesh Agarwal","avagarwa@redhat.com","Red Hat","2017-05-01",1,1,1
 "houjun","hou.jun2@zte.com.cn","ZTE Corporation","2017-03-01",2,2,2
 "Jon Chiu","jon@jonchiu.com","confluentinc","2017-03-01",4,0,1
 "joshrosso","joshrosso@gmail.com","Hyland Software","2016-10-01",1,1,1
-"Christian Bell","csbell@google.com","Google","2017-06-01",2,3,1
 "Morgan Bauer","mbauer@us.ibm.com","IBM","2016-09-01",0,4,1
 "xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2016-10-01",9,9,3
 "Clayton Coleman","ccoleman@redhat.com","Red Hat","2017-05-01",16969,4879,57
@@ -2827,13 +2837,13 @@
 "Tomas Kral","tkral@redhat.com","Red Hat","2017-06-01",107,2,1
 "TRAVIS ALLEN SALAS COX","tcguitar@gmail.com","Cloud Security","2016-11-01",1,1,1
 "Jeff Vance","jvance@redhat.com","Red Hat","2017-02-01",215,98,3
-"Piotr Szczesniak","pszczesniak@google.com","Google","2017-06-01",89,0,1
+"Y.W","devinyan@tencent.com","Tencent","2017-06-01",64,42,2
+"Piotr Szczesniak","pszczesniak@google.com","Google","2017-06-01",109,9,4
 "Vic Iglesias","viglesias@google.com","Google","2016-08-01",260,36,16
 "Alistair Scott","ali.scott@gmail.com","RightScale","2017-02-01",3,3,1
 "Tim Hockin","thockin@google.com","Google","2017-03-01",179,129,9
 "Euan Kemp","euan.kemp@coreos.com","CoreOS","2017-03-01",322,10,4
 "Matthew Fisher","matt.fisher@microsoft.com","Microsoft","2017-06-01",63,4,3
-"CJ Cullen","cjcullen@google.com","Google","2016-08-01",2,1,2
 "Tamer Tas","contact@tmrts.com","Self","2016-08-01",988,739,32
 "Charlie Drage","charlie@charliedrage.com","Red Hat","2017-02-01",883,473,9
 "Sebastain Jug","seb@stianj.ug","Red Hat","2017-05-01",452,146,1
@@ -2851,7 +2861,7 @@
 "CJ Cullen","cjcullen@google.com","Google","2016-11-01",153,27,3
 "Xing Zhou","xingzhou@cn.ibm.com","IBM","2016-08-01",82,31,5
 "Ihor Dvoretskyi","ihor.dvoretskyi@gmail.com","Mirantis","2016-07-01",49,4,4
-"Michail Kargakis","mkargaki@redhat.com","Red Hat","2016-10-01",1589,772,24
+"MaciekPytel","maciekpytel@google.com","Google","2017-05-01",1292,197,13
 "spiddy","dimitris.kapanidis@harbur.io","Harbur.io","2017-04-01",2,1,1
 "Bill","photo.allen@gmail.com","Self","2016-11-01",1,1,1
 "Brandon Cole","brandon.w.cole@gmail.com","Datapipe","2016-12-01",13,1,1
@@ -2876,10 +2886,10 @@
 "Brandon B. Jozsa","bjozsa@jinkit.com","AT&T","2017-06-01",1,0,1
 "deads2k","deads@redhat.com","Red Hat","2016-07-01",3474,555,18
 "Eric Paris","eparis@redhat.com","Red Hat","2017-02-01",22,1,1
-"Lucas Käldström","lucas.kaldstrom@hotmail.co.uk","Rook","2016-06-01",41,3,2
+"Lucas Käldström","lucas.kaldstrom@hotmail.co.uk","Rook","2016-06-01",2,1,1
 "Larry Rensing","larry.rensing@gmail.com","St. Clair County Building and Zoning","2017-02-01",136,38,1
 "Kevin Crawley","kcmastrpc@gmail.com","FAMC-Development","2017-01-01",5,1,1
-"Manjunath A Kumatagi","mkumatag@in.ibm.com","IBM","2016-06-01",15,8,2
+"Manjunath A Kumatagi","mkumatag@in.ibm.com","IBM","2016-06-01",13,8,1
 "shiywang","shiywang@redhat.com","Red Hat","2017-01-01",265,203,4
 "Zach Loafman","zml@google.com","Google","2017-02-01",190,3152,13
 "Maciej Kwiek","mkwiek@mirantis.com","Mirantis","2016-09-01",104,6,3
@@ -2887,9 +2897,9 @@
 "Maciej Kwiek","mkwiek@mirantis.com","Mirantis","2016-08-01",178,375,2
 "Colton Morris","coltonmorris94@gmail.com","(Unknown)","2016-10-01",2,2,1
 "Tom von Schwerdtner","tomvons@gmail.com","CoverMyMeds","2017-02-01",18,47,4
-"Joao Morais","jcmoraisjr@gmail.com","SERPRO","2017-03-01",324,17,5
+"Quentin Nerden","quentin.nerden@stylight.com","(Unknown)","2017-06-01",9,2,1
 "Sascha Brawer","sascha@brawer.ch","Google","2016-10-01",6,6,1
-"Charlie Drage","charlie@charliedrage.com","Red Hat","2017-06-01",4629,750,12
+"Charlie Drage","charlie@charliedrage.com","Red Hat","2017-06-01",4747,810,18
 "Ghe Rivero","ghe.rivero@gmail.com","HP","2016-12-01",2,2,1
 "Vincent De Smet","vincent.drl@gmail.com","(Unknown)","2017-04-01",342,5,2
 "Andrew Pilloud","andrewpilloud@igneoussystems.com","Igneous Systems","2017-04-01",3,2,1
@@ -2897,10 +2907,10 @@
 "Derek Parker","parkerderek86@gmail.com","CoreOS","2016-07-01",8,8,2
 "aniket-contrail","aniket.contrail@gmail.com","(Unknown)","2017-03-01",4,0,1
 "James Gregory","james@jagregory.com","ThoughtWorks","2017-05-01",3,3,1
+"MaciekPytel","maciekpytel@google.com","Google","2017-06-01",451,174,16
 "Dhawal Patel","dhawal55@gmail.com","Nordstrom","2017-05-01",0,2,1
 "Maxim Ivanov","ivanov.maxim@gmail.com","Telemetry.com","2017-02-01",43,23,4
 "xialonglee","li.xialong@zte.com.cn","ZTE Corporation","2016-12-01",38,38,7
-"Colin Hom","colin.hom@coreos.com","CoreOS","2016-06-01",1,0,1
 "Adnan Abdulhussein","adnan@bitnami.com","Bitnami","2016-06-01",239,223,4
 "Marko Luksa","marko.luksa@gmail.com","Red Hat","2017-05-01",232,215,1
 "divyenpatel","divyenp@vmware.com","VMware","2017-06-01",118,90,1
@@ -2912,7 +2922,7 @@
 "Hoat Le","hoatlevan@gmail.com","Teracy","2017-04-01",2,1,1
 "Sergii Golovatiuk","sgolovatiuk@mirantis.com","Mirantis","2017-04-01",179,99,6
 "Rudi Chiarito","rudi@clarifai.com","Clarifai","2016-07-01",198,32,3
-"Dong Liu","doliu@microsoft.com","Microsoft","2017-06-01",58,4,2
+"Dong Liu","doliu@microsoft.com","Microsoft","2017-06-01",242,158,3
 "Cole Mickens","cole.mickens@gmail.com","Microsoft","2017-05-01",119,100,5
 "Aleksandra Malinowska","aleksandram@google.com","Google","2017-04-01",318,37,7
 "thomasschickinger","schickin@google.com","Google","2017-01-01",19,7,1
@@ -2946,8 +2956,7 @@
 "Madhusudan.C.S","madhusudancs@google.com","Google","2017-02-01",706,306,31
 "Eric Mountain @ Amadeus","eric.mountain@amadeus.com","Amadeus","2017-06-01",2,2,1
 "nyener","nilaycoskun4155@gmail.com","Google","2017-06-01",645,19,3
-"Rodolfo Carvalho","rcarvalh@redhat.com","Red Hat","2016-06-01",70,36,1
-"Daniel Smith","dbsmith@google.com","Google","2016-06-01",1090,414,18
+"Daniel Smith","dbsmith@google.com","Google","2016-06-01",989,392,7
 "Jeff Lowdermilk","jeffml@google.com","Google","2016-09-01",120,73,11
 "Hong Zhiguo","zhiguohong@tencent.com","Tencent","2017-02-01",1,0,1
 "Isaac Hollander McCreery","ihmccreery@google.com","Google","2017-04-01",21,17,4
@@ -2968,7 +2977,7 @@
 "Jędrzej Nowak","pigmej@gmail.com","Mirantis","2016-09-01",118,101,4
 "shiywang","shiywang@redhat.com","Red Hat","2016-12-01",2,2,1
 "pospispa","ppospisi@redhat.com","Red Hat","2016-11-01",131,1,3
-"Alexander Staubo","alex@bengler.no","BENGLER","2016-07-01",3,1,3
+"mbohlool","mehdy@google.com","Google","2016-09-01",49498,675,13
 "deads2k","deads@redhat.com","Red Hat","2016-12-01",11794,3417,58
 "Piotr Szczesniak","pszczesniak@google.com","Google","2017-03-01",1726,825,12
 "Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2017-05-01",2,2,2
@@ -2979,14 +2988,14 @@
 "Jodie Putrino","j.putrino@f5.com","F5 Networks","2017-05-01",518,435,2
 "Andrey Sokolov","asokolov@thumbtack.net","Thumbtack Technology","2016-08-01",3,3,1
 "Jing Xu","jinxu@google.com","Google","2017-05-01",2570,1175,7
-"Mike Danese","mikedanese@google.com","Google","2017-06-01",45,24,10
+"Mike Danese","mikedanese@google.com","Google","2017-06-01",185,73,11
 "Alexander D. Kanevskiy","kad@kad.name","Intel","2016-11-01",5,3,1
 "James Cuzella","james.cuzella@lyraphase.com","ReturnPath","2017-06-01",9,1,1
 "Vincent Ambo","tazjin@gmail.com","Goonswarm","2017-01-01",952,766,8
 "Julien Vey","vey.julien@gmail.com","Numergy","2016-10-01",12,12,1
 "Kenan Karamehmedovic","kenan.karamehmedovic@est.fujitsu.com","Fujitsu","2017-06-01",0,84,1
 "Chao Xu","xuchao@google.com","Google","2016-11-01",22332,17465,37
-"Nitish","tiwari.nitish@gmail.com","Tata Consultancy Services","2017-02-01",1208,148,16
+"André Martins","aanm90@gmail.com","Cisco","2017-02-01",34,3,2
 "Ihor Dvoretskyi","ihor@dvoretskyi.com","Mirantis","2017-05-01",6,6,6
 "Piyush Madan","madanpiyush@gmail.com","IBM","2016-09-01",1,1,1
 "Ankur Shukla","ankurshukla@users.noreply.github.com","Google","2016-08-01",0,1,1
@@ -3017,11 +3026,11 @@
 "Dan Bode","bodepd@gmail.com","Bodeco.io","2016-11-01",7,7,2
 "Piotr Siwczak","psiwczak@mirantis.com","Mirantis","2017-05-01",2,2,2
 "Steve Leon","kokhang@gmail.com","HP","2017-05-01",1,1,1
-"Abhinav Dahiya","abhinav.dahiya@coreos.com","CoreOS","2017-06-01",106,80,3
+"Abhinav Dahiya","abhinav.dahiya@coreos.com","CoreOS","2017-06-01",246,84,5
 "Randall McPherson","rlmcpherson@gmail.com","Pindrop","2016-12-01",291,111,9
 "Miguel Ángel Martínez Triviño","migmartri@gmail.com","Bitnami","2016-09-01",722,0,1
 "Nick Turner","nturner4@gmail.com","Tandem Diabetes","2016-10-01",1,1,1
-"Sen Lu","senlu@google.com","Google","2017-06-01",13415,7314,45
+"Sen Lu","senlu@google.com","Google","2017-06-01",15010,8120,53
 "Davanum Srinivas","davanum@gmail.com","Mirantis","2017-04-01",24,39,9
 "Eric Tune","etune@google.com","Google","2016-11-01",34,10,2
 "Steve Sloka","slokas@upmc.edu","UPMC","2016-06-01",8,1,1
@@ -3033,7 +3042,7 @@
 "Sahdev P. Zala","spzala@us.ibm.com","IBM","2017-06-01",1,1,1
 "Shashidhara T D","shashidhara.td@huawei.com","Huawei","2016-11-01",46,33,6
 "Jakob Karalus","jakob.karalus@gmx.net","Codecentric AG","2017-03-01",9,0,1
-"Madhusudan.C.S","madhusudancs@google.com","Google","2016-06-01",239,75,13
+"Madhusudan.C.S","madhusudancs@google.com","Google","2016-06-01",101,19,1
 "Michael Haselton","icereval@gmail.com","Center for Open Science","2016-12-01",1064,526,10
 "Chakravarthy Nelluri","nelcyguy@gmail.com","Diamanti","2017-06-01",129,96,2
 "Timothy St. Clair","timothysc@gmail.com","Heptio","2017-05-01",259,59,5
@@ -3051,7 +3060,7 @@
 "Marcin Maciaszczyk","maciaszczykm@users.noreply.github.com","Fujitsu","2017-03-01",3634,1634,23
 "wlan0","sid@rancher.com","Rancher Labs","2017-03-01",1957,102,8
 "mksalawa","magorzata@google.com","Google","2016-09-01",3719,1302,17
-"Eamon Taaffe","eamontaaffe@gmail.com","Vericus","2017-02-01",3,3,3
+"Christoph Held","christoph.held@est.fujitsu.com","Fujitsu","2016-06-01",77,10,1
 "zhouhaibing089","zhouhaibing089@gmail.com","eBay","2016-09-01",7,1,2
 "David Eads","deads2k@users.noreply.github.com","Red Hat","2016-12-01",8,9,1
 "Sergey Melnik","admin.sa@gmail.com","commercetools","2017-04-01",6,8,1
@@ -3107,7 +3116,7 @@
 "Ajit Kumar","kumaraji@google.com","Google","2017-05-01",13,2,1
 "Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2017-02-01",27,21,5
 "Alain Roy","alainr@vmware.com","VMware","2016-06-01",252,4,1
-"Piotr Szczesniak","pszczesniak@google.com","Google","2016-06-01",3,3,2
+"Piotr Szczesniak","pszczesniak@google.com","Google","2016-06-01",2,2,1
 "Matt Sanford","matt@mzsanford.com","Matt Sanford","2017-02-01",51,0,1
 "Hui Kang","kangh@us.ibm.com","IBM","2017-04-01",3,2,2
 "Andrew Koroluk","koroluka@gmail.com","StoutLLC","2017-05-01",15,0,1
@@ -3117,7 +3126,7 @@
 "Szymon Pyżalski","spyzalski@mirantis.com","Mirantis","2016-07-01",18,2,2
 "Levi Blackstone","levi.blackstone@rackspace.com","Rackspace","2017-05-01",24,0,1
 "Pheo","ryan.coates@gmail.com","EnPointe Technologies","2017-05-01",36,14,1
-"Avesh Agarwal","avesh.ncsu@gmail.com","Red Hat","2016-06-01",19,10,3
+"Avesh Agarwal","avesh.ncsu@gmail.com","Red Hat","2016-06-01",5,0,1
 "Harsh Desai","harsh@portworx.com","portworx","2017-04-01",71,23,1
 "Brandon Philips","brandon.philips@coreos.com","CoreOS","2016-08-01",163,0,3
 "Gustavo Carneiro","gjcarneiro@gmail.com","Gambit Research","2016-10-01",5,2,1
@@ -3136,7 +3145,7 @@
 "mcorbin","corbin.math@gmail.com","Zenika","2017-04-01",684,136,2
 "Matthew Wong","mawong@redhat.com","Red Hat","2016-08-01",793,192,20
 "chentao1596","chen.tao3@zte.com.cn","ZTE Corporation","2016-11-01",10,13,4
-"Cole Mickens","cole.mickens@gmail.com","Microsoft","2016-06-01",131,73,4
+"Daneyon Hansen","danehans@cisco.com","Cisco","2017-06-01",69,5,1
 "Zach Loafman","zml@google.com","Google","2016-10-01",622,432,33
 "Christoph Blecker","admin@toph.ca","Kelowna","2017-02-01",45,49,7
 "xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2016-08-01",8,8,3
@@ -3148,7 +3157,7 @@
 "Guangya Liu","gyliu513@gmail.com","IBM","2017-04-01",21,19,9
 "Marcin Owsiany","marcin@owsiany.pl","Google","2016-12-01",5,1,2
 "Peter Huene","peter@segfault.guru","Microsoft","2017-06-01",1032,100,1
-"Maxim Ivanov","ivanov.maxim@gmail.com","Telemetry.com","2017-05-01",49,530,10
+"Maxim Ivanov","ivanov.maxim@gmail.com","Telemetry.com","2017-05-01",744,1154,12
 "kcluster","iokcluster@gmail.com","(Unknown)","2016-10-01",3,0,1
 "Alexander Block","ablock84@gmail.com","Self","2016-11-01",91,21,5
 "Luke Marsden","me@lukemarsden.net","Luke Marsden","2017-03-01",72,21,3
@@ -3160,11 +3169,12 @@
 "Nick Kubala","nkubala@google.com","Google","2017-05-01",105,52,3
 "Piotr Szczesniak","pszczesniak@google.com","Google","2016-11-01",61,529,8
 "Sean M. Collins","sean@coreitpro.com","Mirantis","2016-09-01",2,42,2
-"Alexander Campbell","alexanderhcampbell@gmail.com","Google","2017-05-01",466,446,25
+"Alexander Campbell","alexanderhcampbell@gmail.com","Google","2017-05-01",727,603,33
+"xinsnake","me@xyzhou.com","(Unknown)","2017-06-01",2,0,1
 "Christoph Held","christoph.held@est.fujitsu.com","Fujitsu","2016-12-01",80,0,1
 "Dr. Stefan Schimanski","stefan.schimanski@gmail.com","Red Hat","2017-06-01",2262,507,20
 "Abrar Shivani","shivania@vmware.com","VMware","2016-09-01",539,21,3
-"Vish Kannan","vishh@users.noreply.github.com","Google","2016-10-01",1,2,2
+"Adam Jedro","jedroadam@gmail.com","Egnyte","2017-03-01",58,64,1
 "Andrey","andrey.chernishov@gmail.com","Outfittery Gmbh","2016-12-01",1,2,1
 "Henning Jacobs","henning@jacobs1.de","Zalando","2017-04-01",12,0,2
 "Nicholas Sledgianowski","nicksledgian@gmail.com","Kenzan","2017-04-01",24,15,1
@@ -3182,7 +3192,7 @@
 "Lantao Liu","taotaotheripper@gmail.com","Google","2017-05-01",94,65,10
 "Avesh Agarwal","avagarwa@redhat.com","Red Hat","2016-11-01",1,0,1
 "Xing Zhou","xingzhou@cn.ibm.com","IBM","2017-05-01",1,1,1
-"Sander van Harmelen","sander@xanzy.io","Schuberg Philis","2016-07-01",958,427,2
+"prateekgogia","prateekgogia@hotmail.com","(Unknown)","2017-06-01",1,1,1
 "mdshuai","dma@redhat.com","Red Hat","2017-02-01",4,4,1
 "Roberto Jung Drebes","drebes@gmail.com","Google","2017-05-01",2,2,1
 "Abrar Shivani","shivania@vmware.com","VMware","2016-07-01",134,67,1
@@ -3193,7 +3203,6 @@
 "Ryan Hitchman","rmmh@google.com","Google","2017-05-01",1367,440,34
 "Sami Hiltunen","git@hiltunen.io","(Unknown)","2016-10-01",10,3,1
 "Ratnadeep Debnath","rtnpro@gmail.com","Red Hat","2016-10-01",149,40,7
-"Salvatore Dario Minonne","salvatore-dario.minonne@amadeus.com","Amadeus","2016-08-01",8,149,1
 "Matt Butcher","mbutcher@engineyard.com","Engine Yard","2016-09-01",6641,1759,18
 "Suraj Deshmukh","surajssd009005@gmail.com","Red Hat","2017-05-01",21,22,2
 "Valentin Tjoncke","nouney@users.noreply.github.com","(Unknown)","2017-03-01",7,1,1
@@ -3211,9 +3220,9 @@
 "spiddy","spiddy@users.noreply.github.com","harbur","2017-03-01",1,2,1
 "Davanum Srinivas","davanum@gmail.com","Mirantis","2016-12-01",1,4,1
 "Mike Danese","mikedanese@google.com","Google","2016-08-01",1236,6205,24
-"deads2k","deads@redhat.com","Red Hat","2017-06-01",900,592,14
+"deads2k","deads@redhat.com","Red Hat","2017-06-01",926,631,15
 "Gavrie Philipson","gavrie@philipson.co.il","Gavrie Philipson","2017-01-01",64,80,6
-"Adam H. Leventhal","ahl@transposit.com","(Unknown)","2017-04-01",1573,46,2
+"MaciekPytel","maciekpytel@google.com","Google","2017-02-01",918,8,12
 "Michelle Au","msau@google.com","Google","2017-02-01",820,478,7
 "Tolleiv Nietsch","tolleiv.nietsch@aoe.com","AOE","2016-06-01",26,4,2
 "Justin Santa Barbara","justin@fathomdb.com","FathomDB","2016-11-01",2269,1144,48
@@ -3223,9 +3232,9 @@
 "Xiang","xiangli.cs@gmail.com","CoreOS","2016-12-01",2804,37,5
 "Xianglin Gao","xlgao@zju.edu.cn","Self","2017-02-01",933,1,6
 "Matt Liggett","mml@google.com","Google","2016-09-01",271,87,12
-"Random-Liu","lantaol@google.com","Google","2016-06-01",350,125,2
+"Random-Liu","lantaol@google.com","Google","2016-06-01",101,11,1
 "Abhishek","abhishek@linux.com","Linux","2017-01-01",1008,133,3
-"Ahmet Alp Balkan","ahmetb@google.com","Google","2017-06-01",90,23,5
+"Ahmet Alp Balkan","ahmetb@google.com","Google","2017-06-01",105,30,7
 "callermann","callermann@gmail.com","(Unknown)","2016-09-01",1,1,1
 "Jean de Klerk","jadekler@gmail.com","Pivotal","2016-10-01",0,1,1
 "Łukasz Oleś","lukaszoles@gmail.com","Mirantis","2017-05-01",3,3,1
@@ -3244,11 +3253,11 @@
 "Devan Goodwin","dgoodwin@redhat.com","Red Hat","2016-08-01",1010,237,6
 "Dan Williams","dcbw@redhat.com","Red Hat","2016-11-01",167,48,1
 "houjun","hou.jun2@zte.com.cn","ZTE Corporation","2017-04-01",3,1,2
-"Spencer Smith","robertspencersmith@gmail.com","Solinea","2017-05-01",178,24,11
+"Spencer Smith","robertspencersmith@gmail.com","Solinea","2017-05-01",224,24,12
 "Martin Linkhorst","martin.linkhorst@zalando.de","Zalando","2016-08-01",3,3,2
 "Fabio Yeon","fabioy@google.com","Google","2016-10-01",202,128,2
-"Jamie Hannaford","jamie.hannaford@rackspace.com","Rackspace","2017-03-01",135,18,3
-"Miguel Ángel Martínez Triviño","migmartri@gmail.com","Bitnami","2016-06-01",1,1,1
+"Adnan Abdulhussein","adnan@prydoni.us","Bitnami","2017-06-01",99,10,2
+"Michail Kargakis","mkargaki@redhat.com","Red Hat","2016-10-01",1589,772,24
 "Matt Liggett","mml@google.com","Google","2017-04-01",234,50,5
 "Derek McQuay","dmcquay@apprenda.com","Apprenda","2016-10-01",1291,141,8
 "Sen Lu","senlu@google.com","Google","2016-12-01",502,4387,24
@@ -3264,6 +3273,7 @@
 "Xiaoyu Zhang","zhang.xiaoyu33@zte.com.cn","ZTE Corporation","2017-04-01",167,174,52
 "Jean-Christophe Sirot","jsirot@weborama.com","Weborama","2016-07-01",12,1,2
 "Hugo Ferreira","hugocf@users.noreply.github.com","Equal Experts","2017-05-01",3,3,1
+"David Newswanger","gamma.dave@gmail.com","Berea College","2016-11-01",6,4,1
 "Kent Rancourt","kent@deis.com","DEIS","2016-10-01",3,4,1
 "sarahnovotny","sarah.novotny@gmail.com","Google","2016-07-01",6,6,4
 "William Chang","warmchang@outlook.com","ZTE Corporation","2017-04-01",13,9,6
@@ -3272,21 +3282,18 @@
 "Kendall Miller","kenm47@users.noreply.github.com","(Unknown)","2017-04-01",1,1,1
 "Justin Ryan","justin.ryan@nytimes.com","The New York Times","2017-01-01",1,1,1
 "Harry Zhang","harryz@hyper.sh","Hyper.sh","2017-01-01",402,344,8
-"m1093782566","dj199008@gmail.com","Huawei","2016-09-01",276,214,9
 "bradley childs","bchilds@redhat.com","Red Hat","2016-10-01",5,4,3
 "John Dewey","john@dewey.ws","Cisco","2017-02-01",18,12,2
 "Nikhita Raghunath","nikitaraghunath@gmail.com","Self","2017-04-01",57,28,2
 "Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2017-01-01",186,84,13
 "Chris Schmich","schmch@gmail.com","Dimpl","2017-03-01",1,1,1
-"Dan Bode","bodepd@gmail.com","Bodeco.io","2016-06-01",24,0,1
 "Sergei Orlov","orlovsergeypost@gmail.com","(Unknown)","2016-10-01",1,1,1
 "Vincent OLLIVIER","vollivier@live.fr","Nuglif","2017-05-01",16,22,2
 "Casey Davenport","casey@tigera.io","Tigera","2016-06-01",37,37,2
 "Xianglin Gao","xlgao@zju.edu.cn","Self","2016-10-01",216,274,1
 "Vince Montalbano","vince.montalbano@gmail.com","iHeart Media","2016-12-01",67,25,6
-"Ivan Shvedunov","ivan4th@gmail.com","Mirantis","2016-06-01",106,48,1
+"Vaughn Dice","vaughn@deis.com","DEIS","2017-01-01",117,46,1
 "Bjarke Vad Andersen","bjarke.vad90@gmail.com","Dixa","2016-11-01",1,1,1
-"Yifan Gu","yifan.gu@coreos.com","CoreOS","2016-06-01",180,217,5
 "bruceauyeung","ouyang.qinhua@zte.com.cn","ZTE Corporation","2017-02-01",613,236,11
 "Jan Willies","jan.willies@accenture.com","Accenture","2017-03-01",0,1,1
 "Shyam Jeedigunta","shyamjvs@google.com","Google","2017-05-01",3535,4429,41
@@ -3302,7 +3309,7 @@
 "Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2017-03-01",69,19,5
 "Thien-Thi Nguyen","tnguyen@redhat.com","Red Hat","2016-07-01",1,1,1
 "Sen Lu","senlu@google.com","Google","2017-04-01",4203,964,16
-"Julien Balestra","julien.balestra@gmail.com","42","2017-05-01",105,53,1
+"Scott Weiss","sdw35@cornell.edu","(Unknown)","2017-06-01",534,22,1
 "caleb miles","calebamiles@users.noreply.github.com","Ceph","2016-12-01",37,1341,13
 "Kasper Bentsen","kasper@firemango.dk","(Unknown)","2017-05-01",1,0,1
 "gmarek","gmarek@google.com","Google","2016-07-01",2850,1548,22
@@ -3312,17 +3319,17 @@
 "Matt T. Proud","matt.proud@gmail.com","Google","2016-08-01",5,7,1
 "Andy Hume","andyhume@gmail.com","Brandwatch","2017-05-01",1,1,1
 "Bowei Du","bowei@google.com","Google","2017-03-01",3245,2718,9
-"Maisem Ali","maisem@google.com","Google","2016-06-01",334,205,1
 "Jesse Haka","jesse.haka@elisa.fi","Elisa","2017-04-01",50,50,5
 "Amey Deshpande","ameyd@google.com","Google","2016-08-01",59,52,2
 "Jordan Liggitt","jliggitt@redhat.com","Red Hat","2017-03-01",2287,1061,58
 "Steve Stodola","sstodola@plytro.com","Shutterstock","2017-02-01",20,2,1
 "Lantao Liu","taotaotheripper@gmail.com","Google","2017-01-01",1050,102,10
 "haoyuan","haoyuan.ge@caicloud.io","Caicloud","2017-04-01",29,8,3
-"Maciej Pytel","maciekpytel@google.com","Google","2017-05-01",1292,197,13
+"Cao Shufeng","caosf.fnst@cn.fujitsu.com","Fujitsu","2017-02-01",43,16,5
 "Alan Jones","watercraftsoftware@gmail.com","(Unknown)","2017-05-01",13,4,1
 "Stefano Vozza","svozza@gmail.com","Trinity Mirror","2017-05-01",13,2,2
 "Alexander Block","ablock84@gmail.com","Self","2017-02-01",55,7,3
+"Kir Shatrov","kirs@users.noreply.github.com","Shopify","2017-02-01",2,0,1
 "Antoine Pelisse","apelisse@google.com","Google","2016-12-01",15,48,3
 "David Radcliffe","radcliffe.david@gmail.com","Ruby Together","2016-10-01",2,2,1
 "Frederic Hemberger","mail@frederic-hemberger.de","Self","2017-05-01",1,1,1
@@ -3335,7 +3342,7 @@
 "Felix Bünemann","buenemann@louis.info","LOUISINTERNET","2016-10-01",31,20,1
 "Jakob Jarosch","dev@jakobjarosch.de","itdesign GmbH","2017-01-01",51,0,1
 "Michael Mrowetz","michael.mrowetz@cdnetworks.co.kr","CDNetworks Korea","2017-01-01",20,3,4
-"Madhusudan.C.S","madhusudancs@gmail.com","FOSSEE","2017-06-01",73,11,7
+"Madhusudan.C.S","madhusudancs@google.com","Google","2017-06-01",85,11,8
 "ailusazh","ailusazh@126.com","JD.COM","2017-05-01",1,1,1
 "Jan Chaloupka","jchaloup@redhat.com","Red Hat","2016-12-01",431,173,14
 "Bart Van Bos","bart.vanbos@rombit.be","Rombit","2016-08-01",4,2,2
@@ -3344,7 +3351,7 @@
 "andy xie","andy.xning@gmail.com","Self","2017-06-01",4,28,2
 "Dawn Chen","dawnchen@google.com","Google","2016-07-01",0,23,1
 "Jonathan Pulsifer","jonathan@pulsifer.ca","Shopify","2017-05-01",1,1,1
-"Garrett Rodrigues","grod@google.com","Google","2017-05-01",207,16,3
+"supereagle","jmyue@hotmail.com","Self","2017-06-01",1,1,1
 "Matt Farina","matt@mattfarina.com","HP","2017-02-01",4,0,1
 "Garrett Rodrigues","grod@google.com","Google","2017-01-01",435,199,30
 "Peter Styk","peter@styk.tv","Madcore","2017-04-01",4,0,1
@@ -3353,8 +3360,8 @@
 "Michael Fraenkel","michael.fraenkel@gmail.com","JPMorgan Chase & Co.","2017-03-01",103,29,4
 "anatoly techtonik","techtonik@gmail.com","Pear","2017-05-01",9,7,4
 "mozhuli","21621232@zju.edu.cn","Self","2017-05-01",218,28,2
-"ublubu","kynan.rilee@gmail.com","Google","2017-06-01",220,8,4
-"Jonathan MacMillan","dvorak@google.com","Google","2017-05-01",268,62,3
+"ublubu","kynan.rilee@gmail.com","Google","2017-06-01",224,9,5
+"Jonathan MacMillan","dvorak@google.com","Google","2017-05-01",960,836,4
 "Mark S. Maglana","mmaglana@gmail.com","Teradata Aster","2016-12-01",3,0,1
 "Casey Davenport","casey@tigera.io","Tigera","2016-09-01",227,53,5
 "Christoph Blecker","admin@toph.ca","Kelowna","2017-04-01",1191,143,7
@@ -3364,7 +3371,7 @@
 "Jordan Liggitt","jliggitt@redhat.com","Red Hat","2016-08-01",1316,574,14
 "Ethan Chu","xychu2008@gmail.com","Red Hat","2017-05-01",86,36,4
 "Jeff Lowdermilk","jeffml@google.com","Google","2017-02-01",396,144,2
-"Adrian Ursu","development@advance-leap.com","OpenCredo","2016-09-01",1,0,1
+"Ricky Pai","rickyp999+github@gmail.com","(Unknown)","2017-06-01",752,745,7
 "Mik Vyatskov","vmik@google.com","Google","2016-09-01",488,488,4
 "Kris","krousey@google.com","Google","2017-06-01",2,0,1
 "Jordan Jennings","jordanjennings@gmail.com","(Unknown)","2017-06-01",10,5,1
@@ -3379,6 +3386,7 @@
 "Pierre Ozoux","pierre@ozoux.net","indiehosters","2017-04-01",2,2,2
 "Yu-Ju Hong","yjhong@google.com","Google","2016-08-01",1676,878,15
 "Jamie Hannaford","jamie.hannaford@rackspace.com","Rackspace","2017-04-01",2479,1305,8
+"Seth Jennings","sjenning@redhat.com","Red Hat","2017-06-01",11,0,1
 "guangxuli","li.guangxu@zte.com.cn","ZTE Corporation","2017-02-01",1,1,1
 "Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2016-10-01",125,115,2
 "emaildanwilson","emaildanwilson@gmail.com","Concur","2017-05-01",155,42,3
@@ -3394,7 +3402,7 @@
 "Valentyn Boginskey","vboginskey@gmail.com","Greenhouse Software","2017-04-01",12,1,1
 "Julien Pivotto","roidelapluie@inuits.eu","Inuits","2017-02-01",42,41,1
 "ihutchin","ianeta.hutchinson@intel.com","Intel","2017-03-01",381,362,2
-"Yamagami-Takuma","yamagami.takuma@jp.fujitsu.com","Fujitsu","2016-06-01",19,19,2
+"AlmogBaku","almog.baku@gmail.com","Rimoto","2017-06-01",392,100,2
 "Avesh Agarwal","avagarwa@redhat.com","Red Hat","2017-02-01",2290,1107,10
 "Jonathan Chauncey","jchauncey@deis.com","DEIS","2017-04-01",4,5,2
 "Maru Newby","marun@redhat.com","Red Hat","2016-10-01",16,0,1
@@ -3405,17 +3413,18 @@
 "Avesh Agarwal","avagarwa@redhat.com","Red Hat","2017-06-01",131,242,3
 "Ben Hall","ben@benhall.me.uk","Ben Hall","2016-10-01",11,11,1
 "Daniel Fernandes Martins","daniel.martins@descomplica.com.br","Descomplica","2017-06-01",5,33,2
-"Dominika Hodovska","dhodovsk@redhat.com","Red Hat","2016-06-01",453,87,2
+"Dominika Hodovska","dhodovsk@redhat.com","Red Hat","2016-06-01",449,85,1
 "mtanino","mitsuhiro.tanino@hds.com","Hitachi Data Systems","2017-05-01",107,47,1
 "Lucas Serven","lucas.serven@coreos.com","CoreOS","2016-12-01",72,1,1
 "liyao","maxwell92@126.com","(Unknown)","2017-03-01",3,3,2
-"shawyeok","kmter@live.com","(Unknown)","2017-01-01",202,54,1
+"Dan Walsh","dwalsh@redhat.com","Red Hat","2016-10-01",315,113,14
 "Xing Zhou","xingzhou@cn.ibm.com","IBM","2017-01-01",622,4,4
 "Michal Rostecki","mrostecki@mirantis.com","Mirantis","2016-08-01",120,47,3
 "Charlie Drage","charlie@charliedrage.com","Red Hat","2017-03-01",350,85,21
 "Rohit Agarwal","agarwalrohit@google.com","Google","2017-05-01",11,5,5
 "Daniel Sachse","mail@wombatsoftware.de","Wombat Software UG","2016-11-01",3,3,1
 "Vít Listík","tivvit@seznam.cz","Seznam.cz","2016-09-01",1,1,1
+"Joe Finney","spxtr@users.noreply.github.com","Google","2016-06-01",5,4,1
 "Michelle Noorali","michelle@deis.com","DEIS","2017-02-01",986,406,7
 "moss2k13","moss2k03@yahoo.com","(Unknown)","2017-05-01",1,1,1
 "Morgan Bauer","mbauer@us.ibm.com","IBM","2016-08-01",17,6,2
@@ -3454,18 +3463,18 @@
 "Colin Hom","colhom@gmail.com","NotFound","2016-07-01",2,6,2
 "Spencer Smith","robertspencersmith@gmail.com","Solinea","2016-07-01",1,1,1
 "Yifan Gu","yifan.gu@coreos.com","CoreOS","2017-06-01",29,15,3
-"Patrick Baxter","pb@coreos.com","CoreOS","2017-06-01",61,13,8
-"Lantao Liu","taotaotheripper@gmail.com","Google","2017-06-01",441,441,3
+"Patrick Baxter","pb@coreos.com","CoreOS","2017-06-01",181,22,11
+"Lantao Liu","taotaotheripper@gmail.com","Google","2017-06-01",540,546,4
 "Tomas Kral","tkral@redhat.com","Red Hat","2017-01-01",443,551,12
 "Ed Robinson","ed@reevoo.com","Reevoo","2017-06-01",3,2,1
 "Seth Jennings","sjenning@redhat.com","Red Hat","2017-02-01",580,466,8
 "John Chadwick","johnwchadwick@gmail.com","Benzinga","2016-12-01",5,3,1
 "Rob Franken","rob@rob-franken.nl","Google","2016-11-01",3154,551,11
 "Suraj Narwade","surajnarwade353@gmail.com","Red Hat","2017-02-01",385,11,1
-"NickrenREN","yuquan.ren@easystack.cn","EasyStack","2016-12-01",115,63,15
+"NickrenREN","renyuquan1@163.com","Net EASE 网易有态度","2016-12-01",125,81,16
 "Steve Gordon","stephen.a.gordon@gmail.com","Red Hat","2016-09-01",2,2,2
 "Chris Baumbauer","cab@cabnetworks.net","CABNetworks","2016-12-01",10,1,1
-"Scott Rigby","scott@r6by.com","Basekamp","2017-06-01",94,5,3
+"Scott Rigby","scott@r6by.com","Basekamp","2017-06-01",178,89,20
 "Álex González","agonzalezro@gmail.com","jobandtalent","2016-11-01",1,1,1
 "Andrea Cosentino","ancosen@gmail.com","Red Hat","2017-01-01",250,344,2
 "Adnan Abdulhussein","adnan@prydoni.us","Bitnami","2016-10-01",755,1743,25
@@ -3482,7 +3491,7 @@
 "mbohlool","mehdy@google.com","Google","2016-12-01",1580,1295,28
 "peay","peay@protonmail.com","Molina Healthcare","2016-12-01",144,54,1
 "Rod Cloutier","rodcloutier@gmail.com","Ubisoft","2016-10-01",59,332,2
-"Christoph Blecker","admin@toph.ca","Kelowna","2017-06-01",2251,4137,10
+"Christoph Blecker","admin@toph.ca","Kelowna","2017-06-01",2272,4222,14
 "Kenneth Owens","owensk@google.com","Google","2017-04-01",312,242,7
 "Bryan Boreham","bjboreham@gmail.com","Weaveworks","2017-02-01",21,8,2
 "Huamin Chen","hchen@redhat.com","Red Hat","2016-10-01",1027,59,7
@@ -3511,17 +3520,17 @@
 "Avesh Agarwal","avagarwa@redhat.com","Red Hat","2016-08-01",96,21,5
 "Spencer Smith","robertspencersmith@gmail.com","Solinea","2017-04-01",73,15,10
 "Paulo Pires","pjpires@gmail.com","Apprenda","2016-09-01",369,124,3
-"Michael Kibbe","mkibbe@google.com","Google","2017-06-01",12,5,2
+"Kiichiro Okano","kiichirookano@gmail.com","Vodafone","2017-05-01",1,1,1
 "Sebastian Florek","s.florek91@gmail.com","Fujitsu","2016-11-01",4529,4203,7
 "better88","better0332@163.com","Net EASE 网易有态度","2016-09-01",1,1,1
 "Vic Iglesias","viglesias@google.com","Google","2017-02-01",1,1,1
 "bruceauyeung","ouyang.qinhua@zte.com.cn","ZTE Corporation","2016-11-01",50,38,6
 "David McMahon","djmm@google.com","Google","2016-11-01",60,19,4
-"fengyun.pan","fengyun.pan@easystack.cn","EasyStack","2017-06-01",81,65,1
+"fengyun.pan","fengyun.pan@easystack.cn","EasyStack","2017-06-01",96,84,4
 "Alexander Block","ablock84@gmail.com","Self","2016-12-01",1374,416,29
 "Smaine Kahlouch","smainklh@gmail.com","Morea","2016-12-01",4,4,4
 "Wang Xing","hzwangxing@corp.netease.com","Net EASE 网易有态度","2016-07-01",0,4,1
-"Mike Danese","mikedanese@google.com","Google","2016-06-01",825,1730,10
+"Mike Danese","mikedanese@google.com","Google","2016-06-01",555,29,3
 "Gregory Ian","argregoryian@gmail.com","(Unknown)","2016-08-01",2,2,1
 "Sebastian Florek","sebastian.florek@ts.fujitsu.com","Fujitsu","2016-08-01",56,14,1
 "Cole Mickens","cole.mickens@gmail.com","Microsoft","2016-11-01",37,621,2
@@ -3530,7 +3539,7 @@
 "Doug Davis","dug@us.ibm.com","IBM","2016-07-01",0,1,1
 "Marc Villacorta","marc.villacorta@gmail.com","Softonic","2017-04-01",18,2,2
 "nikhiljindal","nikhiljindal@google.com","Google","2017-03-01",200,2386,9
-"Tao Zhou","joseph.zhoutao@huawei.com","Huawei","2017-01-01",11,8,2
+"Hanfei Shen","qqshfox@gmail.com","ALO7 爱乐奇","2016-10-01",25,8,4
 "Pablo Moreno","pablo.a.moreno@gmail.com","ChEBI","2017-03-01",7,6,1
 "a-mccarthy","a-mccarthy@users.noreply.github.com","Apprenda","2016-08-01",1,1,1
 "Christoph Held","christoph.held@est.fujitsu.com","Fujitsu","2016-07-01",76,41,2
@@ -3545,6 +3554,7 @@
 "Euan Kemp","euan.kemp@coreos.com","CoreOS","2016-09-01",3710,3121,19
 "Tim Hockin","thockin@google.com","Google","2016-09-01",1363,362,32
 "Steve Wilkerson","wilkers.steve@gmail.com","AT&T","2017-03-01",93,4,1
+"jlewi","jeremy@lewi.us","(Unknown)","2017-06-01",2,32,1
 "Derek Carr","decarr@redhat.com","Red Hat","2017-03-01",1891,278,12
 "caleb miles","caleb.miles@coreos.com","CoreOS","2017-03-01",4467,2450,125
 "Yuriy Taraday","yorik.sar@gmail.com","Mirantis","2016-11-01",1,1,1
@@ -3571,20 +3581,20 @@
 "Abhishek","abhishek@linux.com","Linux","2017-02-01",136,41,3
 "Jonathan Lebon","jlebon@redhat.com","Red Hat","2016-08-01",39,5,1
 "Jeff Mendoza","jeffmendoza@google.com","Google","2016-12-01",460,558,3
-"Harry Zhang","harryz@hyper.sh","Hyper.sh","2017-05-01",49,3,4
-"fengyun.pan","fengyun.pan@easystack.cn","EasyStack","2017-05-01",323,61,10
+"Ebbe Elsborg","ee@blackwoodseven.com","(Unknown)","2017-06-01",983,1128,5
+"fengyun.pan","fengyun.pan@easystack.cn","EasyStack","2017-05-01",324,62,11
 "Kent Wang","kent.wang@cheanjia.com","(Unknown)","2017-06-01",3,3,1
 "Slava Semushin","vsemushi@redhat.com","Red Hat","2016-11-01",5,5,1
 "Jorge Marin","jorge@bitnami.com","Bitnami","2017-04-01",11,7,4
 "Matthew Fisher","mfisher@deis.com","DEIS","2016-10-01",95,78,1
 "Zachary Adam Kaplan","razic@viralkitty.com","viralkitty","2017-01-01",0,2,1
-"Daniel J Walsh","dwalsh@redhat.com","Red Hat","2017-01-01",13,2,2
+"m1093782566","dj199008@gmail.com","Huawei","2016-09-01",276,214,9
 "tktk","tktk.stereoman@gmail.com","(Unknown)","2017-01-01",1,1,1
 "Evan Cordell","evan.cordell@coreos.com","CoreOS","2016-09-01",112,0,1
 "David Calavera","david.calavera@gmail.com","Netlify","2017-02-01",100,0,2
-"stresler","stresler@users.noreply.github.com","Tresler","2017-02-01",2,2,2
+"Mikhail Vyatskov","crassirostris@yandex.com","Google","2017-06-01",195,20,3
 "yuexiao-wang","wang.yuexiao@zte.com.cn","ZTE Corporation","2016-08-01",4,0,2
-"Manuel de Brito Fontes","aledbf@gmail.com","SOFICOM","2017-06-01",1520,339,24
+"Manuel de Brito Fontes","aledbf@gmail.com","SOFICOM","2017-06-01",1698,355,28
 "mbohlool","mehdy@google.com","Google","2017-03-01",542,27,15
 "Daniel Wang","wonderfly@google.com","Google","2016-08-01",120,80,4
 "Marcin Wielgus","mwielgus@google.com","Google","2016-12-01",6540,3174,40
@@ -3595,14 +3605,12 @@
 "hchiramm","hchiramm@redhat.com","Red Hat","2016-09-01",69,9,3
 "Mandar U Jog","mjog@google.com","Google","2016-11-01",36,7,1
 "Will Sean Don","willdon@nerdondon.com","NotFound","2017-04-01",173,171,5
-"Joe Finney","spxtr@google.com","Google","2017-05-01",269,80,12
 "21stio","ph.woerdehoff+21st@gmail.com","(Unknown)","2017-03-01",2,2,1
 "Keith Pope","thepope@thepopeisdead.com","Software & Things","2017-01-01",1,0,1
 "Andy Goldstein","agoldste@redhat.com","Red Hat","2016-11-01",11177,457,7
 "唐飞雄 (twitter: @tangfx)","tangfx128@gmail.com","Self","2017-05-01",806,0,1
 "Andrea Cosentino","ancosen@gmail.com","Red Hat","2016-07-01",2,2,2
-"Drew Rapenchuk","rapenchukd@gmail.com","Bloomberg LP","2016-08-01",1,1,1
-"Euan Kemp","euan.kemp@coreos.com","CoreOS","2016-06-01",1,1,1
+"sakeven","jc5930@sina.cn","DaoCloud","2017-06-01",1,1,1
 "Paulo Rafael Feodrippe","pfeodrippe@gmail.com","Teslabit","2017-05-01",39,3,2
 "Nandor Kracser","bonifaido@gmail.com","Ustream","2017-01-01",1,1,1
 "hchiramm","hchiramm@redhat.com","Red Hat","2016-10-01",172,119,5
@@ -3611,13 +3619,13 @@
 "Bobby (Babak) Salamat","bsalamat@google.com","Google","2017-04-01",134,53,3
 "Jason DeWitt","me@roxet.net","Sudo Pseience","2017-01-01",43,8,1
 "Brad Beam","brad.beam@b-rad.info","NotFound","2016-12-01",243,29,3
-"mdshuai","dma@redhat.com","Red Hat","2017-05-01",292,56,1
+"Jun Xiang Tee","juntee@google.com","Google","2017-04-01",1386,96,7
 "Ioan","ioanowen@gmail.com","Hotels.com","2017-05-01",83,21,4
 "Maxym Kutsevol","max@kutsevol.com","(Unknown)","2017-03-01",409,1,1
 "Kenjiro Nakayama","nakayamakenjiro@gmail.com","Alternative Storage","2016-07-01",7,25,2
 "Brian Grant","bgrant0607@users.noreply.github.com","Google","2016-12-01",196,143,31
 "Johannes Würbach","johannes.wuerbach@googlemail.com","Contentful","2017-03-01",667,8,2
-"Cao Shufeng","caosf.fnst@cn.fujitsu.com","Fujitsu","2017-06-01",53,55,14
+"Cao Shufeng","caosf.fnst@cn.fujitsu.com","Fujitsu","2017-06-01",59,62,16
 "Irfan Ur Rehman","irfan.rehman@huawei.com","Huawei","2017-02-01",997,304,8
 "Jeff Lowdermilk","jeffml@google.com","Google","2017-05-01",0,308,1
 "Walter Fender","wfender@google.com","Google","2017-06-01",214,14,2
@@ -3631,10 +3639,9 @@
 "andrewsykim","andrew@wattpad.com","Wattpad","2016-09-01",26,2,2
 "sandeepveldi","sandeepveldi@users.noreply.github.com","(Unknown)","2016-12-01",3,0,1
 "Andrew Pilloud","andrewpilloud@igneoussystems.com","Igneous Systems","2017-03-01",58,51,3
-"Ian Chakeres","ian.chakeres@gmail.com","SalesForce","2017-06-01",1,1,1
+"Ian Chakeres","ian.chakeres@gmail.com","SalesForce","2017-06-01",58,21,6
 "System Administrator","bdontu@vmware.com","VMware","2016-12-01",11,2,2
 "Jimmi Dyson","jimmidyson@gmail.com","Red Hat","2016-09-01",46,20,3
-"Derek Carr","decarr@redhat.com","Red Hat","2016-06-01",720,199,4
 "Justin Garrison","justin@linux.com","Walt Disney","2017-06-01",789,0,1
 "Abby Tisdale","atisdale@atisdale.sfo.corp.google.com","Google","2017-06-01",370,4,1
 "Patrice Ferlet","metal3d@gmail.com","Smile Open Source Solutions","2016-11-01",1,1,1
@@ -3653,8 +3660,9 @@
 "Crazykev","crazykev@zju.edu.cn","Self","2017-04-01",23,11,5
 "Steve Perry","steveperry-53@users.noreply.github.com","Google","2017-04-01",6704,7009,74
 "Salvatore Dario Minonne","salvatore-dario.minonne@amadeus.com","Amadeus","2016-10-01",99,0,1
-"bindata-mockuser","ronl@google.com","Google","2016-06-01",222,144,6
+"Shyam Jeedigunta","shyamjvs@google.com","Google","2017-02-01",802,425,17
 "David McMahon","djmm@google.com","Google","2017-06-01",196,215,7
+"Eamon Taaffe","eamontaaffe@gmail.com","Vericus","2017-02-01",3,3,3
 "Michael Mrowetz","michael.mrowetz@cdnetworks.co.kr","CDNetworks Korea","2017-02-01",26,16,2
 "Avesh Agarwal","avagarwa@redhat.com","Red Hat","2016-07-01",166,33,5
 "Michael Grosser","development@stp-ip.net","Zendesk","2017-03-01",15,16,3
@@ -3665,7 +3673,7 @@
 "Andrew Watson","andrewmoorewatson@gmail.com","Ionic Security","2017-02-01",7,2,1
 "Matthew Mosesohn","mmosesohn@mirantis.com","Mirantis","2017-01-01",184,114,14
 "Rye Terrell","ryeterrell@ryeterrell.net","Self","2017-01-01",542,987,1
-"Maciej Pytel","maciekpytel@google.com","Google","2017-02-01",918,8,12
+"Ian Smith","ismith@mit.edu","MIT","2017-05-01",247,18,3
 "Madhusudan.C.S","madhusudancs@google.com","Google","2016-10-01",3809,372,21
 "Prashanth B","beeps@google.com","Google","2016-09-01",941,206,25
 "fibonacci1729","brian@deis.com","DEIS","2016-07-01",467,270,5
@@ -3690,6 +3698,7 @@
 "Théo Chamley","theo.ch@mley.fr","Oxalide","2017-03-01",129,24,6
 "andy xie","andy.xning@gmail.com","Self","2017-02-01",288,95,11
 "jmn","norlund@gmail.com","(Unknown)","2017-01-01",1,1,1
+"Bartosz Ptaszynski","foobarto@gmail.com","(Unknown)","2017-04-01",1,1,1
 "jianhuiz","jianhui.zhou@huawei.com","Huawei","2016-09-01",156,14,2
 "Leszek Charkiewicz","leszek@charkiewicz.net","Base CRM","2017-02-01",1,1,1
 "Wesley Hartford","wesley@ze.com","ZE PowerGroup","2016-08-01",4,4,2
@@ -3710,7 +3719,7 @@
 "Wojciech Tyczynski","wojtekt@google.com","Google","2017-02-01",4667,1777,90
 "Paulo Pires","pjpires@gmail.com","Apprenda","2017-04-01",0,1,1
 "realfake","luk.burchard@gmail.com","loodse","2017-05-01",76,3,2
-"Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-06-01",28,216,7
+"Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-06-01",36,223,8
 "Taylor Thomas","taylor.l.thomas@intel.com","Intel","2017-02-01",256,241,2
 "Michael Taufen","mtaufen@google.com","Google","2017-03-01",693,0,2
 "kfox1111","kevin.fox@pnnl.gov","Self","2017-06-01",398,2,3
@@ -3728,7 +3737,7 @@
 "Eric Paris","eparis@redhat.com","Red Hat","2016-12-01",1362,1058,20
 "Johannes Scheuermann","joh.scheuer@gmail.com","inovex","2017-02-01",4,6,2
 "xiaoping378","xiaoping378@163.com","Net EASE 网易有态度","2016-09-01",1,0,1
-"Matt Liggett","mml@google.com","Google","2016-06-01",193,82,14
+"Matt Liggett","mml@google.com","Google","2016-06-01",38,5,3
 "Jan Safranek","jsafrane@redhat.com","Red Hat","2016-08-01",1942,608,18
 "timcrall","timcrall@gmail.com","(Unknown)","2016-12-01",2,2,1
 "haoyuan","harryge00@gmail.com","Caicloud","2016-11-01",34,5,1
@@ -3740,12 +3749,11 @@
 "Bryan Boreham","bryan@weave.works","Weaveworks","2016-11-01",16,16,4
 "Carlos Alexandro Becker","caarlos0@users.noreply.github.com","ContaAzul","2017-04-01",4,4,3
 "Antonio Murdaca","runcom@redhat.com","Red Hat","2017-04-01",112,31,9
-"Doug Davis","dug@us.ibm.com","IBM","2016-12-01",765,1196,17
 "Vaughn Dice","vaughn@deis.com","DEIS","2016-10-01",6,6,1
 "Anton Galitsyn","agalitsyn@users.noreply.github.com","2GIS","2016-12-01",221,85,2
-"Saied Kazemi","saied@google.com","Google","2017-01-01",252,0,1
 "Dan Gillespie","dan.gillespie@coreos.com","CoreOS","2017-06-01",4,3,1
 "Tim St. Clair","stclair@google.com","Google","2016-07-01",1250,48,10
+"Vladimir Vivien","vladimir.vivien@gmail.com","Dell","2017-03-01",159,38,4
 "Devan Goodwin","dgoodwin@redhat.com","Red Hat","2016-10-01",913,86,6
 "Jan Safranek","jsafrane@redhat.com","Red Hat","2016-12-01",486,141,5
 "Tim St. Clair","stclair@google.com","Google","2016-10-01",2836,1697,19
@@ -3754,17 +3762,17 @@
 "Nicolas Lamirault","nicolas.lamirault@gmail.com","Orange","2016-12-01",8,6,5
 "Liyi Meng","meng.mobile@gmail.com","(Unknown)","2016-07-01",1,1,1
 "erikus","erik@kupoday.net","(Unknown)","2016-11-01",1,1,1
-"Daniel J Walsh","dwalsh@redhat.com","Red Hat","2016-12-01",193,7,1
+"Morgan Bauer","mbauer@us.ibm.com","IBM","2017-06-01",283,0,1
 "Jared","jaredbhatti@users.noreply.github.com","Google","2017-04-01",3,2,2
 "Vic Iglesias","viglesias@google.com","Google","2017-05-01",385,260,4
 "Jay Judkowitz","judkowitz@google.com","Google","2016-12-01",71,0,2
 "Brad Beam","bradley.beam@emc.com","EMC","2017-01-01",582,486,9
 "Huamin Chen","hchen@redhat.com","Red Hat","2017-04-01",231,61,4
 "Matt Potter","matthew.potter@uswitch.com","Movable Ink","2017-05-01",22,19,4
-"Aaron Crickenberger","spiffxp@gmail.com","Samsung","2016-06-01",1,1,1
+"Ville Aikas","vaikas-google@users.noreply.github.com","Google","2017-03-01",2682,2819,6
 "Harsha Yalamanchili","harsha@earnest.com","Earnest","2017-06-01",1,1,1
 "Vineet Kumar","vineet@doorstop.net","Google","2017-03-01",5,3,1
-"Mike Spreitzer","mspreitz@us.ibm.com","IBM","2016-06-01",13,5,4
+"Mike Spreitzer","mspreitz@us.ibm.com","IBM","2016-06-01",2,2,1
 "isavin","comp_@gmx.net","NotFound","2016-07-01",9,4,1
 "Michal Rostecki","mrostecki@mirantis.com","Mirantis","2016-06-01",257,127,1
 "ryan jarvinen","ryan.jarvinen@gmail.com","CoreOS","2016-09-01",14,5,1
@@ -3774,11 +3782,13 @@
 "Kris","krousey@google.com","Google","2016-08-01",701,198,19
 "xiaoping378","xiaoping378@163.com","Net EASE 网易有态度","2016-10-01",191,28,1
 "Anish Bhatt","anish@gatech.edu","Georgia Tech","2016-07-01",79,9,1
+"Zach Aller","zachaller@users.noreply.github.com","(Unknown)","2017-06-01",1,1,1
 "Sn0rt","sn0rt@abc.shop.edu.cn","eleme","2016-10-01",189,91,3
 "Euan Kemp","euan.kemp@coreos.com","CoreOS","2017-04-01",1,2,1
 "Tim Hockin","thockin@google.com","Google","2017-04-01",2463,2157,16
 "Jeff Pearce","jxpearce@godaddy.com","GoDaddy","2017-04-01",30,5,1
-"Isabel JC","isabel.xkjc@gmail.com","(Unknown)","2017-05-01",26,2,1
+"Zhou Tao","joseph.zhoutao@huawei.com","Huawei","2017-01-01",11,8,2
+"Devan Goodwin","dgoodwin@redhat.com","Red Hat","2017-02-01",13,12,1
 "Shubham","shubham@linux.com","Linux","2017-03-01",20,18,1
 "haoyuan","harryge00@gmail.com","Caicloud","2016-08-01",1,1,1
 "Hui-Zhi","zhaohuizhi@gmail.com","(Unknown)","2016-12-01",228,21,1
@@ -3793,7 +3803,7 @@
 "Pablo Moreno","pablo.a.moreno@gmail.com","ChEBI","2016-11-01",703,28,3
 "Xiang","xiangli.cs@gmail.com","CoreOS","2016-07-01",249,261,6
 "ravisantoshgudimetla","ravisantoshgudimetla@gmail.com","Red Hat","2017-03-01",77,40,3
-"Piotr Bryk","bryk@google.com","Google","2016-06-01",47,41,7
+"Piotr Bryk","bryk@google.com","Google","2016-06-01",6,5,2
 "Jo Geraerts","jo@umask.net","(Unknown)","2017-02-01",1,1,1
 "Aaron Schlesinger","arschles@gmail.com","Engine Yard","2016-12-01",523,432,20
 "Kwok-kuen Cheung","me@cheungpat.com","Oursky","2017-04-01",5,2,3
@@ -3801,6 +3811,7 @@
 "ohmystack","jiangjun1990@gmail.com","eleme","2017-03-01",31,18,1
 "Andrew Rynhard","andrew@andrewrynhard.com","Logic Monitor","2017-01-01",322,71,1
 "David Oppenheimer","davidopp@google.com","Google","2017-03-01",269,19,5
+"shawyeok","kmter@live.com","(Unknown)","2017-01-01",202,54,1
 "Dr. Stefan Schimanski","stefan.schimanski@gmail.com","Red Hat","2017-05-01",5825,2002,65
 "Anthony Howe","anhowe@microsoft.com","Microsoft","2017-02-01",558,1032,3
 "Pengfei Ni","feiskyer@gmail.com","Hyper.sh","2017-04-01",753,366,16
@@ -3826,7 +3837,7 @@
 "Jared","jaredbhatti@users.noreply.github.com","Google","2016-11-01",46,11,7
 "Rick Buskens","rbuskens@google.com","Google","2016-08-01",8,0,1
 "Matt Bruzek","matthew.bruzek@canonical.com","Canonical","2016-08-01",5268,1576,8
-"Nitish Tiwari","nitisht@users.noreply.github.com","minio","2017-03-01",225,10,1
+"Nitish Tiwari","nitisht@users.noreply.github.com","minio","2017-03-01",701,564,5
 "Shane Starcher","shanestarcher@gmail.com","Datapipe","2017-03-01",34,29,2
 "Marcin Wielgus","mwielgus@google.com","Google","2017-05-01",2174,128,33
 "Tom Qiang Wu","tom@devopsify.io","(Unknown)","2017-06-01",26,15,1
@@ -3849,7 +3860,6 @@
 "Derek Carr","decarr@redhat.com","Red Hat","2016-08-01",1958,810,26
 "caleb miles","calebamiles@users.noreply.github.com","Ceph","2016-08-01",45,74,3
 "Hemant Kumar","hekumar@redhat.com","Red Hat","2017-05-01",304,73,2
-"Sen Lu","senlu@google.com","Google","2016-09-01",1230,767,6
 "Kent Rancourt","krancour@users.noreply.github.com","Microsoft","2017-01-01",1257,1216,17
 "divyenpatel","divyenp@vmware.com","VMware","2017-05-01",725,456,8
 "Joe Beda","joe.github@bedafamily.com","Google","2016-12-01",227,6,3
@@ -3858,7 +3868,7 @@
 "Mac Browning","mac@digitalocean.com","DigitalOcean","2016-10-01",7,7,1
 "Jon Cope","jcope@redhat.com","Red Hat","2016-10-01",35,17,2
 "Diego Pontoriero","dpontor@gmail.com","CoreOS","2017-04-01",819,618,16
-"Crazykev","crazykev@zju.edu.cn","Self","2016-11-01",1364,89,17
+"Maciej Szulik","maszulik@redhat.com","Red Hat","2016-09-01",1000,262,17
 "Lachlan Evenson","lachie83@users.noreply.github.com","Microsoft","2017-05-01",1291,118,8
 "gavinB-orange","gavin.brebner@orange.fr","HP","2016-10-01",8,0,1
 "Jorge O. Castro","jorge@ubuntu.com","Ubuntu","2017-02-01",14,16,4
@@ -3874,7 +3884,7 @@
 "Simon Westcott","swestcott@gmail.com","(Unknown)","2017-03-01",56,1,2
 "Aleksandr Didenko","adidenko@mirantis.com","Mirantis","2016-11-01",442,90,10
 "Ahmet Alp Balkan","ahmetalpbalkan@gmail.com","Microsoft","2016-09-01",1,1,1
-"weizhanxu","xu.zhanwei@zte.com.cn","ZTE Corporation","2017-04-01",2,4,1
+"Adam H. Leventhal","ahl@transposit.com","(Unknown)","2017-04-01",1573,46,2
 "Lars Mogren","lars.mogren@gmail.com","TheNatureOfSoftware","2016-07-01",14,14,1
 "Henning Jacobs","henning@jacobs1.de","Zalando","2017-03-01",2,1,1
 "Jan Chaloupka","jchaloup@redhat.com","Red Hat","2016-11-01",2034,779,35
@@ -3898,7 +3908,7 @@
 "Mrunal Patel","mrunalp@gmail.com","Red Hat","2016-07-01",383,107,11
 "CJ Cullen","cjcullen@google.com","Google","2017-05-01",139,37,3
 "Billy Shambrook","billy.shambrook@gmail.com","Frame.io","2016-11-01",1691,52,8
-"Spencer Smith","robertspencersmith@gmail.com","Solinea","2017-06-01",2,2,1
+"Spencer Smith","robertspencersmith@gmail.com","Solinea","2017-06-01",34,34,3
 "Andrew Watson","andrewmoorewatson@gmail.com","Ionic Security","2016-12-01",2,4,3
 "Daniel Smith","dbsmith@google.com","Google","2017-01-01",357,228,9
 "Daniel Leining","daniel@leining.org","Delivery Agent","2016-07-01",5,2,3
@@ -3954,28 +3964,25 @@
 "SukantGujar","sukantgujar@yahoo.com","(Unknown)","2017-05-01",1,1,1
 "Abhishek Chanda","abhishek.becs@gmail.com","Self","2017-05-01",5,1,1
 "Saksham Sharma","sakshams@google.com","Google","2017-05-01",1091,6,2
-"Ian Beringer","ian@ianberinger.com","Ian Beringer","2017-02-01",14,1,1
+"gmarek","gmarek@google.com","Google","2017-06-01",8,8,5
 "divyenpatel","divyenp@vmware.com","VMware","2017-01-01",1070,14,4
 "Xianglin Gao","xlgao@zju.edu.cn","Self","2016-09-01",191,29,2
 "Yu-Ju Hong","yjhong@google.com","Google","2017-06-01",98,80,3
 "dlorenc","dlorenc@google.com","Google","2017-02-01",376,34,12
 "Mike Spreitzer","mspreitz@us.ibm.com","IBM","2016-09-01",27,18,3
 "Michał Żyłowski","michal.zylowski@intel.com","Intel","2017-02-01",255,296,3
-"Aaron Prindle","aprindle@google.com","Google","2016-09-01",2167,657,10
 "Daniel Nardo","dnardo@google.com","Google","2017-05-01",82,5,6
 "Łukasz Oleś","lukaszoles@gmail.com","Mirantis","2017-06-01",1,0,1
-"Daniel J Walsh","dwalsh@redhat.com","Red Hat","2017-05-01",677,677,1
 "Erin Corson","erin@newmediadenver.com","DRUD","2017-01-01",339,97,17
 "Marcin Wielgus","mwielgus@google.com","Google","2017-01-01",4020,1993,39
 "Norio Akagi","redtree.dev1112@gmail.com","Bandai Namco Entertainment America","2017-05-01",10,8,2
 "Ilya Dmitrichenko","errordeveloper@gmail.com","Weaveworks","2017-02-01",4,3,1
-"Vaughn Dice","vaughn@deis.com","DEIS","2017-01-01",117,46,1
+"Ivan Shvedunov","ivan4th@gmail.com","Mirantis","2016-07-01",195,50,5
 "heschlie","heschlie@gmail.com","Project Calico","2017-02-01",1132,16,3
 "Lukasz Zajaczkowski","lukasz.zajaczkowski@ts.fujitsu.com","Fujitsu","2016-09-01",21,0,1
 "Shimi Kiviti","shimi.k@gmail.com","(Unknown)","2017-05-01",6,2,1
 "Dan Gillespie","dan.gillespie@coreos.com","CoreOS","2017-01-01",929,1007,2
 "Oliver Soell","oliver@soell.net","Schibsted Media Group","2017-02-01",50,2,2
-"Maciej Pytel","maciekpytel@google.com","Google","2017-06-01",447,171,14
 "Colin Hom","colhom@gmail.com","NotFound","2016-08-01",625,320,4
 "Miyurz","mayur.nagekar@gmail.com","(Unknown)","2016-12-01",5,8,2
 "Jeff Grafton","jgrafton@google.com","Google","2017-05-01",506,159,28
@@ -3992,12 +3999,12 @@
 "Steve Perry","steveperry-53@users.noreply.github.com","Google","2017-02-01",2000,1516,14
 "Steve Leon","kokhang@gmail.com","HP","2016-09-01",54,39,2
 "Aaron Schlesinger","aaron@deis.com","DEIS","2017-02-01",4233,1395,17
-"System Administrator","bdontu@vmware.com","VMware","2017-04-01",529,74,3
+"Zhou Tao","joseph.zhoutao@huawei.com","Huawei","2017-02-01",10,7,6
 "supereagle","jmyue@hotmail.com","Self","2017-05-01",41,39,4
 "Steven Pousty","spousty@redhat.com","Red Hat","2016-09-01",2,0,1
 "Humble Devassy Chirammal","humble.devassy@gmail.com","CentOS","2017-03-01",1,1,1
 "vefimova","vefimova@mirantis.com","Mirantis","2016-08-01",179,71,2
-"Cole Wagner","colew@google.com","Google","2017-06-01",512,153,3
+"Cole Wagner","colew@google.com","Google","2017-06-01",1168,329,9
 "Michelle Au","msau@google.com","Google","2017-01-01",264,231,4
 "Jesse Dubay","jesse@thefortytwo.net","Discogs","2017-04-01",1,1,1
 "Arnaldo de Moraes Pereira","arnaldo@luizalabs.com","Luizalabs","2016-09-01",2,2,2
@@ -4007,7 +4014,7 @@
 "Vishnu Kannan","vishnuk@google.com","Google","2017-02-01",3192,1176,25
 "hchiramm","hchiramm@redhat.com","Red Hat","2017-04-01",57,22,7
 "TonyAdo","coolhzb@163.com","Net EASE 网易有态度","2016-11-01",179,9,2
-"Daniel J Walsh","dwalsh@redhat.com","Red Hat","2017-06-01",15,7,2
+"Tomas Smetana","tsmetana@redhat.com","Red Hat","2016-11-01",5,3,1
 "Marcin Maciaszczyk","maciaszczykm@users.noreply.github.com","Fujitsu","2017-04-01",1280,1368,8
 "Michael van Tricht","swordbeta@users.noreply.github.com","Expand Online","2016-10-01",277,1,2
 "Quintin Lee","qlee@google.com","Google","2016-10-01",36,15,2
@@ -4016,8 +4023,8 @@
 "Jeremy Brown","jeremy@tenfourty.com","Red Hat","2016-08-01",3,3,1
 "YaoZengzeng","yaozengzeng@zju.edu.cn","Self","2016-10-01",30,11,2
 "mozhulee","weidonglee27@gmail.com","Self","2017-05-01",164,0,1
-"purificant","purificant@users.noreply.github.com","(Unknown)","2016-06-01",1,1,1
-"Tim Hockin","thockin@google.com","Google","2016-06-01",2370,47906,33
+"Joe Finney","spxtr@google.com","Google","2017-05-01",269,80,12
+"Tim Hockin","thockin@google.com","Google","2016-06-01",2250,47844,27
 "du0625","leave24534@gmail.com","NotFound","2016-11-01",2,2,1
 "Reinhard Nägele","unguiculus@gmail.com","Codecentric AG","2017-03-01",311,228,1
 "Wojciech Tyczynski","wojtekt@google.com","Google","2017-06-01",19,79,5
@@ -4030,10 +4037,10 @@
 "Vlad Gorodetsky","v@gor.io","(Unknown)","2017-05-01",13,1,1
 "Ryan Hitchman","hitchmanr@gmail.com","Google","2016-09-01",491,316,31
 "Doug Claar","dclaar@google.com","Google","2017-06-01",4,5,1
-"zoues","zounengren@cmss.chinamobile.com","China Mobile International Limited","2017-06-01",13,12,2
+"zoues","zounengren@cmss.chinamobile.com","China Mobile International Limited","2017-06-01",15,14,4
 "Tomas Nozicka","tnozicka@gmail.com","Red Hat","2017-05-01",3,0,2
 "xialonglee","li.xialong@zte.com.cn","ZTE Corporation","2017-03-01",23,12,5
-"Bartosz Ptaszynski","foobarto@gmail.com","(Unknown)","2017-04-01",1,1,1
+"dlorenc","dlorenc@google.com","Google","2016-06-01",337,127,12
 "Slava Semushin","vsemushi@redhat.com","Red Hat","2017-04-01",7,1,1
 "Lee Verberne","verb@google.com","Google","2017-04-01",106,6,3
 "Sahdev P. Zala","spzala@us.ibm.com","IBM","2017-03-01",15,14,6
@@ -4074,6 +4081,7 @@
 "John Hofman","johncarlhofman@gmail.com","(Unknown)","2016-12-01",6,6,1
 "Denis Poisson","denis.poisson@ts.fujitsu.com","Fujitsu","2016-09-01",1450,8,1
 "Kenan Karamehmedovic","kenan.karamehmedovic@est.fujitsu.com","Fujitsu","2017-05-01",1166,394,5
+"AlmogBaku","almog.baku@gmail.com","Rimoto","2017-04-01",43,6,1
 "Martin Maly","mmaly@google.com","Google","2016-11-01",12136,437,10
 "josh keife","jkeife@alianza.com","Alianza","2017-03-01",1,1,1
 "ant31","2t.antoine@gmail.com","CoreOS","2016-09-01",39,24,2
@@ -4083,10 +4091,10 @@
 "Marie Shaw","mnshaw@google.com","Google","2016-08-01",897,189,17
 "Jing Xu","jinxu@google.com","Google","2016-08-01",180,12,6
 "Kris Nova","kris@nivenly.com","Microsoft","2016-12-01",1865,188,45
-"Zihong Zheng","zihongz@google.com","Google","2017-06-01",34,18,5
+"Zihong Zheng","zihongz@google.com","Google","2017-06-01",79,51,9
 "Jeff Lowdermilk","jeffml@google.com","Google","2016-11-01",460,58,6
 "Andrew Holland","aholland@a1dutch.co.uk","(Unknown)","2017-04-01",31,3,2
-"Ivan Shvedunov","ivan4th@gmail.com","Mirantis","2016-07-01",195,50,5
+"Jamie Hannaford","jamie.hannaford@rackspace.com","Rackspace","2017-03-01",135,18,3
 "Artem Panchenko","apanchenko@mirantis.com","Mirantis","2017-02-01",11,0,1
 "Jitendra Bhurat","jbhurat@apprenda.com","Apprenda","2016-10-01",29,18,1
 "Artem Vysotsky","artem.vysotsky@gmail.com","Connect","2017-04-01",3,3,1
@@ -4096,6 +4104,7 @@
 "Sebastien Goasguen","runseb@gmail.com","Bitnami","2016-11-01",401,439,7
 "Andrea Cosentino","ancosen@gmail.com","Red Hat","2017-02-01",2,2,1
 "Jordi Miguel","jordi.miguel@schibsted.com","Schibsted","2017-01-01",183,315,6
+"William Denniss","wdenniss@google.com","Google","2017-05-01",20,7,1
 "Chun Chen","chenchun.feed@gmail.com","(Unknown)","2016-12-01",1,1,1
 "Jeff Vance","jvance@redhat.com","Red Hat","2017-04-01",4,47,3
 "p0lyn0mial","lukasz.szaszkiewicz@gmail.com","Self","2017-01-01",302,132,4
@@ -4162,7 +4171,7 @@
 "p0lyn0mial","lukasz.szaszkiewicz@gmail.com","Self","2016-12-01",333,120,2
 "Christoph Blecker","admin@toph.ca","Kelowna","2016-12-01",9,8,2
 "Piotr Dabkowski","pdabkowski@google.com","Google","2016-08-01",3859,838,5
-"Minhan Xia","mixia@google.com","Google","2016-06-01",588,37,8
+"Minhan Xia","mixia@google.com","Google","2016-06-01",65,9,3
 "Connor Doyle","connor.p.doyle@intel.com","Intel","2017-03-01",348,189,4
 "mfanjie","fmeng@ebay.com","eBay","2016-08-01",45,48,7
 "luks","luksvs@gmail.com","(Unknown)","2017-01-01",3,5,1
@@ -4170,15 +4179,14 @@
 "Ricardo Lourenco","rlourenc@redhat.com","Red Hat","2017-01-01",73,0,1
 "Michael Scheetz","michael.a.scheetz@gmail.com","HP","2016-11-01",22,0,2
 "Özgür Caner","oc@teuto.net","teuto.net Netzdienste GmbH","2016-09-01",24,3,3
-"Girish Kalele","gkalele@google.com","Google","2016-06-01",94,78,7
-"Manuel de Brito Fontes","aledbf@gmail.com","SOFICOM","2016-06-01",102,66,4
+"Girish Kalele","gkalele@google.com","Google","2016-06-01",76,74,5
 "Monis Khan","mkhan@redhat.com","Red Hat","2017-04-01",1073,240,5
-"Matt Baldwin","baldwin@stackpointcloud.com","StackPointCloud","2016-12-01",206,0,1
+"yiqinguo","468894985@qq.com","(Unknown)","2017-06-01",20,2,1
 "keglevich3","keglevich2@gmail.com","Self","2016-09-01",3,4,3
 "Nathan Quarles","nateq314@gmail.com","(Unknown)","2017-01-01",1,1,1
 "Ahmet Alp Balkan","ahmetb@google.com","Google","2017-05-01",3038,2245,20
 "chenhuan12","chen.huan@zte.com.cn","ZTE Corporation","2017-03-01",67,59,16
-"Vishnu Kannan","vishnuk@google.com","Google","2017-06-01",148,38,2
+"Vishnu Kannan","vishnuk@google.com","Google","2017-06-01",173,38,3
 "Brad Beam","brad.beam@b-rad.info","NotFound","2017-02-01",141,117,6
 "Nick Kubala","nkubala@google.com","Google","2017-06-01",2,2,2
 "Pooya Sanooei","sourcesoft@users.noreply.github.com","Avadis","2017-06-01",1,1,1
@@ -4196,7 +4204,7 @@
 "masstomato","mass.tomato@gmail.com","(Unknown)","2016-10-01",1,1,1
 "Christoph Held","christoph.held@est.fujitsu.com","Fujitsu","2016-08-01",336,150,4
 "Bowei Du","bowei@google.com","Google","2017-05-01",488,233,8
-"Janos Lenart","janos@lenart.io","lenart.io","2017-06-01",881,7,1
+"Janos Lenart","janos@lenart.io","lenart.io","2017-06-01",899,7,2
 "Ben Dang","me@bdang.it","(Unknown)","2016-07-01",1,1,1
 "Smaine Kahlouch","smainklh@gmail.com","Morea","2016-11-01",4,4,1
 "bruceauyeung","ouyang.qinhua@zte.com.cn","ZTE Corporation","2016-12-01",72,72,12
@@ -4221,7 +4229,7 @@
 "Klaus Ma","klaus1982.cn@gmail.com","IBM","2017-03-01",1098,379,18
 "Michal Fojtik","mfojtik@redhat.com","Red Hat","2016-10-01",88,67,1
 "Mrunal Patel","mpatel@redhat.com","Red Hat","2017-04-01",218,61,10
-"Marcin Wielgus","mwielgus@google.com","Google","2017-06-01",2069,1051,21
+"Marcin Wielgus","mwielgus@google.com","Google","2017-06-01",2077,1132,29
 "Matthew Mosesohn","mmosesohn@mirantis.com","Mirantis","2016-09-01",185,100,13
 "John Belamaric","jbelamaric@infoblox.com","Infoblox","2016-12-01",185,0,1
 "Yusuke Kuoka","ykuoka@gmail.com","クラウドワークス","2016-08-01",1,2,1
@@ -4239,7 +4247,7 @@
 "Alexander Kanevskiy","kad@linux.intel.com","Intel","2016-10-01",18,5,3
 "Sergii Golovatiuk","sgolovatiuk@mirantis.com","Mirantis","2017-02-01",195,68,18
 "Dr. Stefan Schimanski","sttts@redhat.com","Red Hat","2016-07-01",11694,9093,9
-"Clayton Coleman","ccoleman@redhat.com","Red Hat","2017-06-01",4033,2184,21
+"Clayton Coleman","ccoleman@redhat.com","Red Hat","2017-06-01",4035,2186,22
 "Dhilip","dhilip.kumar.s@huawei.com","Huawei","2017-05-01",373,7,2
 "Blake","blake.barnett@postmates.com","Postmates","2017-05-01",6,6,2
 "Adam Reese","adam@reese.io","Microsoft","2016-12-01",919,749,25
@@ -4251,7 +4259,7 @@
 "Ke Wu","mikewu@google.com","Google","2016-09-01",32,0,1
 "Jorge Arco","jorge.arcoma@gmail.com","LetsBonus","2017-05-01",1,4,1
 "Marius Grigoriu","marius.grigoriu@me.com","Apple","2016-12-01",12,3,1
-"Justin Santa Barbara","justin@fathomdb.com","FathomDB","2017-06-01",1257,784,34
+"Justin Santa Barbara","justin@fathomdb.com","FathomDB","2017-06-01",1292,793,36
 "grodrigues3","grodrigues3@users.noreply.github.com","Google","2016-11-01",7,1,2
 "Rita Zhang","rita.z.zhang@gmail.com","Microsoft","2017-06-01",307,0,1
 "Jared","jaredbhatti@users.noreply.github.com","Google","2016-08-01",143,103,16
@@ -4269,7 +4277,7 @@
 "Scott Stensland","scottstensland@gmail.com","Medssenger","2016-07-01",1,1,1
 "Marcin Wielgus","mwielgus@google.com","Google","2016-11-01",10891,1880,50
 "Marcin Wielgus","mwielgus@google.com","Google","2017-02-01",1038,64,16
-"devinyan","devinyan@tencent.com","Tencent","2017-06-01",6,6,1
+"foxyriver","liu.hao89@zte.com.cn","ZTE Corporation","2017-01-01",3,3,3
 "mhzed","minhongz@gmail.com","(Unknown)","2016-11-01",1,1,1
 "Hongchao Deng","hongchaodeng1@gmail.com","CoreOS","2016-08-01",2211,1542,34
 "Spencer Smith","robertspencersmith@gmail.com","Solinea","2017-01-01",0,4,1
@@ -4297,7 +4305,7 @@
 "Bob Van Zant","bvanzant@brkt.com","Bracket Computing","2017-05-01",22,11,1
 "Sergej Jevsejev","sjevsejev@gmail.com","(Unknown)","2017-01-01",1,1,1
 "Ryan Hallisey","rhallise@redhat.com","Red Hat","2017-01-01",25,61,2
-"Paulo Bittencourt","paulo@wattpad.com","Wattpad","2017-01-01",1,1,1
+"Vish Kannan","vishh@users.noreply.github.com","Google","2016-10-01",1,2,2
 "Tomas Smetana","tsmetana@redhat.com","Red Hat","2017-03-01",859,190,3
 "Jon Cope","jcope@redhat.com","Red Hat","2017-03-01",833,918,3
 "Yissachar Radcliffe","yissachar.radcliffe@caseware.com","CaseWare","2017-01-01",111,173,3
@@ -4331,10 +4339,11 @@
 "Gurucharan Shetty","guru@ovn.org","VMware","2016-12-01",8,0,1
 "Vish Kannan","vishh@users.noreply.github.com","Google","2016-11-01",2,64,3
 "faascape","xm@faascape.com","Xavier Vaucois","2017-03-01",1,1,1
-"Eric Paris","eparis@redhat.com","Red Hat","2017-01-01",22,11,2
+"System Administrator","bdontu@vmware.com","VMware","2017-04-01",529,74,3
 "allenmiller","allenmiller@users.noreply.github.com","HP","2016-07-01",1,1,1
 "Kenneth Owens","owensk@google.com","Google","2017-03-01",724,81,3
 "pospispa","ppospisi@redhat.com","Red Hat","2016-10-01",14,47,1
+"Quinton Hoole","quinton.hoole@huawei.com","Huawei","2017-06-01",2,0,1
 "Mayank Kumar","mayank.kumar@salesforce.com","SalesForce","2016-09-01",6,6,2
 "Shyam Jeedigunta","shyamjvs@google.com","Google","2016-12-01",1026,383,10
 "Jared","jaredbhatti@users.noreply.github.com","Google","2017-03-01",1,1,1
@@ -4352,7 +4361,6 @@
 "Eduardo Baitello","eduardobaitello@gmail.com","Self","2017-03-01",5,5,3
 "Aslak Knutsen","aslak@4fs.no","Red Hat","2017-04-01",1,1,1
 "Blaž Hrastnik","blaz.hrast@gmail.com","mxxn","2017-03-01",1,1,1
-"Morgan Bauer","mbauer@us.ibm.com","IBM","2017-06-01",283,0,1
 "dima","pronix.service@gmail.com","pronix","2017-04-01",300,7,4
 "Lucas Käldström","lucas.kaldstrom@hotmail.co.uk","Rook","2016-07-01",696,1789,9
 "Chris Love","clove@cnmconsulting.net","CNM Consulting","2017-04-01",599,160,11
@@ -4365,13 +4373,13 @@
 "Dan Kohn","dan@dankohn.com","CNCF","2016-10-01",1,54,1
 "yissachar","ydradcliffe@gmail.com","CaseWare","2016-12-01",14,1,2
 "joe2far","joe2farrell@gmail.com","Ammeon","2016-08-01",84,24,6
-"Davanum Srinivas","davanum@gmail.com","Huawei","2017-06-01",13,1,1
+"Davanum Srinivas","davanum@gmail.com","Huawei","2017-06-01",41,23,4
 "Kelsey Hightower","kelsey.hightower@gmail.com","Google","2016-07-01",12,6,3
 "Eden Li","eden.li@gmail.com","Flipboard","2017-03-01",28,21,1
 "Charles Butler","chuck@dasroot.net","Canonical","2017-01-01",1,1,1
 "Morgan Bauer","mbauer@us.ibm.com","IBM","2016-07-01",33,15,4
 "Julian V. Modesto","julian.modesto@liveramp.com","The New York Times","2017-05-01",5,2,2
-"Sushil Kumar","sushil.kumar@suse.com","SUSE/Novell","2017-06-01",142,88,7
+"Sushil Kumar","sushil.kumar@suse.com","SUSE/Novell","2017-06-01",148,94,8
 "George Kraft","george.kraft@canonical.com","Canonical","2017-02-01",99,53,3
 "Jeremy Deininger","jeremydeininger@gmail.com","Checkr","2017-04-01",278,60,3
 "Raees Iqbal","raeesiqbal@users.noreply.github.com","(Unknown)","2016-07-01",1,1,1
@@ -4389,7 +4397,7 @@
 "Steve Perry","steveperry-53@users.noreply.github.com","Google","2016-10-01",327,8,5
 "Lachlan Evenson","lachie83@users.noreply.github.com","Microsoft","2016-08-01",931,23,3
 "Ian Lewis","ianlewis@google.com","Google","2017-02-01",151,0,2
-"Erick Fejta","fejta@google.com","Google","2016-06-01",239,116,6
+"SRaddict","qishen@zju.edu.cn","Zhejiang University","2016-12-01",67,67,4
 "Rueben Ramirez","ruebenramirez@gmail.com","Nokia","2017-04-01",1,1,1
 "Jan Chaloupka","jchaloup@redhat.com","Red Hat","2016-10-01",5661,3474,50
 "Rod Cloutier","rodcloutier@gmail.com","Ubisoft","2016-07-01",232,15,1
@@ -4400,7 +4408,7 @@
 "Luiz Bezerra","luizbafilho@gmail.com","Globo.com","2017-03-01",2,1,2
 "Jonathan Stacks","jonstacks@users.noreply.github.com","C2FO","2017-06-01",12,4,1
 "andrewsykim","andrew@wattpad.com","Wattpad","2017-03-01",304,139,12
-"Chao Xu","xuchao@google.com","Google","2017-04-01",10397,8714,44
+"Chao Xu","xuchao@google.com","Google","2017-04-01",10527,8783,47
 "Zach Loafman","zml@google.com","Google","2016-12-01",1243,529,24
 "Fabian Reinartz","fab.reinartz@gmail.com","CoreOS","2016-09-01",936,436,10
 "Ilya Dmitrichenko","errordeveloper@gmail.com","Weaveworks","2016-10-01",537,413,18
@@ -4416,7 +4424,7 @@
 "Alexander Brand","alexbrand09@gmail.com","Apprenda","2016-08-01",144,422,3
 "Andy Goldstein","agoldste@redhat.com","Red Hat","2016-07-01",287,135,2
 "Patrick Baxter","pb@coreos.com","CoreOS","2016-09-01",323,424,7
-"Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-05-01",847,497,8
+"Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-05-01",861,501,9
 "Samuel Ortiz","sameo@linux.intel.com","Intel","2017-03-01",175,71,8
 "David Ashpole","dashpole@google.com","Google","2017-03-01",690,217,12
 "Rudi C","therc@users.noreply.github.com","Clarifai","2017-01-01",2,2,2
@@ -4428,7 +4436,7 @@
 "David Ashpole","dashpole@google.com","Google","2016-11-01",773,346,7
 "Crazykev","crazykev@zju.edu.cn","Self","2016-08-01",14,14,10
 "Jared","jaredbhatti@users.noreply.github.com","Google","2016-07-01",2,2,1
-"Kevin","wangzefeng@huawei.com","Huawei","2016-11-01",12,12,1
+"Julien Balestra","julien.balestra@gmail.com","42","2017-05-01",105,53,1
 "Jerzy Szczepkowski","jsz@google.com","Google","2016-09-01",358,123,11
 "Ferran Rodenas","frodenas@gmail.com","Pivotal","2016-12-01",2,1,1
 "sarahnovotny","sarah.novotny@gmail.com","Google","2016-11-01",404,0,2
@@ -4440,13 +4448,13 @@
 "Mike Danese","mikedanese@google.com","Google","2016-09-01",2087,1223,44
 "Julius Milan","jmilan@redhat.com","Red Hat","2017-05-01",2,1,2
 "Derek McQuay","derekmcquay@gmail.com","Apprenda","2017-05-01",6,11,2
+"Joe Finney","spxtr@google.com","Google","2017-06-01",801,963,13
 "Dan Osborne","djosborne10@gmail.com","Tigera","2017-05-01",11,135,2
 "Eric Chiang","eric.chiang.m@gmail.com","CoreOS","2016-11-01",36,6,1
 "Michael Michael","michmike@users.noreply.github.com","Apprenda","2017-01-01",4,4,2
-"Helin Wang","helinwang@baidu.com","Baidu","2017-01-01",6,0,1
 "Dan Williams","dcbw@redhat.com","Red Hat","2016-12-01",857,293,9
-"Luca Bruno","lucab@debian.org","CoreOS","2017-04-01",17,9,2
-"NickrenREN","nickren19@gmail.com","EasyStack","2017-04-01",294,551,15
+"Murad Korejo","mkorejo@gmail.com","IBM","2017-06-01",52,52,1
+"NickrenREN","nickren19@gmail.com","EasyStack","2017-04-01",295,552,16
 "Piotr Bryk","bryk@google.com","Google","2016-09-01",3963,780,24
 "Dr. Stefan Schimanski","stefan.schimanski@gmail.com","Red Hat","2017-02-01",44670,33364,89
 "Josh Horwitz","horwitzja@gmail.com","Oracle","2017-04-01",187,1,1
@@ -4463,7 +4471,7 @@
 "Cody Lundquist","cody.lundquist@gmail.com","GetFeedback.com","2017-06-01",801,0,1
 "Clayton Coleman","ccoleman@redhat.com","Red Hat","2017-01-01",16247,12360,68
 "Dusty Mabe","dusty@dustymabe.com","Dusty Mabe","2016-12-01",4,4,3
-"Matthew Mosesohn","mmosesohn@mirantis.com","Mirantis","2016-06-01",238,22,3
+"Matthew Mosesohn","mmosesohn@mirantis.com","Mirantis","2016-06-01",1,0,1
 "fibonacci1729","brian@deis.com","DEIS","2016-09-01",3028,2010,16
 "Scott Collier","emailscottcollier@gmail.com","Red Hat","2017-01-01",2,2,2
 "Dominika Hodovska","dhodovsk@redhat.com","Red Hat","2016-09-01",304,65,5
@@ -4482,7 +4490,7 @@
 "Kevin","wangzefeng@huawei.com","Huawei","2016-09-01",10,11,2
 "Zihong Zheng","zihongz@google.com","Google","2016-11-01",2456,636,30
 "Jacob Beacham","beacham@google.com","Google","2017-03-01",813,108,29
-"dlorenc","dlorenc@google.com","Google","2016-06-01",592,190,18
+"cody-clark","codyclark@google.com","Google","2017-06-01",15,15,2
 "Jordan Yaker","jordan.e.yaker@gmail.com","Supportify","2016-10-01",1,0,1
 "Brad Beam","brad.beam@b-rad.info","NotFound","2017-06-01",6,0,1
 "Jose Aguirre","jose.g.aguirre@intel.com","Intel","2017-02-01",1,0,1
@@ -4536,10 +4544,9 @@
 "Matt Butcher","mbutcher@engineyard.com","Engine Yard","2016-08-01",1732,499,22
 "Matt Bruzek","mbruzek@gmail.com","Juju Ecosystem","2017-02-01",10,3,1
 "Giri Kuncoro","girikuncoro@users.noreply.github.com","VMware","2017-05-01",229,1,2
-"Jerzy Szczepkowski","jsz@google.com","Google","2016-06-01",6,16,2
 "Ben Mathews","ben@mathews2000.com","(Unknown)","2017-02-01",0,2,2
 "Ben Sully","ben.sully88@gmail.com","YouGov","2017-04-01",5,5,1
-"Cao Shufeng","caosf.fnst@cn.fujitsu.com","Fujitsu","2017-02-01",43,16,5
+"Xiang","xiangli.cs@gmail.com","CoreOS","2016-10-01",2,2,1
 "Tobias Bradtke","webwurst@gmail.com","Giant Swarm","2016-12-01",2,2,1
 "Mik Vyatskov","vmik@google.com","Google","2016-10-01",396,128,13
 "George G","git@gg7.io","Self","2016-07-01",24,19,9
@@ -4580,10 +4587,10 @@
 "Mike Danese","mikedanese@google.com","Google","2017-01-01",3734,809,23
 "Shayne Wang","shaynewang@users.noreply.github.com","Self","2017-02-01",2,2,2
 "Felipe Cavalcanti","fjfcavalcanti@gmail.com","topfreegames","2017-04-01",136,8,1
-"Bryan T. Richardson","bryan@activeshadow.com","Self","2016-07-01",5,3,1
+"Tobias Klauser","tobias.klauser@gmail.com","(Unknown)","2017-06-01",1,1,1
 "Michelle Noorali","michelle@deis.com","DEIS","2016-07-01",627,3044,17
 "pweil-","pweil@redhat.com","Red Hat","2016-09-01",1204,20,5
-"Yuvi Panda","yuvipanda@gmail.com","Wikimedia Foundation","2017-06-01",9,1,1
+"Yuvi Panda","yuvipanda@gmail.com","Wikimedia Foundation","2017-06-01",10,2,2
 "guangxuli","li.guangxu@zte.com.cn","ZTE Corporation","2016-09-01",107,30,15
 "Arthur Le Maitre","arthurlm44@gmail.com","FinancialContent","2017-03-01",4,2,3
 "Lucas Käldström","lucas.kaldstrom@hotmail.co.uk","Rook","2017-05-01",1,1,1
@@ -4591,13 +4598,13 @@
 "Miha Pleško","miha.plesko@xlab.si","XLAB","2017-05-01",1,1,1
 "Giri Kuncoro","gkuncoro@vmware.com","VMware","2017-06-01",10111,10110,5
 "Angus Salkeld","asalkeld@mirantis.com","Mirantis","2016-07-01",745,374,11
-"Xiaoyu Zhang","zhang.xiaoyu33@zte.com.cn","ZTE Corporation","2017-06-01",54,6,3
+"Xiaoyu Zhang","zhang.xiaoyu33@zte.com.cn","ZTE Corporation","2017-06-01",66,16,7
 "Christopher J. Ruwe","cjr@cruwe.de","(Unknown)","2017-04-01",18,12,1
 "huzhifeng","huzhifeng@douyu.tv","Douyu.com","2017-03-01",4,4,3
-"Sebastian Florek","s.florek91@gmail.com","Fujitsu","2017-06-01",3970,2693,3
+"Sebastian Florek","s.florek91@gmail.com","Fujitsu","2017-06-01",4365,2735,4
 "Ronald Petty","ronald.petty@gmail.com","RX-M","2016-08-01",47,47,1
 "Shashidhara T D","shashidhara.td@huawei.com","Huawei","2016-10-01",1727,219,12
-"Matt Marchetti","mmarchetti@hearst.com","(Unknown)","2017-06-01",19,0,1
+"prashima","prashimas@vmware.com","VMware","2017-03-01",717,202,4
 "andy xie","andy.xning@gmail.com","Self","2016-08-01",30,2,4
 "Nicolai von Neudeck","nicolai@vonneudeck.com","Talon.One","2016-11-01",33,13,3
 "Steve Sloka","slokas@upmc.edu","UPMC","2017-06-01",2,2,1
@@ -4636,9 +4643,9 @@
 "Martin Milata","mmilata@redhat.com","Red Hat","2016-10-01",1,1,1
 "Jeff Schroeder","jeffschroeder@computer.org","IEEE Computer Society","2016-12-01",2,2,2
 "lojies","lu.zhenxing@zte.com.cn","ZTE Corporation","2016-07-01",19,13,5
-"Quintin Lee","qlee@google.com","Google","2016-06-01",1512,69,3
+"Quintin Lee","qlee@google.com","Google","2016-06-01",41,69,1
 "Matt Rickard","mrick@google.com","Google","2017-02-01",3184,2445,30
-"Wojciech Tyczynski","wojtekt@google.com","Google","2016-06-01",274,225,6
+"CJ Cullen","cjcullen@google.com","Google","2016-08-01",2,1,2
 "Saad Ali","saadali@google.com","Google","2017-04-01",7,28,2
 "xialonglee","li.xialong@zte.com.cn","ZTE Corporation","2017-04-01",3,3,3
 "Garrett Rodrigues","grod@google.com","Google","2017-02-01",1904,364,8
@@ -4647,7 +4654,7 @@
 "Maisem Ali","maisem@google.com","Google","2016-11-01",5,5,2
 "Camil Blanaru","camil@me.com","Apple","2017-04-01",705,16,2
 "Trey Hyde","rhyde@hydenetworks.com","Central Desktop, Inc","2016-10-01",6,4,2
-"Brandon Philips","brandon@ifup.org","CoreOS","2016-09-01",350,424,17
+"Jing Xu","jinxu@google.com","Google","2017-03-01",65,16,3
 "krousey","krousey@users.noreply.github.com","Google","2017-03-01",2,2,1
 "Daniel Smith","dbsmith@google.com","Google","2016-11-01",3,38,4
 "Jason Brooks","jbrooks@redhat.com","Red Hat","2017-01-01",24,5,1
@@ -4657,11 +4664,13 @@
 "Christopher M. Luciano","cmluciano@us.ibm.com","IBM","2017-06-01",11,5,2
 "Mik Vyatskov","vmik@google.com","Google","2017-03-01",862,210,11
 "chentao1596","chen.tao3@zte.com.cn","ZTE Corporation","2017-03-01",448,13,10
+"Cesarini, Daniele","daniele.cesarini@sky.uk","Sky","2017-03-01",1,1,1
 "Michail Kargakis","mkargaki@redhat.com","Red Hat","2017-02-01",1182,418,25
 "supereagle","jmyue@hotmail.com","Self","2017-02-01",19,19,3
 "Matt Rickard","mrick@google.com","Google","2016-12-01",3821,3554,25
 "Bowei Du","bowei@google.com","Google","2016-10-01",3430,284,15
 "leonliao","xiaobo.liao@gmail.com","(Unknown)","2017-01-01",13,2,2
+"Jorge O. Castro","jorge@heptio.com","(Unknown)","2017-05-01",16,40,1
 "Fede Diaz","nordri@gmail.com","Self","2016-10-01",61,19,3
 "bradley childs","bchilds@redhat.com","Red Hat","2016-07-01",2195,2,3
 "Greg Taylor","snagglepants@gmail.com","Reddit","2016-10-01",828,1,3
@@ -4673,7 +4682,6 @@
 "Budh Ram Gurung","budhram.gurung01@gmail.com","Red Hat","2017-05-01",11,11,1
 "Aaron Levy","aaronjlevy@gmail.com","Aperian Global","2016-08-01",183,147,9
 "Chao Xu","xuchao@google.com","Google","2017-01-01",85,58,1
-"Tomas Smetana","tsmetana@redhat.com","Red Hat","2016-11-01",5,3,1
 "Rodolfo Carvalho","rcarvalh@redhat.com","Red Hat","2016-08-01",3,1,1
 "sneumann","sneumann@ipb-halle.de","IPB","2016-11-01",3,3,3
 "Benjamin Sherman","benjamin@jivesoftware.com","Jive Software","2017-04-01",5,2,2
@@ -4691,7 +4699,7 @@
 "Xinbo Weng","xihuanbo_0521@zju.edu.cn","Self","2016-12-01",112,114,8
 "Ilya Dmitrichenko","errordeveloper@gmail.com","Weaveworks","2016-08-01",1931,81,2
 "Kevin","wangzefeng@huawei.com","Huawei","2017-01-01",621,240,6
-"Luke Nickerson","luke.nickerson@gmail.com","Apprenda","2016-06-01",198,3,1
+"steveperry-53","stevepe@google.com","Google","2016-11-01",286,664,7
 "Chance Zibolski","chance.zibolski@gmail.com","CoreOS","2017-03-01",77,28,2
 "Nathan Button","nbutton@ancestry.com","Ancestry.com","2017-05-01",40,37,1
 "Dmitry Monakhov","dmonakhov@gmail.com","Parallels","2017-02-01",3,3,1
@@ -4700,7 +4708,7 @@
 "Random-Liu","lantaol@google.com","Google","2016-11-01",850,437,8
 "Charles Butler","chuck@dasroot.net","Canonical","2017-06-01",2,1,1
 "Pierre Ozoux","pierre@ozoux.net","indiehosters","2017-02-01",2,2,2
-"Saad Ali","saadali@google.com","Google","2016-07-01",1268,209,8
+"David McMahon","djmm@google.com","Google","2016-06-01",911,145,10
 "Rudi C","therc@users.noreply.github.com","Clarifai","2016-08-01",41,4,1
 "ikropotov","ranma.go@gmail.com","(Unknown)","2017-02-01",1,1,1
 "Bogdan Dobrelya","bdobrelia@mirantis.com","Mirantis","2016-09-01",743,274,13
@@ -4737,8 +4745,8 @@
 "Jesse Kinkead","jesse.kinkead@gmail.com","Allen Institute for Artificial Intelligence","2017-03-01",3,1,1
 "Dan Williams","dcbw@redhat.com","Red Hat","2017-03-01",634,454,14
 "ailusazh","ailusazh@126.com","JD.COM","2016-12-01",2,2,1
-"Matt Snoby","snobym@cisco.com","Cisco","2017-04-01",47,15,3
-"Jess Frazelle","jessfraz@google.com","Google","2016-06-01",37,31,1
+"tobilarscheid","tobilarscheid@gmail.com","IBM","2017-06-01",2,2,1
+"Michael Kibbe","mkibbe@google.com","Google","2017-06-01",12,5,2
 "ymqytw","mengqiy@google.com","Google","2017-01-01",515,169,3
 "Daniel Martins","daniel.tritone@gmail.com","Descomplica","2017-03-01",623,98,3
 "Tomas Pizarro","tomas@bitnami.com","Bitnami","2017-06-01",1,1,1
@@ -4787,7 +4795,7 @@
 "Rob Franken","rob@rob-franken.nl","Google","2016-10-01",2037,1461,10
 "Bob","bvandenheuvel@schubergphilis.com","(Unknown)","2017-05-01",26,4,1
 "Steve Wilkerson","wilkers.steve@gmail.com","AT&T","2016-12-01",7,7,3
-"dlorenc","dlorenc@google.com","Google","2016-12-01",228,44,6
+"Aaron Prindle","aprindle@google.com","Google","2016-09-01",2167,657,10
 "Jose Armesto","github@armesto.net","Softonic","2017-01-01",2,2,1
 "Frederic Branczyk","fbranczyk@gmail.com","CoreOS","2017-02-01",548,137,9
 "Ashley Penney","ashley.penney@maxwellhealth.com","Maxwell Health","2017-03-01",104,43,1
@@ -4802,13 +4810,13 @@
 "Tomas Kral","tkral@redhat.com","Red Hat","2017-03-01",49,50,5
 "Nilesh Londhe","lvnilesh@users.noreply.github.com","Cloud Genius","2016-12-01",15,2,3
 "Michelle Noorali","michelle@deis.com","DEIS","2017-04-01",57,15,2
+"Daniel Beruben","daniel.beruben@gmail.com","Devops","2016-08-01",8,0,1
 "Zihong Zheng","zihongz@google.com","Google","2017-01-01",57,19,5
 "Jeff Mendoza","jeffmendoza@google.com","Google","2016-08-01",526,2069,7
 "Tim Hockin","thockin@google.com","Google","2017-06-01",26,1,2
 "Patrick Baxter","pb@coreos.com","CoreOS","2017-02-01",125,116,11
 "Tim St. Clair","stclair@google.com","Google","2017-03-01",410,233,12
 "Jim","jm.wlkr1@gmail.com","Pathgather","2016-10-01",110,48,10
-"Tao Zhou","joseph.zhoutao@huawei.com","Huawei","2017-02-01",10,7,6
 "Girish Kalele","gkalele@google.com","Google","2016-09-01",1551,6,6
 "Arve Knudsen","arve.knudsen@gmail.com","ApresMIDI AB","2017-06-01",3,4,1
 "Gao feng","omarapazanadi@gmail.com","Fujitsu","2016-10-01",49,41,1
@@ -4820,12 +4828,12 @@
 "joshrosso","joshrosso@gmail.com","Hyland Software","2016-11-01",3,3,1
 "Michael Stapelberg","stapelberg@google.com","Google","2016-08-01",2,2,1
 "heschlie","heschlie@gmail.com","Project Calico","2017-05-01",222,85,2
-"xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2016-06-01",84,52,4
+"xiangpengzhao","zhao.xiangpeng@zte.com.cn","ZTE Corporation","2016-06-01",65,52,3
 "William Martin Stewart","zoidbergwill@gmail.com","Superbalist","2016-10-01",24,24,1
 "Nikolay Mahotkin","nikolay.makhotkin@gmail.com","Self","2016-12-01",364,183,10
 "Jon Whitcraft","jwhitcraft@sugarcrm.com","SugarCRM","2017-03-01",6,6,1
 "David Kirstein","dak@batix.com","Batix Software GmbH","2017-01-01",2,1,2
-"Ricky Pai","rickyp999+github@gmail.com","(Unknown)","2017-06-01",33,26,6
+"Adrian Ursu","development@advance-leap.com","OpenCredo","2016-09-01",1,0,1
 "Cole Mickens","cole.mickens@gmail.com","Microsoft","2016-12-01",5,0,1
 "Jian Qiu","qiujian@cn.ibm.com","IBM","2017-04-01",2,2,1
 "TonyAdo","coolhzb@163.com","Net EASE 网易有态度","2017-03-01",10,5,1
@@ -4848,6 +4856,7 @@
 "Karol Kraśkiewicz","karol.kraskiewicz@gmail.com","Roche","2017-03-01",41,8,2
 "Ivan Shvedunov","ishvedunov@mirantis.com","Mirantis","2016-11-01",53,32,4
 "Sidhartha Mani","sidharthamn@gmail.com","(Unknown)","2017-05-01",5,1,1
+"Nikhita Raghunath","nikitaraghunath@gmail.com","Self","2017-06-01",1,1,1
 "Lantao Liu","taotaotheripper@gmail.com","Google","2016-07-01",917,1708,26
 "Joe Finney","spxtr@google.com","Google","2016-12-01",3190,1546,82
 "Mrunal Patel","mrunalp@gmail.com","Red Hat","2016-08-01",901,113,44
@@ -4865,23 +4874,23 @@
 "Sameer Naik","sameer@damagehead.com","clibs","2016-12-01",2005,0,4
 "Qiang Huang","h.huangqiang@huawei.com","Huawei","2016-10-01",1,1,1
 "Morgan Bauer","mbauer@us.ibm.com","IBM","2017-02-01",6763,3796,25
-"bin liu","liubin0329@gmail.com","Self","2016-06-01",17,17,1
 "Vladimir Rutsky","rutsky.vladimir@gmail.com","Buildbot","2016-07-01",2,1,2
 "Steven E. Harris","seharris@us.ibm.com","IBM","2017-03-01",244,64,3
 "Sameer Naik","sameer@damagehead.com","clibs","2017-03-01",487,12,3
 "talset","talset55@gmail.com","Red Hat","2017-03-01",9,1,1
 "Antoine Pelisse","apelisse@gmail.com","Embedded Systems, ECE","2016-10-01",2344,778,23
 "Dr. Stefan Schimanski","sttts@redhat.com","Red Hat","2016-08-01",2734,449,17
-"Matthew Wong","mawong@redhat.com","Red Hat","2017-03-01",10507,12552,49
+"Matthew Wong","mawong@redhat.com","Red Hat","2017-03-01",10691,12656,50
 "Haissam Kaj","haissam.kaj@gmail.com","Datadog","2017-04-01",7,7,1
 "ailusazh","ailusazh@126.com","JD.COM","2017-03-01",4,1,1
+"Radhika Puthiyetath","radhika.puthiyetath@coreos.com","CoreOS","2017-06-01",188,30,1
 "Taylor Thomas","taylor.l.thomas@intel.com","Intel","2017-03-01",5,2,2
 "Michael Taufen","mtaufen@google.com","Google","2017-01-01",288,254,10
 "Joe Wang","joewang@berkeley.edu","Self","2017-03-01",1,1,1
 "Michael Taufen","mtaufen@google.com","Google","2016-10-01",362,25,15
 "Kevin Wang","kevin807359@gmail.com","Rev.com","2016-11-01",193,10,1
 "Justin Scott","justin.a.scott@intel.com","Intel","2017-06-01",9,14,1
-"Martin Maly","mmaly@google.com","Google","2016-12-01",334,393,9
+"Brent Dorsey","bdorsey@homeaway.com","HomeAway","2017-04-01",18,2,2
 "Jonathan MacMillan","dvorak@google.com","Google","2017-04-01",282,605,7
 "Tomoya Usami","tousami@zlab.co.jp","zlabjp","2017-04-01",1,1,1
 "Zach Loafman","zml@google.com","Google","2016-07-01",34,112,6
@@ -4889,7 +4898,7 @@
 "Nalin Dahyabhai","nalin@redhat.com","Red Hat","2016-10-01",811,382,5
 "wlan0","sid@rancher.com","Rancher Labs","2017-01-01",3,3,1
 "Aaron Crickenberger","spiffxp@gmail.com","Samsung","2017-05-01",65,20,7
-"Ian Smith","ismith@mit.edu","MIT","2017-05-01",247,18,3
+"Vinit Mahedia","vinit.mahedia@gmail.com","(Unknown)","2017-05-01",9,12,1
 "Adnan Abdulhussein","adnan@bitnami.com","Bitnami","2016-09-01",1519,100,7
 "Anton Mironov","ant.mironov@gmail.com","Jaconda","2016-07-01",75,46,1
 "Vladimir Rutsky","vladimir@rutsky.org","Buildbot","2017-03-01",20,125,5
@@ -4899,8 +4908,9 @@
 "Derek Carr","decarr@redhat.com","Red Hat","2016-10-01",1929,511,11
 "juanvallejo","jvallejo@redhat.com","Red Hat","2017-02-01",7813,4,4
 "paalkr","paalkr@users.noreply.github.com","(Unknown)","2017-06-01",1,0,1
+"Sen Lu","senlu@google.com","Google","2017-05-01",6511,4151,36
 "Barrett Harber","binoculars@users.noreply.github.com","Center for Open Science","2017-05-01",8,0,1
-"Justin Santa Barbara","justin@fathomdb.com","FathomDB","2017-05-01",962,205,24
+"Justin Santa Barbara","justin@fathomdb.com","FathomDB","2017-05-01",8615,407,27
 "fibonacci1729","brian@deis.com","DEIS","2017-05-01",2531,2110,8
 "Feynman Liang","feynman.liang@gmail.com","Amherst College","2017-01-01",1,1,1
 "Andrew Basson","andrew.basson@gmail.com","Devops","2016-10-01",9,9,5
@@ -4916,7 +4926,7 @@
 "Keith Mitchell","kemi.krm@gmail.com","VREAL","2016-10-01",3,3,1
 "Lucas Käldström","lucas.kaldstrom@hotmail.co.uk","Rook","2017-02-01",3149,2943,36
 "prashima","prashimas@vmware.com","VMware","2017-04-01",304,76,3
-"Mike Brown","brownwm@us.ibm.com","IBM","2017-06-01",748,716,5
+"Mike Brown","brownwm@us.ibm.com","IBM","2017-06-01",751,717,6
 "Jeremy Whitlock","jwhitlock@apache.org","Apache","2017-05-01",2357,14,5
 "Lachlan Evenson","lachie83@users.noreply.github.com","Microsoft","2016-12-01",241,7,3
 "Shashidhara T D","shashidhara.td@huawei.com","Huawei","2017-04-01",920,2463,13
@@ -4928,7 +4938,7 @@
 "Jose Armesto","github@armesto.net","Softonic","2017-05-01",203,1,2
 "Colin Hom","colhom@gmail.com","NotFound","2016-11-01",26,13,4
 "Gergo Huszty","gergo.huszty@nokia.com","Nokia","2017-02-01",6,6,1
-"Marcin Wielgus","mwielgus@google.com","Google","2016-06-01",313,153,13
+"Marcin Wielgus","mwielgus@google.com","Google","2016-06-01",265,125,9
 "Vishnu Kannan","vishnuk@google.com","Google","2016-11-01",206,94,6
 "Patrick Harböck","patrick.harboeck@tngtech.com","(Unknown)","2017-03-01",6,1,1
 "jay vyas","jay@apache.org","Apache","2016-10-01",505,226,6
@@ -4956,6 +4966,7 @@
 "Devan Goodwin","dgoodwin@redhat.com","Red Hat","2016-11-01",29,1,2
 "Otto Yiu","otto@live.ca","ZestCore","2017-04-01",11,7,2
 "Jack Zampolin","jack.zampolin@gmail.com","InfluxData","2016-12-01",1117,174,21
+"Mikal","mikalv@mikalv.net","(Unknown)","2017-06-01",1,1,1
 "Cameron Zahedi","czahedi@google.com","Google","2016-09-01",89,0,1
 "nikhiljindal","nikhiljindal@google.com","Google","2016-07-01",19,19,1
 "Deyuan Deng","deyuan@caicloud.io","Caicloud","2017-05-01",83,19,2
@@ -4964,10 +4975,10 @@
 "Alex Plugaru","xarg@users.noreply.github.com","Gorgias","2017-01-01",1,1,1
 "Victor Gama","hey@vito.io","D3.do","2016-10-01",1,1,1
 "Laurent Crisci","laurent@crisci.io","(Unknown)","2017-05-01",6,6,1
-"Lucas Käldström","lucas@weave.works","Weaveworks","2017-06-01",658,94,10
+"Lucas Käldström","lucas@weave.works","Weaveworks","2017-06-01",769,543,12
 "Solly Ross","sross@redhat.com","Red Hat","2017-03-01",382,80,3
 "Lachlan Evenson","lachie83@users.noreply.github.com","Microsoft","2017-06-01",344,166,9
-"Daniel Nardo","dnardo@google.com","Google","2017-06-01",19,4,5
+"Daniel Nardo","dnardo@google.com","Google","2017-06-01",127,22,8
 "Taylor Thomas","taylor.l.thomas@intel.com","Intel","2016-12-01",436,175,3
 "Eric Chiang","eric.chiang.m@gmail.com","CoreOS","2017-01-01",86,6,1
 "Michelle Noorali","michelle@deis.com","DEIS","2016-08-01",766,157,13
@@ -4975,7 +4986,7 @@
 "Daniel P. Berrange","berrange@redhat.com","Red Hat","2017-02-01",2,2,1
 "Jeff Schroeder","jeffschroeder@computer.org","IEEE Computer Society","2016-11-01",5,5,2
 "Michal Fojtik","mfojtik@redhat.com","Red Hat","2016-06-01",116,26,2
-"Huamin Chen","hchen@redhat.com","Red Hat","2017-06-01",145,160,2
+"Huamin Chen","hchen@redhat.com","Red Hat","2017-06-01",182,197,3
 "Alexander Trost","galexrt@googlemail.com","sb++","2017-03-01",106,34,5
 "Sebastian Florek","s.florek91@gmail.com","Fujitsu","2017-02-01",2651,941,5
 "Eric Tune","etune@google.com","Google","2017-04-01",1,1,1
@@ -4985,11 +4996,11 @@
 "Hiroshi Saito","hiroshi3110@gmail.com","Nota Inc,","2016-12-01",2,2,1
 "Jeff Lowdermilk","jeffml@google.com","Google","2016-10-01",12,10,2
 "yupengzte","yu.peng36@zte.com.cn","ZTE Corporation","2016-09-01",82,82,17
-"foxyriver","liu.hao89@zte.com.cn","ZTE Corporation","2017-01-01",3,3,3
+"Salvatore Dario Minonne","salvatore-dario.minonne@amadeus.com","Amadeus","2016-08-01",8,149,1
 "Jess Frazelle","acidburn@google.com","Google","2016-10-01",1083,747,26
 "Jacob Simpson","jacobsimpson@google.com","Google","2017-04-01",288,102,2
 "Marcin Maciaszczyk","maciaszczykm@users.noreply.github.com","Fujitsu","2016-08-01",24,59,2
-"Clayton Coleman","ccoleman@redhat.com","Red Hat","2016-06-01",84,24,3
+"Clayton Coleman","ccoleman@redhat.com","Red Hat","2016-06-01",8,1,1
 "Keerthan Reddy Mala (kmala)","kmala@deis.com","DEIS","2016-10-01",24,1,1
 "ymqytw","mengqiy@google.com","Google","2016-12-01",637,8,4
 "Alexander Vlasov","avlasov@sugarcrm.com","SugarCRM","2017-04-01",1,1,1
@@ -5013,13 +5024,13 @@
 "Ahmed Kamal","email.ahmedkamal@googlemail.com","Cloud Niners","2017-03-01",1,1,1
 "Aaron Prindle","aprindle@google.com","Google","2016-12-01",14,3,4
 "Fabrizio Milo","mistobaan@users.noreply.github.com","h2o.ai","2017-02-01",4,4,4
-"Hai Huang","haih@us.ibm.com","IBM","2016-09-01",1,1,1
+"Dan Walsh","dwalsh@redhat.com","Red Hat","2016-09-01",112,11,2
 "Victor Unegbu","victor@unegbu.com","(Unknown)","2017-03-01",1,0,1
 "Haiyan Meng","hmeng@redhat.com","Red Hat","2016-07-01",611,74,6
 "Carlos Alexandro Becker","caarlos0@users.noreply.github.com","ContaAzul","2017-05-01",7,10,6
 "Jingtian Peng","pengjingtian@huawei.com","Huawei","2016-09-01",1,1,1
 "Oleg Atamanenko","oatamanenko@eastbanctech.com","EastBanc Technologies","2017-01-01",2323,5,3
-"Nail Islamov","nilebox@users.noreply.github.com","(Unknown)","2017-06-01",5,1,1
+"Nail Islamov","nilebox@users.noreply.github.com","(Unknown)","2017-06-01",11,7,2
 "Morten Rasmussen","morten@mediaflex.dk","(Unknown)","2017-02-01",6,2,1
 "Marie Shaw","mnshaw@google.com","Google","2016-07-01",1354,563,14
 "yuexiao-wang","wang.yuexiao@zte.com.cn","ZTE Corporation","2016-10-01",18,18,4
@@ -5034,7 +5045,7 @@
 "Mike Bryant","mike@mikebryant.me.uk","ocadotechnology","2017-05-01",1,1,1
 "Michael Fraenkel","fraenkel@us.ibm.com","IBM","2016-07-01",46,46,2
 "Daniel Smith","dbsmith@google.com","Google","2016-12-01",12,84,1
-"Manjunath A Kumatagi","mkumatag@in.ibm.com","IBM","2017-03-01",3,3,2
+"Manjunath A Kumatagi","mkumatag@in.ibm.com","IBM","2017-03-01",5,5,3
 "Jimmy Cuadra","jimmy@jimmycuadra.com","Jimmy Cuadra","2016-07-01",1,1,1
 "Cole Mickens","cole.mickens@gmail.com","Microsoft","2017-03-01",25,0,3
 "Robert Roland","robert.roland@hpe.com","HP","2016-12-01",5,2,1
@@ -5061,7 +5072,7 @@
 "Devan Goodwin","dgoodwin@redhat.com","Red Hat","2017-04-01",2,1,1
 "hekra01","hekra@cisco.com","Cisco","2017-02-01",1,1,1
 "Mike Brown","brownwm@us.ibm.com","IBM","2016-10-01",33,32,7
-"Paul Morie","pmorie@redhat.com","Red Hat","2017-06-01",2137,1448,10
+"Paul Morie","pmorie@redhat.com","Red Hat","2017-06-01",2166,1504,12
 "andrewsykim","andrew@wattpad.com","Wattpad","2017-04-01",2155,169,3
 "foxyriver","liu.hao89@zte.com.cn","ZTE Corporation","2016-12-01",56,59,2
 "Miao Luo","miaol@vmware.com","VMware","2017-03-01",706,184,11
@@ -5073,12 +5084,13 @@
 "Michal Gebauer","mishak@mishak.net","Internet Mall, a.s.","2017-01-01",1,1,1
 "Johannes Scheuermann","johannes.scheuermann@inovex.de","inovex GmbH","2016-09-01",60,14,5
 "Anirudh","ramanathana@google.com","Google","2016-11-01",961,212,28
+"Kevin","wangzefeng@huawei.com","Huawei","2017-06-01",14,6,1
 "Dalton Hubble","dghubble@gmail.com","CoreOS","2016-09-01",43,67,3
 "NickrenREN","yuquan.ren@easystack.cn","EasyStack","2017-03-01",143,69,12
 "Aaron Schlesinger","aaschles@microsoft.com","Microsoft","2017-04-01",1003,136,21
 "pospispa","ppospisi@redhat.com","Red Hat","2016-12-01",68,18,2
 "spiddy","spiddy@users.noreply.github.com","harbur","2017-05-01",27,24,2
-"Brent Dorsey","bdorsey@homeaway.com","HomeAway","2017-04-01",18,2,2
+"MaciekPytel","maciekpytel@google.com","Google","2017-04-01",1297,207,22
 "Gustavo Orozco H","gorozcoh@users.noreply.github.com","(Unknown)","2016-11-01",1,1,1
 "Andrew O'Neill","andrew.oneill@nordstrom.com","Nordstrom","2016-12-01",10,9,1
 "jzhoucliqr","jzhou@cliqr.com","CliQr Technologies","2016-08-01",2,2,1
@@ -5103,8 +5115,8 @@
 "Xavier Lange","xrlange@gmail.com","Fanpics","2017-01-01",5,3,2
 "Anthony Howell","anthonyrhowell@gmail.com","maryvilledev","2016-09-01",5,6,1
 "andrewsykim","andrew@wattpad.com","Wattpad","2017-06-01",376,2376,1
-"Aleksandra Malinowska","aleksandram@google.com","Google","2017-05-01",550,84,10
-"Anirudh","ramanathana@google.com","Google","2017-06-01",67,22,7
+"Aleksandra Malinowska","aleksandram@google.com","Google","2017-05-01",558,84,11
+"Anirudh","ramanathana@google.com","Google","2017-06-01",123,146,11
 "Matt Rickard","mrick@google.com","Google","2016-08-01",2558,1439,18
 "Matthew Fisher","mfisher@deis.com","DEIS","2017-04-01",27,3,1
 "Piotr Dabkowski","pdabkowski@google.com","Google","2016-07-01",708,43,3
@@ -5113,7 +5125,7 @@
 "Angus Lees","gus@inodes.org","Bulletproof","2016-09-01",637,114,2
 "Richard Shaw","richard@aggress.net","(Unknown)","2017-03-01",3,3,1
 "Yulin Xie","yulinxie@zju.edu.cn","Self","2017-03-01",503,12,5
-"Kami Gerami","kami.gerami@gmail.com","Self","2016-10-01",5,5,1
+"Remi Rampin","remirampin@gmail.com","(Unknown)","2017-05-01",1,0,1
 "mlambert890b","marklam@google.com","Google","2017-03-01",4,4,4
 "Dan Williams","dcbw@redhat.com","Red Hat","2017-04-01",435,48,4
 "juanvallejo","jvallejo@redhat.com","Red Hat","2016-11-01",208,33,6
