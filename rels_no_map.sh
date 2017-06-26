@@ -10,5 +10,5 @@ mv output_no_map_* ~/dev/cncf/gitdm/kubernetes/v1.3.0-v1.4.0
 mv output_no_map_* ~/dev/cncf/gitdm/kubernetes/v1.4.0-v1.5.0
 ./run_for_rels_no_map.sh v1.5.0 v1.6.0
 mv output_no_map_* ~/dev/cncf/gitdm/kubernetes/v1.5.0-v1.6.0
-./run_for_rels_no_map.sh v1.6.0 v1.7.0-beta.3
+./run_for_rels_no_map.sh v1.6.0 v1.7.0-rc.1
 mv output_no_map_* ~/dev/cncf/gitdm/kubernetes/v1.6.0-v1.7.0
