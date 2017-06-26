@@ -178,6 +178,7 @@ def ghusers(repos, start_date)
     end
   end
 
+  hs = nil
   # Now analysis of different authors
   puts "Commits analysis..."
   email2github = {}
@@ -210,11 +211,14 @@ def ghusers(repos, start_date)
     end
   end
   puts "Processed #{n_processed}/#{n_commits} commits"
+
+  comms = nil
   users = []
   email2github.each do |email, data|
     users << [email, data[0], data[1]]
   end
   users = users.sort_by { |u| -u[2] }
+  email2github = nil
 
   # Process distinct GitHub users
   # 1 point/user --> took 3100 points
