@@ -69,7 +69,8 @@ def lookup_json(json_file, args, output_json)
   output_dat = output_json.split('.')[0] + '.dat'
   File.open(output_dat, 'w') do |file|
     users.each do |user|
-      file.write("#{user['html_url']} #{user['login']} #{user['name']} #{user['location']} #{user['email']}\n")
+      out = [user['html_url'], user['login'], user['name'], user['location'], user['email']].reject { |u| !u || u.strip == '' }.join(' ')
+      file.write("#{out}\n")
     end
   end
 end
