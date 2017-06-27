@@ -219,6 +219,7 @@ To enchance this json with already existing affiliations call: `./enchance_json.
 To generate JSON with some filtered data (like all unknown devs with location or linkedin profile link or just blog entry) call: `./lookup_json.sh` (see script for details, also lookup_json.rb have a lot of comments hwo to use it).
 To generate progress report (report about how many Not Found, Unknowns and Self employment devs are defined in our affiliation, call: `./progress_report.sh`).
 To generate aliases for emails that are already known (are uning the same GitHub user name) try `./aliaser.sh`, output is `aliaser.txt` that can be analysed and manually added to `cncf-config/aliases` if needed.
+To generate correlations map for company name (to avoid mapping typos etc) run `./correlations.sh` script, result is `correlations.txt` file that can be used to update `cncf-config/email-map` with corrected employer names.
 
 All those tools are automatically called when running full data regenerating script: `./rerun_data.sh`
 
