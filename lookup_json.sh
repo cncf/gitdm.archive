@@ -11,3 +11,6 @@ ruby lookup_json.rb github_users.json blog '/[^\s]+/' affiliation '/^\(Unknown\)
 # Devs with Unknown affiliation having location & name property non-empty
 rm -f unknown_with_location_and_name.json unknown_with_location_and_name.dat
 ruby lookup_json.rb github_users.json 'location,name' '/[^\s]+/' affiliation '/^\(Unknown\)$/' unknown_with_location_and_name.json
+# 2 committers with Unknown affiliation having location & name property non-empty
+rm -f unknown_with_location_and_name2.json unknown_with_location_and_name2.dat
+ruby lookup_json.rb github_users.json 'location,name' '/[^\s]+/' 'commits.to_s' '/^2$/' affiliation '/^\(Unknown\)$/' unknown_with_location_and_name2.json
