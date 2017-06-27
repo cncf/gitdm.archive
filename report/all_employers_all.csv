@@ -1,19 +1,19 @@
 idx,company,n,percent
-0,(All known 520),1297,92.38
+0,(All known 519),1308,93.16
 1,Google,202,14.4
 2,Red Hat,134,9.5
-3,(Unknown),82,5.8
-4,(Self),59,4.2
-5,Gmail *,40,2.8
-6,CoreOS,35,2.5
-7,Huawei,32,2.3
-8,IBM,28,2.0
-9,ZTE Corporation,27,1.9
-10,(Not Found),25,1.8
+3,(Unknown),64,4.6
+4,(Self),62,4.4
+5,CoreOS,35,2.5
+6,Huawei,32,2.3
+7,(Not Found),32,2.3
+8,Gmail *,29,2.1
+9,IBM,28,2.0
+10,ZTE Corporation,27,1.9
 11,Mirantis,20,1.4
-12,Intel,15,1.1
-13,VMware,15,1.1
-14,Cisco,15,1.1
+12,VMware,15,1.1
+13,Cisco,15,1.1
+14,Intel,15,1.1
 15,Microsoft,13,0.9
 16,Fujitsu,13,0.9
 17,HP,12,0.9
@@ -22,619 +22,595 @@ idx,company,n,percent
 20,Canonical,11,0.8
 21,Mesosphere,9,0.6
 22,Tencent,8,0.6
-23,Heptio,6,0.4
-24,UsersNoreplyGithub *,6,0.4
-25,Apcera,6,0.4
-26,Rackspace,6,0.4
-27,Caicloud,6,0.4
-28,Samsung,5,0.4
-29,Apache,5,0.4
-30,Metaswitch,5,0.4
-31,EasyStack,5,0.4
-32,Apprenda,4,0.3
-33,Box,4,0.3
-34,Weaveworks,4,0.3
-35,Docker,4,0.3
-36,Amadeus,4,0.3
-37,Endocode,4,0.3
-38,Apple,4,0.3
-39,SalesForce,4,0.3
-40,Rancher Labs,4,0.3
-41,Q42,3,0.2
-42,DaoCloud,3,0.2
-43,Jd.Com,3,0.2
-44,CERN,3,0.2
-45,Diamanti,3,0.2
-46,Juniper Networks,3,0.2
-47,Atlassian,3,0.2
-48,Square,3,0.2
-49,SoundCloud,3,0.2
-50,Walmart,3,0.2
-51,China Mobile International Limited,3,0.2
-52,Spotify,3,0.2
-53,SAP,3,0.2
-54,Yahoo,3,0.2
-55,GoDaddy,3,0.2
-56,Hotmail *,3,0.2
-57,Douyu.com,2,0.1
-58,RightScale,2,0.1
-59,Puppet,2,0.1
-60,Hyper.sh,2,0.1
-61,Qq *,2,0.1
-62,Yahoo *,2,0.1
-63,Return Path,2,0.1
-64,StackPointCloud,2,0.1
-65,Ubisoft,2,0.1
-66,Walt Disney,2,0.1
-67,Elastic,2,0.1
-68,Shopify,2,0.1
-69,Devsisters,2,0.1
-70,DigitalOcean,2,0.1
-71,Über,2,0.1
-72,NHN,2,0.1
-73,Nordstrom,2,0.1
-74,Engine Yard,2,0.1
-75,Zalando,2,0.1
-76,Loodse,2,0.1
-77,chbatey,2,0.1
-78,zulily,2,0.1
-79,Capgemini,2,0.1
-80,Devops,2,0.1
-81,zlabjp,2,0.1
-82,Concur,2,0.1
-83,The New York Times,2,0.1
-84,Cockroach,2,0.1
-85,Jetstack,2,0.1
-86,Tigera,2,0.1
-87,Portworx,2,0.1
-88,Clarifai,2,0.1
-89,DEIS,2,0.1
-90,Amazon,2,0.1
-91,Ustream,2,0.1
-92,PreviousNext,1,0.1
-93,Aperian Global,1,0.1
-94,Hitachi Data Systems,1,0.1
-95,SICPA Security Solutions,1,0.1
+23,Caicloud,7,0.5
+24,Rackspace,6,0.4
+25,Heptio,6,0.4
+26,Apcera,6,0.4
+27,EasyStack,5,0.4
+28,Metaswitch,5,0.4
+29,Samsung,5,0.4
+30,UsersNoreplyGithub *,5,0.4
+31,Apache,5,0.4
+32,Amadeus,5,0.4
+33,Über,4,0.3
+34,Docker,4,0.3
+35,Weaveworks,4,0.3
+36,Box,4,0.3
+37,Rancher,4,0.3
+38,Apprenda,4,0.3
+39,Endocode,4,0.3
+40,SalesForce,4,0.3
+41,Apple,4,0.3
+42,Yahoo,3,0.2
+43,DaoCloud,3,0.2
+44,Jd.Com,3,0.2
+45,CERN,3,0.2
+46,Diamanti,3,0.2
+47,Juniper Networks,3,0.2
+48,Atlassian,3,0.2
+49,Square,3,0.2
+50,SoundCloud,3,0.2
+51,Capgemini,3,0.2
+52,Walmart,3,0.2
+53,Q42,3,0.2
+54,China Mobile International Limited,3,0.2
+55,Spotify,3,0.2
+56,SAP,3,0.2
+57,GoDaddy,3,0.2
+58,Tigera,2,0.1
+59,Jetstack,2,0.1
+60,Cockroach,2,0.1
+61,The New York Times,2,0.1
+62,Concur,2,0.1
+63,zlabjp,2,0.1
+64,Devops,2,0.1
+65,zulily,2,0.1
+66,chbatey,2,0.1
+67,Loodse,2,0.1
+68,Zalando,2,0.1
+69,HolidayCheck,2,0.1
+70,Engine Yard,2,0.1
+71,Douyu.com,2,0.1
+72,Ustream,2,0.1
+73,LinkedIn,2,0.1
+74,RightScale,2,0.1
+75,Puppet,2,0.1
+76,Nordstrom,2,0.1
+77,Imaginea,2,0.1
+78,DigitalOcean,2,0.1
+79,NHN,2,0.1
+80,Devsisters,2,0.1
+81,Shopify,2,0.1
+82,Elastic,2,0.1
+83,Ubisoft,2,0.1
+84,Walt Disney,2,0.1
+85,Hyper.sh,2,0.1
+86,Amazon,2,0.1
+87,Return Path,2,0.1
+88,StackPointCloud,2,0.1
+89,Qq *,2,0.1
+90,Yahoo *,2,0.1
+91,Hotmail *,2,0.1
+92,DEIS,2,0.1
+93,Clarifai,2,0.1
+94,Portworx,2,0.1
+95,Bloomberg LP,1,0.1
 96,Accelerant Mobile Corp,1,0.1
 97,ListHub,1,0.1
-98,Imaginea,1,0.1
-99,Codigami,1,0.1
-100,Telemetry.com,1,0.1
-101,GRADIANT,1,0.1
-102,Primeton,1,0.1
-103,UNINETT,1,0.1
-104,OpenRuko,1,0.1
-105,holidaycheck,1,0.1
-106,Jimmy Cuadra,1,0.1
-107,Pardot,1,0.1
-108,Uber,1,0.1
-109,HolidayCheck Group AG,1,0.1
-110,Orange,1,0.1
-111,Robots and Pencils,1,0.1
-112,FOSSEE,1,0.1
-113,Social Rank,1,0.1
-114,Bigstep,1,0.1
-115,Dutchcoders,1,0.1
-116,Connectifier,1,0.1
-117,MyFitnessPal,1,0.1
-118,Tagged,1,0.1
-119,Feedtrail,1,0.1
-120,Bankwest,1,0.1
-121,imgix,1,0.1
-122,Jaconda,1,0.1
-123,ChinaNetCenter,1,0.1
-124,Iteam Solutions AB,1,0.1
-125,"Tech9 Computer Solutions, LLC",1,0.1
-126,Kalon,1,0.1
-127,Igneous Systems,1,0.1
-128,Whitepages,1,0.1
-129,Transwarp,1,0.1
-130,CodeCrowd OÜ,1,0.1
-131,Ancestry.com,1,0.1
-132,Qiniu,1,0.1
-133,NTT,1,0.1
-134,CNCF,1,0.1
-135,MuleSoft,1,0.1
-136,Irian Solutions,1,0.1
-137,Reevoo,1,0.1
-138,MapD,1,0.1
-139,JustWatch,1,0.1
-140,Shippable,1,0.1
-141,BrianKetelsen.com,1,0.1
-142,Luminis,1,0.1
-143,TravelSky Technology Limited,1,0.1
-144,Revinate,1,0.1
-145,Funio,1,0.1
-146,nearForm,1,0.1
-147,Wikimedia Foundation,1,0.1
-148,Heroku,1,0.1
-149,Bits Working,1,0.1
-150,18F,1,0.1
-151,Eon Cloud,1,0.1
-152,Unicredit,1,0.1
-153,UnitedHealth Group,1,0.1
-154,wikiwi,1,0.1
-155,Globo.com,1,0.1
-156,Movable Ink,1,0.1
-157,SkillShare,1,0.1
-158,F24 Ag,1,0.1
-159,Federal Reserve Board,1,0.1
-160,Apalia,1,0.1
-161,ZJU-SEL,1,0.1
-162,北京天威诚信电子商务服务有限公司,1,0.1
-163,Aptarus,1,0.1
-164,AppAdhoc,1,0.1
-165,10clouds,1,0.1
-166,Workiva,1,0.1
-167,WillCall,1,0.1
-168,IT Svit,1,0.1
-169,Buildbot,1,0.1
-170,Zesty.io,1,0.1
-171,ValuationUp,1,0.1
-172,Signal Sciences Corp,1,0.1
-173,The Remote Lab,1,0.1
-174,JetThoughts,1,0.1
-175,CDNetworks Korea,1,0.1
-176,ForgeRock,1,0.1
-177,dunnhumby,1,0.1
-178,Blizzard,1,0.1
-179,Dynatrace LLC,1,0.1
-180,Universidade Federal de Campina Grande,1,0.1
-181,Infraly,1,0.1
-182,Bracket Computing,1,0.1
-183,Layer 10,1,0.1
-184,Hortonworks,1,0.1
-185,Ericsson,1,0.1
-186,OJOHome,1,0.1
-187,Directi,1,0.1
-188,en.N cloud,1,0.1
-189,Dataman,1,0.1
-190,pronix,1,0.1
-191,Palantir Technologies,1,0.1
-192,Infoblox,1,0.1
-193,Vungle,1,0.1
-194,Naver,1,0.1
-195,CT Lab,1,0.1
-196,Thingful,1,0.1
-197,Virtu Financial LLC,1,0.1
-198,ocadotechnology,1,0.1
-199,Klarna,1,0.1
-200,ThousandEyes,1,0.1
-201,RealNames,1,0.1
-202,Wade & Wendy,1,0.1
-203,Alberta Energy,1,0.1
-204,AppsCode,1,0.1
-205,Jollyturns,1,0.1
-206,Schroders,1,0.1
-207,Sourcepoint,1,0.1
-208,ShareThis,1,0.1
-209,Met Office Informatics Lab,1,0.1
-210,Atlas Informatics,1,0.1
-211,Teradata Aster,1,0.1
-212,Mozilla,1,0.1
-213,D2C Media,1,0.1
-214,AnchorFree,1,0.1
-215,Always Move Fast,1,0.1
-216,Reddit,1,0.1
-217,Luxiar,1,0.1
-218,Reizwerk GmbH,1,0.1
-219,Indigo Biosystems,1,0.1
-220,Freeletics,1,0.1
-221,NASA,1,0.1
-222,Chariot Solutions,1,0.1
-223,CYSO,1,0.1
-224,Dollar Shave Club,1,0.1
-225,Okori Group,1,0.1
-226,Pressly,1,0.1
-227,Fedora Project,1,0.1
-228,Matrix,1,0.1
-229,Axway,1,0.1
-230,GatsbyJS,1,0.1
-231,PyConJP,1,0.1
-232,ALTA Language Services,1,0.1
-233,Amadeus IT Group,1,0.1
-234,moovel,1,0.1
-235,ioGlue,1,0.1
-236,Funky,1,0.1
-237,Zen.ly,1,0.1
-238,GoodMouth,1,0.1
-239,IEEE Computer Society,1,0.1
-240,Lohi Labs,1,0.1
-241,OpenBet,1,0.1
-242,Oblong Industries,1,0.1
-243,volleylabs,1,0.1
-244,HarmonyCloud,1,0.1
-245,ZeMoSo Technologies,1,0.1
-246,Opsview Ltd,1,0.1
-247,Feenix GmbH,1,0.1
-248,Fuhu,1,0.1
-249,wellcometrust,1,0.1
-250,Cyrus Biotechnology,1,0.1
-251,Stack Exchange,1,0.1
-252,Government Digital Service,1,0.1
-253,Happy Dog Web Productions,1,0.1
-254,Cloudera,1,0.1
-255,LinkedIn,1,0.1
-256,veritone,1,0.1
-257,Desjardins,1,0.1
-258,Rochester Institute of Technology,1,0.1
-259,Automattic,1,0.1
-260,Ensighten,1,0.1
-261,Donnerwood Media,1,0.1
-262,Citrix,1,0.1
-263,Gynzy,1,0.1
-264,Lazada Group,1,0.1
-265,Allegro,1,0.1
-266,Readify,1,0.1
-267,Netlify,1,0.1
-268,OpenCredo,1,0.1
-269,Peek,1,0.1
-270,Kende,1,0.1
-271,salestock,1,0.1
-272,Teads,1,0.1
-273,Data Foundry,1,0.1
-274,Skedulo,1,0.1
-275,yeasy Hyperledger,1,0.1
-276,CCAD/Comcast,1,0.1
-277,ContaAzul,1,0.1
-278,CSC,1,0.1
-279,Code Coup,1,0.1
-280,Stacktical,1,0.1
-281,"Eldarion, Inc.",1,0.1
-282,Avatao,1,0.1
-283,Comparative Bioinformatics,1,0.1
-284,Virginia Tech,1,0.1
-285,99cloud,1,0.1
-286,SECful,1,0.1
-287,Noraneko Inc.,1,0.1
-288,cafebazaar,1,0.1
-289,Operable,1,0.1
-290,indiehosters,1,0.1
-291,Stylify Your Blog,1,0.1
-292,Imaginea Technologies Inc.,1,0.1
-293,Paradigma Tecnológico,1,0.1
-294,Utility Software Services,1,0.1
-295,jet tsang,1,0.1
-296,Ubuntu,1,0.1
-297,SaltStack,1,0.1
-298,ZE PowerGroup,1,0.1
-299,Redspread,1,0.1
-300,RCS Analytics GmbH,1,0.1
-301,Databricks,1,0.1
-302,FounderFuel,1,0.1
-303,Trafero,1,0.1
-304,Appear TV AS,1,0.1
-305,Z Lab Corporation,1,0.1
-306,KKBOX,1,0.1
-307,Bluescape,1,0.1
-308,Yola.com,1,0.1
-309,Getty Images,1,0.1
-310,eDigitalResearch,1,0.1
-311,Criteo,1,0.1
-312,FINN.no,1,0.1
-313,mixpanel,1,0.1
-314,Lasse Schuirmann,1,0.1
-315,Avametric,1,0.1
-316,Zeet,1,0.1
-317,Cruise Automation,1,0.1
-318,On Center Software,1,0.1
-319,Tradesy,1,0.1
-320,Big Heavy World,1,0.1
-321,AT&T,1,0.1
-322,Zendesk,1,0.1
-323,Rudd-O,1,0.1
-324,recruit-mp,1,0.1
-325,Tumblr,1,0.1
-326,Singlewire Software,1,0.1
-327,Traum-Ferienwohnungen,1,0.1
-328,DoubleDutch,1,0.1
-329,Rombit,1,0.1
-330,Dave Mueller,1,0.1
-331,SparkTC,1,0.1
-332,Compose,1,0.1
-333,Cloud Genius,1,0.1
-334,ApresMIDI AB,1,0.1
-335,FactSet Research Systems,1,0.1
-336,Digital Origin,1,0.1
-337,twitch.tv,1,0.1
-338,Container Solutions,1,0.1
-339,École de technologie supérieure,1,0.1
-340,Sematext Cloud,1,0.1
-341,pachyderm,1,0.1
-342,Bright Pixel,1,0.1
-343,athenahealth,1,0.1
-344,TripTravel,1,0.1
-345,NFLabs,1,0.1
-346,Unicon,1,0.1
-347,Mike Zupan,1,0.1
-348,Eric Wright,1,0.1
-349,Nikolai Prokoschenko,1,0.1
-350,SORINT.lab,1,0.1
-351,Viacom,1,0.1
-352,Beldougie Ltd,1,0.1
-353,ElementAI,1,0.1
-354,ContainerStack.io,1,0.1
-355,SocialExplorer,1,0.1
-356,Booz Allen Hamilton,1,0.1
-357,rstorcloud,1,0.1
-358,SolarWinds,1,0.1
-359,"Kensho, GAuthify",1,0.1
-360,Time Inc. UK,1,0.1
-361,Sourcegraph.com,1,0.1
-362,heartbeats.jp,1,0.1
-363,Virtuozzo / OpenVZ,1,0.1
-364,One.com,1,0.1
-365,Oregon State Network Enginerring,1,0.1
-366,T-Labs,1,0.1
-367,Yammer,1,0.1
-368,OfferUp,1,0.1
-369,Matty Williams,1,0.1
-370,ViaNett AS,1,0.1
-371,The Mobility House GmbH,1,0.1
-372,G&L Digital Media Engineering,1,0.1
-373,Mayflower GmbH,1,0.1
-374,Ruby Together,1,0.1
-375,Software & Things,1,0.1
-376,iFix,1,0.1
-377,SantoshSahoo.com,1,0.1
-378,Burning Bay Technologies,1,0.1
-379,R&R,1,0.1
-380,CiscoSpark,1,0.1
-381,DRUD Tech,1,0.1
-382,adesso AG,1,0.1
-383,"Gremlin, Inc.",1,0.1
-384,Emerging Stack,1,0.1
-385,BENGLER,1,0.1
-386,Cupid plc,1,0.1
-387,Viavi Solutions,1,0.1
-388,AdapTechSolutions,1,0.1
-389,microcloud,1,0.1
-390,OPES Software,1,0.1
-391,AXA,1,0.1
-392,opentargets,1,0.1
-393,"SPARCS, KAIST",1,0.1
-394,minio,1,0.1
-395,Information Security,1,0.1
-396,Voleo,1,0.1
-397,Outlook.com,1,0.1
-398,Atish Narlawar,1,0.1
-399,Encyclopaedia Britannica,1,0.1
-400,aporeto-inc,1,0.1
-401,Netflix,1,0.1
-402,MaestroDev,1,0.1
-403,Univa,1,0.1
-404,Azimo,1,0.1
-405,Immuta,1,0.1
-406,Assurity,1,0.1
-407,StepStone,1,0.1
-408,ksyun,1,0.1
-409,カブク,1,0.1
-410,ADEO,1,0.1
-411,PayPal,1,0.1
-412,leanovate,1,0.1
-413,Pretty Robots,1,0.1
-414,Photobox,1,0.1
-415,MiWay Insurance,1,0.1
-416,EVRY,1,0.1
-417,Knowit Objectnet AS,1,0.1
-418,Ionic Security,1,0.1
-419,kickstarter,1,0.1
-420,Teralytics,1,0.1
-421,Freeformers,1,0.1
-422,Softchoice,1,0.1
-423,iconectiv,1,0.1
-424,Tinkerbox,1,0.1
-425,BookMyShow,1,0.1
-426,Storyful,1,0.1
-427,Hotels.com,1,0.1
-428,modernmsg,1,0.1
-429,CentOS,1,0.1
-430,KAYAK,1,0.1
-431,Smile Open Source Solutions,1,0.1
-432,Xoom,1,0.1
-433,Mind Scratch,1,0.1
-434,Activision,1,0.1
-435,Carrot Creative,1,0.1
-436,Qwil,1,0.1
-437,max@kutsevol.com,1,0.1
-438,kmter@live.com,1,0.1
-439,zhaohuizhi@gmail.com,1,0.1
-440,dukexar@gmail.com,1,0.1
-441,andrew@areed.io,1,0.1
-442,xxiaozhou@gmail.com,1,0.1
-443,tamnd87@gmail.com,1,0.1
-444,gleamglom@gmail.com,1,0.1
-445,miku@miku.io,1,0.1
-446,giovanni.tirloni@gmail.com,1,0.1
-447,dima.shmakov87@gmail.com,1,0.1
-448,klausenbusk@hotmail.com,1,0.1
-449,siefert.david@gmail.com,1,0.1
-450,weiwei.inf@gmail.com,1,0.1
-451,henrik@henrik-schmidt.de,1,0.1
-452,468894985@qq.com,1,0.1
-453,litus81@gmail.com,1,0.1
-454,xh@decbug.com,1,0.1
-455,marc.cyprien@esigetel.net,1,0.1
-456,ej.simeon@gmail.com,1,0.1
-457,cjr@cruwe.de,1,0.1
-458,daniele.testa@gmail.com,1,0.1
-459,iamthemuffinman@outlook.com,1,0.1
-460,piotr.komborski@springer.com,1,0.1
-461,lzw19860818@aliyun.com,1,0.1
-462,andrei.kopats@gmail.com,1,0.1
-463,alex.chesser@gmail.com,1,0.1
-464,git@hiltunen.io,1,0.1
-465,marton.natko@gmail.com,1,0.1
-466,yangm3ng@gmail.com,1,0.1
-467,liuxu@asiainfo.com,1,0.1
-468,mazswojejzony@users.noreply.github.com,1,0.1
-469,zellster@gmail.com,1,0.1
-470,bjoern.erik.strand@gmail.com,1,0.1
-471,anthony.elizondo@gmail.com,1,0.1
-472,satnam6502@gmail.com,1,0.1
-473,root@fox.dumbain.net,1,0.1
-474,albatross0@gmail.com,1,0.1
-475,jinsenorita@gmail.com,1,0.1
-476,emve.dev@yandex.ru,1,0.1
-477,hallucynogenyc@gmail.com,1,0.1
-478,nowprovision@users.noreply.github.com,1,0.1
-479,lars@cormann.biz,1,0.1
-480,mikael@try2.se,1,0.1
-481,matthias.greiner@stud.uni-heidelberg.de,1,0.1
-482,ypwebstuff@gmail.com,1,0.1
-483,boris.de.vloed@gmail.com,1,0.1
-484,iam.asm89@gmail.com,1,0.1
-485,robert.wilson1717@gmail.com,1,0.1
-486,leitzler@gmail.com,1,0.1
-487,borismattijssen@gmail.com,1,0.1
-488,mperez@mediamath.com,1,0.1
-489,prateekgogia@hotmail.com,1,0.1
-490,cmaser@gmx.de,1,0.1
-491,yoseph.sultan@sky.uk,1,0.1
-492,adi.ofry@gmail.com,1,0.1
-493,raffo_uppuiu@yahoo.it,1,0.1
-494,ihile@users.noreply.github.com,1,0.1
-495,williams.andrew@gmail.com,1,0.1
-496,korniste@kornisteui-macbook-pro.local,1,0.1
-497,ziyadbasheer213@gmail.com,1,0.1
-498,khoa.le@hrboss.com,1,0.1
-499,argregoryian@gmail.com,1,0.1
-500,misc@zarb.org,1,0.1
-501,409107750@qq.com,1,0.1
-502,lparam@users.noreply.github.com,1,0.1
-503,ripcurld.github@gmail.com,1,0.1
-504,tom@haddons.net,1,0.1
-505,yencheng.chou@gmail.com,1,0.1
-506,roel.vannyen@virdata.com,1,0.1
-507,kieranom@gmail.com,1,0.1
-508,mbessolov@users.noreply.github.com,1,0.1
-509,doriordan@gmail.com,1,0.1
-510,arb77@hotmail.com,1,0.1
-511,jimeng.liu@virtualinstruments.com,1,0.1
-512,arisu1000@gmail.com,1,0.1
-513,mail@marcelhauf.name,1,0.1
-514,ashw7n@gmail.com,1,0.1
-515,jason-riddle@users.noreply.github.com,1,0.1
-516,thom_may@external.mckinsey.com,1,0.1
-517,allan.caffee@gmail.com,1,0.1
-518,mattnenterprise@yahoo.com,1,0.1
-519,Kutsevol *,1,0.1
-520,Live *,1,0.1
-521,Areed *,1,0.1
-522,Miku *,1,0.1
-523,Henrik-schmidt *,1,0.1
-524,Decbug *,1,0.1
-525,Esigetel *,1,0.1
-526,Cruwe *,1,0.1
-527,Outlook *,1,0.1
-528,Springer *,1,0.1
-529,Aliyun *,1,0.1
-530,Hiltunen *,1,0.1
-531,Asiainfo *,1,0.1
-532,Cormann *,1,0.1
-533,Try2 *,1,0.1
-534,FoxDumbain *,1,0.1
-535,StudUni-heidelberg *,1,0.1
-536,Yandex *,1,0.1
-537,Virtualinstruments *,1,0.1
-538,Haddons *,1,0.1
-539,Virdata *,1,0.1
-540,Marcelhauf *,1,0.1
-541,ExternalMckinsey *,1,0.1
-542,Zarb *,1,0.1
-543,Gmx *,1,0.1
-544,Kornisteui-macbook-pro *,1,0.1
-545,Hrboss *,1,0.1
-546,Mediamath *,1,0.1
-547,Sky *,1,0.1
-548,ClusterHQ,1,0.1
-549,FACEIT,1,0.1
-550,Kismatic,1,0.1
-551,"Collanthropy, LLC",1,0.1
-552,Chef,1,0.1
-553,Petback,1,0.1
-554,Inuits,1,0.1
-555,hackmh,1,0.1
-556,Anadea inc.,1,0.1
-557,YY,1,0.1
-558,eleme,1,0.1
-559,Treasure Data,1,0.1
-560,PHP,1,0.1
-561,Bulletproof,1,0.1
-562,Schuberg Philis,1,0.1
-563,Vayable,1,0.1
-564,Epic Games,1,0.1
-565,FathomDB,1,0.1
-566,Mercari,1,0.1
-567,Dell,1,0.1
-568,Rook,1,0.1
-569,JPMorgan Chase,1,0.1
-570,USwitch,1,0.1
-571,storageos,1,0.1
-572,"Embedded Systems, ECE",1,0.1
-573,GoGoVan,1,0.1
-574,Spec Deas HR Consulting,1,0.1
-575,Kelowna,1,0.1
-576,Zhejiang University,1,0.1
-577,Ammeon,1,0.1
-578,ASG Consulting,1,0.1
-579,CNM Consulting,1,0.1
-580,Inovex,1,0.1
-581,Ceph,1,0.1
-582,Slack,1,0.1
-583,jobandtalent,1,0.1
-584,Roche,1,0.1
-585,Tyk,1,0.1
-586,Gurpartap Singh,1,0.1
-587,"Styra, Inc.",1,0.1
-588,motion.social,1,0.1
-589,Tata Consultancy Services,1,0.1
-590,vipshop,1,0.1
-591,Molina Healthcare,1,0.1
-592,ActiveVideo,1,0.1
-593,Udacity,1,0.1
-594,Hitachi,1,0.1
-595,Logic Monitor,1,0.1
-596,Oracle,1,0.1
-597,Bitnami,1,0.1
-598,Yext,1,0.1
-599,Manhattan Associates,1,0.1
-600,Airbnb,1,0.1
-601,Sky,1,0.1
-602,NetWatcher,1,0.1
-603,Socrata,1,0.1
-604,42,1,0.1
-605,Alternative Storage,1,0.1
-606,CSE IIT KANPUR,1,0.1
-607,Entelo,1,0.1
-608,Elisa,1,0.1
-609,Gini,1,0.1
-610,SOFICOM,1,0.1
-611,The Manufacturing Institute,1,0.1
-612,Juju Ecosystem,1,0.1
-613,ISI.nc,1,0.1
-614,thinkstep,1,0.1
-615,EMC,1,0.1
-616,Dropbox,1,0.1
-617,Eficode,1,0.1
-618,Vorstella,1,0.1
-619,The Elegant Monkeys Ltd.,1,0.1
-620,Luke Marsden,1,0.1
-621,Beijing Renaissance Era Investment,1,0.1
-622,Wattpad,1,0.1
-623,appOrbit,1,0.1
-624,crondevelopment,1,0.1
-625,DrEd Online Doctor,1,0.1
-626,Immobilien Scout GmbH,1,0.1
-627,Project Calico,1,0.1
-628,Georgia Tech,1,0.1
-629,"Computer Science and Engineering, IIT Kanpur",1,0.1
-630,Sysdig,1,0.1
-631,UPMC,1,0.1
-632,Rev.com,1,0.1
-633,Fabiano Franz,1,0.1
-634,CenturyLink,1,0.1
-635,Supership Inc.,1,0.1
-636,Seznam.cz,1,0.1
-637,Ocado,1,0.1
-638,Ahead4 Limited,1,0.1
+98,Codigami,1,0.1
+99,Telemetry.com,1,0.1
+100,GRADIANT,1,0.1
+101,Primeton,1,0.1
+102,UNINETT,1,0.1
+103,OpenRuko,1,0.1
+104,Jimmy Cuadra,1,0.1
+105,Pardot,1,0.1
+106,Orange,1,0.1
+107,Robots and Pencils,1,0.1
+108,FOSSEE,1,0.1
+109,Social Rank,1,0.1
+110,Bigstep,1,0.1
+111,Dutchcoders,1,0.1
+112,Connectifier,1,0.1
+113,MyFitnessPal,1,0.1
+114,Tagged,1,0.1
+115,Feedtrail,1,0.1
+116,Bankwest,1,0.1
+117,imgix,1,0.1
+118,Jaconda,1,0.1
+119,ChinaNetCenter,1,0.1
+120,Iteam Solutions AB,1,0.1
+121,"Tech9 Computer Solutions, LLC",1,0.1
+122,Kalon,1,0.1
+123,Igneous Systems,1,0.1
+124,Whitepages,1,0.1
+125,Transwarp,1,0.1
+126,CodeCrowd OÜ,1,0.1
+127,Ancestry.com,1,0.1
+128,Qiniu,1,0.1
+129,NTT,1,0.1
+130,CNCF,1,0.1
+131,MuleSoft,1,0.1
+132,Irian Solutions,1,0.1
+133,Reevoo,1,0.1
+134,MapD,1,0.1
+135,JustWatch,1,0.1
+136,Shippable,1,0.1
+137,BrianKetelsen.com,1,0.1
+138,Luminis,1,0.1
+139,TravelSky Technology Limited,1,0.1
+140,Revinate,1,0.1
+141,Funio,1,0.1
+142,nearForm,1,0.1
+143,Airtame,1,0.1
+144,Wikimedia Foundation,1,0.1
+145,Heroku,1,0.1
+146,Bits Working,1,0.1
+147,18F,1,0.1
+148,Eon Cloud,1,0.1
+149,Unicredit,1,0.1
+150,wikiwi,1,0.1
+151,UnitedHealth,1,0.1
+152,Globo.com,1,0.1
+153,Movable Ink,1,0.1
+154,SkillShare,1,0.1
+155,F24 Ag,1,0.1
+156,Federal Reserve Board,1,0.1
+157,Apalia,1,0.1
+158,ZJU-SEL,1,0.1
+159,北京天威诚信电子商务服务有限公司,1,0.1
+160,Aptarus,1,0.1
+161,AppAdhoc,1,0.1
+162,10clouds,1,0.1
+163,Workiva,1,0.1
+164,WillCall,1,0.1
+165,IT Svit,1,0.1
+166,Buildbot,1,0.1
+167,Zesty.io,1,0.1
+168,ValuationUp,1,0.1
+169,Signal Sciences Corp,1,0.1
+170,The Remote Lab,1,0.1
+171,JetThoughts,1,0.1
+172,CDNetworks Korea,1,0.1
+173,ForgeRock,1,0.1
+174,dunnhumby,1,0.1
+175,Blizzard,1,0.1
+176,Dynatrace LLC,1,0.1
+177,Infraly,1,0.1
+178,Bracket Computing,1,0.1
+179,Layer 10,1,0.1
+180,Hortonworks,1,0.1
+181,Ericsson,1,0.1
+182,OJOHome,1,0.1
+183,Directi,1,0.1
+184,en.N cloud,1,0.1
+185,Dataman,1,0.1
+186,pronix,1,0.1
+187,Palantir,1,0.1
+188,Infoblox,1,0.1
+189,Vungle,1,0.1
+190,macys.com,1,0.1
+191,Naver,1,0.1
+192,CT Lab,1,0.1
+193,Thingful,1,0.1
+194,Virtu Financial LLC,1,0.1
+195,ocadotechnology,1,0.1
+196,Klarna,1,0.1
+197,ThousandEyes,1,0.1
+198,RealNames,1,0.1
+199,Wade & Wendy,1,0.1
+200,AppsCode,1,0.1
+201,Jollyturns,1,0.1
+202,Schroders,1,0.1
+203,Sourcepoint,1,0.1
+204,Alberta Energy,1,0.1
+205,ShareThis,1,0.1
+206,Met Office Informatics Lab,1,0.1
+207,Atlas Informatics,1,0.1
+208,Teradata Aster,1,0.1
+209,Mozilla,1,0.1
+210,D2C Media,1,0.1
+211,AnchorFree,1,0.1
+212,Always Move Fast,1,0.1
+213,Reddit,1,0.1
+214,Luxiar,1,0.1
+215,Reizwerk GmbH,1,0.1
+216,Indigo Biosystems,1,0.1
+217,Freeletics,1,0.1
+218,NASA,1,0.1
+219,Chariot Solutions,1,0.1
+220,CYSO,1,0.1
+221,Dollar Shave Club,1,0.1
+222,Okori Group,1,0.1
+223,Pressly,1,0.1
+224,Fedora Project,1,0.1
+225,Matrix,1,0.1
+226,Axway,1,0.1
+227,GatsbyJS,1,0.1
+228,PyConJP,1,0.1
+229,ALTA Language Services,1,0.1
+230,moovel,1,0.1
+231,ioGlue,1,0.1
+232,Funky,1,0.1
+233,Zen.ly,1,0.1
+234,GoodMouth,1,0.1
+235,IEEE Computer Society,1,0.1
+236,Lohi Labs,1,0.1
+237,OpenBet,1,0.1
+238,Oblong Industries,1,0.1
+239,volleylabs,1,0.1
+240,HarmonyCloud,1,0.1
+241,ZeMoSo Technologies,1,0.1
+242,Opsview Ltd,1,0.1
+243,Feenix GmbH,1,0.1
+244,Fuhu,1,0.1
+245,wellcometrust,1,0.1
+246,Cyrus Biotechnology,1,0.1
+247,Stack Exchange,1,0.1
+248,Government Digital Service,1,0.1
+249,Happy Dog Web Productions,1,0.1
+250,Cloudera,1,0.1
+251,veritone,1,0.1
+252,Desjardins,1,0.1
+253,Rochester Institute of Technology,1,0.1
+254,Automattic,1,0.1
+255,Ensighten,1,0.1
+256,Donnerwood Media,1,0.1
+257,Citrix,1,0.1
+258,Gynzy,1,0.1
+259,Lazada Group,1,0.1
+260,Allegro,1,0.1
+261,Vonage,1,0.1
+262,Readify,1,0.1
+263,Netlify,1,0.1
+264,OpenCredo,1,0.1
+265,Peek,1,0.1
+266,Kende,1,0.1
+267,Comcast,1,0.1
+268,salestock,1,0.1
+269,Teads,1,0.1
+270,Data Foundry,1,0.1
+271,Skedulo,1,0.1
+272,yeasy Hyperledger,1,0.1
+273,ContaAzul,1,0.1
+274,CSC,1,0.1
+275,Code Coup,1,0.1
+276,Stacktical,1,0.1
+277,"Eldarion, Inc.",1,0.1
+278,Avatao,1,0.1
+279,Comparative Bioinformatics,1,0.1
+280,Virginia Tech,1,0.1
+281,99cloud,1,0.1
+282,SECful,1,0.1
+283,Noraneko Inc.,1,0.1
+284,cafebazaar,1,0.1
+285,Operable,1,0.1
+286,indiehosters,1,0.1
+287,Stylify Your Blog,1,0.1
+288,Paradigma Tecnológico,1,0.1
+289,Utility Software Services,1,0.1
+290,jet tsang,1,0.1
+291,Ubuntu,1,0.1
+292,SaltStack,1,0.1
+293,ZE PowerGroup,1,0.1
+294,Redspread,1,0.1
+295,RCS Analytics GmbH,1,0.1
+296,Databricks,1,0.1
+297,FounderFuel,1,0.1
+298,Trafero,1,0.1
+299,Appear TV AS,1,0.1
+300,Z Lab Corporation,1,0.1
+301,KKBOX,1,0.1
+302,Bluescape,1,0.1
+303,Yola.com,1,0.1
+304,Getty Images,1,0.1
+305,eDigitalResearch,1,0.1
+306,Criteo,1,0.1
+307,FINN.no,1,0.1
+308,mixpanel,1,0.1
+309,Lasse Schuirmann,1,0.1
+310,Avametric,1,0.1
+311,Zeet,1,0.1
+312,Cruise Automation,1,0.1
+313,On Center Software,1,0.1
+314,Tradesy,1,0.1
+315,Big Heavy World,1,0.1
+316,AT&T,1,0.1
+317,Zendesk,1,0.1
+318,Rudd-O,1,0.1
+319,recruit-mp,1,0.1
+320,Tumblr,1,0.1
+321,Singlewire Software,1,0.1
+322,Traum-Ferienwohnungen,1,0.1
+323,DoubleDutch,1,0.1
+324,Rombit,1,0.1
+325,Dave Mueller,1,0.1
+326,SparkTC,1,0.1
+327,Compose,1,0.1
+328,Cloud Genius,1,0.1
+329,ApresMIDI AB,1,0.1
+330,FactSet Research Systems,1,0.1
+331,Digital Origin,1,0.1
+332,twitch.tv,1,0.1
+333,Container Solutions,1,0.1
+334,École de technologie supérieure,1,0.1
+335,Sematext Cloud,1,0.1
+336,pachyderm,1,0.1
+337,Bright Pixel,1,0.1
+338,athenahealth,1,0.1
+339,TripTravel,1,0.1
+340,NFLabs,1,0.1
+341,Unicon,1,0.1
+342,Mike Zupan,1,0.1
+343,Eric Wright,1,0.1
+344,Nikolai Prokoschenko,1,0.1
+345,SORINT.lab,1,0.1
+346,Viacom,1,0.1
+347,Beldougie Ltd,1,0.1
+348,ElementAI,1,0.1
+349,ContainerStack.io,1,0.1
+350,SocialExplorer,1,0.1
+351,Booz Allen Hamilton,1,0.1
+352,rstorcloud,1,0.1
+353,SolarWinds,1,0.1
+354,"Kensho, GAuthify",1,0.1
+355,Time Inc. UK,1,0.1
+356,Sourcegraph.com,1,0.1
+357,heartbeats.jp,1,0.1
+358,Virtuozzo / OpenVZ,1,0.1
+359,One.com,1,0.1
+360,Oregon State Network Enginerring,1,0.1
+361,T-Labs,1,0.1
+362,Yammer,1,0.1
+363,OfferUp,1,0.1
+364,Matty Williams,1,0.1
+365,ViaNett AS,1,0.1
+366,The Mobility House GmbH,1,0.1
+367,G&L Digital Media Engineering,1,0.1
+368,Mayflower GmbH,1,0.1
+369,Ruby Together,1,0.1
+370,Software & Things,1,0.1
+371,iFix,1,0.1
+372,SantoshSahoo.com,1,0.1
+373,Burning Bay Technologies,1,0.1
+374,R&R,1,0.1
+375,CiscoSpark,1,0.1
+376,DRUD Tech,1,0.1
+377,adesso AG,1,0.1
+378,"Gremlin, Inc.",1,0.1
+379,Emerging Stack,1,0.1
+380,BENGLER,1,0.1
+381,Cupid plc,1,0.1
+382,Viavi Solutions,1,0.1
+383,AdapTechSolutions,1,0.1
+384,microcloud,1,0.1
+385,OPES Software,1,0.1
+386,AXA,1,0.1
+387,opentargets,1,0.1
+388,"SPARCS, KAIST",1,0.1
+389,minio,1,0.1
+390,Information Security,1,0.1
+391,Voleo,1,0.1
+392,Outlook.com,1,0.1
+393,Atish Narlawar,1,0.1
+394,Encyclopaedia Britannica,1,0.1
+395,aporeto-inc,1,0.1
+396,Netflix,1,0.1
+397,MaestroDev,1,0.1
+398,Univa,1,0.1
+399,Azimo,1,0.1
+400,Immuta,1,0.1
+401,Assurity,1,0.1
+402,StepStone,1,0.1
+403,ksyun,1,0.1
+404,カブク,1,0.1
+405,ADEO,1,0.1
+406,PayPal,1,0.1
+407,leanovate,1,0.1
+408,Pretty Robots,1,0.1
+409,Photobox,1,0.1
+410,MiWay Insurance,1,0.1
+411,Nerdalize,1,0.1
+412,EVRY,1,0.1
+413,Knowit Objectnet AS,1,0.1
+414,Ionic Security,1,0.1
+415,kickstarter,1,0.1
+416,Teralytics,1,0.1
+417,Freeformers,1,0.1
+418,Softchoice,1,0.1
+419,iconectiv,1,0.1
+420,Tinkerbox,1,0.1
+421,BookMyShow,1,0.1
+422,Storyful,1,0.1
+423,Hotels.com,1,0.1
+424,modernmsg,1,0.1
+425,CentOS,1,0.1
+426,KAYAK,1,0.1
+427,Smile Open Source Solutions,1,0.1
+428,Xoom,1,0.1
+429,Mind Scratch,1,0.1
+430,Activision,1,0.1
+431,Carrot Creative,1,0.1
+432,Qwil,1,0.1
+433,andrew@areed.io,1,0.1
+434,xxiaozhou@gmail.com,1,0.1
+435,tamnd87@gmail.com,1,0.1
+436,gleamglom@gmail.com,1,0.1
+437,miku@miku.io,1,0.1
+438,dima.shmakov87@gmail.com,1,0.1
+439,siefert.david@gmail.com,1,0.1
+440,henrik@henrik-schmidt.de,1,0.1
+441,468894985@qq.com,1,0.1
+442,litus81@gmail.com,1,0.1
+443,marc.cyprien@esigetel.net,1,0.1
+444,cjr@cruwe.de,1,0.1
+445,daniele.testa@gmail.com,1,0.1
+446,iamthemuffinman@outlook.com,1,0.1
+447,piotr.komborski@springer.com,1,0.1
+448,andrei.kopats@gmail.com,1,0.1
+449,alex.chesser@gmail.com,1,0.1
+450,git@hiltunen.io,1,0.1
+451,marton.natko@gmail.com,1,0.1
+452,yangm3ng@gmail.com,1,0.1
+453,liuxu@asiainfo.com,1,0.1
+454,bjoern.erik.strand@gmail.com,1,0.1
+455,satnam6502@gmail.com,1,0.1
+456,root@fox.dumbain.net,1,0.1
+457,albatross0@gmail.com,1,0.1
+458,jinsenorita@gmail.com,1,0.1
+459,hallucynogenyc@gmail.com,1,0.1
+460,nowprovision@users.noreply.github.com,1,0.1
+461,lars@cormann.biz,1,0.1
+462,mikael@try2.se,1,0.1
+463,matthias.greiner@stud.uni-heidelberg.de,1,0.1
+464,boris.de.vloed@gmail.com,1,0.1
+465,iam.asm89@gmail.com,1,0.1
+466,robert.wilson1717@gmail.com,1,0.1
+467,leitzler@gmail.com,1,0.1
+468,mperez@mediamath.com,1,0.1
+469,prateekgogia@hotmail.com,1,0.1
+470,cmaser@gmx.de,1,0.1
+471,yoseph.sultan@sky.uk,1,0.1
+472,adi.ofry@gmail.com,1,0.1
+473,raffo_uppuiu@yahoo.it,1,0.1
+474,ihile@users.noreply.github.com,1,0.1
+475,williams.andrew@gmail.com,1,0.1
+476,korniste@kornisteui-macbook-pro.local,1,0.1
+477,ziyadbasheer213@gmail.com,1,0.1
+478,khoa.le@hrboss.com,1,0.1
+479,argregoryian@gmail.com,1,0.1
+480,misc@zarb.org,1,0.1
+481,409107750@qq.com,1,0.1
+482,lparam@users.noreply.github.com,1,0.1
+483,ripcurld.github@gmail.com,1,0.1
+484,tom@haddons.net,1,0.1
+485,yencheng.chou@gmail.com,1,0.1
+486,roel.vannyen@virdata.com,1,0.1
+487,kieranom@gmail.com,1,0.1
+488,mbessolov@users.noreply.github.com,1,0.1
+489,arb77@hotmail.com,1,0.1
+490,jimeng.liu@virtualinstruments.com,1,0.1
+491,arisu1000@gmail.com,1,0.1
+492,mail@marcelhauf.name,1,0.1
+493,ashw7n@gmail.com,1,0.1
+494,jason-riddle@users.noreply.github.com,1,0.1
+495,thom_may@external.mckinsey.com,1,0.1
+496,mattnenterprise@yahoo.com,1,0.1
+497,Areed *,1,0.1
+498,Miku *,1,0.1
+499,Henrik-schmidt *,1,0.1
+500,Esigetel *,1,0.1
+501,Cruwe *,1,0.1
+502,Outlook *,1,0.1
+503,Springer *,1,0.1
+504,Hiltunen *,1,0.1
+505,Asiainfo *,1,0.1
+506,Cormann *,1,0.1
+507,Try2 *,1,0.1
+508,FoxDumbain *,1,0.1
+509,StudUni-heidelberg *,1,0.1
+510,Virtualinstruments *,1,0.1
+511,Haddons *,1,0.1
+512,Virdata *,1,0.1
+513,Marcelhauf *,1,0.1
+514,ExternalMckinsey *,1,0.1
+515,Zarb *,1,0.1
+516,Gmx *,1,0.1
+517,Kornisteui-macbook-pro *,1,0.1
+518,Hrboss *,1,0.1
+519,Mediamath *,1,0.1
+520,Sky *,1,0.1
+521,ClusterHQ,1,0.1
+522,FACEIT,1,0.1
+523,Kismatic,1,0.1
+524,"Collanthropy, LLC",1,0.1
+525,Chef,1,0.1
+526,Petback,1,0.1
+527,Inuits,1,0.1
+528,hackmh,1,0.1
+529,Anadea inc.,1,0.1
+530,YY,1,0.1
+531,eleme,1,0.1
+532,Treasure Data,1,0.1
+533,PHP,1,0.1
+534,Bulletproof,1,0.1
+535,Schuberg Philis,1,0.1
+536,Vayable,1,0.1
+537,Epic Games,1,0.1
+538,FathomDB,1,0.1
+539,Mercari,1,0.1
+540,Dell,1,0.1
+541,Rook,1,0.1
+542,JPMorgan Chase,1,0.1
+543,USwitch,1,0.1
+544,storageos,1,0.1
+545,"Embedded Systems, ECE",1,0.1
+546,GoGoVan,1,0.1
+547,Spec Deas HR Consulting,1,0.1
+548,Kelowna,1,0.1
+549,Ammeon,1,0.1
+550,ASG Consulting,1,0.1
+551,CNM Consulting,1,0.1
+552,Inovex,1,0.1
+553,Ceph,1,0.1
+554,Slack,1,0.1
+555,jobandtalent,1,0.1
+556,Roche,1,0.1
+557,Tyk,1,0.1
+558,Gurpartap Singh,1,0.1
+559,"Styra, Inc.",1,0.1
+560,motion.social,1,0.1
+561,Tata,1,0.1
+562,vipshop,1,0.1
+563,Molina Healthcare,1,0.1
+564,ActiveVideo,1,0.1
+565,Udacity,1,0.1
+566,Hitachi,1,0.1
+567,Logic Monitor,1,0.1
+568,Oracle,1,0.1
+569,Bitnami,1,0.1
+570,Yext,1,0.1
+571,Manhattan Associates,1,0.1
+572,Airbnb,1,0.1
+573,Sky,1,0.1
+574,NetWatcher,1,0.1
+575,Socrata,1,0.1
+576,42 Tech,1,0.1
+577,Alternative Storage,1,0.1
+578,QIANKUN,1,0.1
+579,CSE IIT KANPUR,1,0.1
+580,Entelo,1,0.1
+581,Elisa,1,0.1
+582,Gini,1,0.1
+583,SOFICOM,1,0.1
+584,The Manufacturing Institute,1,0.1
+585,Juju Ecosystem,1,0.1
+586,ISI.nc,1,0.1
+587,thinkstep,1,0.1
+588,EMC,1,0.1
+589,Dropbox,1,0.1
+590,Eficode,1,0.1
+591,Vorstella,1,0.1
+592,The Elegant Monkeys Ltd.,1,0.1
+593,Luke Marsden,1,0.1
+594,Beijing Renaissance Era Investment,1,0.1
+595,Wattpad,1,0.1
+596,appOrbit,1,0.1
+597,crondevelopment,1,0.1
+598,DrEd Online Doctor,1,0.1
+599,Immobilien Scout GmbH,1,0.1
+600,Project Calico,1,0.1
+601,Georgia Tech,1,0.1
+602,Sysdig,1,0.1
+603,UPMC,1,0.1
+604,Rev.com,1,0.1
+605,Fabiano Franz,1,0.1
+606,CenturyLink,1,0.1
+607,Supership Inc.,1,0.1
+608,Seznam.cz,1,0.1
+609,Ocado,1,0.1
+610,Ahead4 Limited,1,0.1
+611,PreviousNext,1,0.1
+612,Aperian Global,1,0.1
+613,Hitachi Data Systems,1,0.1
+614,SICPA Security Solutions,1,0.1

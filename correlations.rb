@@ -35,7 +35,7 @@ def correlations(csv_file)
     corporation limited company development technologies solutions
     consulting systems international software university networks
     financial group informatics consultancy commerce services
-    engineering security business
+    engineering security business entertainment research
   ).uniq
   specials += [
     ' inc', 'gmbh', ' llc', ' zoo', ' ltd', ' labs', ' cloud', ' ag',
