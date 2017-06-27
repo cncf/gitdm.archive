@@ -14,6 +14,7 @@ def lookup_json(json_file, args, output_json)
       # multiple column names 'login,bio, blog' - in this case default ruby operator is :all? which means all columns must match regexp
       # multiple column names with operator: ':any?,blog,bio' - means that blog OR bio must match regexp
       # key can also have method called on it like 'commits.to_s'
+      # column can be '*' which means all columns concatenated 
       key = arg.split(',').map(&:strip)
     else
       # And now regexp to check on defined columns
@@ -45,11 +46,15 @@ def lookup_json(json_file, args, output_json)
       keys.each_with_index do |key, i|
         # skip ruby method name if needed and also value can be nil so value || ''
         next if i < index
-        if key.include?('.')
-          k = key.split '.'
-          val = user[k[0]].send(k[1])
+        if key == '*'
+          val = user.values.join ' '
         else
-          val = user[key]
+          if key.include?('.')
+            k = key.split '.'
+            val = user[k[0]].send(k[1])
+          else
+            val = user[key]
+          end
         end
         matches << (val || '').match?(re)
       end
@@ -65,7 +70,7 @@ def lookup_json(json_file, args, output_json)
     m += 1
   end
   if m < 1
-    puts "Match not found in #{json_file}"
+    puts "Match not found in #{json_file}, now writing #{output_json}"
     return
   end
 

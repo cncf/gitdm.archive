@@ -14,3 +14,9 @@ ruby lookup_json.rb github_users.json 'location,name' '/[^\s]+/' affiliation '/^
 # 2 committers with Unknown affiliation having location & name property non-empty
 rm -f unknown_with_location_and_name2.json unknown_with_location_and_name2.dat
 ruby lookup_json.rb github_users.json 'location,name' '/[^\s]+/' 'commits.to_s' '/^2$/' affiliation '/^\(Unknown\)$/' unknown_with_location_and_name2.json
+# Unknown 2 committers
+rm -f unknown_2_committers.json unknown_2_committers.dat
+ruby lookup_json.rb github_users.json 'commits.to_s' '/^2$/' affiliation '/^\(Unknown\)$/' unknown_2_committers.json
+# Unknown with any facebook, twitter links in any field
+rm -f unknown_with_social.json unknown_with_social.dat
+ruby lookup_json.rb github_users.json '*' '/facebook|twitter|linkedin/i' affiliation '/^\(Unknown\)$/' unknown_with_social.json
