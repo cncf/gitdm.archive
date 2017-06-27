@@ -21,5 +21,5 @@ ruby lookup_json.rb github_users.json 'commits.to_s' '/^2$/' affiliation '/^\(Un
 rm -f unknown_with_social.json unknown_with_social.dat
 ruby lookup_json.rb github_users.json '*' '/facebook|twitter|linkedin/i' affiliation '/^\(Unknown\)$/' unknown_with_social.json
 # Unknown with any facebook, twitter links in any field
-rm -f unknown_with_at.json unknown_wit_at.dat
+rm -f unknown_with_at.json unknown_with_at.dat
 ruby lookup_json.rb github_users.json ':any?,name,company,blog,bio' '/@/' affiliation '/^\(Unknown\)$/' unknown_with_at.json
