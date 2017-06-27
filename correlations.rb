@@ -9,7 +9,7 @@ def correlation_metric(strings)
     0.upto(maxlen - len) do |start|
       substr = shortest[start,len]
       if strings.all? { |str| str.include? substr }
-        return 100.0 * (substr.length.to_f / longest.length.to_f).round(2)
+        return 100.0 * (substr.length.to_f / longest.length.to_f).round(3)
       end
     end
   end
@@ -35,9 +35,11 @@ def correlations(csv_file)
     corporation limited company development technologies solutions
     consulting systems international software university networks
     financial group informatics consultancy commerce services
+    engineering security
   )
   specials += [
-    ' inc', 'gmbh', ' llc', ' zoo', ' ltd', ' labs', ' cloud'
+    ' inc', 'gmbh', ' llc', ' zoo', ' ltd', ' labs', ' cloud', ' ag',
+    ' it ', 'cloud '
   ]
   affs.each do |a, n|
     c = a.downcase.gsub(/[^0-9a-z ]/, '').gsub(/\s+/, ' ')
