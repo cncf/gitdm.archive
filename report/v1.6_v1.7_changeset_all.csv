@@ -1,5 +1,5 @@
 idx,company,n,percent
-0,(All known 115),2596,98.67
+0,(All known 113),2597,98.71
 1,Google,978,37.2
 2,Red Hat,593,22.5
 3,ZTE Corporation,87,3.3
@@ -7,7 +7,7 @@ idx,company,n,percent
 5,Fujitsu,77,2.9
 6,EasyStack,62,2.4
 7,Huawei,60,2.3
-8,(Self),55,2.1
+8,(Self),58,2.2
 9,Microsoft,46,1.7
 10,Caicloud,41,1.6
 11,VMware,35,1.3
@@ -18,9 +18,9 @@ idx,company,n,percent
 16,ASG Consulting,23,0.9
 17,Mirantis,21,0.8
 18,Kelowna,19,0.7
-19,(Unknown),18,0.7
-20,Heptio,17,0.6
-21,(Not Found),17,0.6
+19,Heptio,17,0.6
+20,(Not Found),17,0.6
+21,(Unknown),17,0.6
 22,Airbnb,12,0.5
 23,Rackspace,11,0.4
 24,Tata Consultancy Services,11,0.4
@@ -31,39 +31,39 @@ idx,company,n,percent
 29,Cisco,7,0.3
 30,Gmail *,7,0.3
 31,Atlassian,6,0.2
-32,Rancher Labs,6,0.2
-33,Oracle,6,0.2
-34,Wattpad,6,0.2
-35,portworx,5,0.2
+32,Oracle,6,0.2
+33,Wattpad,6,0.2
+34,Rancher,6,0.2
+35,Primeton,5,0.2
 36,DaoCloud,5,0.2
 37,zlabjp,5,0.2
 38,Amadeus,5,0.2
-39,Primeton,5,0.2
+39,Portworx,5,0.2
 40,Rook,5,0.2
 41,HP,4,0.2
 42,Luminis,4,0.2
 43,Concur,4,0.2
 44,SalesForce,4,0.2
-45,Elisa,4,0.2
-46,Nordstrom,4,0.2
-47,Cockroach,4,0.2
-48,Zalando,4,0.2
-49,Movable Ink,4,0.2
-50,Hitachi Data Systems,4,0.2
-51,Tencent,4,0.2
-52,42,4,0.2
-53,Telemetry.com,4,0.2
-54,Samsung,4,0.2
-55,loodse,3,0.1
-56,Net EASE 网易有态度,3,0.1
-57,Juju Ecosystem,3,0.1
-58,Intel,3,0.1
-59,Walmart,3,0.1
-60,JPMorgan Chase & Co.,3,0.1
-61,"Computer Science and Engineering, IIT Kanpur",3,0.1
+45,Loodse,4,0.2
+46,Elisa,4,0.2
+47,Nordstrom,4,0.2
+48,Cockroach,4,0.2
+49,Zalando,4,0.2
+50,Movable Ink,4,0.2
+51,Hitachi Data Systems,4,0.2
+52,Tencent,4,0.2
+53,42,4,0.2
+54,Telemetry.com,4,0.2
+55,Samsung,4,0.2
+56,Jd.Com,3,0.1
+57,Net EASE 网易有态度,3,0.1
+58,Juju Ecosystem,3,0.1
+59,Intel,3,0.1
+60,Walmart,3,0.1
+61,JPMorgan Chase,3,0.1
 62,Socrata,3,0.1
 63,Diamanti,3,0.1
-64,Ocado,2,0.1
+64,HarmonyCloud,2,0.1
 65,Amazon,2,0.1
 66,eBay,2,0.1
 67,Universidade Federal de Campina Grande,2,0.1
@@ -72,75 +72,71 @@ idx,company,n,percent
 70,Pardot,2,0.1
 71,Ancestry.com,2,0.1
 72,FOSSEE,2,0.1
-73,JD.COM,2,0.1
-74,HarmonyCloud,2,0.1
-75,ContaAzul,2,0.1
-76,Code Coup,2,0.1
-77,Igneous Systems,2,0.1
-78,Douyu.com,2,0.1
-79,Amadeus IT Group,2,0.1
-80,Unicredit,2,0.1
-81,Kutsevol *,2,0.1
-82,Hotmail *,2,0.1
-83,max@kutsevol.com,2,0.1
-84,indiehosters,1,0.0
-85,Bankwest,1,0.0
-86,storageos,1,0.0
-87,Bracket Computing,1,0.0
-88,Infoblox,1,0.0
-89,Feedtrail,1,0.0
-90,Alternative Storage,1,0.0
+73,Ocado,2,0.1
+74,ContaAzul,2,0.1
+75,Code Coup,2,0.1
+76,Igneous Systems,2,0.1
+77,Douyu.com,2,0.1
+78,Amadeus IT Group,2,0.1
+79,Unicredit,2,0.1
+80,Kutsevol *,2,0.1
+81,Hotmail *,2,0.1
+82,max@kutsevol.com,2,0.1
+83,Inovex,1,0.0
+84,en.N cloud,1,0.0
+85,Globo.com,1,0.0
+86,Bankwest,1,0.0
+87,storageos,1,0.0
+88,Bracket Computing,1,0.0
+89,Infoblox,1,0.0
+90,Feedtrail,1,0.0
 91,rstorcloud,1,0.0
-92,inovex,1,0.0
-93,Shopify,1,0.0
-94,Jd.Com,1,0.0
-95,IT Svit,1,0.0
-96,Loodse GmbH,1,0.0
-97,Ruby Together,1,0.0
-98,Tyk,1,0.0
-99,CT Lab,1,0.0
-100,jobandtalent,1,0.0
-101,Inuits,1,0.0
-102,Aperian Global,1,0.0
-103,microcloud,1,0.0
-104,FINN.no,1,0.0
-105,minio,1,0.0
-106,Chariot Solutions,1,0.0
-107,China Mobile International Limited,1,0.0
-108,IEEE Computer Society,1,0.0
-109,ksyun,1,0.0
-110,globo.com,1,0.0
-111,Clarifai,1,0.0
-112,Q42,1,0.0
-113,Capgemini,1,0.0
-114,Cruise Automation,1,0.0
-115,RightScale,1,0.0
-116,Ceph,1,0.0
-117,ocadotechnology,1,0.0
-118,"Styra, Inc.",1,0.0
-119,marton.natko@gmail.com,1,0.0
-120,weiwei.inf@gmail.com,1,0.0
-121,Virtualinstruments *,1,0.0
-122,Henrik-schmidt *,1,0.0
-123,Gradiant *,1,0.0
-124,Live *,1,0.0
-125,Cruwe *,1,0.0
-126,StudUni-heidelberg *,1,0.0
-127,Asiainfo *,1,0.0
-128,dconstenla@gradiant.org,1,0.0
-129,ypwebstuff@gmail.com,1,0.0
-130,prateekgogia@hotmail.com,1,0.0
-131,jinsenorita@gmail.com,1,0.0
-132,dima.shmakov87@gmail.com,1,0.0
-133,klausenbusk@hotmail.com,1,0.0
-134,henrik@henrik-schmidt.de,1,0.0
-135,yencheng.chou@gmail.com,1,0.0
-136,xxiaozhou@gmail.com,1,0.0
-137,kmter@live.com,1,0.0
-138,cjr@cruwe.de,1,0.0
-139,jimeng.liu@virtualinstruments.com,1,0.0
-140,matthias.greiner@stud.uni-heidelberg.de,1,0.0
-141,liuxu@asiainfo.com,1,0.0
-142,Bits Working,1,0.0
-143,Compose,1,0.0
-144,en.N cloud,1,0.0
+92,Shopify,1,0.0
+93,Alternative Storage,1,0.0
+94,IT Svit,1,0.0
+95,Ruby Together,1,0.0
+96,Tyk,1,0.0
+97,CT Lab,1,0.0
+98,jobandtalent,1,0.0
+99,Inuits,1,0.0
+100,Aperian Global,1,0.0
+101,microcloud,1,0.0
+102,FINN.no,1,0.0
+103,minio,1,0.0
+104,Chariot Solutions,1,0.0
+105,China Mobile International Limited,1,0.0
+106,IEEE Computer Society,1,0.0
+107,ksyun,1,0.0
+108,GRADIANT,1,0.0
+109,Clarifai,1,0.0
+110,Q42,1,0.0
+111,Capgemini,1,0.0
+112,Cruise Automation,1,0.0
+113,RightScale,1,0.0
+114,Ceph,1,0.0
+115,ocadotechnology,1,0.0
+116,"Styra, Inc.",1,0.0
+117,liuxu@asiainfo.com,1,0.0
+118,marton.natko@gmail.com,1,0.0
+119,Virtualinstruments *,1,0.0
+120,Henrik-schmidt *,1,0.0
+121,Live *,1,0.0
+122,Cruwe *,1,0.0
+123,StudUni-heidelberg *,1,0.0
+124,Asiainfo *,1,0.0
+125,weiwei.inf@gmail.com,1,0.0
+126,ypwebstuff@gmail.com,1,0.0
+127,prateekgogia@hotmail.com,1,0.0
+128,jinsenorita@gmail.com,1,0.0
+129,dima.shmakov87@gmail.com,1,0.0
+130,klausenbusk@hotmail.com,1,0.0
+131,henrik@henrik-schmidt.de,1,0.0
+132,yencheng.chou@gmail.com,1,0.0
+133,xxiaozhou@gmail.com,1,0.0
+134,kmter@live.com,1,0.0
+135,cjr@cruwe.de,1,0.0
+136,jimeng.liu@virtualinstruments.com,1,0.0
+137,matthias.greiner@stud.uni-heidelberg.de,1,0.0
+138,Bits Working,1,0.0
+139,Compose,1,0.0
+140,indiehosters,1,0.0

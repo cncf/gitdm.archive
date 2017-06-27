@@ -1,33 +1,33 @@
 idx,company,n,percent
-0,(All known 105),340,96.05
+0,(All known 105),341,96.33
 1,Google,75,21.2
 2,Red Hat,61,17.2
 3,ZTE Corporation,15,4.2
 4,CoreOS,13,3.7
-5,(Self),11,3.1
+5,(Self),12,3.4
 6,IBM,10,2.8
-7,(Unknown),9,2.5
-8,Mirantis,8,2.3
-9,VMware,8,2.3
+7,Mirantis,8,2.3
+8,VMware,8,2.3
+9,(Unknown),7,2.0
 10,Huawei,6,1.7
-11,Canonical,5,1.4
+11,(Not Found),6,1.7
 12,Net EASE 网易有态度,5,1.4
-13,(Not Found),5,1.4
-14,Microsoft,5,1.4
-15,Gmail *,4,1.1
-16,Intel,4,1.1
-17,Tencent,4,1.1
-18,Fujitsu,4,1.1
-19,Weaveworks,3,0.8
-20,JD.COM,3,0.8
-21,eBay,3,0.8
-22,Heptio,3,0.8
-23,EasyStack,3,0.8
-24,Apprenda,3,0.8
+13,Microsoft,5,1.4
+14,Canonical,5,1.4
+15,Tencent,4,1.1
+16,Fujitsu,4,1.1
+17,Intel,4,1.1
+18,Gmail *,3,0.8
+19,EasyStack,3,0.8
+20,Apprenda,3,0.8
+21,Weaveworks,3,0.8
+22,Jd.Com,3,0.8
+23,eBay,3,0.8
+24,Heptio,3,0.8
 25,Apache,2,0.6
-26,Hyper.sh,2,0.6
-27,Zalando,2,0.6
-28,DEIS,2,0.6
+26,DEIS,2,0.6
+27,Hyper.sh,2,0.6
+28,Zalando,2,0.6
 29,Amadeus,1,0.3
 30,42,1,0.3
 31,Cockroach,1,0.3
@@ -36,12 +36,12 @@ idx,company,n,percent
 34,Atlassian,1,0.3
 35,HP,1,0.3
 36,Walmart,1,0.3
-37,Skillshare,1,0.3
+37,SkillShare,1,0.3
 38,F24 Ag,1,0.3
 39,ZJU-SEL,1,0.3
 40,SoundCloud,1,0.3
 41,Caicloud,1,0.3
-42,Loodse GmbH,1,0.3
+42,Loodse,1,0.3
 43,Bitnami,1,0.3
 44,CDNetworks Korea,1,0.3
 45,dunnhumby,1,0.3
@@ -84,41 +84,38 @@ idx,company,n,percent
 82,Aliyun *,1,0.3
 83,Hiltunen *,1,0.3
 84,Qq *,1,0.3
-85,Traum-ferienwohnungen *,1,0.3
-86,zhaohuizhi@gmail.com,1,0.3
-87,kmter@live.com,1,0.3
-88,dukexar@gmail.com,1,0.3
-89,lzw19860818@aliyun.com,1,0.3
-90,git@hiltunen.io,1,0.3
-91,ferdinand.huebner@gmail.com,1,0.3
-92,409107750@qq.com,1,0.3
-93,meybohm@traum-ferienwohnungen.de,1,0.3
-94,allan.caffee@gmail.com,1,0.3
-95,YY,1,0.3
-96,Bulletproof,1,0.3
-97,Dell,1,0.3
-98,Portworx,1,0.3
-99,JPMorgan Chase & Co.,1,0.3
-100,Rook,1,0.3
-101,Diamanti,1,0.3
-102,Ceph,1,0.3
-103,Roche,1,0.3
-104,FathomDB,1,0.3
-105,Rancher Labs,1,0.3
-106,Molina Healthcare,1,0.3
-107,Logic Monitor,1,0.3
-108,SalesForce,1,0.3
-109,Kelowna,1,0.3
-110,Vorstella,1,0.3
-111,CERN,1,0.3
-112,Socrata,1,0.3
-113,CNM Consulting,1,0.3
-114,Cisco,1,0.3
-115,Apple,1,0.3
-116,Box,1,0.3
-117,Rev.com,1,0.3
-118,SICPA Security Solutions,1,0.3
-119,Jetstack,1,0.3
-120,Robots and Pencils,1,0.3
-121,Bigstep,1,0.3
-122,Wattpad,1,0.3
+85,zhaohuizhi@gmail.com,1,0.3
+86,kmter@live.com,1,0.3
+87,dukexar@gmail.com,1,0.3
+88,lzw19860818@aliyun.com,1,0.3
+89,git@hiltunen.io,1,0.3
+90,409107750@qq.com,1,0.3
+91,allan.caffee@gmail.com,1,0.3
+92,YY,1,0.3
+93,Bulletproof,1,0.3
+94,Dell,1,0.3
+95,Portworx,1,0.3
+96,JPMorgan Chase,1,0.3
+97,Rook,1,0.3
+98,Diamanti,1,0.3
+99,Ceph,1,0.3
+100,Roche,1,0.3
+101,FathomDB,1,0.3
+102,Rancher,1,0.3
+103,Molina Healthcare,1,0.3
+104,Logic Monitor,1,0.3
+105,SalesForce,1,0.3
+106,Kelowna,1,0.3
+107,Vorstella,1,0.3
+108,CERN,1,0.3
+109,Socrata,1,0.3
+110,CNM Consulting,1,0.3
+111,Cisco,1,0.3
+112,Apple,1,0.3
+113,Box,1,0.3
+114,Rev.com,1,0.3
+115,SICPA Security Solutions,1,0.3
+116,Jetstack,1,0.3
+117,Robots and Pencils,1,0.3
+118,Bigstep,1,0.3
+119,Wattpad,1,0.3
