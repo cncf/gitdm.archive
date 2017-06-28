@@ -1,6 +1,7 @@
 require 'pry'
 require 'octokit'
 require 'json'
+require 'securerandom'
 
 # Ask each repo for commits newer than...
 start_date = '2014-01-01'
@@ -126,13 +127,14 @@ def ghusers(repos, start_date, args)
     begin
       puts "Processing #{repo_index + 1}/#{n_repos} #{repo_name}"
       fn = 'ghusers/' + repo_name.gsub('/', '__')
-      f = File.read(fn)
+      ofn = force_repo ? SecureRandom.hex(80) : fn
+      f = File.read(ofn)
       puts "Got repository JSON from saved file"
       h = JSON.parse f
       hs << h
     rescue Errno::ENOENT => err1
       begin
-        puts "No previously saved #{fn}, getting repo from GitHub"
+        puts "No previously saved #{fn}, getting repo from GitHub" unless force_repo
         rate_limit()
         repo = Octokit.repo repo_name
         h = repo.to_h
@@ -161,13 +163,14 @@ def ghusers(repos, start_date, args)
       repo_name = repo['full_name'] || repo[:full_name]
       puts "Getting commits from #{repo_index + 1}/#{n_repos} #{repo_name}"
       fn = 'ghusers/' + repo_name.gsub('/', '__') + '__commits'
-      f = File.read(fn)
+      ofn = force_commits ? SecureRandom.hex(80) : fn
+      f = File.read(ofn)
       puts "Got commits JSON from saved file"
       comm = JSON.parse f
       comms << comm
     rescue Errno::ENOENT => err1
       begin
-        puts "No previously saved #{fn}, getting commits from GitHub"
+        puts "No previously saved #{fn}, getting commits from GitHub" unless force_commits
         rate_limit()
         comm = Octokit.commits_since(repo_name, start_date)
         h = comm.map(&:to_h)
@@ -203,9 +206,8 @@ def ghusers(repos, start_date, args)
       n_processed += 1
       author = comm['commit']['author'] || comm[:commit][:author]
       committer = comm['commit']['committer'] || comm[:commit][:committer]
-      committer['login'] = comm['committer']['login'] || comm[:committer][:login]
-      author['login'] = comm['author']['login'] || comm[:author][:login]
-
+      committer['login'] = (comm['committer'] && comm['committer']['login']) || (comm[:committer] && comm[:committer][:login])
+      author['login'] = (comm['author'] && comm['author']['login']) || (comm[:author] && comm[:author][:login])
       h = {}
       h[author['email']] = author['login']
       h[committer['email']] = committer['login']
@@ -243,12 +245,13 @@ def ghusers(repos, start_date, args)
   puts "#{n_users} users"
   data = {}
   begin
-    json = JSON.parse File.read 'github_users.json'
+    ofn = force_users ? SecureRandom.hex(80) : 'github_users.json'
+    json = JSON.parse File.read ofn
     json.each do |usr|
       data[usr['email']] = usr
     end
   rescue Errno::ENOENT => e
-    puts "No JSON saved yet, generating new one"
+    puts "No JSON saved yet, generating new one" unless force_users
   end
 
   users.each_with_index do |usr, index|
