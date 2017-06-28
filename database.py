@@ -49,6 +49,8 @@ class Hacker:
                 for edate, empl in self.employer[i]:
                     if edate > date:
                         return empl
+        # pdb.set_trace()
+        # If there is a circular alias - this bug will appear!
         print 'OOPS.  ', self.name, self.employer, self.email, email, date
         return None # Should not happen
 
