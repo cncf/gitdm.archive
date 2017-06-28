@@ -87,7 +87,16 @@ def rate_limit()
   (rl.resets_at - Time.now).to_i + 1
 end
 
-def ghusers(repos, start_date)
+# args[0]: 1st arg is: 'r' - force repos metadata fetch, 'c' - force commits fetch, 'u' force users fetch
+def ghusers(repos, start_date, args)
+
+  # Args processing
+  force_repo = false
+  force_commits = false
+  force_users = false
+  force_repo = true if args.length > 0 && args[0].downcase.include?('r')
+  force_commits = true if args.length > 0 && args[0].downcase.include?('c')
+  force_users = true if args.length > 0 && args[0].downcase.include?('u')
   # Auto paginate results, this uses maximum page size 100 internally and calls API # of results / 100 times.
   Octokit.auto_paginate = true
 
@@ -181,6 +190,9 @@ def ghusers(repos, start_date)
   hs = nil
   # Now analysis of different authors
   puts "Commits analysis..."
+  skip_logins = [
+    'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', '', nil
+  ]
   email2github = {}
   n_commits = 0
   n_processed = 0
@@ -198,6 +210,9 @@ def ghusers(repos, start_date)
       h[author['email']] = author['login']
       h[committer['email']] = committer['login']
       h.each do |email, login|
+        next unless email.include?('@')
+        next if email == nil || email == ''
+        next if skip_logins.include?(login)
         if email2github.key?(email)
           if email2github[email][0] != login
             puts "Too bad, we already have email2github[#{email}] = #{email2github[email][0]}, and now new value: #{login}"
@@ -269,4 +284,4 @@ def ghusers(repos, start_date)
   # I had 908/5000 points left when running < 1 hour
 end
 
-ghusers(repos, start_date)
+ghusers(repos, start_date, ARGV)

@@ -205,7 +205,7 @@ They are: in `uncertain.csv` file.
 
 # You can pull GitHub users using Octokit GiHub API.
 To do this call:
-`ruby ghusers.rb`
+`ruby ghusers.rb` or `./ghusers.sh`
 You need to have:
 - Standard GitHub OAuth token: https://github.com/settings/tokens --> Personal access tokens, put it in `/etc/github/oauth` file.
 - GitHub Application to increase rate limit from 60 to 5000 (60 is not enough to process kubernetes, 5000 is enough).
