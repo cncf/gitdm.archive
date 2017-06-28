@@ -1,23 +1,23 @@
 idx,company,n,percent
-0,(All known 101),230,94.26
+0,(All known 99),230,94.26
 1,Google,53,21.7
 2,Red Hat,38,15.6
 3,Huawei,13,5.3
-4,(Self),10,4.1
-5,(Not Found),7,2.9
-6,(Unknown),7,2.9
+4,(Self),12,4.9
+5,(Unknown),7,2.9
+6,(Not Found),7,2.9
 7,CoreOS,5,2.0
 8,Mesosphere,4,1.6
 9,Metaswitch,4,1.6
 10,Docker,3,1.2
-11,CERN,2,0.8
-12,Amadeus,2,0.8
-13,Canonical,2,0.8
-14,Cisco,2,0.8
-15,Box,2,0.8
-16,Yahoo *,2,0.8
-17,Microsoft,2,0.8
-18,eBay,2,0.8
+11,Microsoft,2,0.8
+12,eBay,2,0.8
+13,CERN,2,0.8
+14,Amadeus,2,0.8
+15,Canonical,2,0.8
+16,Cisco,2,0.8
+17,Yahoo *,2,0.8
+18,Box,2,0.8
 19,UNINETT,1,0.4
 20,ListHub,1,0.4
 21,NHN,1,0.4
@@ -48,71 +48,69 @@ idx,company,n,percent
 46,Okori Group,1,0.4
 47,Axway,1,0.4
 48,Luxiar,1,0.4
-49,Jimmy Cuadra,1,0.4
-50,Funky,1,0.4
-51,Samsung,1,0.4
-52,Lohi Labs,1,0.4
-53,Yahoo,1,0.4
-54,volleylabs,1,0.4
-55,Opsview Ltd,1,0.4
-56,wellcometrust,1,0.4
-57,Wikimedia Foundation,1,0.4
-58,Stack Exchange,1,0.4
-59,Happy Dog Web Productions,1,0.4
-60,Net EASE 网易有态度,1,0.4
-61,GatsbyJS,1,0.4
-62,Rochester Institute of Technology,1,0.4
-63,Elastic,1,0.4
-64,Über,1,0.4
-65,"Collanthropy, LLC",1,0.4
-66,Oblong Industries,1,0.4
-67,Readify,1,0.4
-68,Virginia Tech,1,0.4
-69,Apalia,1,0.4
-70,Appear TV AS,1,0.4
-71,Zendesk,1,0.4
-72,athenahealth,1,0.4
-73,Eric Wright,1,0.4
-74,SORINT.lab,1,0.4
-75,Viacom,1,0.4
-76,Ubisoft,1,0.4
-77,ViaNett AS,1,0.4
-78,Engine Yard,1,0.4
-79,CiscoSpark,1,0.4
-80,Walmart,1,0.4
-81,Voleo,1,0.4
-82,Univa,1,0.4
-83,ADEO,1,0.4
-84,iconectiv,1,0.4
-85,"Eldarion, Inc.",1,0.4
-86,Xoom,1,0.4
-87,Try2 *,1,0.4
-88,UsersNoreplyGithub *,1,0.4
-89,Gmx *,1,0.4
-90,Gmail *,1,0.4
-91,Mediamath *,1,0.4
-92,mikael@try2.se,1,0.4
-93,boris.de.vloed@gmail.com,1,0.4
-94,mperez@mediamath.com,1,0.4
-95,cmaser@gmx.de,1,0.4
-96,raffo_uppuiu@yahoo.it,1,0.4
-97,jason-riddle@users.noreply.github.com,1,0.4
-98,mattnenterprise@yahoo.com,1,0.4
-99,FACEIT,1,0.4
-100,hackmh,1,0.4
-101,Anadea inc.,1,0.4
-102,Kismatic,1,0.4
-103,Amazon,1,0.4
-104,Slack,1,0.4
-105,Tyk,1,0.4
-106,FathomDB,1,0.4
-107,Square,1,0.4
-108,Weaveworks,1,0.4
-109,CSE IIT KANPUR,1,0.4
-110,ISI.nc,1,0.4
-111,DrEd Online Doctor,1,0.4
-112,Apache,1,0.4
-113,Juniper Networks,1,0.4
-114,Petback,1,0.4
-115,Epic Games,1,0.4
-116,Hyper.sh,1,0.4
+49,Funky,1,0.4
+50,Samsung,1,0.4
+51,Lohi Labs,1,0.4
+52,Yahoo,1,0.4
+53,volleylabs,1,0.4
+54,Opsview Ltd,1,0.4
+55,wellcometrust,1,0.4
+56,Wikimedia Foundation,1,0.4
+57,Stack Exchange,1,0.4
+58,Happy Dog Web Productions,1,0.4
+59,Net EASE 网易有态度,1,0.4
+60,GatsbyJS,1,0.4
+61,Rochester Institute of Technology,1,0.4
+62,Elastic,1,0.4
+63,Über,1,0.4
+64,"Collanthropy, LLC",1,0.4
+65,Oblong Industries,1,0.4
+66,Readify,1,0.4
+67,Virginia Tech,1,0.4
+68,Apalia,1,0.4
+69,Appear TV AS,1,0.4
+70,Zendesk,1,0.4
+71,athenahealth,1,0.4
+72,SORINT.lab,1,0.4
+73,Viacom,1,0.4
+74,Ubisoft,1,0.4
+75,ViaNett AS,1,0.4
+76,Engine Yard,1,0.4
+77,CiscoSpark,1,0.4
+78,Walmart,1,0.4
+79,Voleo,1,0.4
+80,Univa,1,0.4
+81,ADEO,1,0.4
+82,iconectiv,1,0.4
+83,"Eldarion, Inc.",1,0.4
+84,Xoom,1,0.4
+85,Try2 *,1,0.4
+86,UsersNoreplyGithub *,1,0.4
+87,Gmx *,1,0.4
+88,Gmail *,1,0.4
+89,Mediamath *,1,0.4
+90,mikael@try2.se,1,0.4
+91,boris.de.vloed@gmail.com,1,0.4
+92,mperez@mediamath.com,1,0.4
+93,cmaser@gmx.de,1,0.4
+94,raffo_uppuiu@yahoo.it,1,0.4
+95,jason-riddle@users.noreply.github.com,1,0.4
+96,mattnenterprise@yahoo.com,1,0.4
+97,FACEIT,1,0.4
+98,hackmh,1,0.4
+99,Anadea inc.,1,0.4
+100,Kismatic,1,0.4
+101,Amazon,1,0.4
+102,Slack,1,0.4
+103,Tyk,1,0.4
+104,FathomDB,1,0.4
+105,Square,1,0.4
+106,Weaveworks,1,0.4
+107,CSE IIT KANPUR,1,0.4
+108,ISI.nc,1,0.4
+109,DrEd Online Doctor,1,0.4
+110,Apache,1,0.4
+111,Juniper Networks,1,0.4
+112,Petback,1,0.4
+113,Epic Games,1,0.4
+114,Hyper.sh,1,0.4
