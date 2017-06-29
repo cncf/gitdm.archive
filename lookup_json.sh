@@ -23,3 +23,15 @@ ruby lookup_json.rb github_users.json '*' '/facebook|twitter|linkedin/i' affilia
 # Unknown with any facebook, twitter links in any field
 rm -f unknown_with_at.json unknown_with_at.dat
 ruby lookup_json.rb github_users.json ':any?,name,company,blog,bio' '/@/' affiliation '/^\(Unknown\)$/' unknown_with_at.json
+# With any bio, blog, location, name
+rm -f unknown_with_any_data.json unknown_with_any_data.dat
+ruby lookup_json.rb github_users.json ':any?,name,blog,bio,location' '/[^\s]+/' affiliation '/^\(Unknown\)$/' unknown_with_any_data.json
+# With email other than noreply
+rm -f unknown_with_searchable_email.json unknown_with_searchable_email.dat
+ruby lookup_json.rb github_users.json ':none?,email' '/noreply/' affiliation '/^\(Unknown\)$/' unknown_with_searchable_email.json
+# Gmailers
+rm -f unknown_gmail.json unknown_gmail.dat
+ruby lookup_json.rb github_users.json 'email' '/gmail/' affiliation '/^\(Unknown\)$/' unknown_gmail.json
+# Gmailers with any bio, blog, location, name
+rm -f gmailers_with_any_data.json gmailers_with_any_data.dat
+ruby lookup_json.rb github_users.json 'email' '/gmail/' ':any?,name,blog,bio,location' '/[^\s]+/' affiliation '/^\(Unknown\)$/' gmailers_with_any_data.json
