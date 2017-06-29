@@ -128,25 +128,26 @@ def AllAffsCSV(file, hlist):
     if file is None:
         return
     writer = csv.writer (file, quoting=csv.QUOTE_NONNUMERIC)
-    writer.writerow (['email', 'company', 'date_to'])
+    writer.writerow (['email', 'name', 'company', 'date_to'])
     emails = list(set(sum(map(lambda el: el.email, hlist), [])))
     emails.sort()
     for email in emails:
         if email == 'unknown@hacker.net':
             continue
         email = RemapEmail(email)
+        name = LookupEmail(email).name
         empls = MapToEmployer(email, 2)
         for date, empl in empls:
             datestr = str(date)
             if date > yesterday:
                 datestr = ''
             emplstr = empl.name.replace ('"', '.').replace ('\\', '.')
-            writer.writerow ([email, emplstr, datestr])
+            writer.writerow ([email, name, emplstr, datestr])
             for em in ReverseAlias(email):
                 if em in emails:
                     print 'This is bad, reverse email already in emails, check: `em`, `email`, `emails`'
                     pdb.set_trace()
-                writer.writerow ([em, emplstr, datestr])
+                writer.writerow ([em, name, emplstr, datestr])
 
 def AllHackers ():
     return HackersByID.values ()
