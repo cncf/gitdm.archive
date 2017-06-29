@@ -36,11 +36,12 @@ def correlations(csv_file)
     consulting systems international software university networks
     financial group informatics consultancy commerce services
     engineering security business entertainment research technologie
-    associates
+    associates investments
   ).uniq
   specials += [
     ' inc', 'gmbh', ' llc', ' zoo', ' ltd', ' labs', ' cloud', ' ag',
-    ' it', 'cloud ', ' lp', 'ab', ' corp', ' co', 'the ', ' pvt', ' sa'
+    ' it', 'cloud ', ' lp', 'ab', ' corp', ' co', 'the ', ' pvt', ' sa',
+    '.com'
   ].uniq
   affs.each do |a, n|
     c = a.downcase.gsub(/[^0-9a-z ]/, '').gsub(/\s+/, ' ')
