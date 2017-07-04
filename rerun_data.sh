@@ -34,5 +34,3 @@ echo "Multi repos"
 
 echo "Final analysis"
 ./final_analysis.sh
-
-echo "vim all.txt all_affs.csv correlations.txt github_users.json aliaser.txt progress_report.txt"
