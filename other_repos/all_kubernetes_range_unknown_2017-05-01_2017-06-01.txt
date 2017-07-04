@@ -1,11 +1,12 @@
-Processed 3094 csets from 549 developers
-226 employers found
-A total of 561335 lines added, 258263 removed (delta 303072)
+Processed 3110 csets from 552 developers
+227 employers found
+A total of 562093 lines added, 258668 removed (delta 303425)
 
 Developers with unknown affiliation
 NotFound isa-bel@users.noreply.github.com isa-bel                                   2 (0.1%)
 NotFound robin@kearney.co.uk Robin Kearney                                          1 (0.0%)
 NotFound bvandenheuvel@schubergphilis.com Bob                                       1 (0.0%)
+(Unknown) patrick.mahoney@raise.com Patrick Mahoney                                 1 (0.0%)
 NotFound rvbadin@gmail.com Raphael Badin                                            1 (0.0%)
 NotFound researchiteng@gmail.com ReSearchITEng                                      1 (0.0%)
 NotFound v@gor.io Vlad Gorodetsky                                                   1 (0.0%)
@@ -13,6 +14,7 @@ NotFound moss2k03@yahoo.com moss2k13                                            
 NotFound sngchlko@gmail.com Seungcheol Ko                                           1 (0.0%)
 NotFound weiwei.inf@gmail.com Wei Wei                                               1 (0.0%)
 NotFound miku@miku.io simt2                                                         1 (0.0%)
+(Unknown) alex@purefiction.net Alexander Staubo                                     1 (0.0%)
 NotFound isabel.xkjc@gmail.com Isabel JC                                            1 (0.0%)
 NotFound wujun8@hotmail.com wujun8                                                  1 (0.0%)
 
@@ -55,13 +57,13 @@ Self bryan@larsen.st Bryan Larsen                                               
 Self wonderfly@users.noreply.github.com Daniel Wang                                 1 (0.0%)
 
 Top changeset contributors by employer
-Google                                                                           1264 (40.9%)
-Red Hat                                                                           537 (17.4%)
+Google                                                                           1270 (40.8%)
+Red Hat                                                                           543 (17.5%)
 Self                                                                              105 (3.4%)
 Microsoft                                                                          98 (3.2%)
-ZTE Corporation                                                                    79 (2.6%)
+ZTE Corporation                                                                    80 (2.6%)
 CoreOS                                                                             77 (2.5%)
-Fujitsu                                                                            63 (2.0%)
+Fujitsu                                                                            64 (2.1%)
 IBM                                                                                61 (2.0%)
 Caicloud                                                                           36 (1.2%)
 Huawei                                                                             33 (1.1%)
@@ -172,6 +174,7 @@ zlabjp                                                                          
 Ceph                                                                                2 (0.1%)
 Oursky                                                                              2 (0.1%)
 Harbur                                                                              2 (0.1%)
+(Unknown)                                                                           2 (0.1%)
 Camptocamp                                                                          1 (0.0%)
 GoDaddy                                                                             1 (0.0%)
 BaseCRM                                                                             1 (0.0%)
@@ -284,14 +287,14 @@ Extraordy                                                                       
 Covers 100.000000% of changesets
 
 Top lines changed by employer
-Google                                                                           539892 (75.3%)
-Red Hat                                                                          81604 (11.4%)
+Google                                                                           540199 (75.2%)
+Red Hat                                                                          81863 (11.4%)
 Self                                                                             11265 (1.6%)
 FathomDB                                                                         8626 (1.2%)
 Microsoft                                                                        8225 (1.1%)
 CoreOS                                                                           8082 (1.1%)
 Engine Yard                                                                      6753 (0.9%)
-Fujitsu                                                                          5214 (0.7%)
+Fujitsu                                                                          5219 (0.7%)
 Hyper.sh                                                                         3431 (0.5%)
 VMware                                                                           3410 (0.5%)
 IBM                                                                              3139 (0.4%)
@@ -304,12 +307,12 @@ CNM Consulting                                                                  
 Huawei                                                                           1262 (0.2%)
 Telemetry.com                                                                    1236 (0.2%)
 Atlassian                                                                        1159 (0.2%)
+ZTE Corporation                                                                  1012 (0.1%)
 SUSE/Novell                                                                       948 (0.1%)
 Kelowna                                                                           880 (0.1%)
 Caicloud                                                                          839 (0.1%)
 ASG Consulting                                                                    831 (0.1%)
 F5 Networks                                                                       828 (0.1%)
-ZTE Corporation                                                                   788 (0.1%)
 EasyStack                                                                         778 (0.1%)
 Heptio                                                                            750 (0.1%)
 Bitnami                                                                           670 (0.1%)
@@ -378,6 +381,7 @@ Adaptly                                                                         
 Ancestry.com                                                                       40 (0.0%)
 Intel                                                                              39 (0.0%)
 Teslabit                                                                           39 (0.0%)
+(Unknown)                                                                          38 (0.0%)
 Azure                                                                              38 (0.0%)
 Findyr                                                                             37 (0.0%)
 EnPointe Technologies                                                              36 (0.0%)
@@ -512,10 +516,10 @@ The Last Pickle                                                                 
 CentOS                                                                              1 (0.0%)
 Covers 100.000000% of changes
 
-Employers with the most signoffs (total 288)
-Red Hat                                                                           154 (53.5%)
-Google                                                                             57 (19.8%)
-Self                                                                               38 (13.2%)
+Employers with the most signoffs (total 289)
+Red Hat                                                                           155 (53.6%)
+Google                                                                             57 (19.7%)
+Self                                                                               38 (13.1%)
 ZTE Corporation                                                                    15 (5.2%)
 IBM                                                                                 7 (2.4%)
 CoreOS                                                                              3 (1.0%)
@@ -531,11 +535,11 @@ Weaveworks                                                                      
 XLAB                                                                                1 (0.3%)
 Covers 100.000000% of signoffs
 
-Employers with the most hackers (total 555)
-Google                                                                             98 (17.7%)
-Red Hat                                                                            50 (9.0%)
+Employers with the most hackers (total 558)
+Google                                                                             98 (17.6%)
+Red Hat                                                                            51 (9.1%)
 Self                                                                               39 (7.0%)
-IBM                                                                                17 (3.1%)
+IBM                                                                                17 (3.0%)
 ZTE Corporation                                                                    16 (2.9%)
 CoreOS                                                                             14 (2.5%)
 Microsoft                                                                          13 (2.3%)
@@ -572,6 +576,7 @@ Tigera                                                                          
 Hotels.com                                                                          2 (0.4%)
 Shopify                                                                             2 (0.4%)
 Luminis                                                                             2 (0.4%)
+(Unknown)                                                                           2 (0.4%)
 eBay                                                                                2 (0.4%)
 The New York Times                                                                  2 (0.4%)
 Datapipe                                                                            2 (0.4%)
