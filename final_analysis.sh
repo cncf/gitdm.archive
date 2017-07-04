@@ -1,4 +1,7 @@
 #!/bin/sh
+echo "Sort config files"
+./sort_configs.sh
+
 echo "Generate all.txt file and all_affs.csv"
 ./manual_all.sh
 
