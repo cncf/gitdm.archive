@@ -41,14 +41,14 @@ def correlations(csv_file)
   specials += [
     ' inc', 'gmbh', ' llc', ' zoo', ' ltd', ' labs', ' cloud', ' ag',
     ' it', 'cloud ', ' lp', 'ab', ' corp', ' co', 'the ', ' pvt', ' sa',
-    '.com'
+    '.com', '.net', '.inc'
   ].uniq
   affs.each do |a, n|
-    c = a.downcase.gsub(/[^0-9a-z ]/, '').gsub(/\s+/, ' ')
+    c = a.downcase.gsub(/[^0-9a-z ]/, '')
     specials.each do |s|
       c = c.gsub(s, '')
     end
-    c = c.strip
+    c = c.gsub(/\s+/, ' ').strip
     affs2[c] = [] unless affs2.key?(c)
     affs2[c] << [a, n]
   end
