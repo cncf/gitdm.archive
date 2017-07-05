@@ -34,6 +34,7 @@ MapUnknown = 0  # 0=no map, 1=map to email domain name, 2=map to (Unknown)
 DevReports = 1
 DateStats = 0
 AuthorSOBs = 1
+FileStats = None
 FileFilter = None
 InvertFilter = False
 CSVFile = None
@@ -96,17 +97,18 @@ BotEmails = [
 # -z		Dump out the hacker database at completion
 # -i            Specify input file (instead of default sys.stdin)
 # -X            Stop in the debugger at end (cannot be used with stdin, please use -i)
+# -I file.csv   Generate per file stats
 # -f date       Only use patches >= date
 # -e date       Only use patches <= date
 
 def ParseOpts ():
-    global MapUnknown, DevReports
+    global MapUnknown, DevReports, FileStats
     global DateStats, AuthorSOBs, FileFilter, InvertFilter, DumpDB
     global CFName, CSVFile, CSVPrefix, DirName, Aggregate, Numstat
     global ReportByFileType, ReportUnknowns, AffFile
     global InputData, InputDataIsFile, DebugHalt, DateFrom, DateTo
 
-    opts, rest = getopt.getopt (sys.argv[1:], 'a:i:b:dc:Dh:l:no:p:r:stUumwx:yzXf:e:R')
+    opts, rest = getopt.getopt (sys.argv[1:], 'a:i:I:b:dc:Dh:l:no:p:r:stUumwx:yzXf:e:R')
     for opt in opts:
         if opt[0] == '-b':
             DirName = opt[1]
@@ -141,6 +143,9 @@ def ParseOpts ():
             MapUnknown = 2
         elif opt[0] == '-U':
             ReportUnknowns = True
+        elif opt[0] == '-I':
+            FileStats = open (opt[1], 'w')
+            print "Save all file statistics in " + opt[1] + "\n"
         elif opt[0] == '-x':
             CSVFile = open (opt[1], 'w')
             print "open output file " + opt[1] + "\n"
@@ -255,6 +260,7 @@ class patch:
         self.testers = [ ]
         self.reports = [ ]
         self.filetypes = {}
+        self.files = {}
 
     def addreviewer (self, reviewer):
         self.reviews.append (reviewer)
@@ -271,6 +277,13 @@ class patch:
             self.filetypes[filetype][self.REMOVED] += removed
         else:
             self.filetypes[filetype] = [added, removed]
+
+    def addfile (self, filename, added, removed):
+        if self.files.has_key (filename):
+            self.files[filename][self.ADDED] += added
+            self.files[filename][self.REMOVED] += removed
+        else:
+            self.files[filename] = [added, removed]
 
     def repr (self):
         return ('Patch', self.commit, self.author.repr(), 'Email', self.email)
@@ -333,7 +346,7 @@ for key in patterns.keys():
     matched[key] = 0
 
 def grabpatch(logpatch):
-    global matched
+    global matched, FileStats
 
     matched['n'] += 1
     # just to exclude invalid patterns (not suited for non openstack repo - kubernetes)
@@ -490,6 +503,8 @@ def grabpatch(logpatch):
 	        pa.added += added
 		pa.removed += removed
 		pa.addfiletype (filetype, added, removed)
+                if FileStats:
+		    pa.addfile (filename, added, removed)
 
     if '@' in pa.author.name:
         GripeAboutAuthorName (pa.author.name)
@@ -663,6 +678,10 @@ if CSVFile:
 if AffFile:
     database.AllAffsCSV(AffFile, hlist)
     AffFile.close()
+
+if FileStats:
+    database.AllFilesCSV(FileStats, hlist)
+    FileStats.close()
 
 if DevReports:
     reports.DevReports (hlist, TotalChanged, CSCount, TotalRemoved)
