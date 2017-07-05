@@ -124,6 +124,21 @@ def ReverseAlias(email):
         return []
     return [em_key for em_key, em_val in EmailAliases.items() if em_val == email and em_key != email]
 
+def AllFilesCSV(file, hlist):
+    if file is None:
+        return
+    writer = csv.writer (file, quoting=csv.QUOTE_NONNUMERIC)
+    writer.writerow (['email', 'name', 'date', 'affiliation', 'file', 'added', 'removed'])
+    for hacker in hlist:
+        for patch in hacker.patches:
+            empl = patch.author.emailemployer (patch.email, patch.date)
+            email = patch.email
+            aname = patch.author.name
+            datestr = str(patch.date)
+            emplstr = empl.name.replace ('"', '.').replace ('\\', '.')
+            for (filename, filedata) in patch.files.iteritems():
+                writer.writerow ([email, aname, datestr, emplstr, filename, filedata[0], filedata[1]])
+
 def AllAffsCSV(file, hlist):
     if file is None:
         return

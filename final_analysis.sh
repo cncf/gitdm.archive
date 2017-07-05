@@ -20,6 +20,9 @@ echo "Lookup JSON"
 echo 'Progress Report'
 ./progress_report.sh
 
+echo 'Per files analysis'
+./per_dirs.sh
+
 echo 'Done'
 
 echo "vim all.txt all_affs.csv correlations.txt github_users.json aliaser.txt progress_report.txt"
