@@ -85,7 +85,7 @@ def filestats(csv_file, out_file)
   all_results = []
   [[top_changed, 'By changed lines', 2], [top_commits, 'By number of commits to file', 3]].each do |data|
     arr, order_name, v_index = data[0], data[1], data[2]
-    all_results << ["All #{order_name}", 'All', 0, 0, '', summary_all[v_index].to_i, 100.0]
+    all_results << ["All #{order_name}", 'All', 0, 0, '', summary_all[v_index].to_i, 100.0, 100.0]
     arr.each_with_index do |comp_name, c_index|
       c_index = c_index + 1
       comp = comps[comp_name]
@@ -99,11 +99,12 @@ def filestats(csv_file, out_file)
         comp[depth].each do |dir, values|
           v = values[v_index].to_f
           vp = (100.0 * v / summary).round(3)
-          srt << [order_name, comp_name, c_index, depth, dir[1..-1], v.to_i, vp]
+          vpa = (100.0 * v / all_value).round(3)
+          srt << [order_name, comp_name, c_index, depth, dir[1..-1], v.to_i, vp, vpa]
         end
       end
       res = srt.sort_by { |row| -row[6] }.select.with_index { |row, r_index| row[6] > 1.0 && r_index < 25 }
-      res = [["All #{order_name}", comp_name, c_index, 0, '', summary.to_i, summary_perc]] + res
+      res = [["All #{order_name}", comp_name, c_index, 0, '', summary.to_i, summary_perc, summary_perc]] + res
       res.each { |rrow| all_results << rrow }
     end
   end
@@ -132,10 +133,10 @@ def filestats(csv_file, out_file)
   final << row if row
   all_results = nil
 
-  hdr = %w(Order Company Index File/Directory Number Percent)
+  hdr = %w(Order Company Index File/Directory Number Percent PercentAll)
   CSV.open(out_file, 'w', headers: hdr) do |csv|
     csv << hdr
-    final.each { |i| csv << [i[0], i[1], i[2], i[4], i[5], i[6]] }
+    final.each { |i| csv << [i[0], i[1], i[2], i[4], i[5], i[6], i[7]] }
   end
   puts "Saved #{out_file}"
 end
