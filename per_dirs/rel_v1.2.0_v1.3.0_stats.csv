@@ -1,723 +1,723 @@
-Order,Company,Index,File/Directory,Number,Percent
-All By changed lines,All,0,"",694078,100.0
-All By changed lines,Google,1,"",349432,50.345
-By changed lines,Google,1,pkg,115746,33.124
-By changed lines,Google,1,Godeps,85458,24.456
-By changed lines,Google,1,docs,67160,19.22
-By changed lines,Google,1,Godeps/LICENSES,57481,16.45
-By changed lines,Google,1,pkg/client,42006,12.021
-By changed lines,Google,1,Godeps/_workspace,24614,7.044
-By changed lines,Google,1,Godeps/_workspace/src,24612,7.043
-By changed lines,Google,1,pkg/client/clientset_generated,24017,6.873
-By changed lines,Google,1,test,21815,6.243
-By changed lines,Google,1,pkg/apis,18642,5.335
-By changed lines,Google,1,docs/user-guide,17973,5.143
-By changed lines,Google,1,test/e2e,16045,4.592
-By changed lines,Google,1,pkg/client/typed,14979,4.287
-By changed lines,Google,1,pkg/client/typed/generated,14506,4.151
-By changed lines,Google,1,pkg/controller,13665,3.911
-By changed lines,Google,1,Godeps/_workspace/src/github.com,13454,3.85
-By changed lines,Google,1,cluster,13030,3.729
-By changed lines,Google,1,hack,11518,3.296
-By changed lines,Google,1,Godeps/_workspace/src/golang.org/x,11040,3.159
-By changed lines,Google,1,docs/man/man1,10985,3.144
-By changed lines,Google,1,Godeps/_workspace/src/golang.org/x/tools,10578,3.027
-By changed lines,Google,1,pkg/api,10151,2.905
-By changed lines,Google,1,pkg/kubelet,10095,2.889
-All By changed lines,HP,2,"",119893,17.274
-By changed lines,HP,2,Godeps,116053,96.797
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi,114739,95.701
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25,79864,66.613
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types,57455,47.922
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/types.go,49702,41.455
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc,22396,18.68
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/methods,14282,11.912
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/methods/methods.go,14103,11.763
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/object,5714,4.766
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/xml,4143,3.456
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/enum.go,4098,3.418
-By changed lines,HP,2,pkg,3745,3.124
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc/vm,3397,2.833
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/if.go,3287,2.742
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc/host,3104,2.589
-By changed lines,HP,2,pkg/cloudprovider/providers,2704,2.255
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc/flags,2469,2.059
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc/test,2349,1.959
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/mo,2336,1.948
-By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/xml/xml.go,1939,1.617
-All By changed lines,Red Hat,3,"",85815,12.364
-By changed lines,Red Hat,3,pkg,60882,70.946
-By changed lines,Red Hat,3,pkg/kubelet,10759,12.537
-By changed lines,Red Hat,3,pkg/controller,10106,11.776
-By changed lines,Red Hat,3,pkg/controller/persistentvolume,9063,10.561
-By changed lines,Red Hat,3,pkg/api,8337,9.715
-By changed lines,Red Hat,3,pkg/apis,6979,8.133
-By changed lines,Red Hat,3,contrib,4949,5.767
-By changed lines,Red Hat,3,contrib/completions,4848,5.649
-By changed lines,Red Hat,3,Godeps,4648,5.416
-By changed lines,Red Hat,3,contrib/completions/bash,4560,5.314
-By changed lines,Red Hat,3,contrib/completions/bash/kubectl,4554,5.307
-By changed lines,Red Hat,3,pkg/volume,4354,5.074
-By changed lines,Red Hat,3,docs,3974,4.631
-By changed lines,Red Hat,3,plugin,3816,4.447
-By changed lines,Red Hat,3,plugin/pkg,3810,4.44
-By changed lines,Red Hat,3,Godeps/_workspace/src/github.com,3720,4.335
-By changed lines,Red Hat,3,pkg/apis/batch,3632,4.232
-By changed lines,Red Hat,3,test,3564,4.153
-By changed lines,Red Hat,3,pkg/security,3473,4.047
-By changed lines,Red Hat,3,pkg/security/podsecuritypolicy,3455,4.026
-By changed lines,Red Hat,3,plugin/pkg/admission,3418,3.983
-By changed lines,Red Hat,3,pkg/util,3409,3.972
-By changed lines,Red Hat,3,pkg/api/v1,2982,3.475
-All By changed lines,CoreOS,4,"",61085,8.801
-By changed lines,CoreOS,4,Godeps,37903,62.05
-By changed lines,CoreOS,4,Godeps/_workspace/src/github.com,33895,55.488
-By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos,33036,54.082
-By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd,31322,51.276
-By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver,17104,28.0
-By changed lines,CoreOS,4,pkg,13458,22.032
-By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver/etcdserverpb,12384,20.273
-By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver/etcdserverpb/rpc.pb.go,11197,18.33
-By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/clientv3,3647,5.97
-By changed lines,CoreOS,4,pkg/apis,3630,5.943
-By changed lines,CoreOS,4,pkg/apis/rbac,3616,5.92
-By changed lines,CoreOS,4,api/swagger-spec,3409,5.581
-By changed lines,CoreOS,4,api/swagger-spec/rbac.authorization.k8s.io_v1alpha1.json,3291,5.388
-By changed lines,CoreOS,4,pkg/kubelet,3282,5.373
-By changed lines,CoreOS,4,Godeps/LICENSES,3008,4.924
-By changed lines,CoreOS,4,pkg/kubelet/rkt,2703,4.425
-By changed lines,CoreOS,4,pkg/storage,2465,4.035
-By changed lines,CoreOS,4,plugin,2358,3.86
-By changed lines,CoreOS,4,plugin/pkg,2352,3.85
-By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/pkg,2268,3.713
-By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/storage,2204,3.608
-By changed lines,CoreOS,4,pkg/client,2074,3.395
-All By changed lines,Huawei,5,"",19259,2.775
-By changed lines,Huawei,5,federation,10169,52.801
-By changed lines,Huawei,5,federation/pkg,4034,20.946
-By changed lines,Huawei,5,federation/pkg/federated-controller,3568,18.526
-By changed lines,Huawei,5,federation/pkg/federated-controller/cluster,3359,17.441
-By changed lines,Huawei,5,plugin,3340,17.343
-By changed lines,Huawei,5,plugin/pkg,3335,17.317
-By changed lines,Huawei,5,pkg,3276,17.01
-By changed lines,Huawei,5,plugin/pkg/scheduler,2997,15.562
-By changed lines,Huawei,5,plugin/pkg/scheduler/algorithm,2770,14.383
-By changed lines,Huawei,5,federation/pkg/federated-controller/cluster/clustercontroller_test.go,2360,12.254
-By changed lines,Huawei,5,federation/apis,2179,11.314
-By changed lines,Huawei,5,pkg/api,2068,10.738
-By changed lines,Huawei,5,federation/cmd,2026,10.52
-By changed lines,Huawei,5,test,1875,9.736
-By changed lines,Huawei,5,federation/apis/federation,1805,9.372
-By changed lines,Huawei,5,federation/cmd/federated-apiserver,1675,8.697
-By changed lines,Huawei,5,federation/cmd/federated-apiserver/app,1614,8.38
-By changed lines,Huawei,5,plugin/pkg/scheduler/algorithm/predicates,1440,7.477
-By changed lines,Huawei,5,plugin/pkg/scheduler/algorithm/priorities,1329,6.901
-By changed lines,Huawei,5,federation/client,1327,6.89
-By changed lines,Huawei,5,federation/client/clientset_generated,1292,6.709
-By changed lines,Huawei,5,plugin/pkg/scheduler/algorithm/predicates/predicates_test.go,1075,5.582
-By changed lines,Huawei,5,pkg/kubectl,973,5.052
-By changed lines,Huawei,5,test/e2e_node,965,5.011
-By changed lines,Huawei,5,pkg/api/validation,910,4.725
-All By changed lines,Apache,6,"",8139,1.173
-By changed lines,Apache,6,test,8020,98.538
-By changed lines,Apache,6,test/e2e,7992,98.194
-By changed lines,Apache,6,test/e2e/generated/bindata.go,6992,85.907
-By changed lines,Apache,6,test/e2e/framework,322,3.956
-By changed lines,Apache,6,test/e2e/framework/framework.go,250,3.072
-By changed lines,Apache,6,test/e2e/networking_perf.go,160,1.966
-By changed lines,Apache,6,test/e2e/kubectl.go,155,1.904
-By changed lines,Apache,6,test/e2e/util_iperf.go,105,1.29
-By changed lines,Apache,6,test/e2e/examples.go,86,1.057
-All By changed lines,IBM,7,"",6872,0.99
-By changed lines,IBM,7,docs,6650,96.769
-By changed lines,IBM,7,docs/design,3820,55.588
-By changed lines,IBM,7,docs/devel,2829,41.167
-By changed lines,IBM,7,docs/devel/api-conventions.md,831,12.093
-By changed lines,IBM,7,docs/design/podaffinity.md,395,5.748
-By changed lines,IBM,7,docs/devel/e2e-tests.md,280,4.075
-By changed lines,IBM,7,docs/devel/api_changes.md,265,3.856
-By changed lines,IBM,7,docs/design/indexed-job.md,229,3.332
-By changed lines,IBM,7,docs/design/secrets.md,223,3.245
-By changed lines,IBM,7,docs/devel/developer-guides/vagrant.md,219,3.187
-By changed lines,IBM,7,docs/design/access.md,203,2.954
-By changed lines,IBM,7,docs/design/resources.md,192,2.794
-By changed lines,IBM,7,docs/devel/kubectl-conventions.md,190,2.765
-By changed lines,IBM,7,docs/design/taint-toleration-dedicated.md,161,2.343
-By changed lines,IBM,7,docs/devel/mesos-style.md,159,2.314
-By changed lines,IBM,7,docs/design/expansion.md,154,2.241
-By changed lines,IBM,7,docs/design/enhance-pluggable-policy.md,150,2.183
-By changed lines,IBM,7,docs/design/security.md,149,2.168
-By changed lines,IBM,7,docs/devel/kubemark-guide.md,130,1.892
-By changed lines,IBM,7,docs/design/service_accounts.md,125,1.819
-By changed lines,IBM,7,docs/design/daemon.md,117,1.703
-By changed lines,IBM,7,docs/devel/on-call-build-cop.md,116,1.688
-By changed lines,IBM,7,docs/design/versioning.md,106,1.542
-By changed lines,IBM,7,docs/design/namespaces.md,105,1.528
-All By changed lines,CERN,8,"",6367,0.917
-By changed lines,CERN,8,Godeps,6367,100.0
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud,6365,99.969
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack,4131,64.881
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1,2331,36.611
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace,1971,30.956
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1,1926,30.25
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/orchestration/v1,1100,17.277
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/orchestration/v1/stacks,929,14.591
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/instances,805,12.643
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/configurations,683,10.727
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/instances,646,10.146
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2,457,7.178
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/users,440,6.911
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/backups,370,5.811
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2/extensions,360,5.654
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/instances/fixtures.go,340,5.34
-By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/datastores,292,4.586
-All By changed lines,Canonical,9,"",4094,0.59
-By changed lines,Canonical,9,cluster,4056,99.072
-By changed lines,Canonical,9,cluster/juju,4055,99.047
-By changed lines,Canonical,9,cluster/juju/charms/trusty,2643,64.558
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master,1550,37.86
-By changed lines,Canonical,9,cluster/juju/layers/kubernetes,1246,30.435
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes,1092,26.673
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/hooks,620,15.144
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes/hooks,475,11.602
-By changed lines,Canonical,9,cluster/juju/layers/kubernetes/reactive/k8s.py,337,8.232
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/hooks/hooks.py,326,7.963
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes/icon.svg,270,6.595
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/icon.svg,270,6.595
-By changed lines,Canonical,9,cluster/juju/layers/kubernetes/icon.svg,270,6.595
-By changed lines,Canonical,9,cluster/juju/layers/kubernetes/templates,252,6.155
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/unit_tests,250,6.106
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes/hooks/hooks.py,244,5.96
-By changed lines,Canonical,9,cluster/juju/layers/kubernetes/files/guestbook-example,232,5.667
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/unit_tests/kubernetes_installer_test.py,134,3.273
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/README.md,126,3.078
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes/README.md,122,2.98
-By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/hooks/install.py,119,2.907
-All By changed lines,Spec Deas HR Consulting,10,"",4045,0.583
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl,3716,91.867
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_run.yaml,229,5.661
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_expose.yaml,184,4.549
-By changed lines,Spec Deas HR Consulting,10,cmd/genyaml/gen_kubectl_yaml.go,169,4.178
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_rolling-update.yaml,164,4.054
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_get.yaml,163,4.03
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_annotate.yaml,151,3.733
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_label.yaml,148,3.659
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_autoscale.yaml,144,3.56
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_convert.yaml,134,3.313
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_delete.yaml,132,3.263
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_replace.yaml,131,3.239
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_proxy.yaml,131,3.239
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_edit.yaml,123,3.041
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_scale.yaml,121,2.991
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_stop.yaml,119,2.942
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_logs.yaml,117,2.892
-By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_describe.yaml,116,2.868
-By changed lines,Spec Deas HR Consulting,10,Godeps,116,2.868
-By changed lines,Spec Deas HR Consulting,10,Godeps/_workspace/src/gopkg.in/yaml.v2,115,2.843
-All By changed lines,eBay,11,"",3434,0.495
-By changed lines,eBay,11,federation,2551,74.287
-By changed lines,eBay,11,federation/pkg,2464,71.753
-By changed lines,eBay,11,federation/pkg/federation-controller,2461,71.666
-By changed lines,eBay,11,federation/pkg/federation-controller/service,2231,64.968
-By changed lines,eBay,11,federation/pkg/federation-controller/service/servicecontroller.go,957,27.868
-By changed lines,eBay,11,pkg,576,16.773
-By changed lines,eBay,11,federation/pkg/federation-controller/service/service_helper.go,289,8.416
-By changed lines,eBay,11,federation/pkg/federation-controller/service/cluster_helper.go,233,6.785
-By changed lines,eBay,11,federation/pkg/federation-controller/service/endpoint_helper.go,213,6.203
-By changed lines,eBay,11,federation/pkg/federation-controller/service/service_helper_test.go,193,5.62
-By changed lines,eBay,11,Godeps,180,5.242
-By changed lines,eBay,11,Godeps/_workspace/src/github.com/emicklei/go-restful,178,5.183
-By changed lines,eBay,11,federation/pkg/federation-controller/service/endpoint_helper_test.go,154,4.485
-By changed lines,eBay,11,pkg/apiserver,135,3.931
-By changed lines,eBay,11,federation/pkg/federation-controller/util/cluster_util.go,116,3.378
-By changed lines,eBay,11,federation/pkg/federation-controller/cluster,114,3.32
-By changed lines,eBay,11,federation/pkg/federation-controller/cluster/cluster_client.go,107,3.116
-By changed lines,eBay,11,pkg/kubectl,106,3.087
-By changed lines,eBay,11,pkg/apiserver/apiserver_test.go,102,2.97
-By changed lines,eBay,11,federation/pkg/federation-controller/service/dns.go,94,2.737
-All By changed lines,Microsoft,12,"",3055,0.44
-By changed lines,Microsoft,12,pkg,1183,38.723
-By changed lines,Microsoft,12,api/swagger-spec/extensions_v1beta1.json,832,27.234
-By changed lines,Microsoft,12,pkg/kubectl,747,24.452
-By changed lines,Microsoft,12,pkg/kubectl/cmd,652,21.342
-By changed lines,Microsoft,12,docs,476,15.581
-By changed lines,Microsoft,12,test,292,9.558
-By changed lines,Microsoft,12,pkg/registry/thirdpartyresourcedata,261,8.543
-By changed lines,Microsoft,12,docs/man/man1,254,8.314
-By changed lines,Microsoft,12,pkg/kubectl/cmd/clusterinfo_dump.go,243,7.954
-By changed lines,Microsoft,12,pkg/kubectl/cmd/util,233,7.627
-By changed lines,Microsoft,12,pkg/registry/thirdpartyresourcedata/codec.go,194,6.35
-By changed lines,Microsoft,12,docs/user-guide/kubectl,191,6.252
-By changed lines,Microsoft,12,test/e2e/third-party.go,182,5.957
-By changed lines,Microsoft,12,docs/man/man1/kubectl-cluster-info-dump.1,166,5.434
-By changed lines,Microsoft,12,pkg/kubectl/cmd/util/factory.go,116,3.797
-By changed lines,Microsoft,12,docs/user-guide/kubectl/kubectl_cluster-info_dump.md,112,3.666
-By changed lines,Microsoft,12,test/integration/main_test.go,110,3.601
-By changed lines,Microsoft,12,hack,106,3.47
-All By changed lines,Rook,13,"",2794,0.403
-By changed lines,Rook,13,cluster,1438,51.467
-By changed lines,Rook,13,cluster/images,1139,40.766
-By changed lines,Rook,13,cluster/images/hyperkube,900,32.212
-By changed lines,Rook,13,docs,798,28.561
-By changed lines,Rook,13,docs/getting-started-guides,775,27.738
-By changed lines,Rook,13,docs/getting-started-guides/docker-multinode,774,27.702
-By changed lines,Rook,13,cluster/images/hyperkube/addons,516,18.468
-By changed lines,Rook,13,cluster/addons,280,10.021
-By changed lines,Rook,13,cluster/images/hyperkube/addons/dns-rc.yaml,254,9.091
-By changed lines,Rook,13,docs/getting-started-guides/docker-multinode/master.sh,243,8.697
-By changed lines,Rook,13,build,233,8.339
-By changed lines,Rook,13,docs/getting-started-guides/docker-multinode/worker.sh,231,8.268
-By changed lines,Rook,13,cluster/addons/dns,170,6.084
-By changed lines,Rook,13,test,148,5.297
-By changed lines,Rook,13,docs/getting-started-guides/docker-multinode/skydns.yaml.in,136,4.868
-By changed lines,Rook,13,test/e2e,128,4.581
-By changed lines,Rook,13,cluster/images/etcd,121,4.331
-By changed lines,Rook,13,cluster/images/flannel,118,4.223
-By changed lines,Rook,13,cluster/addons/addon-manager,102,3.651
-By changed lines,Rook,13,cluster/images/hyperkube/addons/dashboard-rc.yaml,102,3.651
-By changed lines,Rook,13,cluster/addons/dns/kube2sky,87,3.114
-By changed lines,Rook,13,pkg,87,3.114
-By changed lines,Rook,13,cluster/images/hyperkube/static-pods,84,3.006
-By changed lines,Rook,13,cluster/addons/dns/skydns,81,2.899
-By changed lines,Rook,13,build/debian-iptables,77,2.756
-All By changed lines,Tigera,14,"",2094,0.302
-By changed lines,Tigera,14,pkg,1748,83.477
-By changed lines,Tigera,14,pkg/apis/extensions,1061,50.669
-By changed lines,Tigera,14,pkg/apis/extensions/v1beta1,544,25.979
-By changed lines,Tigera,14,pkg/registry,447,21.347
-By changed lines,Tigera,14,pkg/registry/networkpolicy,445,21.251
-By changed lines,Tigera,14,docs/proposals/network-policy.md,333,15.903
-By changed lines,Tigera,14,pkg/apis/extensions/v1beta1/conversion_generated.go,304,14.518
-By changed lines,Tigera,14,pkg/apis/extensions/validation,297,14.183
-By changed lines,Tigera,14,pkg/registry/networkpolicy/etcd,254,12.13
-By changed lines,Tigera,14,pkg/apis/extensions/validation/validation_test.go,238,11.366
-By changed lines,Tigera,14,pkg/client/unversioned,176,8.405
-By changed lines,Tigera,14,pkg/registry/networkpolicy/etcd/etcd_test.go,174,8.309
-By changed lines,Tigera,14,pkg/apis/extensions/v1beta1/deep_copy_generated.go,130,6.208
-By changed lines,Tigera,14,pkg/apis/extensions/deep_copy_generated.go,130,6.208
-By changed lines,Tigera,14,pkg/registry/networkpolicy/strategy.go,112,5.349
-By changed lines,Tigera,14,pkg/client/unversioned/network_policys.go,92,4.394
-By changed lines,Tigera,14,pkg/apis/extensions/v1beta1/types.go,91,4.346
-By changed lines,Tigera,14,pkg/apis/extensions/types.go,86,4.107
-By changed lines,Tigera,14,pkg/registry/networkpolicy/etcd/etcd.go,80,3.82
-By changed lines,Tigera,14,pkg/client/unversioned/testclient,79,3.773
-By changed lines,Tigera,14,pkg/client/unversioned/testclient/fake_network_policies.go,75,3.582
-All By changed lines,VMware,15,"",2021,0.291
-By changed lines,VMware,15,cluster,1895,93.765
-By changed lines,VMware,15,cluster/photon-controller,1843,91.192
-By changed lines,VMware,15,cluster/photon-controller/util.sh,1127,55.764
-By changed lines,VMware,15,cluster/photon-controller/templates,293,14.498
-By changed lines,VMware,15,cluster/photon-controller/setup-prereq.sh,239,11.826
-By changed lines,VMware,15,cluster/photon-controller/templates/create-dynamic-salt-files.sh,133,6.581
-By changed lines,VMware,15,pkg,120,5.938
-By changed lines,VMware,15,cluster/photon-controller/config-default.sh,92,4.552
-By changed lines,VMware,15,pkg/api/pod/util_test.go,83,4.107
-By changed lines,VMware,15,cluster/photon-controller/config-common.sh,72,3.563
-By changed lines,VMware,15,cluster/photon-controller/templates/salt-master.sh,57,2.82
-By changed lines,VMware,15,cluster/photon-controller/templates/salt-minion.sh,51,2.524
-By changed lines,VMware,15,pkg/kubectl/namespace_test.go,37,1.831
-By changed lines,VMware,15,cluster/photon-controller/templates/install-release.sh,26,1.286
-By changed lines,VMware,15,cluster/vsphere,26,1.286
-By changed lines,VMware,15,cluster/photon-controller/templates/hostname.sh,22,1.089
-By changed lines,VMware,15,cluster/saltbase/salt,21,1.039
-All By changed lines,Self,16,"",227,0.033
-By changed lines,Self,16,build/pause,89,39.207
-By changed lines,Self,16,pkg,74,32.599
-By changed lines,Self,16,build/pause/Makefile,66,29.075
-By changed lines,Self,16,test,39,17.181
-By changed lines,Self,16,pkg/client/unversioned/clientcmd,33,14.537
-By changed lines,Self,16,test/e2e,30,13.216
-By changed lines,Self,16,pkg/client/unversioned/clientcmd/client_config_test.go,25,11.013
-By changed lines,Self,16,pkg/kubelet,21,9.251
-By changed lines,Self,16,pkg/api/endpoints/util_test.go,20,8.811
-By changed lines,Self,16,build/pause/pause.c,18,7.93
-By changed lines,Self,16,pkg/kubelet/dockertools/manager.go,14,6.167
-By changed lines,Self,16,test/e2e/scheduler_predicates.go,12,5.286
-By changed lines,Self,16,test/integration,8,3.524
-By changed lines,Self,16,pkg/client/unversioned/clientcmd/client_config.go,8,3.524
-By changed lines,Self,16,Godeps/Godeps.json,8,3.524
-By changed lines,Self,16,pkg/kubelet/rkt/rkt.go,7,3.084
-By changed lines,Self,16,cmd,7,3.084
-All By changed lines,NotFound,17,"",7,0.001
-By changed lines,NotFound,17,cluster/images/hyperkube/Dockerfile,4,57.143
-By changed lines,NotFound,17,Vagrantfile,3,42.857
-All By number of commits to file,All,0,"",15393,100.0
-All By number of commits to file,Google,1,"",9315,60.515
-By number of commits to file,Google,1,docs,2957,31.744
-By number of commits to file,Google,1,pkg,2785,29.898
-By number of commits to file,Google,1,docs/user-guide,1173,12.593
-By number of commits to file,Google,1,pkg/client,919,9.866
-By number of commits to file,Google,1,test,712,7.644
-By number of commits to file,Google,1,docs/user-guide/kubectl,680,7.3
-By number of commits to file,Google,1,cluster,659,7.075
-By number of commits to file,Google,1,hack,583,6.259
-By number of commits to file,Google,1,pkg/client/clientset_generated,498,5.346
-By number of commits to file,Google,1,test/e2e,477,5.121
-By number of commits to file,Google,1,examples,447,4.799
-By number of commits to file,Google,1,docs/devel,348,3.736
-By number of commits to file,Google,1,docs/proposals,335,3.596
-By number of commits to file,Google,1,pkg/kubelet,319,3.425
-By number of commits to file,Google,1,Godeps,310,3.328
-By number of commits to file,Google,1,docs/design,301,3.231
-By number of commits to file,Google,1,docs/admin,298,3.199
-By number of commits to file,Google,1,cluster/gce,296,3.178
-By number of commits to file,Google,1,pkg/client/typed,283,3.038
-By number of commits to file,Google,1,cmd,268,2.877
-By number of commits to file,Google,1,pkg/client/typed/generated,261,2.802
-By number of commits to file,Google,1,hack/jenkins,260,2.791
-By number of commits to file,Google,1,Godeps/_workspace,245,2.63
-By number of commits to file,Google,1,Godeps/_workspace/src,244,2.619
-By number of commits to file,Google,1,federation,242,2.598
-All By number of commits to file,Red Hat,2,"",2417,15.702
-By number of commits to file,Red Hat,2,pkg,1633,67.563
-By number of commits to file,Red Hat,2,pkg/kubelet,234,9.681
-By number of commits to file,Red Hat,2,pkg/api,194,8.026
-By number of commits to file,Red Hat,2,docs,187,7.737
-By number of commits to file,Red Hat,2,pkg/controller,165,6.827
-By number of commits to file,Red Hat,2,pkg/apis,151,6.247
-By number of commits to file,Red Hat,2,pkg/registry,150,6.206
-By number of commits to file,Red Hat,2,pkg/kubectl,142,5.875
-By number of commits to file,Red Hat,2,test,130,5.379
-By number of commits to file,Red Hat,2,pkg/client,117,4.841
-By number of commits to file,Red Hat,2,pkg/controller/persistentvolume,116,4.799
-By number of commits to file,Red Hat,2,pkg/runtime,105,4.344
-By number of commits to file,Red Hat,2,plugin,101,4.179
-By number of commits to file,Red Hat,2,plugin/pkg,99,4.096
-By number of commits to file,Red Hat,2,Godeps,92,3.806
-By number of commits to file,Red Hat,2,pkg/volume,80,3.31
-By number of commits to file,Red Hat,2,pkg/util,77,3.186
-By number of commits to file,Red Hat,2,Godeps/_workspace/src/github.com,77,3.186
-By number of commits to file,Red Hat,2,docs/user-guide,77,3.186
-By number of commits to file,Red Hat,2,test/e2e,77,3.186
-By number of commits to file,Red Hat,2,Godeps/_workspace,77,3.186
-By number of commits to file,Red Hat,2,plugin/pkg/admission,75,3.103
-By number of commits to file,Red Hat,2,pkg/kubectl/cmd,74,3.062
-By number of commits to file,Red Hat,2,cmd,73,3.02
-All By number of commits to file,CoreOS,3,"",896,5.821
-By number of commits to file,CoreOS,3,Godeps,358,39.955
-By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com,336,37.5
-By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos,330,36.83
-By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd,310,34.598
-By number of commits to file,CoreOS,3,pkg,295,32.924
-By number of commits to file,CoreOS,3,pkg/kubelet,130,14.509
-By number of commits to file,CoreOS,3,pkg/kubelet/rkt,85,9.487
-By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver,79,8.817
-By number of commits to file,CoreOS,3,cluster,63,7.031
-By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/pkg,57,6.362
-By number of commits to file,CoreOS,3,cluster/gce,53,5.915
-By number of commits to file,CoreOS,3,cluster/gce/coreos,50,5.58
-By number of commits to file,CoreOS,3,pkg/storage,47,5.246
-By number of commits to file,CoreOS,3,plugin,46,5.134
-By number of commits to file,CoreOS,3,plugin/pkg,45,5.022
-By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/clientv3,40,4.464
-By number of commits to file,CoreOS,3,pkg/kubelet/rkt/rkt.go,35,3.906
-By number of commits to file,CoreOS,3,pkg/client,33,3.683
-By number of commits to file,CoreOS,3,pkg/apis,33,3.683
-By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/storage,32,3.571
-By number of commits to file,CoreOS,3,cmd,29,3.237
-By number of commits to file,CoreOS,3,pkg/apis/rbac,29,3.237
-By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver/api,28,3.125
-All By number of commits to file,HP,4,"",399,2.592
-By number of commits to file,HP,4,Godeps,351,87.97
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi,346,86.717
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc,200,50.125
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/vim25,45,11.278
-By number of commits to file,HP,4,pkg,42,10.526
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/object,40,10.025
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/host,31,7.769
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/test,28,7.018
-By number of commits to file,HP,4,pkg/cloudprovider/providers,28,7.018
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/vm,27,6.767
-By number of commits to file,HP,4,pkg/cloudprovider/providers/vsphere,21,5.263
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/flags,19,4.762
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/device,16,4.01
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/vm/guest,15,3.759
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/scripts,13,3.258
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/mo,12,3.008
-By number of commits to file,HP,4,pkg/cloudprovider/providers/vsphere/vsphere.go,11,2.757
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/datastore,10,2.506
-By number of commits to file,HP,4,pkg/cloudprovider/providers/vsphere/vsphere_test.go,9,2.256
-By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/host/esxcli,9,2.256
-All By number of commits to file,Huawei,5,"",248,1.611
-By number of commits to file,Huawei,5,federation,119,47.984
-By number of commits to file,Huawei,5,pkg,50,20.161
-By number of commits to file,Huawei,5,federation/apis,37,14.919
-By number of commits to file,Huawei,5,federation/apis/federation,32,12.903
-By number of commits to file,Huawei,5,plugin,31,12.5
-By number of commits to file,Huawei,5,federation/cmd,29,11.694
-By number of commits to file,Huawei,5,plugin/pkg,29,11.694
-By number of commits to file,Huawei,5,plugin/pkg/scheduler,26,10.484
-By number of commits to file,Huawei,5,federation/client,25,10.081
-By number of commits to file,Huawei,5,federation/client/clientset_generated,24,9.677
-By number of commits to file,Huawei,5,pkg/api,23,9.274
-By number of commits to file,Huawei,5,test,22,8.871
-By number of commits to file,Huawei,5,federation/cmd/federated-apiserver,20,8.065
-By number of commits to file,Huawei,5,federation/pkg,18,7.258
-By number of commits to file,Huawei,5,federation/apis/federation/v1alpha1,17,6.855
-By number of commits to file,Huawei,5,federation/cmd/federated-apiserver/app,17,6.855
-By number of commits to file,Huawei,5,plugin/pkg/scheduler/algorithm,16,6.452
-By number of commits to file,Huawei,5,federation/client/clientset_generated/federation_release_1_3,12,4.839
-By number of commits to file,Huawei,5,pkg/kubectl,12,4.839
-By number of commits to file,Huawei,5,federation/client/clientset_generated/federation_internalclientset,12,4.839
-By number of commits to file,Huawei,5,federation/pkg/federated-controller,12,4.839
-By number of commits to file,Huawei,5,test/e2e_node,12,4.839
-By number of commits to file,Huawei,5,plugin/pkg/scheduler/algorithm/predicates,10,4.032
-By number of commits to file,Huawei,5,federation/registry/cluster,10,4.032
-All By number of commits to file,Microsoft,6,"",175,1.137
-By number of commits to file,Microsoft,6,docs,82,46.857
-By number of commits to file,Microsoft,6,pkg,75,42.857
-By number of commits to file,Microsoft,6,docs/user-guide/kubectl,54,30.857
-By number of commits to file,Microsoft,6,pkg/kubectl,52,29.714
-By number of commits to file,Microsoft,6,pkg/kubectl/cmd,46,26.286
-By number of commits to file,Microsoft,6,docs/man/man1,25,14.286
-By number of commits to file,Microsoft,6,pkg/master,9,5.143
-By number of commits to file,Microsoft,6,hack,6,3.429
-By number of commits to file,Microsoft,6,pkg/apis/extensions,6,3.429
-By number of commits to file,Microsoft,6,pkg/kubectl/cmd/util,5,2.857
-By number of commits to file,Microsoft,6,pkg/kubectl/cmd/rollout,5,2.857
-By number of commits to file,Microsoft,6,pkg/master/master_test.go,5,2.857
-By number of commits to file,Microsoft,6,cluster,4,2.286
-By number of commits to file,Microsoft,6,pkg/registry,4,2.286
-By number of commits to file,Microsoft,6,pkg/master/master.go,4,2.286
-By number of commits to file,Microsoft,6,pkg/registry/thirdpartyresourcedata,4,2.286
-By number of commits to file,Microsoft,6,pkg/apis/extensions/v1beta1,4,2.286
-By number of commits to file,Microsoft,6,pkg/kubectl/cmd/clusterinfo_dump.go,4,2.286
-By number of commits to file,Microsoft,6,hack/verify-flags,3,1.714
-By number of commits to file,Microsoft,6,test,3,1.714
-By number of commits to file,Microsoft,6,docs/man/man1/kubectl-cluster-info.1,3,1.714
-By number of commits to file,Microsoft,6,docs/user-guide/kubectl/kubectl_cluster-info.md,3,1.714
-All By number of commits to file,Rook,7,"",170,1.104
-By number of commits to file,Rook,7,cluster,73,42.941
-By number of commits to file,Rook,7,cluster/images,47,27.647
-By number of commits to file,Rook,7,cluster/images/hyperkube,37,21.765
-By number of commits to file,Rook,7,test,24,14.118
-By number of commits to file,Rook,7,pkg,23,13.529
-By number of commits to file,Rook,7,test/e2e,19,11.176
-By number of commits to file,Rook,7,cluster/addons,19,11.176
-By number of commits to file,Rook,7,docs,18,10.588
-By number of commits to file,Rook,7,build,17,10.0
-By number of commits to file,Rook,7,pkg/kubelet,12,7.059
-By number of commits to file,Rook,7,docs/getting-started-guides,9,5.294
-By number of commits to file,Rook,7,cluster/images/hyperkube/addons,9,5.294
-By number of commits to file,Rook,7,cluster/addons/dns,9,5.294
-By number of commits to file,Rook,7,docs/getting-started-guides/docker-multinode,8,4.706
-By number of commits to file,Rook,7,build/build-image/cross,6,3.529
-By number of commits to file,Rook,7,cluster/saltbase/salt/kube-dns,6,3.529
-By number of commits to file,Rook,7,cluster/images/hyperkube/Dockerfile,6,3.529
-By number of commits to file,Rook,7,cluster/images/hyperkube/Makefile,6,3.529
-By number of commits to file,Rook,7,cluster/images/hyperkube/static-pods,6,3.529
-By number of commits to file,Rook,7,pkg/api,6,3.529
-By number of commits to file,Rook,7,build/build-image,6,3.529
-By number of commits to file,Rook,7,cluster/saltbase/salt,6,3.529
-By number of commits to file,Rook,7,cluster/addons/addon-manager,6,3.529
-By number of commits to file,Rook,7,cluster/images/etcd,5,2.941
-All By number of commits to file,Docker,8,"",164,1.065
-By number of commits to file,Docker,8,pkg,136,82.927
-By number of commits to file,Docker,8,pkg/kubelet,59,35.976
-By number of commits to file,Docker,8,pkg/kubelet/dockertools,36,21.951
-By number of commits to file,Docker,8,pkg/util,21,12.805
-By number of commits to file,Docker,8,cmd,15,9.146
-By number of commits to file,Docker,8,pkg/kubectl,11,6.707
-By number of commits to file,Docker,8,pkg/kubectl/cmd,10,6.098
-By number of commits to file,Docker,8,pkg/registry,9,5.488
-By number of commits to file,Docker,8,pkg/client,9,5.488
-By number of commits to file,Docker,8,pkg/client/restclient,8,4.878
-By number of commits to file,Docker,8,pkg/kubelet/container,8,4.878
-By number of commits to file,Docker,8,pkg/kubelet/dockertools/manager.go,7,4.268
-By number of commits to file,Docker,8,contrib,6,3.659
-By number of commits to file,Docker,8,pkg/controller/node,5,3.049
-By number of commits to file,Docker,8,pkg/kubectl/cmd/config,5,3.049
-By number of commits to file,Docker,8,pkg/controller,5,3.049
-By number of commits to file,Docker,8,plugin,5,3.049
-By number of commits to file,Docker,8,contrib/mesos,5,3.049
-By number of commits to file,Docker,8,pkg/runtime,5,3.049
-By number of commits to file,Docker,8,pkg/api,5,3.049
-By number of commits to file,Docker,8,pkg/kubelet/dockertools/manager_test.go,5,3.049
-By number of commits to file,Docker,8,pkg/util/flowcontrol,4,2.439
-By number of commits to file,Docker,8,plugin/pkg,4,2.439
-By number of commits to file,Docker,8,cmd/kubelet,4,2.439
-By number of commits to file,Docker,8,pkg/kubelet/util/cache,4,2.439
-All By number of commits to file,eBay,9,"",142,0.922
-By number of commits to file,eBay,9,pkg,51,35.915
-By number of commits to file,eBay,9,federation,46,32.394
-By number of commits to file,eBay,9,federation/pkg,37,26.056
-By number of commits to file,eBay,9,federation/pkg/federation-controller,35,24.648
-By number of commits to file,eBay,9,federation/pkg/federation-controller/service,30,21.127
-By number of commits to file,eBay,9,test,15,10.563
-By number of commits to file,eBay,9,Godeps,14,9.859
-By number of commits to file,eBay,9,Godeps/_workspace/src/github.com/emicklei/go-restful,13,9.155
-By number of commits to file,eBay,9,test/integration,12,8.451
-By number of commits to file,eBay,9,pkg/client,10,7.042
-By number of commits to file,eBay,9,pkg/util,7,4.93
-By number of commits to file,eBay,9,federation/pkg/federation-controller/service/servicecontroller.go,7,4.93
-By number of commits to file,eBay,9,pkg/controller,6,4.225
-By number of commits to file,eBay,9,plugin/pkg,5,3.521
-By number of commits to file,eBay,9,federation/cmd/federation-controller-manager/app,5,3.521
-By number of commits to file,eBay,9,pkg/client/unversioned,5,3.521
-By number of commits to file,eBay,9,federation/cmd,5,3.521
-By number of commits to file,eBay,9,federation/pkg/federation-controller/service/dns.go,5,3.521
-By number of commits to file,eBay,9,pkg/kubectl,5,3.521
-By number of commits to file,eBay,9,pkg/apiserver,5,3.521
-All By number of commits to file,Apache,10,"",116,0.754
-By number of commits to file,Apache,10,test,109,93.966
-By number of commits to file,Apache,10,test/e2e,107,92.241
-By number of commits to file,Apache,10,test/e2e/framework,6,5.172
-By number of commits to file,Apache,10,hack,4,3.448
-By number of commits to file,Apache,10,test/e2e/kubectl.go,4,3.448
-By number of commits to file,Apache,10,test/e2e/example_k8petstore.go,3,2.586
-By number of commits to file,Apache,10,test/e2e/examples.go,3,2.586
-By number of commits to file,Apache,10,test/e2e/framework/framework.go,3,2.586
-By number of commits to file,Apache,10,test/e2e/pd.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/metrics_grabber_test.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/kubeproxy.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/load.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/volumes.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/daemon_set.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/density.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/service.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/networking.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/cluster_upgrade.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/kubelet.go,2,1.724
-By number of commits to file,Apache,10,docs/user-guide/liveness,2,1.724
-By number of commits to file,Apache,10,test/e2e/nodeoutofdisk.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/networking_perf.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/framework/util.go,2,1.724
-By number of commits to file,Apache,10,test/e2e/proxy.go,2,1.724
-By number of commits to file,Apache,10,docs/user-guide,2,1.724
-All By number of commits to file,CERN,11,"",113,0.734
-By number of commits to file,CERN,11,Godeps,113,100.0
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud,112,99.115
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack,72,63.717
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1,30,26.549
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace,29,25.664
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1,27,23.894
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2,16,14.159
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2/extensions,12,10.619
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/orchestration/v1,12,10.619
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/orchestration/v1/stacks,6,5.31
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/users,6,5.31
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/instances,6,5.31
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/networking/v2,6,5.31
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/datastores,5,4.425
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/backups,5,4.425
-By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/databases,5,4.425
-All By number of commits to file,IBM,12,"",99,0.643
-By number of commits to file,IBM,12,docs,66,66.667
-By number of commits to file,IBM,12,docs/design,39,39.394
-By number of commits to file,IBM,12,docs/devel,26,26.263
-By number of commits to file,IBM,12,examples,14,14.141
-By number of commits to file,IBM,12,examples/spark,12,12.121
-By number of commits to file,IBM,12,pkg,5,5.051
-By number of commits to file,IBM,12,examples/spark/spark-gluster,4,4.04
-By number of commits to file,IBM,12,build,4,4.04
-By number of commits to file,IBM,12,docs/devel/development.md,3,3.03
-By number of commits to file,IBM,12,contrib/mesos/pkg,3,3.03
-By number of commits to file,IBM,12,cluster,3,3.03
-By number of commits to file,IBM,12,hack,2,2.02
-By number of commits to file,IBM,12,cluster/vagrant,2,2.02
-By number of commits to file,IBM,12,pkg/kubectl,2,2.02
-By number of commits to file,IBM,12,docs/devel/kubectl-conventions.md,2,2.02
-By number of commits to file,IBM,12,build/common.sh,2,2.02
-By number of commits to file,IBM,12,build/README.md,2,2.02
-By number of commits to file,IBM,12,pkg/apiserver,2,2.02
-By number of commits to file,IBM,12,examples/spark/README.md,1,1.01
-By number of commits to file,IBM,12,examples/spark/spark-webui.yaml,1,1.01
-By number of commits to file,IBM,12,examples/spark/spark-master-controller.yaml,1,1.01
-By number of commits to file,IBM,12,examples/spark/zeppelin-controller.yaml,1,1.01
-By number of commits to file,IBM,12,examples/spark/namespace-spark-cluster.yaml,1,1.01
-All By number of commits to file,Rackspace,13,"",94,0.611
-By number of commits to file,Rackspace,13,pkg/kubectl,37,39.362
-By number of commits to file,Rackspace,13,docs,37,39.362
-By number of commits to file,Rackspace,13,pkg/kubectl/cmd,34,36.17
-By number of commits to file,Rackspace,13,docs/man/man1,19,20.213
-By number of commits to file,Rackspace,13,docs/user-guide/kubectl,18,19.149
-By number of commits to file,Rackspace,13,hack,17,18.085
-By number of commits to file,Rackspace,13,hack/testdata/recursive,12,12.766
-By number of commits to file,Rackspace,13,pkg/kubectl/cmd/rollout,8,8.511
-By number of commits to file,Rackspace,13,hack/test-cmd.sh,5,5.319
-By number of commits to file,Rackspace,13,pkg/kubectl/cmd/get.go,4,4.255
-By number of commits to file,Rackspace,13,hack/testdata/recursive/deployment,3,3.191
-By number of commits to file,Rackspace,13,hack/testdata/recursive/pod,3,3.191
-By number of commits to file,Rackspace,13,pkg/kubectl/resource,3,3.191
-By number of commits to file,Rackspace,13,hack/testdata/recursive/rc,3,3.191
-By number of commits to file,Rackspace,13,hack/testdata/recursive/pod-modify,3,3.191
-By number of commits to file,Rackspace,13,pkg/kubectl/cmd/rollout/rollout_resume.go,2,2.128
-By number of commits to file,Rackspace,13,pkg/kubectl/resource/builder.go,2,2.128
-By number of commits to file,Rackspace,13,pkg/kubectl/cmd/patch.go,2,2.128
-By number of commits to file,Rackspace,13,pkg/kubectl/cmd/scale.go,2,2.128
-By number of commits to file,Rackspace,13,pkg/kubectl/cmd/convert.go,2,2.128
-By number of commits to file,Rackspace,13,pkg/kubectl/cmd/expose.go,2,2.128
-All By number of commits to file,Canonical,14,"",93,0.604
-By number of commits to file,Canonical,14,cluster,91,97.849
-By number of commits to file,Canonical,14,cluster/juju,90,96.774
-By number of commits to file,Canonical,14,cluster/juju/charms/trusty,53,56.989
-By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes,30,32.258
-By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes-master,28,30.108
-By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes,24,25.806
-By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/files/guestbook-example,12,12.903
-By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes-master/hooks,10,10.753
-By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes/hooks,9,9.677
-By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/templates,5,5.376
-By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes-master/files,5,5.376
-By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes/files,3,3.226
-By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/actions/guestbook-example,3,3.226
-By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/README.md,3,3.226
-By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/files/guestbook-example/redis-master-controller.yaml,2,2.151
-By number of commits to file,Canonical,14,cluster/juju/identify-leaders.py,2,2.151
-By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes/unit_tests,2,2.151
-By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/templates/skydns-rc.yml,2,2.151
-By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/reactive/k8s.py,2,2.151
-By number of commits to file,Canonical,14,cluster/juju/bundles/local.yaml,2,2.151
-By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes-master/unit_tests,2,2.151
-All By number of commits to file,Caicloud,15,"",78,0.507
-By number of commits to file,Caicloud,15,pkg,54,69.231
-By number of commits to file,Caicloud,15,pkg/controller,41,52.564
-By number of commits to file,Caicloud,15,pkg/controller/node,14,17.949
-By number of commits to file,Caicloud,15,cmd,10,12.821
-By number of commits to file,Caicloud,15,pkg/client/cache,7,8.974
-By number of commits to file,Caicloud,15,cmd/kube-controller-manager/app,6,7.692
-By number of commits to file,Caicloud,15,cluster,6,7.692
-By number of commits to file,Caicloud,15,pkg/controller/node/nodecontroller.go,5,6.41
-By number of commits to file,Caicloud,15,cmd/integration/integration.go,4,5.128
-By number of commits to file,Caicloud,15,pkg/controller/framework,4,5.128
-By number of commits to file,Caicloud,15,pkg/controller/replication,4,5.128
-By number of commits to file,Caicloud,15,cmd/integration,4,5.128
-By number of commits to file,Caicloud,15,cmd/kube-controller-manager/app/controllermanager.go,4,5.128
-By number of commits to file,Caicloud,15,contrib,3,3.846
-By number of commits to file,Caicloud,15,pkg/controller/node/cidr_allocator.go,3,3.846
-By number of commits to file,Caicloud,15,pkg/controller/gc,3,3.846
-By number of commits to file,Caicloud,15,pkg/registry,3,3.846
-By number of commits to file,Caicloud,15,pkg/apis,3,3.846
-By number of commits to file,Caicloud,15,pkg/controller/node/nodecontroller_test.go,3,3.846
-By number of commits to file,Caicloud,15,pkg/controller/node/cidr_allocator_test.go,3,3.846
-By number of commits to file,Caicloud,15,pkg/apis/componentconfig,3,3.846
-By number of commits to file,Caicloud,15,pkg/controller/job,3,3.846
-By number of commits to file,Caicloud,15,contrib/mesos/pkg,3,3.846
-All By number of commits to file,Self,16,"",41,0.266
-By number of commits to file,Self,16,test,21,51.22
-By number of commits to file,Self,16,test/e2e,16,39.024
-By number of commits to file,Self,16,pkg,6,14.634
-By number of commits to file,Self,16,build,4,9.756
-By number of commits to file,Self,16,test/integration,4,9.756
-By number of commits to file,Self,16,build/pause,4,9.756
-By number of commits to file,Self,16,pkg/kubelet,3,7.317
-By number of commits to file,Self,16,hack,3,7.317
-By number of commits to file,Self,16,Godeps,2,4.878
-By number of commits to file,Self,16,pkg/client/unversioned/clientcmd,2,4.878
-By number of commits to file,Self,16,pkg/client,2,4.878
-By number of commits to file,Self,16,cluster,2,4.878
-By number of commits to file,Self,16,pkg/kubelet/rkt,2,4.878
-By number of commits to file,Self,16,pkg/client/unversioned,2,4.878
-By number of commits to file,Self,16,Godeps/Godeps.json,2,4.878
-By number of commits to file,Self,16,pkg/kubelet/rkt/rkt.go,2,4.878
-By number of commits to file,Self,16,test/e2e/limit_range.go,1,2.439
-By number of commits to file,Self,16,test/e2e/resource_quota.go,1,2.439
-By number of commits to file,Self,16,test/e2e/service_latency.go,1,2.439
-By number of commits to file,Self,16,test/e2e/mesos.go,1,2.439
-By number of commits to file,Self,16,build/pause/pause.c,1,2.439
-By number of commits to file,Self,16,test/e2e/etcd_failure.go,1,2.439
-By number of commits to file,Self,16,test/e2e/kubelet.go,1,2.439
-By number of commits to file,Self,16,test/e2e/ubernetes_lite.go,1,2.439
-All By number of commits to file,NotFound,17,"",3,0.019
-By number of commits to file,NotFound,17,cluster/images/hyperkube/Dockerfile,2,66.667
-By number of commits to file,NotFound,17,Vagrantfile,1,33.333
+Order,Company,Index,File/Directory,Number,Percent,PercentAll
+All By changed lines,All,0,"",694078,100.0,100.0
+All By changed lines,Google,1,"",349432,50.345,50.345
+By changed lines,Google,1,pkg,115746,33.124,16.676
+By changed lines,Google,1,Godeps,85458,24.456,12.312
+By changed lines,Google,1,docs,67160,19.22,9.676
+By changed lines,Google,1,Godeps/LICENSES,57481,16.45,8.282
+By changed lines,Google,1,pkg/client,42006,12.021,6.052
+By changed lines,Google,1,Godeps/_workspace,24614,7.044,3.546
+By changed lines,Google,1,Godeps/_workspace/src,24612,7.043,3.546
+By changed lines,Google,1,pkg/client/clientset_generated,24017,6.873,3.46
+By changed lines,Google,1,test,21815,6.243,3.143
+By changed lines,Google,1,pkg/apis,18642,5.335,2.686
+By changed lines,Google,1,docs/user-guide,17973,5.143,2.589
+By changed lines,Google,1,test/e2e,16045,4.592,2.312
+By changed lines,Google,1,pkg/client/typed,14979,4.287,2.158
+By changed lines,Google,1,pkg/client/typed/generated,14506,4.151,2.09
+By changed lines,Google,1,pkg/controller,13665,3.911,1.969
+By changed lines,Google,1,Godeps/_workspace/src/github.com,13454,3.85,1.938
+By changed lines,Google,1,cluster,13030,3.729,1.877
+By changed lines,Google,1,hack,11518,3.296,1.659
+By changed lines,Google,1,Godeps/_workspace/src/golang.org/x,11040,3.159,1.591
+By changed lines,Google,1,docs/man/man1,10985,3.144,1.583
+By changed lines,Google,1,Godeps/_workspace/src/golang.org/x/tools,10578,3.027,1.524
+By changed lines,Google,1,pkg/api,10151,2.905,1.463
+By changed lines,Google,1,pkg/kubelet,10095,2.889,1.454
+All By changed lines,HP,2,"",119893,17.274,17.274
+By changed lines,HP,2,Godeps,116053,96.797,16.72
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi,114739,95.701,16.531
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25,79864,66.613,11.506
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types,57455,47.922,8.278
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/types.go,49702,41.455,7.161
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc,22396,18.68,3.227
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/methods,14282,11.912,2.058
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/methods/methods.go,14103,11.763,2.032
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/object,5714,4.766,0.823
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/xml,4143,3.456,0.597
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/enum.go,4098,3.418,0.59
+By changed lines,HP,2,pkg,3745,3.124,0.54
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc/vm,3397,2.833,0.489
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/if.go,3287,2.742,0.474
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc/host,3104,2.589,0.447
+By changed lines,HP,2,pkg/cloudprovider/providers,2704,2.255,0.39
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc/flags,2469,2.059,0.356
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/govc/test,2349,1.959,0.338
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/mo,2336,1.948,0.337
+By changed lines,HP,2,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/xml/xml.go,1939,1.617,0.279
+All By changed lines,Red Hat,3,"",85815,12.364,12.364
+By changed lines,Red Hat,3,pkg,60882,70.946,8.772
+By changed lines,Red Hat,3,pkg/kubelet,10759,12.537,1.55
+By changed lines,Red Hat,3,pkg/controller,10106,11.776,1.456
+By changed lines,Red Hat,3,pkg/controller/persistentvolume,9063,10.561,1.306
+By changed lines,Red Hat,3,pkg/api,8337,9.715,1.201
+By changed lines,Red Hat,3,pkg/apis,6979,8.133,1.006
+By changed lines,Red Hat,3,contrib,4949,5.767,0.713
+By changed lines,Red Hat,3,contrib/completions,4848,5.649,0.698
+By changed lines,Red Hat,3,Godeps,4648,5.416,0.67
+By changed lines,Red Hat,3,contrib/completions/bash,4560,5.314,0.657
+By changed lines,Red Hat,3,contrib/completions/bash/kubectl,4554,5.307,0.656
+By changed lines,Red Hat,3,pkg/volume,4354,5.074,0.627
+By changed lines,Red Hat,3,docs,3974,4.631,0.573
+By changed lines,Red Hat,3,plugin,3816,4.447,0.55
+By changed lines,Red Hat,3,plugin/pkg,3810,4.44,0.549
+By changed lines,Red Hat,3,Godeps/_workspace/src/github.com,3720,4.335,0.536
+By changed lines,Red Hat,3,pkg/apis/batch,3632,4.232,0.523
+By changed lines,Red Hat,3,test,3564,4.153,0.513
+By changed lines,Red Hat,3,pkg/security,3473,4.047,0.5
+By changed lines,Red Hat,3,pkg/security/podsecuritypolicy,3455,4.026,0.498
+By changed lines,Red Hat,3,plugin/pkg/admission,3418,3.983,0.492
+By changed lines,Red Hat,3,pkg/util,3409,3.972,0.491
+By changed lines,Red Hat,3,pkg/api/v1,2982,3.475,0.43
+All By changed lines,CoreOS,4,"",61085,8.801,8.801
+By changed lines,CoreOS,4,Godeps,37903,62.05,5.461
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com,33895,55.488,4.883
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos,33036,54.082,4.76
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd,31322,51.276,4.513
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver,17104,28.0,2.464
+By changed lines,CoreOS,4,pkg,13458,22.032,1.939
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver/etcdserverpb,12384,20.273,1.784
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver/etcdserverpb/rpc.pb.go,11197,18.33,1.613
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/clientv3,3647,5.97,0.525
+By changed lines,CoreOS,4,pkg/apis,3630,5.943,0.523
+By changed lines,CoreOS,4,pkg/apis/rbac,3616,5.92,0.521
+By changed lines,CoreOS,4,api/swagger-spec,3409,5.581,0.491
+By changed lines,CoreOS,4,api/swagger-spec/rbac.authorization.k8s.io_v1alpha1.json,3291,5.388,0.474
+By changed lines,CoreOS,4,pkg/kubelet,3282,5.373,0.473
+By changed lines,CoreOS,4,Godeps/LICENSES,3008,4.924,0.433
+By changed lines,CoreOS,4,pkg/kubelet/rkt,2703,4.425,0.389
+By changed lines,CoreOS,4,pkg/storage,2465,4.035,0.355
+By changed lines,CoreOS,4,plugin,2358,3.86,0.34
+By changed lines,CoreOS,4,plugin/pkg,2352,3.85,0.339
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/pkg,2268,3.713,0.327
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/storage,2204,3.608,0.318
+By changed lines,CoreOS,4,pkg/client,2074,3.395,0.299
+All By changed lines,Huawei,5,"",19259,2.775,2.775
+By changed lines,Huawei,5,federation,10169,52.801,1.465
+By changed lines,Huawei,5,federation/pkg,4034,20.946,0.581
+By changed lines,Huawei,5,federation/pkg/federated-controller,3568,18.526,0.514
+By changed lines,Huawei,5,federation/pkg/federated-controller/cluster,3359,17.441,0.484
+By changed lines,Huawei,5,plugin,3340,17.343,0.481
+By changed lines,Huawei,5,plugin/pkg,3335,17.317,0.48
+By changed lines,Huawei,5,pkg,3276,17.01,0.472
+By changed lines,Huawei,5,plugin/pkg/scheduler,2997,15.562,0.432
+By changed lines,Huawei,5,plugin/pkg/scheduler/algorithm,2770,14.383,0.399
+By changed lines,Huawei,5,federation/pkg/federated-controller/cluster/clustercontroller_test.go,2360,12.254,0.34
+By changed lines,Huawei,5,federation/apis,2179,11.314,0.314
+By changed lines,Huawei,5,pkg/api,2068,10.738,0.298
+By changed lines,Huawei,5,federation/cmd,2026,10.52,0.292
+By changed lines,Huawei,5,test,1875,9.736,0.27
+By changed lines,Huawei,5,federation/apis/federation,1805,9.372,0.26
+By changed lines,Huawei,5,federation/cmd/federated-apiserver,1675,8.697,0.241
+By changed lines,Huawei,5,federation/cmd/federated-apiserver/app,1614,8.38,0.233
+By changed lines,Huawei,5,plugin/pkg/scheduler/algorithm/predicates,1440,7.477,0.207
+By changed lines,Huawei,5,plugin/pkg/scheduler/algorithm/priorities,1329,6.901,0.191
+By changed lines,Huawei,5,federation/client,1327,6.89,0.191
+By changed lines,Huawei,5,federation/client/clientset_generated,1292,6.709,0.186
+By changed lines,Huawei,5,plugin/pkg/scheduler/algorithm/predicates/predicates_test.go,1075,5.582,0.155
+By changed lines,Huawei,5,pkg/kubectl,973,5.052,0.14
+By changed lines,Huawei,5,test/e2e_node,965,5.011,0.139
+By changed lines,Huawei,5,pkg/api/validation,910,4.725,0.131
+All By changed lines,Apache,6,"",8139,1.173,1.173
+By changed lines,Apache,6,test,8020,98.538,1.155
+By changed lines,Apache,6,test/e2e,7992,98.194,1.151
+By changed lines,Apache,6,test/e2e/generated/bindata.go,6992,85.907,1.007
+By changed lines,Apache,6,test/e2e/framework,322,3.956,0.046
+By changed lines,Apache,6,test/e2e/framework/framework.go,250,3.072,0.036
+By changed lines,Apache,6,test/e2e/networking_perf.go,160,1.966,0.023
+By changed lines,Apache,6,test/e2e/kubectl.go,155,1.904,0.022
+By changed lines,Apache,6,test/e2e/util_iperf.go,105,1.29,0.015
+By changed lines,Apache,6,test/e2e/examples.go,86,1.057,0.012
+All By changed lines,IBM,7,"",6872,0.99,0.99
+By changed lines,IBM,7,docs,6650,96.769,0.958
+By changed lines,IBM,7,docs/design,3820,55.588,0.55
+By changed lines,IBM,7,docs/devel,2829,41.167,0.408
+By changed lines,IBM,7,docs/devel/api-conventions.md,831,12.093,0.12
+By changed lines,IBM,7,docs/design/podaffinity.md,395,5.748,0.057
+By changed lines,IBM,7,docs/devel/e2e-tests.md,280,4.075,0.04
+By changed lines,IBM,7,docs/devel/api_changes.md,265,3.856,0.038
+By changed lines,IBM,7,docs/design/indexed-job.md,229,3.332,0.033
+By changed lines,IBM,7,docs/design/secrets.md,223,3.245,0.032
+By changed lines,IBM,7,docs/devel/developer-guides/vagrant.md,219,3.187,0.032
+By changed lines,IBM,7,docs/design/access.md,203,2.954,0.029
+By changed lines,IBM,7,docs/design/resources.md,192,2.794,0.028
+By changed lines,IBM,7,docs/devel/kubectl-conventions.md,190,2.765,0.027
+By changed lines,IBM,7,docs/design/taint-toleration-dedicated.md,161,2.343,0.023
+By changed lines,IBM,7,docs/devel/mesos-style.md,159,2.314,0.023
+By changed lines,IBM,7,docs/design/expansion.md,154,2.241,0.022
+By changed lines,IBM,7,docs/design/enhance-pluggable-policy.md,150,2.183,0.022
+By changed lines,IBM,7,docs/design/security.md,149,2.168,0.021
+By changed lines,IBM,7,docs/devel/kubemark-guide.md,130,1.892,0.019
+By changed lines,IBM,7,docs/design/service_accounts.md,125,1.819,0.018
+By changed lines,IBM,7,docs/design/daemon.md,117,1.703,0.017
+By changed lines,IBM,7,docs/devel/on-call-build-cop.md,116,1.688,0.017
+By changed lines,IBM,7,docs/design/versioning.md,106,1.542,0.015
+By changed lines,IBM,7,docs/design/namespaces.md,105,1.528,0.015
+All By changed lines,CERN,8,"",6367,0.917,0.917
+By changed lines,CERN,8,Godeps,6367,100.0,0.917
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud,6365,99.969,0.917
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack,4131,64.881,0.595
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1,2331,36.611,0.336
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace,1971,30.956,0.284
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1,1926,30.25,0.277
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/orchestration/v1,1100,17.277,0.158
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/orchestration/v1/stacks,929,14.591,0.134
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/instances,805,12.643,0.116
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/configurations,683,10.727,0.098
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/instances,646,10.146,0.093
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2,457,7.178,0.066
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/users,440,6.911,0.063
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/backups,370,5.811,0.053
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2/extensions,360,5.654,0.052
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/instances/fixtures.go,340,5.34,0.049
+By changed lines,CERN,8,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/datastores,292,4.586,0.042
+All By changed lines,Canonical,9,"",4094,0.59,0.59
+By changed lines,Canonical,9,cluster,4056,99.072,0.584
+By changed lines,Canonical,9,cluster/juju,4055,99.047,0.584
+By changed lines,Canonical,9,cluster/juju/charms/trusty,2643,64.558,0.381
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master,1550,37.86,0.223
+By changed lines,Canonical,9,cluster/juju/layers/kubernetes,1246,30.435,0.18
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes,1092,26.673,0.157
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/hooks,620,15.144,0.089
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes/hooks,475,11.602,0.068
+By changed lines,Canonical,9,cluster/juju/layers/kubernetes/reactive/k8s.py,337,8.232,0.049
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/hooks/hooks.py,326,7.963,0.047
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes/icon.svg,270,6.595,0.039
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/icon.svg,270,6.595,0.039
+By changed lines,Canonical,9,cluster/juju/layers/kubernetes/icon.svg,270,6.595,0.039
+By changed lines,Canonical,9,cluster/juju/layers/kubernetes/templates,252,6.155,0.036
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/unit_tests,250,6.106,0.036
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes/hooks/hooks.py,244,5.96,0.035
+By changed lines,Canonical,9,cluster/juju/layers/kubernetes/files/guestbook-example,232,5.667,0.033
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/unit_tests/kubernetes_installer_test.py,134,3.273,0.019
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/README.md,126,3.078,0.018
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes/README.md,122,2.98,0.018
+By changed lines,Canonical,9,cluster/juju/charms/trusty/kubernetes-master/hooks/install.py,119,2.907,0.017
+All By changed lines,Spec Deas HR Consulting,10,"",4045,0.583,0.583
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl,3716,91.867,0.535
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_run.yaml,229,5.661,0.033
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_expose.yaml,184,4.549,0.027
+By changed lines,Spec Deas HR Consulting,10,cmd/genyaml/gen_kubectl_yaml.go,169,4.178,0.024
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_rolling-update.yaml,164,4.054,0.024
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_get.yaml,163,4.03,0.023
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_annotate.yaml,151,3.733,0.022
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_label.yaml,148,3.659,0.021
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_autoscale.yaml,144,3.56,0.021
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_convert.yaml,134,3.313,0.019
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_delete.yaml,132,3.263,0.019
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_replace.yaml,131,3.239,0.019
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_proxy.yaml,131,3.239,0.019
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_edit.yaml,123,3.041,0.018
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_scale.yaml,121,2.991,0.017
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_stop.yaml,119,2.942,0.017
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_logs.yaml,117,2.892,0.017
+By changed lines,Spec Deas HR Consulting,10,docs/yaml/kubectl/kubectl_describe.yaml,116,2.868,0.017
+By changed lines,Spec Deas HR Consulting,10,Godeps,116,2.868,0.017
+By changed lines,Spec Deas HR Consulting,10,Godeps/_workspace/src/gopkg.in/yaml.v2,115,2.843,0.017
+All By changed lines,eBay,11,"",3434,0.495,0.495
+By changed lines,eBay,11,federation,2551,74.287,0.368
+By changed lines,eBay,11,federation/pkg,2464,71.753,0.355
+By changed lines,eBay,11,federation/pkg/federation-controller,2461,71.666,0.355
+By changed lines,eBay,11,federation/pkg/federation-controller/service,2231,64.968,0.321
+By changed lines,eBay,11,federation/pkg/federation-controller/service/servicecontroller.go,957,27.868,0.138
+By changed lines,eBay,11,pkg,576,16.773,0.083
+By changed lines,eBay,11,federation/pkg/federation-controller/service/service_helper.go,289,8.416,0.042
+By changed lines,eBay,11,federation/pkg/federation-controller/service/cluster_helper.go,233,6.785,0.034
+By changed lines,eBay,11,federation/pkg/federation-controller/service/endpoint_helper.go,213,6.203,0.031
+By changed lines,eBay,11,federation/pkg/federation-controller/service/service_helper_test.go,193,5.62,0.028
+By changed lines,eBay,11,Godeps,180,5.242,0.026
+By changed lines,eBay,11,Godeps/_workspace/src/github.com/emicklei/go-restful,178,5.183,0.026
+By changed lines,eBay,11,federation/pkg/federation-controller/service/endpoint_helper_test.go,154,4.485,0.022
+By changed lines,eBay,11,pkg/apiserver,135,3.931,0.019
+By changed lines,eBay,11,federation/pkg/federation-controller/util/cluster_util.go,116,3.378,0.017
+By changed lines,eBay,11,federation/pkg/federation-controller/cluster,114,3.32,0.016
+By changed lines,eBay,11,federation/pkg/federation-controller/cluster/cluster_client.go,107,3.116,0.015
+By changed lines,eBay,11,pkg/kubectl,106,3.087,0.015
+By changed lines,eBay,11,pkg/apiserver/apiserver_test.go,102,2.97,0.015
+By changed lines,eBay,11,federation/pkg/federation-controller/service/dns.go,94,2.737,0.014
+All By changed lines,Microsoft,12,"",3055,0.44,0.44
+By changed lines,Microsoft,12,pkg,1183,38.723,0.17
+By changed lines,Microsoft,12,api/swagger-spec/extensions_v1beta1.json,832,27.234,0.12
+By changed lines,Microsoft,12,pkg/kubectl,747,24.452,0.108
+By changed lines,Microsoft,12,pkg/kubectl/cmd,652,21.342,0.094
+By changed lines,Microsoft,12,docs,476,15.581,0.069
+By changed lines,Microsoft,12,test,292,9.558,0.042
+By changed lines,Microsoft,12,pkg/registry/thirdpartyresourcedata,261,8.543,0.038
+By changed lines,Microsoft,12,docs/man/man1,254,8.314,0.037
+By changed lines,Microsoft,12,pkg/kubectl/cmd/clusterinfo_dump.go,243,7.954,0.035
+By changed lines,Microsoft,12,pkg/kubectl/cmd/util,233,7.627,0.034
+By changed lines,Microsoft,12,pkg/registry/thirdpartyresourcedata/codec.go,194,6.35,0.028
+By changed lines,Microsoft,12,docs/user-guide/kubectl,191,6.252,0.028
+By changed lines,Microsoft,12,test/e2e/third-party.go,182,5.957,0.026
+By changed lines,Microsoft,12,docs/man/man1/kubectl-cluster-info-dump.1,166,5.434,0.024
+By changed lines,Microsoft,12,pkg/kubectl/cmd/util/factory.go,116,3.797,0.017
+By changed lines,Microsoft,12,docs/user-guide/kubectl/kubectl_cluster-info_dump.md,112,3.666,0.016
+By changed lines,Microsoft,12,test/integration/main_test.go,110,3.601,0.016
+By changed lines,Microsoft,12,hack,106,3.47,0.015
+All By changed lines,Rook,13,"",2794,0.403,0.403
+By changed lines,Rook,13,cluster,1438,51.467,0.207
+By changed lines,Rook,13,cluster/images,1139,40.766,0.164
+By changed lines,Rook,13,cluster/images/hyperkube,900,32.212,0.13
+By changed lines,Rook,13,docs,798,28.561,0.115
+By changed lines,Rook,13,docs/getting-started-guides,775,27.738,0.112
+By changed lines,Rook,13,docs/getting-started-guides/docker-multinode,774,27.702,0.112
+By changed lines,Rook,13,cluster/images/hyperkube/addons,516,18.468,0.074
+By changed lines,Rook,13,cluster/addons,280,10.021,0.04
+By changed lines,Rook,13,cluster/images/hyperkube/addons/dns-rc.yaml,254,9.091,0.037
+By changed lines,Rook,13,docs/getting-started-guides/docker-multinode/master.sh,243,8.697,0.035
+By changed lines,Rook,13,build,233,8.339,0.034
+By changed lines,Rook,13,docs/getting-started-guides/docker-multinode/worker.sh,231,8.268,0.033
+By changed lines,Rook,13,cluster/addons/dns,170,6.084,0.024
+By changed lines,Rook,13,test,148,5.297,0.021
+By changed lines,Rook,13,docs/getting-started-guides/docker-multinode/skydns.yaml.in,136,4.868,0.02
+By changed lines,Rook,13,test/e2e,128,4.581,0.018
+By changed lines,Rook,13,cluster/images/etcd,121,4.331,0.017
+By changed lines,Rook,13,cluster/images/flannel,118,4.223,0.017
+By changed lines,Rook,13,cluster/addons/addon-manager,102,3.651,0.015
+By changed lines,Rook,13,cluster/images/hyperkube/addons/dashboard-rc.yaml,102,3.651,0.015
+By changed lines,Rook,13,cluster/addons/dns/kube2sky,87,3.114,0.013
+By changed lines,Rook,13,pkg,87,3.114,0.013
+By changed lines,Rook,13,cluster/images/hyperkube/static-pods,84,3.006,0.012
+By changed lines,Rook,13,cluster/addons/dns/skydns,81,2.899,0.012
+By changed lines,Rook,13,build/debian-iptables,77,2.756,0.011
+All By changed lines,Tigera,14,"",2094,0.302,0.302
+By changed lines,Tigera,14,pkg,1748,83.477,0.252
+By changed lines,Tigera,14,pkg/apis/extensions,1061,50.669,0.153
+By changed lines,Tigera,14,pkg/apis/extensions/v1beta1,544,25.979,0.078
+By changed lines,Tigera,14,pkg/registry,447,21.347,0.064
+By changed lines,Tigera,14,pkg/registry/networkpolicy,445,21.251,0.064
+By changed lines,Tigera,14,docs/proposals/network-policy.md,333,15.903,0.048
+By changed lines,Tigera,14,pkg/apis/extensions/v1beta1/conversion_generated.go,304,14.518,0.044
+By changed lines,Tigera,14,pkg/apis/extensions/validation,297,14.183,0.043
+By changed lines,Tigera,14,pkg/registry/networkpolicy/etcd,254,12.13,0.037
+By changed lines,Tigera,14,pkg/apis/extensions/validation/validation_test.go,238,11.366,0.034
+By changed lines,Tigera,14,pkg/client/unversioned,176,8.405,0.025
+By changed lines,Tigera,14,pkg/registry/networkpolicy/etcd/etcd_test.go,174,8.309,0.025
+By changed lines,Tigera,14,pkg/apis/extensions/v1beta1/deep_copy_generated.go,130,6.208,0.019
+By changed lines,Tigera,14,pkg/apis/extensions/deep_copy_generated.go,130,6.208,0.019
+By changed lines,Tigera,14,pkg/registry/networkpolicy/strategy.go,112,5.349,0.016
+By changed lines,Tigera,14,pkg/client/unversioned/network_policys.go,92,4.394,0.013
+By changed lines,Tigera,14,pkg/apis/extensions/v1beta1/types.go,91,4.346,0.013
+By changed lines,Tigera,14,pkg/apis/extensions/types.go,86,4.107,0.012
+By changed lines,Tigera,14,pkg/registry/networkpolicy/etcd/etcd.go,80,3.82,0.012
+By changed lines,Tigera,14,pkg/client/unversioned/testclient,79,3.773,0.011
+By changed lines,Tigera,14,pkg/client/unversioned/testclient/fake_network_policies.go,75,3.582,0.011
+All By changed lines,VMware,15,"",2021,0.291,0.291
+By changed lines,VMware,15,cluster,1895,93.765,0.273
+By changed lines,VMware,15,cluster/photon-controller,1843,91.192,0.266
+By changed lines,VMware,15,cluster/photon-controller/util.sh,1127,55.764,0.162
+By changed lines,VMware,15,cluster/photon-controller/templates,293,14.498,0.042
+By changed lines,VMware,15,cluster/photon-controller/setup-prereq.sh,239,11.826,0.034
+By changed lines,VMware,15,cluster/photon-controller/templates/create-dynamic-salt-files.sh,133,6.581,0.019
+By changed lines,VMware,15,pkg,120,5.938,0.017
+By changed lines,VMware,15,cluster/photon-controller/config-default.sh,92,4.552,0.013
+By changed lines,VMware,15,pkg/api/pod/util_test.go,83,4.107,0.012
+By changed lines,VMware,15,cluster/photon-controller/config-common.sh,72,3.563,0.01
+By changed lines,VMware,15,cluster/photon-controller/templates/salt-master.sh,57,2.82,0.008
+By changed lines,VMware,15,cluster/photon-controller/templates/salt-minion.sh,51,2.524,0.007
+By changed lines,VMware,15,pkg/kubectl/namespace_test.go,37,1.831,0.005
+By changed lines,VMware,15,cluster/photon-controller/templates/install-release.sh,26,1.286,0.004
+By changed lines,VMware,15,cluster/vsphere,26,1.286,0.004
+By changed lines,VMware,15,cluster/photon-controller/templates/hostname.sh,22,1.089,0.003
+By changed lines,VMware,15,cluster/saltbase/salt,21,1.039,0.003
+All By changed lines,Self,16,"",227,0.033,0.033
+By changed lines,Self,16,build/pause,89,39.207,0.013
+By changed lines,Self,16,pkg,74,32.599,0.011
+By changed lines,Self,16,build/pause/Makefile,66,29.075,0.01
+By changed lines,Self,16,test,39,17.181,0.006
+By changed lines,Self,16,pkg/client/unversioned/clientcmd,33,14.537,0.005
+By changed lines,Self,16,test/e2e,30,13.216,0.004
+By changed lines,Self,16,pkg/client/unversioned/clientcmd/client_config_test.go,25,11.013,0.004
+By changed lines,Self,16,pkg/kubelet,21,9.251,0.003
+By changed lines,Self,16,pkg/api/endpoints/util_test.go,20,8.811,0.003
+By changed lines,Self,16,build/pause/pause.c,18,7.93,0.003
+By changed lines,Self,16,pkg/kubelet/dockertools/manager.go,14,6.167,0.002
+By changed lines,Self,16,test/e2e/scheduler_predicates.go,12,5.286,0.002
+By changed lines,Self,16,test/integration,8,3.524,0.001
+By changed lines,Self,16,pkg/client/unversioned/clientcmd/client_config.go,8,3.524,0.001
+By changed lines,Self,16,Godeps/Godeps.json,8,3.524,0.001
+By changed lines,Self,16,pkg/kubelet/rkt/rkt.go,7,3.084,0.001
+By changed lines,Self,16,cmd,7,3.084,0.001
+All By changed lines,NotFound,17,"",7,0.001,0.001
+By changed lines,NotFound,17,cluster/images/hyperkube/Dockerfile,4,57.143,0.001
+By changed lines,NotFound,17,Vagrantfile,3,42.857,0.0
+All By number of commits to file,All,0,"",15393,100.0,100.0
+All By number of commits to file,Google,1,"",9315,60.515,60.515
+By number of commits to file,Google,1,docs,2957,31.744,19.21
+By number of commits to file,Google,1,pkg,2785,29.898,18.093
+By number of commits to file,Google,1,docs/user-guide,1173,12.593,7.62
+By number of commits to file,Google,1,pkg/client,919,9.866,5.97
+By number of commits to file,Google,1,test,712,7.644,4.625
+By number of commits to file,Google,1,docs/user-guide/kubectl,680,7.3,4.418
+By number of commits to file,Google,1,cluster,659,7.075,4.281
+By number of commits to file,Google,1,hack,583,6.259,3.787
+By number of commits to file,Google,1,pkg/client/clientset_generated,498,5.346,3.235
+By number of commits to file,Google,1,test/e2e,477,5.121,3.099
+By number of commits to file,Google,1,examples,447,4.799,2.904
+By number of commits to file,Google,1,docs/devel,348,3.736,2.261
+By number of commits to file,Google,1,docs/proposals,335,3.596,2.176
+By number of commits to file,Google,1,pkg/kubelet,319,3.425,2.072
+By number of commits to file,Google,1,Godeps,310,3.328,2.014
+By number of commits to file,Google,1,docs/design,301,3.231,1.955
+By number of commits to file,Google,1,docs/admin,298,3.199,1.936
+By number of commits to file,Google,1,cluster/gce,296,3.178,1.923
+By number of commits to file,Google,1,pkg/client/typed,283,3.038,1.838
+By number of commits to file,Google,1,cmd,268,2.877,1.741
+By number of commits to file,Google,1,pkg/client/typed/generated,261,2.802,1.696
+By number of commits to file,Google,1,hack/jenkins,260,2.791,1.689
+By number of commits to file,Google,1,Godeps/_workspace,245,2.63,1.592
+By number of commits to file,Google,1,Godeps/_workspace/src,244,2.619,1.585
+By number of commits to file,Google,1,federation,242,2.598,1.572
+All By number of commits to file,Red Hat,2,"",2417,15.702,15.702
+By number of commits to file,Red Hat,2,pkg,1633,67.563,10.609
+By number of commits to file,Red Hat,2,pkg/kubelet,234,9.681,1.52
+By number of commits to file,Red Hat,2,pkg/api,194,8.026,1.26
+By number of commits to file,Red Hat,2,docs,187,7.737,1.215
+By number of commits to file,Red Hat,2,pkg/controller,165,6.827,1.072
+By number of commits to file,Red Hat,2,pkg/apis,151,6.247,0.981
+By number of commits to file,Red Hat,2,pkg/registry,150,6.206,0.974
+By number of commits to file,Red Hat,2,pkg/kubectl,142,5.875,0.922
+By number of commits to file,Red Hat,2,test,130,5.379,0.845
+By number of commits to file,Red Hat,2,pkg/client,117,4.841,0.76
+By number of commits to file,Red Hat,2,pkg/controller/persistentvolume,116,4.799,0.754
+By number of commits to file,Red Hat,2,pkg/runtime,105,4.344,0.682
+By number of commits to file,Red Hat,2,plugin,101,4.179,0.656
+By number of commits to file,Red Hat,2,plugin/pkg,99,4.096,0.643
+By number of commits to file,Red Hat,2,Godeps,92,3.806,0.598
+By number of commits to file,Red Hat,2,pkg/volume,80,3.31,0.52
+By number of commits to file,Red Hat,2,pkg/util,77,3.186,0.5
+By number of commits to file,Red Hat,2,Godeps/_workspace/src/github.com,77,3.186,0.5
+By number of commits to file,Red Hat,2,docs/user-guide,77,3.186,0.5
+By number of commits to file,Red Hat,2,test/e2e,77,3.186,0.5
+By number of commits to file,Red Hat,2,Godeps/_workspace,77,3.186,0.5
+By number of commits to file,Red Hat,2,plugin/pkg/admission,75,3.103,0.487
+By number of commits to file,Red Hat,2,pkg/kubectl/cmd,74,3.062,0.481
+By number of commits to file,Red Hat,2,cmd,73,3.02,0.474
+All By number of commits to file,CoreOS,3,"",896,5.821,5.821
+By number of commits to file,CoreOS,3,Godeps,358,39.955,2.326
+By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com,336,37.5,2.183
+By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos,330,36.83,2.144
+By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd,310,34.598,2.014
+By number of commits to file,CoreOS,3,pkg,295,32.924,1.916
+By number of commits to file,CoreOS,3,pkg/kubelet,130,14.509,0.845
+By number of commits to file,CoreOS,3,pkg/kubelet/rkt,85,9.487,0.552
+By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver,79,8.817,0.513
+By number of commits to file,CoreOS,3,cluster,63,7.031,0.409
+By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/pkg,57,6.362,0.37
+By number of commits to file,CoreOS,3,cluster/gce,53,5.915,0.344
+By number of commits to file,CoreOS,3,cluster/gce/coreos,50,5.58,0.325
+By number of commits to file,CoreOS,3,pkg/storage,47,5.246,0.305
+By number of commits to file,CoreOS,3,plugin,46,5.134,0.299
+By number of commits to file,CoreOS,3,plugin/pkg,45,5.022,0.292
+By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/clientv3,40,4.464,0.26
+By number of commits to file,CoreOS,3,pkg/kubelet/rkt/rkt.go,35,3.906,0.227
+By number of commits to file,CoreOS,3,pkg/client,33,3.683,0.214
+By number of commits to file,CoreOS,3,pkg/apis,33,3.683,0.214
+By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/storage,32,3.571,0.208
+By number of commits to file,CoreOS,3,cmd,29,3.237,0.188
+By number of commits to file,CoreOS,3,pkg/apis/rbac,29,3.237,0.188
+By number of commits to file,CoreOS,3,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver/api,28,3.125,0.182
+All By number of commits to file,HP,4,"",399,2.592,2.592
+By number of commits to file,HP,4,Godeps,351,87.97,2.28
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi,346,86.717,2.248
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc,200,50.125,1.299
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/vim25,45,11.278,0.292
+By number of commits to file,HP,4,pkg,42,10.526,0.273
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/object,40,10.025,0.26
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/host,31,7.769,0.201
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/test,28,7.018,0.182
+By number of commits to file,HP,4,pkg/cloudprovider/providers,28,7.018,0.182
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/vm,27,6.767,0.175
+By number of commits to file,HP,4,pkg/cloudprovider/providers/vsphere,21,5.263,0.136
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/flags,19,4.762,0.123
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/device,16,4.01,0.104
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/vm/guest,15,3.759,0.097
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/scripts,13,3.258,0.084
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/mo,12,3.008,0.078
+By number of commits to file,HP,4,pkg/cloudprovider/providers/vsphere/vsphere.go,11,2.757,0.071
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/datastore,10,2.506,0.065
+By number of commits to file,HP,4,pkg/cloudprovider/providers/vsphere/vsphere_test.go,9,2.256,0.058
+By number of commits to file,HP,4,Godeps/_workspace/src/github.com/vmware/govmomi/govc/host/esxcli,9,2.256,0.058
+All By number of commits to file,Huawei,5,"",248,1.611,1.611
+By number of commits to file,Huawei,5,federation,119,47.984,0.773
+By number of commits to file,Huawei,5,pkg,50,20.161,0.325
+By number of commits to file,Huawei,5,federation/apis,37,14.919,0.24
+By number of commits to file,Huawei,5,federation/apis/federation,32,12.903,0.208
+By number of commits to file,Huawei,5,plugin,31,12.5,0.201
+By number of commits to file,Huawei,5,federation/cmd,29,11.694,0.188
+By number of commits to file,Huawei,5,plugin/pkg,29,11.694,0.188
+By number of commits to file,Huawei,5,plugin/pkg/scheduler,26,10.484,0.169
+By number of commits to file,Huawei,5,federation/client,25,10.081,0.162
+By number of commits to file,Huawei,5,federation/client/clientset_generated,24,9.677,0.156
+By number of commits to file,Huawei,5,pkg/api,23,9.274,0.149
+By number of commits to file,Huawei,5,test,22,8.871,0.143
+By number of commits to file,Huawei,5,federation/cmd/federated-apiserver,20,8.065,0.13
+By number of commits to file,Huawei,5,federation/pkg,18,7.258,0.117
+By number of commits to file,Huawei,5,federation/apis/federation/v1alpha1,17,6.855,0.11
+By number of commits to file,Huawei,5,federation/cmd/federated-apiserver/app,17,6.855,0.11
+By number of commits to file,Huawei,5,plugin/pkg/scheduler/algorithm,16,6.452,0.104
+By number of commits to file,Huawei,5,federation/client/clientset_generated/federation_release_1_3,12,4.839,0.078
+By number of commits to file,Huawei,5,pkg/kubectl,12,4.839,0.078
+By number of commits to file,Huawei,5,federation/client/clientset_generated/federation_internalclientset,12,4.839,0.078
+By number of commits to file,Huawei,5,federation/pkg/federated-controller,12,4.839,0.078
+By number of commits to file,Huawei,5,test/e2e_node,12,4.839,0.078
+By number of commits to file,Huawei,5,plugin/pkg/scheduler/algorithm/predicates,10,4.032,0.065
+By number of commits to file,Huawei,5,federation/registry/cluster,10,4.032,0.065
+All By number of commits to file,Microsoft,6,"",175,1.137,1.137
+By number of commits to file,Microsoft,6,docs,82,46.857,0.533
+By number of commits to file,Microsoft,6,pkg,75,42.857,0.487
+By number of commits to file,Microsoft,6,docs/user-guide/kubectl,54,30.857,0.351
+By number of commits to file,Microsoft,6,pkg/kubectl,52,29.714,0.338
+By number of commits to file,Microsoft,6,pkg/kubectl/cmd,46,26.286,0.299
+By number of commits to file,Microsoft,6,docs/man/man1,25,14.286,0.162
+By number of commits to file,Microsoft,6,pkg/master,9,5.143,0.058
+By number of commits to file,Microsoft,6,hack,6,3.429,0.039
+By number of commits to file,Microsoft,6,pkg/apis/extensions,6,3.429,0.039
+By number of commits to file,Microsoft,6,pkg/kubectl/cmd/util,5,2.857,0.032
+By number of commits to file,Microsoft,6,pkg/kubectl/cmd/rollout,5,2.857,0.032
+By number of commits to file,Microsoft,6,pkg/master/master_test.go,5,2.857,0.032
+By number of commits to file,Microsoft,6,cluster,4,2.286,0.026
+By number of commits to file,Microsoft,6,pkg/registry,4,2.286,0.026
+By number of commits to file,Microsoft,6,pkg/master/master.go,4,2.286,0.026
+By number of commits to file,Microsoft,6,pkg/registry/thirdpartyresourcedata,4,2.286,0.026
+By number of commits to file,Microsoft,6,pkg/apis/extensions/v1beta1,4,2.286,0.026
+By number of commits to file,Microsoft,6,pkg/kubectl/cmd/clusterinfo_dump.go,4,2.286,0.026
+By number of commits to file,Microsoft,6,hack/verify-flags,3,1.714,0.019
+By number of commits to file,Microsoft,6,test,3,1.714,0.019
+By number of commits to file,Microsoft,6,docs/man/man1/kubectl-cluster-info.1,3,1.714,0.019
+By number of commits to file,Microsoft,6,docs/user-guide/kubectl/kubectl_cluster-info.md,3,1.714,0.019
+All By number of commits to file,Rook,7,"",170,1.104,1.104
+By number of commits to file,Rook,7,cluster,73,42.941,0.474
+By number of commits to file,Rook,7,cluster/images,47,27.647,0.305
+By number of commits to file,Rook,7,cluster/images/hyperkube,37,21.765,0.24
+By number of commits to file,Rook,7,test,24,14.118,0.156
+By number of commits to file,Rook,7,pkg,23,13.529,0.149
+By number of commits to file,Rook,7,test/e2e,19,11.176,0.123
+By number of commits to file,Rook,7,cluster/addons,19,11.176,0.123
+By number of commits to file,Rook,7,docs,18,10.588,0.117
+By number of commits to file,Rook,7,build,17,10.0,0.11
+By number of commits to file,Rook,7,pkg/kubelet,12,7.059,0.078
+By number of commits to file,Rook,7,docs/getting-started-guides,9,5.294,0.058
+By number of commits to file,Rook,7,cluster/images/hyperkube/addons,9,5.294,0.058
+By number of commits to file,Rook,7,cluster/addons/dns,9,5.294,0.058
+By number of commits to file,Rook,7,docs/getting-started-guides/docker-multinode,8,4.706,0.052
+By number of commits to file,Rook,7,build/build-image/cross,6,3.529,0.039
+By number of commits to file,Rook,7,cluster/saltbase/salt/kube-dns,6,3.529,0.039
+By number of commits to file,Rook,7,cluster/images/hyperkube/Dockerfile,6,3.529,0.039
+By number of commits to file,Rook,7,cluster/images/hyperkube/Makefile,6,3.529,0.039
+By number of commits to file,Rook,7,cluster/images/hyperkube/static-pods,6,3.529,0.039
+By number of commits to file,Rook,7,pkg/api,6,3.529,0.039
+By number of commits to file,Rook,7,build/build-image,6,3.529,0.039
+By number of commits to file,Rook,7,cluster/saltbase/salt,6,3.529,0.039
+By number of commits to file,Rook,7,cluster/addons/addon-manager,6,3.529,0.039
+By number of commits to file,Rook,7,cluster/images/etcd,5,2.941,0.032
+All By number of commits to file,Docker,8,"",164,1.065,1.065
+By number of commits to file,Docker,8,pkg,136,82.927,0.884
+By number of commits to file,Docker,8,pkg/kubelet,59,35.976,0.383
+By number of commits to file,Docker,8,pkg/kubelet/dockertools,36,21.951,0.234
+By number of commits to file,Docker,8,pkg/util,21,12.805,0.136
+By number of commits to file,Docker,8,cmd,15,9.146,0.097
+By number of commits to file,Docker,8,pkg/kubectl,11,6.707,0.071
+By number of commits to file,Docker,8,pkg/kubectl/cmd,10,6.098,0.065
+By number of commits to file,Docker,8,pkg/registry,9,5.488,0.058
+By number of commits to file,Docker,8,pkg/client,9,5.488,0.058
+By number of commits to file,Docker,8,pkg/client/restclient,8,4.878,0.052
+By number of commits to file,Docker,8,pkg/kubelet/container,8,4.878,0.052
+By number of commits to file,Docker,8,pkg/kubelet/dockertools/manager.go,7,4.268,0.045
+By number of commits to file,Docker,8,contrib,6,3.659,0.039
+By number of commits to file,Docker,8,pkg/controller/node,5,3.049,0.032
+By number of commits to file,Docker,8,pkg/kubectl/cmd/config,5,3.049,0.032
+By number of commits to file,Docker,8,pkg/controller,5,3.049,0.032
+By number of commits to file,Docker,8,plugin,5,3.049,0.032
+By number of commits to file,Docker,8,contrib/mesos,5,3.049,0.032
+By number of commits to file,Docker,8,pkg/runtime,5,3.049,0.032
+By number of commits to file,Docker,8,pkg/api,5,3.049,0.032
+By number of commits to file,Docker,8,pkg/kubelet/dockertools/manager_test.go,5,3.049,0.032
+By number of commits to file,Docker,8,pkg/util/flowcontrol,4,2.439,0.026
+By number of commits to file,Docker,8,plugin/pkg,4,2.439,0.026
+By number of commits to file,Docker,8,cmd/kubelet,4,2.439,0.026
+By number of commits to file,Docker,8,pkg/kubelet/util/cache,4,2.439,0.026
+All By number of commits to file,eBay,9,"",142,0.922,0.922
+By number of commits to file,eBay,9,pkg,51,35.915,0.331
+By number of commits to file,eBay,9,federation,46,32.394,0.299
+By number of commits to file,eBay,9,federation/pkg,37,26.056,0.24
+By number of commits to file,eBay,9,federation/pkg/federation-controller,35,24.648,0.227
+By number of commits to file,eBay,9,federation/pkg/federation-controller/service,30,21.127,0.195
+By number of commits to file,eBay,9,test,15,10.563,0.097
+By number of commits to file,eBay,9,Godeps,14,9.859,0.091
+By number of commits to file,eBay,9,Godeps/_workspace/src/github.com/emicklei/go-restful,13,9.155,0.084
+By number of commits to file,eBay,9,test/integration,12,8.451,0.078
+By number of commits to file,eBay,9,pkg/client,10,7.042,0.065
+By number of commits to file,eBay,9,pkg/util,7,4.93,0.045
+By number of commits to file,eBay,9,federation/pkg/federation-controller/service/servicecontroller.go,7,4.93,0.045
+By number of commits to file,eBay,9,pkg/controller,6,4.225,0.039
+By number of commits to file,eBay,9,plugin/pkg,5,3.521,0.032
+By number of commits to file,eBay,9,federation/cmd/federation-controller-manager/app,5,3.521,0.032
+By number of commits to file,eBay,9,pkg/client/unversioned,5,3.521,0.032
+By number of commits to file,eBay,9,federation/cmd,5,3.521,0.032
+By number of commits to file,eBay,9,federation/pkg/federation-controller/service/dns.go,5,3.521,0.032
+By number of commits to file,eBay,9,pkg/kubectl,5,3.521,0.032
+By number of commits to file,eBay,9,pkg/apiserver,5,3.521,0.032
+All By number of commits to file,Apache,10,"",116,0.754,0.754
+By number of commits to file,Apache,10,test,109,93.966,0.708
+By number of commits to file,Apache,10,test/e2e,107,92.241,0.695
+By number of commits to file,Apache,10,test/e2e/framework,6,5.172,0.039
+By number of commits to file,Apache,10,hack,4,3.448,0.026
+By number of commits to file,Apache,10,test/e2e/kubectl.go,4,3.448,0.026
+By number of commits to file,Apache,10,test/e2e/example_k8petstore.go,3,2.586,0.019
+By number of commits to file,Apache,10,test/e2e/examples.go,3,2.586,0.019
+By number of commits to file,Apache,10,test/e2e/framework/framework.go,3,2.586,0.019
+By number of commits to file,Apache,10,test/e2e/pd.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/metrics_grabber_test.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/kubeproxy.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/load.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/volumes.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/daemon_set.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/density.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/service.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/networking.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/cluster_upgrade.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/kubelet.go,2,1.724,0.013
+By number of commits to file,Apache,10,docs/user-guide/liveness,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/nodeoutofdisk.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/networking_perf.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/framework/util.go,2,1.724,0.013
+By number of commits to file,Apache,10,test/e2e/proxy.go,2,1.724,0.013
+By number of commits to file,Apache,10,docs/user-guide,2,1.724,0.013
+All By number of commits to file,CERN,11,"",113,0.734,0.734
+By number of commits to file,CERN,11,Godeps,113,100.0,0.734
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud,112,99.115,0.728
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack,72,63.717,0.468
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1,30,26.549,0.195
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace,29,25.664,0.188
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1,27,23.894,0.175
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2,16,14.159,0.104
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2/extensions,12,10.619,0.078
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/orchestration/v1,12,10.619,0.078
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/orchestration/v1/stacks,6,5.31,0.039
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/users,6,5.31,0.039
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/instances,6,5.31,0.039
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/networking/v2,6,5.31,0.039
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/datastores,5,4.425,0.032
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/db/v1/backups,5,4.425,0.032
+By number of commits to file,CERN,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/db/v1/databases,5,4.425,0.032
+All By number of commits to file,IBM,12,"",99,0.643,0.643
+By number of commits to file,IBM,12,docs,66,66.667,0.429
+By number of commits to file,IBM,12,docs/design,39,39.394,0.253
+By number of commits to file,IBM,12,docs/devel,26,26.263,0.169
+By number of commits to file,IBM,12,examples,14,14.141,0.091
+By number of commits to file,IBM,12,examples/spark,12,12.121,0.078
+By number of commits to file,IBM,12,pkg,5,5.051,0.032
+By number of commits to file,IBM,12,examples/spark/spark-gluster,4,4.04,0.026
+By number of commits to file,IBM,12,build,4,4.04,0.026
+By number of commits to file,IBM,12,docs/devel/development.md,3,3.03,0.019
+By number of commits to file,IBM,12,contrib/mesos/pkg,3,3.03,0.019
+By number of commits to file,IBM,12,cluster,3,3.03,0.019
+By number of commits to file,IBM,12,hack,2,2.02,0.013
+By number of commits to file,IBM,12,cluster/vagrant,2,2.02,0.013
+By number of commits to file,IBM,12,pkg/kubectl,2,2.02,0.013
+By number of commits to file,IBM,12,docs/devel/kubectl-conventions.md,2,2.02,0.013
+By number of commits to file,IBM,12,build/common.sh,2,2.02,0.013
+By number of commits to file,IBM,12,build/README.md,2,2.02,0.013
+By number of commits to file,IBM,12,pkg/apiserver,2,2.02,0.013
+By number of commits to file,IBM,12,examples/spark/README.md,1,1.01,0.006
+By number of commits to file,IBM,12,examples/spark/spark-webui.yaml,1,1.01,0.006
+By number of commits to file,IBM,12,examples/spark/spark-master-controller.yaml,1,1.01,0.006
+By number of commits to file,IBM,12,examples/spark/zeppelin-controller.yaml,1,1.01,0.006
+By number of commits to file,IBM,12,examples/spark/namespace-spark-cluster.yaml,1,1.01,0.006
+All By number of commits to file,Rackspace,13,"",94,0.611,0.611
+By number of commits to file,Rackspace,13,pkg/kubectl,37,39.362,0.24
+By number of commits to file,Rackspace,13,docs,37,39.362,0.24
+By number of commits to file,Rackspace,13,pkg/kubectl/cmd,34,36.17,0.221
+By number of commits to file,Rackspace,13,docs/man/man1,19,20.213,0.123
+By number of commits to file,Rackspace,13,docs/user-guide/kubectl,18,19.149,0.117
+By number of commits to file,Rackspace,13,hack,17,18.085,0.11
+By number of commits to file,Rackspace,13,hack/testdata/recursive,12,12.766,0.078
+By number of commits to file,Rackspace,13,pkg/kubectl/cmd/rollout,8,8.511,0.052
+By number of commits to file,Rackspace,13,hack/test-cmd.sh,5,5.319,0.032
+By number of commits to file,Rackspace,13,pkg/kubectl/cmd/get.go,4,4.255,0.026
+By number of commits to file,Rackspace,13,hack/testdata/recursive/deployment,3,3.191,0.019
+By number of commits to file,Rackspace,13,hack/testdata/recursive/pod,3,3.191,0.019
+By number of commits to file,Rackspace,13,pkg/kubectl/resource,3,3.191,0.019
+By number of commits to file,Rackspace,13,hack/testdata/recursive/rc,3,3.191,0.019
+By number of commits to file,Rackspace,13,hack/testdata/recursive/pod-modify,3,3.191,0.019
+By number of commits to file,Rackspace,13,pkg/kubectl/cmd/rollout/rollout_resume.go,2,2.128,0.013
+By number of commits to file,Rackspace,13,pkg/kubectl/resource/builder.go,2,2.128,0.013
+By number of commits to file,Rackspace,13,pkg/kubectl/cmd/patch.go,2,2.128,0.013
+By number of commits to file,Rackspace,13,pkg/kubectl/cmd/scale.go,2,2.128,0.013
+By number of commits to file,Rackspace,13,pkg/kubectl/cmd/convert.go,2,2.128,0.013
+By number of commits to file,Rackspace,13,pkg/kubectl/cmd/expose.go,2,2.128,0.013
+All By number of commits to file,Canonical,14,"",93,0.604,0.604
+By number of commits to file,Canonical,14,cluster,91,97.849,0.591
+By number of commits to file,Canonical,14,cluster/juju,90,96.774,0.585
+By number of commits to file,Canonical,14,cluster/juju/charms/trusty,53,56.989,0.344
+By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes,30,32.258,0.195
+By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes-master,28,30.108,0.182
+By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes,24,25.806,0.156
+By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/files/guestbook-example,12,12.903,0.078
+By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes-master/hooks,10,10.753,0.065
+By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes/hooks,9,9.677,0.058
+By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/templates,5,5.376,0.032
+By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes-master/files,5,5.376,0.032
+By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes/files,3,3.226,0.019
+By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/actions/guestbook-example,3,3.226,0.019
+By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/README.md,3,3.226,0.019
+By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/files/guestbook-example/redis-master-controller.yaml,2,2.151,0.013
+By number of commits to file,Canonical,14,cluster/juju/identify-leaders.py,2,2.151,0.013
+By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes/unit_tests,2,2.151,0.013
+By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/templates/skydns-rc.yml,2,2.151,0.013
+By number of commits to file,Canonical,14,cluster/juju/layers/kubernetes/reactive/k8s.py,2,2.151,0.013
+By number of commits to file,Canonical,14,cluster/juju/bundles/local.yaml,2,2.151,0.013
+By number of commits to file,Canonical,14,cluster/juju/charms/trusty/kubernetes-master/unit_tests,2,2.151,0.013
+All By number of commits to file,Caicloud,15,"",78,0.507,0.507
+By number of commits to file,Caicloud,15,pkg,54,69.231,0.351
+By number of commits to file,Caicloud,15,pkg/controller,41,52.564,0.266
+By number of commits to file,Caicloud,15,pkg/controller/node,14,17.949,0.091
+By number of commits to file,Caicloud,15,cmd,10,12.821,0.065
+By number of commits to file,Caicloud,15,pkg/client/cache,7,8.974,0.045
+By number of commits to file,Caicloud,15,cmd/kube-controller-manager/app,6,7.692,0.039
+By number of commits to file,Caicloud,15,cluster,6,7.692,0.039
+By number of commits to file,Caicloud,15,pkg/controller/node/nodecontroller.go,5,6.41,0.032
+By number of commits to file,Caicloud,15,cmd/integration/integration.go,4,5.128,0.026
+By number of commits to file,Caicloud,15,pkg/controller/framework,4,5.128,0.026
+By number of commits to file,Caicloud,15,pkg/controller/replication,4,5.128,0.026
+By number of commits to file,Caicloud,15,cmd/integration,4,5.128,0.026
+By number of commits to file,Caicloud,15,cmd/kube-controller-manager/app/controllermanager.go,4,5.128,0.026
+By number of commits to file,Caicloud,15,contrib,3,3.846,0.019
+By number of commits to file,Caicloud,15,pkg/controller/node/cidr_allocator.go,3,3.846,0.019
+By number of commits to file,Caicloud,15,pkg/controller/gc,3,3.846,0.019
+By number of commits to file,Caicloud,15,pkg/registry,3,3.846,0.019
+By number of commits to file,Caicloud,15,pkg/apis,3,3.846,0.019
+By number of commits to file,Caicloud,15,pkg/controller/node/nodecontroller_test.go,3,3.846,0.019
+By number of commits to file,Caicloud,15,pkg/controller/node/cidr_allocator_test.go,3,3.846,0.019
+By number of commits to file,Caicloud,15,pkg/apis/componentconfig,3,3.846,0.019
+By number of commits to file,Caicloud,15,pkg/controller/job,3,3.846,0.019
+By number of commits to file,Caicloud,15,contrib/mesos/pkg,3,3.846,0.019
+All By number of commits to file,Self,16,"",41,0.266,0.266
+By number of commits to file,Self,16,test,21,51.22,0.136
+By number of commits to file,Self,16,test/e2e,16,39.024,0.104
+By number of commits to file,Self,16,pkg,6,14.634,0.039
+By number of commits to file,Self,16,build,4,9.756,0.026
+By number of commits to file,Self,16,test/integration,4,9.756,0.026
+By number of commits to file,Self,16,build/pause,4,9.756,0.026
+By number of commits to file,Self,16,pkg/kubelet,3,7.317,0.019
+By number of commits to file,Self,16,hack,3,7.317,0.019
+By number of commits to file,Self,16,Godeps,2,4.878,0.013
+By number of commits to file,Self,16,pkg/client/unversioned/clientcmd,2,4.878,0.013
+By number of commits to file,Self,16,pkg/client,2,4.878,0.013
+By number of commits to file,Self,16,cluster,2,4.878,0.013
+By number of commits to file,Self,16,pkg/kubelet/rkt,2,4.878,0.013
+By number of commits to file,Self,16,pkg/client/unversioned,2,4.878,0.013
+By number of commits to file,Self,16,Godeps/Godeps.json,2,4.878,0.013
+By number of commits to file,Self,16,pkg/kubelet/rkt/rkt.go,2,4.878,0.013
+By number of commits to file,Self,16,test/e2e/limit_range.go,1,2.439,0.006
+By number of commits to file,Self,16,test/e2e/resource_quota.go,1,2.439,0.006
+By number of commits to file,Self,16,test/e2e/service_latency.go,1,2.439,0.006
+By number of commits to file,Self,16,test/e2e/mesos.go,1,2.439,0.006
+By number of commits to file,Self,16,build/pause/pause.c,1,2.439,0.006
+By number of commits to file,Self,16,test/e2e/etcd_failure.go,1,2.439,0.006
+By number of commits to file,Self,16,test/e2e/kubelet.go,1,2.439,0.006
+By number of commits to file,Self,16,test/e2e/ubernetes_lite.go,1,2.439,0.006
+All By number of commits to file,NotFound,17,"",3,0.019,0.019
+By number of commits to file,NotFound,17,cluster/images/hyperkube/Dockerfile,2,66.667,0.013
+By number of commits to file,NotFound,17,Vagrantfile,1,33.333,0.006
