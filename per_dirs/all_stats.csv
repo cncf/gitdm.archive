@@ -1,434 +1,724 @@
 Order,Company,Index,File/Directory,Number,Percent
 All By changed lines,All,0,"",9932427,100.0
 All By changed lines,Google,1,"",4876349,49.095
-By changed lines,Google,1,/pkg,1158366,23.755
-By changed lines,Google,1,/Godeps,1138458,23.347
-By changed lines,Google,1,/Godeps/_workspace/src,862346,17.684
-By changed lines,Google,1,/Godeps/_workspace,862348,17.684
-By changed lines,Google,1,/staging,820863,16.834
-By changed lines,Google,1,/staging/src/k8s.io,820600,16.828
-By changed lines,Google,1,/staging/src/k8s.io/client-go,794841,16.3
-By changed lines,Google,1,/Godeps/_workspace/src/github.com,616463,12.642
-By changed lines,Google,1,/third_party,350163,7.181
-By changed lines,Google,1,/staging/src/k8s.io/client-go/_vendor,304493,6.244
-By changed lines,Google,1,/api,294984,6.049
-By changed lines,Google,1,/Godeps/LICENSES,268148,5.499
-By changed lines,Google,1,/staging/src/k8s.io/client-go/1.4,236185,4.843
-By changed lines,Google,1,/pkg/ui,197899,4.058
+By changed lines,Google,1,pkg,1158366,23.755
+By changed lines,Google,1,Godeps,1138458,23.347
+By changed lines,Google,1,Godeps/_workspace/src,862346,17.684
+By changed lines,Google,1,Godeps/_workspace,862348,17.684
+By changed lines,Google,1,staging,820863,16.834
+By changed lines,Google,1,staging/src/k8s.io,820600,16.828
+By changed lines,Google,1,staging/src/k8s.io/client-go,794841,16.3
+By changed lines,Google,1,Godeps/_workspace/src/github.com,616463,12.642
+By changed lines,Google,1,third_party,350163,7.181
+By changed lines,Google,1,staging/src/k8s.io/client-go/_vendor,304493,6.244
+By changed lines,Google,1,api,294984,6.049
+By changed lines,Google,1,Godeps/LICENSES,268148,5.499
+By changed lines,Google,1,staging/src/k8s.io/client-go/1.4,236185,4.843
+By changed lines,Google,1,pkg/ui,197899,4.058
+By changed lines,Google,1,staging/src/k8s.io/client-go/1.5,182961,3.752
+By changed lines,Google,1,test,176933,3.628
+By changed lines,Google,1,pkg/kubelet,174411,3.577
+By changed lines,Google,1,staging/src/k8s.io/client-go/_vendor/golang.org/x,173450,3.557
+By changed lines,Google,1,pkg/client,170703,3.501
+By changed lines,Google,1,staging/src/k8s.io/client-go/1.5/_vendor,169743,3.481
+By changed lines,Google,1,Godeps/_workspace/src/github.com/ugorji/go/codec,162114,3.324
 All By changed lines,Red Hat,2,"",1775447,17.875
-By changed lines,Red Hat,2,/pkg,662410,37.309
-By changed lines,Red Hat,2,/Godeps,580485,32.695
-By changed lines,Red Hat,2,/Godeps/_workspace/src,568868,32.041
-By changed lines,Red Hat,2,/Godeps/_workspace/src/github.com,455648,25.664
-By changed lines,Red Hat,2,/staging,160617,9.047
-By changed lines,Red Hat,2,/staging/src/k8s.io,160240,9.025
-By changed lines,Red Hat,2,/pkg/client,134679,7.586
-By changed lines,Red Hat,2,/Godeps/_workspace/src/github.com/fsouza/go-dockerclient,133681,7.529
-By changed lines,Red Hat,2,/Godeps/_workspace/src/github.com/fsouza/go-dockerclient/external,122376,6.893
-By changed lines,Red Hat,2,/Godeps/_workspace/src/github.com/fsouza/go-dockerclient/external/golang.org/x,97123,5.47
-By changed lines,Red Hat,2,/Godeps/_workspace/src/github.com/fsouza/go-dockerclient/external/golang.org/x/sys/unix,96676,5.445
+By changed lines,Red Hat,2,pkg,662410,37.309
+By changed lines,Red Hat,2,Godeps,580485,32.695
+By changed lines,Red Hat,2,Godeps/_workspace/src,568868,32.041
+By changed lines,Red Hat,2,Godeps/_workspace/src/github.com,455648,25.664
+By changed lines,Red Hat,2,staging,160617,9.047
+By changed lines,Red Hat,2,staging/src/k8s.io,160240,9.025
+By changed lines,Red Hat,2,pkg/client,134679,7.586
+By changed lines,Red Hat,2,Godeps/_workspace/src/github.com/fsouza/go-dockerclient,133681,7.529
+By changed lines,Red Hat,2,Godeps/_workspace/src/github.com/fsouza/go-dockerclient/external,122376,6.893
+By changed lines,Red Hat,2,Godeps/_workspace/src/github.com/fsouza/go-dockerclient/external/golang.org/x,97123,5.47
+By changed lines,Red Hat,2,Godeps/_workspace/src/github.com/fsouza/go-dockerclient/external/golang.org/x/sys/unix,96676,5.445
+By changed lines,Red Hat,2,staging/src/k8s.io/client-go,87330,4.919
+By changed lines,Red Hat,2,pkg/api,76172,4.29
+By changed lines,Red Hat,2,api,72510,4.084
+By changed lines,Red Hat,2,pkg/kubectl,62425,3.516
+By changed lines,Red Hat,2,pkg/controller,57323,3.229
+By changed lines,Red Hat,2,docs,56679,3.192
+By changed lines,Red Hat,2,test,56380,3.176
+By changed lines,Red Hat,2,pkg/kubelet,54419,3.065
+By changed lines,Red Hat,2,contrib,54217,3.054
 All By changed lines,Microsoft,3,"",671694,6.763
-By changed lines,Microsoft,3,/third_party,380961,56.716
-By changed lines,Microsoft,3,/third_party/src,380776,56.689
-By changed lines,Microsoft,3,/third_party/src/code.google.com/p,380170,56.599
-By changed lines,Microsoft,3,/third_party/src/code.google.com/p/google-api-go-client,377868,56.256
-By changed lines,Microsoft,3,/release-0.20.0,95131,14.163
-By changed lines,Microsoft,3,/third_party/src/code.google.com/p/google-api-go-client/compute,83360,12.41
-By changed lines,Microsoft,3,/pkg,73425,10.931
-By changed lines,Microsoft,3,/release-0.20.0/examples,65475,9.748
-By changed lines,Microsoft,3,/release-0.20.0/examples/blog-logging,49906,7.43
-By changed lines,Microsoft,3,/release-0.20.0/examples/blog-logging/diagrams,49894,7.428
-By changed lines,Microsoft,3,/release-0.19.0,43289,6.445
-By changed lines,Microsoft,3,/release-0.20.0/docs,29656,4.415
-By changed lines,Microsoft,3,/Godeps,28674,4.269
-By changed lines,Microsoft,3,/release-0.19.0/docs,28346,4.22
+By changed lines,Microsoft,3,third_party,380961,56.716
+By changed lines,Microsoft,3,third_party/src,380776,56.689
+By changed lines,Microsoft,3,third_party/src/code.google.com/p,380170,56.599
+By changed lines,Microsoft,3,third_party/src/code.google.com/p/google-api-go-client,377868,56.256
+By changed lines,Microsoft,3,release-0.20.0,95131,14.163
+By changed lines,Microsoft,3,third_party/src/code.google.com/p/google-api-go-client/compute,83360,12.41
+By changed lines,Microsoft,3,pkg,73425,10.931
+By changed lines,Microsoft,3,release-0.20.0/examples,65475,9.748
+By changed lines,Microsoft,3,release-0.20.0/examples/blog-logging,49906,7.43
+By changed lines,Microsoft,3,release-0.20.0/examples/blog-logging/diagrams,49894,7.428
+By changed lines,Microsoft,3,release-0.19.0,43289,6.445
+By changed lines,Microsoft,3,release-0.20.0/docs,29656,4.415
+By changed lines,Microsoft,3,Godeps,28674,4.269
+By changed lines,Microsoft,3,release-0.19.0/docs,28346,4.22
+By changed lines,Microsoft,3,Godeps/_workspace/src,26445,3.937
+By changed lines,Microsoft,3,third_party/src/code.google.com/p/google-api-go-client/adsense,25168,3.747
+By changed lines,Microsoft,3,third_party/src/code.google.com/p/google-api-go-client/compute/v1,23929,3.562
+By changed lines,Microsoft,3,Godeps/_workspace/src/github.com,21301,3.171
+By changed lines,Microsoft,3,third_party/src/code.google.com/p/google-api-go-client/youtube,19550,2.911
+By changed lines,Microsoft,3,Godeps/_workspace/src/github.com/google,18375,2.736
+By changed lines,Microsoft,3,third_party/src/code.google.com/p/google-api-go-client/compute/v1beta16,17847,2.657
+By changed lines,Microsoft,3,Godeps/_workspace/src/github.com/google/go-github/github,17782,2.647
 All By changed lines,CoreOS,4,"",538783,5.424
-By changed lines,CoreOS,4,/Godeps,460967,85.557
-By changed lines,CoreOS,4,/Godeps/_workspace/src,275244,51.086
-By changed lines,CoreOS,4,/Godeps/_workspace/src/github.com,244578,45.395
-By changed lines,CoreOS,4,/Godeps/LICENSES,183949,34.142
-By changed lines,CoreOS,4,/Godeps/_workspace/src/github.com/cznic,161078,29.897
-By changed lines,CoreOS,4,/Godeps/_workspace/src/github.com/cznic/ql,86772,16.105
-By changed lines,CoreOS,4,/Godeps/_workspace/src/github.com/coreos,57728,10.715
-By changed lines,CoreOS,4,/pkg,39951,7.415
-By changed lines,CoreOS,4,/Godeps/_workspace/src/github.com/coreos/etcd,35314,6.554
-By changed lines,CoreOS,4,/Godeps/_workspace/src/github.com/cznic/mathutil,28938,5.371
-By changed lines,CoreOS,4,/Godeps/_workspace/src/github.com/cznic/exp/lldb,26388,4.898
-By changed lines,CoreOS,4,/Godeps/_workspace/src/golang.org/x,23888,4.434
+By changed lines,CoreOS,4,Godeps,460967,85.557
+By changed lines,CoreOS,4,Godeps/_workspace/src,275244,51.086
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com,244578,45.395
+By changed lines,CoreOS,4,Godeps/LICENSES,183949,34.142
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/cznic,161078,29.897
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/cznic/ql,86772,16.105
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos,57728,10.715
+By changed lines,CoreOS,4,pkg,39951,7.415
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd,35314,6.554
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/cznic/mathutil,28938,5.371
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/cznic/exp/lldb,26388,4.898
+By changed lines,CoreOS,4,Godeps/_workspace/src/golang.org/x,23888,4.434
+By changed lines,CoreOS,4,pkg/kubelet,21906,4.066
+By changed lines,CoreOS,4,Godeps/_workspace/src/golang.org/x/crypto,20756,3.852
+By changed lines,CoreOS,4,Godeps/_workspace/src/golang.org/x/crypto/openpgp,19492,3.618
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/cznic/ql/testdata.ql,18924,3.512
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver,18911,3.51
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/cznic/mathutil/tables.go,13990,2.597
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver/etcdserverpb,13500,2.506
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/cznic/fileutil,12596,2.338
+By changed lines,CoreOS,4,Godeps/_workspace/src/github.com/appc/spec,12281,2.279
 All By changed lines,Self,5,"",410442,4.132
-By changed lines,Self,5,/third_party,378961,92.33
-By changed lines,Self,5,/third_party/src,378834,92.299
-By changed lines,Self,5,/third_party/src/code.google.com/p,353027,86.011
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client,352788,85.953
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client/compute,59431,14.48
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client/adsense,25168,6.132
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client/youtube,19550,4.763
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client/compute/v1beta16,17847,4.348
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client/compute/v1beta15,17144,4.177
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client/youtube/v3,16012,3.901
-By changed lines,Self,5,/third_party/src/github.com,15221,3.708
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client/dfareporting,14567,3.549
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client/google-api-go-generator,14493,3.531
-By changed lines,Self,5,/third_party/src/code.google.com/p/google-api-go-client/analytics,13030,3.175
+By changed lines,Self,5,third_party,378961,92.33
+By changed lines,Self,5,third_party/src,378834,92.299
+By changed lines,Self,5,third_party/src/code.google.com/p,353027,86.011
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client,352788,85.953
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/compute,59431,14.48
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/adsense,25168,6.132
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/youtube,19550,4.763
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/compute/v1beta16,17847,4.348
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/compute/v1beta15,17144,4.177
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/youtube/v3,16012,3.901
+By changed lines,Self,5,third_party/src/github.com,15221,3.708
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/dfareporting,14567,3.549
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/google-api-go-generator,14493,3.531
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/analytics,13030,3.175
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/google-api-go-generator/testdata,12853,3.132
+By changed lines,Self,5,pkg,12198,2.972
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/admin,12156,2.962
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/drive,11930,2.907
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/analytics/v3,11862,2.89
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/storage,11043,2.691
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/compute/v1beta16/compute-gen.go,10928,2.662
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/drive/v2,10838,2.641
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/compute/v1beta15/compute-gen.go,10787,2.628
+By changed lines,Self,5,third_party/src/code.google.com/p/google-api-go-client/plus,10405,2.535
 All By changed lines,Kismatic,6,"",248768,2.505
-By changed lines,Kismatic,6,/third_party/ui/bower_components,178902,71.915
-By changed lines,Kismatic,6,/third_party/ui/bower_components/angular-material,57337,23.048
-By changed lines,Kismatic,6,/www,46088,18.526
-By changed lines,Kismatic,6,/third_party/ui/bower_components/angular-material/modules,38095,15.313
-By changed lines,Kismatic,6,/third_party/ui/bower_components/angular,26697,10.732
-By changed lines,Kismatic,6,/third_party/ui/bower_components/angular/angular.js,26309,10.576
-By changed lines,Kismatic,6,/pkg/ui,23646,9.505
-By changed lines,Kismatic,6,/www/master,23251,9.346
-By changed lines,Kismatic,6,/www/app,21121,8.49
-By changed lines,Kismatic,6,/third_party/ui/bower_components/modernizr,19328,7.769
-By changed lines,Kismatic,6,/third_party/ui/bower_components/lodash,19155,7.7
-By changed lines,Kismatic,6,/third_party/ui/bower_components/jquery,19144,7.696
+By changed lines,Kismatic,6,third_party/ui/bower_components,178902,71.915
+By changed lines,Kismatic,6,third_party/ui/bower_components/angular-material,57337,23.048
+By changed lines,Kismatic,6,www,46088,18.526
+By changed lines,Kismatic,6,third_party/ui/bower_components/angular-material/modules,38095,15.313
+By changed lines,Kismatic,6,third_party/ui/bower_components/angular,26697,10.732
+By changed lines,Kismatic,6,third_party/ui/bower_components/angular/angular.js,26309,10.576
+By changed lines,Kismatic,6,pkg/ui,23646,9.505
+By changed lines,Kismatic,6,www/master,23251,9.346
+By changed lines,Kismatic,6,www/app,21121,8.49
+By changed lines,Kismatic,6,third_party/ui/bower_components/modernizr,19328,7.769
+By changed lines,Kismatic,6,third_party/ui/bower_components/lodash,19155,7.7
+By changed lines,Kismatic,6,third_party/ui/bower_components/jquery,19144,7.696
+By changed lines,Kismatic,6,third_party/ui/bower_components/lodash/dist,19077,7.669
+By changed lines,Kismatic,6,pkg/ui/datafile.go,18707,7.52
+By changed lines,Kismatic,6,third_party/ui/bower_components/angular-material/modules/closure,18622,7.486
+By changed lines,Kismatic,6,third_party/ui/bower_components/angular-material/modules/js,16891,6.79
+By changed lines,Kismatic,6,third_party/ui/bower_components/modernizr/test,15514,6.236
+By changed lines,Kismatic,6,www/master/shared,13450,5.407
+By changed lines,Kismatic,6,www/master/shared/assets,12069,4.852
+By changed lines,Kismatic,6,www/app/shared/assets/sampleData1.json,11993,4.821
+By changed lines,Kismatic,6,www/master/shared/assets/sampleData1.json,11993,4.821
 All By changed lines,Mesosphere,7,"",234818,2.364
-By changed lines,Mesosphere,7,/Godeps,197042,83.913
-By changed lines,Mesosphere,7,/Godeps/_workspace/src/github.com,196802,83.81
-By changed lines,Mesosphere,7,/Godeps/_workspace/src/github.com/mesos/mesos-go,167654,71.397
-By changed lines,Mesosphere,7,/Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto,151799,64.645
-By changed lines,Mesosphere,7,/Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/mesos.pb.go,61287,26.1
-By changed lines,Mesosphere,7,/contrib/mesos,29589,12.601
-By changed lines,Mesosphere,7,/contrib/mesos/pkg,27707,11.799
-By changed lines,Mesosphere,7,/Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/mesospb_test.go,20465,8.715
-By changed lines,Mesosphere,7,/Godeps/_workspace/src/github.com/gogo/protobuf/proto,19471,8.292
+By changed lines,Mesosphere,7,Godeps,197042,83.913
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com,196802,83.81
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go,167654,71.397
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto,151799,64.645
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/mesos.pb.go,61287,26.1
+By changed lines,Mesosphere,7,contrib/mesos,29589,12.601
+By changed lines,Mesosphere,7,contrib/mesos/pkg,27707,11.799
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/mesospb_test.go,20465,8.715
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/gogo/protobuf/proto,19471,8.292
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/messages.pb.go,18741,7.981
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/log.pb.go,13452,5.729
+By changed lines,Mesosphere,7,contrib/mesos/pkg/scheduler,12700,5.408
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/scheduler.pb.go,7422,3.161
+By changed lines,Mesosphere,7,contrib/mesos/pkg/executor,5567,2.371
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/gogo/protobuf/proto/testdata,5355,2.28
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/containerizer.pb.go,5312,2.262
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/state.pb.go,4703,2.003
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto/logpb_test.go,4463,1.901
+By changed lines,Mesosphere,7,Godeps/_workspace/src/github.com/mesos/mesos-go/messenger,4400,1.874
 All By changed lines,PHP,8,"",178813,1.8
-By changed lines,PHP,8,/third_party/ui/bower_components,178812,99.999
-By changed lines,PHP,8,/third_party/ui/bower_components/angular-material,57331,32.062
-By changed lines,PHP,8,/third_party/ui/bower_components/angular-material/modules,38092,21.303
-By changed lines,PHP,8,/third_party/ui/bower_components/angular,26697,14.93
-By changed lines,PHP,8,/third_party/ui/bower_components/angular/angular.js,26309,14.713
-By changed lines,PHP,8,/third_party/ui/bower_components/modernizr,19328,10.809
-By changed lines,PHP,8,/third_party/ui/bower_components/lodash,19155,10.712
-By changed lines,PHP,8,/third_party/ui/bower_components/jquery,19144,10.706
-By changed lines,PHP,8,/third_party/ui/bower_components/lodash/dist,19077,10.669
-By changed lines,PHP,8,/third_party/ui/bower_components/angular-material/modules/closure,18619,10.413
-By changed lines,PHP,8,/third_party/ui/bower_components/angular-material/modules/js,16891,9.446
-By changed lines,PHP,8,/third_party/ui/bower_components/modernizr/test,15514,8.676
-By changed lines,PHP,8,/third_party/ui/bower_components/angular-material/angular-material.js,11412,6.382
+By changed lines,PHP,8,third_party/ui/bower_components,178812,99.999
+By changed lines,PHP,8,third_party/ui/bower_components/angular-material,57331,32.062
+By changed lines,PHP,8,third_party/ui/bower_components/angular-material/modules,38092,21.303
+By changed lines,PHP,8,third_party/ui/bower_components/angular,26697,14.93
+By changed lines,PHP,8,third_party/ui/bower_components/angular/angular.js,26309,14.713
+By changed lines,PHP,8,third_party/ui/bower_components/modernizr,19328,10.809
+By changed lines,PHP,8,third_party/ui/bower_components/lodash,19155,10.712
+By changed lines,PHP,8,third_party/ui/bower_components/jquery,19144,10.706
+By changed lines,PHP,8,third_party/ui/bower_components/lodash/dist,19077,10.669
+By changed lines,PHP,8,third_party/ui/bower_components/angular-material/modules/closure,18619,10.413
+By changed lines,PHP,8,third_party/ui/bower_components/angular-material/modules/js,16891,9.446
+By changed lines,PHP,8,third_party/ui/bower_components/modernizr/test,15514,8.676
+By changed lines,PHP,8,third_party/ui/bower_components/angular-material/angular-material.js,11412,6.382
+By changed lines,PHP,8,third_party/ui/bower_components/modernizr/test/js,11066,6.189
+By changed lines,PHP,8,third_party/ui/bower_components/ng-lodash,10844,6.064
+By changed lines,PHP,8,third_party/ui/bower_components/modernizr/test/js/lib,10022,5.605
+By changed lines,PHP,8,third_party/ui/bower_components/jquery/src,9848,5.507
+By changed lines,PHP,8,third_party/ui/bower_components/ng-lodash/build,9793,5.477
+By changed lines,PHP,8,third_party/ui/bower_components/ng-lodash/build/ng-lodash.js,9782,5.471
+By changed lines,PHP,8,third_party/ui/bower_components/d3,9651,5.397
+By changed lines,PHP,8,third_party/ui/bower_components/d3/d3.js,9504,5.315
+By changed lines,PHP,8,third_party/ui/bower_components/modernizr/test/js/lib/jquery-1.7b2.js,9279,5.189
+By changed lines,PHP,8,third_party/ui/bower_components/jquery/dist,9211,5.151
 All By changed lines,HP,9,"",122086,1.229
-By changed lines,HP,9,/Godeps,116461,95.393
-By changed lines,HP,9,/Godeps/_workspace/src/github.com/vmware/govmomi,114739,93.982
-By changed lines,HP,9,/Godeps/_workspace/src/github.com/vmware/govmomi/vim25,79864,65.416
-By changed lines,HP,9,/Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types,57455,47.061
-By changed lines,HP,9,/Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/types.go,49702,40.711
-By changed lines,HP,9,/Godeps/_workspace/src/github.com/vmware/govmomi/govc,22396,18.344
-By changed lines,HP,9,/Godeps/_workspace/src/github.com/vmware/govmomi/vim25/methods,14282,11.698
-By changed lines,HP,9,/Godeps/_workspace/src/github.com/vmware/govmomi/vim25/methods/methods.go,14103,11.552
-By changed lines,HP,9,/Godeps/_workspace/src/github.com/vmware/govmomi/object,5714,4.68
-By changed lines,HP,9,/pkg,4852,3.974
-By changed lines,HP,9,/Godeps/_workspace/src/github.com/vmware/govmomi/vim25/xml,4143,3.394
+By changed lines,HP,9,Godeps,116461,95.393
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi,114739,93.982
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/vim25,79864,65.416
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types,57455,47.061
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/types.go,49702,40.711
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/govc,22396,18.344
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/methods,14282,11.698
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/methods/methods.go,14103,11.552
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/object,5714,4.68
+By changed lines,HP,9,pkg,4852,3.974
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/xml,4143,3.394
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/enum.go,4098,3.357
+By changed lines,HP,9,pkg/cloudprovider/providers,3592,2.942
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/govc/vm,3397,2.782
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/types/if.go,3287,2.692
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/govc/host,3104,2.542
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/govc/flags,2469,2.022
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/govc/test,2349,1.924
+By changed lines,HP,9,Godeps/_workspace/src/github.com/vmware/govmomi/vim25/mo,2336,1.913
+By changed lines,HP,9,pkg/cloudprovider/providers/openstack,2022,1.656
 All By changed lines,Huawei,10,"",66243,0.667
-By changed lines,Huawei,10,/federation,25513,38.514
-By changed lines,Huawei,10,/pkg,16289,24.59
-By changed lines,Huawei,10,/federation/pkg,12708,19.184
-By changed lines,Huawei,10,/test,6829,10.309
-By changed lines,Huawei,10,/docs,6565,9.91
-By changed lines,Huawei,10,/federation/pkg/federation-controller,6116,9.233
-By changed lines,Huawei,10,/plugin,5560,8.393
-By changed lines,Huawei,10,/plugin/pkg,5547,8.374
-By changed lines,Huawei,10,/federation/client,5388,8.134
-By changed lines,Huawei,10,/federation/client/clientset_generated,5353,8.081
-By changed lines,Huawei,10,/pkg/api,5098,7.696
-By changed lines,Huawei,10,/plugin/pkg/scheduler,4578,6.911
-By changed lines,Huawei,10,/federation/apis,4402,6.645
-By changed lines,Huawei,10,/plugin/pkg/scheduler/algorithm,4030,6.084
-By changed lines,Huawei,10,/federation/pkg/federation-controller/service,3802,5.739
+By changed lines,Huawei,10,federation,25513,38.514
+By changed lines,Huawei,10,pkg,16289,24.59
+By changed lines,Huawei,10,federation/pkg,12708,19.184
+By changed lines,Huawei,10,test,6829,10.309
+By changed lines,Huawei,10,docs,6565,9.91
+By changed lines,Huawei,10,federation/pkg/federation-controller,6116,9.233
+By changed lines,Huawei,10,plugin,5560,8.393
+By changed lines,Huawei,10,plugin/pkg,5547,8.374
+By changed lines,Huawei,10,federation/client,5388,8.134
+By changed lines,Huawei,10,federation/client/clientset_generated,5353,8.081
+By changed lines,Huawei,10,pkg/api,5098,7.696
+By changed lines,Huawei,10,plugin/pkg/scheduler,4578,6.911
+By changed lines,Huawei,10,federation/apis,4402,6.645
+By changed lines,Huawei,10,plugin/pkg/scheduler/algorithm,4030,6.084
+By changed lines,Huawei,10,federation/pkg/federation-controller/service,3802,5.739
+By changed lines,Huawei,10,test/e2e,3599,5.433
+By changed lines,Huawei,10,federation/pkg/federated-controller,3568,5.386
+By changed lines,Huawei,10,pkg/kubectl,3506,5.293
+By changed lines,Huawei,10,federation/pkg/federated-controller/cluster,3359,5.071
+By changed lines,Huawei,10,federation/client/clientset_generated/federation_internalclientset,2655,4.008
+By changed lines,Huawei,10,pkg/kubectl/cmd,2403,3.628
+By changed lines,Huawei,10,federation/pkg/federated-controller/cluster/clustercontroller_test.go,2360,3.563
+By changed lines,Huawei,10,federation/client/clientset_generated/federation_internalclientset/typed,2350,3.548
+By changed lines,Huawei,10,federation/cmd,2321,3.504
+By changed lines,Huawei,10,docs/user-guide,2202,3.324
 All By changed lines,Bulletproof,11,"",58619,0.59
-By changed lines,Bulletproof,11,/Godeps,55756,95.116
-By changed lines,Bulletproof,11,/Godeps/_workspace/src/github.com,45358,77.378
-By changed lines,Bulletproof,11,/Godeps/_workspace/src/github.com/rackspace/gophercloud,40584,69.234
-By changed lines,Bulletproof,11,/Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack,20095,34.281
-By changed lines,Bulletproof,11,/Godeps/LICENSES,10164,17.339
-By changed lines,Bulletproof,11,/Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/networking/v2,8801,15.014
-By changed lines,Bulletproof,11,/Godeps/_workspace/src/github.com/rackspace/gophercloud/acceptance,7180,12.249
-By changed lines,Bulletproof,11,/Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/networking/v2/extensions,6154,10.498
-By changed lines,Bulletproof,11,/Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace,4397,7.501
-By changed lines,Bulletproof,11,/Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2,3364,5.739
+By changed lines,Bulletproof,11,Godeps,55756,95.116
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com,45358,77.378
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud,40584,69.234
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack,20095,34.281
+By changed lines,Bulletproof,11,Godeps/LICENSES,10164,17.339
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/networking/v2,8801,15.014
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/acceptance,7180,12.249
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/networking/v2/extensions,6154,10.498
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace,4397,7.501
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/compute/v2,3364,5.739
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/acceptance/openstack,2980,5.084
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/identity,2785,4.751
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/networking/v2/extensions/lbaas,2764,4.715
+By changed lines,Bulletproof,11,pkg,2735,4.666
+By changed lines,Bulletproof,11,pkg/cloudprovider,2628,4.483
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/mitchellh/mapstructure,2365,4.035
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/rackspace/compute/v2,2277,3.884
+By changed lines,Bulletproof,11,Godeps/_workspace/src/github.com/rackspace/gophercloud/openstack/blockstorage,2011,3.431
 All By changed lines,Epic Games,12,"",58317,0.587
-By changed lines,Epic Games,12,/Godeps,57866,99.227
-By changed lines,Epic Games,12,/Godeps/_workspace/src/github.com,57772,99.065
-By changed lines,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go,40117,68.791
-By changed lines,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/service,31594,54.176
-By changed lines,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/ec2,25609,43.913
-By changed lines,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/ec2/api.go,14446,24.772
-By changed lines,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/ec2/examples_test.go,9769,16.752
-By changed lines,Epic Games,12,/Godeps/_workspace/src/github.com/jmespath/go-jmespath,8849,15.174
-By changed lines,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws,5806,9.956
-By changed lines,Epic Games,12,/Godeps/_workspace/src/github.com/awslabs/aws-sdk-go,5662,9.709
+By changed lines,Epic Games,12,Godeps,57866,99.227
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com,57772,99.065
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go,40117,68.791
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service,31594,54.176
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/ec2,25609,43.913
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/ec2/api.go,14446,24.772
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/ec2/examples_test.go,9769,16.752
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/jmespath/go-jmespath,8849,15.174
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws,5806,9.956
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/awslabs/aws-sdk-go,5662,9.709
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/awslabs/aws-sdk-go/service,5567,9.546
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/jmespath/go-jmespath/compliance,5509,9.447
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/awslabs/aws-sdk-go/service/ec2,4819,8.263
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/awslabs/aws-sdk-go/service/ec2/examples_test.go,4774,8.186
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/autoscaling,3237,5.551
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/go-ini/ini,2935,5.033
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/elb,2748,4.712
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/internal,2515,4.313
+By changed lines,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/autoscaling/api.go,2393,4.103
 All By changed lines,Vayable,13,"",54884,0.553
-By changed lines,Vayable,13,/www,28445,51.827
-By changed lines,Vayable,13,/pkg,26064,47.489
-By changed lines,Vayable,13,/pkg/ui,26063,47.487
-By changed lines,Vayable,13,/pkg/ui/datafile.go,25536,46.527
-By changed lines,Vayable,13,/www/app,15599,28.422
-By changed lines,Vayable,13,/www/master,12846,23.406
-By changed lines,Vayable,13,/www/master/shared,12105,22.056
-By changed lines,Vayable,13,/www/master/shared/assets/sampleData1.json,11993,21.852
-By changed lines,Vayable,13,/www/app/shared,11993,21.852
-By changed lines,Vayable,13,/www/master/shared/assets,11993,21.852
-By changed lines,Vayable,13,/www/app/shared/assets/sampleData1.json,11993,21.852
-By changed lines,Vayable,13,/www/app/assets,3404,6.202
-By changed lines,Vayable,13,/www/app/assets/js,3387,6.171
-By changed lines,Vayable,13,/www/app/assets/js/app.js,3386,6.169
+By changed lines,Vayable,13,www,28445,51.827
+By changed lines,Vayable,13,pkg,26064,47.489
+By changed lines,Vayable,13,pkg/ui,26063,47.487
+By changed lines,Vayable,13,pkg/ui/datafile.go,25536,46.527
+By changed lines,Vayable,13,www/app,15599,28.422
+By changed lines,Vayable,13,www/master,12846,23.406
+By changed lines,Vayable,13,www/master/shared,12105,22.056
+By changed lines,Vayable,13,www/master/shared/assets/sampleData1.json,11993,21.852
+By changed lines,Vayable,13,www/app/shared,11993,21.852
+By changed lines,Vayable,13,www/master/shared/assets,11993,21.852
+By changed lines,Vayable,13,www/app/shared/assets/sampleData1.json,11993,21.852
+By changed lines,Vayable,13,www/app/assets,3404,6.202
+By changed lines,Vayable,13,www/app/assets/js,3387,6.171
+By changed lines,Vayable,13,www/app/assets/js/app.js,3386,6.169
+By changed lines,Vayable,13,www/master/components/dashboard,722,1.316
 All By changed lines,FathomDB,14,"",46245,0.466
-By changed lines,FathomDB,14,/pkg,18344,39.667
-By changed lines,FathomDB,14,/Godeps,14996,32.427
-By changed lines,FathomDB,14,/Godeps/_workspace/src/github.com,14749,31.893
-By changed lines,FathomDB,14,/pkg/cloudprovider,9951,21.518
-By changed lines,FathomDB,14,/cluster,7398,15.997
-By changed lines,FathomDB,14,/Godeps/_workspace/src/github.com/awslabs/aws-sdk-go,6561,14.187
-By changed lines,FathomDB,14,/Godeps/_workspace/src/github.com/aws/aws-sdk-go,6128,13.251
-By changed lines,FathomDB,14,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/service,6014,13.005
-By changed lines,FathomDB,14,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/autoscaling,5831,12.609
-By changed lines,FathomDB,14,/pkg/cloudprovider/providers,5160,11.158
-By changed lines,FathomDB,14,/cluster/aws,4883,10.559
+By changed lines,FathomDB,14,pkg,18344,39.667
+By changed lines,FathomDB,14,Godeps,14996,32.427
+By changed lines,FathomDB,14,Godeps/_workspace/src/github.com,14749,31.893
+By changed lines,FathomDB,14,pkg/cloudprovider,9951,21.518
+By changed lines,FathomDB,14,cluster,7398,15.997
+By changed lines,FathomDB,14,Godeps/_workspace/src/github.com/awslabs/aws-sdk-go,6561,14.187
+By changed lines,FathomDB,14,Godeps/_workspace/src/github.com/aws/aws-sdk-go,6128,13.251
+By changed lines,FathomDB,14,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service,6014,13.005
+By changed lines,FathomDB,14,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/autoscaling,5831,12.609
+By changed lines,FathomDB,14,pkg/cloudprovider/providers,5160,11.158
+By changed lines,FathomDB,14,cluster/aws,4883,10.559
+By changed lines,FathomDB,14,pkg/cloudprovider/providers/aws,4237,9.162
+By changed lines,FathomDB,14,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/autoscaling/api.go,4200,9.082
+By changed lines,FathomDB,14,pkg/cloudprovider/aws,4026,8.706
+By changed lines,FathomDB,14,Godeps/_workspace/src/github.com/awslabs/aws-sdk-go/service/elb,3329,7.199
+By changed lines,FathomDB,14,Godeps/_workspace/src/github.com/awslabs/aws-sdk-go/internal/protocol/query,3232,6.989
+By changed lines,FathomDB,14,pkg/cloudprovider/aws/aws.go,2777,6.005
+By changed lines,FathomDB,14,Godeps/_workspace/src/github.com/awslabs/aws-sdk-go/service/elb/api.go,2459,5.317
 All By changed lines,DEIS,15,"",41611,0.419
-By changed lines,DEIS,15,/docs,41449,99.611
-By changed lines,DEIS,15,/docs/proposals,16836,40.46
-By changed lines,DEIS,15,/docs/design,15329,36.839
-By changed lines,DEIS,15,/docs/devel,9284,22.311
-By changed lines,DEIS,15,/docs/design/architecture.svg,1943,4.669
-By changed lines,DEIS,15,/docs/devel/api-conventions.md,1350,3.244
-By changed lines,DEIS,15,/docs/design/indexed-job.md,900,2.163
+By changed lines,DEIS,15,docs,41449,99.611
+By changed lines,DEIS,15,docs/proposals,16836,40.46
+By changed lines,DEIS,15,docs/design,15329,36.839
+By changed lines,DEIS,15,docs/devel,9284,22.311
+By changed lines,DEIS,15,docs/design/architecture.svg,1943,4.669
+By changed lines,DEIS,15,docs/devel/api-conventions.md,1350,3.244
+By changed lines,DEIS,15,docs/design/indexed-job.md,900,2.163
+By changed lines,DEIS,15,docs/devel/local-cluster,791,1.901
+By changed lines,DEIS,15,docs/devel/api_changes.md,732,1.759
+By changed lines,DEIS,15,docs/devel/e2e-tests.md,719,1.728
+By changed lines,DEIS,15,docs/design/podaffinity.md,673,1.617
+By changed lines,DEIS,15,docs/proposals/federation.md,648,1.557
+By changed lines,DEIS,15,docs/design/secrets.md,628,1.509
+By changed lines,DEIS,15,docs/design/downward_api_resources_limits_requests.md,622,1.495
+By changed lines,DEIS,15,docs/proposals/disk-accounting.md,615,1.478
+By changed lines,DEIS,15,docs/proposals/templates.md,569,1.367
+By changed lines,DEIS,15,docs/proposals/multi-platform.md,532,1.279
+By changed lines,DEIS,15,docs/design/volume-snapshotting.md,523,1.257
+By changed lines,DEIS,15,docs/design/federated-services.md,517,1.242
+By changed lines,DEIS,15,docs/design/federated-replicasets.md,513,1.233
+By changed lines,DEIS,15,docs/proposals/volume-provisioning.md,500,1.202
+By changed lines,DEIS,15,docs/proposals/rescheduling.md,493,1.185
+By changed lines,DEIS,15,docs/proposals/volumes.md,482,1.158
+By changed lines,DEIS,15,docs/proposals/protobuf.md,480,1.154
+By changed lines,DEIS,15,docs/proposals/kubelet-eviction.md,462,1.11
 All By changed lines,NotFound,16,"",3594,0.036
-By changed lines,NotFound,16,/pkg,1545,42.988
-By changed lines,NotFound,16,/Godeps,1350,37.563
-By changed lines,NotFound,16,/Godeps/_workspace/src/github.com/coreos,1338,37.229
-By changed lines,NotFound,16,/Godeps/_workspace/src/github.com/coreos/etcd,1112,30.94
-By changed lines,NotFound,16,/Godeps/_workspace/src/github.com/coreos/etcd/pkg/types,795,22.12
-By changed lines,NotFound,16,/pkg/kubelet,530,14.747
-By changed lines,NotFound,16,/pkg/util,362,10.072
-By changed lines,NotFound,16,/Godeps/_workspace/src/github.com/coreos/etcd/etcdserver/etcdhttp/httptypes,317,8.82
-By changed lines,NotFound,16,/pkg/kubelet/dockertools,316,8.792
+By changed lines,NotFound,16,pkg,1545,42.988
+By changed lines,NotFound,16,Godeps,1350,37.563
+By changed lines,NotFound,16,Godeps/_workspace/src/github.com/coreos,1338,37.229
+By changed lines,NotFound,16,Godeps/_workspace/src/github.com/coreos/etcd,1112,30.94
+By changed lines,NotFound,16,Godeps/_workspace/src/github.com/coreos/etcd/pkg/types,795,22.12
+By changed lines,NotFound,16,pkg/kubelet,530,14.747
+By changed lines,NotFound,16,pkg/util,362,10.072
+By changed lines,NotFound,16,Godeps/_workspace/src/github.com/coreos/etcd/etcdserver/etcdhttp/httptypes,317,8.82
+By changed lines,NotFound,16,pkg/kubelet/dockertools,316,8.792
+By changed lines,NotFound,16,pkg/kubectl,313,8.709
+By changed lines,NotFound,16,test,291,8.097
+By changed lines,NotFound,16,test/e2e/pods.go,290,8.069
+By changed lines,NotFound,16,Godeps/_workspace/src/github.com/coreos/go-etcd/etcd,226,6.288
+By changed lines,NotFound,16,pkg/util/backoff_test.go,194,5.398
+By changed lines,NotFound,16,Godeps/_workspace/src/github.com/coreos/etcd/pkg/types/set_test.go,186,5.175
+By changed lines,NotFound,16,pkg/kubelet/container,184,5.12
+By changed lines,NotFound,16,pkg/kubelet/dockertools/manager_test.go,179,4.981
 All By number of commits to file,All,0,"",183409,100.0
 All By number of commits to file,Google,1,"",89864,48.997
-By number of commits to file,Google,1,/pkg,37022,41.198
-By number of commits to file,Google,1,/docs,8342,9.283
-By number of commits to file,Google,1,/pkg/client,7837,8.721
-By number of commits to file,Google,1,/test,7795,8.674
-By number of commits to file,Google,1,/staging,6403,7.125
-By number of commits to file,Google,1,/staging/src/k8s.io,6384,7.104
-By number of commits to file,Google,1,/pkg/kubelet,6161,6.856
-By number of commits to file,Google,1,/cluster,5712,6.356
-By number of commits to file,Google,1,/staging/src/k8s.io/client-go,5584,6.214
-By number of commits to file,Google,1,/test/e2e,4780,5.319
-By number of commits to file,Google,1,/Godeps,4370,4.863
-By number of commits to file,Google,1,/Godeps/_workspace,4092,4.554
-By number of commits to file,Google,1,/Godeps/_workspace/src,4091,4.552
-By number of commits to file,Google,1,/pkg/client/clientset_generated,3570,3.973
+By number of commits to file,Google,1,pkg,37022,41.198
+By number of commits to file,Google,1,docs,8342,9.283
+By number of commits to file,Google,1,pkg/client,7837,8.721
+By number of commits to file,Google,1,test,7795,8.674
+By number of commits to file,Google,1,staging,6403,7.125
+By number of commits to file,Google,1,staging/src/k8s.io,6384,7.104
+By number of commits to file,Google,1,pkg/kubelet,6161,6.856
+By number of commits to file,Google,1,cluster,5712,6.356
+By number of commits to file,Google,1,staging/src/k8s.io/client-go,5584,6.214
+By number of commits to file,Google,1,test/e2e,4780,5.319
+By number of commits to file,Google,1,Godeps,4370,4.863
+By number of commits to file,Google,1,Godeps/_workspace,4092,4.554
+By number of commits to file,Google,1,Godeps/_workspace/src,4091,4.552
+By number of commits to file,Google,1,pkg/client/clientset_generated,3570,3.973
+By number of commits to file,Google,1,Godeps/_workspace/src/github.com,3431,3.818
+By number of commits to file,Google,1,pkg/registry,3399,3.782
+By number of commits to file,Google,1,cmd,3355,3.733
+By number of commits to file,Google,1,hack,3247,3.613
+By number of commits to file,Google,1,pkg/controller,3223,3.587
+By number of commits to file,Google,1,pkg/api,3135,3.489
+By number of commits to file,Google,1,docs/user-guide,2667,2.968
+By number of commits to file,Google,1,pkg/kubectl,2622,2.918
+By number of commits to file,Google,1,federation,2595,2.888
+By number of commits to file,Google,1,examples,2456,2.733
 All By number of commits to file,Red Hat,2,"",55178,30.085
-By number of commits to file,Red Hat,2,/pkg,31704,57.458
-By number of commits to file,Red Hat,2,/pkg/client,6789,12.304
-By number of commits to file,Red Hat,2,/staging,4616,8.366
-By number of commits to file,Red Hat,2,/staging/src/k8s.io,4582,8.304
-By number of commits to file,Red Hat,2,/pkg/registry,4564,8.271
-By number of commits to file,Red Hat,2,/Godeps,3550,6.434
-By number of commits to file,Red Hat,2,/Godeps/_workspace/src,3382,6.129
-By number of commits to file,Red Hat,2,/pkg/kubectl,3194,5.789
-By number of commits to file,Red Hat,2,/test,3107,5.631
-By number of commits to file,Red Hat,2,/Godeps/_workspace/src/github.com,2978,5.397
-By number of commits to file,Red Hat,2,/pkg/api,2926,5.303
-By number of commits to file,Red Hat,2,/staging/src/k8s.io/client-go,2779,5.036
-By number of commits to file,Red Hat,2,/cmd,2462,4.462
+By number of commits to file,Red Hat,2,pkg,31704,57.458
+By number of commits to file,Red Hat,2,pkg/client,6789,12.304
+By number of commits to file,Red Hat,2,staging,4616,8.366
+By number of commits to file,Red Hat,2,staging/src/k8s.io,4582,8.304
+By number of commits to file,Red Hat,2,pkg/registry,4564,8.271
+By number of commits to file,Red Hat,2,Godeps,3550,6.434
+By number of commits to file,Red Hat,2,Godeps/_workspace/src,3382,6.129
+By number of commits to file,Red Hat,2,pkg/kubectl,3194,5.789
+By number of commits to file,Red Hat,2,test,3107,5.631
+By number of commits to file,Red Hat,2,Godeps/_workspace/src/github.com,2978,5.397
+By number of commits to file,Red Hat,2,pkg/api,2926,5.303
+By number of commits to file,Red Hat,2,staging/src/k8s.io/client-go,2779,5.036
+By number of commits to file,Red Hat,2,cmd,2462,4.462
+By number of commits to file,Red Hat,2,pkg/controller,2363,4.283
+By number of commits to file,Red Hat,2,pkg/client/clientset_generated,2329,4.221
+By number of commits to file,Red Hat,2,pkg/kubelet,2285,4.141
+By number of commits to file,Red Hat,2,pkg/kubectl/cmd,2145,3.887
+By number of commits to file,Red Hat,2,plugin,1993,3.612
+By number of commits to file,Red Hat,2,plugin/pkg,1917,3.474
+By number of commits to file,Red Hat,2,pkg/apis,1756,3.182
+By number of commits to file,Red Hat,2,test/e2e,1713,3.104
+By number of commits to file,Red Hat,2,federation,1664,3.016
+By number of commits to file,Red Hat,2,docs,1464,2.653
 All By number of commits to file,Microsoft,3,"",5347,2.915
-By number of commits to file,Microsoft,3,/pkg,2142,40.06
-By number of commits to file,Microsoft,3,/docs,559,10.454
-By number of commits to file,Microsoft,3,/release-0.20.0,503,9.407
-By number of commits to file,Microsoft,3,/release-0.19.0,484,9.052
-By number of commits to file,Microsoft,3,/pkg/kubectl,461,8.622
-By number of commits to file,Microsoft,3,/pkg/kubectl/cmd,370,6.92
-By number of commits to file,Microsoft,3,/cluster,344,6.434
-By number of commits to file,Microsoft,3,/third_party,308,5.76
-By number of commits to file,Microsoft,3,/third_party/src,305,5.704
-By number of commits to file,Microsoft,3,/third_party/src/code.google.com/p,287,5.367
-By number of commits to file,Microsoft,3,/pkg/registry,280,5.237
-By number of commits to file,Microsoft,3,/release-0.20.0/examples,270,5.05
-By number of commits to file,Microsoft,3,/pkg/api,263,4.919
-By number of commits to file,Microsoft,3,/release-0.19.0/examples,253,4.732
+By number of commits to file,Microsoft,3,pkg,2142,40.06
+By number of commits to file,Microsoft,3,docs,559,10.454
+By number of commits to file,Microsoft,3,release-0.20.0,503,9.407
+By number of commits to file,Microsoft,3,release-0.19.0,484,9.052
+By number of commits to file,Microsoft,3,pkg/kubectl,461,8.622
+By number of commits to file,Microsoft,3,pkg/kubectl/cmd,370,6.92
+By number of commits to file,Microsoft,3,cluster,344,6.434
+By number of commits to file,Microsoft,3,third_party,308,5.76
+By number of commits to file,Microsoft,3,third_party/src,305,5.704
+By number of commits to file,Microsoft,3,third_party/src/code.google.com/p,287,5.367
+By number of commits to file,Microsoft,3,pkg/registry,280,5.237
+By number of commits to file,Microsoft,3,release-0.20.0/examples,270,5.05
+By number of commits to file,Microsoft,3,pkg/api,263,4.919
+By number of commits to file,Microsoft,3,release-0.19.0/examples,253,4.732
+By number of commits to file,Microsoft,3,third_party/src/code.google.com/p/google-api-go-client,250,4.676
+By number of commits to file,Microsoft,3,pkg/kubelet,250,4.676
+By number of commits to file,Microsoft,3,release-0.20.0/docs,233,4.358
+By number of commits to file,Microsoft,3,release-0.19.0/docs,231,4.32
+By number of commits to file,Microsoft,3,Godeps,228,4.264
+By number of commits to file,Microsoft,3,Godeps/_workspace/src,198,3.703
+By number of commits to file,Microsoft,3,pkg/cloudprovider,181,3.385
+By number of commits to file,Microsoft,3,Godeps/_workspace/src/github.com,180,3.366
+By number of commits to file,Microsoft,3,examples,162,3.03
 All By number of commits to file,CoreOS,4,"",3746,2.042
-By number of commits to file,CoreOS,4,/Godeps,1440,38.441
-By number of commits to file,CoreOS,4,/Godeps/_workspace/src,1396,37.266
-By number of commits to file,CoreOS,4,/pkg,1388,37.053
-By number of commits to file,CoreOS,4,/Godeps/_workspace/src/github.com,1186,31.66
-By number of commits to file,CoreOS,4,/pkg/kubelet,668,17.832
-By number of commits to file,CoreOS,4,/Godeps/_workspace/src/github.com/coreos,527,14.068
-By number of commits to file,CoreOS,4,/Godeps/_workspace/src/github.com/cznic,358,9.557
-By number of commits to file,CoreOS,4,/Godeps/_workspace/src/github.com/coreos/etcd,354,9.45
-By number of commits to file,CoreOS,4,/pkg/registry,306,8.169
-By number of commits to file,CoreOS,4,/cluster,275,7.341
-By number of commits to file,CoreOS,4,/pkg/kubelet/rkt,220,5.873
-By number of commits to file,CoreOS,4,/cluster/gce,210,5.606
-By number of commits to file,CoreOS,4,/cluster/gce/coreos,173,4.618
-By number of commits to file,CoreOS,4,/plugin,168,4.485
+By number of commits to file,CoreOS,4,Godeps,1440,38.441
+By number of commits to file,CoreOS,4,Godeps/_workspace/src,1396,37.266
+By number of commits to file,CoreOS,4,pkg,1388,37.053
+By number of commits to file,CoreOS,4,Godeps/_workspace/src/github.com,1186,31.66
+By number of commits to file,CoreOS,4,pkg/kubelet,668,17.832
+By number of commits to file,CoreOS,4,Godeps/_workspace/src/github.com/coreos,527,14.068
+By number of commits to file,CoreOS,4,Godeps/_workspace/src/github.com/cznic,358,9.557
+By number of commits to file,CoreOS,4,Godeps/_workspace/src/github.com/coreos/etcd,354,9.45
+By number of commits to file,CoreOS,4,pkg/registry,306,8.169
+By number of commits to file,CoreOS,4,cluster,275,7.341
+By number of commits to file,CoreOS,4,pkg/kubelet/rkt,220,5.873
+By number of commits to file,CoreOS,4,cluster/gce,210,5.606
+By number of commits to file,CoreOS,4,cluster/gce/coreos,173,4.618
+By number of commits to file,CoreOS,4,plugin,168,4.485
+By number of commits to file,CoreOS,4,plugin/pkg,164,4.378
+By number of commits to file,CoreOS,4,Godeps/_workspace/src/github.com/appc/spec,147,3.924
+By number of commits to file,CoreOS,4,pkg/storage,127,3.39
+By number of commits to file,CoreOS,4,Godeps/_workspace/src/golang.org/x,121,3.23
+By number of commits to file,CoreOS,4,Godeps/_workspace/src/github.com/appc/spec/schema,113,3.017
+By number of commits to file,CoreOS,4,pkg/kubelet/rkt/rkt.go,106,2.83
+By number of commits to file,CoreOS,4,Godeps/_workspace/src/golang.org/x/crypto,104,2.776
+By number of commits to file,CoreOS,4,docs,104,2.776
 All By number of commits to file,Huawei,5,"",2325,1.268
-By number of commits to file,Huawei,5,/pkg,821,35.312
-By number of commits to file,Huawei,5,/federation,479,20.602
-By number of commits to file,Huawei,5,/docs,375,16.129
-By number of commits to file,Huawei,5,/pkg/kubectl,212,9.118
-By number of commits to file,Huawei,5,/test,206,8.86
-By number of commits to file,Huawei,5,/federation/pkg,189,8.129
-By number of commits to file,Huawei,5,/docs/user-guide,171,7.355
-By number of commits to file,Huawei,5,/federation/client,170,7.312
-By number of commits to file,Huawei,5,/federation/client/clientset_generated,169,7.269
-By number of commits to file,Huawei,5,/pkg/kubectl/cmd,146,6.28
-By number of commits to file,Huawei,5,/docs/user-guide/kubectl,138,5.935
-By number of commits to file,Huawei,5,/pkg/api,137,5.892
-By number of commits to file,Huawei,5,/cluster,118,5.075
-By number of commits to file,Huawei,5,/plugin,115,4.946
-By number of commits to file,Huawei,5,/test/e2e,110,4.731
+By number of commits to file,Huawei,5,pkg,821,35.312
+By number of commits to file,Huawei,5,federation,479,20.602
+By number of commits to file,Huawei,5,docs,375,16.129
+By number of commits to file,Huawei,5,pkg/kubectl,212,9.118
+By number of commits to file,Huawei,5,test,206,8.86
+By number of commits to file,Huawei,5,federation/pkg,189,8.129
+By number of commits to file,Huawei,5,docs/user-guide,171,7.355
+By number of commits to file,Huawei,5,federation/client,170,7.312
+By number of commits to file,Huawei,5,federation/client/clientset_generated,169,7.269
+By number of commits to file,Huawei,5,pkg/kubectl/cmd,146,6.28
+By number of commits to file,Huawei,5,docs/user-guide/kubectl,138,5.935
+By number of commits to file,Huawei,5,pkg/api,137,5.892
+By number of commits to file,Huawei,5,cluster,118,5.075
+By number of commits to file,Huawei,5,plugin,115,4.946
+By number of commits to file,Huawei,5,test/e2e,110,4.731
+By number of commits to file,Huawei,5,docs/man,110,4.731
+By number of commits to file,Huawei,5,pkg/kubelet,110,4.731
+By number of commits to file,Huawei,5,plugin/pkg,109,4.688
+By number of commits to file,Huawei,5,docs/man/man1,105,4.516
+By number of commits to file,Huawei,5,pkg/registry,97,4.172
+By number of commits to file,Huawei,5,federation/pkg/federation-controller,93,4.0
+By number of commits to file,Huawei,5,plugin/pkg/scheduler,88,3.785
+By number of commits to file,Huawei,5,federation/client/clientset_generated/federation_internalclientset,84,3.613
+By number of commits to file,Huawei,5,pkg/controller,79,3.398
+By number of commits to file,Huawei,5,federation/pkg/kubefed,68,2.925
 All By number of commits to file,Self,6,"",1805,0.984
-By number of commits to file,Self,6,/pkg,409,22.659
-By number of commits to file,Self,6,/third_party,376,20.831
-By number of commits to file,Self,6,/third_party/src,373,20.665
-By number of commits to file,Self,6,/cluster,235,13.019
-By number of commits to file,Self,6,/third_party/src/code.google.com/p,232,12.853
-By number of commits to file,Self,6,/docs,231,12.798
-By number of commits to file,Self,6,/third_party/src/code.google.com/p/google-api-go-client,224,12.41
-By number of commits to file,Self,6,/docs/getting-started-guides,154,8.532
-By number of commits to file,Self,6,/examples,126,6.981
-By number of commits to file,Self,6,/third_party/src/github.com,115,6.371
-By number of commits to file,Self,6,/pkg/kubelet,75,4.155
-By number of commits to file,Self,6,/federation,75,4.155
-By number of commits to file,Self,6,/plugin,75,4.155
-By number of commits to file,Self,6,/plugin/pkg,73,4.044
+By number of commits to file,Self,6,pkg,409,22.659
+By number of commits to file,Self,6,third_party,376,20.831
+By number of commits to file,Self,6,third_party/src,373,20.665
+By number of commits to file,Self,6,cluster,235,13.019
+By number of commits to file,Self,6,third_party/src/code.google.com/p,232,12.853
+By number of commits to file,Self,6,docs,231,12.798
+By number of commits to file,Self,6,third_party/src/code.google.com/p/google-api-go-client,224,12.41
+By number of commits to file,Self,6,docs/getting-started-guides,154,8.532
+By number of commits to file,Self,6,examples,126,6.981
+By number of commits to file,Self,6,third_party/src/github.com,115,6.371
+By number of commits to file,Self,6,pkg/kubelet,75,4.155
+By number of commits to file,Self,6,federation,75,4.155
+By number of commits to file,Self,6,plugin,75,4.155
+By number of commits to file,Self,6,plugin/pkg,73,4.044
+By number of commits to file,Self,6,third_party/src/github.com/google,73,4.044
+By number of commits to file,Self,6,third_party/src/github.com/google/cadvisor,72,3.989
+By number of commits to file,Self,6,pkg/kubectl,71,3.934
+By number of commits to file,Self,6,pkg/registry,66,3.657
+By number of commits to file,Self,6,cluster/ubuntu,65,3.601
+By number of commits to file,Self,6,pkg/kubectl/cmd,63,3.49
+By number of commits to file,Self,6,docs/getting-started-guides/coreos,62,3.435
+By number of commits to file,Self,6,plugin/pkg/admission,60,3.324
+By number of commits to file,Self,6,staging/src,57,3.158
 All By number of commits to file,FathomDB,7,"",1548,0.844
-By number of commits to file,FathomDB,7,/pkg,744,48.062
-By number of commits to file,FathomDB,7,/cluster,487,31.46
-By number of commits to file,FathomDB,7,/pkg/cloudprovider,322,20.801
-By number of commits to file,FathomDB,7,/cluster/aws,293,18.928
-By number of commits to file,FathomDB,7,/pkg/cloudprovider/providers,153,9.884
-By number of commits to file,FathomDB,7,/cluster/saltbase,129,8.333
-By number of commits to file,FathomDB,7,/cluster/saltbase/salt,124,8.01
-By number of commits to file,FathomDB,7,/pkg/api,122,7.881
-By number of commits to file,FathomDB,7,/pkg/cloudprovider/providers/aws,119,7.687
-By number of commits to file,FathomDB,7,/cluster/aws/util.sh,111,7.171
-By number of commits to file,FathomDB,7,/pkg/cloudprovider/aws,93,6.008
-By number of commits to file,FathomDB,7,/cluster/aws/templates,82,5.297
-By number of commits to file,FathomDB,7,/pkg/volume,77,4.974
-By number of commits to file,FathomDB,7,/test,77,4.974
-By number of commits to file,FathomDB,7,/test/e2e,76,4.91
+By number of commits to file,FathomDB,7,pkg,744,48.062
+By number of commits to file,FathomDB,7,cluster,487,31.46
+By number of commits to file,FathomDB,7,pkg/cloudprovider,322,20.801
+By number of commits to file,FathomDB,7,cluster/aws,293,18.928
+By number of commits to file,FathomDB,7,pkg/cloudprovider/providers,153,9.884
+By number of commits to file,FathomDB,7,cluster/saltbase,129,8.333
+By number of commits to file,FathomDB,7,cluster/saltbase/salt,124,8.01
+By number of commits to file,FathomDB,7,pkg/api,122,7.881
+By number of commits to file,FathomDB,7,pkg/cloudprovider/providers/aws,119,7.687
+By number of commits to file,FathomDB,7,cluster/aws/util.sh,111,7.171
+By number of commits to file,FathomDB,7,pkg/cloudprovider/aws,93,6.008
+By number of commits to file,FathomDB,7,cluster/aws/templates,82,5.297
+By number of commits to file,FathomDB,7,pkg/volume,77,4.974
+By number of commits to file,FathomDB,7,test,77,4.974
+By number of commits to file,FathomDB,7,test/e2e,76,4.91
+By number of commits to file,FathomDB,7,pkg/cloudprovider/providers/aws/aws.go,68,4.393
+By number of commits to file,FathomDB,7,pkg/kubelet,68,4.393
+By number of commits to file,FathomDB,7,federation,65,4.199
+By number of commits to file,FathomDB,7,federation/pkg,61,3.941
+By number of commits to file,FathomDB,7,pkg/cloudprovider/aws/aws.go,57,3.682
+By number of commits to file,FathomDB,7,federation/pkg/dnsprovider,52,3.359
+By number of commits to file,FathomDB,7,Godeps,52,3.359
+By number of commits to file,FathomDB,7,Godeps/_workspace,45,2.907
+By number of commits to file,FathomDB,7,federation/pkg/dnsprovider/providers,45,2.907
+By number of commits to file,FathomDB,7,Godeps/_workspace/src,45,2.907
 All By number of commits to file,Mirantis,8,"",1239,0.676
-By number of commits to file,Mirantis,8,/pkg,856,69.088
-By number of commits to file,Mirantis,8,/pkg/kubectl,198,15.981
-By number of commits to file,Mirantis,8,/pkg/kubelet,167,13.479
-By number of commits to file,Mirantis,8,/pkg/kubectl/cmd,138,11.138
-By number of commits to file,Mirantis,8,/pkg/controller,89,7.183
-By number of commits to file,Mirantis,8,/pkg/apis,62,5.004
-By number of commits to file,Mirantis,8,/pkg/util,56,4.52
-By number of commits to file,Mirantis,8,/test,51,4.116
-By number of commits to file,Mirantis,8,/pkg/registry,49,3.955
-By number of commits to file,Mirantis,8,/contrib/mesos,49,3.955
-By number of commits to file,Mirantis,8,/plugin/pkg,48,3.874
-By number of commits to file,Mirantis,8,/contrib/mesos/pkg,47,3.793
-By number of commits to file,Mirantis,8,/pkg/volume,46,3.713
+By number of commits to file,Mirantis,8,pkg,856,69.088
+By number of commits to file,Mirantis,8,pkg/kubectl,198,15.981
+By number of commits to file,Mirantis,8,pkg/kubelet,167,13.479
+By number of commits to file,Mirantis,8,pkg/kubectl/cmd,138,11.138
+By number of commits to file,Mirantis,8,pkg/controller,89,7.183
+By number of commits to file,Mirantis,8,pkg/apis,62,5.004
+By number of commits to file,Mirantis,8,pkg/util,56,4.52
+By number of commits to file,Mirantis,8,test,51,4.116
+By number of commits to file,Mirantis,8,pkg/registry,49,3.955
+By number of commits to file,Mirantis,8,contrib/mesos,49,3.955
+By number of commits to file,Mirantis,8,plugin/pkg,48,3.874
+By number of commits to file,Mirantis,8,contrib/mesos/pkg,47,3.793
+By number of commits to file,Mirantis,8,pkg/volume,46,3.713
+By number of commits to file,Mirantis,8,pkg/api,42,3.39
+By number of commits to file,Mirantis,8,test/e2e,40,3.228
+By number of commits to file,Mirantis,8,pkg/client,40,3.228
+By number of commits to file,Mirantis,8,hack,38,3.067
+By number of commits to file,Mirantis,8,federation,35,2.825
+By number of commits to file,Mirantis,8,pkg/controller/daemon,33,2.663
+By number of commits to file,Mirantis,8,docs,31,2.502
+By number of commits to file,Mirantis,8,pkg/kubelet/server,29,2.341
+By number of commits to file,Mirantis,8,plugin/pkg/scheduler,26,2.098
+By number of commits to file,Mirantis,8,staging/src,26,2.098
 All By number of commits to file,Mesosphere,9,"",1122,0.612
-By number of commits to file,Mesosphere,9,/contrib/mesos,423,37.701
-By number of commits to file,Mesosphere,9,/Godeps,387,34.492
-By number of commits to file,Mesosphere,9,/contrib/mesos/pkg,384,34.225
-By number of commits to file,Mesosphere,9,/Godeps/_workspace/src/github.com,375,33.422
-By number of commits to file,Mesosphere,9,/contrib/mesos/pkg/scheduler,198,17.647
-By number of commits to file,Mesosphere,9,/Godeps/_workspace/src/github.com/mesos/mesos-go,181,16.132
-By number of commits to file,Mesosphere,9,/cluster,98,8.734
-By number of commits to file,Mesosphere,9,/cluster/mesos/docker,81,7.219
-By number of commits to file,Mesosphere,9,/pkg,78,6.952
-By number of commits to file,Mesosphere,9,/Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto,73,6.506
+By number of commits to file,Mesosphere,9,contrib/mesos,423,37.701
+By number of commits to file,Mesosphere,9,Godeps,387,34.492
+By number of commits to file,Mesosphere,9,contrib/mesos/pkg,384,34.225
+By number of commits to file,Mesosphere,9,Godeps/_workspace/src/github.com,375,33.422
+By number of commits to file,Mesosphere,9,contrib/mesos/pkg/scheduler,198,17.647
+By number of commits to file,Mesosphere,9,Godeps/_workspace/src/github.com/mesos/mesos-go,181,16.132
+By number of commits to file,Mesosphere,9,cluster,98,8.734
+By number of commits to file,Mesosphere,9,cluster/mesos/docker,81,7.219
+By number of commits to file,Mesosphere,9,pkg,78,6.952
+By number of commits to file,Mesosphere,9,Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto,73,6.506
+By number of commits to file,Mesosphere,9,Godeps/_workspace/src/github.com/gogo/protobuf/proto,65,5.793
+By number of commits to file,Mesosphere,9,contrib/mesos/pkg/executor,62,5.526
+By number of commits to file,Mesosphere,9,contrib/mesos/pkg/scheduler/podtask,52,4.635
+By number of commits to file,Mesosphere,9,test/e2e,47,4.189
+By number of commits to file,Mesosphere,9,contrib/mesos/pkg/scheduler/service,41,3.654
+By number of commits to file,Mesosphere,9,Godeps/_workspace/src/github.com/camlistore,38,3.387
+By number of commits to file,Mesosphere,9,Godeps/_workspace/src/github.com/camlistore/camlistore,37,3.298
 All By number of commits to file,Kismatic,10,"",1087,0.593
-By number of commits to file,Kismatic,10,/third_party/ui/bower_components,702,64.581
-By number of commits to file,Kismatic,10,/www,370,34.039
-By number of commits to file,Kismatic,10,/third_party/ui/bower_components/angular-material,301,27.691
-By number of commits to file,Kismatic,10,/third_party/ui/bower_components/angular-material/modules,277,25.483
-By number of commits to file,Kismatic,10,/www/master,239,21.987
-By number of commits to file,Kismatic,10,/third_party/ui/bower_components/angular-material/modules/js,188,17.295
-By number of commits to file,Kismatic,10,/third_party/ui/bower_components/modernizr,141,12.971
-By number of commits to file,Kismatic,10,/www/master/components,129,11.868
-By number of commits to file,Kismatic,10,/www/master/components/dashboard,127,11.684
-By number of commits to file,Kismatic,10,/www/app,112,10.304
-By number of commits to file,Kismatic,10,/third_party/ui/bower_components/modernizr/feature-detects,103,9.476
-By number of commits to file,Kismatic,10,/third_party/ui/bower_components/jquery,90,8.28
-By number of commits to file,Kismatic,10,/third_party/ui/bower_components/angular-material/modules/closure,88,8.096
+By number of commits to file,Kismatic,10,third_party/ui/bower_components,702,64.581
+By number of commits to file,Kismatic,10,www,370,34.039
+By number of commits to file,Kismatic,10,third_party/ui/bower_components/angular-material,301,27.691
+By number of commits to file,Kismatic,10,third_party/ui/bower_components/angular-material/modules,277,25.483
+By number of commits to file,Kismatic,10,www/master,239,21.987
+By number of commits to file,Kismatic,10,third_party/ui/bower_components/angular-material/modules/js,188,17.295
+By number of commits to file,Kismatic,10,third_party/ui/bower_components/modernizr,141,12.971
+By number of commits to file,Kismatic,10,www/master/components,129,11.868
+By number of commits to file,Kismatic,10,www/master/components/dashboard,127,11.684
+By number of commits to file,Kismatic,10,www/app,112,10.304
+By number of commits to file,Kismatic,10,third_party/ui/bower_components/modernizr/feature-detects,103,9.476
+By number of commits to file,Kismatic,10,third_party/ui/bower_components/jquery,90,8.28
+By number of commits to file,Kismatic,10,third_party/ui/bower_components/angular-material/modules/closure,88,8.096
+By number of commits to file,Kismatic,10,third_party/ui/bower_components/jquery/src,84,7.728
+By number of commits to file,Kismatic,10,www/app/components,68,6.256
+By number of commits to file,Kismatic,10,www/app/components/dashboard,65,5.98
+By number of commits to file,Kismatic,10,www/master/components/dashboard/js/modules,48,4.416
+By number of commits to file,Kismatic,10,www/master/shared,43,3.956
+By number of commits to file,Kismatic,10,www/master/components/dashboard/views,41,3.772
+By number of commits to file,Kismatic,10,www/app/components/dashboard/views,41,3.772
+By number of commits to file,Kismatic,10,www/master/components/dashboard/js/modules/controllers,34,3.128
+By number of commits to file,Kismatic,10,www/app/assets,30,2.76
 All By number of commits to file,IBM,11,"",940,0.513
-By number of commits to file,IBM,11,/pkg,283,30.106
-By number of commits to file,IBM,11,/test,222,23.617
-By number of commits to file,IBM,11,/test/images,194,20.638
-By number of commits to file,IBM,11,/docs,99,10.532
-By number of commits to file,IBM,11,/pkg/kubectl,90,9.574
-By number of commits to file,IBM,11,/pkg/kubectl/cmd,67,7.128
-By number of commits to file,IBM,11,/plugin,63,6.702
-By number of commits to file,IBM,11,/plugin/pkg,60,6.383
-By number of commits to file,IBM,11,/pkg/api,49,5.213
-By number of commits to file,IBM,11,/plugin/pkg/scheduler,47,5.0
-By number of commits to file,IBM,11,/cluster,47,5.0
-By number of commits to file,IBM,11,/staging/src/k8s.io,46,4.894
-By number of commits to file,IBM,11,/docs/design,41,4.362
+By number of commits to file,IBM,11,pkg,283,30.106
+By number of commits to file,IBM,11,test,222,23.617
+By number of commits to file,IBM,11,test/images,194,20.638
+By number of commits to file,IBM,11,docs,99,10.532
+By number of commits to file,IBM,11,pkg/kubectl,90,9.574
+By number of commits to file,IBM,11,pkg/kubectl/cmd,67,7.128
+By number of commits to file,IBM,11,plugin,63,6.702
+By number of commits to file,IBM,11,plugin/pkg,60,6.383
+By number of commits to file,IBM,11,pkg/api,49,5.213
+By number of commits to file,IBM,11,plugin/pkg/scheduler,47,5.0
+By number of commits to file,IBM,11,cluster,47,5.0
+By number of commits to file,IBM,11,staging/src/k8s.io,46,4.894
+By number of commits to file,IBM,11,docs/design,41,4.362
+By number of commits to file,IBM,11,pkg/kubelet,41,4.362
+By number of commits to file,IBM,11,pkg/controller,39,4.149
+By number of commits to file,IBM,11,docs/devel,38,4.043
+By number of commits to file,IBM,11,hack,35,3.723
+By number of commits to file,IBM,11,examples,31,3.298
+By number of commits to file,IBM,11,staging/src/k8s.io/client-go,28,2.979
+By number of commits to file,IBM,11,cmd,24,2.553
+By number of commits to file,IBM,11,federation,23,2.447
+By number of commits to file,IBM,11,cluster/ubuntu,23,2.447
+By number of commits to file,IBM,11,api,22,2.34
 All By number of commits to file,Epic Games,12,"",902,0.492
-By number of commits to file,Epic Games,12,/Godeps,875,97.007
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com,872,96.674
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com/jmespath/go-jmespath,673,74.612
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com/jmespath/go-jmespath/fuzz,643,71.286
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com/jmespath/go-jmespath/fuzz/corpus,642,71.175
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go,184,20.399
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws,103,11.419
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/service,38,4.213
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/internal,35,3.88
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws/credentials,26,2.882
-By number of commits to file,Epic Games,12,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/internal/protocol,26,2.882
+By number of commits to file,Epic Games,12,Godeps,875,97.007
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com,872,96.674
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/jmespath/go-jmespath,673,74.612
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/jmespath/go-jmespath/fuzz,643,71.286
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/jmespath/go-jmespath/fuzz/corpus,642,71.175
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go,184,20.399
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws,103,11.419
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service,38,4.213
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/internal,35,3.88
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws/credentials,26,2.882
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/internal/protocol,26,2.882
+By number of commits to file,Epic Games,12,pkg/cloudprovider,25,2.772
+By number of commits to file,Epic Games,12,pkg/cloudprovider/providers/aws,22,2.439
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/ec2,18,1.996
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/jmespath/go-jmespath/compliance,16,1.774
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws/awsutil,14,1.552
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/service/elb,13,1.441
+By number of commits to file,Epic Games,12,pkg/cloudprovider/providers/aws/aws.go,11,1.22
+By number of commits to file,Epic Games,12,Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws/request,10,1.109
 All By number of commits to file,Weaveworks,13,"",819,0.447
-By number of commits to file,Weaveworks,13,/cmd,504,61.538
-By number of commits to file,Weaveworks,13,/cmd/kubeadm,476,58.12
-By number of commits to file,Weaveworks,13,/cmd/kubeadm/app,470,57.387
-By number of commits to file,Weaveworks,13,/pkg,129,15.751
-By number of commits to file,Weaveworks,13,/docs,117,14.286
-By number of commits to file,Weaveworks,13,/cmd/kubeadm/app/master,113,13.797
-By number of commits to file,Weaveworks,13,/docs/getting-started-guides,106,12.943
-By number of commits to file,Weaveworks,13,/docs/getting-started-guides/coreos/azure,99,12.088
-By number of commits to file,Weaveworks,13,/cmd/kubeadm/app/phases,97,11.844
-By number of commits to file,Weaveworks,13,/cmd/kubeadm/app/cmd,83,10.134
-By number of commits to file,Weaveworks,13,/pkg/kubeadm,60,7.326
-By number of commits to file,Weaveworks,13,/cmd/kubeadm/app/apis/kubeadm,57,6.96
-By number of commits to file,Weaveworks,13,/cmd/kubeadm/app/util,33,4.029
+By number of commits to file,Weaveworks,13,cmd,504,61.538
+By number of commits to file,Weaveworks,13,cmd/kubeadm,476,58.12
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app,470,57.387
+By number of commits to file,Weaveworks,13,pkg,129,15.751
+By number of commits to file,Weaveworks,13,docs,117,14.286
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/master,113,13.797
+By number of commits to file,Weaveworks,13,docs/getting-started-guides,106,12.943
+By number of commits to file,Weaveworks,13,docs/getting-started-guides/coreos/azure,99,12.088
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/phases,97,11.844
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/cmd,83,10.134
+By number of commits to file,Weaveworks,13,pkg/kubeadm,60,7.326
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/apis/kubeadm,57,6.96
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/util,33,4.029
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/master/manifests.go,28,3.419
+By number of commits to file,Weaveworks,13,docs/getting-started-guides/coreos/azure/cloud_config_templates,27,3.297
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/phases/certs,26,3.175
+By number of commits to file,Weaveworks,13,pkg/kubeadm/master,24,2.93
+By number of commits to file,Weaveworks,13,docs/getting-started-guides/coreos/azure/lib,23,2.808
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/cmd/init.go,22,2.686
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/node,22,2.686
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/constants,22,2.686
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/phases/addons,21,2.564
+By number of commits to file,Weaveworks,13,cmd/kubeadm/app/constants/constants.go,19,2.32
 All By number of commits to file,Hyper.sh,14,"",758,0.413
-By number of commits to file,Hyper.sh,14,/pkg,582,76.781
-By number of commits to file,Hyper.sh,14,/pkg/kubelet,480,63.325
-By number of commits to file,Hyper.sh,14,/pkg/kubelet/kuberuntime,129,17.018
-By number of commits to file,Hyper.sh,14,/pkg/kubelet/dockershim,122,16.095
-By number of commits to file,Hyper.sh,14,/test,64,8.443
-By number of commits to file,Hyper.sh,14,/pkg/kubelet/api,58,7.652
-By number of commits to file,Hyper.sh,14,/test/e2e,40,5.277
-By number of commits to file,Hyper.sh,14,/pkg/kubelet/api/v1alpha1/runtime,36,4.749
-By number of commits to file,Hyper.sh,14,/pkg/kubelet/dockertools,33,4.354
-By number of commits to file,Hyper.sh,14,/pkg/controller,29,3.826
-By number of commits to file,Hyper.sh,14,/federation,29,3.826
-By number of commits to file,Hyper.sh,14,/federation/pkg,28,3.694
-By number of commits to file,Hyper.sh,14,/plugin,27,3.562
-By number of commits to file,Hyper.sh,14,/plugin/pkg,26,3.43
+By number of commits to file,Hyper.sh,14,pkg,582,76.781
+By number of commits to file,Hyper.sh,14,pkg/kubelet,480,63.325
+By number of commits to file,Hyper.sh,14,pkg/kubelet/kuberuntime,129,17.018
+By number of commits to file,Hyper.sh,14,pkg/kubelet/dockershim,122,16.095
+By number of commits to file,Hyper.sh,14,test,64,8.443
+By number of commits to file,Hyper.sh,14,pkg/kubelet/api,58,7.652
+By number of commits to file,Hyper.sh,14,test/e2e,40,5.277
+By number of commits to file,Hyper.sh,14,pkg/kubelet/api/v1alpha1/runtime,36,4.749
+By number of commits to file,Hyper.sh,14,pkg/kubelet/dockertools,33,4.354
+By number of commits to file,Hyper.sh,14,pkg/controller,29,3.826
+By number of commits to file,Hyper.sh,14,federation,29,3.826
+By number of commits to file,Hyper.sh,14,federation/pkg,28,3.694
+By number of commits to file,Hyper.sh,14,plugin,27,3.562
+By number of commits to file,Hyper.sh,14,plugin/pkg,26,3.43
+By number of commits to file,Hyper.sh,14,federation/pkg/federation-controller,26,3.43
+By number of commits to file,Hyper.sh,14,plugin/pkg/scheduler,26,3.43
+By number of commits to file,Hyper.sh,14,pkg/kubelet/container,24,3.166
+By number of commits to file,Hyper.sh,14,pkg/kubelet/remote,23,3.034
+By number of commits to file,Hyper.sh,14,test/e2e_node,22,2.902
+By number of commits to file,Hyper.sh,14,hack,20,2.639
+By number of commits to file,Hyper.sh,14,pkg/kubelet/kuberuntime/kuberuntime_manager.go,19,2.507
+By number of commits to file,Hyper.sh,14,pkg/kubelet/api/v1alpha1/runtime/api.proto,18,2.375
+By number of commits to file,Hyper.sh,14,pkg/kubelet/api/v1alpha1/runtime/api.pb.go,18,2.375
+By number of commits to file,Hyper.sh,14,pkg/util,18,2.375
 All By number of commits to file,Docker,15,"",743,0.405
-By number of commits to file,Docker,15,/pkg,393,52.894
-By number of commits to file,Docker,15,/pkg/kubelet,121,16.285
-By number of commits to file,Docker,15,/contrib,87,11.709
-By number of commits to file,Docker,15,/docs,79,10.633
-By number of commits to file,Docker,15,/pkg/util,73,9.825
-By number of commits to file,Docker,15,/contrib/ansible,73,9.825
-By number of commits to file,Docker,15,/docs/getting-started-guides,64,8.614
-By number of commits to file,Docker,15,/contrib/ansible/roles,64,8.614
-By number of commits to file,Docker,15,/cluster,59,7.941
-By number of commits to file,Docker,15,/cluster/ubuntu,52,6.999
-By number of commits to file,Docker,15,/pkg/kubelet/dockertools,49,6.595
-By number of commits to file,Docker,15,/test,41,5.518
-By number of commits to file,Docker,15,/docs/getting-started-guides/docker-multinode,39,5.249
-By number of commits to file,Docker,15,/pkg/volume,38,5.114
-By number of commits to file,Docker,15,/plugin,33,4.441
+By number of commits to file,Docker,15,pkg,393,52.894
+By number of commits to file,Docker,15,pkg/kubelet,121,16.285
+By number of commits to file,Docker,15,contrib,87,11.709
+By number of commits to file,Docker,15,docs,79,10.633
+By number of commits to file,Docker,15,pkg/util,73,9.825
+By number of commits to file,Docker,15,contrib/ansible,73,9.825
+By number of commits to file,Docker,15,docs/getting-started-guides,64,8.614
+By number of commits to file,Docker,15,contrib/ansible/roles,64,8.614
+By number of commits to file,Docker,15,cluster,59,7.941
+By number of commits to file,Docker,15,cluster/ubuntu,52,6.999
+By number of commits to file,Docker,15,pkg/kubelet/dockertools,49,6.595
+By number of commits to file,Docker,15,test,41,5.518
+By number of commits to file,Docker,15,docs/getting-started-guides/docker-multinode,39,5.249
+By number of commits to file,Docker,15,pkg/volume,38,5.114
+By number of commits to file,Docker,15,plugin,33,4.441
+By number of commits to file,Docker,15,cmd,32,4.307
+By number of commits to file,Docker,15,pkg/client,31,4.172
+By number of commits to file,Docker,15,plugin/pkg,30,4.038
+By number of commits to file,Docker,15,test/e2e,26,3.499
+By number of commits to file,Docker,15,pkg/controller,25,3.365
+By number of commits to file,Docker,15,cluster/ubuntu/util.sh,24,3.23
+By number of commits to file,Docker,15,plugin/pkg/scheduler,24,3.23
+By number of commits to file,Docker,15,pkg/api,23,3.096
+By number of commits to file,Docker,15,pkg/registry,19,2.557
+By number of commits to file,Docker,15,contrib/ansible/roles/master,17,2.288
 All By number of commits to file,NotFound,16,"",158,0.086
-By number of commits to file,NotFound,16,/pkg,72,45.57
-By number of commits to file,NotFound,16,/cluster,32,20.253
-By number of commits to file,NotFound,16,/pkg/kubelet,24,15.19
-By number of commits to file,NotFound,16,/Godeps,23,14.557
-By number of commits to file,NotFound,16,/Godeps/_workspace/src/github.com/coreos,21,13.291
-By number of commits to file,NotFound,16,/cluster/addons,17,10.759
-By number of commits to file,NotFound,16,/Godeps/_workspace/src/github.com/coreos/etcd,13,8.228
-By number of commits to file,NotFound,16,/docs,12,7.595
-By number of commits to file,NotFound,16,/pkg/controller,12,7.595
-By number of commits to file,NotFound,16,/cluster/addons/fluentd-elasticsearch,11,6.962
-By number of commits to file,NotFound,16,/pkg/kubectl,10,6.329
-By number of commits to file,NotFound,16,/pkg/kubelet/dockertools,10,6.329
+By number of commits to file,NotFound,16,pkg,72,45.57
+By number of commits to file,NotFound,16,cluster,32,20.253
+By number of commits to file,NotFound,16,pkg/kubelet,24,15.19
+By number of commits to file,NotFound,16,Godeps,23,14.557
+By number of commits to file,NotFound,16,Godeps/_workspace/src/github.com/coreos,21,13.291
+By number of commits to file,NotFound,16,cluster/addons,17,10.759
+By number of commits to file,NotFound,16,Godeps/_workspace/src/github.com/coreos/etcd,13,8.228
+By number of commits to file,NotFound,16,docs,12,7.595
+By number of commits to file,NotFound,16,pkg/controller,12,7.595
+By number of commits to file,NotFound,16,cluster/addons/fluentd-elasticsearch,11,6.962
+By number of commits to file,NotFound,16,pkg/kubectl,10,6.329
+By number of commits to file,NotFound,16,pkg/kubelet/dockertools,10,6.329
+By number of commits to file,NotFound,16,cluster/ubuntu,9,5.696
+By number of commits to file,NotFound,16,Godeps/_workspace/src/github.com/coreos/go-etcd,8,5.063
+By number of commits to file,NotFound,16,Godeps/_workspace/src/github.com/coreos/etcd/pkg/types,8,5.063
+By number of commits to file,NotFound,16,Godeps/_workspace/src/github.com/coreos/go-etcd/etcd,8,5.063
+By number of commits to file,NotFound,16,docs/user-guide,7,4.43
+By number of commits to file,NotFound,16,pkg/util,6,3.797
+By number of commits to file,NotFound,16,pkg/kubelet/container,6,3.797
+By number of commits to file,NotFound,16,pkg/cloudprovider/providers,5,3.165
