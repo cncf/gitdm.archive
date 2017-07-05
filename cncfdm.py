@@ -661,8 +661,8 @@ for e in elist:
 reports.Write ('Processed %d csets from %d developers\n' % (CSCount,
                                                             ndev))
 reports.Write ('%d employers found\n' % (nempl))
-reports.Write ('A total of %d lines added, %d removed (delta %d)\n' %
-               (TotalAdded, TotalRemoved, TotalAdded - TotalRemoved))
+reports.Write ('A total of %d lines added, %d removed, %d changed (delta %d)\n' %
+               (TotalAdded, TotalRemoved, TotalChanged, TotalAdded - TotalRemoved))
 if TotalChanged == 0:
     TotalChanged = 1 # HACK to avoid div by zero
 if DateStats:
