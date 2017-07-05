@@ -5,13 +5,18 @@ def filestats(csv_file, out_file)
   puts "Running on #{csv_file}"
   # "email","name","date","affiliation","file","added","removed"
   comps = {}
+  fcommits = fchanged = 0
+  files = {}
   CSV.foreach(csv_file, headers: true) do |row|
     h = row.to_h
     c = h['affiliation']
     f = '/' + h['file']
     a = h['added'].to_i
     r = h['removed'].to_i
-    mx = [a, r].max
+    mx = h['changed'].to_i
+    files[f] = true
+    # p [f, a, r, mx] if f.include?('/vendor')
+    next if mx == 0
     # Use end index `-2` to parse only directories, use `-1` to parse files as well
     #ds = f.split('/')[0..-2]
     ds = f.split('/')[0..-1]
@@ -37,12 +42,15 @@ def filestats(csv_file, out_file)
       comps[c][l][d][2] += mx
       comps[c][l][d][3] += 1
     end
+    fcommits += 1
+    fchanged += mx
   end
+  files = files.keys.sort
 
   # Summaries all & per company
   srt = []
   summary_all = [0, 0, 0, 0]
-  #summary_all2 = [0, 0, 0, 0]
+  summary_all2 = [0, 0, 0, 0]
   comps.each do |comp, data|
     changed = data[0][''][2]
     commits = data[0][''][3]
@@ -51,16 +59,16 @@ def filestats(csv_file, out_file)
       summary_all[index] += value
     end
     # To check if algorithm is OK compare summary_all with summary_all2
-    # ks = data.keys.select { |k| k.is_a?(String) }
-    # ks.each do |k|
-    #   d = data[k]
-    #   d.each_with_index do |value, index|
-    #     summary_all2[index] += value
-    #   end
-    # end
+    ks = data.keys.select { |k| k.is_a?(String) }
+    ks.each do |k|
+      d = data[k]
+      d.each_with_index do |value, index|
+        summary_all2[index] += value
+      end
+    end
   end
+  binding.pry unless summary_all == summary_all2 && summary_all[2] == fchanged && summary_all[3] == fcommits
   summary_all = summary_all.map(&:to_f)
-  # summary_all2 = summary_all2.map(&:to_f)
 
   # Top changed per lines modified and commits
   top_changed = srt.sort_by { |row| -row[1] }[0..14].map { |row| row[0] }
@@ -75,7 +83,7 @@ def filestats(csv_file, out_file)
 
   # Analysis
   all_results = []
-  [[top_changed, 'By changed lines', 2], [top_commits, 'By number of commits', 3]].each do |data|
+  [[top_changed, 'By changed lines', 2], [top_commits, 'By number of commits to file', 3]].each do |data|
     arr, order_name, v_index = data[0], data[1], data[2]
     all_results << ["All #{order_name}", 'All', 0, 0, '', summary_all[v_index].to_i, 100.0]
     arr.each_with_index do |comp_name, c_index|
