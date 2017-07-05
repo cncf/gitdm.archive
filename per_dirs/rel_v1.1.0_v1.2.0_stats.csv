@@ -109,8 +109,8 @@ By changed lines,Microsoft,9,/api/swagger-spec,512,7.345
 All By changed lines,Docker,10,"",5663,0.38
 By changed lines,Docker,10,/pkg,3244,57.284
 By changed lines,Docker,10,/pkg/util,1951,34.452
-By changed lines,Docker,10,/cluster,593,10.471
 By changed lines,Docker,10,/pkg/util/net,593,10.471
+By changed lines,Docker,10,/cluster,593,10.471
 By changed lines,Docker,10,/pkg/volume,567,10.012
 By changed lines,Docker,10,/cluster/ubuntu,553,9.765
 By changed lines,Docker,10,/cluster/ubuntu/util.sh,514,9.076
@@ -210,242 +210,245 @@ By changed lines,NotFound,17,/pkg/kubelet/dockertools/manager.go,56,7.609
 By changed lines,NotFound,17,/pkg/kubelet/dockertools/manager_test.go,40,5.435
 By changed lines,NotFound,17,/pkg/kubelet/container/image_puller.go,36,4.891
 By changed lines,NotFound,17,/docs/user-guide/ui.md,23,3.125
-All By number of commits,All,0,"",25642,100.0
-All By number of commits,Google,1,"",12740,49.684
-By number of commits,Google,1,/pkg,5577,43.776
-By number of commits,Google,1,/docs,1567,12.3
-By number of commits,Google,1,/test,1404,11.02
-By number of commits,Google,1,/pkg/client,1267,9.945
-By number of commits,Google,1,/test/e2e,1104,8.666
-By number of commits,Google,1,/Godeps,1059,8.312
-By number of commits,Google,1,/Godeps/_workspace/src,1018,7.991
-By number of commits,Google,1,/pkg/kubelet,912,7.159
-By number of commits,Google,1,/Godeps/_workspace/src/github.com,835,6.554
-By number of commits,Google,1,/hack,818,6.421
-By number of commits,Google,1,/cluster,746,5.856
-By number of commits,Google,1,/pkg/client/unversioned,709,5.565
-By number of commits,Google,1,/pkg/controller,635,4.984
-By number of commits,Google,1,/pkg/registry,605,4.749
-All By number of commits,Red Hat,2,"",7269,28.348
-By number of commits,Red Hat,2,/pkg,2862,39.373
-By number of commits,Red Hat,2,/Godeps,2564,35.273
-By number of commits,Red Hat,2,/Godeps/_workspace/src,2533,34.847
-By number of commits,Red Hat,2,/Godeps/_workspace/src/github.com,2239,30.802
-By number of commits,Red Hat,2,/contrib,494,6.796
-By number of commits,Red Hat,2,/contrib/mesos,479,6.59
-By number of commits,Red Hat,2,/contrib/mesos/pkg,456,6.273
-By number of commits,Red Hat,2,/pkg/kubectl,418,5.75
-By number of commits,Red Hat,2,/pkg/api,413,5.682
-By number of commits,Red Hat,2,/Godeps/_workspace/src/github.com/fsouza/go-dockerclient,377,5.186
-By number of commits,Red Hat,2,/contrib/mesos/pkg/scheduler,364,5.008
-By number of commits,Red Hat,2,/docs,363,4.994
-By number of commits,Red Hat,2,/test,342,4.705
-All By number of commits,Epic Games,3,"",832,3.245
-By number of commits,Epic Games,3,/Godeps,814,97.837
-By number of commits,Epic Games,3,/Godeps/_workspace/src/github.com,812,97.596
-By number of commits,Epic Games,3,/Godeps/_workspace/src/github.com/jmespath/go-jmespath,673,80.889
-By number of commits,Epic Games,3,/Godeps/_workspace/src/github.com/jmespath/go-jmespath/fuzz,643,77.284
-By number of commits,Epic Games,3,/Godeps/_workspace/src/github.com/jmespath/go-jmespath/fuzz/corpus,642,77.163
-By number of commits,Epic Games,3,/Godeps/_workspace/src/github.com/aws/aws-sdk-go,129,15.505
-By number of commits,Epic Games,3,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws,79,9.495
-By number of commits,Epic Games,3,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/service,26,3.125
-By number of commits,Epic Games,3,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws/credentials,18,2.163
-By number of commits,Epic Games,3,/pkg/cloudprovider/providers,17,2.043
-All By number of commits,Huawei,4,"",780,3.042
-By number of commits,Huawei,4,/pkg,407,52.179
-By number of commits,Huawei,4,/docs,180,23.077
-By number of commits,Huawei,4,/docs/user-guide,97,12.436
-By number of commits,Huawei,4,/pkg/registry,89,11.41
-By number of commits,Huawei,4,/docs/user-guide/kubectl,80,10.256
-By number of commits,Huawei,4,/pkg/kubelet,78,10.0
-By number of commits,Huawei,4,/pkg/api,62,7.949
-By number of commits,Huawei,4,/docs/man/man1,55,7.051
-By number of commits,Huawei,4,/pkg/kubectl,53,6.795
-By number of commits,Huawei,4,/examples,47,6.026
-By number of commits,Huawei,4,/test,46,5.897
-By number of commits,Huawei,4,/pkg/controller,38,4.872
-By number of commits,Huawei,4,/pkg/kubectl/cmd,35,4.487
-By number of commits,Huawei,4,/test/e2e,34,4.359
-All By number of commits,CoreOS,5,"",553,2.157
-By number of commits,CoreOS,5,/Godeps,268,48.463
-By number of commits,CoreOS,5,/Godeps/_workspace/src,260,47.016
-By number of commits,CoreOS,5,/Godeps/_workspace/src/github.com,135,24.412
-By number of commits,CoreOS,5,/pkg,104,18.807
-By number of commits,CoreOS,5,/Godeps/_workspace/src/google.golang.org/grpc,89,16.094
-By number of commits,CoreOS,5,/pkg/kubelet,77,13.924
-By number of commits,CoreOS,5,/plugin/pkg,74,13.382
-By number of commits,CoreOS,5,/plugin/pkg/scheduler,63,11.392
-By number of commits,CoreOS,5,/cluster,61,11.031
-By number of commits,CoreOS,5,/pkg/kubelet/rkt,61,11.031
-By number of commits,CoreOS,5,/cluster/gce,51,9.222
-By number of commits,CoreOS,5,/cluster/gce/coreos,47,8.499
-All By number of commits,Mesosphere,6,"",476,1.856
-By number of commits,Mesosphere,6,/contrib/mesos,229,48.109
-By number of commits,Mesosphere,6,/contrib/mesos/pkg,210,44.118
-By number of commits,Mesosphere,6,/contrib/mesos/pkg/scheduler,123,25.84
-By number of commits,Mesosphere,6,/Godeps,116,24.37
-By number of commits,Mesosphere,6,/Godeps/_workspace/src/github.com,110,23.109
-By number of commits,Mesosphere,6,/Godeps/_workspace/src/github.com/mesos/mesos-go,56,11.765
-By number of commits,Mesosphere,6,/Godeps/_workspace/src/github.com/camlistore,39,8.193
-By number of commits,Mesosphere,6,/cluster,39,8.193
-By number of commits,Mesosphere,6,/contrib/mesos/pkg/executor,39,8.193
-By number of commits,Mesosphere,6,/Godeps/_workspace/src/github.com/camlistore/camlistore,37,7.773
-By number of commits,Mesosphere,6,/cluster/mesos/docker,36,7.563
-All By number of commits,Docker,7,"",358,1.396
-By number of commits,Docker,7,/pkg,208,58.101
-By number of commits,Docker,7,/docs,46,12.849
-By number of commits,Docker,7,/pkg/util,41,11.453
-By number of commits,Docker,7,/pkg/volume,37,10.335
-By number of commits,Docker,7,/pkg/kubelet,37,10.335
-By number of commits,Docker,7,/docs/getting-started-guides,36,10.056
-By number of commits,Docker,7,/cluster,34,9.497
-By number of commits,Docker,7,/cluster/ubuntu,30,8.38
-By number of commits,Docker,7,/plugin,22,6.145
-By number of commits,Docker,7,/docs/getting-started-guides/docker-multinode,22,6.145
-By number of commits,Docker,7,/pkg/api,21,5.866
-By number of commits,Docker,7,/plugin/pkg,20,5.587
-By number of commits,Docker,7,/plugin/pkg/scheduler,19,5.307
-By number of commits,Docker,7,/pkg/controller,18,5.028
-By number of commits,Docker,7,/cluster/ubuntu/util.sh,16,4.469
-All By number of commits,FathomDB,8,"",330,1.287
-By number of commits,FathomDB,8,/cluster,142,43.03
-By number of commits,FathomDB,8,/cluster/aws,88,26.667
-By number of commits,FathomDB,8,/pkg,87,26.364
-By number of commits,FathomDB,8,/pkg/cloudprovider,62,18.788
-By number of commits,FathomDB,8,/pkg/cloudprovider/providers,57,17.273
-By number of commits,FathomDB,8,/pkg/cloudprovider/providers/aws,46,13.939
-By number of commits,FathomDB,8,/cluster/aws/util.sh,37,11.212
-By number of commits,FathomDB,8,/pkg/cloudprovider/providers/aws/aws.go,33,10.0
-By number of commits,FathomDB,8,/Godeps,32,9.697
-By number of commits,FathomDB,8,/Godeps/_workspace/src/github.com/aws/aws-sdk-go,31,9.394
-By number of commits,FathomDB,8,/cluster/saltbase,27,8.182
-All By number of commits,Microsoft,9,"",296,1.154
-By number of commits,Microsoft,9,/pkg,156,52.703
-By number of commits,Microsoft,9,/cluster,43,14.527
-By number of commits,Microsoft,9,/pkg/api,35,11.824
-By number of commits,Microsoft,9,/pkg/registry,27,9.122
-By number of commits,Microsoft,9,/pkg/kubectl,22,7.432
-By number of commits,Microsoft,9,/docs,19,6.419
-By number of commits,Microsoft,9,/test,19,6.419
-By number of commits,Microsoft,9,/test/e2e,18,6.081
-By number of commits,Microsoft,9,/hack,13,4.392
-By number of commits,Microsoft,9,/pkg/client/unversioned,13,4.392
-By number of commits,Microsoft,9,/pkg/api/v1,12,4.054
-By number of commits,Microsoft,9,/Godeps,12,4.054
-By number of commits,Microsoft,9,/pkg/kubectl/cmd,12,4.054
-By number of commits,Microsoft,9,/pkg/apis/extensions,11,3.716
-All By number of commits,Net EASE 网易有态度,10,"",220,0.858
-By number of commits,Net EASE 网易有态度,10,/docs,116,52.727
-By number of commits,Net EASE 网易有态度,10,/pkg,91,41.364
-By number of commits,Net EASE 网易有态度,10,/pkg/kubectl,62,28.182
-By number of commits,Net EASE 网易有态度,10,/docs/man/man1,57,25.909
-By number of commits,Net EASE 网易有态度,10,/docs/user-guide,57,25.909
-By number of commits,Net EASE 网易有态度,10,/docs/user-guide/kubectl,56,25.455
-By number of commits,Net EASE 网易有态度,10,/pkg/kubectl/cmd,48,21.818
-By number of commits,Net EASE 网易有态度,10,/pkg/kubectl/resource_printer.go,8,3.636
-By number of commits,Net EASE 网易有态度,10,/cmd,7,3.182
-By number of commits,Net EASE 网易有态度,10,/pkg/controller,7,3.182
-By number of commits,Net EASE 网易有态度,10,/pkg/client/cache,6,2.727
-By number of commits,Net EASE 网易有态度,10,/pkg/registry,6,2.727
-By number of commits,Net EASE 网易有态度,10,/pkg/registry/service,5,2.273
-All By number of commits,Caicloud,11,"",207,0.807
-By number of commits,Caicloud,11,/pkg,147,71.014
-By number of commits,Caicloud,11,/pkg/controller,40,19.324
-By number of commits,Caicloud,11,/pkg/apis,29,14.01
-By number of commits,Caicloud,11,/pkg/apis/extensions,23,11.111
-By number of commits,Caicloud,11,/pkg/apis/extensions/v1beta1,16,7.729
-By number of commits,Caicloud,11,/pkg/api,14,6.763
-By number of commits,Caicloud,11,/test,13,6.28
-By number of commits,Caicloud,11,/pkg/registry,13,6.28
-By number of commits,Caicloud,11,/plugin,12,5.797
-By number of commits,Caicloud,11,/pkg/util,12,5.797
-By number of commits,Caicloud,11,/cmd,12,5.797
-By number of commits,Caicloud,11,/plugin/pkg/scheduler,12,5.797
-By number of commits,Caicloud,11,/pkg/controller/deployment,12,5.797
-By number of commits,Caicloud,11,/pkg/kubectl,11,5.314
-All By number of commits,Udacity,12,"",182,0.71
-By number of commits,Udacity,12,/cluster,133,73.077
-By number of commits,Udacity,12,/cluster/aws,32,17.582
-By number of commits,Udacity,12,/docs,30,16.484
-By number of commits,Udacity,12,/cluster/gce,27,14.835
-By number of commits,Udacity,12,/cluster/vagrant,22,12.088
-By number of commits,Udacity,12,/cluster/vsphere,16,8.791
-By number of commits,Udacity,12,/cluster/aws/util.sh,12,6.593
-By number of commits,Udacity,12,/docs/getting-started-guides,12,6.593
-By number of commits,Udacity,12,/hack,11,6.044
-By number of commits,Udacity,12,/cluster/gce/util.sh,9,4.945
-By number of commits,Udacity,12,/cluster/gke,8,4.396
-By number of commits,Udacity,12,/cluster/gce/config-default.sh,7,3.846
-By number of commits,Udacity,12,/hack/jenkins/e2e.sh,7,3.846
-By number of commits,Udacity,12,/cluster/aws/config-default.sh,7,3.846
-By number of commits,Udacity,12,/hack/jenkins,7,3.846
-All By number of commits,Immobilien Scout GmbH,13,"",111,0.433
-By number of commits,Immobilien Scout GmbH,13,/pkg,39,35.135
-By number of commits,Immobilien Scout GmbH,13,/docs,28,25.225
-By number of commits,Immobilien Scout GmbH,13,/pkg/kubelet,13,11.712
-By number of commits,Immobilien Scout GmbH,13,/examples,12,10.811
-By number of commits,Immobilien Scout GmbH,13,/docs/proposals,9,8.108
-By number of commits,Immobilien Scout GmbH,13,/cluster,9,8.108
-By number of commits,Immobilien Scout GmbH,13,/hack,7,6.306
-By number of commits,Immobilien Scout GmbH,13,/pkg/util,7,6.306
-By number of commits,Immobilien Scout GmbH,13,/contrib/mesos,5,4.505
-By number of commits,Immobilien Scout GmbH,13,/pkg/api,5,4.505
-By number of commits,Immobilien Scout GmbH,13,/contrib/mesos/pkg,5,4.505
-By number of commits,Immobilien Scout GmbH,13,/docs/user-guide,5,4.505
-By number of commits,Immobilien Scout GmbH,13,/docs/devel,5,4.505
-By number of commits,Immobilien Scout GmbH,13,/examples/k8petstore,4,3.604
-All By number of commits,Rook,14,"",92,0.359
-By number of commits,Rook,14,/Godeps,35,38.043
-By number of commits,Rook,14,/Godeps/_workspace/src/github.com,34,36.957
-By number of commits,Rook,14,/docs,27,29.348
-By number of commits,Rook,14,/docs/getting-started-guides,26,28.261
-By number of commits,Rook,14,/docs/getting-started-guides/docker-multinode,19,20.652
-By number of commits,Rook,14,/cluster,19,20.652
-By number of commits,Rook,14,/Godeps/_workspace/src/github.com/boltdb/bolt,17,18.478
-By number of commits,Rook,14,/Godeps/_workspace/src/github.com/onsi/ginkgo,17,18.478
-By number of commits,Rook,14,/cluster/images,15,16.304
-By number of commits,Rook,14,/cluster/images/hyperkube,11,11.957
-By number of commits,Rook,14,/build,6,6.522
-All By number of commits,Apache,15,"",89,0.347
-By number of commits,Apache,15,/examples,29,32.584
-By number of commits,Apache,15,/pkg,27,30.337
-By number of commits,Apache,15,/test/e2e,13,14.607
-By number of commits,Apache,15,/pkg/client,13,14.607
-By number of commits,Apache,15,/test,13,14.607
-By number of commits,Apache,15,/examples/high-availability,13,14.607
-By number of commits,Apache,15,/pkg/client/unversioned,12,13.483
-By number of commits,Apache,15,/examples/k8petstore,12,13.483
-By number of commits,Apache,15,/third_party/golang/go,12,13.483
-By number of commits,Apache,15,/pkg/util,8,8.989
-By number of commits,Apache,15,/examples/k8petstore/dev,4,4.494
-By number of commits,Apache,15,/pkg/master,4,4.494
-By number of commits,Apache,15,/hack,3,3.371
-All By number of commits,Self,16,"",65,0.253
-By number of commits,Self,16,/pkg,29,44.615
-By number of commits,Self,16,/cluster,14,21.538
-By number of commits,Self,16,/docs,14,21.538
-By number of commits,Self,16,/pkg/apis/extensions,13,20.0
-By number of commits,Self,16,/docs/getting-started-guides,8,12.308
-By number of commits,Self,16,/pkg/apis/extensions/v1beta1,7,10.769
-By number of commits,Self,16,/pkg/registry/configmap,6,9.231
-By number of commits,Self,16,/docs/getting-started-guides/coreos,5,7.692
-By number of commits,Self,16,/docs/proposals,4,6.154
-By number of commits,Self,16,/examples/cassandra,4,6.154
-By number of commits,Self,16,/pkg/client/unversioned,4,6.154
-By number of commits,Self,16,/cluster/saltbase/salt,4,6.154
-All By number of commits,NotFound,17,"",32,0.125
-By number of commits,NotFound,17,/pkg,23,71.875
-By number of commits,NotFound,17,/pkg/kubelet,14,43.75
-By number of commits,NotFound,17,/pkg/kubelet/dockertools,5,15.625
-By number of commits,NotFound,17,/cluster,4,12.5
-By number of commits,NotFound,17,/pkg/kubelet/container,4,12.5
-By number of commits,NotFound,17,/cluster/addons,3,9.375
-By number of commits,NotFound,17,/pkg/util,2,6.25
-By number of commits,NotFound,17,/pkg/controller/node/nodecontroller.go,2,6.25
-By number of commits,NotFound,17,/test/e2e/pods.go,2,6.25
-By number of commits,NotFound,17,/pkg/kubelet/kubelet.go,2,6.25
-By number of commits,NotFound,17,/pkg/controller,2,6.25
-By number of commits,NotFound,17,/pkg/cloudprovider/providers,2,6.25
-By number of commits,NotFound,17,/test,2,6.25
-By number of commits,NotFound,17,/pkg/kubelet/dockertools/manager.go,2,6.25
-By number of commits,NotFound,17,/test/e2e,2,6.25
+All By number of commits to file,All,0,"",25011,100.0
+All By number of commits to file,Google,1,"",12467,49.846
+By number of commits to file,Google,1,/pkg,5428,43.539
+By number of commits to file,Google,1,/docs,1479,11.863
+By number of commits to file,Google,1,/test,1399,11.222
+By number of commits to file,Google,1,/pkg/client,1256,10.075
+By number of commits to file,Google,1,/test/e2e,1099,8.815
+By number of commits to file,Google,1,/Godeps,1055,8.462
+By number of commits to file,Google,1,/Godeps/_workspace/src,1014,8.133
+By number of commits to file,Google,1,/pkg/kubelet,907,7.275
+By number of commits to file,Google,1,/Godeps/_workspace/src/github.com,831,6.666
+By number of commits to file,Google,1,/hack,807,6.473
+By number of commits to file,Google,1,/cluster,745,5.976
+By number of commits to file,Google,1,/pkg/client/unversioned,709,5.687
+By number of commits to file,Google,1,/pkg/controller,635,5.093
+By number of commits to file,Google,1,/pkg/registry,605,4.853
+All By number of commits to file,Red Hat,2,"",7051,28.192
+By number of commits to file,Red Hat,2,/pkg,2785,39.498
+By number of commits to file,Red Hat,2,/Godeps,2497,35.413
+By number of commits to file,Red Hat,2,/Godeps/_workspace/src,2466,34.974
+By number of commits to file,Red Hat,2,/Godeps/_workspace/src/github.com,2177,30.875
+By number of commits to file,Red Hat,2,/contrib,482,6.836
+By number of commits to file,Red Hat,2,/contrib/mesos,467,6.623
+By number of commits to file,Red Hat,2,/contrib/mesos/pkg,449,6.368
+By number of commits to file,Red Hat,2,/pkg/kubectl,417,5.914
+By number of commits to file,Red Hat,2,/pkg/api,370,5.247
+By number of commits to file,Red Hat,2,/Godeps/_workspace/src/github.com/fsouza/go-dockerclient,365,5.177
+By number of commits to file,Red Hat,2,/contrib/mesos/pkg/scheduler,357,5.063
+By number of commits to file,Red Hat,2,/test,335,4.751
+By number of commits to file,Red Hat,2,/pkg/client,330,4.68
+All By number of commits to file,Epic Games,3,"",832,3.327
+By number of commits to file,Epic Games,3,/Godeps,814,97.837
+By number of commits to file,Epic Games,3,/Godeps/_workspace/src/github.com,812,97.596
+By number of commits to file,Epic Games,3,/Godeps/_workspace/src/github.com/jmespath/go-jmespath,673,80.889
+By number of commits to file,Epic Games,3,/Godeps/_workspace/src/github.com/jmespath/go-jmespath/fuzz,643,77.284
+By number of commits to file,Epic Games,3,/Godeps/_workspace/src/github.com/jmespath/go-jmespath/fuzz/corpus,642,77.163
+By number of commits to file,Epic Games,3,/Godeps/_workspace/src/github.com/aws/aws-sdk-go,129,15.505
+By number of commits to file,Epic Games,3,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws,79,9.495
+By number of commits to file,Epic Games,3,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/service,26,3.125
+By number of commits to file,Epic Games,3,/Godeps/_workspace/src/github.com/aws/aws-sdk-go/aws/credentials,18,2.163
+By number of commits to file,Epic Games,3,/pkg/cloudprovider/providers,17,2.043
+All By number of commits to file,Huawei,4,"",766,3.063
+By number of commits to file,Huawei,4,/pkg,397,51.828
+By number of commits to file,Huawei,4,/docs,176,22.977
+By number of commits to file,Huawei,4,/docs/user-guide,97,12.663
+By number of commits to file,Huawei,4,/pkg/registry,89,11.619
+By number of commits to file,Huawei,4,/docs/user-guide/kubectl,80,10.444
+By number of commits to file,Huawei,4,/pkg/kubelet,78,10.183
+By number of commits to file,Huawei,4,/docs/man/man1,55,7.18
+By number of commits to file,Huawei,4,/pkg/kubectl,53,6.919
+By number of commits to file,Huawei,4,/pkg/api,52,6.789
+By number of commits to file,Huawei,4,/examples,47,6.136
+By number of commits to file,Huawei,4,/test,46,6.005
+By number of commits to file,Huawei,4,/pkg/controller,38,4.961
+By number of commits to file,Huawei,4,/pkg/kubectl/cmd,35,4.569
+By number of commits to file,Huawei,4,/test/e2e,34,4.439
+All By number of commits to file,CoreOS,5,"",534,2.135
+By number of commits to file,CoreOS,5,/Godeps,249,46.629
+By number of commits to file,CoreOS,5,/Godeps/_workspace/src,241,45.131
+By number of commits to file,CoreOS,5,/Godeps/_workspace/src/github.com,135,25.281
+By number of commits to file,CoreOS,5,/pkg,104,19.476
+By number of commits to file,CoreOS,5,/Godeps/_workspace/src/google.golang.org/grpc,89,16.667
+By number of commits to file,CoreOS,5,/pkg/kubelet,77,14.419
+By number of commits to file,CoreOS,5,/plugin/pkg,74,13.858
+By number of commits to file,CoreOS,5,/plugin/pkg/scheduler,63,11.798
+By number of commits to file,CoreOS,5,/cluster,61,11.423
+By number of commits to file,CoreOS,5,/pkg/kubelet/rkt,61,11.423
+By number of commits to file,CoreOS,5,/cluster/gce,51,9.551
+By number of commits to file,CoreOS,5,/cluster/gce/coreos,47,8.801
+All By number of commits to file,Mesosphere,6,"",475,1.899
+By number of commits to file,Mesosphere,6,/contrib/mesos,229,48.211
+By number of commits to file,Mesosphere,6,/contrib/mesos/pkg,210,44.211
+By number of commits to file,Mesosphere,6,/contrib/mesos/pkg/scheduler,123,25.895
+By number of commits to file,Mesosphere,6,/Godeps,115,24.211
+By number of commits to file,Mesosphere,6,/Godeps/_workspace/src/github.com,109,22.947
+By number of commits to file,Mesosphere,6,/Godeps/_workspace/src/github.com/mesos/mesos-go,56,11.789
+By number of commits to file,Mesosphere,6,/contrib/mesos/pkg/executor,39,8.211
+By number of commits to file,Mesosphere,6,/cluster,39,8.211
+By number of commits to file,Mesosphere,6,/Godeps/_workspace/src/github.com/camlistore,38,8.0
+By number of commits to file,Mesosphere,6,/Godeps/_workspace/src/github.com/camlistore/camlistore,37,7.789
+By number of commits to file,Mesosphere,6,/Godeps/_workspace/src/github.com/mesos/mesos-go/mesosproto,36,7.579
+All By number of commits to file,Docker,7,"",347,1.387
+By number of commits to file,Docker,7,/pkg,202,58.213
+By number of commits to file,Docker,7,/docs,43,12.392
+By number of commits to file,Docker,7,/pkg/util,41,11.816
+By number of commits to file,Docker,7,/pkg/volume,37,10.663
+By number of commits to file,Docker,7,/pkg/kubelet,37,10.663
+By number of commits to file,Docker,7,/docs/getting-started-guides,36,10.375
+By number of commits to file,Docker,7,/cluster,33,9.51
+By number of commits to file,Docker,7,/cluster/ubuntu,29,8.357
+By number of commits to file,Docker,7,/docs/getting-started-guides/docker-multinode,22,6.34
+By number of commits to file,Docker,7,/plugin,22,6.34
+By number of commits to file,Docker,7,/plugin/pkg,20,5.764
+By number of commits to file,Docker,7,/plugin/pkg/scheduler,19,5.476
+By number of commits to file,Docker,7,/pkg/controller,18,5.187
+By number of commits to file,Docker,7,/cluster/ubuntu/util.sh,16,4.611
+By number of commits to file,Docker,7,/pkg/api,15,4.323
+All By number of commits to file,FathomDB,8,"",322,1.287
+By number of commits to file,FathomDB,8,/cluster,142,44.099
+By number of commits to file,FathomDB,8,/cluster/aws,88,27.329
+By number of commits to file,FathomDB,8,/pkg,87,27.019
+By number of commits to file,FathomDB,8,/pkg/cloudprovider,62,19.255
+By number of commits to file,FathomDB,8,/pkg/cloudprovider/providers,57,17.702
+By number of commits to file,FathomDB,8,/pkg/cloudprovider/providers/aws,46,14.286
+By number of commits to file,FathomDB,8,/cluster/aws/util.sh,37,11.491
+By number of commits to file,FathomDB,8,/pkg/cloudprovider/providers/aws/aws.go,33,10.248
+By number of commits to file,FathomDB,8,/cluster/saltbase,27,8.385
+By number of commits to file,FathomDB,8,/cluster/saltbase/salt,26,8.075
+By number of commits to file,FathomDB,8,/cluster/aws/templates,25,7.764
+By number of commits to file,FathomDB,8,/test/e2e,24,7.453
+By number of commits to file,FathomDB,8,/Godeps,24,7.453
+By number of commits to file,FathomDB,8,/Godeps/_workspace,23,7.143
+All By number of commits to file,Microsoft,9,"",276,1.104
+By number of commits to file,Microsoft,9,/pkg,143,51.812
+By number of commits to file,Microsoft,9,/cluster,43,15.58
+By number of commits to file,Microsoft,9,/pkg/registry,27,9.783
+By number of commits to file,Microsoft,9,/pkg/api,26,9.42
+By number of commits to file,Microsoft,9,/pkg/kubectl,22,7.971
+By number of commits to file,Microsoft,9,/test,19,6.884
+By number of commits to file,Microsoft,9,/test/e2e,18,6.522
+By number of commits to file,Microsoft,9,/docs,15,5.435
+By number of commits to file,Microsoft,9,/pkg/client,13,4.71
+By number of commits to file,Microsoft,9,/hack,13,4.71
+By number of commits to file,Microsoft,9,/pkg/client/unversioned,13,4.71
+By number of commits to file,Microsoft,9,/pkg/kubectl/cmd,12,4.348
+By number of commits to file,Microsoft,9,/Godeps,12,4.348
+By number of commits to file,Microsoft,9,/cluster/images/hyperkube,11,3.986
+All By number of commits to file,Net EASE 网易有态度,10,"",219,0.876
+By number of commits to file,Net EASE 网易有态度,10,/docs,115,52.511
+By number of commits to file,Net EASE 网易有态度,10,/pkg,91,41.553
+By number of commits to file,Net EASE 网易有态度,10,/pkg/kubectl,62,28.311
+By number of commits to file,Net EASE 网易有态度,10,/docs/user-guide,57,26.027
+By number of commits to file,Net EASE 网易有态度,10,/docs/man/man1,57,26.027
+By number of commits to file,Net EASE 网易有态度,10,/docs/user-guide/kubectl,56,25.571
+By number of commits to file,Net EASE 网易有态度,10,/pkg/kubectl/cmd,48,21.918
+By number of commits to file,Net EASE 网易有态度,10,/pkg/kubectl/resource_printer.go,8,3.653
+By number of commits to file,Net EASE 网易有态度,10,/pkg/controller,7,3.196
+By number of commits to file,Net EASE 网易有态度,10,/cmd,7,3.196
+By number of commits to file,Net EASE 网易有态度,10,/pkg/registry,6,2.74
+By number of commits to file,Net EASE 网易有态度,10,/pkg/client/cache,6,2.74
+By number of commits to file,Net EASE 网易有态度,10,/pkg/kubectl/resource_printer_test.go,5,2.283
+All By number of commits to file,Caicloud,11,"",195,0.78
+By number of commits to file,Caicloud,11,/pkg,135,69.231
+By number of commits to file,Caicloud,11,/pkg/controller,40,20.513
+By number of commits to file,Caicloud,11,/pkg/apis,19,9.744
+By number of commits to file,Caicloud,11,/pkg/apis/extensions,16,8.205
+By number of commits to file,Caicloud,11,/pkg/registry,13,6.667
+By number of commits to file,Caicloud,11,/test,13,6.667
+By number of commits to file,Caicloud,11,/pkg/api,12,6.154
+By number of commits to file,Caicloud,11,/plugin/pkg/scheduler,12,6.154
+By number of commits to file,Caicloud,11,/pkg/util,12,6.154
+By number of commits to file,Caicloud,11,/cmd,12,6.154
+By number of commits to file,Caicloud,11,/pkg/controller/deployment,12,6.154
+By number of commits to file,Caicloud,11,/pkg/kubectl,11,5.641
+By number of commits to file,Caicloud,11,/pkg/apis/extensions/v1beta1,11,5.641
+All By number of commits to file,Udacity,12,"",182,0.728
+By number of commits to file,Udacity,12,/cluster,133,73.077
+By number of commits to file,Udacity,12,/cluster/aws,32,17.582
+By number of commits to file,Udacity,12,/docs,30,16.484
+By number of commits to file,Udacity,12,/cluster/gce,27,14.835
+By number of commits to file,Udacity,12,/cluster/vagrant,22,12.088
+By number of commits to file,Udacity,12,/cluster/vsphere,16,8.791
+By number of commits to file,Udacity,12,/cluster/aws/util.sh,12,6.593
+By number of commits to file,Udacity,12,/docs/getting-started-guides,12,6.593
+By number of commits to file,Udacity,12,/hack,11,6.044
+By number of commits to file,Udacity,12,/cluster/gce/util.sh,9,4.945
+By number of commits to file,Udacity,12,/cluster/gke,8,4.396
+By number of commits to file,Udacity,12,/cluster/gce/config-default.sh,7,3.846
+By number of commits to file,Udacity,12,/hack/jenkins/e2e.sh,7,3.846
+By number of commits to file,Udacity,12,/cluster/aws/config-default.sh,7,3.846
+By number of commits to file,Udacity,12,/hack/jenkins,7,3.846
+All By number of commits to file,Immobilien Scout GmbH,13,"",108,0.432
+By number of commits to file,Immobilien Scout GmbH,13,/pkg,38,35.185
+By number of commits to file,Immobilien Scout GmbH,13,/docs,26,24.074
+By number of commits to file,Immobilien Scout GmbH,13,/pkg/kubelet,13,12.037
+By number of commits to file,Immobilien Scout GmbH,13,/examples,12,11.111
+By number of commits to file,Immobilien Scout GmbH,13,/docs/proposals,9,8.333
+By number of commits to file,Immobilien Scout GmbH,13,/cluster,9,8.333
+By number of commits to file,Immobilien Scout GmbH,13,/hack,7,6.481
+By number of commits to file,Immobilien Scout GmbH,13,/pkg/util,7,6.481
+By number of commits to file,Immobilien Scout GmbH,13,/contrib/mesos/pkg,5,4.63
+By number of commits to file,Immobilien Scout GmbH,13,/docs/user-guide,5,4.63
+By number of commits to file,Immobilien Scout GmbH,13,/contrib/mesos,5,4.63
+By number of commits to file,Immobilien Scout GmbH,13,/docs/devel,5,4.63
+By number of commits to file,Immobilien Scout GmbH,13,/contrib,5,4.63
+By number of commits to file,Immobilien Scout GmbH,13,/examples/k8petstore,4,3.704
+By number of commits to file,Immobilien Scout GmbH,13,/pkg/kubelet/dockertools,4,3.704
+All By number of commits to file,Rook,14,"",92,0.368
+By number of commits to file,Rook,14,/Godeps,35,38.043
+By number of commits to file,Rook,14,/Godeps/_workspace/src/github.com,34,36.957
+By number of commits to file,Rook,14,/docs,27,29.348
+By number of commits to file,Rook,14,/docs/getting-started-guides,26,28.261
+By number of commits to file,Rook,14,/docs/getting-started-guides/docker-multinode,19,20.652
+By number of commits to file,Rook,14,/cluster,19,20.652
+By number of commits to file,Rook,14,/Godeps/_workspace/src/github.com/boltdb/bolt,17,18.478
+By number of commits to file,Rook,14,/Godeps/_workspace/src/github.com/onsi/ginkgo,17,18.478
+By number of commits to file,Rook,14,/cluster/images,15,16.304
+By number of commits to file,Rook,14,/cluster/images/hyperkube,11,11.957
+By number of commits to file,Rook,14,/build,6,6.522
+All By number of commits to file,Apache,15,"",88,0.352
+By number of commits to file,Apache,15,/examples,28,31.818
+By number of commits to file,Apache,15,/pkg,27,30.682
+By number of commits to file,Apache,15,/test/e2e,13,14.773
+By number of commits to file,Apache,15,/pkg/client,13,14.773
+By number of commits to file,Apache,15,/test,13,14.773
+By number of commits to file,Apache,15,/examples/high-availability,13,14.773
+By number of commits to file,Apache,15,/third_party/golang/go,12,13.636
+By number of commits to file,Apache,15,/pkg/client/unversioned,12,13.636
+By number of commits to file,Apache,15,/third_party,12,13.636
+By number of commits to file,Apache,15,/examples/k8petstore,11,12.5
+By number of commits to file,Apache,15,/pkg/util,8,9.091
+By number of commits to file,Apache,15,/examples/k8petstore/dev,4,4.545
+By number of commits to file,Apache,15,/pkg/master,4,4.545
+By number of commits to file,Apache,15,/hack,3,3.409
+All By number of commits to file,Self,16,"",61,0.244
+By number of commits to file,Self,16,/pkg,26,42.623
+By number of commits to file,Self,16,/cluster,14,22.951
+By number of commits to file,Self,16,/docs,14,22.951
+By number of commits to file,Self,16,/pkg/apis/extensions,10,16.393
+By number of commits to file,Self,16,/docs/getting-started-guides,8,13.115
+By number of commits to file,Self,16,/pkg/registry/configmap,6,9.836
+By number of commits to file,Self,16,/pkg/apis/extensions/v1beta1,5,8.197
+By number of commits to file,Self,16,/docs/getting-started-guides/coreos,5,8.197
+By number of commits to file,Self,16,/pkg/client/unversioned,4,6.557
+By number of commits to file,Self,16,/docs/proposals,4,6.557
+By number of commits to file,Self,16,/cluster/saltbase/salt,4,6.557
+All By number of commits to file,NotFound,17,"",32,0.128
+By number of commits to file,NotFound,17,/pkg,23,71.875
+By number of commits to file,NotFound,17,/pkg/kubelet,14,43.75
+By number of commits to file,NotFound,17,/pkg/kubelet/dockertools,5,15.625
+By number of commits to file,NotFound,17,/cluster,4,12.5
+By number of commits to file,NotFound,17,/pkg/kubelet/container,4,12.5
+By number of commits to file,NotFound,17,/cluster/addons,3,9.375
+By number of commits to file,NotFound,17,/pkg/util,2,6.25
+By number of commits to file,NotFound,17,/pkg/controller/node/nodecontroller.go,2,6.25
+By number of commits to file,NotFound,17,/test/e2e/pods.go,2,6.25
+By number of commits to file,NotFound,17,/pkg/kubelet/kubelet.go,2,6.25
+By number of commits to file,NotFound,17,/pkg/controller,2,6.25
+By number of commits to file,NotFound,17,/pkg/cloudprovider/providers,2,6.25
+By number of commits to file,NotFound,17,/test,2,6.25
+By number of commits to file,NotFound,17,/pkg/kubelet/dockertools/manager.go,2,6.25
+By number of commits to file,NotFound,17,/test/e2e,2,6.25
