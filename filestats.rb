@@ -73,7 +73,7 @@ def filestats(csv_file, out_file)
     top_commits << special unless top_commits.include?(special)
   end
 
-  # Ananlysis
+  # Analysis
   all_results = []
   [[top_changed, 'By changed lines', 2], [top_commits, 'By number of commits', 3]].each do |data|
     arr, order_name, v_index = data[0], data[1], data[2]
@@ -100,7 +100,7 @@ def filestats(csv_file, out_file)
     end
   end
 
-  # remove duplicates - if changed only single file in directory(directories) path - then show only final file
+  # Remove duplicates - if changed only single file in directory(directories) path - then show only final file
   itocheck = [0, 1, 2, 4, 5]
   prev = [nil, nil, nil, nil]
   curr = [nil, nil, nil, nil]
