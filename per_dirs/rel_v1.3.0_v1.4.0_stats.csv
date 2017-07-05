@@ -209,233 +209,234 @@ By changed lines,NotFound,16,/cluster/ubuntu/master/init_conf,4,15.385
 By changed lines,NotFound,16,/cluster/ubuntu/minion,2,7.692
 By changed lines,NotFound,16,/pkg/controller/endpoint/endpoints_controller.go,2,7.692
 By changed lines,NotFound,16,/docs/design/resource-qos.md,2,7.692
-All By number of commits,All,0,"",16226,100.0
-All By number of commits,Google,1,"",11098,68.396
-By number of commits,Google,1,/pkg,4343,39.133
-By number of commits,Google,1,/staging,1393,12.552
-By number of commits,Google,1,/staging/src/k8s.io/client-go,1392,12.543
-By number of commits,Google,1,/staging/src/k8s.io/client-go/1.4,1381,12.444
-By number of commits,Google,1,/test,1000,9.011
-By number of commits,Google,1,/docs,963,8.677
-By number of commits,Google,1,/pkg/client,938,8.452
-By number of commits,Google,1,/staging/src/k8s.io/client-go/1.4/pkg,726,6.542
-By number of commits,Google,1,/pkg/client/clientset_generated,647,5.83
-By number of commits,Google,1,/cluster,633,5.704
-By number of commits,Google,1,/federation,579,5.217
-By number of commits,Google,1,/pkg/kubelet,558,5.028
-By number of commits,Google,1,/pkg/apis,528,4.758
-All By number of commits,Red Hat,2,"",1899,11.703
-By number of commits,Red Hat,2,/pkg,1327,69.879
-By number of commits,Red Hat,2,/pkg/apis,213,11.216
-By number of commits,Red Hat,2,/pkg/client,192,10.111
-By number of commits,Red Hat,2,/pkg/kubelet,169,8.899
-By number of commits,Red Hat,2,/pkg/controller,147,7.741
-By number of commits,Red Hat,2,/test,142,7.478
-By number of commits,Red Hat,2,/pkg/api,122,6.424
-By number of commits,Red Hat,2,/pkg/registry,118,6.214
-By number of commits,Red Hat,2,/pkg/kubectl,112,5.898
-By number of commits,Red Hat,2,/pkg/client/clientset_generated,88,4.634
-By number of commits,Red Hat,2,/pkg/client/unversioned,86,4.529
-By number of commits,Red Hat,2,/cmd,86,4.529
-By number of commits,Red Hat,2,/test/e2e,86,4.529
-By number of commits,Red Hat,2,/plugin,78,4.107
-By number of commits,Red Hat,2,/plugin/pkg,77,4.055
-All By number of commits,Mirantis,3,"",694,4.277
-By number of commits,Mirantis,3,/pkg,518,74.64
-By number of commits,Mirantis,3,/pkg/kubectl,103,14.841
-By number of commits,Mirantis,3,/pkg/kubelet,83,11.96
-By number of commits,Mirantis,3,/pkg/kubectl/cmd,57,8.213
-By number of commits,Mirantis,3,/contrib/mesos,48,6.916
-By number of commits,Mirantis,3,/pkg/apis,46,6.628
-By number of commits,Mirantis,3,/contrib/mesos/pkg,46,6.628
-By number of commits,Mirantis,3,/pkg/registry,44,6.34
-By number of commits,Mirantis,3,/pkg/controller,44,6.34
-By number of commits,Mirantis,3,/pkg/util,38,5.476
-By number of commits,Mirantis,3,/pkg/api,35,5.043
-By number of commits,Mirantis,3,/pkg/volume,27,3.89
-By number of commits,Mirantis,3,/pkg/client,25,3.602
-By number of commits,Mirantis,3,/contrib/mesos/pkg/scheduler,24,3.458
-All By number of commits,CoreOS,4,"",515,3.174
-By number of commits,CoreOS,4,/pkg,401,77.864
-By number of commits,CoreOS,4,/pkg/registry,210,40.777
-By number of commits,CoreOS,4,/pkg/storage,42,8.155
-By number of commits,CoreOS,4,/pkg/apis,34,6.602
-By number of commits,CoreOS,4,/pkg/client,32,6.214
-By number of commits,CoreOS,4,/pkg/kubelet,27,5.243
-By number of commits,CoreOS,4,/plugin/pkg,23,4.466
-By number of commits,CoreOS,4,/test,23,4.466
-By number of commits,CoreOS,4,/plugin,23,4.466
-By number of commits,CoreOS,4,/pkg/apis/certificates,21,4.078
-By number of commits,CoreOS,4,/pkg/registry/generic,19,3.689
-By number of commits,CoreOS,4,/pkg/storage/storagebackend,16,3.107
-By number of commits,CoreOS,4,/pkg/kubelet/rkt,15,2.913
-By number of commits,CoreOS,4,/pkg/storage/storagebackend/factory,15,2.913
-By number of commits,CoreOS,4,/pkg/client/unversioned,14,2.718
-All By number of commits,Ammeon,5,"",498,3.069
-By number of commits,Ammeon,5,/docs,364,73.092
-By number of commits,Ammeon,5,/docs/user-guide,129,25.904
-By number of commits,Ammeon,5,/docs/user-guide/kubectl,59,11.847
-By number of commits,Ammeon,5,/docs/proposals,59,11.847
-By number of commits,Ammeon,5,/examples,58,11.647
-By number of commits,Ammeon,5,/pkg,52,10.442
-By number of commits,Ammeon,5,/docs/design,49,9.839
-By number of commits,Ammeon,5,/docs/devel,47,9.438
-By number of commits,Ammeon,5,/docs/admin,36,7.229
-By number of commits,Ammeon,5,/docs/getting-started-guides,33,6.627
-By number of commits,Ammeon,5,/pkg/kubectl/cmd,24,4.819
-By number of commits,Ammeon,5,/examples/volumes,11,2.209
-All By number of commits,Huawei,6,"",200,1.233
-By number of commits,Huawei,6,/federation,92,46.0
-By number of commits,Huawei,6,/pkg,62,31.0
-By number of commits,Huawei,6,/federation/client/clientset_generated,57,28.5
-By number of commits,Huawei,6,/pkg/api,31,15.5
-By number of commits,Huawei,6,/federation/client/clientset_generated/federation_release_1_4,28,14.0
-By number of commits,Huawei,6,/federation/client/clientset_generated/federation_internalclientset,28,14.0
-By number of commits,Huawei,6,/federation/client/clientset_generated/federation_release_1_4/typed,22,11.0
-By number of commits,Huawei,6,/federation/client/clientset_generated/federation_internalclientset/typed,22,11.0
-By number of commits,Huawei,6,/federation/pkg/federation-controller,21,10.5
-By number of commits,Huawei,6,/pkg/apis,17,8.5
-By number of commits,Huawei,6,/test,15,7.5
-By number of commits,Huawei,6,/pkg/api/v1,14,7.0
-By number of commits,Huawei,6,/test/e2e,14,7.0
-All By number of commits,ZTE Corporation,7,"",173,1.066
-By number of commits,ZTE Corporation,7,/pkg,100,57.803
-By number of commits,ZTE Corporation,7,/pkg/kubectl,25,14.451
-By number of commits,ZTE Corporation,7,/docs,25,14.451
-By number of commits,ZTE Corporation,7,/pkg/kubelet,23,13.295
-By number of commits,ZTE Corporation,7,/pkg/kubectl/cmd,20,11.561
-By number of commits,ZTE Corporation,7,/plugin,18,10.405
-By number of commits,ZTE Corporation,7,/plugin/pkg,17,9.827
-By number of commits,ZTE Corporation,7,/plugin/pkg/scheduler,16,9.249
-By number of commits,ZTE Corporation,7,/pkg/genericapiserver,11,6.358
-By number of commits,ZTE Corporation,7,/pkg/controller,10,5.78
-By number of commits,ZTE Corporation,7,/docs/devel,10,5.78
-By number of commits,ZTE Corporation,7,/cmd,9,5.202
-By number of commits,ZTE Corporation,7,/pkg/genericapiserver/genericapiserver.go,9,5.202
-By number of commits,ZTE Corporation,7,/pkg/kubelet/dockertools,8,4.624
-By number of commits,ZTE Corporation,7,/plugin/pkg/scheduler/algorithm,8,4.624
-All By number of commits,Hyper.sh,8,"",141,0.869
-By number of commits,Hyper.sh,8,/pkg,89,63.121
-By number of commits,Hyper.sh,8,/pkg/kubelet,59,41.844
-By number of commits,Hyper.sh,8,/test,39,27.66
-By number of commits,Hyper.sh,8,/test/e2e,31,21.986
-By number of commits,Hyper.sh,8,/pkg/kubelet/kuberuntime,28,19.858
-By number of commits,Hyper.sh,8,/pkg/kubelet/api,13,9.22
-By number of commits,Hyper.sh,8,/pkg/util,11,7.801
-By number of commits,Hyper.sh,8,/pkg/kubelet/api/v1alpha1,8,5.674
-By number of commits,Hyper.sh,8,/test/e2e_node,8,5.674
-By number of commits,Hyper.sh,8,/pkg/kubelet/api/v1alpha1/runtime,8,5.674
-By number of commits,Hyper.sh,8,/pkg/kubelet/remote,7,4.965
-By number of commits,Hyper.sh,8,/pkg/apis/componentconfig,6,4.255
-By number of commits,Hyper.sh,8,/pkg/kubelet/kuberuntime/kuberuntime_manager_test.go,5,3.546
-By number of commits,Hyper.sh,8,/hack,5,3.546
-All By number of commits,Self,9,"",94,0.579
-By number of commits,Self,9,/pkg,59,62.766
-By number of commits,Self,9,/pkg/kubelet,17,18.085
-By number of commits,Self,9,/pkg/api,17,18.085
-By number of commits,Self,9,/docs,16,17.021
-By number of commits,Self,9,/pkg/volume,12,12.766
-By number of commits,Self,9,/pkg/api/v1,9,9.574
-By number of commits,Self,9,/pkg/kubelet/rktshim,8,8.511
-By number of commits,Self,9,/docs/design,6,6.383
-By number of commits,Self,9,/pkg/kubelet/api,5,5.319
-By number of commits,Self,9,/docs/devel,5,5.319
-By number of commits,Self,9,/examples/elasticsearch,4,4.255
-By number of commits,Self,9,/api/swagger-spec,4,4.255
-By number of commits,Self,9,/test,4,4.255
-By number of commits,Self,9,/api,4,4.255
-All By number of commits,IBM,10,"",86,0.53
-By number of commits,IBM,10,/pkg,54,62.791
-By number of commits,IBM,10,/pkg/kubectl,29,33.721
-By number of commits,IBM,10,/pkg/kubectl/cmd,25,29.07
-By number of commits,IBM,10,/docs,11,12.791
-By number of commits,IBM,10,/docs/devel,9,10.465
-By number of commits,IBM,10,/cluster,9,10.465
-By number of commits,IBM,10,/pkg/api,6,6.977
-By number of commits,IBM,10,/cluster/ubuntu,5,5.814
-By number of commits,IBM,10,/pkg/controller,5,5.814
-By number of commits,IBM,10,/pkg/kubectl/cmd/rollout,5,5.814
-By number of commits,IBM,10,/contrib/mesos,4,4.651
-By number of commits,IBM,10,/pkg/util,4,4.651
-By number of commits,IBM,10,/pkg/client,4,4.651
-By number of commits,IBM,10,/hack,4,4.651
-All By number of commits,Rook,11,"",71,0.438
-By number of commits,Rook,11,/pkg,25,35.211
-By number of commits,Rook,11,/cluster/images,17,23.944
-By number of commits,Rook,11,/cluster/images/hyperkube,14,19.718
-By number of commits,Rook,11,/cmd,9,12.676
-By number of commits,Rook,11,/cluster/images/hyperkube/static-pods,6,8.451
-By number of commits,Rook,11,/federation,5,7.042
-By number of commits,Rook,11,/examples,5,7.042
-By number of commits,Rook,11,/pkg/cloudprovider/providers,5,7.042
-By number of commits,Rook,11,/examples/celery-rabbitmq,5,7.042
-By number of commits,Rook,11,/contrib/mesos/cmd,4,5.634
-By number of commits,Rook,11,/pkg/controller,4,5.634
-By number of commits,Rook,11,/plugin,4,5.634
-All By number of commits,FathomDB,12,"",64,0.394
-By number of commits,FathomDB,12,/pkg,35,54.688
-By number of commits,FathomDB,12,/pkg/kubelet,19,29.688
-By number of commits,FathomDB,12,/federation/pkg,18,28.125
-By number of commits,FathomDB,12,/federation/pkg/dnsprovider,16,25.0
-By number of commits,FathomDB,12,/federation/pkg/dnsprovider/providers,13,20.313
-By number of commits,FathomDB,12,/pkg/kubelet/network,12,18.75
-By number of commits,FathomDB,12,/federation/pkg/dnsprovider/providers/aws/route53,8,12.5
-By number of commits,FathomDB,12,/pkg/apis,7,10.938
-By number of commits,FathomDB,12,/cluster,6,9.375
-By number of commits,FathomDB,12,/pkg/apis/componentconfig,6,9.375
-By number of commits,FathomDB,12,/federation/pkg/dnsprovider/providers/google/clouddns,5,7.813
-By number of commits,FathomDB,12,/cmd,4,6.25
-All By number of commits,Docker,13,"",54,0.333
-By number of commits,Docker,13,/pkg,47,87.037
-By number of commits,Docker,13,/pkg/kubelet,21,38.889
-By number of commits,Docker,13,/pkg/util,11,20.37
-By number of commits,Docker,13,/pkg/client,8,14.815
-By number of commits,Docker,13,/pkg/client/record,4,7.407
-By number of commits,Docker,13,/cmd,3,5.556
-By number of commits,Docker,13,/pkg/kubelet/util,3,5.556
-By number of commits,Docker,13,/pkg/util/workqueue,3,5.556
-By number of commits,Docker,13,/pkg/client/cache,3,5.556
-By number of commits,Docker,13,/pkg/util/clock,2,3.704
-By number of commits,Docker,13,/cmd/kubelet/app/server.go,2,3.704
-By number of commits,Docker,13,/pkg/kubelet/eviction,2,3.704
-By number of commits,Docker,13,/pkg/kubelet/pleg,2,3.704
-By number of commits,Docker,13,/pkg/controller,2,3.704
-By number of commits,Docker,13,/pkg/storage,2,3.704
-All By number of commits,Microsoft,14,"",51,0.314
-By number of commits,Microsoft,14,/pkg,42,82.353
-By number of commits,Microsoft,14,/pkg/cloudprovider,18,35.294
-By number of commits,Microsoft,14,/pkg/cloudprovider/providers,16,31.373
-By number of commits,Microsoft,14,/pkg/cloudprovider/providers/azure,9,17.647
-By number of commits,Microsoft,14,/pkg/kubectl,8,15.686
-By number of commits,Microsoft,14,/pkg/kubectl/cmd,7,13.725
-By number of commits,Microsoft,14,/pkg/client/unversioned/clientcmd,5,9.804
-By number of commits,Microsoft,14,/pkg/master,5,9.804
-By number of commits,Microsoft,14,/pkg/client/unversioned,5,9.804
-By number of commits,Microsoft,14,/hack,3,5.882
-By number of commits,Microsoft,14,/Godeps,3,5.882
-By number of commits,Microsoft,14,/pkg/apimachinery/registered,3,5.882
-By number of commits,Microsoft,14,/Godeps/Godeps.json,2,3.922
-All By number of commits,Clarifai,15,"",41,0.253
-By number of commits,Clarifai,15,/pkg,30,73.171
-By number of commits,Clarifai,15,/pkg/api,15,36.585
-By number of commits,Clarifai,15,/pkg/api/v1,7,17.073
-By number of commits,Clarifai,15,/pkg/cloudprovider/providers/aws,5,12.195
-By number of commits,Clarifai,15,/pkg/api/validation,4,9.756
-By number of commits,Clarifai,15,/pkg/kubelet,4,9.756
-By number of commits,Clarifai,15,/cluster,3,7.317
-By number of commits,Clarifai,15,/pkg/dns,3,7.317
-By number of commits,Clarifai,15,/cluster/addons/dns,3,7.317
-By number of commits,Clarifai,15,/test,2,4.878
-By number of commits,Clarifai,15,/pkg/api/validation/validation.go,2,4.878
-By number of commits,Clarifai,15,/hack,2,4.878
-All By number of commits,NotFound,16,"",14,0.086
-By number of commits,NotFound,16,/cluster/ubuntu,8,57.143
-By number of commits,NotFound,16,/cluster/ubuntu/master/init_conf,4,28.571
-By number of commits,NotFound,16,/pkg,4,28.571
-By number of commits,NotFound,16,/pkg/cloudprovider/providers/aws,2,14.286
-By number of commits,NotFound,16,/cluster/ubuntu/minion/init_conf,2,14.286
-By number of commits,NotFound,16,/pkg/kubectl,1,7.143
-By number of commits,NotFound,16,/test/images,1,7.143
-By number of commits,NotFound,16,/cluster/ubuntu/master-flannel,1,7.143
-By number of commits,NotFound,16,/test/images/pets/redis/on-start.sh,1,7.143
-By number of commits,NotFound,16,/cluster/ubuntu/minion-flannel,1,7.143
+All By number of commits to file,All,0,"",15180,100.0
+All By number of commits to file,Google,1,"",10335,68.083
+By number of commits to file,Google,1,/pkg,4135,40.01
+By number of commits to file,Google,1,/staging,1136,10.992
+By number of commits to file,Google,1,/staging/src/k8s.io/client-go,1135,10.982
+By number of commits to file,Google,1,/staging/src/k8s.io/client-go/1.4,1124,10.876
+By number of commits to file,Google,1,/pkg/client,937,9.066
+By number of commits to file,Google,1,/test,932,9.018
+By number of commits to file,Google,1,/docs,883,8.544
+By number of commits to file,Google,1,/pkg/client/clientset_generated,646,6.251
+By number of commits to file,Google,1,/cluster,624,6.038
+By number of commits to file,Google,1,/federation,561,5.428
+By number of commits to file,Google,1,/pkg/kubelet,552,5.341
+By number of commits to file,Google,1,/staging/src/k8s.io/client-go/1.4/pkg,470,4.548
+By number of commits to file,Google,1,/hack,421,4.074
+All By number of commits to file,Red Hat,2,"",1735,11.43
+By number of commits to file,Red Hat,2,/pkg,1186,68.357
+By number of commits to file,Red Hat,2,/pkg/client,192,11.066
+By number of commits to file,Red Hat,2,/pkg/kubelet,169,9.741
+By number of commits to file,Red Hat,2,/pkg/controller,146,8.415
+By number of commits to file,Red Hat,2,/test,142,8.184
+By number of commits to file,Red Hat,2,/pkg/registry,118,6.801
+By number of commits to file,Red Hat,2,/pkg/kubectl,111,6.398
+By number of commits to file,Red Hat,2,/pkg/apis,106,6.11
+By number of commits to file,Red Hat,2,/pkg/api,95,5.476
+By number of commits to file,Red Hat,2,/pkg/client/clientset_generated,88,5.072
+By number of commits to file,Red Hat,2,/test/e2e,86,4.957
+By number of commits to file,Red Hat,2,/pkg/client/unversioned,86,4.957
+By number of commits to file,Red Hat,2,/cmd,84,4.841
+By number of commits to file,Red Hat,2,/plugin,77,4.438
+By number of commits to file,Red Hat,2,/plugin/pkg,76,4.38
+All By number of commits to file,Mirantis,3,"",680,4.48
+By number of commits to file,Mirantis,3,/pkg,510,75.0
+By number of commits to file,Mirantis,3,/pkg/kubectl,103,15.147
+By number of commits to file,Mirantis,3,/pkg/kubelet,83,12.206
+By number of commits to file,Mirantis,3,/pkg/kubectl/cmd,57,8.382
+By number of commits to file,Mirantis,3,/contrib/mesos,48,7.059
+By number of commits to file,Mirantis,3,/contrib/mesos/pkg,46,6.765
+By number of commits to file,Mirantis,3,/pkg/registry,44,6.471
+By number of commits to file,Mirantis,3,/pkg/controller,44,6.471
+By number of commits to file,Mirantis,3,/pkg/apis,41,6.029
+By number of commits to file,Mirantis,3,/pkg/util,38,5.588
+By number of commits to file,Mirantis,3,/pkg/api,32,4.706
+By number of commits to file,Mirantis,3,/pkg/volume,27,3.971
+By number of commits to file,Mirantis,3,/pkg/client,25,3.676
+By number of commits to file,Mirantis,3,/contrib/mesos/pkg/scheduler,24,3.529
+All By number of commits to file,CoreOS,4,"",503,3.314
+By number of commits to file,CoreOS,4,/pkg,391,77.734
+By number of commits to file,CoreOS,4,/pkg/registry,210,41.75
+By number of commits to file,CoreOS,4,/pkg/storage,42,8.35
+By number of commits to file,CoreOS,4,/pkg/client,32,6.362
+By number of commits to file,CoreOS,4,/pkg/kubelet,27,5.368
+By number of commits to file,CoreOS,4,/pkg/apis,24,4.771
+By number of commits to file,CoreOS,4,/test,23,4.573
+By number of commits to file,CoreOS,4,/plugin/pkg,23,4.573
+By number of commits to file,CoreOS,4,/pkg/registry/generic,19,3.777
+By number of commits to file,CoreOS,4,/pkg/storage/storagebackend,16,3.181
+By number of commits to file,CoreOS,4,/pkg/kubelet/rkt,15,2.982
+By number of commits to file,CoreOS,4,/pkg/storage/storagebackend/factory,15,2.982
+By number of commits to file,CoreOS,4,/pkg/client/unversioned,14,2.783
+By number of commits to file,CoreOS,4,/pkg/apis/certificates,14,2.783
+All By number of commits to file,Ammeon,5,"",491,3.235
+By number of commits to file,Ammeon,5,/docs,359,73.116
+By number of commits to file,Ammeon,5,/docs/user-guide,129,26.273
+By number of commits to file,Ammeon,5,/docs/user-guide/kubectl,59,12.016
+By number of commits to file,Ammeon,5,/docs/proposals,59,12.016
+By number of commits to file,Ammeon,5,/examples,58,11.813
+By number of commits to file,Ammeon,5,/pkg,50,10.183
+By number of commits to file,Ammeon,5,/docs/design,49,9.98
+By number of commits to file,Ammeon,5,/docs/devel,47,9.572
+By number of commits to file,Ammeon,5,/docs/admin,36,7.332
+By number of commits to file,Ammeon,5,/docs/getting-started-guides,33,6.721
+By number of commits to file,Ammeon,5,/pkg/kubectl/cmd,24,4.888
+By number of commits to file,Ammeon,5,/examples/volumes,11,2.24
+All By number of commits to file,ZTE Corporation,6,"",172,1.133
+By number of commits to file,ZTE Corporation,6,/pkg,99,57.558
+By number of commits to file,ZTE Corporation,6,/pkg/kubectl,25,14.535
+By number of commits to file,ZTE Corporation,6,/docs,25,14.535
+By number of commits to file,ZTE Corporation,6,/pkg/kubelet,23,13.372
+By number of commits to file,ZTE Corporation,6,/pkg/kubectl/cmd,20,11.628
+By number of commits to file,ZTE Corporation,6,/plugin,18,10.465
+By number of commits to file,ZTE Corporation,6,/plugin/pkg,17,9.884
+By number of commits to file,ZTE Corporation,6,/plugin/pkg/scheduler,16,9.302
+By number of commits to file,ZTE Corporation,6,/pkg/genericapiserver,11,6.395
+By number of commits to file,ZTE Corporation,6,/pkg/controller,10,5.814
+By number of commits to file,ZTE Corporation,6,/docs/devel,10,5.814
+By number of commits to file,ZTE Corporation,6,/cmd,9,5.233
+By number of commits to file,ZTE Corporation,6,/pkg/genericapiserver/genericapiserver.go,9,5.233
+By number of commits to file,ZTE Corporation,6,/plugin/pkg/scheduler/algorithm,8,4.651
+By number of commits to file,ZTE Corporation,6,/pkg/kubelet/dockertools,8,4.651
+All By number of commits to file,Huawei,7,"",159,1.047
+By number of commits to file,Huawei,7,/federation,90,56.604
+By number of commits to file,Huawei,7,/federation/client/clientset_generated,57,35.849
+By number of commits to file,Huawei,7,/pkg,30,18.868
+By number of commits to file,Huawei,7,/federation/client/clientset_generated/federation_internalclientset,28,17.61
+By number of commits to file,Huawei,7,/federation/client/clientset_generated/federation_release_1_4,28,17.61
+By number of commits to file,Huawei,7,/federation/client/clientset_generated/federation_release_1_4/typed,22,13.836
+By number of commits to file,Huawei,7,/federation/client/clientset_generated/federation_internalclientset/typed,22,13.836
+By number of commits to file,Huawei,7,/federation/pkg/federation-controller,21,13.208
+By number of commits to file,Huawei,7,/pkg/api,18,11.321
+By number of commits to file,Huawei,7,/test,15,9.434
+By number of commits to file,Huawei,7,/test/e2e,14,8.805
+By number of commits to file,Huawei,7,/api/swagger-spec,10,6.289
+All By number of commits to file,Hyper.sh,8,"",137,0.903
+By number of commits to file,Hyper.sh,8,/pkg,85,62.044
+By number of commits to file,Hyper.sh,8,/pkg/kubelet,59,43.066
+By number of commits to file,Hyper.sh,8,/test,39,28.467
+By number of commits to file,Hyper.sh,8,/test/e2e,31,22.628
+By number of commits to file,Hyper.sh,8,/pkg/kubelet/kuberuntime,28,20.438
+By number of commits to file,Hyper.sh,8,/pkg/kubelet/api,13,9.489
+By number of commits to file,Hyper.sh,8,/pkg/util,11,8.029
+By number of commits to file,Hyper.sh,8,/test/e2e_node,8,5.839
+By number of commits to file,Hyper.sh,8,/pkg/kubelet/api/v1alpha1/runtime,8,5.839
+By number of commits to file,Hyper.sh,8,/pkg/kubelet/remote,7,5.109
+By number of commits to file,Hyper.sh,8,/pkg/kubelet/kuberuntime/kuberuntime_manager.go,5,3.65
+By number of commits to file,Hyper.sh,8,/pkg/kubelet/kuberuntime/kuberuntime_manager_test.go,5,3.65
+By number of commits to file,Hyper.sh,8,/pkg/kubelet/api/testing,5,3.65
+By number of commits to file,Hyper.sh,8,/pkg/kubelet/dockershim,5,3.65
+All By number of commits to file,IBM,9,"",86,0.567
+By number of commits to file,IBM,9,/pkg,54,62.791
+By number of commits to file,IBM,9,/pkg/kubectl,29,33.721
+By number of commits to file,IBM,9,/pkg/kubectl/cmd,25,29.07
+By number of commits to file,IBM,9,/docs,11,12.791
+By number of commits to file,IBM,9,/docs/devel,9,10.465
+By number of commits to file,IBM,9,/cluster,9,10.465
+By number of commits to file,IBM,9,/pkg/api,6,6.977
+By number of commits to file,IBM,9,/cluster/ubuntu,5,5.814
+By number of commits to file,IBM,9,/pkg/controller,5,5.814
+By number of commits to file,IBM,9,/pkg/kubectl/cmd/rollout,5,5.814
+By number of commits to file,IBM,9,/contrib/mesos,4,4.651
+By number of commits to file,IBM,9,/pkg/util,4,4.651
+By number of commits to file,IBM,9,/pkg/client,4,4.651
+By number of commits to file,IBM,9,/hack,4,4.651
+All By number of commits to file,Self,10,"",83,0.547
+By number of commits to file,Self,10,/pkg,51,61.446
+By number of commits to file,Self,10,/pkg/kubelet,17,20.482
+By number of commits to file,Self,10,/docs,13,15.663
+By number of commits to file,Self,10,/pkg/volume,12,14.458
+By number of commits to file,Self,10,/pkg/api,9,10.843
+By number of commits to file,Self,10,/pkg/kubelet/rktshim,8,9.639
+By number of commits to file,Self,10,/docs/design,6,7.229
+By number of commits to file,Self,10,/docs/devel,5,6.024
+By number of commits to file,Self,10,/pkg/kubelet/api,5,6.024
+By number of commits to file,Self,10,/test,4,4.819
+By number of commits to file,Self,10,/api,4,4.819
+By number of commits to file,Self,10,/examples/elasticsearch,4,4.819
+By number of commits to file,Self,10,/api/swagger-spec,4,4.819
+By number of commits to file,Self,10,/pkg/volume/downwardapi,3,3.614
+All By number of commits to file,Rook,11,"",71,0.468
+By number of commits to file,Rook,11,/pkg,25,35.211
+By number of commits to file,Rook,11,/cluster/images,17,23.944
+By number of commits to file,Rook,11,/cluster/images/hyperkube,14,19.718
+By number of commits to file,Rook,11,/cmd,9,12.676
+By number of commits to file,Rook,11,/cluster/images/hyperkube/static-pods,6,8.451
+By number of commits to file,Rook,11,/federation,5,7.042
+By number of commits to file,Rook,11,/examples,5,7.042
+By number of commits to file,Rook,11,/pkg/cloudprovider/providers,5,7.042
+By number of commits to file,Rook,11,/examples/celery-rabbitmq,5,7.042
+By number of commits to file,Rook,11,/contrib/mesos/cmd,4,5.634
+By number of commits to file,Rook,11,/pkg/controller,4,5.634
+By number of commits to file,Rook,11,/plugin,4,5.634
+All By number of commits to file,FathomDB,12,"",60,0.395
+By number of commits to file,FathomDB,12,/pkg,31,51.667
+By number of commits to file,FathomDB,12,/pkg/kubelet,19,31.667
+By number of commits to file,FathomDB,12,/federation/pkg,18,30.0
+By number of commits to file,FathomDB,12,/federation/pkg/dnsprovider,16,26.667
+By number of commits to file,FathomDB,12,/federation/pkg/dnsprovider/providers,13,21.667
+By number of commits to file,FathomDB,12,/pkg/kubelet/network,12,20.0
+By number of commits to file,FathomDB,12,/federation/pkg/dnsprovider/providers/aws/route53,8,13.333
+By number of commits to file,FathomDB,12,/cluster,6,10.0
+By number of commits to file,FathomDB,12,/federation/pkg/dnsprovider/providers/google/clouddns,5,8.333
+By number of commits to file,FathomDB,12,/pkg/cloudprovider,4,6.667
+By number of commits to file,FathomDB,12,/cmd,4,6.667
+By number of commits to file,FathomDB,12,/pkg/kubelet/network/kubenet,3,5.0
+All By number of commits to file,Docker,13,"",54,0.356
+By number of commits to file,Docker,13,/pkg,47,87.037
+By number of commits to file,Docker,13,/pkg/kubelet,21,38.889
+By number of commits to file,Docker,13,/pkg/util,11,20.37
+By number of commits to file,Docker,13,/pkg/client,8,14.815
+By number of commits to file,Docker,13,/pkg/client/record,4,7.407
+By number of commits to file,Docker,13,/cmd,3,5.556
+By number of commits to file,Docker,13,/pkg/kubelet/util,3,5.556
+By number of commits to file,Docker,13,/pkg/util/workqueue,3,5.556
+By number of commits to file,Docker,13,/pkg/client/cache,3,5.556
+By number of commits to file,Docker,13,/pkg/util/clock,2,3.704
+By number of commits to file,Docker,13,/cmd/kubelet/app/server.go,2,3.704
+By number of commits to file,Docker,13,/pkg/kubelet/eviction,2,3.704
+By number of commits to file,Docker,13,/pkg/kubelet/pleg,2,3.704
+By number of commits to file,Docker,13,/pkg/controller,2,3.704
+By number of commits to file,Docker,13,/pkg/storage,2,3.704
+All By number of commits to file,Microsoft,14,"",51,0.336
+By number of commits to file,Microsoft,14,/pkg,42,82.353
+By number of commits to file,Microsoft,14,/pkg/cloudprovider,18,35.294
+By number of commits to file,Microsoft,14,/pkg/cloudprovider/providers,16,31.373
+By number of commits to file,Microsoft,14,/pkg/cloudprovider/providers/azure,9,17.647
+By number of commits to file,Microsoft,14,/pkg/kubectl,8,15.686
+By number of commits to file,Microsoft,14,/pkg/kubectl/cmd,7,13.725
+By number of commits to file,Microsoft,14,/pkg/client/unversioned/clientcmd,5,9.804
+By number of commits to file,Microsoft,14,/pkg/master,5,9.804
+By number of commits to file,Microsoft,14,/pkg/client/unversioned,5,9.804
+By number of commits to file,Microsoft,14,/hack,3,5.882
+By number of commits to file,Microsoft,14,/Godeps,3,5.882
+By number of commits to file,Microsoft,14,/pkg/apimachinery/registered,3,5.882
+By number of commits to file,Microsoft,14,/Godeps/Godeps.json,2,3.922
+All By number of commits to file,Juniper Networks,15,"",41,0.27
+By number of commits to file,Juniper Networks,15,/cluster,41,100.0
+By number of commits to file,Juniper Networks,15,/cluster/saltbase,26,63.415
+By number of commits to file,Juniper Networks,15,/cluster/saltbase/salt,24,58.537
+By number of commits to file,Juniper Networks,15,/cluster/azure-legacy,13,31.707
+By number of commits to file,Juniper Networks,15,/cluster/azure-legacy/templates,8,19.512
+By number of commits to file,Juniper Networks,15,/cluster/saltbase/salt/nginx,4,9.756
+By number of commits to file,Juniper Networks,15,/cluster/saltbase/salt/generate-cert,3,7.317
+By number of commits to file,Juniper Networks,15,/cluster/saltbase/salt/openvpn,3,7.317
+By number of commits to file,Juniper Networks,15,/cluster/saltbase/salt/kube-proxy,3,7.317
+By number of commits to file,Juniper Networks,15,/cluster/azure-legacy/util.sh,2,4.878
+By number of commits to file,Juniper Networks,15,/cluster/get-kube.sh,2,4.878
+By number of commits to file,Juniper Networks,15,/cluster/azure-legacy/config-default.sh,2,4.878
+By number of commits to file,Juniper Networks,15,/cluster/saltbase/README.md,2,4.878
+By number of commits to file,Juniper Networks,15,/cluster/azure-legacy/templates/salt-minion.sh,2,4.878
+By number of commits to file,Juniper Networks,15,/cluster/azure-legacy/templates/salt-master.sh,2,4.878
+All By number of commits to file,NotFound,16,"",14,0.092
+By number of commits to file,NotFound,16,/cluster/ubuntu,8,57.143
+By number of commits to file,NotFound,16,/cluster/ubuntu/master/init_conf,4,28.571
+By number of commits to file,NotFound,16,/pkg,4,28.571
+By number of commits to file,NotFound,16,/pkg/cloudprovider/providers/aws,2,14.286
+By number of commits to file,NotFound,16,/cluster/ubuntu/minion/init_conf,2,14.286
+By number of commits to file,NotFound,16,/pkg/kubectl,1,7.143
+By number of commits to file,NotFound,16,/test/images,1,7.143
+By number of commits to file,NotFound,16,/cluster/ubuntu/master-flannel,1,7.143
+By number of commits to file,NotFound,16,/test/images/pets/redis/on-start.sh,1,7.143
+By number of commits to file,NotFound,16,/cluster/ubuntu/minion-flannel,1,7.143

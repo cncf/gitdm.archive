@@ -261,6 +261,7 @@ class patch:
         self.reports = [ ]
         self.filetypes = {}
         self.files = {}
+        self.totaled = False
 
     def addreviewer (self, reviewer):
         self.reviews.append (reviewer)
@@ -279,11 +280,7 @@ class patch:
             self.filetypes[filetype] = [added, removed]
 
     def addfile (self, filename, added, removed):
-        if self.files.has_key (filename):
-            self.files[filename][self.ADDED] += added
-            self.files[filename][self.REMOVED] += removed
-        else:
-            self.files[filename] = [added, removed]
+            self.files[filename] = [added, removed, max(added, removed)]
 
     def repr (self):
         return ('Patch', self.commit, self.author.repr(), 'Email', self.email)
@@ -612,6 +609,7 @@ for logpatch in patches:
         TotalAdded += pa.added
         TotalRemoved += pa.removed
         TotalChanged += max (pa.added, pa.removed)
+        pa.totaled = True
         AddDateLines (pa.date, max (pa.added, pa.removed))
         empl = pa.author.emailemployer (pa.email, pa.date)
         # if not empl:
@@ -680,7 +678,7 @@ if AffFile:
     AffFile.close()
 
 if FileStats:
-    database.AllFilesCSV(FileStats, hlist)
+    database.AllFilesCSV(FileStats, hlist, FileFilter, InvertFilter)
     FileStats.close()
 
 if DevReports:
