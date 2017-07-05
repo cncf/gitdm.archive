@@ -99,10 +99,10 @@ def filestats(csv_file, out_file)
         comp[depth].each do |dir, values|
           v = values[v_index].to_f
           vp = (100.0 * v / summary).round(3)
-          srt << [order_name, comp_name, c_index, depth, dir, v.to_i, vp]
+          srt << [order_name, comp_name, c_index, depth, dir[1..-1], v.to_i, vp]
         end
       end
-      res = srt.sort_by { |row| -row[6] }.select.with_index { |row, r_index| row[6] > 2.0 && r_index < 15 }
+      res = srt.sort_by { |row| -row[6] }.select.with_index { |row, r_index| row[6] > 1.0 && r_index < 25 }
       res = [["All #{order_name}", comp_name, c_index, 0, '', summary.to_i, summary_perc]] + res
       res.each { |rrow| all_results << rrow }
     end
