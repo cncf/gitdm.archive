@@ -1,5 +1,5 @@
 Processed 2634 csets from 261 developers
-88 employers found
+87 employers found
 A total of 310205 lines added, 259310 removed, 499126 changed (delta 50895)
 
 Developers with unknown affiliation
@@ -7,6 +7,7 @@ NotFound jimmyjones2@gmx.co.uk Jimmy Jones                                      
 NotFound lars@cormann.biz sondabar                                                  1 (0.0%)
 
 Developers working on their own behalf
+Self lucas.kaldstrom@hotmail.co.uk Lucas Käldström                               28 (1.1%)
 Self jianhui@outlook.com jianhuiz                                                  17 (0.6%)
 Self contact@tmrts.com Tamer Tas                                                    4 (0.2%)
 Self rodrigo@sdfg.com.ar Rodrigo Campos                                             2 (0.1%)
@@ -15,16 +16,15 @@ Self gh@mattyw.net mattyw                                                       
 Self zcq8989@gmail.com Crazykev                                                     1 (0.0%)
 
 Top changeset contributors by employer
-Google                                                                           1420 (53.9%)
+Google                                                                           1438 (54.6%)
 Red Hat                                                                           545 (20.7%)
 CoreOS                                                                            163 (6.2%)
+Self                                                                               39 (1.5%)
 FathomDB                                                                           34 (1.3%)
 Huawei                                                                             30 (1.1%)
-Rook                                                                               28 (1.1%)
 eBay                                                                               27 (1.0%)
 IBM                                                                                27 (1.0%)
 Net EASE 网易有态度                                                           22 (0.8%)
-Microsoft                                                                          22 (0.8%)
 Docker                                                                             21 (0.8%)
 Clarifai                                                                           20 (0.8%)
 HP                                                                                 19 (0.7%)
@@ -34,7 +34,6 @@ Fujitsu                                                                         
 Apache                                                                             12 (0.5%)
 Canonical                                                                          12 (0.5%)
 Caicloud                                                                           11 (0.4%)
-Self                                                                               11 (0.4%)
 CNM Consulting                                                                     10 (0.4%)
 Rackspace                                                                          10 (0.4%)
 Mirantis                                                                           10 (0.4%)
@@ -47,6 +46,7 @@ Alternative Storage                                                             
 Tigera                                                                              4 (0.2%)
 appOrbit                                                                            4 (0.2%)
 Amadeus                                                                             4 (0.2%)
+Microsoft                                                                           4 (0.2%)
 Spec Deas HR Consulting                                                             4 (0.2%)
 The Remote Lab                                                                      3 (0.1%)
 SOFICOM                                                                             3 (0.1%)
@@ -106,7 +106,7 @@ Tradesy                                                                         
 Covers 100.000000% of changesets
 
 Top lines changed by employer
-Google                                                                           321886 (64.5%)
+Google                                                                           323408 (64.8%)
 HP                                                                               61775 (12.4%)
 Red Hat                                                                          43483 (8.7%)
 CoreOS                                                                           30885 (6.2%)
@@ -118,8 +118,7 @@ GoGoVan                                                                         
 Spec Deas HR Consulting                                                          2012 (0.4%)
 Canonical                                                                        1971 (0.4%)
 eBay                                                                             1698 (0.3%)
-Microsoft                                                                        1588 (0.3%)
-Rook                                                                             1289 (0.3%)
+Self                                                                             1450 (0.3%)
 Tigera                                                                           1059 (0.2%)
 VMware                                                                           1005 (0.2%)
 FathomDB                                                                          706 (0.1%)
@@ -135,7 +134,6 @@ Cockroach                                                                       
 Intel                                                                             233 (0.0%)
 The Manufacturing Institute                                                       189 (0.0%)
 thinkstep                                                                         172 (0.0%)
-Self                                                                              161 (0.0%)
 Alternative Storage                                                               137 (0.0%)
 appOrbit                                                                          129 (0.0%)
 chbatey                                                                           128 (0.0%)
@@ -143,6 +141,7 @@ CenturyLink                                                                     
 Samsung                                                                            94 (0.0%)
 Mirantis                                                                           87 (0.0%)
 Cisco                                                                              80 (0.0%)
+Microsoft                                                                          66 (0.0%)
 HolidayCheck                                                                       59 (0.0%)
 Aperian Global                                                                     55 (0.0%)
 Hyper.sh                                                                           53 (0.0%)
@@ -206,11 +205,11 @@ Self                                                                            
 Covers 100.000000% of signoffs
 
 Employers with the most hackers (total 262)
-Google                                                                             69 (26.3%)
+Google                                                                             70 (26.7%)
 Red Hat                                                                            45 (17.2%)
 CoreOS                                                                             14 (5.3%)
 IBM                                                                                 9 (3.4%)
-Self                                                                                6 (2.3%)
+Self                                                                                7 (2.7%)
 Mirantis                                                                            6 (2.3%)
 Huawei                                                                              5 (1.9%)
 eBay                                                                                5 (1.9%)
@@ -222,7 +221,6 @@ Caicloud                                                                        
 Intel                                                                               3 (1.1%)
 HP                                                                                  2 (0.8%)
 Canonical                                                                           2 (0.8%)
-Microsoft                                                                           2 (0.8%)
 VMware                                                                              2 (0.8%)
 Clarifai                                                                            2 (0.8%)
 Net EASE 网易有态度                                                            2 (0.8%)
@@ -231,7 +229,6 @@ Apache                                                                          
 CERN                                                                                1 (0.4%)
 GoGoVan                                                                             1 (0.4%)
 Spec Deas HR Consulting                                                             1 (0.4%)
-Rook                                                                                1 (0.4%)
 Tigera                                                                              1 (0.4%)
 FathomDB                                                                            1 (0.4%)
 Rackspace                                                                           1 (0.4%)
@@ -246,6 +243,7 @@ appOrbit                                                                        
 chbatey                                                                             1 (0.4%)
 CenturyLink                                                                         1 (0.4%)
 Samsung                                                                             1 (0.4%)
+Microsoft                                                                           1 (0.4%)
 HolidayCheck                                                                        1 (0.4%)
 Aperian Global                                                                      1 (0.4%)
 Hyper.sh                                                                            1 (0.4%)
