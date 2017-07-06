@@ -220,8 +220,8 @@ To generate JSON with some filtered data (like all unknown devs with location or
 To generate progress report (report about how many Not Found, Unknowns and Self employment devs are defined in our affiliation, call: `./progress_report.sh`).
 To generate aliases for emails that are already known (are uning the same GitHub user name) try `./aliaser.sh`, output is `aliaser.txt` that can be analysed and manually added to `cncf-config/aliases` if needed.
 To generate correlations map for company name (to avoid mapping typos etc) run `./correlations.sh` script, result is `correlations.txt` file that can be used to update `cncf-config/email-map` with corrected employer names.
+To generate per files/directories statistics use: `./per_dirs.sh`, this is a part of standard workflow, results are in CSV files in `per_dirs` directory
 To generate affiliation files (`developers_affiliations.txt`, `company_developers.txt`), use `./gen_aff_files.sh`
-To generate per files statistics use: `./per_dirs.sh`, this is a part of standard workflow, results are in CSV files in `per_dirs` directory
 
 All those tools are automatically called when running full data regenerating script: `./rerun_data.sh`
 

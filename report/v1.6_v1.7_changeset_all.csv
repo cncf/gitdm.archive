@@ -1,9 +1,9 @@
 idx,company,n,percent
-0,(All known 119),2669,99.78
-1,Google,1013,37.9
+0,(All known 116),2669,99.78
+1,Google,1016,38.0
 2,Red Hat,596,22.3
-3,ZTE Corporation,89,3.3
-4,(Self),79,3.0
+3,(Self),90,3.4
+4,ZTE Corporation,89,3.3
 5,IBM,78,2.9
 6,Fujitsu,77,2.9
 7,EasyStack,62,2.3
@@ -14,109 +14,106 @@ idx,company,n,percent
 12,Hyper.sh,32,1.2
 13,Canonical,31,1.2
 14,FathomDB,28,1.0
-15,CoreOS,26,1.0
+15,CoreOS,27,1.0
 16,ASG Consulting,23,0.9
 17,Mirantis,21,0.8
 18,Kelowna,19,0.7
 19,Heptio,17,0.6
 20,Airbnb,12,0.4
-21,Rackspace,11,0.4
-22,Weaveworks,11,0.4
-23,Tata,11,0.4
-24,Apache,10,0.4
+21,Tata,11,0.4
+22,Rackspace,11,0.4
+23,Apache,10,0.4
+24,Tigera,9,0.3
 25,Apprenda,9,0.3
-26,Tigera,9,0.3
-27,Amadeus,7,0.3
-28,Cisco,7,0.3
-29,Wattpad,6,0.2
-30,(Not Found),6,0.2
-31,Rancher,6,0.2
-32,DaoCloud,6,0.2
-33,Atlassian,6,0.2
-34,Oracle,6,0.2
-35,Portworx,5,0.2
-36,Primeton,5,0.2
-37,zlabjp,5,0.2
-38,Rook,5,0.2
-39,Telemetry.com,4,0.1
-40,Samsung,4,0.1
-41,Luminis,4,0.1
-42,Concur,4,0.1
-43,42 Tech,4,0.1
-44,SalesForce,4,0.1
-45,Loodse,4,0.1
-46,Elisa,4,0.1
-47,Nordstrom,4,0.1
-48,Cockroach,4,0.1
-49,Zalando,4,0.1
-50,Movable Ink,4,0.1
-51,Hitachi Data Systems,4,0.1
-52,Tencent,4,0.1
-53,HP,4,0.1
-54,JPMorgan Chase,3,0.1
-55,Socrata,3,0.1
-56,eBay,3,0.1
-57,Diamanti,3,0.1
-58,Net EASE 网易有态度,3,0.1
-59,Intel,3,0.1
-60,Jd.Com,3,0.1
-61,Walmart,3,0.1
-62,Juju Ecosystem,3,0.1
-63,Amazon,2,0.1
-64,Code Coup,2,0.1
-65,Igneous Systems,2,0.1
-66,Douyu.com,2,0.1
-67,Unicredit,2,0.1
-68,SoundCloud,2,0.1
-69,TravelSky Technology Limited,2,0.1
-70,Pardot,2,0.1
-71,Ancestry.com,2,0.1
-72,FOSSEE,2,0.1
-73,Lohika,2,0.1
-74,HarmonyCloud,2,0.1
-75,Ocado,2,0.1
-76,ContaAzul,2,0.1
-77,Infoblox,1,0.0
-78,Feedtrail,1,0.0
-79,rstorcloud,1,0.0
-80,Shopify,1,0.0
-81,Alternative Storage,1,0.0
-82,MediaMath,1,0.0
-83,IT Svit,1,0.0
-84,Virgo Systems,1,0.0
-85,QIANKUN,1,0.0
-86,Nirmata,1,0.0
-87,亚信科技 AsiaInfo,1,0.0
-88,Ruby Together,1,0.0
-89,Tyk,1,0.0
-90,CT Lab,1,0.0
-91,jobandtalent,1,0.0
-92,Inuits,1,0.0
-93,Aperian Global,1,0.0
-94,microcloud,1,0.0
-95,FINN.no,1,0.0
-96,minio,1,0.0
-97,Chariot Solutions,1,0.0
-98,China Mobile International Limited,1,0.0
-99,IEEE Computer Society,1,0.0
-100,ksyun,1,0.0
-101,Clarifai,1,0.0
-102,Q42,1,0.0
-103,Capgemini,1,0.0
-104,Cruise Automation,1,0.0
-105,RightScale,1,0.0
-106,Ceph,1,0.0
-107,GRADIANT,1,0.0
-108,"Styra, Inc.",1,0.0
-109,ocadotechnology,1,0.0
-110,Bits Working,1,0.0
-111,Compose,1,0.0
-112,Inovex,1,0.0
-113,en.N cloud,1,0.0
-114,Globo.com,1,0.0
-115,Bankwest,1,0.0
-116,Virtual Instruments,1,0.0
-117,indiehosters,1,0.0
-118,storageos,1,0.0
-119,Bracket Computing,1,0.0
-120,Airtame,1,0.0
+26,Amadeus,7,0.3
+27,Cisco,7,0.3
+28,Wattpad,6,0.2
+29,(Not Found),6,0.2
+30,Rancher,6,0.2
+31,DaoCloud,6,0.2
+32,Atlassian,6,0.2
+33,Oracle,6,0.2
+34,Primeton,5,0.2
+35,Elisa,5,0.2
+36,zlabjp,5,0.2
+37,Portworx,5,0.2
+38,Telemetry.com,4,0.1
+39,Samsung,4,0.1
+40,Luminis,4,0.1
+41,Concur,4,0.1
+42,42 Tech,4,0.1
+43,SalesForce,4,0.1
+44,Loodse,4,0.1
+45,Nordstrom,4,0.1
+46,Cockroach,4,0.1
+47,Zalando,4,0.1
+48,Movable Ink,4,0.1
+49,Hitachi Data Systems,4,0.1
+50,Tencent,4,0.1
+51,HP,4,0.1
+52,Juju Ecosystem,3,0.1
+53,Socrata,3,0.1
+54,eBay,3,0.1
+55,Diamanti,3,0.1
+56,Net EASE 网易有态度,3,0.1
+57,Intel,3,0.1
+58,Jd.Com,3,0.1
+59,Walmart,3,0.1
+60,JPMorgan Chase,3,0.1
+61,Amazon,2,0.1
+62,FOSSEE,2,0.1
+63,Lohika,2,0.1
+64,HarmonyCloud,2,0.1
+65,Ocado,2,0.1
+66,ContaAzul,2,0.1
+67,Code Coup,2,0.1
+68,TravelSky Technology Limited,2,0.1
+69,Igneous Systems,2,0.1
+70,Weaveworks,2,0.1
+71,Douyu.com,2,0.1
+72,Unicredit,2,0.1
+73,SoundCloud,2,0.1
+74,Pardot,2,0.1
+75,Ancestry.com,2,0.1
+76,rstorcloud,1,0.0
+77,Shopify,1,0.0
+78,Alternative Storage,1,0.0
+79,MediaMath,1,0.0
+80,IT Svit,1,0.0
+81,Virgo Systems,1,0.0
+82,QIANKUN,1,0.0
+83,Nirmata,1,0.0
+84,亚信科技 AsiaInfo,1,0.0
+85,Ruby Together,1,0.0
+86,Tyk,1,0.0
+87,CT Lab,1,0.0
+88,jobandtalent,1,0.0
+89,Inuits,1,0.0
+90,Aperian Global,1,0.0
+91,microcloud,1,0.0
+92,FINN.no,1,0.0
+93,minio,1,0.0
+94,Chariot Solutions,1,0.0
+95,China Mobile International Limited,1,0.0
+96,IEEE Computer Society,1,0.0
+97,GRADIANT,1,0.0
+98,Clarifai,1,0.0
+99,Q42,1,0.0
+100,Capgemini,1,0.0
+101,Cruise Automation,1,0.0
+102,RightScale,1,0.0
+103,ksyun,1,0.0
+104,"Styra, Inc.",1,0.0
+105,ocadotechnology,1,0.0
+106,Bits Working,1,0.0
+107,Compose,1,0.0
+108,Inovex,1,0.0
+109,en.N cloud,1,0.0
+110,Globo.com,1,0.0
+111,Bankwest,1,0.0
+112,Virtual Instruments,1,0.0
+113,indiehosters,1,0.0
+114,storageos,1,0.0
+115,Bracket Computing,1,0.0
+116,Airtame,1,0.0
+117,Infoblox,1,0.0
