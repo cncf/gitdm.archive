@@ -54,8 +54,9 @@ def gen_aff_files(csv_file)
       end
       ems = {}
       affs.each_with_index do |aff, idx|
-        ems[aff] = [] unless ems.key?(aff)
-        ems[aff] << affse[idx].first[0]
+        k = aff.clone
+        ems[k] = [] unless ems.key?(k)
+        ems[k] << affse[idx].first[0]
       end
       ems.each do |affl, lst|
         has_dev = affl.map { |aff| aff[0] }.include?(comp_name)
@@ -92,8 +93,9 @@ def gen_aff_files(csv_file)
     ems = {}
     split = affs.uniq.count == 1 ? '' : '*'
     affs.each_with_index do |aff, idx|
-      ems[aff] = [] unless ems.key?(aff)
-      ems[aff] << affse[idx].first[0]
+      k = aff.clone
+      ems[k] = [] unless ems.key?(k)
+      ems[k] << affse[idx].first[0]
     end
     ems.each do |affl, lst|
       t += "#{dev_name}#{split}: #{lst.sort.join(', ')}\n"
