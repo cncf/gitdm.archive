@@ -45,7 +45,6 @@ def gen_aff_files(csv_file)
         affs << emails[email].map { |a| [a['company'], a['date_to']] }.sort_by { |r| r[1] }.reverse
         affse << emails[email].map { |a| [a['email'], a['company'], a['date_to']] }.sort_by { |r| r[2] }.reverse
       end
-      has_dev = affs.first.map { |aff| aff[0] }.include?(comp_name)
       # Very important sanity check
       if affs.uniq.count > 1
         h = {}
@@ -53,24 +52,30 @@ def gen_aff_files(csv_file)
         wrongs << JSON.pretty_generate(h)
         w << [dev_name, affse]
       end
-      next unless has_dev
-      t += "\t"
-      t += "BROKEN! " if affs.uniq.count > 1
-      t += "#{dev_name}: #{email_list.keys.sort.join(', ')}"
-      len = affs.first.length
-      dates = []
-      affs.first.each_with_index do |aff, index|
-        next unless aff[0] == comp_name
-        from = ''
-        if index != len - 1
-          from = "from #{affs.first[index + 1][1]}"
-        end
-        to = aff[1] == dt_future ? '' : "until #{aff[1]}"
-        dates << [from, to].reject { |d| d == '' }.join(' ')
+      ems = {}
+      affs.each_with_index do |aff, idx|
+        ems[aff] = [] unless ems.key?(aff)
+        ems[aff] << affse[idx].first[0]
       end
-      datestr = dates.reverse.join(', ')
-      datestr = ' ' + datestr unless datestr == ''
-      t += "#{datestr}\n"
+      ems.each do |affl, lst|
+        has_dev = affl.map { |aff| aff[0] }.include?(comp_name)
+        next unless has_dev
+        t += "\t#{dev_name}: #{lst.sort.join(', ')}"
+        len = affl.length
+        dates = []
+        affl.each_with_index do |aff, index|
+          next unless aff[0] == comp_name
+          from = ''
+          if index != len - 1
+            from = "from #{affl[index + 1][1]}"
+          end
+          to = aff[1] == dt_future ? '' : "until #{aff[1]}"
+          dates << [from, to].reject { |d| d == '' }.join(' ')
+        end
+        datestr = dates.reverse.join(', ')
+        datestr = ' ' + datestr unless datestr == ''
+        t += "#{datestr}\n"
+      end
     end
   end
   File.write 'company_developers.txt', t
@@ -79,15 +84,23 @@ def gen_aff_files(csv_file)
   names.keys.sort.each do |dev_name|
     email_list = names[dev_name]
     affs = []
+    affse = []
     email_list.keys.sort.each do |email|
       affs << emails[email].map { |a| [a['company'], a['date_to']] }.sort_by { |r| r[1] }.reverse
+      affse << emails[email].map { |a| [a['email'], a['company'], a['date_to']] }.sort_by { |r| r[1] }.reverse
     end
-    # Very important sanity check
-    t += 'BROKEN! ' if affs.uniq.count > 1
-    t += "#{dev_name}: #{email_list.keys.sort.join(', ')}\n"
-    affs.first.each do |aff|
-      datestr = aff[1] == dt_future ? '' : " until #{aff[1]}"
-      t += "\t#{aff[0]}#{datestr}\n"
+    ems = {}
+    split = affs.uniq.count == 1 ? '' : '*'
+    affs.each_with_index do |aff, idx|
+      ems[aff] = [] unless ems.key?(aff)
+      ems[aff] << affse[idx].first[0]
+    end
+    ems.each do |affl, lst|
+      t += "#{dev_name}#{split}: #{lst.sort.join(', ')}\n"
+      affl.each do |aff|
+        datestr = aff[1] == dt_future ? '' : " until #{aff[1]}"
+        t += "\t#{aff[0]}#{datestr}\n"
+      end
     end
   end
   File.write 'developers_affiliations.txt', t
@@ -95,9 +108,14 @@ def gen_aff_files(csv_file)
   if wrongs.count > 0
     wrongs = wrongs.uniq
     w = w.uniq
-    e = w.select { |r| r[1].any? { |a| a.length > 1 } }
-    r = w.select { |r| r[1].any? { |a| a.length <= 1 } }
-    binding.pry
+    e = w.select { |r| r[1].any? { |a| a.length > 1 } } # With more than 1 affiliation on any email
+    s = w.select { |r| r[1].count > 2 }                 # With more than 2 emails
+    nf = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == 'NotFound' } } }
+    se = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == 'Self' } } }
+    un = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == '(Unknown)' } } }
+    dt = w.select { |r| r[1].any? { |a| a.any? { |b| b[2] != dt_future } } }
+    # binding.pry
+    puts 'Special cases found, consider binding.pry it!'
   end
 end
 
