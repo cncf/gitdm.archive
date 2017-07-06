@@ -1,26 +1,26 @@
 Order,Company,Index,File/Directory,Number,Percent,PercentAll
 All By changed lines,All,0,"",482982,100.0,100.0
-All By changed lines,Google,1,"",272239,56.366,56.366
-By changed lines,Google,1,docs,94798,34.822,19.628
-By changed lines,Google,1,pkg,82577,30.333,17.097
-By changed lines,Google,1,docs/man/man1,68793,25.269,14.243
-By changed lines,Google,1,staging,33436,12.282,6.923
-By changed lines,Google,1,staging/src/k8s.io,33401,12.269,6.916
-By changed lines,Google,1,pkg/kubelet,24406,8.965,5.053
-By changed lines,Google,1,api,15309,5.623,3.17
-By changed lines,Google,1,test,13850,5.087,2.868
-By changed lines,Google,1,staging/src/k8s.io/client-go,13817,5.075,2.861
-By changed lines,Google,1,docs/user-guide/kubectl,13356,4.906,2.765
-By changed lines,Google,1,pkg/controller,11526,4.234,2.386
-By changed lines,Google,1,api/openapi-spec/swagger.json,11371,4.177,2.354
-By changed lines,Google,1,docs/yaml/kubectl,11174,4.104,2.314
-By changed lines,Google,1,pkg/cloudprovider,10726,3.94,2.221
-By changed lines,Google,1,pkg/cloudprovider/providers,10699,3.93,2.215
-By changed lines,Google,1,pkg/cloudprovider/providers/gce,10270,3.772,2.126
-By changed lines,Google,1,pkg/api,9469,3.478,1.961
-By changed lines,Google,1,staging/src/k8s.io/apimachinery,9327,3.426,1.931
-By changed lines,Google,1,staging/src/k8s.io/apimachinery/pkg,9248,3.397,1.915
-By changed lines,Google,1,pkg/kubelet/dockertools,8885,3.264,1.84
+All By changed lines,Google,1,"",272467,56.413,56.413
+By changed lines,Google,1,docs,94798,34.792,19.628
+By changed lines,Google,1,pkg,82577,30.307,17.097
+By changed lines,Google,1,docs/man/man1,68793,25.248,14.243
+By changed lines,Google,1,staging,33657,12.353,6.969
+By changed lines,Google,1,staging/src/k8s.io,33622,12.34,6.961
+By changed lines,Google,1,pkg/kubelet,24406,8.957,5.053
+By changed lines,Google,1,api,15309,5.619,3.17
+By changed lines,Google,1,test,13850,5.083,2.868
+By changed lines,Google,1,staging/src/k8s.io/client-go,13817,5.071,2.861
+By changed lines,Google,1,docs/user-guide/kubectl,13356,4.902,2.765
+By changed lines,Google,1,pkg/controller,11526,4.23,2.386
+By changed lines,Google,1,api/openapi-spec/swagger.json,11371,4.173,2.354
+By changed lines,Google,1,docs/yaml/kubectl,11174,4.101,2.314
+By changed lines,Google,1,pkg/cloudprovider,10726,3.937,2.221
+By changed lines,Google,1,pkg/cloudprovider/providers,10699,3.927,2.215
+By changed lines,Google,1,pkg/cloudprovider/providers/gce,10270,3.769,2.126
+By changed lines,Google,1,pkg/api,9469,3.475,1.961
+By changed lines,Google,1,staging/src/k8s.io/apimachinery,9327,3.423,1.931
+By changed lines,Google,1,staging/src/k8s.io/apimachinery/pkg,9248,3.394,1.915
+By changed lines,Google,1,pkg/kubelet/dockertools,8885,3.261,1.84
 All By changed lines,Red Hat,2,"",93275,19.312,19.312
 By changed lines,Red Hat,2,staging,32965,35.342,6.825
 By changed lines,Red Hat,2,staging/src/k8s.io,32938,35.313,6.82
@@ -115,28 +115,27 @@ By changed lines,Huawei,6,federation/pkg/federation-controller/util/replicaprefe
 By changed lines,Huawei,6,federation/pkg/federation-controller/service/endpoint_helper_test.go,173,3.053,0.036
 By changed lines,Huawei,6,federation/pkg/federation-controller/service/service_helper_test.go,163,2.876,0.034
 By changed lines,Huawei,6,federation/pkg/kubefed,156,2.753,0.032
-All By changed lines,Self,7,"",4568,0.946,0.946
-By changed lines,Self,7,pkg,1613,35.311,0.334
-By changed lines,Self,7,staging/src/k8s.io,1249,27.342,0.259
-By changed lines,Self,7,cluster,1176,25.744,0.243
-By changed lines,Self,7,cluster/juju/layers,1131,24.759,0.234
-By changed lines,Self,7,staging/src/k8s.io/apiserver,735,16.09,0.152
-By changed lines,Self,7,staging/src/k8s.io/apiserver/pkg,728,15.937,0.151
-By changed lines,Self,7,cluster/juju/layers/kubernetes-master,725,15.871,0.15
-By changed lines,Self,7,staging/src/k8s.io/kube-apiextensions-server,492,10.771,0.102
-By changed lines,Self,7,staging/src/k8s.io/kube-apiextensions-server/test/integration,467,10.223,0.097
-By changed lines,Self,7,staging/src/k8s.io/apiserver/pkg/server,426,9.326,0.088
-By changed lines,Self,7,staging/src/k8s.io/kube-apiextensions-server/test/integration/basic_test.go,413,9.041,0.086
-By changed lines,Self,7,pkg/kubelet,407,8.91,0.084
-By changed lines,Self,7,cluster/juju/layers/kubernetes-worker,406,8.888,0.084
-By changed lines,Self,7,pkg/kubectl,391,8.56,0.081
-By changed lines,Self,7,pkg/kubectl/cmd,386,8.45,0.08
-By changed lines,Self,7,staging/src/k8s.io/apiserver/pkg/server/options,352,7.706,0.073
-By changed lines,Self,7,pkg/controller,348,7.618,0.072
-By changed lines,Self,7,pkg/controller/volume,343,7.509,0.071
-By changed lines,Self,7,pkg/controller/volume/attachdetach,341,7.465,0.071
-By changed lines,Self,7,plugin,331,7.246,0.069
-By changed lines,Self,7,plugin/pkg,329,7.202,0.068
+All By changed lines,Self,7,"",5351,1.108,1.108
+By changed lines,Self,7,cluster,1749,32.685,0.362
+By changed lines,Self,7,pkg,1613,30.144,0.334
+By changed lines,Self,7,cluster/juju/layers,1131,21.136,0.234
+By changed lines,Self,7,staging/src/k8s.io,1028,19.211,0.213
+By changed lines,Self,7,cluster/juju/layers/kubernetes-master,725,13.549,0.15
+By changed lines,Self,7,cluster/images,580,10.839,0.12
+By changed lines,Self,7,cluster/images/hyperkube,578,10.802,0.12
+By changed lines,Self,7,staging/src/k8s.io/apiserver,514,9.606,0.106
+By changed lines,Self,7,staging/src/k8s.io/apiserver/pkg,507,9.475,0.105
+By changed lines,Self,7,staging/src/k8s.io/kube-apiextensions-server,492,9.195,0.102
+By changed lines,Self,7,cmd,483,9.026,0.1
+By changed lines,Self,7,staging/src/k8s.io/kube-apiextensions-server/test/integration,467,8.727,0.097
+By changed lines,Self,7,staging/src/k8s.io/kube-apiextensions-server/test/integration/basic_test.go,413,7.718,0.086
+By changed lines,Self,7,pkg/kubelet,407,7.606,0.084
+By changed lines,Self,7,cluster/juju/layers/kubernetes-worker,406,7.587,0.084
+By changed lines,Self,7,cmd/kubeadm/app,391,7.307,0.081
+By changed lines,Self,7,pkg/kubectl,391,7.307,0.081
+By changed lines,Self,7,pkg/kubectl/cmd,386,7.214,0.08
+By changed lines,Self,7,pkg/controller,348,6.503,0.072
+By changed lines,Self,7,cluster/images/hyperkube/static-pods,348,6.503,0.072
 All By changed lines,Hyper.sh,8,"",4009,0.83,0.83
 By changed lines,Hyper.sh,8,pkg,3240,80.818,0.671
 By changed lines,Hyper.sh,8,pkg/kubelet,2707,67.523,0.56
@@ -323,29 +322,29 @@ By changed lines,NotFound,16,pkg/apis,4,3.636,0.001
 By changed lines,NotFound,16,staging,4,3.636,0.001
 By changed lines,NotFound,16,pkg/controller/podautoscaler/horizontal_test.go,4,3.636,0.001
 All By number of commits to file,All,0,"",13540,100.0,100.0
-All By number of commits to file,Google,1,"",6426,47.459,47.459
-By number of commits to file,Google,1,pkg,2638,41.052,19.483
-By number of commits to file,Google,1,staging,1161,18.067,8.575
-By number of commits to file,Google,1,staging/src/k8s.io,1154,17.958,8.523
-By number of commits to file,Google,1,test,647,10.068,4.778
-By number of commits to file,Google,1,staging/src/k8s.io/client-go,624,9.711,4.609
-By number of commits to file,Google,1,docs,508,7.905,3.752
-By number of commits to file,Google,1,pkg/kubelet,496,7.719,3.663
-By number of commits to file,Google,1,pkg/client,427,6.645,3.154
-By number of commits to file,Google,1,cluster,380,5.913,2.806
-By number of commits to file,Google,1,test/e2e,326,5.073,2.408
-By number of commits to file,Google,1,cmd,305,4.746,2.253
-By number of commits to file,Google,1,federation,296,4.606,2.186
-By number of commits to file,Google,1,pkg/controller,278,4.326,2.053
-By number of commits to file,Google,1,staging/src/k8s.io/client-go/pkg,252,3.922,1.861
-By number of commits to file,Google,1,staging/src/k8s.io/apiserver,251,3.906,1.854
-By number of commits to file,Google,1,staging/src/k8s.io/apiserver/pkg,224,3.486,1.654
-By number of commits to file,Google,1,pkg/client/clientset_generated,220,3.424,1.625
-By number of commits to file,Google,1,docs/man/man1,213,3.315,1.573
-By number of commits to file,Google,1,pkg/apis,210,3.268,1.551
-By number of commits to file,Google,1,pkg/api,192,2.988,1.418
-By number of commits to file,Google,1,docs/user-guide/kubectl,180,2.801,1.329
-By number of commits to file,Google,1,pkg/kubectl,174,2.708,1.285
+All By number of commits to file,Google,1,"",6432,47.504,47.504
+By number of commits to file,Google,1,pkg,2638,41.014,19.483
+By number of commits to file,Google,1,staging,1166,18.128,8.612
+By number of commits to file,Google,1,staging/src/k8s.io,1159,18.019,8.56
+By number of commits to file,Google,1,test,647,10.059,4.778
+By number of commits to file,Google,1,staging/src/k8s.io/client-go,624,9.701,4.609
+By number of commits to file,Google,1,docs,508,7.898,3.752
+By number of commits to file,Google,1,pkg/kubelet,496,7.711,3.663
+By number of commits to file,Google,1,pkg/client,427,6.639,3.154
+By number of commits to file,Google,1,cluster,381,5.924,2.814
+By number of commits to file,Google,1,test/e2e,326,5.068,2.408
+By number of commits to file,Google,1,cmd,305,4.742,2.253
+By number of commits to file,Google,1,federation,296,4.602,2.186
+By number of commits to file,Google,1,pkg/controller,278,4.322,2.053
+By number of commits to file,Google,1,staging/src/k8s.io/apiserver,256,3.98,1.891
+By number of commits to file,Google,1,staging/src/k8s.io/client-go/pkg,252,3.918,1.861
+By number of commits to file,Google,1,staging/src/k8s.io/apiserver/pkg,229,3.56,1.691
+By number of commits to file,Google,1,pkg/client/clientset_generated,220,3.42,1.625
+By number of commits to file,Google,1,docs/man/man1,213,3.312,1.573
+By number of commits to file,Google,1,pkg/apis,210,3.265,1.551
+By number of commits to file,Google,1,pkg/api,192,2.985,1.418
+By number of commits to file,Google,1,docs/user-guide/kubectl,180,2.799,1.329
+By number of commits to file,Google,1,pkg/kubectl,174,2.705,1.285
 All By number of commits to file,Red Hat,2,"",3428,25.318,25.318
 By number of commits to file,Red Hat,2,staging,1220,35.589,9.01
 By number of commits to file,Red Hat,2,staging/src/k8s.io,1216,35.473,8.981
@@ -371,28 +370,28 @@ By number of commits to file,Red Hat,2,staging/src/k8s.io/kube-aggregator,113,3.
 By number of commits to file,Red Hat,2,cmd,113,3.296,0.835
 By number of commits to file,Red Hat,2,plugin/pkg/admission,113,3.296,0.835
 By number of commits to file,Red Hat,2,test/integration,110,3.209,0.812
-All By number of commits to file,Self,3,"",327,2.415,2.415
-By number of commits to file,Self,3,pkg,95,29.052,0.702
-By number of commits to file,Self,3,plugin,64,19.572,0.473
-By number of commits to file,Self,3,plugin/pkg,62,18.96,0.458
-By number of commits to file,Self,3,cluster,62,18.96,0.458
-By number of commits to file,Self,3,plugin/pkg/admission,60,18.349,0.443
-By number of commits to file,Self,3,staging/src/k8s.io,47,14.373,0.347
-By number of commits to file,Self,3,cluster/juju/layers,45,13.761,0.332
-By number of commits to file,Self,3,staging/src/k8s.io/apiserver,28,8.563,0.207
-By number of commits to file,Self,3,staging/src/k8s.io/apiserver/pkg,27,8.257,0.199
-By number of commits to file,Self,3,pkg/kubelet,26,7.951,0.192
-By number of commits to file,Self,3,cluster/juju/layers/kubernetes-worker,26,7.951,0.192
-By number of commits to file,Self,3,staging/src/k8s.io/apiserver/pkg/server,20,6.116,0.148
-By number of commits to file,Self,3,pkg/kubectl,19,5.81,0.14
-By number of commits to file,Self,3,cluster/juju/layers/kubernetes-master,19,5.81,0.14
-By number of commits to file,Self,3,pkg/kubectl/cmd,18,5.505,0.133
-By number of commits to file,Self,3,federation,15,4.587,0.111
-By number of commits to file,Self,3,cmd,14,4.281,0.103
-By number of commits to file,Self,3,staging/src/k8s.io/kube-apiextensions-server,14,4.281,0.103
-By number of commits to file,Self,3,federation/cmd/federation-apiserver,13,3.976,0.096
-By number of commits to file,Self,3,staging/src/k8s.io/apiserver/pkg/server/options,13,3.976,0.096
-By number of commits to file,Self,3,federation/cmd/federation-apiserver/app,13,3.976,0.096
+All By number of commits to file,Self,3,"",382,2.821,2.821
+By number of commits to file,Self,3,pkg,95,24.869,0.702
+By number of commits to file,Self,3,cluster,76,19.895,0.561
+By number of commits to file,Self,3,plugin,64,16.754,0.473
+By number of commits to file,Self,3,plugin/pkg,62,16.23,0.458
+By number of commits to file,Self,3,plugin/pkg/admission,60,15.707,0.443
+By number of commits to file,Self,3,cmd,53,13.874,0.391
+By number of commits to file,Self,3,cluster/juju/layers,45,11.78,0.332
+By number of commits to file,Self,3,staging/src/k8s.io,42,10.995,0.31
+By number of commits to file,Self,3,cmd/kubeadm/app,39,10.209,0.288
+By number of commits to file,Self,3,pkg/kubelet,26,6.806,0.192
+By number of commits to file,Self,3,cluster/juju/layers/kubernetes-worker,26,6.806,0.192
+By number of commits to file,Self,3,staging/src/k8s.io/apiserver,23,6.021,0.17
+By number of commits to file,Self,3,staging/src/k8s.io/apiserver/pkg,22,5.759,0.162
+By number of commits to file,Self,3,cluster/juju/layers/kubernetes-master,19,4.974,0.14
+By number of commits to file,Self,3,pkg/kubectl,19,4.974,0.14
+By number of commits to file,Self,3,pkg/kubectl/cmd,18,4.712,0.133
+By number of commits to file,Self,3,staging/src/k8s.io/apiserver/pkg/server,15,3.927,0.111
+By number of commits to file,Self,3,cluster/images,15,3.927,0.111
+By number of commits to file,Self,3,federation,15,3.927,0.111
+By number of commits to file,Self,3,cmd/kubeadm/app/phases,14,3.665,0.103
+By number of commits to file,Self,3,staging/src/k8s.io/kube-apiextensions-server,14,3.665,0.103
 All By number of commits to file,Kelowna,4,"",311,2.297,2.297
 By number of commits to file,Kelowna,4,docs,141,45.338,1.041
 By number of commits to file,Kelowna,4,docs/user-guide,74,23.794,0.547
