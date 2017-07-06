@@ -114,8 +114,6 @@
 "vishnuk@google.com","Vishnu kannan","2016-07-22","Google","test/e2e_node/runner/run_e2e.go",4,2,4
 "vishnuk@google.com","Vishnu kannan","2016-07-19","Google","hack/godep-save.sh",3,0,3
 "vishnuk@google.com","Vishnu kannan","2016-07-19","Google","hack/verify-godeps.sh",2,0,2
-"vishnuk@google.com","Vishnu kannan","2016-07-19","Google","Godeps/LICENSES",280,23,280
-"vishnuk@google.com","Vishnu kannan","2016-07-19","Google","Godeps/Godeps.json",191,178,191
 "vishnuk@google.com","Vishnu kannan","2016-07-13","Google","pkg/credentialprovider/gcp/metadata.go",60,18,60
 "vishnuk@google.com","Vishnu kannan","2016-07-13","Google","pkg/credentialprovider/provider.go",4,0,4
 "vishnuk@google.com","Vishnu kannan","2016-07-13","Google","pkg/credentialprovider/gcp/metadata_test.go",64,8,64
@@ -1168,7 +1166,6 @@
 "jliggitt@redhat.com","Jordan Liggitt","2016-07-06","Red Hat","pkg/serviceaccount/jwt.go",2,2,2
 "jliggitt@redhat.com","Jordan Liggitt","2016-07-06","Red Hat","pkg/serviceaccount/jwt_test.go",6,0,6
 "jliggitt@redhat.com","Jordan Liggitt","2016-07-06","Red Hat","pkg/serviceaccount/jwt.go",16,12,16
-"jliggitt@redhat.com","Jordan Liggitt","2016-07-06","Red Hat","Godeps/Godeps.json",2,2,2
 "jliggitt@redhat.com","Jordan Liggitt","2016-06-29","Red Hat","pkg/api/v1/conversion_generated.go",0,4,4
 "jliggitt@redhat.com","Jordan Liggitt","2016-06-29","Red Hat","api/swagger-spec/v1.json",4,0,4
 "jliggitt@redhat.com","Jordan Liggitt","2016-06-29","Red Hat","pkg/api/v1/conversion.go",19,0,19
@@ -1286,7 +1283,6 @@
 "mtaufen@google.com","Michael Taufen","2016-06-28","Google","test/e2e_node/e2e_service.go",20,33,33
 "mtaufen@google.com","Michael Taufen","2016-06-28","Google","test/e2e/container_probe.go",1,1,1
 "mtaufen@google.com","Michael Taufen","2016-06-16","Google","test/e2e_node/e2e_service.go",6,0,6
-"stclair@google.com","Tim St. Clair","2016-09-19","Google","Godeps/Godeps.json",82,82,82
 "stclair@google.com","Tim St. Clair","2016-09-01","Google","pkg/apis/extensions/validation/validation.go",2,1,2
 "stclair@google.com","Tim St. Clair","2016-09-01","Google","pkg/apis/extensions/validation/validation_test.go",34,4,34
 "stclair@google.com","Tim St. Clair","2016-09-01","Google","pkg/security/podsecuritypolicy/provider.go",19,17,19
@@ -1473,8 +1469,6 @@
 "wojtekt@google.com","Wojciech Tyczynski","2016-08-22","Google","pkg/util/sets/int64.go",9,0,9
 "wojtekt@google.com","Wojciech Tyczynski","2016-08-22","Google","pkg/util/sets/string.go",9,0,9
 "wojtekt@google.com","Wojciech Tyczynski","2016-08-22","Google","pkg/util/sets/int.go",9,0,9
-"wojtekt@google.com","Wojciech Tyczynski","2016-08-22","Google","Godeps/LICENSES",0,200,200
-"wojtekt@google.com","Wojciech Tyczynski","2016-08-22","Google","Godeps/Godeps.json",2,6,6
 "wojtekt@google.com","Wojciech Tyczynski","2016-08-22","Google","pkg/kubelet/network/kubenet/kubenet_linux.go",5,6,6
 "wojtekt@google.com","Wojciech Tyczynski","2016-08-22","Google","pkg/kubelet/container_bridge.go",2,9,9
 "wojtekt@google.com","Wojciech Tyczynski","2016-08-18","Google","cluster/saltbase/salt/etcd/etcd.manifest",1,1,1
@@ -2100,11 +2094,9 @@
 "mixia@google.com","Minhan Xia","2016-08-22","Google","pkg/util/ebtables/ebtables_test.go",124,0,124
 "mixia@google.com","Minhan Xia","2016-08-22","Google","pkg/util/ebtables/ebtables.go",189,0,189
 "mixia@google.com","Minhan Xia","2016-08-15","Google","pkg/proxy/iptables/proxier.go",0,32,32
-"mixia@google.com","Minhan Xia","2016-07-12","Google","Godeps/Godeps.json",15,15,15
-"mixia@google.com","Minhan Xia","2016-07-12","Google","pkg/kubelet/network/kubenet/kubenet_linux.go",2,2,2
-"mixia@google.com","Minhan Xia","2016-07-12","Google","Godeps/LICENSES",1063,1063,1063
-"mixia@google.com","Minhan Xia","2016-07-12","Google","pkg/kubelet/network/cni/cni.go",2,2,2
 "mixia@google.com","Minhan Xia","2016-07-12","Google","pkg/kubelet/network/cni/cni_test.go",1,1,1
+"mixia@google.com","Minhan Xia","2016-07-12","Google","pkg/kubelet/network/kubenet/kubenet_linux.go",2,2,2
+"mixia@google.com","Minhan Xia","2016-07-12","Google","pkg/kubelet/network/cni/cni.go",2,2,2
 "mixia@google.com","Minhan Xia","2016-07-12","Google","pkg/kubelet/network/cni/testing/mock_cni.go",2,2,2
 "mixia@google.com","Minhan Xia","2016-08-17","Google","pkg/proxy/iptables/proxier.go",12,12,12
 "mixia@google.com","Minhan Xia","2016-08-16","Google","pkg/kubelet/kubelet_network.go",1,1,1
@@ -2202,11 +2194,9 @@
 "gmarek@google.com","Marek Grabowski","2016-08-04","Google","test/e2e/testing-manifests/node-selection/pod-with-pod-affinity.yaml",0,37,37
 "gmarek@google.com","Marek Grabowski","2016-08-04","Google","test/e2e/scheduler_predicates.go",79,7,79
 "gmarek@google.com","Marek Grabowski","2016-08-03","Google","test/e2e_node/resource_controller.go",0,512,512
-"gmarek@google.com","Marek Grabowski","2016-08-03","Google","Godeps/Godeps.json",0,5,5
 "gmarek@google.com","Marek Grabowski","2016-08-03","Google","test/e2e_node/density_test.go",0,430,430
-"gmarek@google.com","Marek Grabowski","2016-08-03","Google","test/e2e_node/e2e_service.go",0,4,4
-"gmarek@google.com","Marek Grabowski","2016-08-03","Google","Godeps/LICENSES",0,198,198
 "gmarek@google.com","Marek Grabowski","2016-08-03","Google","test/e2e_node/resource_usage_test.go",0,245,245
+"gmarek@google.com","Marek Grabowski","2016-08-03","Google","test/e2e_node/e2e_service.go",0,4,4
 "gmarek@google.com","Marek Grabowski","2016-08-03","Google","test/test_owners.csv",1,1,1
 "gmarek@google.com","Marek Grabowski","2016-07-13","Google","pkg/controller/node/nodecontroller.go",127,62,127
 "gmarek@google.com","Marek Grabowski","2016-07-13","Google","pkg/controller/node/rate_limited_queue.go",3,2,3
@@ -2624,9 +2614,6 @@
 "pszczesniak@google.com","Piotr Szczesniak","2016-09-02","Google","cluster/addons/cluster-monitoring/influxdb/heapster-controller.yaml",1,1,1
 "pszczesniak@google.com","Piotr Szczesniak","2016-09-02","Google","cluster/addons/cluster-monitoring/google/heapster-controller.yaml",1,1,1
 "pszczesniak@google.com","Piotr Szczesniak","2016-08-26","Google","test/e2e/monitoring.go",3,3,3
-"pszczesniak@google.com","Piotr Szczesniak","2016-08-26","Google","Godeps/LICENSES",12,944,944
-"pszczesniak@google.com","Piotr Szczesniak","2016-08-26","Google","Godeps/Godeps.json",8,49,49
-"pszczesniak@google.com","Piotr Szczesniak","2016-08-26","Google","Godeps/Godeps.json",8,8,8
 "pszczesniak@google.com","Piotr Szczesniak","2016-08-26","Google","test/e2e/monitoring.go",1,1,1
 "pszczesniak@google.com","Piotr Szczesniak","2016-08-26","Google","plugin/pkg/admission/initialresources/influxdb.go",1,1,1
 "pszczesniak@google.com","Piotr Szczesniak","2016-08-26","Google","cluster/addons/cluster-monitoring/influxdb/influxdb-grafana-controller.yaml",5,5,5
@@ -6107,7 +6094,6 @@
 "djmm@google.com","David McMahon","2016-06-02","Google","pkg/volume/vsphere_volume/vsphere_volume_util.go",1,1,1
 "djmm@google.com","David McMahon","2016-06-02","Google","test/images/volumes-tester/nfs/Makefile",1,1,1
 "djmm@google.com","David McMahon","2016-06-02","Google","pkg/cloudprovider/providers/aws/aws_utils.go",1,1,1
-"djmm@google.com","David McMahon","2016-06-02","Google","Godeps/LICENSES",2,2,2
 "djmm@google.com","David McMahon","2016-06-02","Google","pkg/conversion/converter_test.go",1,1,1
 "djmm@google.com","David McMahon","2016-06-02","Google","pkg/kubelet/cm/container_manager_unsupported.go",1,1,1
 "djmm@google.com","David McMahon","2016-06-02","Google","cluster/saltbase/salt/docker/docker-healthcheck",1,1,1
@@ -8505,7 +8491,6 @@
 "gkalele@google.com","Girish Kalele","2016-06-29","Google","cluster/saltbase/salt/kube-dns/skydns-rc.yaml.base",5,5,5
 "gkalele@google.com","Girish Kalele","2016-06-29","Google","cluster/saltbase/salt/kube-dns/skydns-rc.yaml.in",5,5,5
 "gkalele@google.com","Girish Kalele","2016-06-29","Google","build/kube-dns/Makefile",2,2,2
-"gkalele@google.com","Girish Kalele","2016-06-29","Google","Godeps/Godeps.json",11,11,11
 "gkalele@google.com","Girish Kalele","2016-05-24","Google","api/swagger-spec/v1.json",1,1,1
 "gkalele@google.com","Girish Kalele","2016-05-24","Google","pkg/api/v1/types.go",1,1,1
 "gkalele@google.com","Girish Kalele","2016-06-17","Google","cluster/saltbase/salt/kube-dns/skydns-rc.yaml.sed",1,1,1
@@ -10302,7 +10287,6 @@
 "rmmh@google.com","Ryan Hitchman","2016-06-03","Google","examples/k8petstore/k8petstore-nodeport.sh",1,1,1
 "rmmh@google.com","Ryan Hitchman","2016-06-03","Google","hack/jenkins/e2e-runner.sh",1,1,1
 "rmmh@google.com","Ryan Hitchman","2016-06-03","Google","examples/k8petstore/k8petstore.sh",1,1,1
-"rmmh@google.com","Ryan Hitchman","2016-08-02","Google","Godeps/Godeps.json",68,68,68
 "rmmh@google.com","Ryan Hitchman","2016-07-25","Google","test/test_owners.csv",56,29,56
 "rmmh@google.com","Ryan Hitchman","2016-07-25","Google","hack/update_owners.py",22,18,22
 "rmmh@google.com","Ryan Hitchman","2016-07-20","Google","docs/proposals/controller-ref.md",5,5,5
@@ -10324,11 +10308,8 @@
 "yashulyak@gmail.com","Dmitry Shulyak","2016-09-06","Mirantis","cluster/vagrant/config-test.sh",3,0,3
 "yashulyak@gmail.com","Dmitry Shulyak","2016-09-06","Mirantis","cluster/vagrant/provision-utils.sh",6,0,6
 "yashulyak@gmail.com","Dmitry Shulyak","2016-09-06","Mirantis","cluster/vagrant/util.sh",1,0,1
-"yashulyak@gmail.com","Dmitry Shulyak","2016-08-14","Mirantis","Godeps/LICENSES",200,0,200
-"yashulyak@gmail.com","Dmitry Shulyak","2016-08-14","Mirantis","Godeps/Godeps.json",4,4,4
 "yashulyak@gmail.com","Dmitry Shulyak","2016-08-10","Mirantis","pkg/kubelet/network/kubenet/kubenet_linux.go",6,5,6
 "yashulyak@gmail.com","Dmitry Shulyak","2016-08-10","Mirantis","pkg/kubelet/container_bridge.go",9,2,9
-"yashulyak@gmail.com","Dmitry Shulyak","2016-08-14","Mirantis","Godeps/Godeps.json",6,2,6
 "dshulyak@mirantis.com","Dmitry Shulyak","2016-05-19","Mirantis","pkg/kubectl/cmd/patch.go",9,8,9
 "xingzhou@cn.ibm.com","Xing Zhou","2016-09-06","IBM","pkg/controller/node/nodecontroller.go",1,1,1
 "xingzhou@cn.ibm.com","Xing Zhou","2016-08-26","IBM","contrib/mesos/cmd/k8sm-controller-manager/main.go",0,1,1
@@ -10404,7 +10385,6 @@
 "mikedanese@google.com","Mike Danese","2016-08-18","Google","api/swagger-spec/policy_v1alpha1.json",4,0,4
 "mikedanese@google.com","Mike Danese","2016-08-18","Google","api/swagger-spec/apps.json",4,0,4
 "mikedanese@google.com","Mike Danese","2016-08-18","Google","api/swagger-spec/api.json",4,0,4
-"mikedanese@google.com","Mike Danese","2016-08-18","Google","Godeps/Godeps.json",3,6,6
 "mikedanese@google.com","Mike Danese","2016-08-05","Google","pkg/kubectl/describe.go",84,12,84
 "mikedanese@google.com","Mike Danese","2016-08-05","Google","pkg/kubectl/resource_printer.go",65,0,65
 "mikedanese@google.com","Mike Danese","2016-08-08","Google","pkg/client/clientset_generated/internalclientset/typed/certificates/unversioned/certificatesigningrequest_expansion.go",35,0,35
@@ -10593,7 +10573,6 @@
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-08-15","CoreOS","pkg/registry/generic/registry/store_test.go",2,1,2
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-08-15","CoreOS","pkg/api/helpers.go",8,7,8
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-08-15","CoreOS","pkg/labels/selector.go",61,65,65
-"hongchaodeng1@gmail.com","Hongchao Deng","2016-08-19","CoreOS","Godeps/Godeps.json",104,104,104
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-08-15","CoreOS","pkg/storage/etcd/etcd_helper.go",0,5,5
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-08-15","CoreOS","pkg/storage/interfaces.go",0,3,3
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-08-15","CoreOS","pkg/registry/generic/registry/storage_factory.go",1,0,1
@@ -10976,8 +10955,6 @@
 "zhoufang@google.com","Zhou Fang","2016-08-09","Google","test/e2e_node/density_test.go",4,2,4
 "zhoufang@google.com","Zhou Fang","2016-08-08","Google","test/e2e_node/density_test.go",2,2,2
 "zhoufang@google.com","Zhou Fang","2016-08-08","Google","test/e2e_node/resource_collector.go",5,1,5
-"zhoufang@google.com","Zhou Fang","2016-08-03","Google","Godeps/LICENSES",198,0,198
-"zhoufang@google.com","Zhou Fang","2016-08-03","Google","Godeps/Godeps.json",5,0,5
 "zhoufang@google.com","Zhou Fang","2016-08-03","Google","test/e2e_node/resource_controller.go",514,0,514
 "zhoufang@google.com","Zhou Fang","2016-08-03","Google","test/e2e_node/density_test.go",432,0,432
 "zhoufang@google.com","Zhou Fang","2016-08-03","Google","test/e2e_node/resource_usage_test.go",247,0,247
@@ -10986,8 +10963,6 @@
 "zhoufang@google.com","Zhou Fang","2016-07-29","Google","test/e2e_node/density_test.go",27,87,87
 "zhoufang@google.com","Zhou Fang","2016-07-29","Google","test/e2e_node/resource_usage_test.go",32,64,64
 "zhoufang@google.com","Zhou Fang","2016-07-29","Google","test/e2e_node/e2e_service.go",4,3,4
-"zhoufang@google.com","Zhou Fang","2016-07-28","Google","Godeps/LICENSES",198,0,198
-"zhoufang@google.com","Zhou Fang","2016-07-28","Google","Godeps/Godeps.json",5,0,5
 "zhoufang@google.com","Zhou Fang","2016-07-28","Google","test/e2e_node/resource_controller.go",377,0,377
 "zhoufang@google.com","Zhou Fang","2016-07-28","Google","test/e2e_node/density_test.go",490,0,490
 "zhoufang@google.com","Zhou Fang","2016-07-28","Google","test/e2e_node/kubelet_perf_test.go",277,0,277
@@ -11647,7 +11622,6 @@
 "magorzata@google.com","mksalawa","2016-08-19","Google","pkg/kubectl/metricsutil/metrics_client.go",26,36,36
 "magorzata@google.com","mksalawa","2016-08-19","Google","pkg/kubectl/cmd/top_pod_test.go",51,2,51
 "magorzata@google.com","mksalawa","2016-08-19","Google","pkg/kubectl/cmd/top_node_test.go",1,1,1
-"magorzata@google.com","mksalawa","2016-08-19","Google","Godeps/Godeps.json",4,4,4
 "magorzata@google.com","mksalawa","2016-08-19","Google","pkg/controller/podautoscaler/metrics/metrics_client.go",6,6,6
 "magorzata@google.com","mksalawa","2016-08-19","Google","pkg/kubectl/cmd/top_test.go",82,72,82
 "magorzata@google.com","mksalawa","2016-08-19","Google","pkg/kubectl/cmd/top_node_test.go",22,12,22
@@ -12225,7 +12199,6 @@
 "ronl@google.com","bindata-mockuser","2016-07-15","Google","pkg/kubelet/images/image_manager.go",32,26,32
 "ronl@google.com","bindata-mockuser","2016-08-02","Google","pkg/kubelet/cadvisor/cadvisor_linux.go",1,1,1
 "ronl@google.com","bindata-mockuser","2016-08-02","Google","pkg/kubelet/server/stats/summary_test.go",4,2,4
-"ronl@google.com","bindata-mockuser","2016-08-02","Google","Godeps/Godeps.json",80,80,80
 "ronl@google.com","bindata-mockuser","2016-08-02","Google","pkg/kubelet/server/stats/summary.go",4,4,4
 "ronl@google.com","bindata-mockuser","2016-07-20","Google","pkg/kubelet/container/runtime.go",2,0,2
 "ronl@google.com","bindata-mockuser","2016-07-20","Google","pkg/kubelet/image_manager.go",3,8,8
@@ -12267,7 +12240,6 @@
 "ronl@google.com","bindata-mockuser","2016-07-13","Google","pkg/kubelet/images/impl.go",41,0,41
 "ronl@google.com","bindata-mockuser","2016-07-13","Google","pkg/kubelet/images/parallel_image_puller.go",7,7,7
 "ronl@google.com","bindata-mockuser","2016-07-13","Google","pkg/kubelet/dockertools/docker_manager.go",5,8,8
-"ronl@google.com","bindata-mockuser","2016-07-18","Google","Godeps/Godeps.json",31,27,31
 "ronl@google.com","bindata-mockuser","2016-07-13","Google","pkg/kubelet/pleg/pleg.go",1,1,1
 "ronl@google.com","bindata-mockuser","2016-07-13","Google","pkg/kubelet/kubelet.go",16,8,16
 "ronl@google.com","bindata-mockuser","2016-07-13","Google","pkg/kubelet/pleg/generic.go",13,15,15
@@ -12303,7 +12275,6 @@
 "ronl@google.com","bindata-mockuser","2016-06-24","Google","pkg/kubelet/kubelet_test.go",2,2,2
 "ronl@google.com","bindata-mockuser","2016-06-24","Google","pkg/kubelet/disk_manager.go",10,5,10
 "ronl@google.com","bindata-mockuser","2016-06-24","Google","pkg/kubelet/disk_manager_test.go",90,37,90
-"ronl@google.com","bindata-mockuser","2016-06-27","Google","Godeps/Godeps.json",80,80,80
 "ronl@google.com","bindata-mockuser","2016-06-23","Google","pkg/kubelet/image_manager.go",7,3,7
 "ronl@google.com","bindata-mockuser","2016-06-23","Google","pkg/kubelet/image_manager_test.go",6,6,6
 "ronl@google.com","bindata-mockuser","2016-06-21","Google","cmd/kubelet/app/options/options.go",6,3,6
@@ -12915,8 +12886,6 @@
 "tstclair@redhat.com","Timothy St. Clair","2016-07-22","Red Hat","pkg/kubelet/api/v1alpha1/runtime/api.pb.go",678,326,678
 "tstclair@redhat.com","Timothy St. Clair","2016-07-22","Red Hat","pkg/storage/etcd3/event.go",2,2,2
 "tstclair@redhat.com","Timothy St. Clair","2016-07-22","Red Hat","pkg/storage/etcd3/compact_test.go",8,3,8
-"tstclair@redhat.com","Timothy St. Clair","2016-07-22","Red Hat","Godeps/LICENSES",258,243,258
-"tstclair@redhat.com","Timothy St. Clair","2016-07-22","Red Hat","Godeps/Godeps.json",239,206,239
 "tstclair@redhat.com","Timothy St. Clair","2016-07-21","Red Hat","build/build-image/cross/Dockerfile",1,1,1
 "tstclair@redhat.com","Timothy St. Clair","2016-07-21","Red Hat","test/e2e_node/environment/setup_host.sh",4,4,4
 "tstclair@redhat.com","Timothy St. Clair","2016-07-21","Red Hat","cluster/saltbase/salt/etcd/etcd.manifest",1,1,1
@@ -12932,8 +12901,6 @@
 "tstclair@redhat.com","Timothy St. Clair","2016-07-27","Red Hat","pkg/client/leaderelection/leaderelection.go",2,3,3
 "tstclair@redhat.com","Timothy St. Clair","2016-07-28","Red Hat","pkg/util/wait/wait.go",12,17,17
 "tstclair@redhat.com","Timothy St. Clair","2016-07-20","Red Hat","pkg/util/net/http.go",2,4,4
-"tstclair@redhat.com","Timothy St. Clair","2016-07-15","Red Hat","Godeps/LICENSES",35,0,35
-"tstclair@redhat.com","Timothy St. Clair","2016-07-15","Red Hat","Godeps/Godeps.json",15,15,15
 "tstclair@redhat.com","Timothy St. Clair","2016-06-27","Red Hat","pkg/util/net/http.go",4,2,4
 "qlee@google.com","Quintin Lee","2016-08-22","Google","pkg/master/import_known_versions.go",1,0,1
 "qlee@google.com","Quintin Lee","2016-08-22","Google","cmd/kube-apiserver/app/plugins.go",1,0,1
@@ -12954,8 +12921,6 @@
 "qlee@google.com","Quintin Lee","2016-08-08","Google","pkg/apis/imagepolicy/v1alpha1/register.go",46,0,46
 "ts@soundcloud.com","Tobias Schmidt","2016-08-20","SoundCloud","pkg/kubelet/cadvisor/cadvisor_linux.go",24,2,24
 "ts@soundcloud.com","Tobias Schmidt","2016-08-20","SoundCloud","pkg/kubelet/cadvisor/cadvisor_linux_test.go",65,0,65
-"ts@soundcloud.com","Tobias Schmidt","2016-08-20","SoundCloud","Godeps/Godeps.json",82,82,82
-"ts@soundcloud.com","Tobias Schmidt","2016-08-17","SoundCloud","Godeps/Godeps.json",82,82,82
 "feiskyer@gmail.com","Pengfei Ni","2016-08-22","Hyper.sh","pkg/kubelet/kuberuntime/kuberuntime_manager.go",32,5,32
 "feiskyer@gmail.com","Pengfei Ni","2016-08-22","Hyper.sh","pkg/kubelet/kuberuntime/kuberuntime_manager_test.go",33,0,33
 "feiskyer@gmail.com","Pengfei Ni","2016-08-17","Hyper.sh","pkg/kubelet/dockershim/docker_container.go",19,7,19
@@ -13180,12 +13145,10 @@
 "etune@google.com","Eric Tune","2016-07-06","Google","CHANGELOG.md",15,0,15
 "etune@google.com","Eric Tune","2016-07-01","Google","CHANGELOG.md",53,13,53
 "etune@google.com","Eric Tune","2016-07-01","Google","CHANGELOG.md",1,2,2
-"hchiramm@redhat.com","Humble Chirammal","2016-08-19","Red Hat","Godeps/Godeps.json",20,0,20
+"hchiramm@redhat.com","Humble Chirammal","2016-08-19","Red Hat","pkg/volume/glusterfs/glusterfs.go",171,6,171
+"hchiramm@redhat.com","Humble Chirammal","2016-08-19","Red Hat","examples/experimental/persistent-volume-provisioning/glusterfs-dp.yaml",11,0,11
 "hchiramm@redhat.com","Humble Chirammal","2016-08-19","Red Hat","cmd/kube-controller-manager/app/plugins.go",3,2,3
 "hchiramm@redhat.com","Humble Chirammal","2016-08-19","Red Hat","examples/experimental/persistent-volume-provisioning/README.md",22,0,22
-"hchiramm@redhat.com","Humble Chirammal","2016-08-19","Red Hat","Godeps/LICENSES",832,0,832
-"hchiramm@redhat.com","Humble Chirammal","2016-08-19","Red Hat","examples/experimental/persistent-volume-provisioning/glusterfs-dp.yaml",11,0,11
-"hchiramm@redhat.com","Humble Chirammal","2016-08-19","Red Hat","pkg/volume/glusterfs/glusterfs.go",171,6,171
 "simon@swine.de","Christian Simon","2016-08-19","Jetstack","pkg/volume/flocker/OWNERS",1,0,1
 "simon@swine.de","Christian Simon","2016-05-19","Jetstack","pkg/volume/flocker/plugin.go",2,18,18
 "buddhap@google.com","dubstack","2016-07-12","Google","pkg/kubelet/cm/pod_container_manager_linux.go",145,0,145
@@ -13203,9 +13166,7 @@
 "buddhap@google.com","dubstack","2016-07-25","Google","docs/proposals/pod-resource-management.md",35,0,35
 "buddhap@google.com","dubstack","2016-08-02","Google","pkg/kubelet/cm/container_manager_linux.go",6,4,6
 "buddhap@google.com","dubstack","2016-08-02","Google","pkg/util/resourcecontainer/resource_container_linux.go",2,1,2
-"buddhap@google.com","dubstack","2016-08-04","Google","Godeps/Godeps.json",32,32,32
 "buddhap@google.com","dubstack","2016-06-02","Google","docs/proposals/pod-resource-management.md",410,0,410
-"buddhap@google.com","dubstack","2016-07-20","Google","Godeps/Godeps.json",32,32,32
 "buddhap@google.com","dubstack","2016-06-27","Google","docs/devel/e2e-node-tests.md",8,0,8
 "buddhap@google.com","dubstack","2016-06-27","Google","pkg/apis/componentconfig/v1alpha1/defaults.go",3,0,3
 "buddhap@google.com","dubstack","2016-06-27","Google","test/e2e/framework/test_context.go",3,0,3
@@ -13230,8 +13191,6 @@
 "buddhap@google.com","dubstack","2016-06-27","Google","test/e2e_node/jenkins/e2e-node-jenkins.sh",1,1,1
 "buddhap@google.com","dubstack","2016-06-27","Google","test/e2e_node/runner/run_e2e.go",2,1,2
 "buddhap@google.com","dubstack","2016-07-10","Google","pkg/kubelet/cm/cgroup_manager_linux.go",2,4,4
-"buddhap@google.com","dubstack","2016-07-10","Google","Godeps/LICENSES",199,0,199
-"buddhap@google.com","dubstack","2016-07-10","Google","Godeps/Godeps.json",36,31,36
 "buddhap@google.com","dubstack","2016-07-07","Google","test/e2e_node/jenkins/copy-e2e-image.sh",20,6,20
 "buddhap@google.com","dubstack","2016-07-07","Google","test/e2e_node/jenkins/jenkins-ci.properties",1,1,1
 "buddhap@google.com","dubstack","2016-07-07","Google","test/e2e_node/jenkins/jenkins-pull.properties",1,1,1
@@ -13265,7 +13224,6 @@
 "buddhap@google.com","dubstack","2016-06-20","Google","pkg/kubelet/eviction/helpers.go",9,9,9
 "buddhap@google.com","dubstack","2016-06-20","Google","pkg/kubelet/qos/types.go",29,0,29
 "buddhap@google.com","dubstack","2016-06-20","Google","pkg/kubelet/qos/policy.go",3,4,4
-"mehdy@google.com","mbohlool","2016-08-19","Google","Godeps/Godeps.json",1,1,1
 "mehdy@google.com","mbohlool","2016-08-18","Google","pkg/genericapiserver/openapi/openapi_test.go",417,0,417
 "mehdy@google.com","mbohlool","2016-08-18","Google","pkg/genericapiserver/openapi/doc.go",20,0,20
 "mehdy@google.com","mbohlool","2016-08-18","Google","cmd/kube-apiserver/app/server.go",1,0,1
@@ -13273,8 +13231,6 @@
 "mehdy@google.com","mbohlool","2016-08-18","Google","test/integration/framework/master_utils.go",13,0,13
 "mehdy@google.com","mbohlool","2016-08-18","Google","pkg/master/master_test.go",55,0,55
 "mehdy@google.com","mbohlool","2016-08-18","Google","pkg/genericapiserver/openapi/openapi.go",557,0,557
-"mehdy@google.com","mbohlool","2016-08-16","Google","Godeps/LICENSES",3726,1113,3726
-"mehdy@google.com","mbohlool","2016-08-16","Google","Godeps/Godeps.json",111,1,111
 "mehdy@google.com","mbohlool","2016-08-16","Google",".gitignore",3,0,3
 "mehdy@google.com","mbohlool","2016-08-10","Google","cluster/gce/gci/configure-helper.sh",5,0,5
 "mehdy@google.com","mbohlool","2016-08-09","Google","cluster/addons/etcd-empty-dir-cleanup/etcd-empty-dir-cleanup.yaml",13,0,13
@@ -13290,7 +13246,6 @@
 "mehdy@google.com","mbohlool","2016-06-28","Google","api/swagger-spec/certificates_v1alpha1.json",3,0,3
 "mehdy@google.com","mbohlool","2016-06-28","Google","api/swagger-spec/policy_v1alpha1.json",2,0,2
 "mehdy@google.com","mbohlool","2016-06-28","Google","api/swagger-spec/autoscaling_v1.json",3,0,3
-"mehdy@google.com","mbohlool","2016-06-28","Google","Godeps/Godeps.json",7,7,7
 "mehdy@google.com","mbohlool","2016-05-14","Google","pkg/kubectl/cmd/label_test.go",12,0,12
 "mehdy@google.com","mbohlool","2016-05-14","Google","pkg/kubectl/cmd/delete_test.go",52,0,52
 "mehdy@google.com","mbohlool","2016-05-14","Google","pkg/kubectl/resource/builder.go",3,0,3
@@ -13303,7 +13258,6 @@
 "shivania@vmware.com","Abrar Shivani","2016-08-04","VMware","cmd/kube-controller-manager/app/plugins.go",1,0,1
 "shivania@vmware.com","Abrar Shivani","2016-07-18","VMware","pkg/volume/vsphere_volume/vsphere_volume.go",4,2,4
 "shivania@vmware.com","Abrar Shivani","2016-07-18","VMware","pkg/cloudprovider/providers/vsphere/vsphere.go",100,35,100
-"shivania@vmware.com","Abrar Shivani","2016-07-18","VMware","Godeps/Godeps.json",30,30,30
 "crazykev@zju.edu.cn","Crazykev","2016-08-19","Self","docs/design/downward_api_resources_limits_requests.md",1,1,1
 "crazykev@zju.edu.cn","Crazykev","2016-08-19","Self","docs/design/aws_under_the_hood.md",1,1,1
 "crazykev@zju.edu.cn","Crazykev","2016-08-09","Self","docs/design/indexed-job.md",1,1,1
@@ -13360,7 +13314,6 @@
 "eric.chiang@coreos.com","Eric Chiang","2016-06-24","CoreOS","plugin/pkg/auth/authenticator/token/oidc/oidc.go",134,81,134
 "eric.chiang@coreos.com","Eric Chiang","2016-05-26","CoreOS","plugin/pkg/auth/authorizer/webhook/webhook.go",4,0,4
 "krousey@users.noreply.github.com","krousey","2016-07-06","Google","pkg/serviceaccount/jwt.go",12,16,16
-"krousey@users.noreply.github.com","krousey","2016-07-06","Google","Godeps/Godeps.json",2,2,2
 "wonderfly@google.com","Daniel Wang","2016-08-18","Google","hack/jenkins/e2e-runner.sh",4,8,8
 "wonderfly@google.com","Daniel Wang","2016-08-01","Google","hack/jenkins/e2e-runner.sh",36,22,36
 "wonderfly@google.com","Daniel Wang","2016-07-29","Google","hack/jenkins/e2e-runner.sh",2,2,2
@@ -13381,8 +13334,6 @@
 "george.tankersley@coreos.com","George Tankersley","2016-08-02","CoreOS","pkg/util/certificates/csr_test.go",21,0,21
 "george.tankersley@coreos.com","George Tankersley","2016-08-02","CoreOS","pkg/util/certificates/csr.go",102,0,102
 "george.tankersley@coreos.com","George Tankersley","2016-08-02","CoreOS","pkg/util/certificates/testdata/dontUseThisKey.pem",6,0,6
-"george.tankersley@coreos.com","George Tankersley","2016-06-29","CoreOS","Godeps/LICENSES",1685,85,1685
-"george.tankersley@coreos.com","George Tankersley","2016-06-29","CoreOS","Godeps/Godeps.json",104,3,104
 "george.tankersley@coreos.com","George Tankersley","2016-05-15","CoreOS","pkg/controller/certificates/controller.go",200,0,200
 "george.tankersley@coreos.com","George Tankersley","2016-05-15","CoreOS","pkg/client/cache/listers.go",23,0,23
 "george.tankersley@coreos.com","George Tankersley","2016-05-15","CoreOS","hack/verify-flags/known-flags.txt",2,0,2
@@ -13746,11 +13697,8 @@
 "cole.mickens@gmail.com","Cole Mickens","2016-05-28","Microsoft","pkg/cloudprovider/providers/aws/aws.go",6,6,6
 "cole.mickens@gmail.com","Cole Mickens","2016-05-28","Microsoft","pkg/cloudprovider/providers/openstack/openstack_loadbalancer.go",25,25,25
 "cole.mickens@gmail.com","Cole Mickens","2016-05-28","Microsoft","pkg/cloudprovider/providers/gce/gce.go",5,5,5
-"cole.mickens@gmail.com","Cole Mickens","2016-07-11","Microsoft","Godeps/LICENSES",1216,0,1216
-"cole.mickens@gmail.com","Cole Mickens","2016-07-11","Microsoft","Godeps/Godeps.json",30,0,30
 "cole.mickens@gmail.com","Cole Mickens","2016-07-07","Microsoft","cluster/azure/util.sh",7,11,11
 "cole.mickens@gmail.com","Cole Mickens","2016-07-05","Microsoft","pkg/serviceaccount/jwt.go",16,12,16
-"cole.mickens@gmail.com","Cole Mickens","2016-07-05","Microsoft","Godeps/Godeps.json",2,2,2
 "czahedi@google.com","czahedi","2016-08-15","Google","docs/troubleshooting.md",1,1,1
 "sander@xanzy.io","Sander van Harmelen","2016-07-28","Schuberg Philis","pkg/cloudprovider/providers/cloudstack/cloudstack_test.go",141,0,141
 "sander@xanzy.io","Sander van Harmelen","2016-07-28","Schuberg Philis","pkg/cloudprovider/providers/cloudstack/cloudstack_loadbalancer.go",543,0,543
@@ -13758,8 +13706,6 @@
 "sander@xanzy.io","Sander van Harmelen","2016-07-28","Schuberg Philis","pkg/cloudprovider/providers/providers.go",1,1,1
 "sander@xanzy.io","Sander van Harmelen","2016-07-28","Schuberg Philis","pkg/cloudprovider/providers/cloudstack/OWNERS",0,3,3
 "sander@xanzy.io","Sander van Harmelen","2016-07-28","Schuberg Philis","hack/.linted_packages",1,0,1
-"sander@xanzy.io","Sander van Harmelen","2016-07-24","Schuberg Philis","Godeps/LICENSES",209,0,209
-"sander@xanzy.io","Sander van Harmelen","2016-07-24","Schuberg Philis","Godeps/Godeps.json",5,0,5
 "ng.tuna@gmail.com","ngtuna","2016-04-28","Apache","pkg/cloudprovider/providers/cloudstack/cloudstack.go",488,0,488
 "ng.tuna@gmail.com","ngtuna","2016-04-28","Apache","pkg/cloudprovider/providers/providers.go",1,0,1
 "ng.tuna@gmail.com","ngtuna","2016-04-28","Apache","pkg/cloudprovider/providers/cloudstack/OWNERS",3,0,3
@@ -13769,8 +13715,6 @@
 "gus@inodes.org","Angus Lees","2016-07-28","Bulletproof","pkg/cloudprovider/providers/openstack/openstack.go",25,3,25
 "gus@inodes.org","Angus Lees","2016-07-28","Bulletproof","pkg/cloudprovider/providers/openstack/openstack_loadbalancer.go",19,0,19
 "gus@inodes.org","Angus Lees","2016-07-28","Bulletproof","pkg/cloudprovider/providers/openstack/openstack_test.go",19,40,40
-"gus@inodes.org","Angus Lees","2016-07-28","Bulletproof","Godeps/LICENSES",398,0,398
-"gus@inodes.org","Angus Lees","2016-07-28","Bulletproof","Godeps/Godeps.json",10,0,10
 "matt@projectcalico.org","Matt","2016-08-11","Project Calico","cluster/gce/gci/configure-helper.sh",3,0,3
 "matt@projectcalico.org","Matt","2016-08-11","Project Calico","cluster/saltbase/salt/calico/10-calico.conf",1,1,1
 "matt@projectcalico.org","Matt","2016-08-11","Project Calico","cluster/saltbase/salt/calico/node.sls",11,16,16
@@ -13884,7 +13828,6 @@
 "sjenning@redhat.com","Seth Jennings","2016-07-20","Red Hat","pkg/controller/node/controller_utils.go",6,6,6
 "sjenning@redhat.com","Seth Jennings","2016-07-20","Red Hat","pkg/controller/node/nodecontroller_test.go",2,2,2
 "akurilin@mirantis.com","Andrey Kurilin","2016-08-01","Mirantis","cmd/hyperkube/hyperkube_test.go",2,2,2
-"akurilin@mirantis.com","Andrey Kurilin","2016-08-01","Mirantis","Godeps/Godeps.json",3,3,3
 "akurilin@mirantis.com","Andrey Kurilin","2016-08-01","Mirantis","contrib/mesos/cmd/km/hyperkube_test.go",2,2,2
 "andr.kurilin@gmail.com","Andrey Kurilin","2016-08-04","Mirantis","pkg/apiserver/index.go",1,1,1
 "andr.kurilin@gmail.com","Andrey Kurilin","2016-08-04","Mirantis","pkg/apiserver/authz_test.go",1,1,1
@@ -14093,8 +14036,6 @@
 "lantaol@google.com","Random Liu","2016-08-02","Google","test/e2e_node/jenkins/jenkins-ci.properties",1,1,1
 "lantaol@google.com","Random Liu","2016-08-02","Google","test/e2e_node/image_conformance_test.go",1,1,1
 "lantaol@google.com","Random Liu","2016-08-02","Google","test/e2e_node/jenkins/jenkins-pull.properties",1,1,1
-"lantaol@google.com","Random Liu","2016-07-20","Google","Godeps/LICENSES",280,23,280
-"lantaol@google.com","Random Liu","2016-07-20","Google","Godeps/Godeps.json",195,182,195
 "lantaol@google.com","Random Liu","2016-07-20","Google","pkg/util/term/resize.go",0,5,5
 "lantaol@google.com","Random Liu","2016-07-20","Google","pkg/util/term/setsize.go",28,0,28
 "lantaol@google.com","Random Liu","2016-07-20","Google","pkg/util/term/setsize_unsupported.go",24,0,24
@@ -14339,9 +14280,7 @@
 "keegan.csmith@gmail.com","Keegan Carruthers-Smith","2016-07-25","Sourcegraph.com","examples/volumes/flexvolume/README.md",1,1,1
 "quentin.machu@coreos.com","Quentin Machu","2016-07-23","CoreOS","pkg/kubelet/rkt/rkt.go",1,1,1
 "apelisse@google.com","Antoine Pelisse","2016-07-21","Google","test/kubemark/start-kubemark.sh",1,1,1
-"apelisse@gmail.com","Antoine Pelisse","2016-07-20","Embedded Systems, ECE","Godeps/LICENSES",23,280,280
 "apelisse@gmail.com","Antoine Pelisse","2016-07-20","Embedded Systems, ECE","hack/godep-save.sh",0,3,3
-"apelisse@gmail.com","Antoine Pelisse","2016-07-20","Embedded Systems, ECE","Godeps/Godeps.json",178,191,191
 "apelisse@gmail.com","Antoine Pelisse","2016-07-20","Embedded Systems, ECE","hack/verify-godeps.sh",0,2,2
 "apelisse@google.com","Antoine Pelisse","2016-07-19","Google","docs/devel/automation.md",2,1,2
 "apelisse@gmail.com","Antoine Pelisse","2016-07-19","Embedded Systems, ECE","test/e2e/security_context.go",2,2,2
@@ -14982,8 +14921,6 @@
 "mrubin@google.com","Michael Rubin","2016-05-20","Google","pkg/kubectl/cmd/label.go",21,18,21
 "mrubin@google.com","Michael Rubin","2016-05-20","Google","pkg/kubectl/cmd/taint.go",16,13,16
 "mrubin@google.com","Michael Rubin","2016-05-20","Google","pkg/kubectl/cmd/exec.go",10,8,10
-"mrubin@google.com","Michael Rubin","2016-05-19","Google","Godeps/LICENSES",29,0,29
-"mrubin@google.com","Michael Rubin","2016-05-19","Google","Godeps/Godeps.json",5,0,5
 "lorrin.nelson@salesforce.com","Lorrin Nelson","2016-07-07","SalesForce","build/common.sh",1,1,1
 "lorrin.nelson@salesforce.com","Lorrin Nelson","2016-07-07","SalesForce","build/common.sh",7,3,7
 "allenmiller@users.noreply.github.com","allenmiller","2016-07-07","HP","cluster/addons/cluster-monitoring/influxdb/influxdb-pv.yaml",1,1,1

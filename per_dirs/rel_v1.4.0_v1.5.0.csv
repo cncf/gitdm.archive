@@ -172,10 +172,8 @@
 "saadali@google.com","saadali","2016-11-02","Google","hack/godep-save.sh",1,0,1
 "saadali@google.com","saadali","2016-11-02","Google","hack/verify-godeps.sh",2,1,2
 "saadali@google.com","saadali","2016-11-02","Google","hack/verify-godeps.sh",2,1,2
-"saadali@google.com","saadali","2016-11-02","Google","Godeps/Godeps.json",9,12,12
 "saadali@google.com","saadali","2016-11-02","Google","hack/verify-godeps.sh",1,1,1
 "saadali@google.com","saadali","2016-11-02","Google","docs/devel/godep.md",1,1,1
-"saadali@google.com","saadali","2016-11-02","Google","Godeps/Godeps.json",12,9,12
 "saadali@google.com","saadali","2016-11-02","Google","hack/verify-godeps.sh",1,1,1
 "saadali@google.com","saadali","2016-11-02","Google","hack/verify-godeps.sh",1,1,1
 "saadali@google.com","saadali","2016-11-01","Google","hack/make-rules/test-cmd.sh",4,22,22
@@ -382,10 +380,6 @@
 "stclair@google.com","Tim St. Clair","2016-09-29","Google","test/e2e_node/summary_test.go",4,4,4
 "stclair@google.com","Tim St. Clair","2016-09-12","Google","test/e2e_node/summary_test.go",279,0,279
 "stclair@google.com","Tim St. Clair","2016-09-12","Google","test/e2e_node/kubelet_test.go",0,325,325
-"stclair@google.com","Tim St. Clair","2016-09-12","Google","Godeps/LICENSES",60,2292,2292
-"stclair@google.com","Tim St. Clair","2016-09-12","Google","Godeps/Godeps.json",34,24,34
-"stclair@google.com","Tim St. Clair","2016-09-13","Google","Godeps/LICENSES",420,0,420
-"stclair@google.com","Tim St. Clair","2016-09-13","Google","Godeps/Godeps.json",96,88,96
 "jinxu@google.com","Jing Xu","2016-12-08","Google","pkg/util/mount/mount.go",1,9,9
 "jinxu@google.com","Jing Xu","2016-12-08","Google","pkg/volume/util/operationexecutor/operation_executor.go",21,1,21
 "jinxu@google.com","Jing Xu","2016-12-05","Google","pkg/util/mount/mount.go",9,1,9
@@ -1924,8 +1918,6 @@
 "jliggitt@redhat.com","Jordan Liggitt","2016-12-07","Red Hat","pkg/util/workqueue/default_rate_limiters.go",2,2,2
 "jliggitt@redhat.com","Jordan Liggitt","2016-12-07","Red Hat","pkg/util/workqueue/BUILD",1,1,1
 "jliggitt@redhat.com","Jordan Liggitt","2016-12-07","Red Hat","pkg/util/ratelimit/BUILD",0,25,25
-"jliggitt@redhat.com","Jordan Liggitt","2016-12-07","Red Hat","Godeps/LICENSES",199,0,199
-"jliggitt@redhat.com","Jordan Liggitt","2016-12-07","Red Hat","Godeps/Godeps.json",4,0,4
 "jliggitt@redhat.com","Jordan Liggitt","2016-11-24","Red Hat","pkg/controller/namespace/namespace_controller.go",13,1,13
 "jliggitt@redhat.com","Jordan Liggitt","2016-11-21","Red Hat","plugin/pkg/scheduler/factory/factory.go",9,16,16
 "jliggitt@redhat.com","Jordan Liggitt","2016-11-17","Red Hat","pkg/apis/extensions/types.go",0,2,2
@@ -2141,7 +2133,6 @@
 "decarr@redhat.com","Derek Carr","2016-10-10","Red Hat","pkg/kubelet/qos/qos.go",4,1,4
 "decarr@redhat.com","Derek Carr","2016-10-10","Red Hat","pkg/kubelet/qos/qos_test.go",13,0,13
 "decarr@redhat.com","Derek Carr","2016-10-10","Red Hat","pkg/kubelet/cm/helpers_linux.go",1,1,1
-"decarr@redhat.com","Derek Carr","2016-10-10","Red Hat","Godeps/Godeps.json",115,115,115
 "decarr@redhat.com","Derek Carr","2016-09-29","Red Hat","hack/verify-flags/known-flags.txt",1,0,1
 "decarr@redhat.com","Derek Carr","2016-09-29","Red Hat","pkg/apis/componentconfig/types.go",3,1,3
 "decarr@redhat.com","Derek Carr","2016-09-29","Red Hat","pkg/apis/componentconfig/v1alpha1/defaults.go",7,0,7
@@ -2898,8 +2889,6 @@
 "deads@redhat.com","deads2k","2016-09-23","Red Hat","pkg/controller/node/nodecontroller.go",36,86,86
 "deads@redhat.com","deads2k","2016-09-23","Red Hat","cmd/kube-controller-manager/app/controllermanager.go",3,1,3
 "deads@redhat.com","deads2k","2016-09-23","Red Hat","pkg/controller/node/test_utils.go",1,1,1
-"deads@redhat.com","deads2k","2016-09-28","Red Hat","Godeps/LICENSES",4,2292,2292
-"deads@redhat.com","deads2k","2016-09-28","Red Hat","Godeps/Godeps.json",0,55,55
 "deads@redhat.com","deads2k","2016-09-28","Red Hat","contrib/mesos/pkg/executor/executor.go",0,755,755
 "deads@redhat.com","deads2k","2016-09-28","Red Hat","hack/make-rules/test.sh",0,1,1
 "deads@redhat.com","deads2k","2016-09-28","Red Hat","contrib/mesos/pkg/executor/service/cadvisor.go",0,51,51
@@ -4077,9 +4066,7 @@
 "mikedanese@google.com","Mike Danese","2016-10-22","Google","test/fixtures/BUILD",7,0,7
 "mikedanese@google.com","Mike Danese","2016-10-22","Google","examples/BUILD",7,0,7
 "mikedanese@google.com","Mike Danese","2016-10-22","Google","test/e2e/testing-manifests/BUILD",8,0,8
-"mikedanese@google.com","Mike Danese","2016-10-22","Google","Godeps/LICENSES",22,0,22
 "mikedanese@google.com","Mike Danese","2016-10-22","Google","hack/godep-save.sh",1,0,1
-"mikedanese@google.com","Mike Danese","2016-10-22","Google","Godeps/Godeps.json",11,0,11
 "mikedanese@google.com","Mike Danese","2016-10-24","Google","hack/update-bazel.sh",2,1,2
 "mikedanese@google.com","Mike Danese","2016-10-24","Google","hack/verify-bazel.sh",2,1,2
 "mikedanese@google.com","Mike Danese","2016-10-24","Google","pkg/kubelet/container/testing/BUILD",2,0,2
@@ -5133,7 +5120,6 @@
 "mikedanese@google.com","Mike Danese","2016-09-13","Google","pkg/kubectl/resource/visitor.go",49,0,49
 "mikedanese@google.com","Mike Danese","2016-09-13","Google","pkg/kubectl/resource/builder.go",14,16,16
 "mikedanese@google.com","Mike Danese","2016-09-28","Google","cmd/kubeadm/OWNERS",5,0,5
-"mikedanese@google.com","Mike Danese","2016-09-28","Google","Godeps/Godeps.json",0,55,55
 "mikedanese@google.com","Mike Danese","2016-09-28","Google","cmd/kubeadm/app/api/types.go",1,1,1
 "mikedanese@google.com","Mike Danese","2016-09-20","Google","hack/lib/golang.sh",3,0,3
 "mikedanese@google.com","Mike Danese","2016-09-14","Google","plugin/pkg/scheduler/algorithm/predicates/error.go",1,0,1
@@ -5502,7 +5488,6 @@
 "ramanathana@google.com","Anirudh","2016-10-25","Google","pkg/controller/podgc/gc_controller.go",25,2,25
 "ramanathana@google.com","Anirudh","2016-10-25","Google","pkg/controller/node/nodecontroller_test.go",2,2,2
 "ramanathana@google.com","Anirudh","2016-10-25","Google","pkg/controller/node/controller_utils.go",1,10,10
-"ramanathana@google.com","Anirudh","2016-10-27","Google","Godeps/LICENSES",0,198,198
 "ramanathana@google.com","Anirudh","2016-10-24","Google","cmd/kube-controller-manager/app/controllermanager.go",3,5,5
 "ramanathana@google.com","Anirudh","2016-10-19","Google","test/e2e/petset.go",0,1,1
 "ramanathana@google.com","Anirudh","2016-10-19","Google","test/e2e/petset.go",11,2,11
@@ -5990,7 +5975,6 @@
 "wojtekt@google.com","Wojciech Tyczynski","2016-10-27","Google","hack/lib/etcd.sh",1,1,1
 "wojtekt@google.com","Wojciech Tyczynski","2016-10-27","Google","cluster/images/etcd/migrate-if-needed.sh",4,4,4
 "wojtekt@google.com","Wojciech Tyczynski","2016-10-27","Google","build-tools/build-image/cross/VERSION",1,1,1
-"wojtekt@google.com","Wojciech Tyczynski","2016-10-27","Google","Godeps/Godeps.json",104,104,104
 "wojtekt@google.com","Wojciech Tyczynski","2016-10-25","Google","hack/test-update-storage-objects.sh",1,1,1
 "wojtekt@google.com","Wojciech Tyczynski","2016-10-25","Google","cluster/images/etcd/migrate-if-needed.sh",23,11,23
 "wojtekt@google.com","Wojciech Tyczynski","2016-10-27","Google","pkg/registry/cachesize/cachesize.go",2,2,2
@@ -6961,8 +6945,6 @@
 "miaol@vmware.com","Miao Luo","2016-11-03","VMware","pkg/volume/photon_pd/photon_util.go",18,13,18
 "miaol@vmware.com","Miao Luo","2016-11-03","VMware","pkg/volume/photon_pd/attacher.go",0,10,10
 "miaol@vmware.com","Miao Luo","2016-11-02","VMware","api/swagger-spec/apps_v1beta1.json",21,0,21
-"miaol@vmware.com","Miao Luo","2016-11-02","VMware","Godeps/LICENSES",164,0,164
-"miaol@vmware.com","Miao Luo","2016-11-02","VMware","Godeps/Godeps.json",10,0,10
 "miaol@vmware.com","Miao Luo","2016-11-02","VMware","pkg/cloudprovider/providers/photon/photon.go",573,0,573
 "miaol@vmware.com","Miao Luo","2016-11-02","VMware","pkg/volume/photon_pd/photon_pd_test.go",239,0,239
 "miaol@vmware.com","Miao Luo","2016-11-02","VMware","pkg/apis/extensions/types.go",1,0,1
@@ -7219,7 +7201,6 @@
 "ccoleman@redhat.com","Clayton Coleman","2016-10-14","Red Hat","plugin/pkg/scheduler/algorithm/priorities/interpod_affinity.go",1,1,1
 "ccoleman@redhat.com","Clayton Coleman","2016-10-14","Red Hat","pkg/api/v1/conversion.go",1,6,6
 "ccoleman@redhat.com","Clayton Coleman","2016-10-14","Red Hat","pkg/api/conversion.go",5,0,5
-"ccoleman@redhat.com","Clayton Coleman","2016-10-14","Red Hat","Godeps/Godeps.json",10,10,10
 "ccoleman@redhat.com","Clayton Coleman","2016-10-24","Red Hat","docs/devel/api_changes.md",7,3,7
 "ccoleman@redhat.com","Clayton Coleman","2016-09-30","Red Hat","cmd/kubelet/app/server.go",1,0,1
 "ccoleman@redhat.com","Clayton Coleman","2016-09-30","Red Hat","cmd/kube-proxy/app/options/options.go",3,1,3
@@ -7272,8 +7253,6 @@
 "ccoleman@redhat.com","Clayton Coleman","2016-09-24","Red Hat","pkg/apis/rbac/v1alpha1/defaults.go",13,10,13
 "ccoleman@redhat.com","Clayton Coleman","2016-09-24","Red Hat","pkg/runtime/scheme.go",21,0,21
 "ccoleman@redhat.com","Clayton Coleman","2016-09-24","Red Hat","pkg/conversion/converter.go",2,2,2
-"ccoleman@redhat.com","Clayton Coleman","2016-09-25","Red Hat","Godeps/LICENSES",210,0,210
-"ccoleman@redhat.com","Clayton Coleman","2016-09-25","Red Hat","Godeps/Godeps.json",13,9,13
 "ccoleman@redhat.com","Clayton Coleman","2016-09-25","Red Hat","hack/.linted_packages",1,0,1
 "ccoleman@redhat.com","Clayton Coleman","2016-09-10","Red Hat","pkg/util/diff/diff.go",19,6,19
 "ccoleman@redhat.com","Clayton Coleman","2016-09-10","Red Hat","pkg/util/diff/diff_test.go",55,6,55
@@ -7510,7 +7489,6 @@
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-11-11","CoreOS","pkg/storage/etcd3/watcher_test.go",0,1,1
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-10-05","CoreOS","pkg/storage/etcd3/watcher.go",12,8,12
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-10-05","CoreOS","pkg/storage/etcd3/event.go",8,2,8
-"hongchaodeng1@gmail.com","Hongchao Deng","2016-10-10","CoreOS","Godeps/Godeps.json",105,105,105
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-09-27","CoreOS","pkg/storage/etcd3/watcher_test.go",2,2,2
 "hongchaodeng@users.noreply.github.com","Hongchao Deng","2016-09-26","CoreOS","pkg/api/rest/resttest/resttest.go",1,7,7
 "hongchaodeng1@gmail.com","Hongchao Deng","2016-08-22","CoreOS","pkg/registry/core/serviceaccount/strategy.go",3,2,3
@@ -7722,7 +7700,6 @@
 "gmarek@google.com","gmarek","2016-10-28","Google","test/e2e/load.go",15,13,15
 "gmarek@google.com","gmarek","2016-10-28","Google","test/e2e/density.go",101,68,101
 "gmarek@google.com","gmarek","2016-10-28","Google","cluster/gce/gci/configure-helper.sh",1,9,9
-"gmarek@google.com","gmarek","2016-10-27","Google","Godeps/Godeps.json",0,5,5
 "gmarek@google.com","gmarek","2016-10-27","Google","test/e2e/density.go",0,86,86
 "gmarek@google.com","gmarek","2016-10-27","Google","test/e2e/framework/util.go",0,27,27
 "gmarek@google.com","gmarek","2016-10-20","Google","test/integration/scheduler_perf/BUILD",3,0,3
@@ -8054,8 +8031,6 @@
 "bburns@google.com","Brendan Burns","2016-10-13","Microsoft","pkg/kubectl/cmd/util/factory.go",5,1,5
 "bburns@google.com","Brendan Burns","2016-10-13","Microsoft","pkg/api/validation/schema.go",65,0,65
 "bburns@google.com","Brendan Burns","2016-10-13","Microsoft","pkg/api/validation/schema_test.go",115,0,115
-"bburns@google.com","Brendan Burns","2016-10-08","Microsoft","Godeps/LICENSES",29,0,29
-"bburns@google.com","Brendan Burns","2016-10-08","Microsoft","Godeps/Godeps.json",4,0,4
 "bburns@microsoft.com","Brendan Burns","2016-10-12","Microsoft","logo/usage_guidelines.md",4,6,6
 "bburns@google.com","Brendan Burns","2016-10-08","Microsoft","test/e2e/cluster_size_autoscaling.go",2,2,2
 "bburns@google.com","Brendan Burns","2016-09-05","Microsoft","CONTRIBUTING.md",6,0,6
@@ -8065,10 +8040,8 @@
 "bburns@google.com","Brendan Burns","2016-08-29","Microsoft","pkg/kubectl/cmd/replace_test.go",9,0,9
 "bburns@google.com","Brendan Burns","2016-08-29","Microsoft","pkg/kubectl/resource/visitor.go",8,0,8
 "bburns@google.com","Brendan Burns","2016-09-05","Microsoft","pkg/util/mount/mount_linux.go",3,0,3
-"bburns@google.com","Brendan Burns","2016-08-27","Microsoft","Godeps/LICENSES",58,0,58
 "bburns@google.com","Brendan Burns","2016-07-03","Microsoft","pkg/client/unversioned/clientcmd/client_config.go",4,2,4
 "bburns@google.com","Brendan Burns","2016-07-03","Microsoft","pkg/client/unversioned/clientcmd/auth_loaders.go",26,11,26
-"bburns@google.com","Brendan Burns","2016-08-27","Microsoft","Godeps/Godeps.json",8,0,8
 "maszulik@redhat.com","Maciej Szulik","2016-11-18","Red Hat","test/e2e/job.go",3,2,3
 "maszulik@redhat.com","Maciej Szulik","2016-11-18","Red Hat","test/e2e/framework/util.go",25,0,25
 "maszulik@redhat.com","Maciej Szulik","2016-11-18","Red Hat","test/e2e/batch_v1_jobs.go",3,2,3
@@ -8179,7 +8152,6 @@
 "maszulik@redhat.com","Maciej Szulik","2016-09-19","Red Hat","test/test_owners.csv",17,9,17
 "maszulik@redhat.com","Maciej Szulik","2016-09-14","Red Hat","pkg/controller/scheduledjob/utils.go",2,13,13
 "maszulik@redhat.com","Maciej Szulik","2016-09-14","Red Hat","pkg/apis/batch/validation/validation.go",1,6,6
-"maszulik@redhat.com","Maciej Szulik","2016-09-14","Red Hat","Godeps/Godeps.json",2,2,2
 "maszulik@redhat.com","Maciej Szulik","2016-09-12","Red Hat","test/e2e/kubectl.go",39,2,39
 "maszulik@redhat.com","Maciej Szulik","2016-09-12","Red Hat","test/e2e/scheduledjob.go",7,7,7
 "maszulik@redhat.com","Maciej Szulik","2016-09-12","Red Hat","test/e2e/framework/framework.go",6,0,6
@@ -8507,14 +8479,12 @@
 "dashpole@google.com","David Ashpole","2016-10-27","Google","pkg/kubelet/eviction/eviction_manager_test.go",74,68,74
 "dashpole@google.com","David Ashpole","2016-10-27","Google","pkg/kubelet/eviction/helpers.go",5,8,8
 "dashpole@google.com","David Ashpole","2016-10-27","Google","pkg/kubelet/server/stats/summary.go",24,7,24
-"dashpole@google.com","David Ashpole","2016-10-27","Google","Godeps/Godeps.json",0,5,5
 "dashpole@google.com","David Ashpole","2016-10-22","Google","pkg/kubelet/cadvisor/cadvisor_linux.go",7,5,7
 "dashpole@google.com","David Ashpole","2016-10-22","Google","cmd/kubelet/app/server.go",1,1,1
 "dashpole@google.com","David Ashpole","2016-10-22","Google","test/e2e/framework/test_context.go",1,1,1
 "dashpole@google.com","David Ashpole","2016-10-22","Google","cluster/gce/config-default.sh",1,6,6
 "dashpole@google.com","David Ashpole","2016-10-22","Google","test/e2e_node/environment/conformance.go",1,1,1
 "dashpole@google.com","David Ashpole","2016-10-22","Google","cluster/gce/config-test.sh",1,6,6
-"dashpole@google.com","David Ashpole","2016-10-21","Google","Godeps/Godeps.json",85,80,85
 "dashpole@google.com","David Ashpole","2016-09-22","Google","pkg/kubelet/eviction/eviction_manager_test.go",19,19,19
 "dashpole@google.com","David Ashpole","2016-09-22","Google","plugin/pkg/scheduler/algorithmprovider/defaults/defaults.go",1,1,1
 "dashpole@google.com","David Ashpole","2016-09-22","Google","plugin/pkg/scheduler/algorithm/predicates/predicates_test.go",6,6,6
@@ -8575,7 +8545,6 @@
 "hchiramm@redhat.com","Humble Chirammal","2016-11-15","Red Hat","pkg/volume/glusterfs/glusterfs.go",14,4,14
 "hchiramm@redhat.com","Humble Chirammal","2016-11-15","Red Hat","pkg/volume/glusterfs/BUILD",1,0,1
 "hchiramm@redhat.com","Humble Chirammal","2016-10-27","Red Hat","pkg/volume/glusterfs/glusterfs.go",8,8,8
-"hchiramm@redhat.com","Humble Chirammal","2016-10-24","Red Hat","Godeps/Godeps.json",3,6,6
 "hchiramm@redhat.com","Humble Chirammal","2016-10-21","Red Hat","pkg/volume/glusterfs/glusterfs.go",4,0,4
 "hchiramm@redhat.com","Humble Chirammal","2016-10-19","Red Hat","examples/experimental/persistent-volume-provisioning/glusterfs-dp.yaml",0,1,1
 "hchiramm@redhat.com","Humble Chirammal","2016-10-19","Red Hat","pkg/volume/glusterfs/glusterfs_test.go",1,21,21
@@ -8593,7 +8562,6 @@
 "davanum@gmail.com","Davanum Srinivas","2016-10-06","Mirantis","hack/lib/util.sh",1,1,1
 "davanum@gmail.com","Davanum Srinivas","2016-10-06","Mirantis","pkg/genericapiserver/options/server_run_options.go",7,1,7
 "davanum@gmail.com","Davanum Srinivas","2016-10-06","Mirantis","hack/local-up-cluster.sh",55,16,55
-"davanum@gmail.com","Davanum Srinivas","2016-10-08","Mirantis","Godeps/Godeps.json",1,1,1
 "davanum@gmail.com","Davanum Srinivas","2016-10-03","Mirantis","cluster/images/hyperkube/README.md",1,1,1
 "davanum@gmail.com","Davanum Srinivas","2016-09-28","Mirantis","pkg/genericapiserver/config.go",1,1,1
 "davanum@gmail.com","Davanum Srinivas","2016-09-28","Mirantis","pkg/genericapiserver/filters/cors.go",5,1,5
@@ -8617,10 +8585,8 @@
 "davanum@gmail.com","Davanum Srinivas","2016-07-14","Mirantis","pkg/kubectl/cmd/util/shortcut_restmapper_test.go",3,3,3
 "davanum@gmail.com","Davanum Srinivas","2016-07-14","Mirantis","pkg/kubectl/cmd/util/factory.go",4,3,4
 "davanum@gmail.com","Davanum Srinivas","2016-07-14","Mirantis","pkg/kubectl/cmd/util/shortcut_restmapper.go",65,7,65
-"davanum@gmail.com","Davanum Srinivas","2016-09-13","Mirantis","Godeps/LICENSES",1266,6,1266
 "davanum@gmail.com","Davanum Srinivas","2016-09-13","Mirantis","federation/pkg/dnsprovider/providers/google/clouddns/clouddns.go",1,1,1
 "davanum@gmail.com","Davanum Srinivas","2016-09-13","Mirantis","pkg/cloudprovider/providers/gce/gce.go",1,1,1
-"davanum@gmail.com","Davanum Srinivas","2016-09-13","Mirantis","Godeps/Godeps.json",132,103,132
 "davanum@gmail.com","Davanum Srinivas","2016-09-13","Mirantis","plugin/pkg/admission/initialresources/gcm.go",1,1,1
 "davanum@gmail.com","Davanum Srinivas","2016-09-08","Mirantis","docs/proposals/external-lb-source-ip-preservation.md",5,0,5
 "davanum@gmail.com","Davanum Srinivas","2016-09-01","Mirantis","hack/verify-golint.sh",4,1,4
@@ -9012,13 +8978,11 @@
 "justin@fathomdb.com","Justin Santa Barbara","2016-10-22","FathomDB","federation/pkg/federation-controller/service/dns.go",25,17,25
 "justin@fathomdb.com","Justin Santa Barbara","2016-10-22","FathomDB","federation/pkg/federation-controller/service/BUILD",1,0,1
 "justin@fathomdb.com","Justin Santa Barbara","2016-10-22","FathomDB","federation/pkg/federation-controller/service/dns_test.go",170,0,170
-"justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","Godeps/Godeps.json",0,4,4
-"justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","staging/src/k8s.io/client-go/_vendor/github.com/juju/ratelimit/ratelimit.go",0,245,245
-"justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","staging/src/k8s.io/client-go/_vendor/github.com/juju/ratelimit/reader.go",0,51,51
-"justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","Godeps/LICENSES",0,199,199
 "justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","staging/src/k8s.io/client-go/Godeps/Godeps.json",0,4,4
-"justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","staging/src/k8s.io/client-go/_vendor/github.com/juju/ratelimit/LICENSE",0,191,191
 "justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","staging/src/k8s.io/client-go/_vendor/github.com/juju/ratelimit/README.md",0,117,117
+"justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","staging/src/k8s.io/client-go/_vendor/github.com/juju/ratelimit/reader.go",0,51,51
+"justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","staging/src/k8s.io/client-go/_vendor/github.com/juju/ratelimit/LICENSE",0,191,191
+"justin@fathomdb.com","Justin Santa Barbara","2016-10-30","FathomDB","staging/src/k8s.io/client-go/_vendor/github.com/juju/ratelimit/ratelimit.go",0,245,245
 "justin@fathomdb.com","Justin Santa Barbara","2016-09-22","FathomDB","cluster/gce/gci/configure-helper.sh",1,5,5
 "justin@fathomdb.com","Justin Santa Barbara","2016-09-22","FathomDB","cluster/aws/templates/configure-vm-aws.sh",0,2,2
 "justin@fathomdb.com","Justin Santa Barbara","2016-09-22","FathomDB","cluster/gce/configure-vm.sh",0,2,2
@@ -9376,8 +9340,6 @@
 "ffranz@redhat.com","Fabiano Franz","2016-10-07","Red Hat","pkg/kubectl/cmd/templates/markdown.go",145,0,145
 "ffranz@redhat.com","Fabiano Franz","2016-10-07","Red Hat","pkg/util/term/term_writer.go",124,0,124
 "ffranz@redhat.com","Fabiano Franz","2016-10-07","Red Hat","pkg/util/term/term_writer_test.go",98,0,98
-"ffranz@redhat.com","Fabiano Franz","2016-10-07","Red Hat","Godeps/LICENSES",58,0,58
-"ffranz@redhat.com","Fabiano Franz","2016-10-07","Red Hat","Godeps/Godeps.json",8,0,8
 "ffranz@redhat.com","Fabiano Franz","2016-08-25","Red Hat","pkg/kubectl/describe.go",1,1,1
 "jianhui.zhou@huawei.com","jianhuiz","2016-11-10","Huawei","federation/pkg/federation-controller/replicaset/replicasetcontroller_test.go",18,0,18
 "jianhui.zhou@huawei.com","jianhuiz","2016-11-10","Huawei","federation/pkg/federation-controller/replicaset/replicasetcontroller.go",4,2,4
@@ -13287,7 +13249,6 @@
 "joe.github@bedafamily.com","Joe Beda","2016-09-27","Google","build/OWNERS",1,0,1
 "joe.github@bedafamily.com","Joe Beda","2016-09-27","Google","hack/OWNERS",1,0,1
 "joe.github@bedafamily.com","Joe Beda","2016-09-27","Google","cluster/OWNERS",1,0,1
-"tstclair@redhat.com","Timothy St. Clair","2016-11-04","Red Hat","Godeps/Godeps.json",111,108,111
 "tstclair@redhat.com","Timothy St. Clair","2016-10-21","Red Hat","pkg/proxy/iptables/proxier.go",21,5,21
 "tstclair@redhat.com","Timothy St. Clair","2016-10-21","Red Hat","hack/verify-flags/known-flags.txt",1,0,1
 "tstclair@redhat.com","Timothy St. Clair","2016-10-21","Red Hat","pkg/apis/componentconfig/v1alpha1/defaults.go",3,0,3
@@ -13315,8 +13276,6 @@
 "tstclair@redhat.com","Timothy St. Clair","2016-09-15","Red Hat","cmd/kube-controller-manager/app/controllermanager.go",12,4,12
 "tstclair@redhat.com","Timothy St. Clair","2016-09-26","Red Hat","pkg/genericapiserver/genericapiserver.go",3,0,3
 "tstclair@redhat.com","Timothy St. Clair","2016-09-07","Red Hat","pkg/util/net/http.go",4,2,4
-"tstclair@redhat.com","Timothy St. Clair","2016-09-23","Red Hat","Godeps/Godeps.json",106,106,106
-"tstclair@redhat.com","Timothy St. Clair","2016-09-15","Red Hat","Godeps/Godeps.json",122,122,122
 "tstclair@redhat.com","Timothy St. Clair","2016-08-30","Red Hat","pkg/registry/job/etcd/etcd_test.go",6,0,6
 "tstclair@redhat.com","Timothy St. Clair","2016-08-30","Red Hat","pkg/registry/podsecuritypolicy/etcd/etcd_test.go",6,0,6
 "tstclair@redhat.com","Timothy St. Clair","2016-08-30","Red Hat","pkg/registry/deployment/etcd/etcd_test.go",11,3,11
@@ -13413,8 +13372,6 @@
 "hchen@redhat.com","Huamin Chen","2016-10-17","Red Hat","pkg/cloudprovider/providers/azure/azure_blob.go",99,0,99
 "hchen@redhat.com","Huamin Chen","2016-10-17","Red Hat","pkg/cloudprovider/providers/azure/azure.go",4,0,4
 "hchen@redhat.com","Huamin Chen","2016-10-17","Red Hat","pkg/cloudprovider/providers/azure/vhd.go",38,0,38
-"hchen@redhat.com","Huamin Chen","2016-10-17","Red Hat","Godeps/LICENSES",454,4,454
-"hchen@redhat.com","Huamin Chen","2016-10-17","Red Hat","Godeps/Godeps.json",18,4,18
 "hchen@redhat.com","Huamin Chen","2016-10-25","Red Hat","pkg/util/mount/mount_unsupported.go",4,0,4
 "hchen@redhat.com","Huamin Chen","2016-10-19","Red Hat","pkg/volume/rbd/rbd.go",18,39,39
 "hchen@redhat.com","Huamin Chen","2016-08-30","Red Hat","pkg/kubectl/describe.go",11,0,11
@@ -13475,10 +13432,7 @@
 "jay@apache.org","jayunit100","2016-09-12","Apache","test/integration/scheduler_perf/scheduler_test.go",6,0,6
 "jay@apache.org","jayunit100","2016-08-24","Apache","test/e2e/e2e-example-config.json",3,0,3
 "jay@apache.org","jayunit100","2016-08-24","Apache","test/e2e/framework/test_context.go",29,1,29
-"jay@apache.org","jayunit100","2016-08-24","Apache","Godeps/Godeps.json",4,8,8
 "jay@apache.org","jayunit100","2016-08-24","Apache","test/e2e/e2e_test.go",1,2,2
-"jay@apache.org","jayunit100","2016-08-24","Apache","Godeps/LICENSES",5167,1027,5167
-"jay@apache.org","jayunit100","2016-08-24","Apache","Godeps/Godeps.json",96,0,96
 "jay@apache.org","jayunit100","2016-09-01","Apache","docs/devel/scheduler.md",3,4,4
 "jay@apache.org","jayunit100","2016-08-29","Apache","docs/devel/scheduler.md",45,23,45
 "jtanenba@redhat.com","Jacob Tanenbaum","2016-10-26","Red Hat","hack/make-rules/test-cmd.sh",13,9,13
@@ -14125,7 +14079,6 @@
 "fmeng@ebay.com","fmeng","2016-09-07","eBay","test/e2e/federated-ingress.go",22,9,22
 "chenr.fnst@cn.fujitsu.com","xilabao","2016-10-28","Fujitsu","cluster/vagrant/util.sh",7,0,7
 "chenr.fnst@cn.fujitsu.com","xilabao","2016-10-19","Fujitsu","docs/devel/e2e-tests.md",1,1,1
-"mmilata@redhat.com","Martin Milata","2016-10-27","Red Hat","Godeps/Godeps.json",1,1,1
 "vincent.heet@topicus.nl","Vincent Heet","2016-10-27","Gynzy","pkg/proxy/iptables/proxier.go",3,3,3
 "vincent.heet@topicus.nl","Vincent Heet","2016-10-27","Gynzy","pkg/proxy/iptables/proxier_test.go",1,1,1
 "nickren19@gmail.com","NickrenREN","2016-10-26","EasyStack","build-tools/README.md",1,1,1
@@ -14371,10 +14324,8 @@
 "errordeveloper@gmail.com","Ilya Dmitrichenko","2016-08-25","Weaveworks","pkg/kubediscovery/model.go",4,5,5
 "errordeveloper@gmail.com","Ilya Dmitrichenko","2016-08-25","Weaveworks","pkg/kubediscovery/handlers.go",93,62,93
 "errordeveloper@gmail.com","Ilya Dmitrichenko","2016-08-25","Weaveworks","cmd/kubediscovery/kubediscovery.go",16,12,16
-"errordeveloper@gmail.com","Ilya Dmitrichenko","2016-09-07","Weaveworks","Godeps/LICENSES",630,0,630
-"errordeveloper@gmail.com","Ilya Dmitrichenko","2016-09-07","Weaveworks","hack/.linted_packages",2,0,2
-"errordeveloper@gmail.com","Ilya Dmitrichenko","2016-09-07","Weaveworks","Godeps/Godeps.json",12,0,12
 "errordeveloper@gmail.com","Ilya Dmitrichenko","2016-09-07","Weaveworks","cmd/kubeadm/dummy.go",24,0,24
+"errordeveloper@gmail.com","Ilya Dmitrichenko","2016-09-07","Weaveworks","hack/.linted_packages",2,0,2
 "errordeveloper@gmail.com","Ilya Dmitrichenko","2016-09-07","Weaveworks","cmd/kube-discovery/dummy.go",24,0,24
 "errordeveloper@gmail.com","Ilya Dmitrichenko","2016-09-10","Weaveworks","pkg/client/unversioned/clientcmd/merged_client_builder.go",3,0,3
 "errordeveloper@gmail.com","Ilya Dmitrichenko","2016-09-07","Weaveworks","cmd/kubelet/app/bootstrap.go",2,79,79
@@ -15040,8 +14991,6 @@
 "pigmej@gmail.com","Jędrzej Nowak","2016-09-08","Mirantis","federation/pkg/federation-controller/namespace/namespace_controller.go",7,7,7
 "pigmej@gmail.com","Jędrzej Nowak","2016-09-08","Mirantis","federation/pkg/federation-controller/ingress/ingress_controller.go",7,7,7
 "mathieu.velten@cern.ch","Mathieu Velten","2016-09-06","CERN","pkg/cloudprovider/providers/openstack/openstack.go",17,1,17
-"mathieu.velten@cern.ch","Mathieu Velten","2016-09-06","CERN","Godeps/LICENSES",199,0,199
-"mathieu.velten@cern.ch","Mathieu Velten","2016-09-06","CERN","Godeps/Godeps.json",75,70,75
 "davidopp@google.com","David Oppenheimer","2016-10-13","Google","pkg/controller/node/controller_utils.go",10,1,10
 "davidopp@google.com","David Oppenheimer","2016-10-07","Google","plugin/pkg/scheduler/algorithm/priorities/taint_toleration.go",1,1,1
 "davidopp@google.com","David Oppenheimer","2016-10-07","Google","pkg/api/validation/validation.go",3,3,3
@@ -15061,8 +15010,6 @@
 "jm.carp@gmail.com","Joshua Carp","2016-10-02","18F","pkg/util/jsonpath/jsonpath_test.go",14,2,14
 "graham.hayes@hpe.com","Graham Hayes","2016-09-06","HP","pkg/cloudprovider/providers/openstack/openstack.go",10,8,10
 "graham.hayes@hpe.com","Graham Hayes","2016-09-06","HP","pkg/cloudprovider/providers/openstack/openstack_loadbalancer.go",252,23,252
-"graham.hayes@hpe.com","Graham Hayes","2016-09-06","HP","Godeps/LICENSES",398,0,398
-"graham.hayes@hpe.com","Graham Hayes","2016-09-06","HP","Godeps/Godeps.json",10,0,10
 "atanas.mirchev@est.fujitsu.com","Atanas Mirchev","2016-09-26","Fujitsu","cmd/kubeadm/app/node/bootstrap.go",68,23,68
 "atanas.mirchev@est.fujitsu.com","Atanas Mirchev","2016-09-26","Fujitsu","cmd/kubeadm/app/node/csr.go",0,24,24
 "atanas.mirchev@est.fujitsu.com","Atanas Mirchev","2016-10-12","Fujitsu","cmd/kubeadm/app/node/discovery.go",15,4,15
@@ -15293,7 +15240,6 @@
 "optimuswu8685@gmail.com","wu8685","2016-09-27","vipshop","pkg/kubectl/cmd/util/helpers.go",10,1,10
 "optimuswu8685@gmail.com","wu8685","2016-09-27","vipshop","pkg/kubectl/cmd/create_configmap.go",2,2,2
 "optimuswu8685@gmail.com","wu8685","2016-09-22","vipshop","cmd/hyperkube/hyperkube_test.go",2,2,2
-"optimuswu8685@gmail.com","wu8685","2016-09-22","vipshop","Godeps/Godeps.json",1,1,1
 "optimuswu8685@gmail.com","wu8685","2016-09-22","vipshop","contrib/mesos/cmd/km/hyperkube_test.go",2,2,2
 "lu.zhenxing@zte.com.cn","lojies","2016-09-28","ZTE Corporation","pkg/kubectl/run.go",1,1,1
 "lu.zhenxing@zte.com.cn","lojies","2016-09-20","ZTE Corporation","pkg/ssh/ssh.go",1,1,1
@@ -15329,8 +15275,6 @@
 "simon@swine.de","Christian Simon","2016-09-27","Jetstack","pkg/volume/flocker/flocker_volume_test.go",109,0,109
 "simon@swine.de","Christian Simon","2016-09-27","Jetstack","pkg/volume/flocker/flocker_volume.go",102,0,102
 "simon@swine.de","Christian Simon","2016-09-27","Jetstack","pkg/volume/flocker/flocker_util_test.go",57,0,57
-"simon@swine.de","Christian Simon","2016-08-01","Jetstack","Godeps/LICENSES",2,2,2
-"simon@swine.de","Christian Simon","2016-08-01","Jetstack","Godeps/Godeps.json",4,4,4
 "simon@swine.de","Christian Simon","2016-08-01","Jetstack","api/swagger-spec/apps_v1alpha1.json",6,5,6
 "simon@swine.de","Christian Simon","2016-08-01","Jetstack","api/swagger-spec/v1.json",6,5,6
 "simon@swine.de","Christian Simon","2016-08-01","Jetstack","pkg/api/validation/validation.go",6,2,6
@@ -15339,7 +15283,6 @@
 "simon@swine.de","Christian Simon","2016-08-01","Jetstack","api/swagger-spec/extensions_v1beta1.json",6,5,6
 "simon@swine.de","Christian Simon","2016-08-01","Jetstack","pkg/api/types.go",6,2,6
 "simon@swine.de","Christian Simon","2016-08-01","Jetstack","pkg/api/validation/validation_test.go",28,3,28
-"mkumatag@in.ibm.com","Manjunath A Kumatagi","2016-09-27","IBM","Godeps/Godeps.json",1,1,1
 "mkumatag@in.ibm.com","Manjunath A Kumatagi","2016-09-22","IBM","hack/lib/util.sh",7,1,7
 "mkumatag@in.ibm.com","Manjunath A Kumatagi","2016-09-22","IBM","docs/man/man1/kube-controller-manager.1",3,0,3
 "mkumatag@in.ibm.com","Manjunath A Kumatagi","2016-09-22","IBM","cmd/genman/gen_kube_man.go",61,11,61
@@ -15355,7 +15298,6 @@
 "spiffxp@gmail.com","Aaron Crickenberger","2016-09-23","Samsung","CHANGELOG.md",133,0,133
 "jackson.coakley@gmail.com","hacktastic","2016-09-21","Blizzard","pkg/cloudprovider/providers/openstack/openstack_loadbalancer.go",3,21,21
 "dbsmith@google.com","Daniel Smith","2016-09-22","Google","cmd/libs/go2idl/openapi-gen/.import-restrictions",14,0,14
-"dbsmith@google.com","Daniel Smith","2016-09-21","Google","Godeps/LICENSES",1890,0,1890
 "dbsmith@google.com","Daniel Smith","2016-09-21","Google","cmd/libs/go2idl/openapi-gen/generators/openapi.go",4,4,4
 "dbsmith@google.com","Daniel Smith","2016-09-21","Google","cmd/libs/go2idl/openapi-gen/main.go",4,1,4
 "dbsmith@google.com","Daniel Smith","2016-09-21","Google","cmd/libs/go2idl/openapi-gen/generators/openapi_test.go",4,4,4
@@ -15370,7 +15312,6 @@
 "dbsmith@google.com","Daniel Smith","2016-08-30","Google","cmd/libs/go2idl/set-gen/main.go",2,0,2
 "dbsmith@google.com","Daniel Smith","2016-08-30","Google","cmd/libs/go2idl/import-boss/main.go",2,0,2
 "dbsmith@google.com","Daniel Smith","2016-08-30","Google","cmd/libs/go2idl/deepcopy-gen/main.go",3,0,3
-"dbsmith@google.com","Daniel Smith","2016-08-30","Google","Godeps/Godeps.json",37,1,37
 "dbsmith@google.com","Daniel Smith","2016-08-30","Google","plugin/pkg/scheduler/algorithm/predicates/predicates_test.go",2,2,2
 "dbsmith@google.com","Daniel Smith","2016-08-30","Google","pkg/util/codeinspector/codeinspector.go",2,2,2
 "dbsmith@google.com","Daniel Smith","2016-08-30","Google","plugin/pkg/scheduler/algorithm/priorities/priorities_test.go",2,2,2
@@ -15466,7 +15407,6 @@
 "eric.chiang.m@gmail.com","Eric Chiang","2016-09-22","CoreOS","plugin/pkg/auth/authenticator/token/oidc/oidc.go",9,5,9
 "eric.chiang.m@gmail.com","Eric Chiang","2016-09-13","CoreOS","plugin/pkg/client/auth/oidc/OWNERS",1,1,1
 "eric.chiang.m@gmail.com","Eric Chiang","2016-09-13","CoreOS","plugin/pkg/auth/authenticator/token/oidc/OWNERS",2,0,2
-"eric.chiang.m@gmail.com","Eric Chiang","2016-08-26","CoreOS","Godeps/Godeps.json",5,5,5
 "philibert.dugas@gmail.com","Philibert Dugas","2016-09-22","Shopify","pkg/apiserver/handlers.go",4,2,4
 "philibert.dugas@gmail.com","Philibert Dugas","2016-09-22","Shopify","pkg/genericapiserver/genericapiserver.go",2,2,2
 "philibert.dugas@gmail.com","Philibert Dugas","2016-09-22","Shopify","pkg/apiserver/handlers.go",21,18,21
@@ -15505,8 +15445,6 @@
 "johannes.scheuermann@inovex.de","Johannes Scheuermann","2016-09-16","Inovex","examples/experimental/persistent-volume-provisioning/quobyte/quobyte-storage-class.yaml",1,1,1
 "johannes.scheuermann@inovex.de","Johannes Scheuermann","2016-09-16","Inovex","pkg/volume/quobyte/quobyte.go",3,4,4
 "johannes.scheuermann@inovex.de","Johannes Scheuermann","2016-09-16","Inovex","examples/experimental/persistent-volume-provisioning/README.md",3,3,3
-"johannes.scheuermann@inovex.de","Johannes Scheuermann","2016-09-13","Inovex","Godeps/LICENSES",36,0,36
-"johannes.scheuermann@inovex.de","Johannes Scheuermann","2016-09-13","Inovex","Godeps/Godeps.json",4,0,4
 "johannes.scheuermann@inovex.de","Johannes Scheuermann","2016-08-20","Inovex","examples/experimental/persistent-volume-provisioning/quobyte/example-pod.yaml",23,0,23
 "johannes.scheuermann@inovex.de","Johannes Scheuermann","2016-08-20","Inovex","pkg/volume/quobyte/quobyte_util.go",60,0,60
 "johannes.scheuermann@inovex.de","Johannes Scheuermann","2016-08-20","Inovex","pkg/volume/util/util.go",31,0,31
