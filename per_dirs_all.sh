@@ -9,8 +9,8 @@ echo 'Generating git log...'
 git log --numstat -M > $LOG
 ls -l $LOG
 echo 'Analysing data...'
-~/dev/cncf/gitdm/cncfdm.py -i $LOG -r '^vendor/|/vendor/' -R -d -n -b ~/dev/cncf/gitdm/ -u -o $FN.txt -I $FN.csv > $FN.out
-#~/dev/cncf/gitdm/cncfdm.py -i $LOG -r '^vendor/|/vendor/' -R -d -n -b ~/dev/cncf/gitdm/ -u -o $FN.txt -I $FN.csv
+~/dev/cncf/gitdm/cncfdm.py -i $LOG -r '^vendor/|/vendor/|^Godeps/' -R -d -n -b ~/dev/cncf/gitdm/ -u -o $FN.txt -I $FN.csv > $FN.out
+#~/dev/cncf/gitdm/cncfdm.py -i $LOG -r '^vendor/|/vendor/|^Godeps/' -R -d -n -b ~/dev/cncf/gitdm/ -u -o $FN.txt -I $FN.csv
 git config --unset diff.renameLimit
 git config --unset merge.renameLimit
 cd $PWD
