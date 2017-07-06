@@ -5,6 +5,9 @@ echo "Sort config files"
 echo "Generate all.txt file and all_affs.csv"
 ./manual_all.sh
 
+echo "Generate affiliations files"
+./gen_aff_files.sh
+
 echo "Correlations"
 ./correlations.sh
 
