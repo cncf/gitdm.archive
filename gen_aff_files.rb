@@ -33,8 +33,10 @@ def gen_aff_files(csv_file)
 
   wrongs = []
   w = []
+  t = ''
   comps.keys.sort.each do |comp_name|
     devs = comps[comp_name]
+    t += "#{comp_name}:\n"
     devs.keys.sort.each do |dev_name|
       email_list = names[dev_name]
       affs = []
@@ -43,18 +45,45 @@ def gen_aff_files(csv_file)
         affs << emails[email].map { |a| [a['company'], a['date_to']] }.sort_by { |r| r[1] }.reverse
         affse << emails[email].map { |a| [a['email'], a['company'], a['date_to']] }.sort_by { |r| r[2] }.reverse
       end
+      has_dev = affs.first.map { |aff| aff[0] }.include?(comp_name)
       # Very important sanity check
       if affs.uniq.count > 1
         h = {}
         h[dev_name] = affse
         wrongs << JSON.pretty_generate(h)
-        w << affse
+        w << [dev_name, affse]
       end
+      next unless has_dev
+      t += "\t"
+      t += "BROKEN! " if affs.uniq.count > 1
+      t += "#{dev_name}: #{email_list.keys.sort.join(', ')}"
+      date = affs.first.select { |aff| aff[0] == comp_name }.first[1]
+      datestr = date == dt_future ? '' : " until #{date}"
+      t += "#{datestr}\n"
     end
   end
+  File.write 'company_developers.txt', t
+
+  t = ''
+  names.keys.sort.each do |dev_name|
+    email_list = names[dev_name]
+    affs = []
+    email_list.keys.sort.each do |email|
+      affs << emails[email].map { |a| [a['company'], a['date_to']] }.sort_by { |r| r[1] }.reverse
+    end
+    # Very important sanity check
+    t += 'BROKEN! ' if affs.uniq.count > 1
+    t += "#{dev_name}: #{email_list.keys.sort.join(', ')}\n"
+    affs.first.each do |aff|
+      datestr = aff[1] == dt_future ? '' : " until #{aff[1]}"
+      t += "\t#{aff[0]}#{datestr}\n"
+    end
+  end
+  File.write 'developers_affiliations.txt', t
 
   if wrongs.count > 0
-    puts 'w.select { |r| r.any? { |a| a.length > 1 } }'
+    e = w.select { |r| r[1].any? { |a| a.length > 1 } }
+    r = w.select { |r| r[1].any? { |a| a.length <= 1 } }
     binding.pry
   end
 end
