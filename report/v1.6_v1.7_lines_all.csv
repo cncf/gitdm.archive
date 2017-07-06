@@ -1,7 +1,7 @@
 idx,company,n,percent
-0,(All known 119),597477,99.99
-1,Google,340604,57.0
-2,CoreOS,118376,19.8
+0,(All known 116),597477,99.99
+1,Google,340718,57.0
+2,CoreOS,118391,19.8
 3,Red Hat,48964,8.2
 4,Heptio,17163,2.9
 5,VMware,14962,2.5
@@ -9,7 +9,7 @@ idx,company,n,percent
 7,Rancher,11007,1.8
 8,storageos,3919,0.7
 9,Huawei,2738,0.5
-10,(Self),2310,0.4
+10,(Self),2715,0.5
 11,IBM,2227,0.4
 12,Hyper.sh,1897,0.3
 13,Kelowna,1790,0.3
@@ -30,93 +30,90 @@ idx,company,n,percent
 28,Atlassian,414,0.1
 29,Net EASE 网易有态度,372,0.1
 30,Oracle,345,0.1
-31,Rook,314,0.1
-32,Amadeus,311,0.1
-33,SalesForce,296,0.0
+31,Amadeus,311,0.1
+32,SalesForce,296,0.0
+33,Elisa,258,0.0
 34,Airbnb,242,0.0
 35,Concur,233,0.0
-36,Elisa,218,0.0
-37,Weaveworks,208,0.0
-38,42 Tech,197,0.0
-39,JPMorgan Chase,185,0.0
-40,Diamanti,182,0.0
-41,Samsung,175,0.0
-42,Capgemini,173,0.0
-43,zlabjp,166,0.0
-44,Portworx,139,0.0
-45,Walmart,138,0.0
-46,Apprenda,129,0.0
-47,QIANKUN,122,0.0
-48,Loodse,120,0.0
-49,Wattpad,107,0.0
-50,Socrata,106,0.0
-51,Cisco,102,0.0
-52,Zalando,96,0.0
-53,Ocado,94,0.0
-54,Hitachi Data Systems,80,0.0
-55,Telemetry.com,68,0.0
-56,eBay,68,0.0
-57,GRADIANT,67,0.0
-58,Primeton,65,0.0
-59,Nordstrom,64,0.0
-60,(Not Found),55,0.0
-61,Pardot,52,0.0
-62,Tyk,43,0.0
-63,Feedtrail,40,0.0
-64,Bankwest,39,0.0
-65,Ancestry.com,27,0.0
-66,Inuits,25,0.0
-67,Luminis,24,0.0
-68,TravelSky Technology Limited,23,0.0
-69,Igneous Systems,21,0.0
-70,Cockroach,21,0.0
-71,Airtame,20,0.0
-72,Bits Working,19,0.0
-73,FOSSEE,19,0.0
-74,Globo.com,17,0.0
-75,China Mobile International Limited,17,0.0
-76,Unicredit,17,0.0
-77,Movable Ink,16,0.0
-78,DaoCloud,16,0.0
-79,Ceph,15,0.0
-80,IT Svit,13,0.0
-81,Juju Ecosystem,11,0.0
-82,Tencent,11,0.0
-83,Bracket Computing,10,0.0
-84,en.N cloud,9,0.0
-85,CT Lab,8,0.0
-86,HP,6,0.0
-87,Intel,6,0.0
-88,Jd.Com,5,0.0
-89,Virgo Systems,5,0.0
-90,Chariot Solutions,5,0.0
-91,亚信科技 AsiaInfo,4,0.0
-92,SoundCloud,4,0.0
-93,Aperian Global,4,0.0
-94,IEEE Computer Society,4,0.0
-95,Clarifai,4,0.0
-96,Inovex,3,0.0
-97,HarmonyCloud,2,0.0
-98,ContaAzul,2,0.0
-99,Code Coup,2,0.0
-100,Douyu.com,2,0.0
-101,indiehosters,2,0.0
-102,Infoblox,2,0.0
-103,FINN.no,2,0.0
-104,Cruise Automation,2,0.0
-105,RightScale,2,0.0
-106,Amazon,2,0.0
-107,ocadotechnology,1,0.0
-108,Virtual Instruments,1,0.0
-109,rstorcloud,1,0.0
-110,Shopify,1,0.0
-111,Alternative Storage,1,0.0
-112,MediaMath,1,0.0
-113,Nirmata,1,0.0
-114,Ruby Together,1,0.0
-115,jobandtalent,1,0.0
-116,microcloud,1,0.0
-117,minio,1,0.0
-118,ksyun,1,0.0
-119,Q42,1,0.0
-120,Compose,1,0.0
+36,42 Tech,197,0.0
+37,JPMorgan Chase,185,0.0
+38,Diamanti,182,0.0
+39,Samsung,175,0.0
+40,Capgemini,173,0.0
+41,zlabjp,166,0.0
+42,Portworx,139,0.0
+43,Walmart,138,0.0
+44,Apprenda,129,0.0
+45,QIANKUN,122,0.0
+46,Loodse,120,0.0
+47,Wattpad,107,0.0
+48,Socrata,106,0.0
+49,Cisco,102,0.0
+50,Zalando,96,0.0
+51,Ocado,94,0.0
+52,Hitachi Data Systems,80,0.0
+53,eBay,68,0.0
+54,Telemetry.com,68,0.0
+55,GRADIANT,67,0.0
+56,Primeton,65,0.0
+57,Nordstrom,64,0.0
+58,(Not Found),55,0.0
+59,Pardot,52,0.0
+60,Tyk,43,0.0
+61,Bankwest,39,0.0
+62,Ancestry.com,27,0.0
+63,Inuits,25,0.0
+64,Luminis,24,0.0
+65,TravelSky Technology Limited,23,0.0
+66,Igneous Systems,21,0.0
+67,Cockroach,21,0.0
+68,Airtame,20,0.0
+69,Bits Working,19,0.0
+70,FOSSEE,19,0.0
+71,Globo.com,17,0.0
+72,China Mobile International Limited,17,0.0
+73,Unicredit,17,0.0
+74,Movable Ink,16,0.0
+75,DaoCloud,16,0.0
+76,IT Svit,13,0.0
+77,Juju Ecosystem,11,0.0
+78,Tencent,11,0.0
+79,Bracket Computing,10,0.0
+80,en.N cloud,9,0.0
+81,CT Lab,8,0.0
+82,HP,6,0.0
+83,Intel,6,0.0
+84,Jd.Com,5,0.0
+85,Virgo Systems,5,0.0
+86,Chariot Solutions,5,0.0
+87,IEEE Computer Society,4,0.0
+88,SoundCloud,4,0.0
+89,亚信科技 AsiaInfo,4,0.0
+90,Aperian Global,4,0.0
+91,Clarifai,4,0.0
+92,Inovex,3,0.0
+93,Weaveworks,3,0.0
+94,HarmonyCloud,2,0.0
+95,ContaAzul,2,0.0
+96,Code Coup,2,0.0
+97,Douyu.com,2,0.0
+98,indiehosters,2,0.0
+99,Infoblox,2,0.0
+100,FINN.no,2,0.0
+101,Cruise Automation,2,0.0
+102,RightScale,2,0.0
+103,Amazon,2,0.0
+104,ocadotechnology,1,0.0
+105,Virtual Instruments,1,0.0
+106,rstorcloud,1,0.0
+107,Shopify,1,0.0
+108,Alternative Storage,1,0.0
+109,MediaMath,1,0.0
+110,Nirmata,1,0.0
+111,Ruby Together,1,0.0
+112,jobandtalent,1,0.0
+113,microcloud,1,0.0
+114,minio,1,0.0
+115,ksyun,1,0.0
+116,Q42,1,0.0
+117,Compose,1,0.0
