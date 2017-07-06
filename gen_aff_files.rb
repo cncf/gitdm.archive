@@ -57,8 +57,19 @@ def gen_aff_files(csv_file)
       t += "\t"
       t += "BROKEN! " if affs.uniq.count > 1
       t += "#{dev_name}: #{email_list.keys.sort.join(', ')}"
-      date = affs.first.select { |aff| aff[0] == comp_name }.first[1]
-      datestr = date == dt_future ? '' : " until #{date}"
+      len = affs.first.length
+      dates = []
+      affs.first.each_with_index do |aff, index|
+        next unless aff[0] == comp_name
+        from = ''
+        if index != len - 1
+          from = "from #{affs.first[index + 1][1]}"
+        end
+        to = aff[1] == dt_future ? '' : "until #{aff[1]}"
+        dates << [from, to].reject { |d| d == '' }.join(' ')
+      end
+      datestr = dates.reverse.join(', ')
+      datestr = ' ' + datestr unless datestr == ''
       t += "#{datestr}\n"
     end
   end
