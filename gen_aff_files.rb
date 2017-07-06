@@ -93,6 +93,8 @@ def gen_aff_files(csv_file)
   File.write 'developers_affiliations.txt', t
 
   if wrongs.count > 0
+    wrongs = wrongs.uniq
+    w = w.uniq
     e = w.select { |r| r[1].any? { |a| a.length > 1 } }
     r = w.select { |r| r[1].any? { |a| a.length <= 1 } }
     binding.pry
