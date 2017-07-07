@@ -16,10 +16,36 @@ def gen_aff_files(csv_file)
     h = row.to_h
     c = h['company'].strip
     e = h['email'].strip
-    n = h['name'].strip
+    n = h['name'].strip.gsub(':', '')
     d = h['date_to'].strip
     h['date_to'] = d = dt_future if !d || d == ''
     next unless e.include?('@')
+    names[n] = {} unless names.key?(n)
+    names[n][e] = [] unless names[n].key?(e)
+    names[n][e] << h
+    emails[e] = [] unless emails.key?(e)
+    emails[e] << h
+    comps[c] = {} unless comps.key?(c)
+    comps[c][n] = {} unless comps[c].key?(n)
+    comps[c][n][e] = [] unless comps[c][n].key?(e)
+    comps[c][n][e] << h
+  end
+
+  # Read mapping `cncf-config/email-map`
+  existing_emails = emails.dup
+  File.readlines('cncf-config/email-map').each do |line|
+    line = line.strip
+    next if line[0] == '#'
+    arr = line.split ' '
+    h = {}
+    e = h['email'] = arr[0]
+    next if existing_emails.key?(e)
+    next unless e.include?('@')
+    company = arr[1..-1].join ' '
+    data = company.split(' < ')
+    c = h['company'] = data.first
+    d = h['date_to'] = date = data.length > 1 ? data.last : dt_future
+    n = h['name'] = h['email']
     names[n] = {} unless names.key?(n)
     names[n][e] = [] unless names[n].key?(e)
     names[n][e] << h
@@ -38,6 +64,7 @@ def gen_aff_files(csv_file)
     devs = comps[comp_name]
     t += "#{comp_name}:\n"
     devs.keys.sort.each do |dev_name|
+      d_name = dev_name.split('@').first
       email_list = names[dev_name]
       affs = []
       affse = []
@@ -61,7 +88,7 @@ def gen_aff_files(csv_file)
       ems.each do |affl, lst|
         has_dev = affl.map { |aff| aff[0] }.include?(comp_name)
         next unless has_dev
-        t += "\t#{dev_name}: #{lst.sort.join(', ')}"
+        t += "\t#{d_name}: #{lst.sort.join(', ')}"
         len = affl.length
         dates = []
         affl.each_with_index do |aff, index|
@@ -83,6 +110,7 @@ def gen_aff_files(csv_file)
 
   t = ''
   names.keys.sort.each do |dev_name|
+    d_name = dev_name.split('@').first
     email_list = names[dev_name]
     affs = []
     affse = []
@@ -98,7 +126,7 @@ def gen_aff_files(csv_file)
       ems[k] << affse[idx].first[0]
     end
     ems.each do |affl, lst|
-      t += "#{dev_name}#{split}: #{lst.sort.join(', ')}\n"
+      t += "#{d_name}#{split}: #{lst.sort.join(', ')}\n"
       affl.each do |aff|
         datestr = aff[1] == dt_future ? '' : " until #{aff[1]}"
         t += "\t#{aff[0]}#{datestr}\n"
@@ -116,8 +144,8 @@ def gen_aff_files(csv_file)
     se = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == 'Self' } } }
     un = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == '(Unknown)' } } }
     dt = w.select { |r| r[1].any? { |a| a.any? { |b| b[2] != dt_future } } }
-    # binding.pry
     puts 'Special cases found, consider binding.pry it!'
+    # binding.pry
   end
 end
 
