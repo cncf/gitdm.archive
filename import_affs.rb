@@ -5,7 +5,7 @@ def import_affs(dev_affs, comp_devs)
   d_affs = []
   emails = []
   File.readlines(dev_affs).each do |line|
-    data = line.split(':').map(&:strip)
+    data = line.split(': ').map(&:strip)
     if data.length == 2
       dname = data[0]
       emails = data[1].split(', ')
