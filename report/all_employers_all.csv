@@ -1,5 +1,5 @@
 idx,company,n,percent
-0,(All known 542),1359,96.86
+0,(All known 541),1359,96.86
 1,Google,207,14.8
 2,Red Hat,134,9.6
 3,(Self),79,5.6
@@ -9,10 +9,10 @@ idx,company,n,percent
 7,IBM,29,2.1
 8,ZTE Corporation,27,1.9
 9,Mirantis,20,1.4
-10,VMware,15,1.1
-11,Cisco,15,1.1
-12,Intel,15,1.1
-13,Microsoft,13,0.9
+10,Microsoft,16,1.1
+11,Intel,15,1.1
+12,VMware,15,1.1
+13,Cisco,15,1.1
 14,Fujitsu,13,0.9
 15,eBay,13,0.9
 16,Canonical,12,0.9
@@ -21,22 +21,22 @@ idx,company,n,percent
 19,Mesosphere,9,0.6
 20,Tencent,8,0.6
 21,Caicloud,7,0.5
-22,Heptio,6,0.4
-23,Rackspace,6,0.4
-24,Apcera,6,0.4
-25,Metaswitch,5,0.4
-26,Apache,5,0.4
-27,Amadeus,5,0.4
-28,EasyStack,5,0.4
+22,Rackspace,6,0.4
+23,Apcera,6,0.4
+24,Heptio,6,0.4
+25,SalesForce,5,0.4
+26,Amadeus,5,0.4
+27,EasyStack,5,0.4
+28,Apache,5,0.4
 29,Samsung,5,0.4
-30,SalesForce,5,0.4
-31,Box,4,0.3
+30,Metaswitch,5,0.4
+31,China Mobile International Limited,4,0.3
 32,Docker,4,0.3
-33,Apprenda,4,0.3
-34,Endocode,4,0.3
-35,Apple,4,0.3
-36,Über,4,0.3
-37,China Mobile International Limited,4,0.3
+33,Box,4,0.3
+34,Apprenda,4,0.3
+35,Endocode,4,0.3
+36,Apple,4,0.3
+37,Über,4,0.3
 38,DaoCloud,3,0.2
 39,Yahoo,3,0.2
 40,SAP,3,0.2
@@ -52,42 +52,42 @@ idx,company,n,percent
 50,Diamanti,3,0.2
 51,CERN,3,0.2
 52,Rancher,3,0.2
-53,DEIS,3,0.2
-54,Weaveworks,3,0.2
-55,Jd.Com,3,0.2
-56,GoDaddy,3,0.2
-57,Shopify,2,0.1
-58,Elastic,2,0.1
-59,Walt Disney,2,0.1
-60,Ubisoft,2,0.1
-61,StackPointCloud,2,0.1
-62,Return Path,2,0.1
-63,Puppet,2,0.1
-64,RightScale,2,0.1
-65,LinkedIn,2,0.1
-66,MediaMath,2,0.1
-67,Ustream,2,0.1
-68,Douyu.com,2,0.1
-69,Amazon,2,0.1
+53,Weaveworks,3,0.2
+54,Jd.Com,3,0.2
+55,GoDaddy,3,0.2
+56,Return Path,2,0.1
+57,Puppet,2,0.1
+58,RightScale,2,0.1
+59,LinkedIn,2,0.1
+60,MediaMath,2,0.1
+61,Ustream,2,0.1
+62,Douyu.com,2,0.1
+63,Cockroach,2,0.1
+64,Jetstack,2,0.1
+65,Tigera,2,0.1
+66,Portworx,2,0.1
+67,Clarifai,2,0.1
+68,Amazon,2,0.1
+69,The New York Times,2,0.1
 70,Hyper.sh,2,0.1
-71,Clarifai,2,0.1
-72,Portworx,2,0.1
-73,Tigera,2,0.1
-74,Jetstack,2,0.1
-75,Cockroach,2,0.1
-76,The New York Times,2,0.1
-77,Concur,2,0.1
-78,zlabjp,2,0.1
-79,Devops,2,0.1
-80,zulily,2,0.1
-81,chbatey,2,0.1
-82,Loodse,2,0.1
-83,HolidayCheck,2,0.1
-84,Nordstrom,2,0.1
-85,Imaginea,2,0.1
-86,NHN,2,0.1
-87,DigitalOcean,2,0.1
-88,Devsisters,2,0.1
+71,Concur,2,0.1
+72,zlabjp,2,0.1
+73,Devops,2,0.1
+74,zulily,2,0.1
+75,chbatey,2,0.1
+76,Loodse,2,0.1
+77,HolidayCheck,2,0.1
+78,Nordstrom,2,0.1
+79,Imaginea,2,0.1
+80,NHN,2,0.1
+81,DigitalOcean,2,0.1
+82,Devsisters,2,0.1
+83,Shopify,2,0.1
+84,Elastic,2,0.1
+85,Walt Disney,2,0.1
+86,Ubisoft,2,0.1
+87,StackPointCloud,2,0.1
+88,Ahead4 Limited,1,0.1
 89,PreviousNext,1,0.1
 90,Hitachi Data Systems,1,0.1
 91,Aperian Global,1,0.1
@@ -387,7 +387,7 @@ idx,company,n,percent
 385,G&L Digital Media Engineering,1,0.1
 386,Mayflower GmbH,1,0.1
 387,Nirmata,1,0.1
-388,Software & Things,1,0.1
+388,Ruby Together,1,0.1
 389,iFix,1,0.1
 390,SantoshSahoo.com,1,0.1
 391,Burning Bay Technologies,1,0.1
@@ -454,7 +454,7 @@ idx,company,n,percent
 452,Activision,1,0.1
 453,Carrot Creative,1,0.1
 454,Qwil,1,0.1
-455,Ruby Together,1,0.1
+455,Software & Things,1,0.1
 456,ClusterHQ,1,0.1
 457,FACEIT,1,0.1
 458,Kismatic,1,0.1
@@ -542,4 +542,3 @@ idx,company,n,percent
 540,Supership Inc.,1,0.1
 541,Seznam.cz,1,0.1
 542,Ocado,1,0.1
-543,Ahead4 Limited,1,0.1
