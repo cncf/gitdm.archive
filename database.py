@@ -252,6 +252,8 @@ class Employer:
 Employers = { }
 
 def GetEmployer (name):
+    if CompanyMap.has_key (name):
+        name = CompanyMap[name]
     try:
         return Employers[name]
     except KeyError:
@@ -339,6 +341,13 @@ def AddEmailAlias (variant, canonical):
     if EmailAliases.has_key (variant):
         sys.stderr.write ('Duplicate email alias for %s\n' % (variant))
     EmailAliases[variant] = canonical
+
+CompanyMap = { }
+
+def AddCompanyMap(nameFrom, nameTo):
+    if CompanyMap.has_key (nameFrom):
+        sys.stderr.write ('Duplicate company map for %s\n' % (nameFrom))
+    CompanyMap[nameFrom] = nameTo
 
 def RemapEmail (email):
     email = email.lower ()
