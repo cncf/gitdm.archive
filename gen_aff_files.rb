@@ -16,7 +16,7 @@ def gen_aff_files(csv_file)
     h = row.to_h
     c = h['company'].strip
     e = h['email'].strip
-    n = h['name'].strip.gsub(': ', '')
+    n = h['name'] = h['name'].strip.gsub(': ', ' ')
     d = h['date_to'].strip
     h['date_to'] = d = dt_future if !d || d == ''
     next unless e.include?('@')
