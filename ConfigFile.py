@@ -54,6 +54,23 @@ def ReadEmailAliases (name):
     file.close ()
 
 #
+# Read a list of company mapping
+#
+def ReadCompanyMap (name):
+    try:
+        file = open (name, 'r')
+    except IOError:
+        croak ('Unable to open company mapping file %s' % (name))
+    line = ReadConfigLine (file)
+    while line:
+        m = re.match ('^`(.+)`\s+`(.+)`$', line)
+        if not m or len (m.groups ()) != 2:
+            croak ('Funky company mapping "%s"' % (line))
+        database.AddCompanyMap (m.group(1), m.group (2))
+        line = ReadConfigLine (file)
+    file.close ()
+
+#
 # The Email/Employer map
 #
 EMMpat = re.compile (r'^([^\s]+)\s+([^<]+)\s*(<\s*(\d+-\d+-\d+)\s*)?$')
@@ -176,6 +193,8 @@ def ConfigFile (name, confdir):
             croak ('Funky config line: "%s"' % (line))
         if sline[0] == 'EmailAliases':
             ReadEmailAliases (os.path.join (confdir, sline[1]))
+        elif sline[0] == 'CompanyMap':
+            ReadCompanyMap (os.path.join (confdir, sline[1]))
         elif sline[0] == 'EmailMap':
             ReadEmailEmployers (os.path.join (confdir, sline[1]))
         elif sline[0] == 'GroupMap':

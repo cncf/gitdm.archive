@@ -200,28 +200,29 @@ By changed lines,eBay,10,pkg/controller/service,266,9.981,0.041
 By changed lines,eBay,10,pkg/controller/service/servicecontroller.go,257,9.644,0.04
 By changed lines,eBay,10,test/e2e/federation-ingress.go,92,3.452,0.014
 By changed lines,eBay,10,pkg/util,46,1.726,0.007
-All By changed lines,Microsoft,11,"",2482,0.385,0.385
-By changed lines,Microsoft,11,pkg,2417,97.381,0.375
-By changed lines,Microsoft,11,pkg/cloudprovider,2106,84.851,0.326
-By changed lines,Microsoft,11,pkg/cloudprovider/providers,2098,84.529,0.325
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure,2049,82.554,0.318
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_loadbalancer.go,611,24.617,0.095
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_test.go,517,20.83,0.08
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_util.go,236,9.508,0.037
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure.go,173,6.97,0.027
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_routes.go,161,6.487,0.025
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_instances.go,146,5.882,0.023
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_wrap.go,124,4.996,0.019
-By changed lines,Microsoft,11,pkg/master,124,4.996,0.019
-By changed lines,Microsoft,11,pkg/master/master.go,92,3.707,0.014
-By changed lines,Microsoft,11,pkg/client/unversioned/clientcmd,88,3.546,0.014
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_zones.go,78,3.143,0.012
-By changed lines,Microsoft,11,pkg/client/unversioned/clientcmd/client_config_test.go,76,3.062,0.012
-By changed lines,Microsoft,11,hack,53,2.135,0.008
-By changed lines,Microsoft,11,hack/make-rules/test-cmd.sh,51,2.055,0.008
-By changed lines,Microsoft,11,pkg/kubectl,44,1.773,0.007
-By changed lines,Microsoft,11,pkg/apiserver/apiserver.go,33,1.33,0.005
-By changed lines,Microsoft,11,pkg/cloudprovider/providers/openstack,28,1.128,0.004
+All By changed lines,Microsoft,11,"",2653,0.411,0.411
+By changed lines,Microsoft,11,pkg,2588,97.55,0.401
+By changed lines,Microsoft,11,pkg/cloudprovider,2277,85.827,0.353
+By changed lines,Microsoft,11,pkg/cloudprovider/providers,2269,85.526,0.352
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure,2049,77.233,0.318
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_loadbalancer.go,611,23.031,0.095
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_test.go,517,19.487,0.08
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_util.go,236,8.896,0.037
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/aws,182,6.86,0.028
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure.go,173,6.521,0.027
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_routes.go,161,6.069,0.025
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_instances.go,146,5.503,0.023
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/aws/aws.go,140,5.277,0.022
+By changed lines,Microsoft,11,pkg/master,124,4.674,0.019
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_wrap.go,124,4.674,0.019
+By changed lines,Microsoft,11,pkg/master/master.go,92,3.468,0.014
+By changed lines,Microsoft,11,pkg/client/unversioned/clientcmd,88,3.317,0.014
+By changed lines,Microsoft,11,pkg/cloudprovider/providers/azure/azure_zones.go,78,2.94,0.012
+By changed lines,Microsoft,11,pkg/client/unversioned/clientcmd/client_config_test.go,76,2.865,0.012
+By changed lines,Microsoft,11,hack,53,1.998,0.008
+By changed lines,Microsoft,11,hack/make-rules/test-cmd.sh,51,1.922,0.008
+By changed lines,Microsoft,11,pkg/kubectl,44,1.658,0.007
+By changed lines,Microsoft,11,pkg/apiserver,33,1.244,0.005
 All By changed lines,Juniper Networks,12,"",1684,0.261,0.261
 By changed lines,Juniper Networks,12,cluster,1684,100.0,0.261
 By changed lines,Juniper Networks,12,cluster/azure-legacy,991,58.848,0.154
@@ -588,30 +589,30 @@ By number of commits to file,Docker,12,cmd/kubelet,2,3.704,0.013
 By number of commits to file,Docker,12,pkg/kubelet/kubelet.go,2,3.704,0.013
 By number of commits to file,Docker,12,cmd/kubelet/app,2,3.704,0.013
 By number of commits to file,Docker,12,pkg/util/strings,2,3.704,0.013
-All By number of commits to file,Microsoft,13,"",42,0.278,0.278
-By number of commits to file,Microsoft,13,pkg,37,88.095,0.245
-By number of commits to file,Microsoft,13,pkg/cloudprovider,18,42.857,0.119
-By number of commits to file,Microsoft,13,pkg/cloudprovider/providers,16,38.095,0.106
-By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/azure,9,21.429,0.06
-By number of commits to file,Microsoft,13,pkg/kubectl,8,19.048,0.053
-By number of commits to file,Microsoft,13,pkg/kubectl/cmd,7,16.667,0.046
-By number of commits to file,Microsoft,13,pkg/client/unversioned/clientcmd,5,11.905,0.033
-By number of commits to file,Microsoft,13,pkg/master,3,7.143,0.02
-By number of commits to file,Microsoft,13,hack,3,7.143,0.02
-By number of commits to file,Microsoft,13,pkg/kubectl/cmd/logs.go,2,4.762,0.013
-By number of commits to file,Microsoft,13,pkg/kubectl/cmd/exec.go,2,4.762,0.013
-By number of commits to file,Microsoft,13,cluster,2,4.762,0.013
-By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/aws,2,4.762,0.013
-By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/openstack,2,4.762,0.013
-By number of commits to file,Microsoft,13,pkg/cloudprovider/cloud.go,2,4.762,0.013
-By number of commits to file,Microsoft,13,pkg/client/unversioned/clientcmd/api,2,4.762,0.013
-By number of commits to file,Microsoft,13,pkg/kubectl/cmd/scale.go,2,4.762,0.013
-By number of commits to file,Microsoft,13,pkg/serviceaccount/jwt.go,1,2.381,0.007
-By number of commits to file,Microsoft,13,pkg/kubectl/cmd/delete_test.go,1,2.381,0.007
-By number of commits to file,Microsoft,13,pkg/kubectl/resource/builder.go,1,2.381,0.007
-By number of commits to file,Microsoft,13,cluster/images/hyperkube/Makefile,1,2.381,0.007
-By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/providers.go,1,2.381,0.007
-By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/fake,1,2.381,0.007
+All By number of commits to file,Microsoft,13,"",45,0.298,0.298
+By number of commits to file,Microsoft,13,pkg,40,88.889,0.265
+By number of commits to file,Microsoft,13,pkg/cloudprovider,21,46.667,0.139
+By number of commits to file,Microsoft,13,pkg/cloudprovider/providers,19,42.222,0.126
+By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/azure,9,20.0,0.06
+By number of commits to file,Microsoft,13,pkg/kubectl,8,17.778,0.053
+By number of commits to file,Microsoft,13,pkg/kubectl/cmd,7,15.556,0.046
+By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/aws,5,11.111,0.033
+By number of commits to file,Microsoft,13,pkg/client/unversioned/clientcmd,5,11.111,0.033
+By number of commits to file,Microsoft,13,hack,3,6.667,0.02
+By number of commits to file,Microsoft,13,pkg/master,3,6.667,0.02
+By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/openstack,2,4.444,0.013
+By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/aws/aws_test.go,2,4.444,0.013
+By number of commits to file,Microsoft,13,pkg/kubectl/cmd/logs.go,2,4.444,0.013
+By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/aws/aws.go,2,4.444,0.013
+By number of commits to file,Microsoft,13,pkg/cloudprovider/cloud.go,2,4.444,0.013
+By number of commits to file,Microsoft,13,pkg/kubectl/cmd/exec.go,2,4.444,0.013
+By number of commits to file,Microsoft,13,cluster,2,4.444,0.013
+By number of commits to file,Microsoft,13,pkg/client/unversioned/clientcmd/api,2,4.444,0.013
+By number of commits to file,Microsoft,13,pkg/kubectl/cmd/scale.go,2,4.444,0.013
+By number of commits to file,Microsoft,13,pkg/kubectl/resource/builder.go,1,2.222,0.007
+By number of commits to file,Microsoft,13,cluster/images/hyperkube/Makefile,1,2.222,0.007
+By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/providers.go,1,2.222,0.007
+By number of commits to file,Microsoft,13,pkg/cloudprovider/providers/fake,1,2.222,0.007
 All By number of commits to file,Juniper Networks,14,"",41,0.271,0.271
 By number of commits to file,Juniper Networks,14,cluster,41,100.0,0.271
 By number of commits to file,Juniper Networks,14,cluster/saltbase,26,63.415,0.172
