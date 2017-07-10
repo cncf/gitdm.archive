@@ -1,10 +1,10 @@
 # Who writes Kubernetes report
 
 This is a Clound Native Computing Foundation's "Who writes Kubernetes" report.
-
-CNCF will publish thnis report for every major release of Kubernetes.
+CNCF will publish this report for every major release of Kubernetes.
 
 Companies and developers can check if they are correctly attributed at the following links:
+
 [Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt)
 
 [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt)
