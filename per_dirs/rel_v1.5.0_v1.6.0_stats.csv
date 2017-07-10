@@ -87,30 +87,30 @@ By changed lines,CoreOS,4,pkg/kubelet,662,4.537,0.058
 By changed lines,CoreOS,4,plugin/pkg/client/auth/oidc,635,4.352,0.055
 By changed lines,CoreOS,4,cluster/gce/coreos/kube-manifests/addons/cluster-monitoring,577,3.954,0.05
 By changed lines,CoreOS,4,third_party/forked/etcd237/wal/wal.go,571,3.913,0.05
-All By changed lines,Self,5,"",13307,1.163,1.163
-By changed lines,Self,5,cmd,10983,82.536,0.96
-By changed lines,Self,5,cmd/kubeadm,10337,77.681,0.903
-By changed lines,Self,5,cmd/kubeadm/app,10321,77.561,0.902
-By changed lines,Self,5,cmd/kubeadm/app/phases,3279,24.641,0.287
-By changed lines,Self,5,cmd/kubeadm/app/master,2397,18.013,0.209
-By changed lines,Self,5,cmd/kubeadm/app/cmd,1511,11.355,0.132
-By changed lines,Self,5,cmd/kubeadm/app/phases/certs,1357,10.198,0.119
-By changed lines,Self,5,pkg,1184,8.898,0.103
-By changed lines,Self,5,cmd/kubeadm/app/util,877,6.591,0.077
-By changed lines,Self,5,cmd/kubeadm/app/discovery,701,5.268,0.061
-By changed lines,Self,5,cmd/kubeadm/app/phases/addons,672,5.05,0.059
-By changed lines,Self,5,cmd/kubeadm/app/node,625,4.697,0.055
-By changed lines,Self,5,cmd/kube-discovery,621,4.667,0.054
-By changed lines,Self,5,cmd/kubeadm/app/phases/kubeconfig,597,4.486,0.052
-By changed lines,Self,5,cmd/kubeadm/app/apis/kubeadm,539,4.05,0.047
-By changed lines,Self,5,cmd/kube-discovery/app,534,4.013,0.047
-By changed lines,Self,5,cmd/kubeadm/app/master/addons.go,448,3.367,0.039
-By changed lines,Self,5,cmd/kubeadm/app/phases/kubeconfig/kubeconfig.go,445,3.344,0.039
-By changed lines,Self,5,build,435,3.269,0.038
-By changed lines,Self,5,build/build-image,408,3.066,0.036
-By changed lines,Self,5,build/build-image/cross,406,3.051,0.035
-By changed lines,Self,5,cmd/kubeadm/app/phases/token,392,2.946,0.034
-By changed lines,Self,5,build/build-image/cross/golang-patches/CL28857-go1.7.1-luxas.patch,390,2.931,0.034
+All By changed lines,Self,5,"",14559,1.272,1.272
+By changed lines,Self,5,cmd,10985,75.452,0.96
+By changed lines,Self,5,cmd/kubeadm,10337,71.001,0.903
+By changed lines,Self,5,cmd/kubeadm/app,10321,70.891,0.902
+By changed lines,Self,5,cmd/kubeadm/app/phases,3279,22.522,0.287
+By changed lines,Self,5,cmd/kubeadm/app/master,2397,16.464,0.209
+By changed lines,Self,5,pkg,2230,15.317,0.195
+By changed lines,Self,5,cmd/kubeadm/app/cmd,1511,10.378,0.132
+By changed lines,Self,5,cmd/kubeadm/app/phases/certs,1357,9.321,0.119
+By changed lines,Self,5,cmd/kubeadm/app/util,877,6.024,0.077
+By changed lines,Self,5,pkg/cloudprovider/providers,843,5.79,0.074
+By changed lines,Self,5,pkg/cloudprovider/providers/aws,812,5.577,0.071
+By changed lines,Self,5,cmd/kubeadm/app/discovery,701,4.815,0.061
+By changed lines,Self,5,cmd/kubeadm/app/phases/addons,672,4.616,0.059
+By changed lines,Self,5,cmd/kubeadm/app/node,625,4.293,0.055
+By changed lines,Self,5,cmd/kube-discovery,621,4.265,0.054
+By changed lines,Self,5,cmd/kubeadm/app/phases/kubeconfig,597,4.101,0.052
+By changed lines,Self,5,cmd/kubeadm/app/apis/kubeadm,539,3.702,0.047
+By changed lines,Self,5,cmd/kube-discovery/app,534,3.668,0.047
+By changed lines,Self,5,cmd/kubeadm/app/master/addons.go,448,3.077,0.039
+By changed lines,Self,5,cmd/kubeadm/app/phases/kubeconfig/kubeconfig.go,445,3.057,0.039
+By changed lines,Self,5,build,435,2.988,0.038
+By changed lines,Self,5,build/build-image,408,2.802,0.036
+By changed lines,Self,5,build/build-image/cross,406,2.789,0.035
 All By changed lines,Huawei,6,"",11208,0.979,0.979
 By changed lines,Huawei,6,federation,7689,68.603,0.672
 By changed lines,Huawei,6,federation/pkg,2858,25.5,0.25
@@ -406,30 +406,30 @@ By number of commits to file,Google,2,plugin/pkg,349,3.034,0.86
 By number of commits to file,Google,2,pkg/client/clientset_generated/clientset,330,2.869,0.813
 By number of commits to file,Google,2,pkg/client/clientset_generated/internalclientset,325,2.826,0.801
 By number of commits to file,Google,2,staging/src/k8s.io/client-go/_vendor/golang.org,318,2.765,0.784
-All By number of commits to file,Self,3,"",726,1.789,1.789
-By number of commits to file,Self,3,cmd,414,57.025,1.02
-By number of commits to file,Self,3,cmd/kubeadm,397,54.683,0.978
-By number of commits to file,Self,3,cmd/kubeadm/app,394,54.27,0.971
-By number of commits to file,Self,3,pkg,105,14.463,0.259
-By number of commits to file,Self,3,cmd/kubeadm/app/master,85,11.708,0.209
-By number of commits to file,Self,3,cmd/kubeadm/app/cmd,81,11.157,0.2
-By number of commits to file,Self,3,cmd/kubeadm/app/phases,72,9.917,0.177
-By number of commits to file,Self,3,federation,63,8.678,0.155
-By number of commits to file,Self,3,federation/pkg,58,7.989,0.143
-By number of commits to file,Self,3,pkg/registry,51,7.025,0.126
-By number of commits to file,Self,3,cmd/kubeadm/app/apis/kubeadm,50,6.887,0.123
-By number of commits to file,Self,3,cluster,40,5.51,0.099
-By number of commits to file,Self,3,test,38,5.234,0.094
-By number of commits to file,Self,3,federation/pkg/dnsprovider,35,4.821,0.086
-By number of commits to file,Self,3,federation/pkg/dnsprovider/providers,33,4.545,0.081
-By number of commits to file,Self,3,pkg/registry/core,32,4.408,0.079
-By number of commits to file,Self,3,federation/pkg/dnsprovider/providers/google/clouddns,29,3.994,0.071
-By number of commits to file,Self,3,federation/pkg/dnsprovider/providers/google/clouddns/internal,28,3.857,0.069
-By number of commits to file,Self,3,cmd/kubeadm/app/util,27,3.719,0.067
-By number of commits to file,Self,3,cmd/kubeadm/app/phases/certs,26,3.581,0.064
-By number of commits to file,Self,3,test/images,21,2.893,0.052
-By number of commits to file,Self,3,cmd/kubeadm/app/preflight,21,2.893,0.052
-By number of commits to file,Self,3,hack,21,2.893,0.052
+All By number of commits to file,Self,3,"",780,1.922,1.922
+By number of commits to file,Self,3,cmd,415,53.205,1.023
+By number of commits to file,Self,3,cmd/kubeadm,397,50.897,0.978
+By number of commits to file,Self,3,cmd/kubeadm/app,394,50.513,0.971
+By number of commits to file,Self,3,pkg,129,16.538,0.318
+By number of commits to file,Self,3,federation,88,11.282,0.217
+By number of commits to file,Self,3,cmd/kubeadm/app/master,85,10.897,0.209
+By number of commits to file,Self,3,federation/pkg,83,10.641,0.205
+By number of commits to file,Self,3,cmd/kubeadm/app/cmd,81,10.385,0.2
+By number of commits to file,Self,3,cmd/kubeadm/app/phases,72,9.231,0.177
+By number of commits to file,Self,3,federation/pkg/dnsprovider,60,7.692,0.148
+By number of commits to file,Self,3,federation/pkg/dnsprovider/providers,55,7.051,0.136
+By number of commits to file,Self,3,pkg/registry,51,6.538,0.126
+By number of commits to file,Self,3,cmd/kubeadm/app/apis/kubeadm,50,6.41,0.123
+By number of commits to file,Self,3,cluster,41,5.256,0.101
+By number of commits to file,Self,3,test,38,4.872,0.094
+By number of commits to file,Self,3,federation/pkg/dnsprovider/providers/google/clouddns,33,4.231,0.081
+By number of commits to file,Self,3,pkg/registry/core,32,4.103,0.079
+By number of commits to file,Self,3,federation/pkg/dnsprovider/providers/google/clouddns/internal,28,3.59,0.069
+By number of commits to file,Self,3,cmd/kubeadm/app/util,27,3.462,0.067
+By number of commits to file,Self,3,cmd/kubeadm/app/phases/certs,26,3.333,0.064
+By number of commits to file,Self,3,hack,23,2.949,0.057
+By number of commits to file,Self,3,cmd/kubeadm/app/preflight,21,2.692,0.052
+By number of commits to file,Self,3,test/images,21,2.692,0.052
 All By number of commits to file,Microsoft,4,"",393,0.968,0.968
 By number of commits to file,Microsoft,4,docs,172,43.766,0.424
 By number of commits to file,Microsoft,4,pkg,163,41.476,0.402
