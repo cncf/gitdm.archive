@@ -12,9 +12,12 @@ Companies and developers can check if they are correctly attributed at the follo
 If You see any error(s) in those list please create Pull Request with fixes.
 
 
+# Running
 Please use `*.sh` scripts to run analytics (`all*.sh` for full analysis and `rels*.sh` for per release stats)
 This program assumes that gitdm lives in: `~/dev/cncf/gitdm/` and kubernetes in `~/dev/go/src/k8s.io/kubernetes/`
 Output files are placed in `kubernetes/` directory.
+
+To run all statistics just jun: `./rerun_data.sh`
 
 This is an iterational process:
 Run any of scripts. Review its output in kubernetes directory. Iteratively adjust mappings to handle more authors (config/mappings is in
