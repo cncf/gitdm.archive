@@ -1,3 +1,12 @@
+# Who writes Kubernetes report
+
+This is a Clound Native Computing Foundation's "Who writes Kubernetes" report.
+CNCF will publish thnis report for every major release of Kubernetes.
+Companies and developers can check if they are correctly attributed at the following links:
+[Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt)
+[Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt)
+If You see any error(s) in those list please create Pull Request with fixes.
+
 Please use `*.sh` scripts to run analytics (`all*.sh` for full analysis and `rels*.sh` for per release stats)
 This program assumes that gitdm lives in: `~/dev/cncf/gitdm/` and kubernetes in `~/dev/go/src/k8s.io/kubernetes/`
 Output files are placed in `kubernetes/` directory.
