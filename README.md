@@ -12,6 +12,12 @@ Companies and developers can check if they are correctly attributed at the follo
 If You see any error(s) in those list please create Pull Request with fixes.
 
 
+To test those changes locally please fork repository, update those two files (they must be in sync).
+Then generate config files by running: `./import_affs.sh`. If those two files are out of sync tool will notify You about this.
+This tool will generate new `email-map` file. Check if Your changes are OK and move it to `cncf-config/email-map` (replace)
+Then regenerate all data by running `./rerun_data.sh`.
+
+
 # Running
 Please use `*.sh` scripts to run analytics (`all*.sh` for full analysis and `rels*.sh` for per release stats)
 This program assumes that gitdm lives in: `~/dev/cncf/gitdm/` and kubernetes in `~/dev/go/src/k8s.io/kubernetes/`
