@@ -91,51 +91,51 @@ By changed lines,Heptio,5,examples/k8petstore/k8petstore.sh,324,4.119,0.067
 By changed lines,Heptio,5,staging/src/k8s.io/client-go/pkg/api/v1,316,4.017,0.065
 By changed lines,Heptio,5,examples/k8petstore/web-server/src,243,3.089,0.05
 By changed lines,Heptio,5,pkg/client/leaderelection/leaderelection_test.go,232,2.949,0.048
-All By changed lines,Huawei,6,"",5667,1.173,1.173
-By changed lines,Huawei,6,federation,4399,77.625,0.911
-By changed lines,Huawei,6,federation/pkg,4296,75.807,0.889
-By changed lines,Huawei,6,federation/pkg/federation-controller,4137,73.002,0.857
-By changed lines,Huawei,6,federation/pkg/federation-controller/service,3658,64.549,0.757
-By changed lines,Huawei,6,federation/pkg/federation-controller/service/servicecontroller.go,1415,24.969,0.293
-By changed lines,Huawei,6,pkg,790,13.94,0.164
-By changed lines,Huawei,6,pkg/controller,481,8.488,0.1
-By changed lines,Huawei,6,pkg/controller/service/servicecontroller_test.go,470,8.294,0.097
-By changed lines,Huawei,6,federation/pkg/federation-controller/service/servicecontroller_test.go,405,7.147,0.084
-By changed lines,Huawei,6,federation/pkg/federation-controller/util,371,6.547,0.077
-By changed lines,Huawei,6,test,326,5.753,0.067
-By changed lines,Huawei,6,federation/pkg/federation-controller/service/service_helper.go,303,5.347,0.063
-By changed lines,Huawei,6,pkg/client/leaderelection,292,5.153,0.06
-By changed lines,Huawei,6,pkg/client/leaderelection/leaderelection_test.go,280,4.941,0.058
-By changed lines,Huawei,6,federation/pkg/federation-controller/service/dns.go,241,4.253,0.05
-By changed lines,Huawei,6,federation/pkg/federation-controller/service/dns_test.go,222,3.917,0.046
-By changed lines,Huawei,6,federation/pkg/federation-controller/service/cluster_helper.go,212,3.741,0.044
-By changed lines,Huawei,6,test/e2e_federation,208,3.67,0.043
-By changed lines,Huawei,6,federation/pkg/federation-controller/service/endpoint_helper.go,205,3.617,0.042
-By changed lines,Huawei,6,federation/pkg/federation-controller/util/replicapreferences,194,3.423,0.04
-By changed lines,Huawei,6,federation/pkg/federation-controller/service/endpoint_helper_test.go,173,3.053,0.036
-By changed lines,Huawei,6,federation/pkg/federation-controller/service/service_helper_test.go,163,2.876,0.034
-By changed lines,Huawei,6,federation/pkg/kubefed,156,2.753,0.032
-All By changed lines,Self,7,"",5351,1.108,1.108
-By changed lines,Self,7,cluster,1749,32.685,0.362
-By changed lines,Self,7,pkg,1613,30.144,0.334
-By changed lines,Self,7,cluster/juju/layers,1131,21.136,0.234
-By changed lines,Self,7,staging/src/k8s.io,1028,19.211,0.213
-By changed lines,Self,7,cluster/juju/layers/kubernetes-master,725,13.549,0.15
-By changed lines,Self,7,cluster/images,580,10.839,0.12
-By changed lines,Self,7,cluster/images/hyperkube,578,10.802,0.12
-By changed lines,Self,7,staging/src/k8s.io/apiserver,514,9.606,0.106
-By changed lines,Self,7,staging/src/k8s.io/apiserver/pkg,507,9.475,0.105
-By changed lines,Self,7,staging/src/k8s.io/kube-apiextensions-server,492,9.195,0.102
-By changed lines,Self,7,cmd,483,9.026,0.1
-By changed lines,Self,7,staging/src/k8s.io/kube-apiextensions-server/test/integration,467,8.727,0.097
-By changed lines,Self,7,staging/src/k8s.io/kube-apiextensions-server/test/integration/basic_test.go,413,7.718,0.086
-By changed lines,Self,7,pkg/kubelet,407,7.606,0.084
-By changed lines,Self,7,cluster/juju/layers/kubernetes-worker,406,7.587,0.084
-By changed lines,Self,7,cmd/kubeadm/app,391,7.307,0.081
-By changed lines,Self,7,pkg/kubectl,391,7.307,0.081
-By changed lines,Self,7,pkg/kubectl/cmd,386,7.214,0.08
-By changed lines,Self,7,pkg/controller,348,6.503,0.072
-By changed lines,Self,7,cluster/images/hyperkube/static-pods,348,6.503,0.072
+All By changed lines,Self,6,"",6680,1.383,1.383
+By changed lines,Self,6,pkg,2903,43.458,0.601
+By changed lines,Self,6,cluster,1753,26.243,0.363
+By changed lines,Self,6,cluster/juju/layers,1131,16.931,0.234
+By changed lines,Self,6,pkg/cloudprovider,1128,16.886,0.234
+By changed lines,Self,6,pkg/cloudprovider/providers/aws,1125,16.841,0.233
+By changed lines,Self,6,staging/src/k8s.io,1033,15.464,0.214
+By changed lines,Self,6,cluster/juju/layers/kubernetes-master,725,10.853,0.15
+By changed lines,Self,6,cluster/images,580,8.683,0.12
+By changed lines,Self,6,cluster/images/hyperkube,578,8.653,0.12
+By changed lines,Self,6,pkg/controller,519,7.769,0.107
+By changed lines,Self,6,staging/src/k8s.io/apiserver,514,7.695,0.106
+By changed lines,Self,6,staging/src/k8s.io/apiserver/pkg,507,7.59,0.105
+By changed lines,Self,6,staging/src/k8s.io/kube-apiextensions-server,492,7.365,0.102
+By changed lines,Self,6,cmd,484,7.246,0.1
+By changed lines,Self,6,staging/src/k8s.io/kube-apiextensions-server/test/integration,467,6.991,0.097
+By changed lines,Self,6,pkg/controller/volume,422,6.317,0.087
+By changed lines,Self,6,pkg/controller/volume/attachdetach,420,6.287,0.087
+By changed lines,Self,6,staging/src/k8s.io/kube-apiextensions-server/test/integration/basic_test.go,413,6.183,0.086
+By changed lines,Self,6,pkg/kubelet,407,6.093,0.084
+By changed lines,Self,6,cluster/juju/layers/kubernetes-worker,406,6.078,0.084
+All By changed lines,Huawei,7,"",5667,1.173,1.173
+By changed lines,Huawei,7,federation,4399,77.625,0.911
+By changed lines,Huawei,7,federation/pkg,4296,75.807,0.889
+By changed lines,Huawei,7,federation/pkg/federation-controller,4137,73.002,0.857
+By changed lines,Huawei,7,federation/pkg/federation-controller/service,3658,64.549,0.757
+By changed lines,Huawei,7,federation/pkg/federation-controller/service/servicecontroller.go,1415,24.969,0.293
+By changed lines,Huawei,7,pkg,790,13.94,0.164
+By changed lines,Huawei,7,pkg/controller,481,8.488,0.1
+By changed lines,Huawei,7,pkg/controller/service/servicecontroller_test.go,470,8.294,0.097
+By changed lines,Huawei,7,federation/pkg/federation-controller/service/servicecontroller_test.go,405,7.147,0.084
+By changed lines,Huawei,7,federation/pkg/federation-controller/util,371,6.547,0.077
+By changed lines,Huawei,7,test,326,5.753,0.067
+By changed lines,Huawei,7,federation/pkg/federation-controller/service/service_helper.go,303,5.347,0.063
+By changed lines,Huawei,7,pkg/client/leaderelection,292,5.153,0.06
+By changed lines,Huawei,7,pkg/client/leaderelection/leaderelection_test.go,280,4.941,0.058
+By changed lines,Huawei,7,federation/pkg/federation-controller/service/dns.go,241,4.253,0.05
+By changed lines,Huawei,7,federation/pkg/federation-controller/service/dns_test.go,222,3.917,0.046
+By changed lines,Huawei,7,federation/pkg/federation-controller/service/cluster_helper.go,212,3.741,0.044
+By changed lines,Huawei,7,test/e2e_federation,208,3.67,0.043
+By changed lines,Huawei,7,federation/pkg/federation-controller/service/endpoint_helper.go,205,3.617,0.042
+By changed lines,Huawei,7,federation/pkg/federation-controller/util/replicapreferences,194,3.423,0.04
+By changed lines,Huawei,7,federation/pkg/federation-controller/service/endpoint_helper_test.go,173,3.053,0.036
+By changed lines,Huawei,7,federation/pkg/federation-controller/service/service_helper_test.go,163,2.876,0.034
+By changed lines,Huawei,7,federation/pkg/kubefed,156,2.753,0.032
 All By changed lines,Hyper.sh,8,"",4009,0.83,0.83
 By changed lines,Hyper.sh,8,pkg,3240,80.818,0.671
 By changed lines,Hyper.sh,8,pkg/kubelet,2707,67.523,0.56
@@ -370,28 +370,27 @@ By number of commits to file,Red Hat,2,staging/src/k8s.io/kube-aggregator,113,3.
 By number of commits to file,Red Hat,2,cmd,113,3.296,0.835
 By number of commits to file,Red Hat,2,plugin/pkg/admission,113,3.296,0.835
 By number of commits to file,Red Hat,2,test/integration,110,3.209,0.812
-All By number of commits to file,Self,3,"",382,2.821,2.821
-By number of commits to file,Self,3,pkg,95,24.869,0.702
-By number of commits to file,Self,3,cluster,76,19.895,0.561
-By number of commits to file,Self,3,plugin,64,16.754,0.473
-By number of commits to file,Self,3,plugin/pkg,62,16.23,0.458
-By number of commits to file,Self,3,plugin/pkg/admission,60,15.707,0.443
-By number of commits to file,Self,3,cmd,53,13.874,0.391
-By number of commits to file,Self,3,cluster/juju/layers,45,11.78,0.332
-By number of commits to file,Self,3,staging/src/k8s.io,42,10.995,0.31
-By number of commits to file,Self,3,cmd/kubeadm/app,39,10.209,0.288
-By number of commits to file,Self,3,pkg/kubelet,26,6.806,0.192
-By number of commits to file,Self,3,cluster/juju/layers/kubernetes-worker,26,6.806,0.192
-By number of commits to file,Self,3,staging/src/k8s.io/apiserver,23,6.021,0.17
-By number of commits to file,Self,3,staging/src/k8s.io/apiserver/pkg,22,5.759,0.162
-By number of commits to file,Self,3,cluster/juju/layers/kubernetes-master,19,4.974,0.14
-By number of commits to file,Self,3,pkg/kubectl,19,4.974,0.14
-By number of commits to file,Self,3,pkg/kubectl/cmd,18,4.712,0.133
-By number of commits to file,Self,3,staging/src/k8s.io/apiserver/pkg/server,15,3.927,0.111
-By number of commits to file,Self,3,cluster/images,15,3.927,0.111
-By number of commits to file,Self,3,federation,15,3.927,0.111
-By number of commits to file,Self,3,cmd/kubeadm/app/phases,14,3.665,0.103
-By number of commits to file,Self,3,staging/src/k8s.io/kube-apiextensions-server,14,3.665,0.103
+All By number of commits to file,Self,3,"",427,3.154,3.154
+By number of commits to file,Self,3,pkg,132,30.913,0.975
+By number of commits to file,Self,3,cluster,77,18.033,0.569
+By number of commits to file,Self,3,plugin,64,14.988,0.473
+By number of commits to file,Self,3,plugin/pkg,62,14.52,0.458
+By number of commits to file,Self,3,plugin/pkg/admission,60,14.052,0.443
+By number of commits to file,Self,3,cmd,54,12.646,0.399
+By number of commits to file,Self,3,cluster/juju/layers,45,10.539,0.332
+By number of commits to file,Self,3,staging/src/k8s.io,44,10.304,0.325
+By number of commits to file,Self,3,cmd/kubeadm/app,39,9.133,0.288
+By number of commits to file,Self,3,cluster/juju/layers/kubernetes-worker,26,6.089,0.192
+By number of commits to file,Self,3,pkg/kubelet,26,6.089,0.192
+By number of commits to file,Self,3,pkg/cloudprovider,25,5.855,0.185
+By number of commits to file,Self,3,pkg/cloudprovider/providers/aws,24,5.621,0.177
+By number of commits to file,Self,3,pkg/controller,23,5.386,0.17
+By number of commits to file,Self,3,staging/src/k8s.io/apiserver,23,5.386,0.17
+By number of commits to file,Self,3,staging/src/k8s.io/apiserver/pkg,22,5.152,0.162
+By number of commits to file,Self,3,pkg/kubectl,19,4.45,0.14
+By number of commits to file,Self,3,cluster/juju/layers/kubernetes-master,19,4.45,0.14
+By number of commits to file,Self,3,pkg/kubectl/cmd,18,4.215,0.133
+By number of commits to file,Self,3,federation,16,3.747,0.118
 All By number of commits to file,Kelowna,4,"",311,2.297,2.297
 By number of commits to file,Kelowna,4,docs,141,45.338,1.041
 By number of commits to file,Kelowna,4,docs/user-guide,74,23.794,0.547

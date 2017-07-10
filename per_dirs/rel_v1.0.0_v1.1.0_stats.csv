@@ -98,32 +98,32 @@ By changed lines,Huawei,4,cluster/centos/minion,378,3.692,0.058
 By changed lines,Huawei,4,hack,352,3.439,0.054
 By changed lines,Huawei,4,pkg/client/record/event_test.go,351,3.429,0.054
 By changed lines,Huawei,4,cluster/centos/master/scripts,298,2.911,0.046
-All By changed lines,Self,5,"",8878,1.357,1.357
-By changed lines,Self,5,pkg,5499,61.94,0.84
-By changed lines,Self,5,pkg/controller,1657,18.664,0.253
-By changed lines,Self,5,examples,1423,16.028,0.217
-By changed lines,Self,5,docs,1396,15.724,0.213
-By changed lines,Self,5,examples/elasticsearch,1348,15.184,0.206
-By changed lines,Self,5,pkg/api,1101,12.401,0.168
-By changed lines,Self,5,docs/getting-started-guides,1038,11.692,0.159
-By changed lines,Self,5,pkg/registry,945,10.644,0.144
-By changed lines,Self,5,pkg/registry/daemon,944,10.633,0.144
-By changed lines,Self,5,pkg/controller/daemon,815,9.18,0.125
-By changed lines,Self,5,pkg/registry/daemon/etcd,801,9.022,0.122
-By changed lines,Self,5,docs/getting-started-guides/aws,741,8.346,0.113
-By changed lines,Self,5,pkg/registry/daemon/etcd/etcd_test.go,725,8.166,0.111
-By changed lines,Self,5,pkg/api/validation,584,6.578,0.089
-By changed lines,Self,5,pkg/util,561,6.319,0.086
-By changed lines,Self,5,pkg/client,517,5.823,0.079
-By changed lines,Self,5,pkg/api/validation/validation_test.go,490,5.519,0.075
-By changed lines,Self,5,pkg/controller/daemon/manager.go,475,5.35,0.073
-By changed lines,Self,5,pkg/kubelet,437,4.922,0.067
-By changed lines,Self,5,docs/getting-started-guides/aws/cloudformation-template.json,421,4.742,0.064
-By changed lines,Self,5,examples/elasticsearch/production_cluster,414,4.663,0.063
-By changed lines,Self,5,examples/elasticsearch/elasticsearch.yml,385,4.337,0.059
-By changed lines,Self,5,pkg/api/v1,370,4.168,0.057
-By changed lines,Self,5,pkg/controller/replication,366,4.123,0.056
-By changed lines,Self,5,pkg/util/oom,340,3.83,0.052
+All By changed lines,Self,5,"",9940,1.519,1.519
+By changed lines,Self,5,pkg,6308,63.461,0.964
+By changed lines,Self,5,pkg/controller,1733,17.435,0.265
+By changed lines,Self,5,examples,1423,14.316,0.217
+By changed lines,Self,5,docs,1398,14.064,0.214
+By changed lines,Self,5,examples/elasticsearch,1348,13.561,0.206
+By changed lines,Self,5,pkg/api,1101,11.076,0.168
+By changed lines,Self,5,docs/getting-started-guides,1038,10.443,0.159
+By changed lines,Self,5,pkg/registry,945,9.507,0.144
+By changed lines,Self,5,pkg/registry/daemon,944,9.497,0.144
+By changed lines,Self,5,pkg/controller/daemon,815,8.199,0.125
+By changed lines,Self,5,pkg/registry/daemon/etcd,801,8.058,0.122
+By changed lines,Self,5,docs/getting-started-guides/aws,741,7.455,0.113
+By changed lines,Self,5,pkg/registry/daemon/etcd/etcd_test.go,725,7.294,0.111
+By changed lines,Self,5,pkg/cloudprovider,664,6.68,0.101
+By changed lines,Self,5,pkg/util,630,6.338,0.096
+By changed lines,Self,5,pkg/api/validation,584,5.875,0.089
+By changed lines,Self,5,pkg/client,517,5.201,0.079
+By changed lines,Self,5,pkg/api/validation/validation_test.go,490,4.93,0.075
+By changed lines,Self,5,pkg/controller/daemon/manager.go,475,4.779,0.073
+By changed lines,Self,5,test,459,4.618,0.07
+By changed lines,Self,5,pkg/cloudprovider/aws,444,4.467,0.068
+By changed lines,Self,5,pkg/kubelet,437,4.396,0.067
+By changed lines,Self,5,docs/getting-started-guides/aws/cloudformation-template.json,421,4.235,0.064
+By changed lines,Self,5,examples/elasticsearch/production_cluster,414,4.165,0.063
+By changed lines,Self,5,examples/elasticsearch/elasticsearch.yml,385,3.873,0.059
 All By changed lines,Mesosphere,6,"",5192,0.794,0.794
 By changed lines,Mesosphere,6,contrib/mesos/pkg,2366,45.57,0.362
 By changed lines,Mesosphere,6,cluster,2013,38.771,0.308
@@ -307,29 +307,12 @@ By changed lines,Tyk,14,pkg/apis/experimental/v1,26,2.289,0.004
 By changed lines,Tyk,14,pkg/api/v1/deep_copy_generated.go,22,1.937,0.003
 By changed lines,Tyk,14,pkg/api/deep_copy_generated.go,22,1.937,0.003
 By changed lines,Tyk,14,pkg/kubectl/resource_printer_test.go,22,1.937,0.003
-All By changed lines,FathomDB,15,"",1062,0.162,0.162
-By changed lines,FathomDB,15,pkg,809,76.177,0.124
-By changed lines,FathomDB,15,pkg/cloudprovider,664,62.524,0.101
-By changed lines,FathomDB,15,pkg/cloudprovider/aws,444,41.808,0.068
-By changed lines,FathomDB,15,pkg/cloudprovider/aws/aws_loadbalancer.go,309,29.096,0.047
-By changed lines,FathomDB,15,pkg/cloudprovider/providers,218,20.527,0.033
-By changed lines,FathomDB,15,pkg/cloudprovider/providers/aws,176,16.573,0.027
-By changed lines,FathomDB,15,pkg/cloudprovider/providers/aws/aws.go,149,14.03,0.023
-By changed lines,FathomDB,15,test/e2e,148,13.936,0.023
-By changed lines,FathomDB,15,cluster,83,7.815,0.013
-By changed lines,FathomDB,15,pkg/cloudprovider/aws/aws.go,83,7.815,0.013
-By changed lines,FathomDB,15,pkg/controller/service,76,7.156,0.012
-By changed lines,FathomDB,15,pkg/util,69,6.497,0.011
-By changed lines,FathomDB,15,pkg/controller/service/servicecontroller.go,60,5.65,0.009
-By changed lines,FathomDB,15,test/e2e/pd.go,59,5.556,0.009
-By changed lines,FathomDB,15,cluster/aws,57,5.367,0.009
-By changed lines,FathomDB,15,pkg/util/set_test.go,54,5.085,0.008
-By changed lines,FathomDB,15,pkg/cloudprovider/aws/aws_utils.go,52,4.896,0.008
-By changed lines,FathomDB,15,test/e2e/resize_nodes.go,48,4.52,0.007
-By changed lines,FathomDB,15,test/e2e/service.go,41,3.861,0.006
-By changed lines,FathomDB,15,cluster/aws/templates/format-disks.sh,36,3.39,0.006
-By changed lines,FathomDB,15,pkg/cloudprovider/providers/aws/aws_test.go,27,2.542,0.004
-By changed lines,FathomDB,15,cluster/saltbase/salt,23,2.166,0.004
+All By changed lines,Metaswitch,15,"",859,0.131,0.131
+By changed lines,Metaswitch,15,docs/getting-started-guides,840,97.788,0.128
+By changed lines,Metaswitch,15,docs/getting-started-guides/fedora/fedora-calico.md,356,41.444,0.054
+By changed lines,Metaswitch,15,docs/getting-started-guides/ubuntu-calico.md,326,37.951,0.05
+By changed lines,Metaswitch,15,docs/getting-started-guides/coreos/bare_metal_calico.md,154,17.928,0.024
+By changed lines,Metaswitch,15,pkg/kubelet/network/exec,12,1.397,0.002
 All By changed lines,NotFound,16,"",775,0.118,0.118
 By changed lines,NotFound,16,pkg,721,93.032,0.11
 By changed lines,NotFound,16,pkg/util,279,36.0,0.043
@@ -452,32 +435,32 @@ By number of commits to file,Huawei,4,cluster/ubuntu,12,2.353,0.089
 By number of commits to file,Huawei,4,plugin/pkg/scheduler,12,2.353,0.089
 By number of commits to file,Huawei,4,contrib/completions/bash/kubectl,12,2.353,0.089
 By number of commits to file,Huawei,4,pkg/client,10,1.961,0.074
-All By number of commits to file,Self,5,"",180,1.334,1.334
-By number of commits to file,Self,5,pkg,90,50.0,0.667
-By number of commits to file,Self,5,cluster,25,13.889,0.185
-By number of commits to file,Self,5,examples,23,12.778,0.17
-By number of commits to file,Self,5,pkg/api,20,11.111,0.148
-By number of commits to file,Self,5,pkg/kubelet,19,10.556,0.141
-By number of commits to file,Self,5,examples/elasticsearch,19,10.556,0.141
-By number of commits to file,Self,5,docs,18,10.0,0.133
-By number of commits to file,Self,5,pkg/util,13,7.222,0.096
-By number of commits to file,Self,5,pkg/controller,12,6.667,0.089
-By number of commits to file,Self,5,cluster/ubuntu,12,6.667,0.089
-By number of commits to file,Self,5,docs/getting-started-guides,11,6.111,0.082
-By number of commits to file,Self,5,pkg/client,11,6.111,0.082
-By number of commits to file,Self,5,pkg/api/v1,8,4.444,0.059
-By number of commits to file,Self,5,cluster/gce,8,4.444,0.059
-By number of commits to file,Self,5,cmd,8,4.444,0.059
-By number of commits to file,Self,5,cluster/gce/coreos,8,4.444,0.059
-By number of commits to file,Self,5,examples/elasticsearch/production_cluster,7,3.889,0.052
-By number of commits to file,Self,5,pkg/client/unversioned,7,3.889,0.052
-By number of commits to file,Self,5,pkg/util/procfs,6,3.333,0.044
-By number of commits to file,Self,5,pkg/registry,6,3.333,0.044
-By number of commits to file,Self,5,pkg/util/oom,6,3.333,0.044
-By number of commits to file,Self,5,pkg/kubelet/dockertools,6,3.333,0.044
-By number of commits to file,Self,5,test,6,3.333,0.044
-By number of commits to file,Self,5,pkg/controller/replication,5,2.778,0.037
-By number of commits to file,Self,5,pkg/kubectl,5,2.778,0.037
+All By number of commits to file,Self,5,"",227,1.682,1.682
+By number of commits to file,Self,5,pkg,114,50.22,0.845
+By number of commits to file,Self,5,cluster,36,15.859,0.267
+By number of commits to file,Self,5,examples,23,10.132,0.17
+By number of commits to file,Self,5,pkg/api,20,8.811,0.148
+By number of commits to file,Self,5,pkg/kubelet,19,8.37,0.141
+By number of commits to file,Self,5,examples/elasticsearch,19,8.37,0.141
+By number of commits to file,Self,5,docs,19,8.37,0.141
+By number of commits to file,Self,5,pkg/cloudprovider,18,7.93,0.133
+By number of commits to file,Self,5,pkg/controller,16,7.048,0.119
+By number of commits to file,Self,5,test,15,6.608,0.111
+By number of commits to file,Self,5,pkg/util,15,6.608,0.111
+By number of commits to file,Self,5,cluster/ubuntu,12,5.286,0.089
+By number of commits to file,Self,5,docs/getting-started-guides,11,4.846,0.082
+By number of commits to file,Self,5,pkg/client,11,4.846,0.082
+By number of commits to file,Self,5,test/e2e,10,4.405,0.074
+By number of commits to file,Self,5,cluster/gce,9,3.965,0.067
+By number of commits to file,Self,5,pkg/cloudprovider/aws,9,3.965,0.067
+By number of commits to file,Self,5,pkg/api/v1,8,3.524,0.059
+By number of commits to file,Self,5,pkg/cloudprovider/providers,8,3.524,0.059
+By number of commits to file,Self,5,cmd,8,3.524,0.059
+By number of commits to file,Self,5,cluster/gce/coreos,8,3.524,0.059
+By number of commits to file,Self,5,examples/elasticsearch/production_cluster,7,3.084,0.052
+By number of commits to file,Self,5,pkg/client/unversioned,7,3.084,0.052
+By number of commits to file,Self,5,pkg/util/oom,6,2.643,0.044
+By number of commits to file,Self,5,pkg/kubelet/dockertools,6,2.643,0.044
 All By number of commits to file,Mesosphere,6,"",116,0.86,0.86
 By number of commits to file,Mesosphere,6,cluster,55,47.414,0.408
 By number of commits to file,Mesosphere,6,cluster/mesos/docker,45,38.793,0.334
@@ -667,52 +650,52 @@ By number of commits to file,CSE IIT KANPUR,13,docs/user-guide/kubectl/kubectl_r
 By number of commits to file,CSE IIT KANPUR,13,docs/man/man1/kubectl-proxy.1,1,1.587,0.007
 By number of commits to file,CSE IIT KANPUR,13,docs/user-guide/kubectl/kubectl_replace.md,1,1.587,0.007
 By number of commits to file,CSE IIT KANPUR,13,docs/user-guide/kubectl/kubectl_create.md,1,1.587,0.007
-All By number of commits to file,eBay,14,"",59,0.437,0.437
-By number of commits to file,eBay,14,pkg,42,71.186,0.311
-By number of commits to file,eBay,14,pkg/api,14,23.729,0.104
-By number of commits to file,eBay,14,pkg/volume,14,23.729,0.104
-By number of commits to file,eBay,14,pkg/volume/cinder,10,16.949,0.074
-By number of commits to file,eBay,14,examples/mysql-cinder-pd,6,10.169,0.044
-By number of commits to file,eBay,14,pkg/api/v1,6,10.169,0.044
-By number of commits to file,eBay,14,pkg/api/validation,4,6.78,0.03
-By number of commits to file,eBay,14,cmd,4,6.78,0.03
-By number of commits to file,eBay,14,plugin/pkg/auth/authenticator/request/keystone,3,5.085,0.022
-By number of commits to file,eBay,14,pkg/expapi,3,5.085,0.022
-By number of commits to file,eBay,14,pkg/apiserver,3,5.085,0.022
-By number of commits to file,eBay,14,plugin/pkg/auth/authenticator,3,5.085,0.022
-By number of commits to file,eBay,14,pkg/expapi/v1,2,3.39,0.015
-By number of commits to file,eBay,14,pkg/cloudprovider/providers,2,3.39,0.015
-By number of commits to file,eBay,14,pkg/kubelet/volumes.go,2,3.39,0.015
-By number of commits to file,eBay,14,pkg/volume/plugins.go,2,3.39,0.015
-By number of commits to file,eBay,14,examples/mysql-cinder-pd/mysql-service.yaml,2,3.39,0.015
-By number of commits to file,eBay,14,pkg/auth/authorizer,2,3.39,0.015
-By number of commits to file,eBay,14,cmd/kube-apiserver/app,2,3.39,0.015
-By number of commits to file,eBay,14,pkg/api/v1/conversion_generated.go,2,3.39,0.015
-All By number of commits to file,CoreOS,15,"",59,0.437,0.437
-By number of commits to file,CoreOS,15,pkg,41,69.492,0.304
-By number of commits to file,CoreOS,15,pkg/kubelet,37,62.712,0.274
-By number of commits to file,CoreOS,15,pkg/kubelet/rkt,17,28.814,0.126
-By number of commits to file,CoreOS,15,pkg/kubelet/rkt/rkt.go,11,18.644,0.082
-By number of commits to file,CoreOS,15,pkg/kubelet/dockertools,8,13.559,0.059
-By number of commits to file,CoreOS,15,docs,6,10.169,0.044
-By number of commits to file,CoreOS,15,pkg/kubelet/container,5,8.475,0.037
-By number of commits to file,CoreOS,15,docs/getting-started-guides,4,6.78,0.03
-By number of commits to file,CoreOS,15,pkg/kubelet/dockertools/manager.go,4,6.78,0.03
-By number of commits to file,CoreOS,15,hack,4,6.78,0.03
-By number of commits to file,CoreOS,15,pkg/kubelet/runtime_hooks.go,3,5.085,0.022
-By number of commits to file,CoreOS,15,cmd,3,5.085,0.022
-By number of commits to file,CoreOS,15,docs/getting-started-guides/coreos.md,3,5.085,0.022
-By number of commits to file,CoreOS,15,pkg/kubelet/container/runtime.go,3,5.085,0.022
-By number of commits to file,CoreOS,15,cmd/kube-apiserver/app/server.go,2,3.39,0.015
-By number of commits to file,CoreOS,15,pkg/kubelet/rkt/pod_info.go,2,3.39,0.015
-By number of commits to file,CoreOS,15,hack/verify-flags/known-flags.txt,2,3.39,0.015
-By number of commits to file,CoreOS,15,cmd/kube-apiserver,2,3.39,0.015
-By number of commits to file,CoreOS,15,hack/verify-flags,2,3.39,0.015
-By number of commits to file,CoreOS,15,plugin,2,3.39,0.015
-By number of commits to file,CoreOS,15,pkg/kubelet/kubelet.go,2,3.39,0.015
-By number of commits to file,CoreOS,15,pkg/kubelet/dockertools/manager_test.go,2,3.39,0.015
-By number of commits to file,CoreOS,15,pkg/cloudprovider/gce,2,3.39,0.015
-By number of commits to file,CoreOS,15,docs/admin/authentication.md,2,3.39,0.015
+All By number of commits to file,CoreOS,14,"",59,0.437,0.437
+By number of commits to file,CoreOS,14,pkg,41,69.492,0.304
+By number of commits to file,CoreOS,14,pkg/kubelet,37,62.712,0.274
+By number of commits to file,CoreOS,14,pkg/kubelet/rkt,17,28.814,0.126
+By number of commits to file,CoreOS,14,pkg/kubelet/rkt/rkt.go,11,18.644,0.082
+By number of commits to file,CoreOS,14,pkg/kubelet/dockertools,8,13.559,0.059
+By number of commits to file,CoreOS,14,docs,6,10.169,0.044
+By number of commits to file,CoreOS,14,pkg/kubelet/container,5,8.475,0.037
+By number of commits to file,CoreOS,14,docs/getting-started-guides,4,6.78,0.03
+By number of commits to file,CoreOS,14,pkg/kubelet/dockertools/manager.go,4,6.78,0.03
+By number of commits to file,CoreOS,14,hack,4,6.78,0.03
+By number of commits to file,CoreOS,14,pkg/kubelet/runtime_hooks.go,3,5.085,0.022
+By number of commits to file,CoreOS,14,cmd,3,5.085,0.022
+By number of commits to file,CoreOS,14,docs/getting-started-guides/coreos.md,3,5.085,0.022
+By number of commits to file,CoreOS,14,pkg/kubelet/container/runtime.go,3,5.085,0.022
+By number of commits to file,CoreOS,14,cmd/kube-apiserver/app/server.go,2,3.39,0.015
+By number of commits to file,CoreOS,14,pkg/kubelet/rkt/pod_info.go,2,3.39,0.015
+By number of commits to file,CoreOS,14,hack/verify-flags/known-flags.txt,2,3.39,0.015
+By number of commits to file,CoreOS,14,cmd/kube-apiserver,2,3.39,0.015
+By number of commits to file,CoreOS,14,hack/verify-flags,2,3.39,0.015
+By number of commits to file,CoreOS,14,plugin,2,3.39,0.015
+By number of commits to file,CoreOS,14,pkg/kubelet/kubelet.go,2,3.39,0.015
+By number of commits to file,CoreOS,14,pkg/kubelet/dockertools/manager_test.go,2,3.39,0.015
+By number of commits to file,CoreOS,14,pkg/cloudprovider/gce,2,3.39,0.015
+By number of commits to file,CoreOS,14,docs/admin/authentication.md,2,3.39,0.015
+All By number of commits to file,eBay,15,"",59,0.437,0.437
+By number of commits to file,eBay,15,pkg,42,71.186,0.311
+By number of commits to file,eBay,15,pkg/api,14,23.729,0.104
+By number of commits to file,eBay,15,pkg/volume,14,23.729,0.104
+By number of commits to file,eBay,15,pkg/volume/cinder,10,16.949,0.074
+By number of commits to file,eBay,15,examples/mysql-cinder-pd,6,10.169,0.044
+By number of commits to file,eBay,15,pkg/api/v1,6,10.169,0.044
+By number of commits to file,eBay,15,pkg/api/validation,4,6.78,0.03
+By number of commits to file,eBay,15,cmd,4,6.78,0.03
+By number of commits to file,eBay,15,plugin/pkg/auth/authenticator/request/keystone,3,5.085,0.022
+By number of commits to file,eBay,15,pkg/expapi,3,5.085,0.022
+By number of commits to file,eBay,15,pkg/apiserver,3,5.085,0.022
+By number of commits to file,eBay,15,plugin/pkg/auth/authenticator,3,5.085,0.022
+By number of commits to file,eBay,15,pkg/expapi/v1,2,3.39,0.015
+By number of commits to file,eBay,15,pkg/cloudprovider/providers,2,3.39,0.015
+By number of commits to file,eBay,15,pkg/kubelet/volumes.go,2,3.39,0.015
+By number of commits to file,eBay,15,pkg/volume/plugins.go,2,3.39,0.015
+By number of commits to file,eBay,15,examples/mysql-cinder-pd/mysql-service.yaml,2,3.39,0.015
+By number of commits to file,eBay,15,pkg/auth/authorizer,2,3.39,0.015
+By number of commits to file,eBay,15,cmd/kube-apiserver/app,2,3.39,0.015
+By number of commits to file,eBay,15,pkg/api/v1/conversion_generated.go,2,3.39,0.015
 All By number of commits to file,NotFound,16,"",32,0.237,0.237
 By number of commits to file,NotFound,16,pkg,24,75.0,0.178
 By number of commits to file,NotFound,16,pkg/kubelet,10,31.25,0.074
