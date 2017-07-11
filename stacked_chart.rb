@@ -46,12 +46,8 @@ def stacked_chart(files)
         next if n.to_s != data[-2]
         name = data[0..-3].join(' ')
         out[month] = {} unless out.key? month
-        if out[month].key? name
-          puts "WARNING: already have [#{month}][#{name}] = #{out[month][name]}, new value: #{[n, perc]} in file: #{file}" if out[month][name] != [n, perc]
-        else
-          name = map_name(name)
-          out[month][name] = [n, perc]
-        end
+        name = map_name(name)
+        out[month][name] = [n, perc]
       end
     end
   end
@@ -90,7 +86,7 @@ def stacked_chart(files)
       end
       row << (100.0 - sum_perc).round(1)
       csv << row
-      p row
+      # p row
     end
   end
 end
