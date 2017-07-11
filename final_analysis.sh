@@ -26,6 +26,9 @@ echo 'Progress Report'
 echo 'Per files analysis'
 ./per_dirs.sh
 
+echo 'Stacked chart'
+./stacked_chart.sh
+
 echo 'Done'
 
 echo "vim all.txt all_affs.csv correlations.txt github_users.json aliaser.txt progress_report.txt developers_affiliations.txt company_developers.txt per_dirs/all_stats.csv"
