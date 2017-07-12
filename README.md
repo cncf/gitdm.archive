@@ -246,7 +246,7 @@ To generate correlations map for company name (to avoid mapping typos etc) run `
 To generate per files/directories statistics use: `./per_dirs.sh`, this is a part of standard workflow, results are in CSV files in `per_dirs` directory
 To generate affiliation files (`developers_affiliations.txt`, `company_developers.txt`), use `./gen_aff_files.sh`
 To generate data for stacked chart, user `./stacked_chart_<months|rels>_<csets|perc>.sh`, it generates CSV file: `stacked_chart_<months|rels>_<csets|perc>.csv`, to generate all stacked charts: `./stacked_charts.sh`
-To import data from pretty formatted files use `import_affs.sh`, this is not a ppart of standard workflow
+To import data from pretty formatted files use `import_affs.sh`, this is not a part of standard workflow
 
 All those tools are automatically called when running full data regenerating script: `./rerun_data.sh`
 
