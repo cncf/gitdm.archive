@@ -26,8 +26,8 @@ echo 'Progress Report'
 echo 'Per files analysis'
 ./per_dirs.sh
 
-echo 'Stacked chart'
-./stacked_chart.sh
+echo 'Stacked charts'
+./stacked_charts.sh
 
 echo 'Done'
 

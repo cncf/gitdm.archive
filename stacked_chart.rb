@@ -8,15 +8,23 @@ def map_name(name)
   return name
 end
 
-def stacked_chart(files)
-  percent_mode = false
+def stacked_chart(args)
+  files = args[2..-1]
+  smode = args[0]
+  pmode = args[1]
+  percent_mode = pmode == 'p'
   out = {}
   files.each do |file|
-    d1 = Date.parse(file[-25..-16])
-    d2 = Date.parse(file[-14..-5])
-    days =  (d2 - d1).to_i
-    next unless days >= 28 && days <= 31
-    month = d1.to_s[0..-4]
+    key = file
+    if smode == 'm'
+      d1 = Date.parse(file[-25..-16])
+      d2 = Date.parse(file[-14..-5])
+      days =  (d2 - d1).to_i
+      next unless days >= 28 && days <= 31
+      key = d1.to_s[0..-4]
+    else
+      key = file[18..23]
+    end
     mode = ''
     File.readlines(file).each do |line|
       line = line.strip
@@ -46,20 +54,20 @@ def stacked_chart(files)
         n = data[-2].scanf("%d")[0]
         next if n.to_s != data[-2]
         name = data[0..-3].join(' ')
-        out[month] = {} unless out.key? month
+        out[key] = {} unless out.key?(key)
         name = map_name(name)
-        out[month][name] = [n, perc]
+        out[key][name] = [n, perc]
       end
     end
   end
   
   companies = {}
-  n_months = out.keys.length.to_f
-  out.each do |month, data|
+  n_keys = out.keys.length.to_f
+  out.each do |key, data|
     data.each do |company, values|
       companies[company] = 0.0 unless companies.key?(company)
       if percent_mode
-        companies[company] += values[1] / n_months
+        companies[company] += values[1] / n_keys
       else
         companies[company] += values[0]
       end
@@ -76,14 +84,15 @@ def stacked_chart(files)
   end
   ary = ary.sort_by { |row| -row[1] }[0...10].map { |row| row[0] }
 
-  hdr = ['Date'] + ary + ['Others']
-  CSV.open('stacked_chart.csv', "w", headers: hdr) do |csv|
+  hdr = [smode == 'm' ? 'Date' : 'Version'] + ary + ['Others']
+  ofname = "stacked_chart_#{smode == 'm' ? 'months' : 'rels'}_#{percent_mode ? 'perc' : 'csets'}.csv"
+  CSV.open(ofname, "w", headers: hdr) do |csv|
     csv << hdr
-    out.keys.sort.each do |month|
-      data = out[month]
+    out.keys.sort.each do |key|
+      data = out[key]
       sum = 0.0
       others = 0
-      row = [month]
+      row = [key]
       unless percent_mode
         (data.keys - ary).each do |other|
           others += data[other][0]
