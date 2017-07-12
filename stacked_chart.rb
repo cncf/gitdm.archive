@@ -9,6 +9,7 @@ def map_name(name)
 end
 
 def stacked_chart(files)
+  percent_mode = false
   out = {}
   files.each do |file|
     d1 = Date.parse(file[-25..-16])
@@ -57,17 +58,21 @@ def stacked_chart(files)
   out.each do |month, data|
     data.each do |company, values|
       companies[company] = 0.0 unless companies.key?(company)
-      companies[company] += values[1] / n_months
+      if percent_mode
+        companies[company] += values[1] / n_months
+      else
+        companies[company] += values[0]
+      end
     end
   end
 
-  companies.each do |company, csets|
-    companies[company] = csets.round(1)
+  companies.each do |company, value|
+    companies[company] = value.round(1)
   end
 
   ary = []
-  companies.each do |company, csets|
-    ary << [company, csets.round(1)]
+  companies.each do |company, value|
+    ary << [company, value.round(1)]
   end
   ary = ary.sort_by { |row| -row[1] }[0...10].map { |row| row[0] }
 
@@ -76,15 +81,26 @@ def stacked_chart(files)
     csv << hdr
     out.keys.sort.each do |month|
       data = out[month]
-      sum_perc = 0.0
+      sum = 0.0
+      others = 0
       row = [month]
+      unless percent_mode
+        (data.keys - ary).each do |other|
+          others += data[other][0]
+        end
+      end
       ary.each do |company|
         values = data[company] || [0, 0]
-        perc = values[1]
-        sum_perc += perc
-        row << perc
+        if percent_mode
+          val = values[1]
+        else
+          val = values[0]
+        end
+          sum += val
+        row << val
       end
-      row << (100.0 - sum_perc).round(1)
+      others = (100.0 - sum).round(1) if percent_mode
+      row << others
       csv << row
       # p row
     end
