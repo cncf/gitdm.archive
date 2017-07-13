@@ -7,6 +7,7 @@ def import_affs(dev_affs, comp_devs)
   emails = []
   d_dict = {}
   File.readlines(dev_affs).each do |line|
+    next if line.strip[0..1] == '# '
     data = line.split(': ').map(&:strip)
     data = [data.join(': ')] if data[0] == 'Was'
     if data.length == 2
@@ -41,6 +42,7 @@ def import_affs(dev_affs, comp_devs)
   c_affs = []
   c_dict = {}
   File.readlines(comp_devs).each do |line|
+    next if line.strip[0..1] == '# '
     data = line.split(':')
     data = [data[0..-2].join(':'), data[-1]] if data.length > 2
     data = data.map(&:strip)
