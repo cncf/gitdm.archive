@@ -120,9 +120,9 @@ See details in `./kubernetes_repos.sh`.
 
 To clone repository do:
 `cd ~/dev/go/src/k8s/`
-`git clone https://github.com/<one-of-3-kubernetes-orgs>/<kubernetes-repo-name>.git`
+`git clone https://github.com/<one-of-3-kubernetes-orgs>/<kubernetes-repo-name>.git`.
 
-<one-of-3-kubernetes-orgs>: kubernetes, kubernetes-incubator and kubernetes-client
+one-of-3-kubernetes-orgs: kubernetes, kubernetes-incubator and kubernetes-client
 
 <kubernetes-repo-name: please look up all repo names in all kubernetes orgs at GitHub.
 
