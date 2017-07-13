@@ -2,16 +2,7 @@ require 'csv'
 require 'pry'
 require 'json'
 require 'date'
-
-def mgetc()
-  begin
-    system("stty raw -echo")
-    str = STDIN.getc
-  ensure
-    system("stty -raw echo")
-  end
-  str.chr
-end
+require './mgetc'
 
 def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_map)
   # domain-map [domain name [< YYYY-MM-DD]

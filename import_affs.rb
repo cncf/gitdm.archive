@@ -1,5 +1,6 @@
 require 'pry'
 require 'scanf'
+require './mgetc'
 
 def import_affs(dev_affs, comp_devs)
   # Developers affiliations
@@ -110,27 +111,54 @@ def import_affs(dev_affs, comp_devs)
   end
 
   diffs = []
+  skip = false
   d_dict.keys.each do |key|
     unless c_dict[key].sort == d_dict[key].sort
       puts "Oops: #{key}"
       p c_dict[key].sort
       p d_dict[key].sort
       diffs << [key, c_dict[key], d_dict[key]]
+      unless skip
+        puts "Want to stop in debugger? (y/n/q)"
+        c = mgetc
+        skip = true if c == 'q'
+        binding.pry if c == 'y'
+      end
+    end
+  end
+
+  dfs = d_affs
+  unless diffs.length == 0
+    puts 'We are out of sync, check `diffs`, `c_dict`, `d_dict`'
+    puts "You can save new config file giving priority to:"
+    puts "d: developer_affiliations.txt (current)"
+    puts "c: company_developers.txt"
+    puts "q: do not save output"
+    puts "b: stop in the debuger"
+    puts "Your choice? (d/c/q/b)"
+    c = mgetc
+    dfs = c_affs if c == 'c'
+    dfs = nil if c == 'q'
+    if c == 'b'
+      puts "Set `dfs` variable to d_affs or c_affs or nil"
       binding.pry
     end
   end
 
-  unless diffs.length == 0
-    puts 'We are out of sync, check `diffs`, `c_dict`, `d_dict`'
-    binding.pry
-  end
-
+  return unless dfs
   hdr = [
     '# Here is a set of mappings of domain names onto employer names.',
     '# [user@]domain  employer  [< yyyy-mm-dd]'
   ]
-  File.write 'email-map', (hdr + c_affs).join("\n")
+  File.write 'email-map', (hdr + dfs).join("\n")
   puts 'Generated email-map file, consider using it as a cncfdm.py config file `cncf-config/email-map`'
+  if diffs.length > 0
+    puts 'Config files were out of sync, to sync them again:'
+    puts 'mv email-map cncf-config/email-map'
+    puts './manual_all.sh'
+    puts './gen_aff_files.sh'
+    puts 'Or alternatively regenerate ALL data ./rerun_all.sh'
+  end
 end
 
 if ARGV.size < 2
