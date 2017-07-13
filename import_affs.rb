@@ -115,7 +115,9 @@ def import_affs(dev_affs, comp_devs)
   d_dict.keys.each do |key|
     unless c_dict[key].sort == d_dict[key].sort
       puts "Oops: #{key}"
+      puts "company_developers.txt:"
       p c_dict[key].sort
+      puts "developers_affiliations.txt:"
       p d_dict[key].sort
       diffs << [key, c_dict[key], d_dict[key]]
       unless skip
