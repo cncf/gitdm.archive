@@ -124,7 +124,7 @@ To clone repository do:
 
 one-of-3-kubernetes-orgs: kubernetes, kubernetes-incubator and kubernetes-client
 
-<kubernetes-repo-name: please look up all repo names in all kubernetes orgs at GitHub.
+kubernetes-repo-name: please look up all repo names in all kubernetes orgs at GitHub.
 
 `./anyrepo.sh` just calls `cncfdm.py` with appropriate args (like exclude vendor dir numstat etc).
 
