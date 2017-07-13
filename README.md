@@ -230,7 +230,7 @@ Processed 28225 csets from 1338 developers
 A total of 6667288 lines added, 4132224 removed (delta 2535064)
 ```
 - Now how to fill data sheet/chart:
-1. Sheet "all time data":
+- Sheet "all time data":
 - `analysis_all_repos.sh`, generates files starting with: `report/all_repos_rest`
 - `report/prefix_key_type` (prefix: all - for kubernetes/kubernetes, all_repos - for all repos, v1.x for releases), project/<prefix>_<key>_<type>
 - Commits info is in `other_repos/all_kubernetes_dtfrom_dtto` and `other_repos/kubernetes_dtfrom_dtto` (for all k8s repos and kubernetes/kubernetes alone)
@@ -265,15 +265,24 @@ You need to have:
 - To actually generate new mapping You should manually process this JSON (and do some mapping of company names - GitHub users are putting strange stuff here)
 - I've done that by iteratively using new tool: `import_from_github_users.sh`, `import_from_github_users.rb` with mapping file (that tries to map GiHub user company names into something more accurate): `company-names-mapping`
 
+## Tools to help find unknown affiliations
 To enhance this json with already existing affiliations call: `./enchance_json.sh`
-To generate JSON with some filtered data (like all unknown devs with location or LinkedIn profile link or just blog entry) call: `./lookup_json.sh` (see script for details, also lookup_json.rb have a lot of comments how to use it).
-To generate progress report (report about how many Not Found, Unknowns and Self-employment devs are defined in our affiliation, call: `./progress_report.sh`).
-To generate aliases for emails that are already known (are using the same GitHub user name) try `./aliaser.sh`, the output is `aliaser.txt` that can be analyzed and manually added to `cncf-config/aliases` if needed.
-To generate correlations map for company name (to avoid mapping typos etc) run `./correlations.sh` script, result is `correlations.txt` file that can be used to update `cncf-config/email-map` with corrected employer names.
-To generate per files/directories statistics use: `./per_dirs.sh`, this is a part of standard workflow, results are in CSV files in `per_dirs` directory
-To generate affiliation files (`developers_affiliations.txt`, `company_developers.txt`), use `./gen_aff_files.sh`
-To generate data for stacked chart, user `./stacked_chart_<months|rels>_<csets|perc>.sh`, it generates CSV file: `stacked_chart_<months|rels>_<csets|perc>.csv`, to generate all stacked charts: `./stacked_charts.sh`
-To import data from pretty formatted files use `import_affs.sh`, this is not a part of standard workflow
+
+- To generate JSON with some filtered data (like all unknown devs with location or LinkedIn profile link or just blog entry) call: `./lookup_json.sh` (see script for details, also lookup_json.rb have a lot of comments how to use it).
+
+- To generate progress report (report about how many Not Found, Unknowns and Self-employment devs are defined in our affiliation, call: `./progress_report.sh`).
+
+- To generate aliases for emails that are already known (are using the same GitHub user name) try `./aliaser.sh`, the output is `aliaser.txt` that can be analyzed and manually added to `cncf-config/aliases` if needed.
+
+- To generate correlations map for company name (to avoid mapping typos etc) run `./correlations.sh` script, result is `correlations.txt` file that can be used to update `cncf-config/email-map` with corrected employer names.
+
+- To generate per files/directories statistics use: `./per_dirs.sh`, this is a part of standard workflow, results are in CSV files in `per_dirs` directory
+
+- To generate affiliation files (`developers_affiliations.txt`, `company_developers.txt`), use `./gen_aff_files.sh`
+
+- To generate data for stacked chart, user `./stacked_chart_<months|rels>_<csets|perc>.sh`, it generates CSV file: `stacked_chart_<months|rels>_<csets|perc>.csv`, to generate all stacked charts: `./stacked_charts.sh`
+
+- To import data from pretty formatted files use `import_affs.sh`, this is not a part of standard workflow
 
 All those tools are automatically called when running full data regenerating script: `./rerun_data.sh`
 
