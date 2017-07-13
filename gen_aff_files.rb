@@ -106,10 +106,9 @@ def gen_aff_files(csv_file)
       end
     end
   end
-  hdr = "# If You update this file, please also update `developers_affiliations.txt` file.\n"
-  hdr += "# To generate config files from those two files, please use `import_affs.sh` script.\n"
-  hdr += "# Script will check if files are correctly synchronized.\n"
-  hdr += "# When import succeeds regenerate report data by running `rerun_data.sh` script.\n"
+  hdr =  "# This file is derived from developers_affiliations.txt and so should not be edited directly.\n"
+  hdr += "# If you see an error, please update developers_affiliations.txt and this file will be fixed\n"
+  hdr += "# when regenerated.\n"
   File.write 'company_developers.txt', hdr + t
 
   t = ''
@@ -137,10 +136,7 @@ def gen_aff_files(csv_file)
       end
     end
   end
-  hdr = "# If You update this file, please also update `company_developers.txt` file.\n"
-  hdr += "# To generate config files from those two files, please use `import_affs.sh` script.\n"
-  hdr += "# Script will check if files are correctly synchronized.\n"
-  hdr += "# When import succeeds regenerate report data by running `rerun_data.sh` script.\n"
+  hdr = "# This is the main developers affiliations file\n"
   File.write 'developers_affiliations.txt', hdr + t
 
   if wrongs.count > 0
