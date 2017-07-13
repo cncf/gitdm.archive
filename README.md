@@ -1,6 +1,6 @@
 # Who writes Kubernetes report
 
-This is a Clound Native Computing Foundation's "Who writes Kubernetes" report.
+This is a Cloud Native Computing Foundation's "Who writes Kubernetes" report.
 CNCF will publish this report for every major release of Kubernetes.
 
 Companies and developers can check if they are correctly attributed at the following links:
@@ -9,11 +9,13 @@ Companies and developers can check if they are correctly attributed at the follo
 
 [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt)
 
-If You see any error(s) in those list please create Pull Request with fixes.
+If You see any error(s) in that list please create Pull Request with fixes.
+[Open pull request](https://github.com/cncf/gitdm/pulls)
 
 
 To test those changes locally please fork repository, update those two files (they must be in sync).
-Then generate config files by running: `./import_affs.sh`. If those two files are out of sync tool will notify You about this.
+Then generate config files by running: `./import_affs.sh`. 
+If those two files are out of sync tool will notify You about this.
 This tool will generate new `email-map` file. Check if Your changes are OK and move it to `cncf-config/email-map` (replace)
 Then regenerate all data by running `./rerun_data.sh`.
 
@@ -25,25 +27,24 @@ Output files are placed in `kubernetes/` directory.
 
 To run all statistics just jun: `./rerun_data.sh`
 
-This is an iterational process:
-Run any of scripts. Review its output in kubernetes directory. Iteratively adjust mappings to handle more authors (config/mappings is in
-`cncf-config/`)
+This is an iterative process:
+Run any of scripts. Review its output in `kubernetes` directory. Iteratively adjust mappings to handle more authors.
 
 You can also run via `./debug.sh` to halt in debugger and review hackers structure and those who were not found. See `cncfdm.py`:`DebugUnknowns`
 
 Final report:
-Data: https://docs.google.com/spreadsheets/d/15otmXVx8Gd6JzfiGP_OSjP8M9zyLeLof5-IGQKEb0UQ/edit?usp=sharing
-Report: https://docs.google.com/document/d/1RKtRamlu4D_OpTDFTKNpMsmV51obdZlPWbXVj-LrDuw/edit?usp=sharing
+[Data](https://docs.google.com/spreadsheets/d/15otmXVx8Gd6JzfiGP_OSjP8M9zyLeLof5-IGQKEb0UQ/edit?usp=sharing)
+[Report] (https://docs.google.com/document/d/1RKtRamlu4D_OpTDFTKNpMsmV51obdZlPWbXVj-LrDuw/edit?usp=sharing)
 
 # Contributing
 
-Pull Request are welcome.
-Our mapping is not complete, please see config files in: https://github.com/cncf/gitdm/blob/master/cncf-config/.
+Pull requests are welcome.
+Our mapping is not complete, please see config files in [Config files](https://github.com/cncf/gitdm/blob/master/cncf-config/).
 
-File https://github.com/cncf/gitdm/blob/master/cncf-config/email-map is a direct mapping email to employer.
+[File](https://github.com/cncf/gitdm/blob/master/cncf-config/email-map) is a direct mapping email to the employer.
 
 There is also a long list of unknown emails, please see section `Developers with unknown affiliation`:
-https://github.com/cncf/gitdm/blob/master/results.txt
+[all.txt](https://github.com/cncf/gitdm/blob/master/all.txt)
 
 All unknown developers have 4 or less contribution.
 Current list of unknown developers (names & emails): https://github.com/cncf/gitdm/blob/master/unknown_devs.txt
