@@ -106,7 +106,11 @@ def gen_aff_files(csv_file)
       end
     end
   end
-  File.write 'company_developers.txt', t
+  hdr = "# If You update this file, please also update `developers_affiliations.txt` file.\n"
+  hdr += "# To generate config files from those two files, please use `import_affs.sh` script.\n"
+  hdr += "# Script will check if files are correctly synchronized.\n"
+  hdr += "# When import succeeds regenerate report data by running `rerun_data.sh` script.\n"
+  File.write 'company_developers.txt', hdr + t
 
   t = ''
   names.keys.sort.each do |dev_name|
@@ -133,7 +137,11 @@ def gen_aff_files(csv_file)
       end
     end
   end
-  File.write 'developers_affiliations.txt', t
+  hdr = "# If You update this file, please also update `company_developers.txt` file.\n"
+  hdr += "# To generate config files from those two files, please use `import_affs.sh` script.\n"
+  hdr += "# Script will check if files are correctly synchronized.\n"
+  hdr += "# When import succeeds regenerate report data by running `rerun_data.sh` script.\n"
+  File.write 'developers_affiliations.txt', hdr + t
 
   if wrongs.count > 0
     wrongs = wrongs.uniq
