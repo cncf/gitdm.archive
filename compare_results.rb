@@ -1,5 +1,6 @@
 require 'csv'
 require 'pry'
+require './email_code'
 
 def compare_results(f1, f2)
   # email,company,final_company,date_from,date_to
@@ -8,7 +9,7 @@ def compare_results(f1, f2)
   com1 = {}
   CSV.foreach(f1, headers: true) do |row|
     h = row.to_h
-    e = h['email']
+    e = email_encode(h['email'])
     fc = h['final_company']
     map1[e] = fc
     com1[fc] = [] unless com1.key?(fc)
@@ -19,7 +20,7 @@ def compare_results(f1, f2)
   com2 = {}
   CSV.foreach(f2, headers: true) do |row|
     h = row.to_h
-    e = h['email']
+    e = email_encode(h['email'])
     fc = h['final_company']
     map2[e] = fc
     com2[fc] = [] unless com2.key?(fc)

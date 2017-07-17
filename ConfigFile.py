@@ -13,6 +13,7 @@
 import sys, re, datetime, os.path
 import database
 import pdb
+from patterns import patterns, email_decode
 
 #
 # Read a line and strip out junk.
@@ -23,6 +24,7 @@ def ReadConfigLine (file):
         return None
     line = line.split('#')[0] # Get rid of any comments
     line = line.strip () # and extra white space
+    line = email_decode(line)
     if len (line) == 0: # we got rid of everything
         return ReadConfigLine (file)
     return line

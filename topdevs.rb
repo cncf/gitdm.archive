@@ -1,5 +1,6 @@
 require 'csv'
 require 'pry'
+require './email_code'
 
 def analysis(fn)
   # "Name","Email","Affliation","Date","Added","Removed","Changesets"
@@ -18,7 +19,7 @@ def analysis(fn)
     a = h['Added']
     r = h['Removed']
     c = h['Changesets']
-    e = h['Email']
+    e = email_encode(h['Email'])
     d = h['Date']
     co = h['Affliation'].to_s
     sa += a
@@ -69,26 +70,26 @@ def analysis(fn)
 
   File.open('unknown_devs.txt', 'w') do |file|
     unknowns.each do |dev|
-      file.write("#{dev['Name']} <#{dev['Email']}>\n")
+      file.write("#{dev['Name']} <#{email_encode(dev['Email'])}>\n")
     end
   end
 
   File.open('google_other.txt', 'w') do |file|
     goo.each do |dev|
-      file.write("#{dev['Name']} <#{dev['Email']}>\n")
+      file.write("#{dev['Name']} <#{email_encode(dev['Email'])}>\n")
     end
   end
 
   hdr = %w(email name)
   CSV.open('unknown_devs.csv', 'w', headers: hdr) do |csv|
     csv << hdr
-    unknowns.each { |dev| csv << [dev['Email'], dev['Name']] }
+    unknowns.each { |dev| csv << [email_encode(dev['Email']), email_encode(dev['Name'])] }
   end
 
   hdr = %w(email)
   CSV.open('unknown_emails.csv', 'w', headers: hdr) do |csv|
     csv << hdr
-    unknowns.each { |dev| csv << [dev['Email']] }
+    unknowns.each { |dev| csv << [email_encode(dev['Email'])] }
   end
 
   added = []
@@ -98,7 +99,7 @@ def analysis(fn)
     a = v['Added']
     r = v['Removed']
     c = v['Changesets']
-    e = v['Email']
+    e = email_encode(v['Email'])
     added << [a, v]
     removed << [r, v]
     changesets << [c, v]
