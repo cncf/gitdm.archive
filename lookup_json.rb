@@ -1,6 +1,7 @@
 require 'pry'
 require 'to_regexp'
 require 'json'
+require './email_code'
 
 def lookup_json(json_file, args, output_json)
   # Parse RegExp filter(s)
@@ -75,14 +76,14 @@ def lookup_json(json_file, args, output_json)
   end
 
   # Write matched JSON back
-  json = JSON.pretty_generate users
+  json = email_encode(JSON.pretty_generate(users))
   File.write output_json, json
   puts "Matched #{m}/#{n} users, saved to #{output_json}"
   output_dat = output_json.split('.')[0] + '.dat'
   File.open(output_dat, 'w') do |file|
     users.each do |user|
       out = [user['html_url'], user['login'], user['name'], user['location'], user['email']].reject { |u| !u || u.strip == '' }.join(' ')
-      file.write("#{out}\n")
+      file.write("#{email_encode(out)}\n")
     end
   end
 end

@@ -3,6 +3,7 @@ require 'pry'
 require 'json'
 require 'date'
 require './mgetc'
+require './email_code'
 
 def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_map)
   # domain-map [domain name [< YYYY-MM-DD]
@@ -31,7 +32,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
   spec_affs = {}
   CSV.foreach(csv_file, headers: true) do |row|
     h = row.to_h
-    e = h['email']
+    e = email_encode(h['email'])
     d = h['date_to']
     c = h['company']
     if ['(Unknown)', 'NotFound', 'Self'].include?(c)
@@ -185,7 +186,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
   if c == 'y'
     CSV.foreach('remap_emails.csv', headers: true) do |row|
       h = row.to_h
-      email = h['email'].strip
+      email = email_encode(h['email'].strip)
       date = h['date'].strip
       company = h['company'].strip
       remape[[email, date]] = company
@@ -201,6 +202,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
     emails = u['emails']
     cs = u['companies']
     emails.each do |e|
+      e = email_encode(e)
       next if cs.length < 1 || cs.first == '' || e == ''
       cs.each do |c|
         next if skip
@@ -283,6 +285,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
   end
 
   spec_affs.each do |email, data|
+    email = email_encode(email)
     data.each do |date, company|
       if affs.key?(email)
         if affs[email].key?(date)
@@ -316,6 +319,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
     file.write("# Here is a set of mappings of domain names\n")
     file.write("# [user@]domain  employer  [< yyyy-mm-dd]\n")
     affs.keys.sort.each do |email|
+      email = email_encode(email)
       dct = affs[email]
       uvals = {}
       ks = dct.keys.sort.reverse
@@ -337,6 +341,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
 
     # emails with no final employer
     affs.keys.sort.each do |email|
+      email = email_encode(email)
       dct = affs[email]
       unless dct.keys.include?('')
         last_date = dct.keys.sort.reverse.first

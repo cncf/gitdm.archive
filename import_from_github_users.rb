@@ -1,5 +1,6 @@
 require 'pry'
 require 'json'
+require './email_code'
 
 def import_from_github_json(json_file)
   # Read company mapping file `company-names-mapping`
@@ -27,7 +28,7 @@ def import_from_github_json(json_file)
     line = line.strip
     next if line[0] == '#'
     arr = line.split ' '
-    email = arr[0]
+    email = email_encode(arr[0])
     company = arr[1..-1].join ' '
     didx = company.index(' < ')
     company = company[0..didx - 1] if didx
@@ -50,7 +51,7 @@ def import_from_github_json(json_file)
     c = cmap[c]
     n_c += 1
     comps[c] = [] unless comps.key?(c)
-    comps[c] << user['email'].strip
+    comps[c] << email_encode(user['email'].strip)
   end
   n_unique = comps.keys.count
   puts "Found #{n_c}/#{n} affiliations, #{n_unique} unique"
@@ -60,6 +61,7 @@ def import_from_github_json(json_file)
   File.open('new-email-map', 'w') do |file|
     comps.keys.sort.each do |company_name|
       comps[company_name].sort.each do |email|
+        email = email_encode(email)
         if existing.key?(email)
           if existing[email] == company_name
             the_same += 1

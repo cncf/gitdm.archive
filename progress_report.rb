@@ -2,6 +2,7 @@ require 'pry'
 require 'json'
 require 'csv'
 require './comment'
+require './email_code'
 
 def progress_report(json_file, csv_file)
   # Config report
@@ -16,7 +17,7 @@ def progress_report(json_file, csv_file)
   CSV.foreach(csv_file, headers: true) do |row|
     next if is_comment row
     h = row.to_h
-    e = h['email'].strip
+    e = email_encode(h['email'].strip)
     all_emails[e] = true
   end
 
@@ -27,7 +28,7 @@ def progress_report(json_file, csv_file)
   data.each do |user|
     c = user['affiliation'].strip
     next if ['?'].include?(c)
-    e = user['email'].strip
+    e = email_encode(user['email'].strip)
     next if check_all && !all_emails.key?(e)
     n = user['commits'].to_i
     vals[n] = { n: 0.0 } unless vals.key?(n)

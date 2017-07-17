@@ -12,6 +12,7 @@
 
 import sys
 import pdb
+from patterns import email_encode
 
 Outfile = sys.stdout
 HTMLfile = None
@@ -32,7 +33,7 @@ def SetMaxList (max):
 
 
 def Write (stuff):
-    Outfile.write (stuff)
+    Outfile.write (email_encode(stuff))
 
 
 def Pct(a, b):
@@ -72,25 +73,25 @@ def ReportLine (text, count, pct):
     global HTMLclass
     if count == 0:
         return
-    Outfile.write ('%-80s %4d (%.1f%%)\n' % (text, count, pct))
+    Outfile.write(email_encode('%-80s %4d (%.1f%%)\n' % (text, count, pct)))
     if HTMLfile:
-        HTMLfile.write (TRow % (HClasses[HTMLclass], text, count, pct))
+        HTMLfile.write(email_encode(TRow % (HClasses[HTMLclass], text, count, pct)))
         HTMLclass ^= 1
 
 def ReportLineStr (text, count, extra):
     global HTMLclass
     if count == 0:
         return
-    Outfile.write ('%-80s %4d %s\n' % (text, count, extra))
+    Outfile.write(email_encode('%-80s %4d %s\n' % (text, count, extra)))
     if HTMLfile:
-        HTMLfile.write (TRowStr % (HClasses[HTMLclass], text, count, extra))
+        HTMLfile.write(email_encode(TRowStr % (HClasses[HTMLclass], text, count, extra)))
         HTMLclass ^= 1
 
 def EndReport (text=None):
     if text:
-        Outfile.write ('%s\n' % (text, ))
+        Outfile.write(email_encode('%s\n' % (text, )))
     if HTMLfile:
-        HTMLfile.write ('</table>\n\n')
+        HTMLfile.write('</table>\n\n')
         
 #
 # Comparison and report generation functions.
@@ -536,7 +537,7 @@ def ReportByFileType (hacker_list):
                     total[filetype] = [added, removed, []]
 
         # Print a summary by hacker
-        print h.full_name_with_aff()
+        print email_encode(h.full_name_with_aff())
         for filetype, counters in by_hacker.iteritems():
             print '\t', filetype, counters
             h_added = by_hacker[filetype][patch.ADDED]
@@ -548,7 +549,7 @@ def ReportByFileType (hacker_list):
     for filetype, (added, removed, hackers) in total.iteritems():
         print filetype, added, removed
         for h, h_added, h_removed in hackers:
-            print '\t%s: [%d, %d]' % (h, h_added, h_removed)
+            print email_encode('\t%s: [%d, %d]' % (h, h_added, h_removed))
 
     # Print the very global summary
     BeginReport ('General contributions by type')

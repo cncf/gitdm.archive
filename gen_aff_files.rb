@@ -2,6 +2,7 @@ require 'pry'
 require 'csv'
 require 'json'
 require './comment'
+require './email_code'
 
 def gen_aff_files(csv_file)
   # Process affiliations found by Python cncf/gitdm saved in CSV
@@ -15,11 +16,11 @@ def gen_aff_files(csv_file)
     next if is_comment row
     h = row.to_h
     c = h['company'].strip
-    e = h['email'].strip
-    n = h['name'] = h['name'].strip.gsub(': ', ' ')
+    e = email_encode(h['email'].strip)
+    n = h['name'] = email_encode(h['name'].strip.gsub(': ', ' '))
     d = h['date_to'].strip
     h['date_to'] = d = dt_future if !d || d == ''
-    next unless e.include?('@')
+    next unless e.include?('!')
     names[n] = {} unless names.key?(n)
     names[n][e] = [] unless names[n].key?(e)
     names[n][e] << h
@@ -38,14 +39,14 @@ def gen_aff_files(csv_file)
     next if line[0] == '#'
     arr = line.split ' '
     h = {}
-    e = h['email'] = arr[0]
+    e = h['email'] = email_encode(arr[0])
     next if existing_emails.key?(e)
-    next unless e.include?('@')
+    next unless e.include?('!')
     company = arr[1..-1].join ' '
     data = company.split(' < ')
     c = h['company'] = data.first
     d = h['date_to'] = date = data.length > 1 ? data.last : dt_future
-    n = h['name'] = h['email']
+    n = h['name'] = email_encode(h['email'])
     names[n] = {} unless names.key?(n)
     names[n][e] = [] unless names[n].key?(e)
     names[n][e] << h
@@ -64,7 +65,7 @@ def gen_aff_files(csv_file)
     devs = comps[comp_name]
     t += "#{comp_name}:\n"
     devs.keys.sort.each do |dev_name|
-      d_name = dev_name.split('@').first
+      d_name = dev_name.split('!').first
       email_list = names[dev_name]
       affs = []
       affse = []
@@ -113,7 +114,7 @@ def gen_aff_files(csv_file)
 
   t = ''
   names.keys.sort.each do |dev_name|
-    d_name = dev_name.split('@').first
+    d_name = dev_name.split('!').first
     email_list = names[dev_name]
     affs = []
     affse = []

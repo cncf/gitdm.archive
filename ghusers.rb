@@ -2,6 +2,7 @@ require 'pry'
 require 'octokit'
 require 'json'
 require 'securerandom'
+require './email_code'
 
 # Ask each repo for commits newer than...
 start_date = '2014-01-01'
@@ -138,7 +139,7 @@ def ghusers(repos, start_date, args)
         rate_limit()
         repo = Octokit.repo repo_name
         h = repo.to_h
-        json = JSON.pretty_generate h
+        json = email_encode(JSON.pretty_generate(h))
         File.write fn, json
         hs << h
       rescue Octokit::TooManyRequests => err2
@@ -175,7 +176,7 @@ def ghusers(repos, start_date, args)
         comm = Octokit.commits_since(repo_name, start_date)
         h = comm.map(&:to_h)
         puts "Got #{h.count} commits"
-        json = JSON.pretty_generate h
+        json = email_encode(JSON.pretty_generate(h))
         File.write fn, json
         comms << comm
       rescue Octokit::TooManyRequests => err2
@@ -281,7 +282,7 @@ def ghusers(repos, start_date, args)
       binding.pry
     end
   end
-  json = JSON.pretty_generate final
+  json = email_encode(JSON.pretty_generate(final))
   File.write 'github_users.json', json
   puts "All done."
   # I had 908/5000 points left when running < 1 hour

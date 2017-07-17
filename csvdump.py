@@ -3,11 +3,12 @@
 #
 import sys, datetime
 import csv
+from patterns import email_encode
 
 class CSVStat:
     def __init__ (self, name, email, employer, date):
-        self.name = name
-        self.email = email
+        self.name = email_encode(name)
+        self.email = email_encode(email)
         self.employer = employer
         self.added = self.removed = self.changesets = 0
         self.date = date
@@ -42,13 +43,13 @@ def store_patch(patch):
         employer = patch.author.emailemployer(patch.email, patch.date)
         employer = employer.name.replace('"', '.').replace ('\\', '.')
         author = patch.author.name.replace ('"', '.').replace ('\\', '.')
-        author = patch.author.name.replace ("'", '.')
+        author = email_encode(patch.author.name.replace ("'", '.'))
         try:
             domain = patch.email.split('@')[1]
         except:
             domain = patch.email
         ChangeSets.append([patch.commit, str(patch.date),
-                           patch.email, domain, author, employer,
+                           email_encode(patch.email), domain, author, employer,
                            patch.added, patch.removed])
         for (filetype, (added, removed)) in patch.filetypes.iteritems():
             FileTypes.append([patch.commit, filetype, added, removed])
@@ -85,7 +86,7 @@ def OutputCSV (file):
     for date, stat in PeriodCommitHash.items():
         # sanitise names " is common and \" sometimes too
         empl_name = stat.employer.name.replace ('"', '.').replace ('\\', '.')
-        author_name = stat.name.replace ('"', '.').replace ('\\', '.')
+        author_name = email_encode(stat.name.replace ('"', '.').replace ('\\', '.'))
         writer.writerow ([author_name, stat.email, empl_name, stat.date,
                           stat.added, stat.removed, stat.changesets])
 

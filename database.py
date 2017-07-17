@@ -12,6 +12,7 @@
 import sys, datetime
 import pdb
 import csv
+from patterns import email_encode
 
 class Hacker:
     def __init__ (self, name, id, elist, email):
@@ -151,7 +152,7 @@ def AllFilesCSV(file, hlist, FileFilter, InvertFilter):
                         matches[filename] = match
                     if match == InvertFilter:
                         continue
-                writer.writerow ([email, aname, datestr, emplstr, filename, filedata[0], filedata[1], filedata[2]])
+                writer.writerow ([email_encode(email), email_encode(aname), datestr, emplstr, filename, filedata[0], filedata[1], filedata[2]])
             processed[patch.commit] = True
 
 def AllAffsCSV(file, hlist):
@@ -172,12 +173,12 @@ def AllAffsCSV(file, hlist):
             if date > yesterday:
                 datestr = ''
             emplstr = empl.name.replace ('"', '.').replace ('\\', '.')
-            writer.writerow ([email, name, emplstr, datestr])
+            writer.writerow ([email_encode(email), email_encode(name), emplstr, datestr])
             for em in ReverseAlias(email):
                 if em in emails:
                     print 'This is bad, reverse email already in emails, check: `em`, `email`, `emails`'
                     pdb.set_trace()
-                writer.writerow ([em, name, emplstr, datestr])
+                writer.writerow ([email_encode(em), email_encode(name), emplstr, datestr])
 
 def AllHackers ():
     return HackersByID.values ()
@@ -194,7 +195,7 @@ def DumpDB ():
                                                         h.added, h.removed,
                                                         len (h.signoffs)))
         for i in range (0, len (h.email)):
-            out.write ('\t%s -> \n' % (h.email[i]))
+            out.write ('\t%s -> \n' % (email_encode(h.email[i])))
             for date, empl in h.employer[i]:
                 out.write ('\t\t %d-%d-%d %s\n' % (date.year, date.month, date.day,
                                                  empl.name))
@@ -339,7 +340,7 @@ EmailAliases = { }
 
 def AddEmailAlias (variant, canonical):
     if EmailAliases.has_key (variant):
-        sys.stderr.write ('Duplicate email alias for %s\n' % (variant))
+        sys.stderr.write ('Duplicate email alias for %s\n' % (email_encode(variant)))
     EmailAliases[variant] = canonical
 
 CompanyMap = { }
@@ -373,7 +374,7 @@ def AddEmailEmployerMapping (email, employer, end = nextyear):
         for i in range (0, len(l)):
             date, xempl = l[i]
             if date == end:  # probably both nextyear
-                print 'WARNING: duplicate email/empl for %s' % (email)
+                print 'WARNING: duplicate email/empl for %s' % (email_encode(email))
             if date > end:
                 l.insert (i, (end, empl))
                 return
@@ -406,7 +407,7 @@ def MapToEmployer (email, unknown = 0):
         pass
     namedom = email.split ('@')
     if len (namedom) < 2:
-        print 'Oops...funky email %s' % email
+        print 'Oops...funky email %s' % email_encode(email)
         return [(nextyear, GetEmployer ('Funky'))]
     s = namedom[1].split ('.')
     for dots in range (len (s) - 2, -1, -1):

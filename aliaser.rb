@@ -1,5 +1,6 @@
 require 'pry'
 require 'json'
+require './email_code'
 
 def aliaser(json_file)
   data = JSON.parse File.read json_file
@@ -16,11 +17,11 @@ def aliaser(json_file)
     known = user.reject { |u| unknown_affs.include?(u['affiliation']) }
     unknown = user.select { |u| unknown_affs.include?(u['affiliation']) }
     if known.count < 1
-      emails = user.map { |u| u['email'] }.uniq
+      emails = user.map { |u| email_encode(u['email']) }.uniq
       bad << "There is no known affiliation for entire group: #{emails.join(', ')}"
     else
-      base = known.first['email']
-      emails = unknown.map { |u| u['email'] }.uniq
+      base = email_encode(known.first['email'])
+      emails = unknown.map { |u| email_encode(u['email']) }.uniq
       emails.each do |email|
         next if email == base
         puts "#{email} #{base}"
@@ -28,7 +29,7 @@ def aliaser(json_file)
     end
   end
   bad.each do |b|
-    puts b
+    puts email_encode(b)
   end
 end
 

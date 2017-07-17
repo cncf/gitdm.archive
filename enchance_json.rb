@@ -2,6 +2,7 @@ require 'pry'
 require 'json'
 require 'csv'
 require './comment'
+require './email_code'
 
 def enchance_json(json_file, csv_file)
   # Process affiliations found by Python cncf/gitdm saved in CSV
@@ -11,7 +12,7 @@ def enchance_json(json_file, csv_file)
   CSV.foreach(csv_file, headers: true) do |row|
     next if is_comment row
     h = row.to_h
-    e = h['email'].strip
+    e = email_encode(h['email'].strip)
     c = h['company'].strip
     n = h['name'].strip
     d = h['date_to'].strip
@@ -38,7 +39,7 @@ def enchance_json(json_file, csv_file)
   unks = []
   json_emails = {}
   data.each do |user|
-    e = user['email']
+    e = email_encode(user['email'])
     json_emails[e] = true
     v = '?'
     if affs.key?(e)

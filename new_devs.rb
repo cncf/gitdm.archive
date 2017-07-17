@@ -1,5 +1,6 @@
 require 'csv'
 require 'pry'
+require './email_code'
 
 def new_devs(files)
   known = {}
@@ -8,7 +9,7 @@ def new_devs(files)
     n = 0
     CSV.foreach(file, headers: true) do |row|
       h = row.to_h
-      e = h['Email'].strip
+      e = email_encode(h['Email'].strip)
       c = h['Affliation'].strip
       known[e] = 1 if index == 0
       unless known.key?(e)
