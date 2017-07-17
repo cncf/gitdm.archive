@@ -17,7 +17,7 @@ import database, csvdump, ConfigFile, reports
 import getopt, datetime
 import os, re, sys, rfc822, string
 import logparser
-from patterns import patterns
+from patterns import patterns, email_encode
 import pdb
 
 Today = datetime.date.today()
@@ -148,7 +148,7 @@ def ParseOpts ():
             print "Save all file statistics in " + opt[1] + "\n"
         elif opt[0] == '-x':
             CSVFile = open (opt[1], 'w')
-            print "open output file " + opt[1] + "\n"
+            print "Open output file " + opt[1] + "\n"
         elif opt[0] == '-a':
             AffFile = open (opt[1], 'w')
             print "Save all affiliations in " + opt[1] + "\n"
@@ -512,7 +512,7 @@ def GripeAboutAuthorName (name):
     if name in GripedAuthorNames:
         return
     GripedAuthorNames.append (name)
-    print '%s is an author name, probably not what you want' % (name)
+    print email_encode('%s is an author name, probably not what you want' % (name))
 
 def ApplyFileFilter (line, ignore):
     #

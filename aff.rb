@@ -1,5 +1,6 @@
 require 'csv'
 require 'pry'
+require './email_code'
 
 def aff(fn, email_col, date_col, affliation_col)
   # "Name","Email","Affliation","Date","Added","Removed","Changesets"
@@ -68,7 +69,7 @@ def aff(fn, email_col, date_col, affliation_col)
       obj = aff_final[email]
       obj.keys.sort.each do |date|
         row = obj[date]
-        csv << [row[email_col], row[final_company_col], row[affliation_col], row[date_col], row[end_date_col]]
+        csv << [email_encode(row[email_col]), row[final_company_col], row[affliation_col], row[date_col], row[end_date_col]]
       end
     end
   end

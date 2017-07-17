@@ -1,6 +1,7 @@
 require 'pry'
 require 'scanf'
 require './mgetc'
+require './email_code'
 
 def import_affs(dev_affs, comp_devs)
   # Developers affiliations
@@ -21,6 +22,7 @@ def import_affs(dev_affs, comp_devs)
         binding.pry
       end
       emails.each do |email|
+        email = email_encode(email)
         d_dict[email] = [] unless d_dict.key?(email)
         if data2.length == 1
           d_affs << "#{email} #{data2.first}"
@@ -52,8 +54,8 @@ def import_affs(dev_affs, comp_devs)
         cname = data.first
       else
         data2 = data.last.split(', ')
-        emails = data2.select { |r| r.include?('@') }.map { |r| r.split(' ').first }.map(&:strip)
-        dates = data2.select { |r| r.include?('from') || r.include?('until') }.map { |r| r.split(' ') }.flatten.reject { |r| r.include?('@') }.map(&:strip)
+        emails = data2.select { |r| r.include?('!') }.map { |r| r.split(' ').first }.map(&:strip)
+        dates = data2.select { |r| r.include?('from') || r.include?('until') }.map { |r| r.split(' ') }.flatten.reject { |r| r.include?('!') }.map(&:strip)
         if dates.length % 2 == 1
           puts 'Unexpected line:'
           puts line
@@ -78,6 +80,7 @@ def import_affs(dev_affs, comp_devs)
           dts << ''
         end
         emails.each do |email|
+          email = email_encode(email)
           c_dict[email] = [] unless c_dict.key?(email)
           dts.each do |dt|
             if dt == ''

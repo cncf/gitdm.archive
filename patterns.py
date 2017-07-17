@@ -21,6 +21,8 @@ import re
 _pemail = r'\s+"?([^<"]+)"?\s<([^>]+)>' # just email addr + name
 # LG: added re.I in some cases (need to ignore case)
 patterns = {
+    'email_encode': re.compile(r'[^\s@]+@[^\s@]+'),
+    'email_decode': re.compile(r'[^\s!]+![^\s!]+'),
     'tagcommit': re.compile (r'^commit ([\da-f]+) .*tag: (v[0-9]\.\d(\.\d\d?)?)'),  # LG: allow versions v[0-9].n[...]
     'commit': re.compile (r'^commit ([0-9a-f ]+)'),
     'author': re.compile (r'^Author:' + _pemail + '$', re.I),
@@ -51,3 +53,9 @@ patterns = {
     # Detect errors on svn conversions
     'svn-tag': re.compile("^svn path=/tags/(.*)/?; revision=([0-9]+)$"),
 }
+
+def email_encode(line):
+    return re.sub(patterns['email_encode'], lambda email: email.group().replace('@', '!'), line)
+
+def email_decode(line):
+    return re.sub(patterns['email_decode'], lambda email: email.group().replace('!', '@'), line)
