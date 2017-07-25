@@ -6,6 +6,7 @@ head -n 101 removed.csv > stats/all_removed.csv
 head -n 101 changesets.csv > stats/all_changesets.csv
 echo "Stats kubernetes/kubernetes all time"
 ruby topdevs.rb kubernetes/all_time/first_run_patch.csv
+cp changesets.csv all_changesets.csv
 head -n 101 added.csv > stats/kubernetes_added.csv
 head -n 101 removed.csv > stats/kubernetes_removed.csv
 head -n 101 changesets.csv > stats/kubernetes_changesets.csv
