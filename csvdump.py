@@ -10,11 +10,12 @@ class CSVStat:
         self.name = email_encode(name)
         self.email = email_encode(email)
         self.employer = employer
-        self.added = self.removed = self.changesets = 0
+        self.added = self.removed = self.changed = self.changesets = 0
         self.date = date
     def accumulate (self, p):
         self.added = self.added + p.added
         self.removed = self.removed + p.removed
+        self.changed = self.changed + max(p.added, p.removed)
         self.changesets += 1
 
 PeriodCommitHash = { }
@@ -50,7 +51,7 @@ def store_patch(patch):
             domain = patch.email
         ChangeSets.append([patch.commit, str(patch.date),
                            email_encode(patch.email), domain, author, employer,
-                           patch.added, patch.removed])
+                           patch.added, patch.removed, max(patch.added, patch.removed)])
         for (filetype, (added, removed)) in patch.filetypes.iteritems():
             FileTypes.append([patch.commit, filetype, added, removed])
 
@@ -62,7 +63,7 @@ def save_csv (prefix='data'):
         writer = csv.writer (fd, quoting=csv.QUOTE_NONNUMERIC)
         writer.writerow (['Commit', 'Date', 'Domain',
                           'Email', 'Name', 'Affliation',
-                          'Added', 'Removed'])
+                          'Added', 'Removed', 'Changed'])
         for commit in ChangeSets:
             writer.writerow(commit)
 
@@ -82,12 +83,12 @@ def OutputCSV (file):
         return
     writer = csv.writer (file, quoting=csv.QUOTE_NONNUMERIC)
     writer.writerow (['Name', 'Email', 'Affliation', 'Date',
-                      'Added', 'Removed', 'Changesets'])
+                      'Added', 'Removed', 'Changed', 'Changesets'])
     for date, stat in PeriodCommitHash.items():
         # sanitise names " is common and \" sometimes too
         empl_name = stat.employer.name.replace ('"', '.').replace ('\\', '.')
         author_name = email_encode(stat.name.replace ('"', '.').replace ('\\', '.'))
         writer.writerow ([author_name, stat.email, empl_name, stat.date,
-                          stat.added, stat.removed, stat.changesets])
+                          stat.added, stat.removed, stat.changed, stat.changesets])
 
 __all__ = [  'AccumulatePatch', 'OutputCSV', 'store_patch' ]

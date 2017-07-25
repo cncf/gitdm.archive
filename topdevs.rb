@@ -3,14 +3,14 @@ require 'pry'
 require './email_code'
 
 def analysis(fn)
-  # "Name","Email","Affliation","Date","Added","Removed","Changesets"
+  # "Name","Email","Affliation","Date","Added","Removed","Changed","Changesets"
   obj = {}
   aff = {}
-  sa = sr = sc = 0
+  sa = sr = sc = sm = 0
   unknowns = {}
   goo = {}
   companies = {}
-  sums = %w(added removed changesets)
+  sums = %w(added removed changed changesets)
   CSV.foreach(fn, headers: true) do |row|
     h = row.to_h
     h.each do |k, v|
@@ -18,6 +18,7 @@ def analysis(fn)
     end
     a = h['Added']
     r = h['Removed']
+    m = h['Changed']
     c = h['Changesets']
     e = email_encode(h['Email'])
     d = h['Date']
@@ -25,6 +26,7 @@ def analysis(fn)
     sa += a
     sr += r
     sc += c
+    sm += m
     if obj.key?(e)
       obj[e].each do |k, v|
         obj[e][k] += h[k] unless v.is_a?(String)
@@ -36,7 +38,7 @@ def analysis(fn)
     em = h['Affliation']
     if em == '(Unknown)'
       unknowns[h['Name']] = h
-    elsif em == 'Google' && !e.include?('@google.com')
+    elsif em == 'Google' && !e.include?('!google.com')
       goo[h['Name']] = h
     end
     companies[co] = [] unless companies.key?(co)
@@ -94,22 +96,26 @@ def analysis(fn)
 
   added = []
   removed = []
+  changed = []
   changesets = []
   obj.each do |k, v|
     a = v['Added']
     r = v['Removed']
+    m = v['Changed']
     c = v['Changesets']
     e = email_encode(v['Email'])
     added << [a, v]
     removed << [r, v]
+    changed << [m, v]
     changesets << [c, v]
   end
 
   added = added.sort_by { |item| -item[0] }
   removed = removed.sort_by { |item| -item[0] }
+  changed = changed.sort_by { |item| -item[0] }
   changesets = changesets.sort_by { |item| -item[0] }
 
-  ks = added[0][1].keys + ['% Added', '% Removed', '% Changesets']
+  ks = added[0][1].keys + ['% Added', '% Removed', '% Changed', '% Changesets']
   sums.each do |key|
     fn = "#{key}.csv"
     data = binding.local_variable_get(key)
@@ -118,8 +124,9 @@ def analysis(fn)
       data.each do |row|
         pa = (row[1]['Added'].to_f * 100.0 / sa).round(3)
         pr = (row[1]['Removed'].to_f * 100.0 / sr).round(3)
+        pm = (row[1]['Changed'].to_f * 100.0 / sm).round(3)
         pc = (row[1]['Changesets'].to_f * 100.0 / sc).round(3)
-        csv << row[1].values + [pa, pr, pc]
+        csv << row[1].values + [pa, pr, pm, pc]
       end
     end
   end
