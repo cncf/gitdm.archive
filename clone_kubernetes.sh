@@ -77,7 +77,6 @@ git clone https://github.com/kubernetes-incubator/nfs-provisioner.git || exit 1
 git clone https://github.com/kubernetes-incubator/node-feature-discovery.git || exit 1
 git clone https://github.com/kubernetes-incubator/application-images.git || exit 1
 # new (updated 2017-09-26)
-git clone https://github.com/kubernetes-incubator/auger.git || exit 1
 git clone https://github.com/kubernetes-incubator/cluster-proportional-vertical-autoscaler.git || exit 1
 git clone https://github.com/kubernetes-incubator/descheduler.git || exit 1
 git clone https://github.com/kubernetes-incubator/rescheduler.git || exit 1
