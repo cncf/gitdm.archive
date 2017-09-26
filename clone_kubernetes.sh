@@ -43,6 +43,16 @@ git clone https://github.com/kubernetes/kubernetes-template-project.git || exit 
 git clone https://github.com/kubernetes/kubernetes-docs-cn.git || exit 1
 git clone https://github.com/kubernetes/kube-ui.git || exit 1
 git clone https://github.com/kubernetes/kubeadm.git || exit 1
+# new (updated 2017-09-26)
+git clone https://github.com/kubernetes/federation.git || exit 1
+git clone https://github.com/kubernetes/cluster-registry.git || exit 1
+git clone https://github.com/kubernetes/steering.git || exit 1
+git clone https://github.com/kubernetes/code-generator.git || exit 1
+git clone https://github.com/kubernetes/sig-release.git || exit 1
+git clone https://github.com/kubernetes/kube-openapi.git || exit 1
+git clone https://github.com/kubernetes/utils.git || exit 1
+git clone https://github.com/kubernetes/apiextensions-apiserver.git || exit 1
+git clone https://github.com/kubernetes/api.git || exit 1
 # kubernetes-incubator org
 git clone https://github.com/kubernetes-incubator/kompose.git || exit 1
 git clone https://github.com/kubernetes-incubator/external-storage.git || exit 1
@@ -66,6 +76,13 @@ git clone https://github.com/kubernetes-incubator/cluster-proportional-autoscale
 git clone https://github.com/kubernetes-incubator/nfs-provisioner.git || exit 1
 git clone https://github.com/kubernetes-incubator/node-feature-discovery.git || exit 1
 git clone https://github.com/kubernetes-incubator/application-images.git || exit 1
+# new (updated 2017-09-26)
+git clone https://github.com/kubernetes-incubator/auger.git || exit 1
+git clone https://github.com/kubernetes-incubator/cluster-proportional-vertical-autoscaler.git || exit 1
+git clone https://github.com/kubernetes-incubator/descheduler.git || exit 1
+git clone https://github.com/kubernetes-incubator/rescheduler.git || exit 1
+git clone https://github.com/kubernetes-incubator/kube-arbitrator.git || exit 1
+git clone https://github.com/kubernetes-incubator/metrics-server.git || exit 1
 # kubernetes-client org
 git clone https://github.com/kubernetes-client/java.git || exit 1
 git clone https://github.com/kubernetes-client/gen.git || exit 1
@@ -77,4 +94,6 @@ mv community kubernetes_community
 git clone https://github.com/kubernetes-client/community.git || exit 1
 git clone https://github.com/kubernetes-client/go-base.git || exit 1
 git clone https://github.com/kubernetes-client/go.git || exit 1
+# new (updated 2017-09-26)
+git clone https://github.com/kubernetes-client/typescript.git || exit 1
 echo "All Kubernetes repos cloned"
