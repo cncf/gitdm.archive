@@ -1,20 +1,16 @@
-# Who writes Kubernetes report
+# CNCF gitdm
 
-This is a Cloud Native Computing Foundation's "Who writes Kubernetes" report.
-CNCF will publish this report for every major release of Kubernetes.
-
-Companies and developers can check if they are correctly attributed at the following links:
+This is the Cloud Native Computing Foundation's fork of Jon Corbet and Greg KH's [gitdm](https://lwn.net/Articles/290957/) tool for calculating contributions based on developers and their companies. Companies and developers can check if they are correctly attributed at the following links:
 
 [Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt)
 
 [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt)
 
-If You see any error(s) in that list please create Pull Request with fixes:
-
-[Open pull request](https://github.com/cncf/gitdm/pulls)
-
-
-To test those changes locally please fork repository, update those two files (they must be in sync).
+If you see any errors in those lists, please submit a pull request with edits. However, only the [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) should be edited manually. The [Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt) is them derived from it.
+ 
+# Testing changes
+ 
+You can test any changes locally by cloning this repository and regenerating all data by running `./rerun_data.sh`.
 
 Then generate config files by running: `./import_affs.sh`. 
 
@@ -23,9 +19,6 @@ If those two files are out of sync tool will notify You about this.
 This tool will generate new `email-map` file. 
 
 Check if Your changes are OK and move it to `cncf-config/email-map` (replace)
-
-Then regenerate all data by running `./rerun_data.sh`.
-
 
 # Running
 Please use `*.sh` scripts to run analytics (`all*.sh` for full analysis and `rels*.sh` for per release stats)
