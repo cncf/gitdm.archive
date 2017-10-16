@@ -12,10 +12,17 @@ def gen_aff_files(csv_file)
   names = {}
   dt_now = DateTime.now.to_date.to_s
   dt_future = DateTime.now.next_year.to_date.to_s
+  skip = {}
+  if ENV.key?('SKIP_COMPANIES') 
+    ENV['SKIP_COMPANIES'].split(',').each do |sk|
+      skip[sk] = true
+    end
+  end
   CSV.foreach(csv_file, headers: true) do |row|
     next if is_comment row
     h = row.to_h
     c = h['company'].strip
+    next if skip.key?(c)
     e = email_encode(h['email'].strip)
     n = h['name'] = email_encode(h['name'].strip.gsub(': ', ' '))
     d = h['date_to'].strip
@@ -45,6 +52,7 @@ def gen_aff_files(csv_file)
     company = arr[1..-1].join ' '
     data = company.split(' < ')
     c = h['company'] = data.first
+    next if skip.key?(c)
     d = h['date_to'] = date = data.length > 1 ? data.last : dt_future
     n = h['name'] = email_encode(h['email'])
     names[n] = {} unless names.key?(n)
