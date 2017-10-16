@@ -116,6 +116,7 @@ def import_affs(dev_affs, comp_devs)
   diffs = []
   skip = false
   d_dict.keys.each do |key|
+    next unless c_dict.key?(key)
     unless c_dict[key].sort == d_dict[key].sort
       puts "Oops: #{key}"
       puts "company_developers.txt:"
@@ -153,15 +154,17 @@ def import_affs(dev_affs, comp_devs)
   return unless dfs
   hdr = [
     '# Here is a set of mappings of domain names onto employer names.',
-    '# [user@]domain  employer  [< yyyy-mm-dd]'
+    '# [user!]domain  employer  [< yyyy-mm-dd]'
   ]
   File.write 'email-map', (hdr + dfs).join("\n")
   puts 'Generated email-map file, consider using it as a cncfdm.py config file `cncf-config/email-map`'
   if diffs.length > 0
     puts 'Config files were out of sync, to sync them again:'
     puts 'mv email-map cncf-config/email-map'
+    puts './multirepo.sh ~/dev/kubernetes_repos/*'
     puts './manual_all.sh'
-    puts './gen_aff_files.sh'
+    puts 'SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh'
+    puts './enchance_json.sh'
     puts 'Or alternatively regenerate ALL data ./rerun_all.sh'
   end
 end
