@@ -6,5 +6,5 @@ ruby ghusers.rb
 # 1st arg is: 'r' - force repos metadata fetch, 'c' - force commits fetch, 'u' force users fetch
 # ruby ghusers.rb c
 # ruby ghusers.rb rcu
-./email_code.rb github_users.json temp
+./encode_emails.rb github_users.json temp
 mv temp github_users.json
