@@ -75,6 +75,11 @@ ln -s ~/dev/go/src/k8s.io/javascript/ javascript
 ln -s ~/dev/go/src/k8s.io/kubernetes-client-community/ kubernetes-client-community
 ln -s ~/dev/go/src/k8s.io/go-base/ go-base
 ln -s ~/dev/go/src/k8s.io/go/ go
+# kubernetes-helm org
+ln -s ~/dev/go/src/k8s.io/chartmuseum/ chartmuseum
+ln -s ~/dev/go/src/k8s.io/monocular/ monocular
+ln -s ~/dev/go/src/k8s.io/rudder-federation/ rudder-federation
+ln -s ~/dev/go/src/k8s.io/kubernetes-helm-community/ kubernetes-helm-community
 # We no more need 3 kubernetes orgs: kubernetes-contrib, kubernetes-ui, kubernetes-cluster-automation
 # kubernetes-contrib org
 # application-images --> kubernetes-contrib-application-images (renamed due to name conflict)
