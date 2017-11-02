@@ -78,7 +78,11 @@ repos = [
   'kubernetes-client/ruby',
   'kubernetes-client/javascript',
   'kubernetes-client/go-base',
-  'kubernetes-client/go'
+  'kubernetes-client/go',
+  'kubernetes-helm/chartmuseum',
+  'kubernetes-helm/monocular',
+  'kubernetes-helm/rudder-federation',
+  'kubernetes-helm/community'
 ]
 
 # It tries to call GitHub only twice per repo (general repo data & commits), then saves data JSON to files

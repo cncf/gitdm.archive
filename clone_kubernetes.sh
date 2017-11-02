@@ -95,4 +95,10 @@ git clone https://github.com/kubernetes-client/go-base.git || exit 1
 git clone https://github.com/kubernetes-client/go.git || exit 1
 # new (updated 2017-09-26)
 git clone https://github.com/kubernetes-client/typescript.git || exit 1
+# kubernetes-helm org
+git clone https://github.com/kubernetes-helm/chartmuseum.git || exit 1
+git clone https://github.com/kubernetes-helm/monocular.git || exit 1
+git clone https://github.com/kubernetes-helm/rudder-federation.git || exit 1
+mv community kubernetes_client_community
+git clone https://github.com/kubernetes-helm/community.git || exit 1
 echo "All Kubernetes repos cloned"
