@@ -161,9 +161,10 @@ def import_affs(dev_affs, comp_devs)
   if diffs.length > 0
     puts 'Config files were out of sync, to sync them again:'
     puts 'mv email-map cncf-config/email-map'
-    puts './multirepo.sh ~/dev/kubernetes_repos/* or ./all_repos_log.sh ~/dev/kubernetes_repos/*'
+    puts './multirepo.sh ~/dev/kubernetes_repos/* or ./all_repos_log.sh ~/dev/kubernetes_repos/* and also ~/dev/prometheus/* (an then concatenate logs)'
     puts './manual_all.sh or `~/dev/cncf/gitdm/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`'
     puts 'SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh'
+    puts 'Consider ./ghusers.sh'
     puts './enchance_json.sh'
     puts 'Or alternatively regenerate ALL data ./rerun_all.sh'
   end
