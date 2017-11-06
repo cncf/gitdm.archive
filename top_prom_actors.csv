@@ -1,8 +1,8 @@
 login,email,company_name,comment,previous_company,actor_id,events_count
-brian-brazil,brian.brazil@boxever.com,Robust Perception,or Self,Boxever <2015-07,7115638,15238
-brian-brazil,brian.brazil@gmail.com,Robust Perception,or Self,Boxever <2015-07,7115638,15238
-brian-brazil,brian-brazil@users.noreply.github.com,Robust Perception,or Self,Boxever <2015-07,7115638,15238
-brian-brazil,brian.brazil@robustperception.io,Robust Perception,or Self,Boxever <2015-07,7115638,15238
+brian-brazil,brian.brazil@boxever.com,Self,,Boxever <2015-07,7115638,15238
+brian-brazil,brian.brazil@gmail.com,Self,,Boxever <2015-07,7115638,15238
+brian-brazil,brian-brazil@users.noreply.github.com,Self,,Boxever <2015-07,7115638,15238
+brian-brazil,brian.brazil@robustperception.io,Self,,Boxever <2015-07,7115638,15238
 juliusv,julius.volz@gmail.com,Self,confirmed ,SoundCloud < 2015-10,538008,10729
 juliusv,julius@soundcloud.com,Self,confirmed ,SoundCloud < 2015-10,538008,10729
 fabxc,fab.reinartz@gmail.com,CoreOS,confirmed ,SoundCloud < 2016-03,4948210,10135
@@ -52,32 +52,32 @@ carlpett,cpettsson@gmail.com,(Unknown),confirmed ,,214867,135
 cherti,cherti@letopolis.de,Self,was Unknown,,6452205,134
 hryamzik,,Guidewire Software,was empty,Blackmoon Financial Group < 201610,1643962,133
 wrouesnel,w.rouesnel@gmail.com,Commonwealth Bank,was Unknown,Netregistry < 201610,772445,122
-stapelberg,michael@stapelberg.de,(Unknown),,,55506,118
-stapelberg,stapelberg@users.noreply.github.com,(Unknown),,,55506,118
-stapelberg,stapelberg@google.com,(Unknown),,,55506,118
-AlekSi,alexey.palazhchenko@percona.com,(Unknown),,,11512,113
-AlekSi,alexey.palazhchenko@gmail.com,(Unknown),,,11512,113
-prometheus-roobot,,,,,,108
-joehandzik,joseph.t.handzik@hpe.com,HP,,,7061812,100
-josedonizetti,jdbjunior@gmail.com,Uken Games,,,34032,97
-tcolgate,tristan@qubit.com,(Unknown),,,76019,92
-tcolgate,tcolgate@gmail.com,(Unknown),,,76019,92
-Colstuwjx,colstuwjx@gmail.com,(Unknown),,,3972545,90
-Colstuwjx,wjx_colstu@hotmail.com,(Unknown),,,3972545,90
-siavashs,siavash.safi@gmail.com,(Unknown),,,113189,84
-rtreffer,rene.treffer@soundcloud.com,SoundCloud,,,61306,83
-rtreffer,treffer+github@measite.de,SoundCloud,,,61306,83
-coveralls,,,,,2354108,83
-Kellel,kellenhfox@gmail.com,(Unknown),,,1751124,80
-krasi-georgiev,krasi.root@gmail.com,(Unknown),,,8903888,77
-krasi-georgiev,krasi-georgiev@users.noreply.github.com,(Unknown),,,8903888,77
-EdSchouten,ed@nuxi.nl,(Unknown),,,736085,74
-EdSchouten,ed@kumina.nl,(Unknown),,,736085,74
-alin-amana,alin.sinpalean@amanaadvisors.com,(Unknown),,,29573495,73
-jinhang,,,,,4497831,68
-raypettersen,,,,,7197374,68
-filippog,fgiunchedi@wikimedia.org,Wikimedia Foundation,,,93906,67
-lyda,kevin@ie.suberic.net,Aptarus,,,714124,67
-miekg,miek@improbable.io,(Unknown),,,353371,64
-pdbogen,patrick@srcclr.com,(Unknown),,,321591,64
-mwitkow,,,,,9655971,64
+stapelberg,michael@stapelberg.de,NotFound,was Unknown,,55506,118
+stapelberg,stapelberg@users.noreply.github.com,NotFound,was Unknown,,55506,118
+stapelberg,stapelberg@google.com,NotFound,was Unknown,,55506,118
+AlekSi,alexey.palazhchenko@percona.com,Percona,was Unknown,mc2 software < 201606,11512,113
+AlekSi,alexey.palazhchenko@gmail.com,Percona,was Unknown,mc2 software < 201606,11512,113
+prometheus-roobot,bot,bot,bot,bot,bot,108
+joehandzik,joseph.t.handzik@hpe.com,HPE,was HP,,7061812,100
+josedonizetti,jdbjunior@gmail.com,Uken Games,confirmed ,,34032,97
+tcolgate,tristan@qubit.com,Qubit.,was Unknown,CloudFlare < 201604,76019,92
+tcolgate,tcolgate@gmail.com,Qubit.,was Unknown,CloudFlare < 201604,76019,92
+Colstuwjx,colstuwjx@gmail.com,Bilibili Group,was Unknown,CloudFlare < 201604,3972545,90
+Colstuwjx,wjx_colstu@hotmail.com,Bilibili Group,was Unknown,CloudFlare < 201604,3972545,90
+siavashs,siavash.safi@gmail.com,Catawiki,was Unknown,HyperOffice < 201611,113189,84
+rtreffer,rene.treffer@soundcloud.com,SoundCloud,confirmed ,,61306,83
+rtreffer,treffer+github@measite.de,SoundCloud,confirmed ,,61306,83
+coveralls,,NotFound,,,2354108,83
+Kellel,kellenhfox@gmail.com,Cloudflare,was Unknown,,1751124,80
+krasi-georgiev,krasi.root@gmail.com,Red Hat,was Unknown,CloudFlare < 201604,8903888,77
+krasi-georgiev,krasi-georgiev@users.noreply.github.com,Red Hat,was Unknown,CloudFlare < 201604,8903888,77
+EdSchouten,ed@nuxi.nl,Kumina bv,was Unknown,CloudFlare < 201604,736085,74
+EdSchouten,ed@kumina.nl,Kumina bv,was Unknown,CloudFlare < 201604,736085,74
+alin-amana,alin.sinpalean@amanaadvisors.com,move digital ag,was Unknown,Google < 201610,29573495,73
+jinhang,,Alibaba Cloud Computing,was empty,,4497831,68
+raypettersen,,Signicat,was empty,Kantega < 201501,7197374,68
+filippog,fgiunchedi@wikimedia.org,Wikimedia Foundation,confirmed ,Debian < 201405,93906,67
+lyda,kevin@ie.suberic.net,GitLab,was Aptarus,Aptarus < 201610,714124,67
+miekg,miek@improbable.io,Self,was Unknown,,353371,64
+pdbogen,patrick@srcclr.com,Slack,was Unknown,SourceClear < 201611,321591,64
+mwitkow,,Improbable,was empty,Google < 201411,9655971,64
