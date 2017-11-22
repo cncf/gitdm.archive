@@ -5,7 +5,7 @@ require 'securerandom'
 require './email_code'
 
 # Ask each repo for commits newer than...
-start_date = '2014-01-01'
+start_date = '2012-07-01'
 
 # List of repositories to retrieve commits from (and get their basic data)
 repos = [
