@@ -10,7 +10,7 @@ If you see any errors in those lists, please submit a pull request with edits. H
 
 # Removing affiliations
 
-If You **do not want** to have Your email listed here please read [how to remove your email](https://github.com/cncf/gitdm/blob/master/FORBIDDEN_DATA.md).
+If You **do not want** to have your email listed here please read [how to remove your email](https://github.com/cncf/gitdm/blob/master/FORBIDDEN_DATA.md).
  
 # Testing changes
  
@@ -18,11 +18,11 @@ You can test any changes locally by cloning this repository and regenerating all
 
 Then generate config files by running: `./import_affs.sh`. 
 
-If those two files are out of sync tool will notify You about this.
+If those two files are out of sync tool will notify you about this.
 
 This tool will generate new `email-map` file. 
 
-Check if Your changes are OK and move it to `cncf-config/email-map` (replace)
+Check if your changes are OK and move it to `cncf-config/email-map` (replace)
 
 # Running
 Please use `*.sh` scripts to run analytics (`all*.sh` for full analysis and `rels*.sh` for per release stats)
@@ -105,7 +105,7 @@ This data is directly used for "Who writes Kubernetes" report.
 
 `./kubernetes_repos.sh` script is used to generate all time data for all kubernetes repos.
 
-To use it You must have all kubernetes repositories (68 from 3 different organizations) cloned in` ~/dev/go/src/k8s/`.
+To use it you must have all kubernetes repositories (68 from 3 different organizations) cloned in` ~/dev/go/src/k8s/`.
 
 Orgs are: kubernetes, kubernetes-incubator, kubernetes-client.
 
@@ -190,7 +190,7 @@ Prometheus joined CNCF at 2016-05-09.
 
 You need to clone all Prometheus repos into `~/dev/prometheus` using `./clone_prometheus.sh`
 
-Then You need to get a number of distinct Prometheus contributors before joining CNCF:
+Then you need to get a number of distinct Prometheus contributors before joining CNCF:
 ./prometheus_repos.sh 2015-05-09 2016-05-08 ~/dev/prometheus/
 
 Result is:
@@ -220,10 +220,10 @@ Links to data and generated report are here: `./res/links.txt`
 - Run `./cncf_join_analysis.sh prometheus 2016-05-09 90 ~/dev/prometheus/`
 - Result in `prometheus_repos/result.txt`
 
-- Create directory where You want to put links to kubernetes repos, like this: `mkdir ~/dev/kubernetes_repos_links`
+- Create directory where you want to put links to kubernetes repos, like this: `mkdir ~/dev/kubernetes_repos_links`
 - Now copy `kubernetes_repos.sh` to `link_kubernetes_repos.sh`: `cp kubernetes_repos.sh link_kubernetes_repos.sh`
 - Open copy and add 1st line: `cd ~/dev/kubernetes_repos_links`
-- Now replace lines like `./anyrepo.sh ~/dev/go/src/k8s.io/test-infra/ test-infra` with ln -s ~/dev/go/src/k8s.io/test-infra/ test-infra`, run it, voila, You have k8s repos links in `~/dev/kubernetes_repos_links`
+- Now replace lines like `./anyrepo.sh ~/dev/go/src/k8s.io/test-infra/ test-infra` with ln -s ~/dev/go/src/k8s.io/test-infra/ test-infra`, run it, voila, you have k8s repos links in `~/dev/kubernetes_repos_links`
 - Now command that takes on Kubernetes repos should be: `./cncf_join_analysis.sh kubernetes 2016-03-10 90 ~/dev/kubernetes_repos_links`
 - Result in `kubernetes_repos/result.txt`
 
@@ -291,10 +291,10 @@ To do this call:
 You need to have:
 - Standard GitHub OAuth token: https://github.com/settings/tokens --> Personal access tokens, put it in `/etc/github/oauth` file.
 - GitHub Application to increase rate limit from 60 to 5000 (60 is not enough to process kubernetes, 5000 is enough).
-- See: https://github.com/settings/ --> OAuth application, put Your client_id and client_secret in `/ect/github/client_id`, `/etc/github/client_secret` files.
+- See: https://github.com/settings/ --> OAuth application, put your client_id and client_secret in `/ect/github/client_id`, `/etc/github/client_secret` files.
 - This tool will cache all GitHub calls (save them as JSON files in `./ghusers/`) 
 - Final JSON will be saved in `./github_users.json` (next calls will use data from this file, so to reset cache just remove this file and all files from `ghusers/` directory
-- To actually generate new mapping You should manually process this JSON (and do some mapping of company names - GitHub users are putting strange stuff here)
+- To actually generate new mapping you should manually process this JSON (and do some mapping of company names - GitHub users are putting strange stuff here)
 - I've done that by iteratively using new tool: `import_from_github_users.sh`, `import_from_github_users.rb` with mapping file (that tries to map GiHub user company names into something more accurate): `company-names-mapping`
 
 ## Tools to help find unknown affiliations
