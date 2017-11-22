@@ -8,6 +8,10 @@ find . -type f -iname "*.htm*" >> ./flist.txt
 find . -type f -iname "*.md" >> ./flist.txt
 find . -type f -iname "*.json" >> ./flist.txt
 find . -type f -iname "*.sh" >> ./flist.txt
+find . -type f -iname "*.db" >> ./flist.txt
+find . -type f -iname "*.dump" >> ./flist.txt
+find . -type f -iname "*.dat" >> ./flist.txt
+find . -type f -iname "*.log" >> ./flist.txt
 find ./cncf-config -type f >> ./flist.txt
 ./handle_forbidden_data.rb `cat flist.txt`
 rm ./flist.txt
