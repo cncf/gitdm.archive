@@ -7,6 +7,10 @@ This is the Cloud Native Computing Foundation's fork of Jon Corbet and Greg KH's
 [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt)
 
 If you see any errors in those lists, please submit a pull request with edits. However, only the [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) should be edited manually. The [Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt) is them derived from it.
+
+# Removing affiliations
+
+If You **do not want** to have Your email listed here please read [how to remove your email](https://github.com/cncf/gitdm/blob/master/FORBIDDEN_DATA.md).
  
 # Testing changes
  
