@@ -22,6 +22,7 @@ def add_forbidden_data(args)
   sha256 = Digest::SHA256.new
   added = false
   args.each do |arg|
+    arg.strip!
     sha = sha256.hexdigest arg
     if shas.key? sha
       puts "This is already forbidden value: '#{arg}' --> SHA: '#{sha}', skipping"
