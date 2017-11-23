@@ -115,6 +115,10 @@ def enchance_json(json_file, csv_file, actors_file)
   actor_not_found = 0
   actors_found = 0
   if unknown_actors.keys.count > 0
+    skip_logins = [
+      'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]',
+      '', nil
+    ]
     octokit_init()
     rate_limit()
     puts "We need to process additional actors using GitHub API, type exit-program if you want to exit"
@@ -123,6 +127,7 @@ def enchance_json(json_file, csv_file, actors_file)
     n_users = uacts.size
     uacts.each_with_index do |actor, index|
       begin
+        next if skip_logins.include?(actor)
         rate_limit()
         e = "#{actor}!users.noreply.github.com"
         puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}, found so far: #{actors_found}"
