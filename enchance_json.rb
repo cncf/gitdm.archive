@@ -113,6 +113,7 @@ def enchance_json(json_file, csv_file, actors_file)
   puts "We have #{unknown_logins.keys.count} actors in our JSON not listed in #{actors_file}"
 
   actor_not_found = 0
+  actors_found = 0
   if unknown_actors.keys.count > 0
     octokit_init()
     rate_limit()
@@ -124,7 +125,7 @@ def enchance_json(json_file, csv_file, actors_file)
       begin
         rate_limit()
         e = "#{actor}!users.noreply.github.com"
-        puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}"
+        puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}, found so far: #{actors_found}"
         u = Octokit.user actor
         n = u['name']
         u['email'] = e
@@ -132,13 +133,13 @@ def enchance_json(json_file, csv_file, actors_file)
         v = '?'
         if email_affs.key?(e)
           p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
-          enchanced += 1
+          actors_found += 1
           v = email_affs[e]
           binding.pry
         else
           if name_affs.key?(n)
             p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
-            enchanced += 1
+            actors_found += 1
             v = name_affs[n]
             e2 = emails[n].keys.first
             u['email'] = e2 unless e2 == e
@@ -163,7 +164,7 @@ def enchance_json(json_file, csv_file, actors_file)
         binding.pry
       end
     end
-    puts "Found #{n_users - actor_not_found} from #{n_users} additional actors"
+    puts "Found #{actors_found}, not found #{actor_not_found} from #{n_users} additional actors"
   end
 
   json_not_found = 0
