@@ -116,8 +116,57 @@ def enchance_json(json_file, csv_file, actors_file)
   actors_found = 0
   if unknown_actors.keys.count > 0
     skip_logins = [
+      # invalid
+      '', nil,
+      # bots
       'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]',
-      '', nil
+      # GitHub not founds
+      '114piyush', '1gnition', '245347881', 'aaron12134', 'aaronLariat', 'abhinandanpb', 'abkaplan07', 'ablock84',
+      'active-low', 'adv-tsk', 'agunnerson-explorys', 'ahmed-madkour', 'AleiHanami', 'alexraju', 'alibazaar',
+      'ami-fairfly', 'amymotta24', 'andreagardiman', 'Aphoc', 'appledaily0', 'applequist', 'arash-bina', 'arduima',
+      'arnaldopereira-luizalabs', 'Artie313', 'arvindt7', 'avmaximov', 'AwildStoltzAppears', 'bbnnt', 'beepee14',
+      'beni05', 'bennyn1', 'benoit-merapar', 'bertrand-quenin', 'bharbhi', 'bigyouyou', 'bimalvv', 'bixiaohong2015',
+      'bobymicroby', 'bporter2387', 'brant-cao', 'bruceherve', 'brunoqc', 'brunowoo', 'bryantly', 'BubacarrC',
+      'canadatom', 'cgbspender', 'Chentongxuedefanhua', 'ChienWorld', 'chris-salemove', 'ChrJantz', 'c-kochu',
+      'CliMz', 'cmpis', 'codecov[bot]', 'codefx9', 'colonelmo', 'conti-x-rob', 'DanielAIC', 'daniel-middleton',
+      'danielscottt', 'darkhuwk', 'davey-dev', 'DBuTbKa', 'ddispaltro', 'Deepak-initcron', 'Demotivated',
+      'dennis-bsi', 'dhart-alldigital', 'dirtGit', 'disneyworldguy', 'DivyaVavili', 'djmoky83', 'Docker-Image-Templates',
+      'Dominic001', 'DougFirErickson', 'dw33z1lP', 'dyaniv', 'e-beach', 'ecnahc515', 'eddie-allen', 'electromecca',
+      'elerion', 'elppc', 'emetchar', 'engine07', 'enigma99a', 'entropyfarms', 'epgrvp', 'epish', 'eric-tucker',
+      'esthermofet', 'eulerzgy', 'evenemento', 'fangqiusheng', 'fen4o-work', 'fisch0920', 'flyat121', 'freshfishyu',
+      'freshfrmthehood', 'Furtchet', 'futureskywei', 'gatoruso', 'gayanjay', 'gdscei', 'geekard', 'geetachauhan',
+      'gegtot', 'gen0cide-', 'Gentlehag', 'gghonor', 'ghasabian', 'ghoffer', 'gitoverflow', 'gmarek-google',
+      'GoatWalker', 'gravityjeff', 'greenkeeper[bot]', 'gregster85', 'guimelon', 'GuoHui89757', 'h0me', 'hallucynogenyc',
+      'harish-myaccount', 'heavenlyhash', 'hecklerm', 'hfzqls', 'hitechmike', 'hobo-c', 'HuShuangFeng', 'iamthemuffinman',
+      'im-di', 'inigo-montoyahh', 'invenfantasy', 'Irving23', 'isArbit', 'ITPro360', 'itsmrwave', 'iurii-polishchuk',
+      'jamesberlage', 'JavierLorenzoPouso', 'jcastillo-cb', 'jcorral', 'jdc2172', 'Jeremysoft', 'jesstm',
+      'jgriffiths1993', 'jhernandezme', 'JimTravisGoog', 'jinmiaoms', 'johnwchadwick', 'jrahn42', 'jtbcgdv',
+      'JulienLenne', 'jvkisy', 'k8s-merge-robot', 'Kaffa-MY', 'kaustubhvp', 'keglevich3', 'keith4743', 'ket4yii',
+      'king-julien', 'klaus1982', 'komposebot', 'konstantaroglou', 'koombea-rops', 'kostyrevaa', 'kramshoej',
+      'KubernetesIntership', 'kwinczek', 'lcalcote', 'lcowdrey', 'lendico-dmitry-dzifuta', 'lhampe', 'life360-rops',
+      'linuxpython', 'LittleStan', 'liust2014', 'lixiaobing10051267', 'lordxx', 'lorenzvth7', 'Luxurioust', 'lycoris0731',
+      'm081072', 'mad0house', 'Manko10', 'markfejes', 'markpaychex', 'matesito', 'mattaitchison', 'mehra-ashu',
+      'mengfanjiebay', 'mesmerizingr', 'mhrgoog', 'michael-endsley', 'mikudeko', 'mjbrender', 'mkibbe1993',
+      'mmarcant', 'moon03432', 'morelena', 'mozzymoz', 'msowka-ninja', 'mynameismevin', 'n1tr0g', 'Nagodar', 'natostanco',
+      'nelcy', 'nikitswaraj12345', 'ninkendo', 'nirving-versent', 'nitro3v', 'nivwusquorum', 'noam-fairfly', 'nohupz',
+      'nstoggs', 'oamasood', 'obimod', 'ocsbrandon', 'ok-he', 'oMikeGo', 'OpenJoy', 'ouyanggh', 'pankajsaha',
+      'paulomakdisse', 'paytinka', 'Pes2009k', 'PeterJausovec', 'phofmann-trust', 'pivotal-topher-bullock', 'pixlepix',
+      'pl33g0r', 'pletisan', 'pnzrdrgoon', 'polariss0i', 'poonia0arun', 'psiclops', 'punitag', 'pylior', 'qms880124',
+      'quackenbushman', 'quofelix', 'raeesbhatti', 'raeesiqbal', 'rajitha-wijayaratne', 'randollr', 'rashmimargani',
+      'rastapopulous', 'reach123', 'redhatlinux10', 'rhohan', 'riazkarim', 'richardLuk', 'rifung', 'ripcurld00d',
+      'robertchoi8099', 'robertnie', 'robin-opsguru', 'romlein', 'ronalexander', 'rsahai91', 'rsokolkov', 'runseb',
+      'rvu95', 'ryaneleary', 'ryanp424', 'sachindj', 'sajjadmurtaza-ror', 'saksham0808', 'Scentus', 'scheng1', 'SebErrien',
+      'sebknoth', 'seveillac', 'shepp67', 'sigmundlundgren', 'Simon-lush', 'sindbis', 'sindhuragarapati', 'sinzone',
+      'sjl2024', 'slawiek', 'slouly', 's-miyoshi-fj', 'snowhigh', 'soiff', 'spartacus06', 'srzjulio', 'Stackle', 'stean93',
+      'stefanbueringer', 'Steniaz', 'Steve53', 'stevenbrichards', 'stevenswong', 'sumsuddinshojib', 'sunfaces',
+      'sungwookgit', 'swordphilic', 'SydOps', 'taotaotheripper', 'tavispaquette', 'TaylorLBJ', 'tech2free', 'thaerlo',
+      'thatoldroad', 'thebeardisred', 'thebeefcake', 'thecanadianbaker', 'thedos1701', 'thenamli', 'theo01', 'thinhduckhoi',
+      'thirunavukkarasumca', 'thourfor', 'tinkerdba', 'tmgardner', 'traviscox1990', 'umrigark', 'Usnarski', 'uvgroovy',
+      'vasil-moneybird', 'veverjak', 'viruxel', 'volyihin', 'VsMaX', 'vteves-pf9', 'w00204372', 'wallverb', 'wangxfbelieve',
+      'wenwenwenjun', 'winniwinter', 'WinstonSureChill', 'wo8113596', 'wolfador', 'woodbor', 'worldfirst1', 'xiangli-cmu',
+      'xLegoz', 'XsWack', 'xylin821', 'yangguilei', 'YdnaRa', 'YingBurden', 'yjww', 'ymqytw', 'yoo2767', 'yoshuaalvin',
+      'yslzsl', 'YuquanRen', 'yxu900331', 'Zapadlo', 'ZhangBanger', 'zhaoguoxin', 'zhaoxpZTE', 'zhi-feng', 'zine2hamster',
+      'ZMI-JayGorrell', 'zyren88'
     ]
     octokit_init()
     rate_limit()
@@ -132,6 +181,7 @@ def enchance_json(json_file, csv_file, actors_file)
         e = "#{actor}!users.noreply.github.com"
         puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}, found so far: #{actors_found}"
         u = Octokit.user actor
+        login = u['login']
         n = u['name']
         u['email'] = e
         u['commits'] = 0
@@ -156,6 +206,12 @@ def enchance_json(json_file, csv_file, actors_file)
         puts "Got name: #{u[:name] || u['name']}, login: #{u[:login] || u['login']}"
         h = u.to_h
         data << h
+        if login != actor
+          u2 = u.clone
+          u2['login'] = actor
+          h2 = u2.to_h
+          data << h2
+        end
       rescue Octokit::TooManyRequests => err
         td = rate_limit()
         puts "Too many GitHub requests, sleeping for #{td} seconds"
@@ -182,13 +238,13 @@ def enchance_json(json_file, csv_file, actors_file)
     end
   end
   puts "Processed #{n_users} users, enchanced: #{enchanced}, not found in CSV: #{csv_not_found}, unknowns not found in JSON: #{json_not_found}."
-  puts "Unknown emails from JSON not found in CSV (VIM search pattern):"
-  puts email_unks.join '\|'
-  puts "Unknown names from JSON not found in CSV (VIM search pattern):"
-  puts name_unks.join '\|'
-  puts "Unknown emails from CSV not found in JSON"
-  puts unks2.join("\n")
-  File.write 'not_found_in_json.txt', unks2.join("\n")
+  # puts "Unknown emails from JSON not found in CSV (VIM search pattern):"
+  # puts email_unks.join '\|'
+  # puts "Unknown names from JSON not found in CSV (VIM search pattern):"
+  # puts name_unks.join '\|'
+  # puts "Unknown emails from CSV not found in JSON"
+  # puts unks2.join("\n")
+  # File.write 'not_found_in_json.txt', unks2.join("\n")
 
   # Write JSON back
   json = JSON.pretty_generate data
