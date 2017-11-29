@@ -3,8 +3,7 @@ require 'pry'
 require 'csv'
 require 'Clearbit'
 require 'json'
-#Clearbit.key = ENV['CLEARBIT_KEY']
-Clearbit.key = 'sk_ab962f5c253faf729edffbe5ec28c23e'
+Clearbit.key = ENV['CLEARBIT_KEY']
 line_num = 0
 start_found = false
 em_li = []
