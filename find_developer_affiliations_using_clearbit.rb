@@ -1,9 +1,11 @@
 # gem install clearbit
+# requires ruby 2.3 or above
 require 'pry'
 require 'csv'
 require 'Clearbit'
 require 'json'
 Clearbit.key = ENV['CLEARBIT_KEY']
+Clearbit.key = 'sk_ab962f5c253faf729edffbe5ec28c23e'
 line_num = 0
 start_found = false
 em_li = []
@@ -17,12 +19,9 @@ text.each_line do |line|
     next
   end
   if start_found
-    if (sl[0] == '(Unknown)' || sl[0] == 'NotFound')
+    if sl[0] == '(Unknown)' || sl[0] == 'NotFound'
       em_li.push sl[1]
       line_num += 1
-      #if (line_num == 1)
-        #puts "#{sl[1]}"
-      #end
     else
       break
     end
