@@ -119,7 +119,7 @@ suggestions.each do |sg|
 	#if email found and has something other than self or notfound but new data has something, overwrite
 	#if data record is new, add
 
-	ec = "#{sg[0]} #{sg[1]}}\n"
+	ec = "#{sg[0]} #{sg[1]}\n"
 	if !['Self', 'NotFound'].include? "#{sg[1]}"
 		if ! text.include? "#{ec}"
 			# append to end
@@ -147,6 +147,13 @@ File.open('cncf-config/email-map', "w") {|file| file.puts text }
 puts "altered the email-map file with Clearbit suggestions"
 puts "altered #{ur} records}"
 puts "added #{ar} records}"
+
+new_array = File.readlines('cncf-config/email-map').sort
+File.open('cncf-config/email-map',"w") do |file|
+  file.puts new_array
+end
+
+puts "sorted email-map"
 
 puts "all done"
 
