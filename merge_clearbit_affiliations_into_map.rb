@@ -61,6 +61,7 @@ def correct_company_name(c_n)
 	c_n.sub!" LTD.,", ""
 	c_n.sub!" LTD.,", ""
 	c_n.sub!" PLC", ""
+	c_n.sub!" S.à r.L.", ""
 	c_n.sub!(/^@/, "")
 	#puts "returned #{c_n}"
 	#binding.pry
@@ -69,7 +70,7 @@ end
 
 def check_for_self_employment(c_n)
 	cn = c_n.downcase
-	if (cn.include? "learning") || (cn.include? "university") || (cn.include? "institute") then
+	if (cn.include? "learning") || (cn.include? "university") || (cn.include? "institute") || (cn.include? "school") then
 	   c_n = "Self"
 	end
 	return c_n
