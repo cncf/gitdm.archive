@@ -5,7 +5,7 @@ require 'csv'
 require 'Clearbit'
 require 'json'
 #Clearbit.key = ENV['CLEARBIT_KEY']
-Clearbit.key = 'sk_ab962f5c253faf729edffbe5ec28c23e'
+# !!! !!! !!! ask Rad at cabalrd@yahoo.com for an API key under a user set up for enrichment subscription !!! !!! !!!
 line_num = 0
 start_found = false
 em_li = []
@@ -32,14 +32,14 @@ end
 print "line count #{line_num}\n"
 
 #puts em_li.inspect
-chk_cnt = 0
+chk_cnt = 1
 
 ok_cnt = bad_cnt = err_cnt = 0
 
 CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
   csv << ["email","chance","affiliation_suggestion","hashed_email","first_name", "last_name", "full_name", "gender", "localization", "bio", "site", "avatar", "employment_name", "employment_domain", "github_handle", "github_company", "github_blog", "linkedin_handle", "googleplus_handle", "aboutme_handle", "gravatar_handle", "aboutme_bio" ]
   em_li.each do |ae|
-    if chk_cnt < 1234 #    !!!!!     THIS is the max NUMBER of emails to PROCESS in this BATCH    !!!!!
+    if chk_cnt <= 1234 #    !!!!!     THIS is the max NUMBER of emails to PROCESS in this BATCH    !!!!!
       em_il = ae.sub('!','@')
       begin
         result = Clearbit::Enrichment.find(email: em_il, stream: true)
@@ -68,17 +68,17 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
           suggestion = r
           csv << ["#{p.email}","#{chance}","#{suggestion}","#{ae}","#{p.name.given_name}","#{p.name.family_name}","#{p.name.fullName}","#{p.gender}","#{p.location}","#{p.bio}","#{p.site}","#{p.avatar}","#{p.employment.name}","#{p.employment.domain}","#{p.github.handle}","#{p.github.company}","#{p.github.blog}","#{p.linkedin.handle}","#{p.googleplus.handle}","#{p.aboutme.handle}","#{p.gravatar.handle}","#{p.aboutme.bio}"]
           ok_cnt += 1
-          puts 'got an enrichment'
+          puts "#{chk_cnt} got an enrichment"
         rescue StandardError => bang
         hash = JSON[bang]
         hash = JSON.parse(hash)
         if hash.index("email_invalid")
           csv << ["#{ae}","none","","error","invalid", "email", "address"]
           bad_cnt += 1
-          puts 'received a bad email msg'
+          puts "#{chk_cnt} received a bad email msg"
         else
           csv << ["#{ae}","none","","error","bad", "response"]
-          puts bang
+          puts "#{chk_cnt} #{bang}"
           err_cnt += 1
         end
       end
