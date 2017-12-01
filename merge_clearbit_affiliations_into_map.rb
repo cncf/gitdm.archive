@@ -96,8 +96,8 @@ end
 def normalize_ghostcloud(a_s)
 	#change GhostCloud … to SoundCloud
 	cn = a_s&.downcase
-	if cn&.include? "goundcloud "
-		a_s = "GoundCloud"
+	if cn&.include? "ghostcloud "
+		a_s = "CNCF"
 	end
 	return a_s
 end
