@@ -29,7 +29,7 @@ text.each_line do |line|
   #em_li.sort!
 end
 
-print "line_count #{line_num}\n"
+print "line count #{line_num}\n"
 
 #puts em_li.inspect
 chk_cnt = 0
@@ -46,25 +46,36 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
           p = result.person
           suggestion = ''
           c = "none"
-          r = nil
+          pfn = "#{p&.name&.given_name}".downcase
+          pln = "#{p&.name&.family_name}".downcase
           #binding.pry
+          if !p&.employment&.name.nil? && (p.employment.name == "#{pfn}#{pln}" || p.employment.name == "#{pfn} #{pln}")
+            r = "Self"
+            chance = "none"
+          end
+          if !p&.employment&.name.nil? && (p.employment.name.downcase.include? "university") && (p.employment.name.downcase.include? "institute") && (p.employment.name.downcase.include? "academy") && !p&.github&.company.nil? && p.github.company != ""
+            r = p.github.company
+            chance = "low"
+          end
           if !p&.github&.company.nil? && p.github.company != ""
             r = p.github.company
             chance = "mid"
           end
-          if !p&.employment&.name.nil? && p.employment.name != ""
+          if !p&.employment&.name.nil? && p.employment.name != "" && p.employment.name != "GitHub"
             r = p.employment.name
             chance = "high"
           end          
           suggestion = r
           csv << ["#{p.email}","#{chance}","#{suggestion}","#{ae}","#{p.name.given_name}","#{p.name.family_name}","#{p.name.fullName}","#{p.gender}","#{p.location}","#{p.bio}","#{p.site}","#{p.avatar}","#{p.employment.name}","#{p.employment.domain}","#{p.github.handle}","#{p.github.company}","#{p.github.blog}","#{p.linkedin.handle}","#{p.googleplus.handle}","#{p.aboutme.handle}","#{p.gravatar.handle}","#{p.aboutme.bio}"]
           ok_cnt += 1
+          puts 'got an enrichment'
         rescue StandardError => bang
         hash = JSON[bang]
         hash = JSON.parse(hash)
         if hash.index("email_invalid")
           csv << ["#{ae}","none","","error","invalid", "email", "address"]
           bad_cnt += 1
+          puts 'received a bad email msg'
         else
           csv << ["#{ae}","none","","error","bad", "response"]
           puts bang

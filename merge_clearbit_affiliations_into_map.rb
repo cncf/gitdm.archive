@@ -116,7 +116,7 @@ CSV.foreach('developer_affiliation_lookup.csv', headers: true) do |row|
 	# add emails with no company as NotFound
 	# if company is name associated with email, do Self
 	# base on columns: chance, affiliation_suggestion, hashed_email
-	if ['high','mid'].include? h['chance']
+	if ['high','mid','low'].include? h['chance']
 		a_s = correct_company_name(a_s)
 		a_s = check_for_self_employment(a_s)
 		a_s = normalize_samsung(a_s)
