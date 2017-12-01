@@ -46,9 +46,8 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
           p = result.person
           suggestion = ''
           c = "none"
-          
+          r = nil
           #binding.pry
-
           if !p&.github&.company.nil? && p.github.company != ""
             r = p.github.company
             chance = "mid"
@@ -80,4 +79,3 @@ puts "done processing with Clearbit"
 puts "count of found: #{ok_cnt}"
 puts "count of bad emails: #{bad_cnt}"
 puts "count of errored-out: #{err_cnt}"
-

@@ -45,12 +45,10 @@ end
 def check_for_self_employment(a_s)
 	cn = a_s&.downcase
 	selfies = ["learning","university","institute","school","software engineer","self-employed","self employed","evangelist","enthusiast","self"]
-	if a_s == "University of Michigan"
-		binding.pry
-	end
-
-	if selfies.include? "#{cn}"
-	   a_s = "Self"
+	selfies.each do |selfie|	
+		if cn.include? selfie
+		   a_s = "Self"
+		end
 	end
 	return a_s
 end
@@ -146,22 +144,31 @@ suggestions.each do |sg|
 	#if email found and has something other than self or notfound but new data has something, overwrite
 	#if data record is new, add
 
-	ec = "#{sg[0]} #{sg[1]}\n" #new entry based on Clearbit
+	ech = "#{sg[0]} #{sg[1]}"
+	ect = "#{ech}\n" #new entry based on Clearbit
 
 	if !['Self', 'NotFound'].include? sg[1]
-		if ! text.include? "#{ec}"
-			# append to end
-			text << ec
-			ar += 1
+		if !text.include? ect
+			# append to end if the email does not already have a company assigment
+			short_list = []
+			map_list.each do |ml|
+				if ml[0] == sg[0]
+					short_list.push "#{ml[0]} #{ml[1]}"
+				end
+			end
+			if !short_list.include? ech
+				text << ect
+				ar += 1
+			end
 		end
 	else
-		if (text.include? "#{sg[0]} Self") && (!['Self', 'NotFound'].include? "#{sg[1]}")
+		if (!['Self', 'NotFound'].include? "#{sg[1]}") && (text.include? "#{sg[0]} Self")
 			# replace existing Self with a company
-			text = text.gsub(/#{sg[0]} Self/, "#{ec}")
+			text = text.gsub(/#{sg[0]} Self/, "#{ect}")
 			ur += 1
-		elsif (text.include? "#{sg[0]} NotFound") && "#{sg[1]}" == 'Self'
+		elsif "#{sg[1]}" == 'Self' && (text.include? "#{sg[0]} NotFound")
 			# replace existing NotFound with Self
-			text = text.gsub(/#{sg[0]} NotFound/, "#{ec}")
+			text = text.gsub(/#{sg[0]} NotFound/, "#{ect}")
 			ur += 1
 		end
 	end
@@ -183,8 +190,3 @@ end
 puts "sorted email-map"
 
 puts "all done"
-
-
-
-
-
