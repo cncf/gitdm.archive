@@ -28,80 +28,106 @@ text.each_line do |line|
 end
 puts "found #{line_num} mappings in email-map file"
 
-def correct_company_name(c_n)
-	#puts "received #{c_n}"
-	#We don't want suffixes like: Co., Ltd., Corp., Inc., Limited., LLC, Group. in names.
-	c_n.sub!" GmbH & Co.", ""
-	c_n.sub!" S.A.", ""
-	c_n.sub!" Co.,", ""
-	c_n.sub!" Co.", ""
-	c_n.sub!" Co.", ""
-	c_n.sub!" Corp.,", ""
-	c_n.sub!" Corp.", ""
-	c_n.sub!" Corp", ""
-	c_n.sub!" GmbH.,", ""
-	c_n.sub!" GmbH.", ""
-	c_n.sub!" GmbH", ""
-	c_n.sub!" Group.,", ""
-	c_n.sub!" Group.", ""
-	c_n.sub!" Group", ""
-	c_n.sub!" Inc.,", ""
-	c_n.sub!" Inc.", ""
-	c_n.sub!" Inc", ""
-	c_n.sub!" Limited.,", ""
-	c_n.sub!" Limited.", ""
-	c_n.sub!" Limited", ""
-	c_n.sub!" LLC.,", ""
-	c_n.sub!" LLC.,", ""
-	c_n.sub!" LLC.,", ""
-	c_n.sub!" Ltd.,", ""
-	c_n.sub!" Ltd.", ""
-	c_n.sub!" Ltd", ""
-	c_n.sub!" LTD,", ""
-	c_n.sub!" LTD.,", ""
-	c_n.sub!" LTD.,", ""
-	c_n.sub!" PLC", ""
-	c_n.sub!" S.à r.L.", ""
-	c_n.sub!(/^@/, "")
-	#puts "returned #{c_n}"
+def correct_company_name(a_s)
+	#puts "received #{a_s}"
+	#remove suffixes like: Co., Ltd., Corp., Inc., Limited., LLC, Group. from company names.
+	ra = [" GmbH & Co."," S.A."," Co.,"," Co."," Co"," Corp.,"," Corp."," Corp"," GmbH.,"," GmbH."," GmbH"," Group.,"," Group."," Group"," Inc.,", " Inc."," Inc"," Limited.,"," Limited."," Limited"," LLC.,"," LLC."," LLC"," Ltd.,"," Ltd."," Ltd"," PLC"," S.à r.L."]
+	ra.each do |sg|
+		a_s.sub!(sg,"")
+	end
+	a_s.sub!(/^@/, "")    #remove begigging @
+	a_s.sub!(/.com$/, "") #remove ending .com
+	#puts "returned #{a_s}"
 	#binding.pry
-    return c_n
+    return a_s
 end
 
-def check_for_self_employment(c_n)
-	cn = c_n.downcase
-	if (cn.include? "learning") || (cn.include? "university") || (cn.include? "institute") || (cn.include? "school") then
-	   c_n = "Self"
+def check_for_self_employment(a_s)
+	cn = a_s&.downcase
+	selfies = ["learning","university","institute","school","software engineer","self-employed","self employed","evangelist","enthusiast","self"]
+	if a_s == "University of Michigan"
+		binding.pry
 	end
-	return c_n
+
+	if selfies.include? "#{cn}"
+	   a_s = "Self"
+	end
+	return a_s
 end
 
-def normalize_samsung(c_n)
+def normalize_samsung(a_s)
 	#Samsung SDS is separate from other Samsung 
-	#Samsundg Co., Samsung corp., Samsung Electronics, Samsung Mobile etc. They're all just Samsung.
-	#Also normalize samsung, Samsung, SAMSUNG etc.
-	cn = c_n.downcase
-	if cn.include? "samsung"
-		c_n.gsub(/samsung/i, 'Samsung')
+	#Samsundg Co., Samsung corp., Samsung Electronics, Samsung Mobile etc. They're all just Samsung, proper case
+	cn = a_s&.downcase
+	if cn&.include? "samsung"
+		a_s.gsub(/samsung/i, 'Samsung')
 	end
-	if c_n.downcase == 'samsung electronics' || c_n.downcase == 'samsung mobile' then
-		c_n = 'Samsung'
+	if ['samsung electronics','samsung mobile'].include? "#{cn}"
+		a_s = 'Samsung'
 	end
-	return c_n
+	return a_s
+end
+
+def normalize_hewlettpackard(a_s)
+	#HP and Hewlett-Packard to HPE
+	cn = a_s&.downcase
+	if ['hewlett-packard','hewlettpackard','hewlett packard','hp'].include? "#{cn}"
+		a_s = 'HPE'
+	end
+	return a_s
+end
+
+def normalize_amazonwebservices(a_s)
+	#change Amazon Web Services to AWS
+	cn = a_s&.downcase
+	if cn&.include? "amazon web services"
+		a_s = "AWS"
+	end
+	return a_s
+end
+
+def normalize_soundcloud(a_s)
+	#change SoundCloud … to SoundCloud
+	cn = a_s&.downcase
+	if cn&.include? "soundcloud "
+		a_s = "SoundCloud"
+	end
+	return a_s
+end
+
+def normalize_ghostcloud(a_s)
+	#change GhostCloud … to SoundCloud
+	cn = a_s&.downcase
+	if cn&.include? "goundcloud "
+		a_s = "GoundCloud"
+	end
+	return a_s
+end
+
+def normalize_possessive(a_s)
+	#remove ' if company ends with '
+	a_s&.sub!(/'$/, "")
+    return a_s
 end
 
 suggestions = []
 CSV.foreach('developer_affiliation_lookup.csv', headers: true) do |row|
 	next if is_comment row
 	h = row.to_h
-	# only add emails with companies
+	a_s = h['affiliation_suggestion']
+	# add emails with no company as NotFound
 	# if company is name associated with email, do Self
-	# base on: chance, affiliation_suggestion, hashed_email columns
-	if h['chance'] == "high" || h['chance'] == "mid"
-		s_c = correct_company_name(h['affiliation_suggestion'])
-		s_c = check_for_self_employment(s_c)
-		s_c = normalize_samsung(s_c)
-		suggestion = [ h['hashed_email'], s_c ]
+	# base on columns: chance, affiliation_suggestion, hashed_email
+	if ['high','mid'].include? h['chance']
+		a_s = correct_company_name(a_s)
+		a_s = check_for_self_employment(a_s)
+		a_s = normalize_samsung(a_s)
+		a_s = normalize_hewlettpackard(a_s)
+		a_s = normalize_amazonwebservices(a_s)
+		a_s = normalize_soundcloud(a_s)
+		a_s = normalize_ghostcloud(a_s)
+		a_s = normalize_possessive(a_s)
+		suggestion = [ h['hashed_email'], a_s ]
 		#binding.pry
 		suggestions.push suggestion
 	else #add Unknowns
@@ -120,8 +146,9 @@ suggestions.each do |sg|
 	#if email found and has something other than self or notfound but new data has something, overwrite
 	#if data record is new, add
 
-	ec = "#{sg[0]} #{sg[1]}\n"
-	if !['Self', 'NotFound'].include? "#{sg[1]}"
+	ec = "#{sg[0]} #{sg[1]}\n" #new entry based on Clearbit
+
+	if !['Self', 'NotFound'].include? sg[1]
 		if ! text.include? "#{ec}"
 			# append to end
 			text << ec
@@ -132,8 +159,7 @@ suggestions.each do |sg|
 			# replace existing Self with a company
 			text = text.gsub(/#{sg[0]} Self/, "#{ec}")
 			ur += 1
-		end
-		if (text.include? "#{sg[0]} NotFound") && "#{sg[1]}" == 'Self'
+		elsif (text.include? "#{sg[0]} NotFound") && "#{sg[1]}" == 'Self'
 			# replace existing NotFound with Self
 			text = text.gsub(/#{sg[0]} NotFound/, "#{ec}")
 			ur += 1
@@ -146,7 +172,7 @@ end
 File.open('cncf-config/email-map', "w") {|file| file.puts text }
 
 puts "altered the email-map file with Clearbit suggestions"
-puts "altered #{ur} records}"
+puts "updated #{ur} records}"
 puts "added #{ar} records}"
 
 new_array = File.readlines('cncf-config/email-map').sort
