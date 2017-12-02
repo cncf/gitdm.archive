@@ -6,7 +6,6 @@ require 'Clearbit'
 require 'json'
 #Clearbit.key = ENV['CLEARBIT_KEY']
 # !!! !!! !!! ask Rad at cabalrd@yahoo.com for an API key under a user set up for enrichment subscription !!! !!! !!!
-Clearbit.key = 'sk_ab962f5c253faf729edffbe5ec28c23e'
 line_count = 0
 start_found = false
 email_list = []
@@ -37,10 +36,10 @@ check_cnt = 1
 
 ok_cnt = bad_cnt = err_cnt = 0
 
-CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
+CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
   csv << ['email','chance','affiliation_suggestion','hashed_email','first_name', 'last_name', 'full_name', 'gender', 'localization', 'bio', 'site', 'avatar', 'employment_name', 'employment_domain', 'github_handle', 'github_company', 'github_blog', 'linkedin_handle', 'googleplus_handle', 'aboutme_handle', 'gravatar_handle', 'aboutme_bio' ]
   email_list.each do |email_with_at|
-    if check_cnt <= 7 #    !!!!!     THIS is the max NUMBER of emails to PROCESS in this BATCH    !!!!!
+    if check_cnt <= 1234 #    !!!!!     THIS is the max NUMBER of emails to PROCESS in this BATCH    !!!!!
       email_with_exclamation = email_with_at.sub('!','@')
       begin
         result = Clearbit::Enrichment.find(email: email_with_exclamation, stream: true)
