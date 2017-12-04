@@ -3,6 +3,7 @@ require 'octokit'
 require 'json'
 require 'securerandom'
 require './email_code'
+require './ghapi'
 
 # Ask each repo for commits newer than...
 start_date = '2012-07-01'
@@ -164,17 +165,8 @@ repos = [
   'kubernetes/website'
 ]
 
-# It tries to call GitHub only twice per repo (general repo data & commits), then saves data JSON to files
-# If file is saved (2 per repo) - it is read isnstead of quering GitHub
-def rate_limit()
-  rl = Octokit.rate_limit
-  puts "Your rate limit is: limit=#{rl.limit}, remaining=#{rl.remaining}, resets_at=#{rl.resets_at}, resets_in=#{rl.resets_in}"
-  (rl.resets_at - Time.now).to_i + 1
-end
-
 # args[0]: 1st arg is: 'r' - force repos metadata fetch, 'c' - force commits fetch, 'u' force users fetch
 def ghusers(repos, start_date, args)
-
   # Args processing
   force_repo = false
   force_commits = false
@@ -182,21 +174,8 @@ def ghusers(repos, start_date, args)
   force_repo = true if args.length > 0 && args[0].downcase.include?('r')
   force_commits = true if args.length > 0 && args[0].downcase.include?('c')
   force_users = true if args.length > 0 && args[0].downcase.include?('u')
-  # Auto paginate results, this uses maximum page size 100 internally and calls API # of results / 100 times.
-  Octokit.auto_paginate = true
 
-  # Login with standard OAuth token
-  # https://github.com/settings/tokens --> Personal access tokens
-  client = Octokit::Client.new access_token: File.read('/etc/github/oauth').strip
-  user = client.user
-  user.login
-
-  # Increase rate limit from 60 to 5000
-  # You will need Your own client_id & client_secret
-  # See: https://github.com/settings/ --> OAuth application
-  Octokit.client_id = File.read('/etc/github/client_id').strip
-  Octokit.client_secret = File.read('/etc/github/client_secret').strip
-  # user = Octokit.user 'some_github_username'
+  octokit_init()
 
   rate_limit()
   puts "Type exit-program if You want to exit"
@@ -278,7 +257,8 @@ def ghusers(repos, start_date, args)
   # Now analysis of different authors
   puts "Commits analysis..."
   skip_logins = [
-    'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', '', nil
+    'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]',
+    '', nil
   ]
   email2github = {}
   n_commits = 0
@@ -296,7 +276,7 @@ def ghusers(repos, start_date, args)
       h[author['email']] = author['login']
       h[committer['email']] = committer['login']
       h.each do |email, login|
-        next unless email.include?('@')
+        next unless email.include?('!')
         next if email == nil || email == ''
         next if skip_logins.include?(login)
         if email2github.key?(email)
