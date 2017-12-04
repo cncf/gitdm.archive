@@ -6,9 +6,9 @@ require 'pry'
 require 'csv'
 require 'Clearbit'
 require 'json'
-# Clearbit.key = ENV['CLEARBIT_KEY']
-# !!! !!! !!! ask Rad at cabalrd@yahoo.com for an API key under
-# a user set up for enrichment subscription !!! !!! !!!
+Clearbit.key = ENV['CLEARBIT_KEY']
+# ask Rad at cabalrd@yahoo.com for an API key
+# from a user set up for enrichment subscription
 line_count = 0
 start_found = false
 email_list = []
@@ -20,7 +20,7 @@ text.each_line do |line|
   if !start_found && line_word_array[0] == 'Developers'
     start_found = true
   else
-    next unless (['(Unknown)', 'NotFound'].include? line_word_array[0])
+    next unless ['(Unknown)', 'NotFound'].include? line_word_array[0]
     email_list.push line_word_array[1]
     line_count += 1
   end
@@ -34,10 +34,12 @@ check_cnt = 1
 
 ok_cnt = bad_cnt = err_cnt = 0
 
-CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
-  header_row = %w[email chance affiliation_suggestion hashed_email first_name last_name full_name gender localization]
-  header_row << %w[bio site avatar employment_name employment_domain github_handle github_company github_blog]
-  header_row << %w[googleplus_handle aboutme_handle gravatar_handle aboutme_bio]
+CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
+  header_row = %w[email chance affiliation_suggestion hashed_email first_name]
+  header_row << %w[last_name full_name gender localization bio site avatar]
+  header_row << %w[employment_name employment_domain github_handle]
+  header_row << %w[github_company github_blog googleplus_handle]
+  header_row << %w[aboutme_handle gravatar_handle aboutme_bio]
   header_row.flatten!
   csv << header_row
   email_list.each do |email_with_at|
@@ -45,10 +47,11 @@ CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
     break if check_cnt > 1234
     email_with_exclamation = email_with_at.sub('!', '@')
     begin
-      result = Clearbit::Enrichment.find(email: email_with_exclamation, stream: true)
+      result =
+        Clearbit::Enrichment.find(email: email_with_exclamation, stream: true)
       person = result.person
-      temp_suggestion = ''
-      chance = ''
+      temp_suggestion = 'NotFound'
+      chance = 'none'
       first_name = person&.name&.given_name&.downcase
       last_name = person&.name&.family_name&.downcase
       # binding.pry
@@ -58,7 +61,8 @@ CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
         temp_suggestion = 'Self'
         chance = 'none'
       end
-      if !person&.employment&.name.nil? && (person.employment.name.downcase.include? 'university') &&
+      if !person&.employment&.name.nil? &&
+         (person.employment.name.downcase.include? 'university') &&
          (person.employment.name.downcase.include? 'institute') &&
          (person.employment.name.downcase.include? 'academy') &&
          !person&.github&.company.nil? && person.github.company != ''
@@ -69,16 +73,21 @@ CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
         temp_suggestion = person.github.company
         chance = 'mid'
       end
-      if !person&.employment&.name.nil? && person.employment.name != '' && person.employment.name != 'GitHub'
+      if !person&.employment&.name.nil? && person.employment.name != '' &&
+         person.employment.name != 'GitHub'
         temp_suggestion = person.employment.name
         chance = 'high'
       end
       suggestion = temp_suggestion
-      csv_row = [person.email, chance, suggestion, email_with_at, person.name.given_name, person.name.family_name]
-      csv_row.concat([person.name.fullName, person.gender, person.location, person.bio, person.site, person.avatar])
-      csv_row.concat([person.employment.name, person.employment.domain, person.github.handle])
-      csv_row.concat([person.github.company, person.github.blog, person.linkedin.handle, person.googleplus.handle])
-      csv_row.concat([person.aboutme.handle, person.gravatar.handle, person.aboutme.bio])
+      csv_row = [person.email, chance, suggestion, email_with_at]
+      csv_row.concat([person.name.given_name, person.name.family_name])
+      csv_row.concat([person.name.fullName, person.gender, person.location])
+      csv_row.concat([person.bio, person.site, person.avatar])
+      csv_row.concat([person.employment.name, person.employment.domain])
+      csv_row.concat([person.github.handle, person.github.company])
+      csv_row.concat([person.github.blog, person.linkedin.handle])
+      csv_row.concat([person.googleplus.handle, person.aboutme.handle])
+      csv_row.concat([person.gravatar.handle, person.aboutme.bio])
       csv << csv_row
       ok_cnt += 1
       puts "#{check_cnt} got an enrichment"
@@ -86,11 +95,11 @@ CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
       hash = JSON[bang]
       hash = JSON.parse(hash)
       if hash.index('email_invalid')
-        csv << [email_with_at, 'none', '', 'error', 'invalid', 'email', 'address']
+        csv << [email_with_at, 'none', 'NotFound', 'bad', 'email', 'address']
         bad_cnt += 1
         puts "#{check_cnt} received a bad email msg"
       else
-        csv << [email_with_at, 'none', '', 'error', 'bad', 'response']
+        csv << [email_with_at, 'none', 'NotFound', 'error', 'bad', 'response']
         puts "#{check_cnt} #{bang}"
         err_cnt += 1
       end
