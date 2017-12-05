@@ -41,7 +41,7 @@ def correct_company_name(affiliation_suggestion)
   replacements.concat([' Group.,', ' Group.', ' Group', ' Inc.,', ' Inc.'])
   replacements.concat([' Inc', ' Limited.,', ' Limited.', ' Limited'])
   replacements.concat([' LLC.,', ' LLC.', ' LLC', ' Ltd.,', ' Ltd.', ' Ltd'])
-  replacements.concat([' PLC', ' S.à r.L.'])
+  replacements.concat([' PLC', ' S.à r.L.', ', Inc.'])
   replacements.each do |replacement|
     affiliation_suggestion.sub!(replacement, '')
   end
@@ -52,7 +52,7 @@ end
 
 def check_for_self_employment(affiliation_suggestion)
   company_name = affiliation_suggestion&.downcase
-  selfies = %w[learning university institute school]
+  selfies = %w[learning university institute school freelance]
   selfies.concat(['software engineer', 'self-employed'])
   selfies.concat(['self employed', 'evangelist', 'enthusiast', 'self'])
   selfies.each do |selfie|

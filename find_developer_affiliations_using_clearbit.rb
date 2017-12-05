@@ -34,7 +34,7 @@ check_cnt = 1
 
 ok_cnt = bad_cnt = err_cnt = 0
 
-CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
+CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
   header_row = %w[email chance affiliation_suggestion hashed_email first_name]
   header_row << %w[last_name full_name gender localization bio site avatar]
   header_row << %w[employment_name employment_domain github_handle]
@@ -54,12 +54,14 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
       chance = 'none'
       first_name = person&.name&.given_name&.downcase
       last_name = person&.name&.family_name&.downcase
+      person_employment_name_overwrite = true
       # binding.pry
       if !person&.employment&.name.nil? &&
          (person.employment.name == "#{first_name}#{last_name}" ||
          person.employment.name == "#{first_name} #{last_name}")
         temp_suggestion = 'Self'
         chance = 'none'
+        person_employment_name_overwrite = false
       end
       if !person&.employment&.name.nil? &&
          (person.employment.name.downcase.include? 'university') &&
@@ -69,12 +71,14 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
         temp_suggestion = person.github.company
         chance = 'low'
       end
-      if !person&.github&.company.nil? && person.github.company != ''
+      if !person&.github&.company.nil? && person.github.company != '' &&
+         person_employment_name_overwrite
         temp_suggestion = person.github.company
         chance = 'mid'
       end
       if !person&.employment&.name.nil? && person.employment.name != '' &&
-         person.employment.name != 'GitHub'
+         person.employment.name != 'GitHub' &&
+         person_employment_name_overwrite
         temp_suggestion = person.employment.name
         chance = 'high'
       end
