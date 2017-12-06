@@ -19,8 +19,8 @@ text.each_line do |line|
   line_word_array = line.split
   if !start_found && line_word_array[0] == 'Developers'
     start_found = true
-  else
-    next unless ['(Unknown)', 'NotFound'].include? line_word_array[0]
+  elsif start_found
+    break unless ['(Unknown)', 'NotFound'].include? line_word_array[0]
     email_list.push line_word_array[1]
     line_count += 1
   end
@@ -34,7 +34,24 @@ check_cnt = 1
 
 ok_cnt = bad_cnt = err_cnt = 0
 
-CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
+def person_is_a_student(employment_hint)
+  learning_keywords = %w[university institute academy school]
+  result = false
+  learning_keywords.each do |learning_keyword|
+    result = true if employment_hint.include? learning_keyword
+  end
+  return result
+end
+
+def not_a_blank_string(var_to_check)
+  if var_to_check.nil? || !(var_to_check.is_a? String) || var_to_check.empty?
+    return false
+  else
+    return true
+  end
+end
+
+CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
   header_row = %w[email chance affiliation_suggestion hashed_email first_name]
   header_row << %w[last_name full_name gender localization bio site avatar]
   header_row << %w[employment_name employment_domain github_handle]
@@ -45,41 +62,44 @@ CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
   email_list.each do |email_with_at|
     # check_cnt is the max NUMBER of emails to PROCESS in this BATCH
     break if check_cnt > 1234
-    email_with_exclamation = email_with_at.sub('!', '@')
     begin
+      email_with_exclamation = email_with_at.sub('!', '@')
       result =
         Clearbit::Enrichment.find(email: email_with_exclamation, stream: true)
       person = result.person
+      raise 'no response from Clearbit' if result.nil?
+      raise 'no Person node in Clearbit json' if result.person.nil?
+
       temp_suggestion = 'NotFound'
       chance = 'none'
-      first_name = person&.name&.given_name&.downcase
-      last_name = person&.name&.family_name&.downcase
+      first_name = person&.name&.given_name
+      last_name = person&.name&.family_name
+      first_last = "#{first_name}#{last_name}"&.rstrip
+      first_space_last = "#{first_name} #{last_name}".rstrip
+      bad_employment = [first_last, first_space_last]
+      person_company = person&.employment&.name
+      gh_company = person&.github&.company
       person_employment_name_overwrite = true
       # binding.pry
-      if !person&.employment&.name.nil? &&
-         (person.employment.name == "#{first_name}#{last_name}" ||
-         person.employment.name == "#{first_name} #{last_name}")
+      if not_a_blank_string(person_company) &&
+         (bad_employment.include? person_company)
         temp_suggestion = 'Self'
         chance = 'none'
         person_employment_name_overwrite = false
       end
-      if !person&.employment&.name.nil? &&
-         (person.employment.name.downcase.include? 'university') &&
-         (person.employment.name.downcase.include? 'institute') &&
-         (person.employment.name.downcase.include? 'academy') &&
-         !person&.github&.company.nil? && person.github.company != ''
-        temp_suggestion = person.github.company
+      if not_a_blank_string(person_company) &&
+         person_is_a_student(person_company) &&
+         not_a_blank_string(gh_company)
+        temp_suggestion = gh_company
         chance = 'low'
       end
-      if !person&.github&.company.nil? && person.github.company != '' &&
-         person_employment_name_overwrite
+      if !not_a_blank_string(person_company) && not_a_blank_string(gh_company)
         temp_suggestion = person.github.company
         chance = 'mid'
       end
-      if !person&.employment&.name.nil? && person.employment.name != '' &&
-         person.employment.name != 'GitHub' &&
+      if not_a_blank_string(person_company) && person_company != 'GitHub' &&
          person_employment_name_overwrite
-        temp_suggestion = person.employment.name
+        temp_suggestion = person_company
         chance = 'high'
       end
       suggestion = temp_suggestion
@@ -109,7 +129,6 @@ CSV.open('developer_affiliation_lookup_test.csv', 'w') do |csv|
       end
     end
     check_cnt += 1
-    # end
   end
 end
 puts 'done processing with Clearbit'
