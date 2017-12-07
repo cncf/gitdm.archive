@@ -161,18 +161,17 @@ suggestions.each do |suggestion|
         end
       end
       if !short_list.include? email_company_hash
-        if added_mapping_count == 0
-          text << '\n'
+        text << '\n' if added_mapping_count == 0
         text << email_company_line
         added_mapping_count += 1
       end
     end
   else
-    if (text.include? "#{suggestion[0]} Self") && suggestion[1] != 'Self'
+    if text.include?("#{suggestion[0]} Self") && suggestion[1] != 'Self'
       # replace existing Self with a company
       text = text.gsub(/#{suggestion[0]} Self/, email_company_line)
       updated_mapping_count += 1
-    elsif (text.include? "#{suggestion[0]} NotFound") && suggestion[1] == 'Self'
+    elsif text.include?("#{suggestion[0]} NotFound") && suggestion[1] == 'Self'
       # replace existing NotFound with Self
       text = text.gsub(/#{suggestion[0]} NotFound/, email_company_line)
       updated_mapping_count += 1
