@@ -47,6 +47,8 @@ def correct_company_name(affiliation_suggestion)
   end
   affiliation_suggestion.sub!(/^@/, '')    # remove begigging @
   affiliation_suggestion.sub!(/.com$/, '') # remove ending .com
+  affiliation_suggestion.sub!(/,$/, '')    # remove ending comma
+  affiliation_suggestion.sub!(/\/$/, '')   # remove ending slash
   return affiliation_suggestion
 end
 
@@ -159,6 +161,8 @@ suggestions.each do |suggestion|
         end
       end
       if !short_list.include? email_company_hash
+        if added_mapping_count == 0
+          text << '\n'
         text << email_company_line
         added_mapping_count += 1
       end

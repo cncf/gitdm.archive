@@ -66,9 +66,9 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
       email_with_exclamation = email_with_at.sub('!', '@')
       result =
         Clearbit::Enrichment.find(email: email_with_exclamation, stream: true)
-      person = result.person
       raise 'no response from Clearbit' if result.nil?
       raise 'no Person node in Clearbit json' if result.person.nil?
+      person = result.person
 
       temp_suggestion = 'NotFound'
       chance = 'none'
