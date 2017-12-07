@@ -321,6 +321,7 @@ All those tools are automatically called when running full data regenerating scr
 - To automatically find affiliations (email to company) using Clearbit, run two scripts in order:
 	- `ruby find_developer_affiliations_using_clearbit.rb`
 	- `ruby merge_clearbit_affiliations_into_map.rb`
+
 The first one generates a file `developer_affiliation_lookup.csv`. It needs to have a proper value this: 
 	```
 	Clearbit.key = ENV['CLEARBIT_KEY']
