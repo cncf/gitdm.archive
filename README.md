@@ -321,9 +321,9 @@ All those tools are automatically called when running full data regenerating scr
 - To automatically find affiliations (email to company) using Clearbit, run two scripts in order:
 	- `ruby find_developer_affiliations_using_clearbit.rb`
 	- `ruby merge_clearbit_affiliations_into_map.rb`
-The first one generates a file `developer_affiliation_lookup.csv`. It needs to have a proper value for the 
-```
-Clearbit.key = ENV['CLEARBIT_KEY']
-```
-	variable. It is a secret API key on a Clearbit account which has been set up for subscription. When the file is generated, open it in a csv editor, sort by the 'chance' field. Visually check and correct data in the 'affiliation_suggestion' column. Replace values such as 'http://www.ghostcloud.cn/' with 'Ghostcloud'. If you find affiliations for other developers manually, just change the 'none' value in the 'chance' column to  'high' and provide a value in the 'affiliation_suggestion' column. Columns to the right of are not required.
+The first one generates a file `developer_affiliation_lookup.csv`. It needs to have a proper value this: 
+	```
+	Clearbit.key = ENV['CLEARBIT_KEY']
+	```
+	It is a secret API key on a Clearbit account which has been set up for subscription. When the file is generated, open it in a csv editor, sort by the 'chance' field. Visually check and correct data in the 'affiliation_suggestion' column. Replace values such as 'http://www.ghostcloud.cn/' with 'Ghostcloud'. If you find affiliations for other developers manually, just change the 'none' value in the 'chance' column to  'high' and provide a value in the 'affiliation_suggestion' column. Columns to the right of are not required.
 	The second scripts reads the 'developer_affiliation_lookup.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered.
