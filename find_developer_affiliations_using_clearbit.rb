@@ -82,7 +82,7 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
       person_employment_name_overwrite = true
       # binding.pry
       if not_a_blank_string(person_company) &&
-         (bad_employment.include? person_company)
+         bad_employment.include?(person_company)
         temp_suggestion = 'Self'
         chance = 'none'
         person_employment_name_overwrite = false

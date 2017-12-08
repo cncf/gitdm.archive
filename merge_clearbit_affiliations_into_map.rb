@@ -19,14 +19,14 @@ require 'pry'
 require './comment'
 
 line_count = 0
-email_map_list = []
+email_map_array = []
 puts 'reading the email-map file'
 text = File.open('cncf-config/email-map').read
 text.gsub!(/\r\n?/, '\n')
 text.each_line do |line|
   line_word_array = line.gsub(/\s+/m, ' ').strip.split(' ')
   if line_word_array[0] != '#'
-    email_map_list.push line_word_array
+    email_map_array.push line_word_array
     line_count += 1
   end
 end
@@ -41,20 +41,20 @@ def correct_company_name(affiliation_suggestion)
   replacements.concat([' Group.,', ' Group.', ' Group', ' Inc.,', ' Inc.'])
   replacements.concat([' Inc', ' Limited.,', ' Limited.', ' Limited'])
   replacements.concat([' LLC.,', ' LLC.', ' LLC', ' Ltd.,', ' Ltd.', ' Ltd'])
-  replacements.concat([' PLC', ' S.à r.L.', ', Inc.'])
+  replacements.concat([' PLC', ' S.à r.L.', ', Inc.', ', gmbh'])
   replacements.each do |replacement|
     affiliation_suggestion.sub!(replacement, '')
   end
-  affiliation_suggestion.sub!(/^@/, '')    # remove begigging @
-  affiliation_suggestion.sub!(/.com$/, '') # remove ending .com
-  affiliation_suggestion.sub!(/,$/, '')    # remove ending comma
-  affiliation_suggestion.sub!(/\/$/, '')   # remove ending slash
+  affiliation_suggestion.sub!(/^@/, '') # remove begigging @
+  # affiliation_suggestion.sub!(/.com$/, '') # remove ending .com
+  affiliation_suggestion.sub!(/,$/, '') # remove ending comma
+  affiliation_suggestion.sub!(%r{/\/$/}, '') # remove ending slash
   return affiliation_suggestion
 end
 
 def check_for_self_employment(affiliation_suggestion)
   company_name = affiliation_suggestion&.downcase
-  selfies = %w[learning university institute school freelance]
+  selfies = %w[learning university institute school freelance student]
   selfies.concat(['software engineer', 'self-employed'])
   selfies.concat(['self employed', 'evangelist', 'enthusiast', 'self'])
   selfies.each do |selfie|
@@ -117,6 +117,7 @@ CSV.foreach('developer_affiliation_lookup.csv', headers: true) do |row|
   next if is_comment row
   affiliation_hash = row.to_h
   affiliation_suggestion = affiliation_hash['affiliation_suggestion']
+  hashed_email = affiliation_hash['email'].sub('@', '!')
   # base on columns: chance, affiliation_suggestion, hashed_email
   if %w[high mid low none].include? affiliation_hash['chance']
     # puts "a #{affiliation_suggestion}"
@@ -129,10 +130,10 @@ CSV.foreach('developer_affiliation_lookup.csv', headers: true) do |row|
     affiliation_suggestion = fix_ghostcloud(affiliation_suggestion)
     affiliation_suggestion = fix_possessive(affiliation_suggestion)
     # puts "b #{affiliation_suggestion}"
-    suggestion = [affiliation_hash['hashed_email'], affiliation_suggestion]
+    suggestion = [hashed_email, affiliation_suggestion]
     # binding.pry
   else # add Unknowns
-    suggestion = [affiliation_hash['hashed_email'], 'NotFound']
+    suggestion = [hashed_email, 'NotFound']
   end
   suggestions.push suggestion
 end
@@ -144,38 +145,25 @@ text = File.read('cncf-config/email-map')
 suggestions.each do |suggestion|
   # suggestion[1] can be a company name or Self or NotFound
 
+  # if data record is new then add
   # if email found and has something other than self or notfound
-  # but new data has something then overwrite
-  # if data record is new, add
+  # but new data has something then overwrite conditions based
 
+  # new entry based on Clearbit
   email_company_hash = "#{suggestion[0]} #{suggestion[1]}"
-  email_company_line = "#{email_company_hash}\n" # new entry based on Clearbit
 
-  if !%w[Self NotFound].include? suggestion[1]
-    if !text.include? email_company_line
-      # append to end if the email does not already have a company assigment
-      short_list = []
-      email_map_list.each do |mapping_line|
-        if mapping_line[0] == suggestion[0]
-          short_list.push "#{mapping_line[0]} #{mapping_line[1]}"
-        end
-      end
-      if !short_list.include? email_company_hash
-        text << '\n' if added_mapping_count == 0
-        text << email_company_line
-        added_mapping_count += 1
-      end
-    end
-  else
-    if text.include?("#{suggestion[0]} Self") && suggestion[1] != 'Self'
-      # replace existing Self with a company
-      text = text.gsub(/#{suggestion[0]} Self/, email_company_line)
-      updated_mapping_count += 1
-    elsif text.include?("#{suggestion[0]} NotFound") && suggestion[1] == 'Self'
-      # replace existing NotFound with Self
-      text = text.gsub(/#{suggestion[0]} NotFound/, email_company_line)
-      updated_mapping_count += 1
-    end
+  short_list = []
+  email_map_array.each do |mapping_line|
+    short_list.push mapping_line if mapping_line[0] == suggestion[0]
+  end
+  short_list_size = short_list.size
+  if short_list_size.zero?
+    text << "\n#{email_company_hash}"
+    added_mapping_count += 1
+  elsif short_list_size == 1 && short_list[0][1] == 'Self' &&
+        !%w[Self NotFound].include?(suggestion[1])
+    text = text.gsub(/#{suggestion[0]} Self/, email_company_hash)
+    updated_mapping_count += 1
   end
 end
 
@@ -183,8 +171,8 @@ end
 File.open('cncf-config/email-map', 'w') { |file| file.puts text }
 
 puts 'altered the email-map file with Clearbit suggestions'
-puts "updated #{updated_mapping_count} records}"
-puts "added #{added_mapping_count} records}"
+puts "updated #{updated_mapping_count} records"
+puts "added #{added_mapping_count} records"
 
 new_array = File.readlines('cncf-config/email-map').sort
 File.open('cncf-config/email-map', 'w') do |file|
