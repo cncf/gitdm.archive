@@ -58,7 +58,7 @@ def check_for_self_employment(affiliation_suggestion)
   selfies.concat(['software engineer', 'self-employed', 'independent'])
   selfies.concat(['self employed', 'evangelist', 'enthusiast', 'self'])
   selfies.each do |selfie|
-    affiliation_suggestion = 'independent' if company_name&.include? selfie
+    affiliation_suggestion = 'Independent' if company_name&.include? selfie
   end
   return affiliation_suggestion
 end
