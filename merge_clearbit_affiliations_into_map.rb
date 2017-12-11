@@ -55,7 +55,7 @@ end
 def check_for_self_employment(affiliation_suggestion)
   company_name = affiliation_suggestion&.downcase
   selfies = %w[learning university institute school freelance student]
-  selfies.concat(['software engineer', 'self-employed'])
+  selfies.concat(['software engineer', 'self-employed', 'independent'])
   selfies.concat(['self employed', 'evangelist', 'enthusiast', 'self'])
   selfies.each do |selfie|
     affiliation_suggestion = 'Self' if company_name&.include? selfie
