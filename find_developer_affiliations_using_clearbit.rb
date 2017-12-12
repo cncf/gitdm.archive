@@ -59,13 +59,13 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
   header_row << %w[aboutme_handle gravatar_handle aboutme_bio]
   header_row.flatten!
   csv << header_row
-  email_list.each do |email_with_at|
+  email_list.each do |email_with_exclamation|
     # check_cnt is the max NUMBER of emails to PROCESS in this BATCH
     break if check_cnt > 1234
     begin
-      email_with_exclamation = email_with_at.sub('!', '@')
+      email_with_at = email_with_exclamation.sub('!', '@')
       result =
-        Clearbit::Enrichment.find(email: email_with_exclamation, stream: true)
+        Clearbit::Enrichment.find(email: email_with_at, stream: true)
       raise 'no response from Clearbit' if result.nil?
       raise 'no Person node in Clearbit json' if result.person.nil?
       person = result.person
@@ -103,7 +103,7 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
         chance = 'high'
       end
       suggestion = temp_suggestion
-      csv_row = [person.email, chance, suggestion, email_with_at]
+      csv_row = [email_with_at, chance, suggestion, email_with_exclamation]
       csv_row.concat([person.name.given_name, person.name.family_name])
       csv_row.concat([person.name.fullName, person.gender, person.location])
       csv_row.concat([person.bio, person.site, person.avatar])
