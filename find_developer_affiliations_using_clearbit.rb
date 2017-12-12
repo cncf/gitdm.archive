@@ -55,7 +55,7 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
   header_row = %w[email chance affiliation_suggestion hashed_email first_name]
   header_row << %w[last_name full_name gender localization bio site avatar]
   header_row << %w[employment_name employment_domain github_handle]
-  header_row << %w[github_company github_blog googleplus_handle]
+  header_row << %w[github_company github_blog linkedin_handle googleplus_handle]
   header_row << %w[aboutme_handle gravatar_handle aboutme_bio]
   header_row.flatten!
   csv << header_row
@@ -83,7 +83,7 @@ CSV.open('developer_affiliation_lookup.csv', 'w') do |csv|
       # binding.pry
       if not_a_blank_string(person_company) &&
          bad_employment.include?(person_company)
-        temp_suggestion = 'Self'
+        temp_suggestion = 'Independent'
         chance = 'none'
         person_employment_name_overwrite = false
       end
