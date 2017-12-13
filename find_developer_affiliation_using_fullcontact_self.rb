@@ -18,15 +18,11 @@ email_list = []
 text = File.open('all.txt').read
 text.gsub!(/\r\n?/, '\n')
 text.each_line do |line|
-  # line_word_array = line.scan(/\d+/)
+  line_word_array = line.scan(/\d+/)
   line_word_array = line.split
-  if !start_found && line_word_array[0] == 'Developers'
-    start_found = true
-  elsif start_found
-    break unless ['(Unknown)', 'NotFound'].include? line_word_array[0]
-    email_list.push line_word_array[1]
-    line_count += 1
-  end
+  next unless line_word_array[0] == 'Self'
+  email_list.push line_word_array[1]
+  line_count += 1
 end
 
 print "line count: #{line_count}\n"
@@ -35,7 +31,7 @@ check_cnt = 1
 
 ok_cnt = bad_cnt = err_cnt = 0
 
-CSV.open('fullconact_developer_affiliation.csv', 'w') do |csv|
+CSV.open('fullconact_developer_affiliation_self.csv', 'w') do |csv|
   header_row = %w[full_name gender localization hashed_email]
   header_row << %w[org_1 org_2 org_3 org_4 org_5 org_6 org_7 org_8 org_9 org_10]
   header_row << %w[github_handle linkedin_handle aboutme_handle]
