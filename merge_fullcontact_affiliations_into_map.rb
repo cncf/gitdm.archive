@@ -132,19 +132,6 @@ def apply_affiliation_fixes(affiliation_suggestion)
   return affiliation_suggestion
 end
 
-def person_is_a_student(employment_hint)
-  learning_keywords = %w[university institute academy school]
-  result = false
-  learning_keywords.each do |learning_keyword|
-    result = true if employment_hint.include? learning_keyword
-  end
-  return result
-end
-
-def not_a_blank_string(var_to_check)
-  var_to_check.nil? || !(var_to_check.is_a? String) || var_to_check.empty? ? false : true
-end
-
 def multi_affiliation_build(affiliation_multi)
   # org details pipe delimited:
   # organization_name
@@ -171,26 +158,6 @@ end
 affiliations = []
 CSV.foreach('fullconact_developer_affiliation.csv', headers: true) do |row|
   next if is_comment row
-  asdf = {"full_name"=>"Dan Williams",
-          "gender"=>"Male",
-          "localization"=>"Ottawa, Ontario, Canada",
-          "hashed_email"=>"me!deedubs.com",
-          "org_1"=>"IBM|primary|current|2016-10||Web Platform Lead",
-          "org_2"=>"qwert yuiop|secondary|current|2016-08||Founder",
-          "org_3"=>"some one|secondary|past|2015|2016-08|Senior Developer",
-          "org_4"=>"some other|secondary|past|2011|2015-02|Lead Developer",
-          "org_5"=>"who knows|secondary|past|2009-06|2011|Senior Developer",
-          "org_6"=>"not much|secondary|past|||",
-          "org_7"=>"dupe or not|secondary|current|2016-10||Lead Platform Architect",
-          "org_8"=>nil,
-          "org_9"=>nil,
-          "org_10"=>nil,
-          "github_handle"=>"deedubs",
-          "linkedin_handle"=>"deedubs",
-          "aboutme_handle"=>"deedubs",
-          "googleplus_handle"=>"DanWilliams-deedubs",
-          "gravatar_handle"=>"danwilliams895"}
-
   affiliation_hash = row.to_h
   #affiliation_hash = asdf.to_h
   hashed_email = affiliation_hash['hashed_email']
