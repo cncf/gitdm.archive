@@ -25,9 +25,9 @@ CSV.open('fullconact_developer_affiliation_test.csv', 'w') do |csv|
   header_row << %w[googleplus_handle gravatar_handle]
   header_row.flatten!
   csv << header_row
-  person = FullContact.person(email: 'alostengineer@users.noreply.github.com')
-  raise 'FullContact_lookup_failed' if person.nil?
-  raise person if person.status != 200
+  #person = FullContact.person(email: 'alostengineer@users.noreply.github.com')
+  person = FullContact.person(email: 'me@deedubs.com')
+  binding.pry
   orgs = []
   org_cnt = 1
 
@@ -37,6 +37,7 @@ CSV.open('fullconact_developer_affiliation_test.csv', 'w') do |csv|
   if !person&.organizations.nil?
     person.organizations.each do |organization|
       org_details = ''
+      org_details += organization.name.nil? ? 'missing_name|' : "#{organization.name}|"
       organization.is_primary ? (org_details += 'primary|') : (org_details += 'secondary|')
       organization.current ? (org_details += 'current|') : (org_details += 'past|')
       org_details += "#{organization.start_date}|"

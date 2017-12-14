@@ -55,6 +55,7 @@ CSV.open('fullconact_developer_affiliation_self.csv', 'w') do |csv|
       if !person&.organizations.nil?
         person.organizations.each do |organization|
           org_details = ''
+          org_details += organization.name.nil? ? 'missing_name|' : "#{organization.name}|"
           organization.is_primary ? (org_details += 'primary|') : (org_details += 'secondary|')
           organization.current ? (org_details += 'current|') : (org_details += 'past|')
           org_details += "#{organization.start_date}|"

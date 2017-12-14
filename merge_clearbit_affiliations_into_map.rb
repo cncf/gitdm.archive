@@ -3,16 +3,16 @@
 # read developer_affiliation_lookup.csv
 # read email-map
 # remove company suffixes such as Inc.,
-# Everything with learning, university in its name is suspected to be Self.
+# Everything with learning, university in its name is suspected to be Independent.
 # maybe also 'institute', 'Software Engineer '
 # Samsung SDS is separate from other Samsung
 # Samsund Co., Samsung corp., Samsung Electronics, Samsung Mobile etc.
 # They're all just Samsung. Also normalize samsung, Samsung, SAMSUNG etc.
 # create map entries and insert appropriately
-# if email found and has something other than self or notfound but new data
+# if email found and has something other than Independent or NotFound but new data
 # has something, overwrite
 # if data record is new, add
-# self is to be capitalized - Self
+# Independent is to be capitalized - Independent
 # unknown is to be marked NotFound
 require 'csv'
 require 'pry'
@@ -143,10 +143,10 @@ puts "found #{suggestions.size} suggestions in developer_affiliation_lookup.csv"
 added_mapping_count = updated_mapping_count = 0
 text = File.read('cncf-config/email-map')
 suggestions.each do |suggestion|
-  # suggestion[1] can be a company name or Self or NotFound
+  # suggestion[1] can be a company name or Independent or NotFound
 
   # if data record is new then add
-  # if email found and has something other than self or notfound
+  # if email found and has something other than Independent or NotFound
   # but new data has something then overwrite conditions based
 
   # new entry based on Clearbit
@@ -160,9 +160,9 @@ suggestions.each do |suggestion|
   if short_list_size.zero?
     text << "\n#{email_company_hash}"
     added_mapping_count += 1
-  elsif short_list_size == 1 && short_list[0][1] == 'Self' &&
-        !%w[Self NotFound].include?(suggestion[1])
-    text = text.gsub(/#{suggestion[0]} Self/, email_company_hash)
+  elsif short_list_size == 1 && short_list[0][1] == 'Independent' &&
+        !%w[Independent NotFound].include?(suggestion[1])
+    text = text.gsub(/#{suggestion[0]} Independent/, email_company_hash)
     updated_mapping_count += 1
   end
 end
