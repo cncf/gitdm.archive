@@ -57,6 +57,7 @@ def check_for_self_employment(affiliation_suggestion)
   selfies = %w[learning university institute school freelance student]
   selfies.concat(['software engineer', 'self-employed', 'independent'])
   selfies.concat(['self employed', 'evangelist', 'enthusiast', 'self'])
+  selfies.concat(['artist'])
   selfies.each do |selfie|
     affiliation_suggestion = 'Independent' if company_name&.include? selfie
   end
@@ -189,9 +190,32 @@ affiliations.each do |affiliation|
   if curr_affil != 'NotFound'
     curr_affil = affiliation[2]['orgs'][0][0]
     # binding.pry
+    # sample data:
+    # org name | category | timing | from | to | title
 
-    # TODO: handle multi-org emails !!!
-  
+    # amim.knabben!gmail.com
+    # Axado  |primary  |current  |2015-10  |     |Python Developer
+
+    # thomasf!jossystem.se
+    # Jossystem       |primary    |current  |2002     |     |Artist
+    # 23c             |secondary  |current  |2012-05  |     |All Parts of Creating and Running Software and Services
+    # Thomas Frössman |secondary  |current  |1998     |     |Artist and Music and Sound and DJ and Information Technology and General Stuff
+
+    # outtatime!gmail.com
+    # Gigawatt IO              |primary    |current|2014-06  |         |
+    # ThreatStream Inc.        |secondary  |past   |2013-12  |2015     |Senior Director of Engineering
+    # SendHub                  |secondary  |past   |2012-04  |2013-10  |Director of Platform
+    # Klout                    |secondary  |past   |2010-10  |2012-04  |Engineering Manager
+    # RockYou!                 |secondary  |past   |2010-04  |2010-10  |Software Engineering Team Lead
+    # Gigawatt                 |secondary  |current|2015     |         |Founder
+    # ThreatStream             |secondary  |past   |2014     |2015     |Senior Director of Engineering
+    # Klout, Inc.              |secondary  |past   |2010     |2012     |Software Engineer
+    # Bloosky Interactive      |secondary  |past   |2008     |2009     |Software Enginner
+    # Veracity Communications  |secondary  |past   |2008     |2009     |Software Engineer
+
+    # TODO: maybe handle multi-org emails
+    # currently org_1 is taken for multi-org emails
+
   end
   email_company_hash = "#{curr_email} #{curr_affil}"
 
