@@ -12,7 +12,7 @@
 # if email found and has something other than Independent or NotFound but new data
 # has something, overwrite
 # if data record is new, add
-# independent is to be capitalized - Independent
+# Independent is to be capitalized - Independent
 # unknown is to be marked NotFound
 require 'csv'
 require 'pry'
@@ -107,105 +107,62 @@ def fix_ghostcloud(affiliation_suggestion)
   return affiliation_suggestion
 end
 
-def fix_huawei(affiliation_suggestion)
-  # change GhostCloud . . . to GhostCloud
-  company_name = affiliation_suggestion&.downcase
-  affiliation_suggestion = 'Huawei' if company_name&.include? 'huawei '
-  return affiliation_suggestion
-end
-
 def fix_possessive(affiliation_suggestion)
   # remove ' if company ends with '
   affiliation_suggestion&.sub(/'$/, '')
 end
 
-def apply_affiliation_fixes(affiliation_suggestion)
-  affiliation_suggestion = correct_company_name(affiliation_suggestion)
-  affiliation_suggestion = check_for_self_employment(affiliation_suggestion)
-  affiliation_suggestion = fix_samsung(affiliation_suggestion)
-  affiliation_suggestion = fix_hewlettpackard(affiliation_suggestion)
-  affiliation_suggestion = fix_amazonwebservices(affiliation_suggestion)
-  affiliation_suggestion = fix_soundcloud(affiliation_suggestion)
-  affiliation_suggestion = fix_ghostcloud(affiliation_suggestion)
-  affiliation_suggestion = fix_huawei(affiliation_suggestion)
-  affiliation_suggestion = fix_possessive(affiliation_suggestion)
-  return affiliation_suggestion
-end
-
-def multi_affiliation_build(affiliation_multi)
-  # org details pipe delimited:
-  # organization_name
-  # primary/secondary
-  # current/past
-  # start_date
-  # end_date
-  # title
-  orgs = []
-  for cnt in 1..10
-    # orgs.flatten!
-    org_details = affiliation_multi["org_#{cnt}"]
-    if !org_details.nil?
-      org_details = org_details.split("|")
-      org_cnt_name = org_details[0] == '' ? 'Independent' : org_details[0]
-      org_name = apply_affiliation_fixes(org_cnt_name)
-      org = [org_name, org_details[1], org_details[2], org_details[3], org_details[4], org_details[5]]
-      orgs.push (org)
-    end
-  end
-  return orgs
-end
-
-affiliations = []
-CSV.foreach('fullconact_developer_affiliation_self.csv', headers: true) do |row|
+suggestions = []
+CSV.foreach('developer_affiliation_lookup_self.csv', headers: true) do |row|
   next if is_comment row
   affiliation_hash = row.to_h
-  #affiliation_hash = asdf.to_h
-  hashed_email = affiliation_hash['hashed_email']
+  affiliation_suggestion = affiliation_hash['affiliation_suggestion']
+  hashed_email = affiliation_hash['email'].sub('@', '!')
   # base on columns: chance, affiliation_suggestion, hashed_email
-  if affiliation_hash['org_1'].nil?
-    affiliation = [hashed_email, 'NotFound']
-  else
-    affiliation_build = multi_affiliation_build( affiliation_hash)
-    affiliation = [hashed_email, 'match_found', 'orgs' => affiliation_build]
+  if %w[high mid low none].include? affiliation_hash['chance']
+    # puts "a #{affiliation_suggestion}"
+    affiliation_suggestion = correct_company_name(affiliation_suggestion)
+    affiliation_suggestion = check_for_self_employment(affiliation_suggestion)
+    affiliation_suggestion = fix_samsung(affiliation_suggestion)
+    affiliation_suggestion = fix_hewlettpackard(affiliation_suggestion)
+    affiliation_suggestion = fix_amazonwebservices(affiliation_suggestion)
+    affiliation_suggestion = fix_soundcloud(affiliation_suggestion)
+    affiliation_suggestion = fix_ghostcloud(affiliation_suggestion)
+    affiliation_suggestion = fix_possessive(affiliation_suggestion)
+    # puts "b #{affiliation_suggestion}"
+    suggestion = [hashed_email, affiliation_suggestion]
+    # binding.pry
+  else # add Unknowns
+    suggestion = [hashed_email, 'NotFound']
   end
-  # binding.pry
-  affiliations.push affiliation
+  suggestions.push suggestion
 end
-puts "found #{affiliations.size} affiliations in developer_affiliation_lookup.csv"
+puts "found #{suggestions.size} suggestions in developer_affiliation_lookup.csv"
 
 # now check for existence to decide on update or insertion
 added_mapping_count = updated_mapping_count = 0
 text = File.read('cncf-config/email-map')
-affiliations.each do |affiliation|
-  # affiliation[1] can be a company name or Independent or NotFound
+suggestions.each do |suggestion|
+  # suggestion[1] can be a company name or Independent or NotFound
 
   # if data record is new then add
   # if email found and has something other than Independent or NotFound
   # but new data has something then overwrite conditions based
 
-  # new entry based on FullContact
-  curr_email = affiliation[0]
-  curr_affil = affiliation[1]
-  if curr_affil != 'NotFound'
-    curr_affil = affiliation[2]['orgs'][0][0]
-    # binding.pry
-
-    # TODO: handle multi-org emails !!!
-  
-  end
-  email_company_hash = "#{curr_email} #{curr_affil}"
+  # new entry based on Clearbit
+  email_company_hash = "#{suggestion[0]} #{suggestion[1]}"
 
   short_list = []
   email_map_array.each do |mapping_line|
-    short_list.push mapping_line if mapping_line[0] == affiliation[0]
+    short_list.push mapping_line if mapping_line[0] == suggestion[0]
   end
   short_list_size = short_list.size
   if short_list_size.zero?
     text << "\n#{email_company_hash}"
     added_mapping_count += 1
   elsif short_list_size == 1 && short_list[0][1] == 'Independent' &&
-        !%w[Independent NotFound].include?(affiliation[1])
-    text = text.gsub(/#{affiliation[0]} Independent/, email_company_hash)
+        !%w[Independent NotFound].include?(suggestion[1])
+    text = text.gsub(/#{suggestion[0]} Independent/, email_company_hash)
     updated_mapping_count += 1
   end
 end
@@ -213,7 +170,7 @@ end
 # Write changes back to the file
 File.open('cncf-config/email-map', 'w') { |file| file.puts text }
 
-puts 'altered the email-map file with FullContact affiliations'
+puts 'altered the email-map file with Clearbit suggestions'
 puts "updated #{updated_mapping_count} records"
 puts "added #{added_mapping_count} records"
 
