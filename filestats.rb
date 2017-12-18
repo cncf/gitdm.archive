@@ -76,7 +76,7 @@ def filestats(csv_file, out_file)
   srt = []
 
   # Special cases that should always be included (if present)
-  specials = ['Self', 'NotFound', '(Unknown)'].each do |special|
+  specials = ['Independent', 'NotFound', '(Unknown)'].each do |special|
     top_changed << special unless top_changed.include?(special)
     top_commits << special unless top_commits.include?(special)
   end

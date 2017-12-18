@@ -35,7 +35,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
     e = email_encode(h['email'])
     d = h['date_to']
     c = h['company']
-    if ['(Unknown)', 'NotFound', 'Self'].include?(c)
+    if ['(Unknown)', 'NotFound', 'Independent'].include?(c)
       unless c == '(Unknown)'
         spec_affs[e] = {} unless spec_affs.key?(e)
         spec_affs[e][d] = c
@@ -207,7 +207,7 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
       cs.each do |c|
         next if skip
         cn = c['company_name']
-        cn = 'Self' if cn.strip == '*independent'
+        cn = 'Independent' if cn.strip == '*independent'
         cn = '(Robots)' if cn.strip == '*robots'
         # next if ['*robots'].include?(cn.strip)
         cn = remap[cn] if remap.key?(cn)

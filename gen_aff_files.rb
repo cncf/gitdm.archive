@@ -154,7 +154,7 @@ def gen_aff_files(csv_file)
     e = w.select { |r| r[1].any? { |a| a.length > 1 } } # With more than 1 affiliation on any email
     s = w.select { |r| r[1].count > 2 }                 # With more than 2 emails
     nf = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == 'NotFound' } } }
-    se = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == 'Self' } } }
+    se = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == 'Independent' } } }
     un = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == '(Unknown)' } } }
     dt = w.select { |r| r[1].any? { |a| a.any? { |b| b[2] != dt_future } } }
     puts 'Special cases found, consider binding.pry it!'

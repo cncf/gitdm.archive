@@ -479,7 +479,7 @@ def IsUnknown(h):
 
 def IsSelf(h):
     empl = h.employer[0][0][1].name
-    return empl == 'Self'
+    return empl == 'Independent'
 
 def ReportUnknowns(hlist, cscount):
     #

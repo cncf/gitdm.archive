@@ -20,7 +20,7 @@ def correlations(csv_file)
   min_correlation = 61.0
 
   affs = {}
-  skip_set = ['Self', 'NotFound', '?', '(Unknown)', 'Funky']
+  skip_set = ['Independent', 'NotFound', '?', '(Unknown)', 'Funky']
   CSV.foreach(csv_file, headers: true) do |row|
     h = row.to_h
     a = h['company']

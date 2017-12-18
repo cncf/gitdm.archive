@@ -32,7 +32,7 @@ def import_from_github_json(json_file)
     company = arr[1..-1].join ' '
     didx = company.index(' < ')
     company = company[0..didx - 1] if didx
-    next if company.strip == 'NotFound' || company.strip[0..4] == 'Self'
+    next if company.strip == 'NotFound' || company.strip[0..11] == 'Independent'
     existing[email] = company
   end
 
