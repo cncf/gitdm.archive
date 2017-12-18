@@ -342,7 +342,7 @@ The first one generates a file `fullconact_developer_affiliation.csv`. It needs 
 	```
 It is a secret API key on a FullContact account which has been set up for subscription. The columns differ in this file compared to that of Clearbit. If you find affiliations for other developers manually, just change the value in the 'org_1' column. The column by default should have 5 pipe-delimited values. If you do not have the values for the other 4, just type 4 pipes. Columns to the right of 'org_1' are not required.
 
-The second scripts reads the 'fullconact_developer_affiliation.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered.
+The second scripts reads the 'fullconact_developer_affiliation.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered. The merge scripts export developer work history to `fullcontact_developer_historical_irganizations.csv` and `fullcontact_developer_self_historical_organizations.csv`
 
 There is a separate set consisting of FullContact affiliation finder, just like for Clearbit, its output csv file, and a merge script for developers assigned to Self in the all.txt file. The file names are respectively: `find_developer_affiliation_using_fullcontact_test.rb`, `fullconact_developer_affiliation_self.csv`, `merge_fullcontact_self_affiliations_into_map.rb`. This would be run to find company affiliations and update accordingly.
 

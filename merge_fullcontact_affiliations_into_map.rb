@@ -166,7 +166,7 @@ CSV.foreach('fullconact_developer_affiliation.csv', headers: true) do |row|
   if affiliation_hash['org_1'].nil?
     affiliation = [hashed_email, 'NotFound']
   else
-    affiliation_build = multi_affiliation_build( affiliation_hash)
+    affiliation_build = multi_affiliation_build(affiliation_hash)
     affiliation = [hashed_email, 'match_found', 'orgs' => affiliation_build]
   end
   # binding.pry
@@ -247,5 +247,22 @@ File.open('cncf-config/email-map', 'w') do |file|
 end
 
 puts 'sorted email-map'
+
+CSV.open('fullconact_developer_historical_organizations.csv', 'w') do |csv|
+  header_row = ['email/org_name','category','timing','date_from','date_to','title']
+  csv << header_row
+  affiliations.each do |affiliation|
+    next if affiliation[1] == 'NotFound' || affiliation[2]['orgs'][1].nil?
+    csv << [affiliation[0]] # email address
+    affiliation[2]['orgs'].each do |dev_org|
+      if !dev_org.nil?
+        csv << [dev_org[0], dev_org[1], dev_org[2], dev_org[3], dev_org[4], dev_org[5]]
+      end
+    end
+    csv << [''] # empty row to separate developers visually
+  end
+end
+
+puts 'exported developer organizations to fullconact_developer_historical_organizations.csv'
 
 puts 'all done'
