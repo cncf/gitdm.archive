@@ -50,9 +50,9 @@ def progress_report(json_file, csv_file)
   all_specials = [
     ['(Unknown)'],
     ['NotFound'],
-    ['Self'],
+    ['Independent'],
     ['(Unknown)', 'NotFound'],
-    ['(Unknown)', 'NotFound', 'Self']
+    ['(Unknown)', 'NotFound', 'Independent']
   ]
   all_specials.each do |specials|
     puts ''

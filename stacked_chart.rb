@@ -3,7 +3,7 @@ require 'pry'
 require 'scanf'
 
 def map_name(name)
-  return '(Self)' if name == 'Self'
+  return '(Independent)' if name == 'Independent'
   return '(Not Found)' if name == 'NotFound'
   return name
 end
