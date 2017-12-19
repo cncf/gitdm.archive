@@ -200,7 +200,7 @@ affiliations.each do |affiliation|
     text << "\n#{email_company_hash}"
     added_mapping_count += 1
   elsif short_list_size == 1 && short_list[0][1] == 'Independent' &&
-        affiliation[1] != 'Independent'
+        affiliation[2]['orgs'][0][0] != 'Independent'
     text = text.gsub(/#{affiliation[0]} Independent/, email_company_hash)
     updated_mapping_count += 1
   end
@@ -236,6 +236,6 @@ CSV.open('fullconact_developer_historical_organizations.csv', 'w') do |csv|
   end
 end
 
-puts 'exported developer organizations to fullconact_developer_historical_organizations.csv'
+puts 'updated fullconact_developer_historical_organizations.csv'
 
 puts 'all done'
