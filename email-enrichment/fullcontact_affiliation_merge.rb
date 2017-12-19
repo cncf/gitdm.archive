@@ -205,8 +205,6 @@ affiliations.each do |affiliation|
     updated_mapping_count += 1
   end
 end
-# remove empty line
-text = text.gsub(/\n/, '')
 
 # Write changes back to the file
 File.open('../cncf-config/email-map', 'w') { |file| file.puts text }

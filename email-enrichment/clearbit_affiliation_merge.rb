@@ -151,7 +151,7 @@ suggestions.each do |suggestion|
 
   # new entry based on Clearbit
   email_company_hash = "#{suggestion[0]} #{suggestion[1]}"
-  next if suggestion[1] == 'NoMatchFound'
+  next if suggestion[1] == 'NoMatchFound' || suggestion[1] == 'NotFound'
   short_list = []
   email_map_array.each do |mapping_line|
     short_list.push mapping_line if mapping_line[0] == suggestion[0]
@@ -166,8 +166,6 @@ suggestions.each do |suggestion|
     updated_mapping_count += 1
   end
 end
-# remove empty line
-text = text.gsub(/\n/, '')
 
 # Write changes back to the file
 File.open('../cncf-config/email-map', 'w') { |file| file.puts text }
