@@ -247,6 +247,7 @@ end
 
 puts 'sorted email-map'
 
+# Save multi-org developer work history to a separate file
 CSV.open('fullconact_developer_historical_organizations.csv', 'w') do |csv|
   header_row = ['email/org_name', 'category', 'timing', 'date_from', 'date_to', 'title']
   csv << header_row
