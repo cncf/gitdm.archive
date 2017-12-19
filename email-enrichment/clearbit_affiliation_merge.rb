@@ -133,7 +133,7 @@ CSV.foreach('clearbit_lookup_data.csv', headers: true) do |row|
     suggestion = [hashed_email, affiliation_suggestion]
     # binding.pry
   else # add Unknowns
-    suggestion = [hashed_email, 'NotFound']
+    suggestion = [hashed_email, 'NoMatchFound']
   end
   suggestions.push suggestion
 end
@@ -151,21 +151,23 @@ suggestions.each do |suggestion|
 
   # new entry based on Clearbit
   email_company_hash = "#{suggestion[0]} #{suggestion[1]}"
-
+  next if suggestion[1] == 'NoMatchFound'
   short_list = []
   email_map_array.each do |mapping_line|
     short_list.push mapping_line if mapping_line[0] == suggestion[0]
   end
   short_list_size = short_list.size
   if short_list_size.zero?
-    text << "\n#{email_company_hash}"
+    text << "\#{email_company_hash}"
     added_mapping_count += 1
   elsif short_list_size == 1 && short_list[0][1] == 'Independent' &&
-        !%w[Independent NotFound].include?(suggestion[1])
+        !%w[Independent NoMatchFound].include?(suggestion[1])
     text = text.gsub(/#{suggestion[0]} Independent/, email_company_hash)
     updated_mapping_count += 1
   end
 end
+# remove empty line
+text = text.gsub(/\n/, '')
 
 # Write changes back to the file
 File.open('../cncf-config/email-map', 'w') { |file| file.puts text }
