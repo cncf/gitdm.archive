@@ -158,7 +158,7 @@ suggestions.each do |suggestion|
   end
   short_list_size = short_list.size
   if short_list_size.zero?
-    text << "\#{email_company_hash}"
+    text << "\n#{email_company_hash}"
     added_mapping_count += 1
   elsif short_list_size == 1 && short_list[0][1] == 'Independent' &&
         !%w[Independent NoMatchFound].include?(suggestion[1])

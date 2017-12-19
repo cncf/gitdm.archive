@@ -186,9 +186,9 @@ affiliations.each do |affiliation|
   # new entry based on FullContact
   curr_email = affiliation[0]
   curr_affil = affiliation[1]
-  if curr_affil != 'NoMatchFound'
-    curr_affil = affiliation[2]['orgs'][0][0]
-  end
+  next if curr_affil == 'NoMatchFound'
+
+  curr_affil = affiliation[2]['orgs'][0][0]
   email_company_hash = "#{curr_email} #{curr_affil}"
 
   short_list = []
@@ -200,7 +200,7 @@ affiliations.each do |affiliation|
     text << "\n#{email_company_hash}"
     added_mapping_count += 1
   elsif short_list_size == 1 && short_list[0][1] == 'Independent' &&
-        !%w[Independent NoMatchFound].include?(affiliation[1])
+        affiliation[1] != 'Independent'
     text = text.gsub(/#{affiliation[0]} Independent/, email_company_hash)
     updated_mapping_count += 1
   end
