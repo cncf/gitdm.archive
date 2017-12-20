@@ -78,7 +78,7 @@ CSV.open('clearbit_lookup_data.csv', 'w') do |csv|
     break if check_cnt > 1234
     begin
       email_with_at = email_with_exclamation.sub('!', '@')
-      next if !email_with_at.include '@'
+      next if !email_with_at.include? '@'
       result =
         Clearbit::Enrichment.find(email: email_with_at, stream: true)
       raise 'no response from Clearbit' if result.nil?

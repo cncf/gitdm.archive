@@ -60,7 +60,7 @@ CSV.open('fullcontact_lookup_data.csv', 'w') do |csv|
     break if check_cnt > 1200
     begin
       email_with_at = email_with_exclamation.sub('!', '@')
-      next if !email_with_at.include '@'
+      next if !email_with_at.include? '@'
       person = FullContact.person(email: email_with_at)
       raise 'FullContact_lookup_failed' if person.nil?
       raise person if person.status != 200

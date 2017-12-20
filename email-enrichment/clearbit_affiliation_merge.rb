@@ -6,14 +6,13 @@
 # Everything with learning, university in its name is suspected to be Independent.
 # maybe also 'institute', 'Software Engineer '
 # Samsung SDS is separate from other Samsung
-# Samsund Co., Samsung corp., Samsung Electronics, Samsung Mobile etc.
+# Samsung Co., Samsung corp., Samsung Electronics, Samsung Mobile etc.
 # They're all just Samsung. Also normalize samsung, Samsung, SAMSUNG etc.
 # create map entries and insert appropriately
-# if email found and has something other than Independent or NotFound but new data
-# has something, overwrite
-# if data record is new, add
+# if existing affiliation has Independent or NotFound but new data
+# has something different then overwrite
+# if data record is new, add (new email listing)
 # Independent is to be capitalized - Independent
-# unknown is to be marked NotFound
 require 'csv'
 require 'pry'
 require '.././comment'
@@ -57,6 +56,7 @@ def check_for_self_employment(affiliation_suggestion)
   selfies = %w[learning university institute school freelance student]
   selfies.concat(['software engineer', 'self-employed', 'independent'])
   selfies.concat(['self employed', 'evangelist', 'enthusiast', 'self'])
+  selfies.concat(['artist', 'Üniversitesi'])
   selfies.each do |selfie|
     affiliation_suggestion = 'Independent' if company_name&.include? selfie
   end
@@ -143,44 +143,43 @@ puts "found #{suggestions.size} suggestions in clearbit_lookup_data.csv"
 added_mapping_count = updated_mapping_count = 0
 text = File.read('../cncf-config/email-map')
 suggestions.each do |suggestion|
-  # suggestion[1] can be a company name or Independent or NotFound
-
-  # if data record is new then add
-  # if email found and has something other than Independent or NotFound
-  # but new data has something then overwrite conditions based
+  next if suggestion[1] == 'NoMatchFound' || suggestion[1] == 'NotFound'
 
   # new entry based on Clearbit
   email_company_hash = "#{suggestion[0]} #{suggestion[1]}"
-  next if suggestion[1] == 'NoMatchFound'
   short_list = []
   email_map_array.each do |mapping_line|
     short_list.push mapping_line if mapping_line[0] == suggestion[0]
   end
   short_list_size = short_list.size
   if short_list_size.zero?
-    text << "\#{email_company_hash}"
+    text << "\n#{email_company_hash}"
     added_mapping_count += 1
-  elsif short_list_size == 1 && short_list[0][1] == 'Independent' &&
-        !%w[Independent NoMatchFound].include?(suggestion[1])
-    text = text.gsub(/#{suggestion[0]} Independent/, email_company_hash)
-    updated_mapping_count += 1
+  elsif short_list_size == 1
+    if short_list[0][1] == 'NotFound'
+      text = text.gsub(/#{suggestion[0]} NotFound/, email_company_hash)
+      updated_mapping_count += 1
+    elsif short_list[0][1] == 'Independent' && suggestion[1] != 'Independent'
+      text = text.gsub(/#{suggestion[0]} Independent/, email_company_hash)
+      updated_mapping_count += 1
+    end
   end
 end
-# remove empty line
-text = text.gsub(/\n/, '')
 
-# Write changes back to the file
-File.open('../cncf-config/email-map', 'w') { |file| file.puts text }
+if added_mapping_count > 0 || updated_mapping_count > 0
+  # Write changes back to the file
+  File.open('../cncf-config/email-map', 'w') { |file| file.puts text }
 
-puts 'altered the email-map file with Clearbit suggestions'
-puts "updated #{updated_mapping_count} records"
-puts "added #{added_mapping_count} records"
+  puts 'altered the email-map file with Clearbit suggestions'
+  puts "updated #{updated_mapping_count} records"
+  puts "added #{added_mapping_count} records"
 
-new_array = File.readlines('../cncf-config/email-map').sort
-File.open('../cncf-config/email-map', 'w') do |file|
-  file.puts new_array
+  # Sort the file contents
+  new_array = File.readlines('../cncf-config/email-map').sort
+  File.open('../cncf-config/email-map', 'w') do |file|
+    file.puts new_array
+  end
+  puts 'sorted email-map'
 end
-
-puts 'sorted email-map'
 
 puts 'all done'
