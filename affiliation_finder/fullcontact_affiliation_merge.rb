@@ -14,7 +14,7 @@
 # if data record is new, add
 require 'csv'
 require 'pry'
-require '.././comment'
+require '../comment'
 
 line_count = 0
 email_map_array = []
@@ -175,9 +175,9 @@ puts "found #{affiliations.size} affiliations in fullcontact_lookup_data.csv"
 added_mapping_count = updated_mapping_count = 0
 text = File.read('../cncf-config/email-map')
 affiliations.each do |affiliation|
+  next if affiliation[1] == 'NoMatchFound'
   curr_email = affiliation[0]
-  curr_affil = affiliation[1]
-  curr_affil = affiliation[2]['orgs'][0][0] if curr_affil != 'NoMatchFound'
+  curr_affil = affiliation[2]['orgs'][0][0]
 
   # new entry based on FullContact
   email_company_hash = "#{curr_email} #{curr_affil}"
@@ -195,14 +195,14 @@ affiliations.each do |affiliation|
       text = text.gsub(/#{affiliation[0]} Self/, email_company_hash)
       updated_mapping_count += 1
     elsif short_list[0][1] == 'Independent' &&
-          curr_affil[1] != 'Independent'
+          curr_affil != 'Independent'
       text = text.gsub(/#{affiliation[0]} Independent/, email_company_hash)
       updated_mapping_count += 1
     end
   end
 end
 
-if added_mapping_count.positive || updated_mapping_count.positive
+if added_mapping_count.positive? || updated_mapping_count.positive?
   # Write changes back to the file
   File.open('../cncf-config/email-map', 'w') { |file| file.puts text }
 

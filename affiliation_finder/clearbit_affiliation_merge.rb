@@ -14,7 +14,7 @@
 # if data record is new, add
 require 'csv'
 require 'pry'
-require '.././comment'
+require '../comment'
 
 line_count = 0
 email_map_array = []
@@ -167,7 +167,7 @@ suggestions.each do |suggestion|
   end
 end
 
-if added_mapping_count.positive || updated_mapping_count.positive
+if added_mapping_count.positive? || updated_mapping_count.positive?
   # Write changes back to the file
   File.open('../cncf-config/email-map', 'w') { |file| file.puts text }
 
