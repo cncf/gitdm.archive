@@ -318,7 +318,7 @@ To enhance this json with already existing affiliations call: `./enchance_json.s
 
 All those tools are automatically called when running full data regenerating script: `./rerun_data.sh`
 
-- To automatically find affiliations (email to company) using Clearbit, run two scripts from email-enrichment folder in order:
+- To automatically find affiliations (email to company) using Clearbit, run two scripts from affiliation_finder folder in order:
 	- `clearbit_affiliation_lookup.rb`
 	- `ruby clearbit_affiliation_merge.rb`
 
@@ -330,7 +330,7 @@ It is a secret API key on a Clearbit account which has been set up for subscript
 
 The second scripts reads the 'clearbit_affiliation_lookup.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered.
 
-- To automatically find affiliations (email to company) using FullContact, run two scripts from email-enrichment folder in order:
+- To automatically find affiliations (email to company) using FullContact, run two scripts from affiliation_finder folder in order:
 	- `ruby fullcontact_affiliation_lookup.rb`
 	- `ruby fullcontact_affiliation_merge.rb`
 
