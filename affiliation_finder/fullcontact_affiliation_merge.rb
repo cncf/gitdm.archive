@@ -6,17 +6,15 @@
 # Everything with learning, university in its name is suspected to be Independent.
 # maybe also 'institute', 'Software Engineer '
 # Samsung SDS is separate from other Samsung
-# Samsund Co., Samsung corp., Samsung Electronics, Samsung Mobile etc.
+# Samsung Co., Samsung corp., Samsung Electronics, Samsung Mobile etc.
 # They're all just Samsung. Also normalize samsung, Samsung, SAMSUNG etc.
 # create map entries and insert appropriately
-# if email found and has something other than Independent or NotFound but new data
-# has something, overwrite
+# if email listed has Independent or NotFound but new data
+# has something then overwrite
 # if data record is new, add
-# independent is to be capitalized - Independent
-# unknown is to be marked NoMatchFound
 require 'csv'
 require 'pry'
-require '.././comment'
+require '../comment'
 
 line_count = 0
 email_map_array = []
@@ -177,18 +175,11 @@ puts "found #{affiliations.size} affiliations in fullcontact_lookup_data.csv"
 added_mapping_count = updated_mapping_count = 0
 text = File.read('../cncf-config/email-map')
 affiliations.each do |affiliation|
-  # affiliation[1] can be a company name or Independent or NoMatchFound
-
-  # if data record is new then add
-  # if email found and has something other than Independent or NotFound
-  # but new data has something then overwrite conditions based
+  next if affiliation[1] == 'NoMatchFound'
+  curr_email = affiliation[0]
+  curr_affil = affiliation[2]['orgs'][0][0]
 
   # new entry based on FullContact
-  curr_email = affiliation[0]
-  curr_affil = affiliation[1]
-  if curr_affil != 'NoMatchFound'
-    curr_affil = affiliation[2]['orgs'][0][0]
-  end
   email_company_hash = "#{curr_email} #{curr_affil}"
 
   short_list = []
@@ -199,28 +190,32 @@ affiliations.each do |affiliation|
   if short_list_size.zero?
     text << "\n#{email_company_hash}"
     added_mapping_count += 1
-  elsif short_list_size == 1 && short_list[0][1] == 'Independent' &&
-        !%w[Independent NoMatchFound].include?(affiliation[1])
-    text = text.gsub(/#{affiliation[0]} Independent/, email_company_hash)
-    updated_mapping_count += 1
+  elsif short_list_size == 1
+    if short_list[0][1] == 'Self'
+      text = text.gsub(/#{affiliation[0]} Self/, email_company_hash)
+      updated_mapping_count += 1
+    elsif short_list[0][1] == 'Independent' &&
+          curr_affil != 'Independent'
+      text = text.gsub(/#{affiliation[0]} Independent/, email_company_hash)
+      updated_mapping_count += 1
+    end
   end
 end
-# remove empty line
-text = text.gsub(/\n/, '')
 
-# Write changes back to the file
-File.open('../cncf-config/email-map', 'w') { |file| file.puts text }
+if added_mapping_count.positive? || updated_mapping_count.positive?
+  # Write changes back to the file
+  File.open('../cncf-config/email-map', 'w') { |file| file.puts text }
 
-puts 'altered the email-map file with FullContact affiliations'
-puts "updated #{updated_mapping_count} records"
-puts "added #{added_mapping_count} records"
+  puts 'altered the email-map file with Clearbit suggestions'
+  puts "updated #{updated_mapping_count} records"
+  puts "added #{added_mapping_count} records"
 
-new_array = File.readlines('../cncf-config/email-map').sort
-File.open('../cncf-config/email-map', 'w') do |file|
-  file.puts new_array
+  new_array = File.readlines('../cncf-config/email-map').sort
+  File.open('../cncf-config/email-map', 'w') do |file|
+    file.puts new_array
+  end
+  puts 'sorted email-map'
 end
-
-puts 'sorted email-map'
 
 # Save multi-org developer work history to a separate file
 CSV.open('fullconact_developer_historical_organizations.csv', 'w') do |csv|
