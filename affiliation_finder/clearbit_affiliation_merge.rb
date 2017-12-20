@@ -129,7 +129,7 @@ CSV.foreach('clearbit_lookup_data.csv', headers: true) do |row|
     affiliation_suggestion = fix_ghostcloud(affiliation_suggestion)
     affiliation_suggestion = fix_possessive(affiliation_suggestion)
     # puts "b #{affiliation_suggestion}"
-    suggestion = [hashed_email, affiliation_suggestion]
+    suggestion = [hashed_email, affiliation_suggestion.strip]
     # binding.pry
   else # add Unknowns
     suggestion = [hashed_email, 'NoMatchFound']
