@@ -128,7 +128,7 @@ def apply_affiliation_fixes(affiliation_suggestion)
   affiliation_suggestion = fix_ghostcloud(affiliation_suggestion)
   affiliation_suggestion = fix_huawei(affiliation_suggestion)
   affiliation_suggestion = fix_possessive(affiliation_suggestion)
-  return affiliation_suggestion
+  return affiliation_suggestion.strip
 end
 
 def multi_affiliation_build(affiliation_multi)
