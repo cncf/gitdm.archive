@@ -41,11 +41,12 @@ def correct_company_name(affiliation_suggestion)
   replacements.concat(['LLC.,', 'LLC.', 'LLC', 'Ltd.,', 'Ltd.', 'Ltd'])
   replacements.concat(['PLC', 'S.à r.L.', ',Inc.', ',gmbh'])
   replacements.each do |replacement|
-    affiliation_suggestion.sub!(/\s+#{replacement}$/, '')
+    affiliation_suggestion.sub!(/\s+#{replacement}$/i, '')
   end
   affiliation_suggestion.sub!(/^@/, '') # remove begigging @
   # affiliation_suggestion.sub!(/.com$/, '') # remove ending .com
   affiliation_suggestion.sub!(/,$/, '') # remove ending comma
+  affiliation_suggestion.sub!(/.$/, '') # remove ending dot
   affiliation_suggestion.sub!(%r{/\/$/}, '') # remove ending slash
   return affiliation_suggestion
 end
@@ -116,7 +117,7 @@ CSV.foreach('clearbit_lookup_data.csv', headers: true) do |row|
   next if is_comment row
   affiliation_hash = row.to_h
   affiliation_suggestion = affiliation_hash['affiliation_suggestion']
-  hashed_email = affiliation_hash['email'].sub('@', '!')
+  hashed_email = affiliation_hash['hashed_email'].sub('@', '!')
   # base on columns: chance, affiliation_suggestion, hashed_email
   if %w[high mid low none].include? affiliation_hash['chance']
     # puts "a #{affiliation_suggestion}"
@@ -142,7 +143,7 @@ puts "found #{suggestions.size} suggestions in clearbit_lookup_data.csv"
 added_mapping_count = updated_mapping_count = 0
 text = File.read('../cncf-config/email-map')
 suggestions.each do |suggestion|
-  next if suggestion[1] == 'NoMatchFound' || suggestion[1] == 'NotFound'
+  next if %w[NoMatchFound NotFound].include? suggestion[1]
 
   # new entry based on Clearbit
   email_company_hash = "#{suggestion[0]} #{suggestion[1]}"

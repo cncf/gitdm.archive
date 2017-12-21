@@ -41,11 +41,12 @@ def correct_company_name(affiliation_suggestion)
   replacements.concat(['LLC.,', 'LLC.', 'LLC', 'Ltd.,', 'Ltd.', 'Ltd'])
   replacements.concat(['PLC', 'S.à r.L.', ',Inc.', ',gmbh'])
   replacements.each do |replacement|
-    affiliation_suggestion.sub!(/\s+#{replacement}$/, '')
+    affiliation_suggestion.sub!(/\s+#{replacement}$/i, '')
   end
   affiliation_suggestion.sub!(/^@/, '') # remove begigging @
   # affiliation_suggestion.sub!(/.com$/, '') # remove ending .com
   affiliation_suggestion.sub!(/,$/, '') # remove ending comma
+  affiliation_suggestion.sub!(/.$/, '') # remove ending dot
   affiliation_suggestion.sub!(%r{/\/$/}, '') # remove ending slash
   return affiliation_suggestion
 end
@@ -145,7 +146,7 @@ def multi_affiliation_build(affiliation_multi)
     org_details = affiliation_multi["org_#{cnt}"]
     next if org_details.nil?
     org_details = org_details.split('|')
-    org_cnt_name = org_details[0] == '' ? 'Independent' : org_details[0]
+    org_cnt_name = org_details[0] == '' ? 'missing_name' : org_details[0]
     org_name = apply_affiliation_fixes(org_cnt_name)
     org = [org_name, org_details[1], org_details[2], org_details[3], org_details[4], org_details[5]]
     orgs.push org
@@ -175,7 +176,9 @@ puts "found #{affiliations.size} affiliations in fullcontact_lookup_data.csv"
 added_mapping_count = updated_mapping_count = 0
 text = File.read('../cncf-config/email-map')
 affiliations.each do |affiliation|
-  next if affiliation[1] == 'NoMatchFound'
+  next if affiliation[1] == 'NoMatchFound' ||
+          affiliation[2]['orgs'][0][0] == 'missing_name'
+
   curr_email = affiliation[0]
   curr_affil = affiliation[2]['orgs'][0][0]
 
@@ -218,9 +221,16 @@ if added_mapping_count.positive? || updated_mapping_count.positive?
 end
 
 # Save multi-org developer work history to a separate file
-CSV.open('fullconact_developer_historical_organizations.csv', 'w') do |csv|
-  header_row = ['email/org_name', 'category', 'timing', 'date_from', 'date_to', 'title']
-  csv << header_row
+create_output = true
+if File.exist?('fullconact_developer_historical_organizations.csv')
+  create_output = File.zero?('fullconact_developer_historical_organizations.csv')
+end
+
+CSV.open('fullconact_developer_historical_organizations.csv', 'a') do |csv|
+  if create_output
+    header_row = ['email/org_name', 'category', 'timing', 'date_from', 'date_to', 'title']
+    csv << header_row
+  end
   affiliations.each do |affiliation|
     next if affiliation[1] == 'NoMatchFound' || affiliation[2]['orgs'][1].nil?
     csv << [affiliation[0]] # email address

@@ -6,46 +6,51 @@ require 'pry'
 require 'csv'
 require 'json'
 require 'Clearbit'
+require '../comment'
 
 Clearbit.key = ENV['CLEARBIT_KEY']
 # ask Rad at cabalrd@yahoo.com for an API key
 # from a user set up for enrichment subscription
+
+previous_lookups = []
+CSV.foreach('clearbit_lookup_data.csv', headers: true) do |row|
+  next if is_comment row
+  affiliation_hash = row.to_h
+  previous_lookups.push affiliation_hash['hashed_email'].sub('@', '!')
+end
+
 line_count = 0
 start_found = false
 email_list = []
 text = File.open('../all.txt').read
 text.gsub!(/\r\n?/, '\n')
 text.each_line do |line|
-  # line_word_array = line.scan(/\d+/)
   line_word_array = line.split
   if !start_found && line == "Developers with unknown affiliation\n"
     start_found = true
   elsif start_found
     break if line == "\n"
+    next if previous_lookups.include? line_word_array[1]
     email_list.push line_word_array[1]
     line_count += 1
   end
-  # email_list.sort!
 end
 start_found = false
 text.each_line do |line|
-  # line_word_array = line.scan(/\d+/)
   line_word_array = line.split
   if !start_found && line == "Developers working on their own behalf\n"
     start_found = true
   elsif start_found
     break if line == "\n"
+    next if previous_lookups.include? line_word_array[1]
     email_list.push line_word_array[1]
     line_count += 1
   end
-  # email_list.sort!
 end
 
-print "line count: #{line_count}\n"
+puts "line count: #{line_count}"
 
-# puts email_list.inspect
 check_cnt = 1
-
 ok_cnt = bad_cnt = err_cnt = 0
 
 def person_is_a_student(employment_hint)
@@ -65,14 +70,21 @@ def not_a_blank_string(var_to_check)
   end
 end
 
-CSV.open('clearbit_lookup_data.csv', 'w') do |csv|
-  header_row = %w[email chance affiliation_suggestion hashed_email first_name]
-  header_row << %w[last_name full_name gender localization bio site avatar]
-  header_row << %w[employment_name employment_domain github_handle]
-  header_row << %w[github_company github_blog linkedin_handle googleplus_handle]
-  header_row << %w[aboutme_handle gravatar_handle aboutme_bio]
-  header_row.flatten!
-  csv << header_row
+create_output = true
+if File.exist?('clearbit_lookup_data.csv')
+  create_output = File.zero?('clearbit_lookup_data.csv')
+end
+
+CSV.open('clearbit_lookup_data.csv', 'a') do |csv|
+  if create_output
+    header_row = %w[hashed_email chance affiliation_suggestion message first_name]
+    header_row << %w[last_name full_name gender localization bio site avatar]
+    header_row << %w[employment_name employment_domain github_handle]
+    header_row << %w[github_company github_blog linkedin_handle googleplus_handle]
+    header_row << %w[gravatar_handle aboutme_handle aboutme_bio]
+    header_row.flatten!
+    csv << header_row
+  end
   email_list.each do |email_with_exclamation|
     # check_cnt is the max NUMBER of emails to PROCESS in this BATCH
     break if check_cnt > 1234
@@ -117,15 +129,15 @@ CSV.open('clearbit_lookup_data.csv', 'w') do |csv|
         chance = 'high'
       end
       suggestion = temp_suggestion
-      csv_row = [email_with_at, chance, suggestion, email_with_exclamation]
+      csv_row = [email_with_exclamation, chance, suggestion, '']
       csv_row.concat([person.name.given_name, person.name.family_name])
       csv_row.concat([person.name.fullName, person.gender, person.location])
       csv_row.concat([person.bio, person.site, person.avatar])
       csv_row.concat([person.employment.name, person.employment.domain])
       csv_row.concat([person.github.handle, person.github.company])
       csv_row.concat([person.github.blog, person.linkedin.handle])
-      csv_row.concat([person.googleplus.handle, person.aboutme.handle])
-      csv_row.concat([person.gravatar.handle, person.aboutme.bio])
+      csv_row.concat([person.googleplus.handle, person.gravatar.handle])
+      csv_row.concat([person.aboutme.handle, person.aboutme.bio])
       csv << csv_row
       ok_cnt += 1
       puts "#{check_cnt} got an enrichment"
@@ -133,11 +145,11 @@ CSV.open('clearbit_lookup_data.csv', 'w') do |csv|
       hash = JSON[bang]
       hash = JSON.parse(hash)
       if hash.index('email_invalid')
-        csv << [email_with_at, 'none', 'NoMatchFound', 'bad', 'email', 'address']
+        csv << [email_with_at, 'none', 'NoMatchFound', 'bad email address']
         bad_cnt += 1
         puts "#{check_cnt} received a bad email msg"
       else
-        csv << [email_with_at, 'none', 'NoMatchFound', 'error', 'bad', 'response']
+        csv << [email_with_at, 'none', 'NoMatchFound', 'bad server response']
         puts "#{check_cnt} #{bang}"
         err_cnt += 1
       end
