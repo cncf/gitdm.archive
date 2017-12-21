@@ -192,7 +192,6 @@ def enchance_json(json_file, csv_file, actors_file)
           p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
           actors_found += 1
           v = email_affs[e]
-          binding.pry
         else
           if name_affs.key?(n)
             p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
