@@ -34,14 +34,14 @@ def correct_company_name(affiliation_suggestion)
   # puts "received #{affiliation_suggestion}"
   # remove suffixes like: Co., Ltd., Corp., Inc., Limited., LLC,
   # Group. from company names.
-  replacements = [' GmbH & Co.', ' S.A.', ' Co.,', ' Co.', ' Co', ' Corp.,']
-  replacements.concat([' Corp.', ' Corp', ' GmbH.,', ' GmbH.', ' GmbH'])
-  replacements.concat([' Group.,', ' Group.', ' Group', ' Inc.,', ' Inc.'])
-  replacements.concat([' Inc', ' Limited.,', ' Limited.', ' Limited'])
-  replacements.concat([' LLC.,', ' LLC.', ' LLC', ' Ltd.,', ' Ltd.', ' Ltd'])
-  replacements.concat([' PLC', ' S.à r.L.', ', Inc.', ', gmbh'])
+  replacements = ['GmbH & Co.', 'S.A.', 'Co.,', 'Co.', 'Co', 'Corp.,']
+  replacements.concat(['Corp.', 'Corp', 'GmbH.,', 'GmbH.', 'GmbH'])
+  replacements.concat(['Group.,', 'Group.', 'Group', 'Inc.,', 'Inc.'])
+  replacements.concat(['Inc', 'Limited.,', 'Limited.', 'Limited'])
+  replacements.concat(['LLC.,', 'LLC.', 'LLC', 'Ltd.,', 'Ltd.', 'Ltd'])
+  replacements.concat(['PLC', 'S.à r.L.', ',Inc.', ',gmbh'])
   replacements.each do |replacement|
-    affiliation_suggestion.sub!(replacement, '')
+    affiliation_suggestion.sub!(/\s+#{replacement}$/, '')
   end
   affiliation_suggestion.sub!(/^@/, '') # remove begigging @
   # affiliation_suggestion.sub!(/.com$/, '') # remove ending .com
