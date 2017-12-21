@@ -138,7 +138,6 @@ repos = [
   'kubernetes/kubedash',
   'kubernetes/kube-deploy',
   'kubernetes/kube-openapi',
-  'kubernetes/kubernetes',
   'kubernetes/kubernetes-anywhere',
   'kubernetes/kubernetes-bootcamp',
   'kubernetes/kubernetes-console',
@@ -160,9 +159,10 @@ repos = [
   'kubernetes/sample-controller',
   'kubernetes/sig-release',
   'kubernetes/steering',
-  'kubernetes/test-infra',
   'kubernetes/utils',
-  'kubernetes/website'
+  'kubernetes/website',
+  'kubernetes/test-infra',
+  'kubernetes/kubernetes'
 ]
 
 # args[0]: 1st arg is: 'r' - force repos metadata fetch, 'c' - force commits fetch, 'u' force users fetch
