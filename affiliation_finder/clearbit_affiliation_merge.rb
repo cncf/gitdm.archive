@@ -44,10 +44,11 @@ def correct_company_name(affiliation_suggestion)
     affiliation_suggestion.sub!(/\s+#{replacement}$/i, '')
   end
   affiliation_suggestion.sub!(/^@/, '') # remove begigging @
-  # affiliation_suggestion.sub!(/.com$/, '') # remove ending .com
+  affiliation_suggestion.sub!(/^#/, '') # remove begigging #
+  # affiliation_suggestion.sub!(/\.com$/, '') # remove ending .com
   affiliation_suggestion.sub!(/,$/, '') # remove ending comma
-  affiliation_suggestion.sub!(/.$/, '') # remove ending dot
-  affiliation_suggestion.sub!(%r{/\/$/}, '') # remove ending slash
+  affiliation_suggestion.sub!(/\.$/, '') # remove ending dot
+  affiliation_suggestion.sub!(/\/$/, '') # remove ending slash
   return affiliation_suggestion
 end
 
@@ -129,8 +130,8 @@ CSV.foreach('clearbit_lookup_data.csv', headers: true) do |row|
     affiliation_suggestion = fix_soundcloud(affiliation_suggestion)
     affiliation_suggestion = fix_ghostcloud(affiliation_suggestion)
     affiliation_suggestion = fix_possessive(affiliation_suggestion)
-    # puts "b #{affiliation_suggestion}"
     suggestion = [hashed_email, affiliation_suggestion.strip]
+    # puts "b #{affiliation_suggestion}"
     # binding.pry
   else # add Unknowns
     suggestion = [hashed_email, 'NoMatchFound']
