@@ -44,10 +44,11 @@ def correct_company_name(affiliation_suggestion)
     affiliation_suggestion.sub!(/\s+#{replacement}$/i, '')
   end
   affiliation_suggestion.sub!(/^@/, '') # remove begigging @
-  # affiliation_suggestion.sub!(/.com$/, '') # remove ending .com
+  affiliation_suggestion.sub!(/^#/, '') # remove begigging #
+  # affiliation_suggestion.sub!(/\.com$/, '') # remove ending .com
   affiliation_suggestion.sub!(/,$/, '') # remove ending comma
-  affiliation_suggestion.sub!(/.$/, '') # remove ending dot
-  affiliation_suggestion.sub!(%r{/\/$/}, '') # remove ending slash
+  affiliation_suggestion.sub!(/\.$/, '') # remove ending dot
+  affiliation_suggestion.sub!(/\/$/, '') # remove ending slash
   return affiliation_suggestion
 end
 
@@ -221,16 +222,9 @@ if added_mapping_count.positive? || updated_mapping_count.positive?
 end
 
 # Save multi-org developer work history to a separate file
-create_output = true
-if File.exist?('fullconact_developer_historical_organizations.csv')
-  create_output = File.zero?('fullconact_developer_historical_organizations.csv')
-end
-
-CSV.open('fullconact_developer_historical_organizations.csv', 'a') do |csv|
-  if create_output
-    header_row = ['email/org_name', 'category', 'timing', 'date_from', 'date_to', 'title']
-    csv << header_row
-  end
+CSV.open('fullconact_developer_historical_organizations.csv', 'w') do |csv|
+  header_row = ['email/org_name', 'category', 'timing', 'date_from', 'date_to', 'title']
+  csv << header_row
   affiliations.each do |affiliation|
     next if affiliation[1] == 'NoMatchFound' || affiliation[2]['orgs'][1].nil?
     csv << [affiliation[0]] # email address
