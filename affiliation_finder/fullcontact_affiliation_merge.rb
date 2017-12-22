@@ -43,8 +43,8 @@ def correct_company_name(affiliation_suggestion)
   replacements.each do |replacement|
     affiliation_suggestion.sub!(/\s+#{replacement}$/i, '')
   end
-  affiliation_suggestion.sub!(/^@/, '') # remove begigging @
-  affiliation_suggestion.sub!(/^#/, '') # remove begigging #
+  affiliation_suggestion.sub!(/^@/, '') # remove beginning @
+  affiliation_suggestion.sub!(/^#/, '') # remove beginning #
   # affiliation_suggestion.sub!(/\.com$/, '') # remove ending .com
   affiliation_suggestion.sub!(/,$/, '') # remove ending comma
   affiliation_suggestion.sub!(/\.$/, '') # remove ending dot
