@@ -97,15 +97,15 @@ The output of this analysis.rb tool goes to `project/<prefix>_<key>_<type>`.csv 
 <type>: can be `sum`, `top`, `all`:
 
 - `all` means that the file contains all data for given <prefix> sorted by <key> desc (header is: `idx,company,n,percent` which means n-th, company name, n developers, % all developers) `All known` is sum of all detected developers
-- `top` means that there will be top 10 data from `all` but also must contain data for: '(Unknown)', 'Gmail *', 'Qq *', 'Outlook *', 'Yahoo *', 'Hotmail *', '(Self)', '(Not Found)'. The header is the same as in `all`.
+- `top` means that there will be top 10 data from `all` but also must contain data for: '(Unknown)', 'Gmail *', 'Qq *', 'Outlook *', 'Yahoo *', 'Hotmail *', '(Independent)', '(Not Found)'. The header is the same as in `all`.
 - `sum` contains a summary value for all found developers. It has a different header: `N companies,sum,percent` numer of developer's companies found, the sum of <key> for all found developers, % of sum <key> as a part of sum <key> for all developers.
-- Special names: `All known` (sum all known developers), `(Self)` (developers working on their own), `(Not Found)` (developers for whom  an employer was not found even though the search was done in multiple sources), `(Unknown)` (developers not mapped (yet?)), `Some name *` (sum of developers having emails on `Some name` domain). Asterisk `*` added to indicate this.
+- Special names: `All known` (sum all known developers), `(Independent)` (developers working on their own), `(Not Found)` (developers for whom  an employer was not found even though the search was done in multiple sources), `(Unknown)` (developers not mapped (yet?)), `Some name *` (sum of developers having emails on `Some name` domain). Asterisk `*` added to indicate this.
 
 This data is directly used for "Who writes Kubernetes" report.
 
 `./kubernetes_repos.sh` script is used to generate all time data for all kubernetes repos.
 
-To use it, you must have all of kubernetes repositories (68 from 3 different organizations) cloned in` ~/dev/go/src/k8s/`.
+To use it, you must have all of kubernetes repositories (68 from 3 different organizations) cloned in `~/dev/go/src/k8s/`.
 
 Orgs are: kubernetes, kubernetes-incubator, kubernetes-client.
 
@@ -300,7 +300,7 @@ To enhance this json with pre-existing affiliations, call: `./enchance_json.sh`
 
 - To generate JSON with some filtered data (like all unknown devs with location or LinkedIn profile link or just a blog entry) call: `./lookup_json.sh` (see script for details, also lookup_json.rb have a lot of comments on how to use it).
 
-- To generate a progress report (report about how many Not Found, Unknowns and Self-employment devs are defined in our affiliation, call: `./progress_report.sh`).
+- To generate a progress report (report about how many Not Found, Unknowns, and Independent devs are defined in our affiliation, call: `./progress_report.sh`).
 
 - To generate aliases for emails that are already known (are using the same GitHub user name) try `./aliaser.sh`, the output is `aliaser.txt` that can be analyzed and manually added to `cncf-config/aliases` if needed.
 
