@@ -9,8 +9,7 @@ require 'Clearbit'
 require '../comment'
 
 Clearbit.key = ENV['CLEARBIT_KEY']
-# ask Rad at cabalrd@yahoo.com for an API key
-# from a user set up for enrichment subscription
+# visit https://dashboard.clearbit.com/plans for an api key
 
 previous_lookups = []
 CSV.foreach('clearbit_lookup_data.csv', headers: true) do |row|
