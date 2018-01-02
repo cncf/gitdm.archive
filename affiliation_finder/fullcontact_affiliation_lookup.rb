@@ -11,8 +11,7 @@ require '../comment'
 FullContact.configure do |config|
   config.api_key = ENV['FULLCONTACT_KEY']
 end
-# ask Rad at cabalrd@yahoo.com for an API key
-# from a user set up for enrichment subscription
+# visit https://www.fullcontact.com/ for an api key
 
 previous_lookups = []
 CSV.foreach('clearbit_lookup_data.csv', headers: true) do |row|
