@@ -391,7 +391,7 @@ def ghusers(repos, start_date, args)
   # Now analysis of different authors
   puts "Commits analysis..."
   skip_logins = [
-    'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]',
+    'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]', 'stale[bot]',
     '', nil
   ]
   email2github = {}
