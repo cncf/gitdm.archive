@@ -103,7 +103,7 @@ def enchance_json(json_file, csv_file, actors_file)
     # invalid
     '', nil,
     # bots
-    'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]',
+    'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]', 'stale[bot]',
     # GitHub not founds
     '114piyush', '1gnition', '245347881', 'aaron12134', 'aaronLariat', 'abhinandanpb', 'abkaplan07', 'ablock84',
     'active-low', 'adv-tsk', 'agunnerson-explorys', 'ahmed-madkour', 'AleiHanami', 'alexraju', 'alibazaar',
