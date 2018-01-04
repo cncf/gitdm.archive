@@ -29,7 +29,7 @@ type Project struct {
 	Disabled bool   `yaml:"disabled"`
 }
 
-func processOrg(org string, repos []string) {
+func processOrg(org string, repos []string) (okRepos []string) {
 	// Go to main repos directory
 	wd := os.Getenv("REPOS_DIR")
 	err := os.Chdir(wd)
@@ -78,6 +78,7 @@ func processOrg(org string, repos []string) {
 			} else {
 				pwd, _ := os.Getwd()
 				fmt.Printf("Cloned %s in %s\n", orgRepo, pwd)
+				okRepos = append(okRepos, orgRepo)
 			}
 		} else {
 			// We *may* need to pull repo
@@ -96,9 +97,11 @@ func processOrg(org string, repos []string) {
 			} else {
 				pwd, _ := os.Getwd()
 				fmt.Printf("Pulled %s in %s\n", orgRepo, pwd)
+				okRepos = append(okRepos, orgRepo)
 			}
 		}
 	}
+	return
 }
 
 // pullRepos does all the job
@@ -176,10 +179,20 @@ func pullRepos() error {
 
 	// Process all orgs
 	finalCmd := "./all_repos_log.sh "
+	allOkRepos := []string{}
 	for org, repos := range allRepos {
-		processOrg(org, repos)
+		okRepos := processOrg(org, repos)
+		for _, okRepo := range okRepos {
+			allOkRepos = append(allOkRepos, okRepo)
+		}
 		finalCmd += os.Getenv("REPOS_DIR") + org + "/* "
 	}
+	allOkReposStr := "["
+	for _, okRepo := range allOkRepos {
+		allOkReposStr += "  '" + okRepo + "',\n"
+	}
+	allOkReposStr += "]"
+	fmt.Printf("AllRepos:\n%s\n", allOkReposStr)
 	fmt.Printf("Final command:\n%s\n", finalCmd)
 	return nil
 }
