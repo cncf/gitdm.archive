@@ -163,7 +163,7 @@ def import_affs(dev_affs, comp_devs)
     puts 'mv email-map cncf-config/email-map'
     # puts './pull_kubernetes.sh; ./pull_prometheus.sh'
     # puts './multirepo.sh ~/dev/kubernetes_repos/* or ./all_repos_log.sh ~/dev/kubernetes_repos/* ~/dev/prometheus/*'
-    puts 'Use ./gen_aff_files.sh and then final command line it generates'
+    puts 'Use cncf/devstats\'s `PG_PASS=... ./get_repos` and then final command line it generates.'
     puts './manual_all.sh or `~/dev/alt/gitdm/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`'
     puts 'SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh'
     puts 'Consider ./ghusers.sh'
