@@ -74,7 +74,7 @@ func processOrg(org string, repos []string) {
 			cmd.Env = append(os.Environ(), "GIT_TERMINAL_PROMPT=0")
 			output, err := cmd.CombinedOutput()
 			if err != nil {
-				fmt.Fprintf(os.Stderr, "Error cloning: %s: %+v\n%s\n", orgRepo, err, string(output))
+				fmt.Fprintf(os.Stderr, "Error git-clone: %s: %+v\n%s\n", orgRepo, err, string(output))
 			} else {
 				pwd, _ := os.Getwd()
 				fmt.Printf("Cloned %s in %s\n", orgRepo, pwd)
@@ -82,6 +82,21 @@ func processOrg(org string, repos []string) {
 		} else {
 			// We *may* need to pull repo
 			fmt.Printf("Pulling %s\n", orgRepo)
+			cmd := exec.Command("git", "reset", "--hard")
+			cmd.Env = append(os.Environ(), "GIT_TERMINAL_PROMPT=0")
+			output, err := cmd.CombinedOutput()
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Error git-reset: %s: %+v\n%s\n", orgRepo, err, string(output))
+			}
+			cmd = exec.Command("git", "pull")
+			cmd.Env = append(os.Environ(), "GIT_TERMINAL_PROMPT=0")
+			output, err = cmd.CombinedOutput()
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Error git-pull: %s: %+v\n%s\n", orgRepo, err, string(output))
+			} else {
+				pwd, _ := os.Getwd()
+				fmt.Printf("Pulled %s in %s\n", orgRepo, pwd)
+			}
 		}
 	}
 }
@@ -160,9 +175,12 @@ func pullRepos() error {
 	}
 
 	// Process all orgs
+	finalCmd := "./all_repos_log.sh "
 	for org, repos := range allRepos {
 		processOrg(org, repos)
+		finalCmd += os.Getenv("REPOS_DIR") + org + "/* "
 	}
+	fmt.Printf("Final command:\n%s\n", finalCmd)
 	return nil
 }
 
