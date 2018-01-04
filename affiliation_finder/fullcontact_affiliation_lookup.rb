@@ -13,6 +13,9 @@ FullContact.configure do |config|
 end
 # visit https://www.fullcontact.com/ for an api key
 
+overwrite = ARGV[0].to_s == 'true'
+modifier = overwrite ? 'w' : 'a'
+
 previous_lookups = []
 CSV.foreach('clearbit_lookup_data.csv', headers: true) do |row|
   next if is_comment row
@@ -31,7 +34,7 @@ text.each_line do |line|
     start_found = true
   elsif start_found
     break if line == "\n"
-    next if previous_lookups.include? line_word_array[1]
+    next if !overwrite && (previous_lookups.include? line_word_array[1])
     email_list.push line_word_array[1]
     line_count += 1
   end
@@ -43,7 +46,7 @@ text.each_line do |line|
     start_found = true
   elsif start_found
     break if line == "\n"
-    next if previous_lookups.include? line_word_array[1]
+    next if !overwrite && (previous_lookups.include? line_word_array[1])
     email_list.push line_word_array[1]
     line_count += 1
   end
@@ -59,8 +62,8 @@ if File.exist?('fullcontact_lookup_data.csv')
   create_output = File.zero?('fullcontact_lookup_data.csv')
 end
 
-CSV.open('fullcontact_lookup_data.csv', 'a') do |csv|
-  if create_output
+CSV.open('fullcontact_lookup_data.csv', modifier) do |csv|
+  if modifier == 'w' || create_output
     header_row = %w[full_name gender localization hashed_email message]
     header_row << %w[org_1 org_2 org_3 org_4 org_5 org_6 org_7 org_8 org_9 org_10]
     header_row << %w[github_handle linkedin_handle aboutme_handle]
