@@ -320,7 +320,7 @@ All those tools are automatically called when running the full data regeneration
 	- `clearbit_affiliation_lookup.rb`
 	- `ruby clearbit_affiliation_merge.rb`
 
-The first one generates a file `clearbit_affiliation_lookup.csv`. It needs to have a proper value this: 
+The first one works with one argument and generates a file `clearbit_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false'. Invocation would be `clearbit_affiliation_lookup.rb` or `clearbit_affiliation_lookup.rb false` or `clearbit_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwriten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value this: 
 	```
 	Clearbit.key = ENV['CLEARBIT_KEY']
 	```
@@ -332,7 +332,7 @@ The second scripts reads the 'clearbit_affiliation_lookup.csv' file. Data is pro
 	- `ruby fullcontact_affiliation_lookup.rb`
 	- `ruby fullcontact_affiliation_merge.rb`
 
-The first one generates a file `fullcontact_affiliation_lookup.csv`. It needs to have a proper value this: 
+The first one works with one argument and generates a file `fullcontact_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false'. Invocation would be `fullcontact_affiliation_lookup.rb` or `fullcontact_affiliation_lookup.rb false` or `fullcontact_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwriten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value this: 
 	```
 	config.api_key = ENV['FULLCONTACT_KEY']
 	```
