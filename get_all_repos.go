@@ -5,12 +5,18 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"os/exec"
 	"strings"
 	"time"
 
 	_ "github.com/lib/pq" // As suggested by lib/pq driver
 	yaml "gopkg.in/yaml.v2"
 )
+
+// Environment needed/used
+// PG_PASS: set postgres password
+// GHA2DB_PATH: path to cncf/devstats repo
+// REPOS_DIR: path where all repos (format 'org/repo') will be cloned and/or pulled
 
 // AllProjects contain all projects data
 type AllProjects struct {
@@ -23,11 +29,69 @@ type Project struct {
 	Disabled bool   `yaml:"disabled"`
 }
 
+func processOrg(org string, repos []string) {
+	// Go to main repos directory
+	wd := os.Getenv("REPOS_DIR")
+	err := os.Chdir(wd)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %+v\n", err)
+		return
+	}
+
+	// Go to current 'org' subdirectory
+	wd += org
+	err = os.Chdir(wd)
+	if err != nil {
+		// Try to Mkdir it if not exists
+		err := os.Mkdir(wd, 0755)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "Error: %+v\n", err)
+			return
+		}
+		err = os.Chdir(wd)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "Error: %+v\n", err)
+			return
+		}
+	}
+
+	// Iterate org's repositories
+	for _, orgRepo := range repos {
+		// Must be in org directory for every repo call
+		err = os.Chdir(wd)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "Error: %+v\n", err)
+			return
+		}
+		ary := strings.Split(orgRepo, "/")
+		repo := ary[1]
+		rwd := wd + "/" + repo
+		err = os.Chdir(rwd)
+		if err != nil {
+			// We need to clone repo
+			fmt.Printf("Cloning %s\n", orgRepo)
+			cmd := exec.Command("git", "clone", "https://github.com/"+orgRepo+".git")
+			cmd.Env = append(os.Environ(), "GIT_TERMINAL_PROMPT=0")
+			output, err := cmd.CombinedOutput()
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Error cloning: %s: %+v\n%s\n", orgRepo, err, string(output))
+			} else {
+				pwd, _ := os.Getwd()
+				fmt.Printf("Cloned %s in %s\n", orgRepo, pwd)
+			}
+		} else {
+			// We *may* need to pull repo
+			fmt.Printf("Pulling %s\n", orgRepo)
+		}
+	}
+}
+
 // pullRepos does all the job
-// Environment needed/used
-// PG_PASS: set postgres password
-// GHA2DB_PATH: path to cncf/devstats repo
 func pullRepos() error {
+	if os.Getenv("REPOS_DIR") == "" {
+		return fmt.Errorf("you have to set environemnt variable REPOS_DIR to run this program")
+	}
+
 	// Read projects defined in `cncf/devstats`'s projects.yaml
 	data, err := ioutil.ReadFile(os.Getenv("GHA2DB_PATH") + "projects.yaml")
 	if err != nil {
@@ -79,6 +143,7 @@ func pullRepos() error {
 		if err != nil {
 			return err
 		}
+		// Create map of distinct "org" --> list of repos
 		for _, repo := range repos {
 			ary := strings.Split(repo, "/")
 			if len(ary) != 2 {
@@ -93,7 +158,11 @@ func pullRepos() error {
 			allRepos[org] = ary
 		}
 	}
-	fmt.Printf("AllRepos: %+v\n", allRepos)
+
+	// Process all orgs
+	for org, repos := range allRepos {
+		processOrg(org, repos)
+	}
 	return nil
 }
 
@@ -102,7 +171,7 @@ func main() {
 	err := pullRepos()
 	dtEnd := time.Now()
 	if err != nil {
-		fmt.Printf("Error: %+v\n", err)
+		fmt.Fprintf(os.Stderr, "Error: %+v\n", err)
 		return
 	}
 	fmt.Printf("All repos pulled in: %v\n", dtEnd.Sub(dtStart))
