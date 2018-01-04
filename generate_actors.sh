@@ -7,3 +7,4 @@ sudo -u postgres psql linkerd < ~/dev/go/src/devstats/util_sql/contributing_acto
 sudo -u postgres psql grpc < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql coredns < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql containerd < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
+vim actors.txt
