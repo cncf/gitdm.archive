@@ -11,6 +11,9 @@ require '../comment'
 Clearbit.key = ENV['CLEARBIT_KEY']
 # visit https://dashboard.clearbit.com/plans for an api key
 
+overwrite = ARGV[0].to_s == 'true'
+modifier = overwrite ? 'w' : 'a'
+
 previous_lookups = []
 CSV.foreach('clearbit_lookup_data.csv', headers: true) do |row|
   next if is_comment row
@@ -29,7 +32,7 @@ text.each_line do |line|
     start_found = true
   elsif start_found
     break if line == "\n"
-    next if previous_lookups.include? line_word_array[1]
+    next if !overwrite && (previous_lookups.include? line_word_array[1])
     email_list.push line_word_array[1]
     line_count += 1
   end
@@ -41,7 +44,7 @@ text.each_line do |line|
     start_found = true
   elsif start_found
     break if line == "\n"
-    next if previous_lookups.include? line_word_array[1]
+    next if !overwrite && (previous_lookups.include? line_word_array[1])
     email_list.push line_word_array[1]
     line_count += 1
   end
@@ -74,8 +77,8 @@ if File.exist?('clearbit_lookup_data.csv')
   create_output = File.zero?('clearbit_lookup_data.csv')
 end
 
-CSV.open('clearbit_lookup_data.csv', 'a') do |csv|
-  if create_output
+CSV.open('clearbit_lookup_data.csv', modifier) do |csv|
+  if modifier == 'w' || create_output
     header_row = %w[hashed_email chance affiliation_suggestion message first_name]
     header_row << %w[last_name full_name gender localization bio site avatar]
     header_row << %w[employment_name employment_domain github_handle]
