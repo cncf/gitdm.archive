@@ -222,7 +222,7 @@ if added_mapping_count.positive? || updated_mapping_count.positive?
 end
 
 # Save multi-org developer work history to a separate file
-CSV.open('fullconact_developer_historical_organizations.csv', 'w') do |csv|
+CSV.open('fullcontact_developer_historical_organizations.csv', 'w') do |csv|
   header_row = ['email/org_name', 'category', 'timing', 'date_from', 'date_to', 'title']
   csv << header_row
   affiliations.each do |affiliation|
@@ -237,6 +237,6 @@ CSV.open('fullconact_developer_historical_organizations.csv', 'w') do |csv|
   end
 end
 
-puts 'exported developer organizations to fullconact_developer_historical_organizations.csv'
+puts 'exported developer organizations to fullcontact_developer_historical_organizations.csv'
 
 puts 'all done'
