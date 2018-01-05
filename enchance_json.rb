@@ -150,7 +150,35 @@ def enchance_json(json_file, csv_file, actors_file)
     'wenwenwenjun', 'winniwinter', 'WinstonSureChill', 'wo8113596', 'wolfador', 'woodbor', 'worldfirst1', 'xiangli-cmu',
     'xLegoz', 'XsWack', 'xylin821', 'yangguilei', 'YdnaRa', 'YingBurden', 'yjww', 'ymqytw', 'yoo2767', 'yoshuaalvin',
     'yslzsl', 'YuquanRen', 'yxu900331', 'Zapadlo', 'ZhangBanger', 'zhaoguoxin', 'zhaoxpZTE', 'zhi-feng', 'zine2hamster',
-    'ZMI-JayGorrell', 'zyren88'
+    'ZMI-JayGorrell', 'zyren88',
+    '1810755jiawei', 'aaroncai-myob', 'Agrosis', 'Atlashugged', 'better88', 'bitbyteshort', 'blemagicleap', 'brdude',
+    'Cedric-Venet', 'Doron-offir', 'DreamLog', 'dxarm', 'FlorianOnmyown', 'Gr1dd', 'guoliang88', 'jamesawebb1',
+    'kargakis-bot', 'kavehmzta', 'kbrinnehl', 'klud1', 'leftyhitchens', 'lukaseichler', 'MaksymDev', 'markbarks',
+    'MikaelCluseau', 'moravit', 'MurgaNikolay', 'prateek-1708', 'qhartman-t3', 'qwangrepos', 'shubhamchaudhary',
+    'simonwydooghe', 'spacexnice', 'thecantero', 'will835559313', 'Yangsheng93', '240ch', 'aardestani', 'Achohr',
+    'adityatalks', 'alin-sinpalean', 'AnudeepReddyJ21', 'a-pastushenko', 'applegrain', 'awsuderman', 'bellmounte',
+    'bogdanbadescu', 'chrislonng', 'Christmas-shl', 'c-j-s', 'cpb83', 'cumulus-drew', 'DanGoldbach', 'devghai',
+    'dopykuh', 'EverChris', 'EyesBear', 'fraserrj', 'GeorgeYuen', 'giaquinti', 'gittex', 'gsabena', 'hajzso', 'ih16',
+    'jessebolson', 'linqianqiu', 'm247suppport', 'machinelady', 'mattharden', 'mlety2', 'MojojojoPowwa', 'mwitkow-io',
+    'nirav7715', 'obsoleter', 'opensourcegrrrl', 'pkrupa2', 'pofuk', 'prettyxw', 'ProfessorYang', 'rihardsf',
+    'rud-bookbites', 'ryanturner', 'ShalomCohen', 'shartmnn', 'srikanth789', 'szxnyc', 'Theci', 'TianleChew',
+    'TomaszSekTesco', 'tom-tuddenham-bulletproof', 'u-c-l', 'unixhup', 'vinihi83', 'wombledmaize', 'yupeng820921',
+    'zcytop', 'missionrulz', 'PSG-Luna', 'aeibrahim', 'allamiro1', 'Ankushaccc', 'AphexFX', 'arascanakin',
+    'bbc-tomfitzhenry', 'bernie4321', 'chrischillibean', 'daic-h', 'darkdep', 'daveb0t', 'Hapa29', 'IamBc', 'joshcwa',
+    'kazeula', 'lance-edmodo', 'lk432', 'niku4i', 'paintss', 'phaothu', 'Psyered', 'rdcastro', 'rgjkugiya', 'salty-g',
+    'shoichikaji', 'sony-shinichi-hatayama', 'sriramflydata', 'takashibagura', 'tanaka51-jp', 'TeslaCtroitel', 'UijunLee',
+    'ykitac', 'zhuoyikang', 'dario-simonetti', 'jtaylor32', 'maneeshvittolia', 'robbfoster', 'zhao141', '2050SXZ',
+    'ananthonline', 'andela-gjames', 'andela-jmuli', 'andela-oadesanya', 'arthurcburigo', 'b1101', 'cblichmann-google',
+    'ceoacai', 'chedeti', 'coconut73', 'contributor123', 'daschwanden', 'dasotong', 'DavidAudrain', 'davidclaridge',
+    'davidmoravek', 'deja-v-u', 'devanshujain919', 'drbo', 'dsudia', 'elenabdecastro', 'Emmpa', 'fowlslegs',
+    'frostymarvelous', 'giannisantinelli', 'goodsoldiersvejk', 'Grvs7', 'HugoSTorres', 'iamtiancaif', 'itamar-yowza',
+    'jazzgal', 'j-slvr', 'juanpmarin-infocorp', 'kamidude', 'kangjoni76', 'killjason', 'krundrufanatics', 'lememora',
+    'leonard-shi', 'leonard-sxy', 'leonliu333', 'linardo', 'liuempire', 'liuhanlcj', 'manjunathshetty', 'mastermix252',
+    'mdhheydari', 'mewent', 'Mint-Zhao-Chiu', 'nuss-justin', 'onetwogoo', 'osDanielLee', 'PabloCariel', 'pocographdotcom',
+    'PowerInside', 'prazzt', 'qxd666666', 'Randigtschackspel', 'rok987', 'ryanchou1991', 'sadeghis', 'slafgod000',
+    'soccerlalo2', 'sofuckingnice', 'twoeo', 'ullutau', 'UnICorN21', 'userlocalhost2000', 'ustime', 'was4444',
+    'WillSmithInChina', 'wizwjw', 'YoungyoungX', 'ysihaoy', 'yyannekk', 'zachizi', 'Zerqkboo', 'zhengzhuo2017',
+    'zp-j', 'ijc25', 'jintingying', 'rneugeba', 'xianwei2016'
   ]
   skip_logins_arr.each { |skip_login| skip_logins[skip_login] = true }
 
@@ -174,9 +202,9 @@ def enchance_json(json_file, csv_file, actors_file)
     octokit_init()
     rate_limit()
     puts "We need to process additional actors using GitHub API, type exit-program if you want to exit"
-    binding.pry
     uacts = unknown_actors.keys
     n_users = uacts.size
+    binding.pry
     uacts.each_with_index do |actor, index|
       begin
         rate_limit()
