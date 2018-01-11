@@ -167,7 +167,8 @@ def import_affs(dev_affs, comp_devs)
     # for example: ./all_repos_log.sh /root/devstats_repos/BuoyantIO/* /root/devstats_repos/GoogleCloudPlatform/* /root/devstats_repos/cncf/* /root/devstats_repos/containerd/* /root/devstats_repos/coredns/* /root/devstats_repos/docker/* /root/devstats_repos/fluent/* /root/devstats_repos/grpc/* /root/devstats_repos/kubernetes/* /root/devstats_repos/kubernetes-client/* /root/devstats_repos/kubernetes-helm/* /root/devstats_repos/kubernetes-incubator/* /root/devstats_repos/linkerd/* /root/devstats_repos/opentracing/* /root/devstats_repos/prometheus/*
     puts './manual_all.sh or `~/dev/alt/gitdm/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`'
     puts 'SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh'
-    puts 'Consider ./ghusers.sh'
+    puts 'Consider ./ghusers_cached.sh or ./ghusers.sh (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points)'
+    puts 'Also if updating via ghusers.sh or gh_users_cached.sh - run generate_actors.sh too.'
     puts './enchance_json.sh'
     puts 'Or alternatively regenerate ALL data ./rerun_all.sh'
   end
