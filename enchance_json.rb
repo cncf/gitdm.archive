@@ -178,7 +178,8 @@ def enchance_json(json_file, csv_file, actors_file)
     'PowerInside', 'prazzt', 'qxd666666', 'Randigtschackspel', 'rok987', 'ryanchou1991', 'sadeghis', 'slafgod000',
     'soccerlalo2', 'sofuckingnice', 'twoeo', 'ullutau', 'UnICorN21', 'userlocalhost2000', 'ustime', 'was4444',
     'WillSmithInChina', 'wizwjw', 'YoungyoungX', 'ysihaoy', 'yyannekk', 'zachizi', 'Zerqkboo', 'zhengzhuo2017',
-    'zp-j', 'ijc25', 'jintingying', 'rneugeba', 'xianwei2016'
+    'zp-j', 'ijc25', 'jintingying', 'rneugeba', 'xianwei2016', 'OricanIs', 'TravisBurandt', 'vaantts', 'CoolaDani',
+    'Durtdiver', 'xaxiclouddev'
   ]
   skip_logins_arr.each { |skip_login| skip_logins[skip_login] = true }
 
