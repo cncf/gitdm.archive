@@ -55,6 +55,7 @@ DateTo = datetime.datetime(2069, 1, 1)
 BotEmails = [
     "abbott@squareup.com",
     "containers-bot@bitnami.com",
+    "deploy-bot@opentracing.io",
     "greenkeeper[bot]@users.noreply.github.com",
     "hudson@openstack.org",
     "info@bitergia.com",
