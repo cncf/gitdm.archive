@@ -24,6 +24,10 @@ This tool will generate a new `email-map` file.
 
 Check if your changes processed properly and move the file to `cncf-config/email-map` (replace)
 
+# Sync workflow
+
+Please follow the instructions from [SYNC.md](https://github.com/cncf/gitdm/blob/master/SYNC.md).
+
 # Running
 Use `*.sh` scripts to run analytics (`all*.sh` for full analysis and `rels*.sh` for per release stats)
 
