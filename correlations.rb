@@ -17,7 +17,7 @@ def correlation_metric(strings)
 end
 
 def correlations(csv_file)
-  min_correlation = 61.0
+  min_correlation = 70.0
 
   affs = {}
   skip_set = ['Independent', 'NotFound', '?', '(Unknown)', 'Funky']
@@ -41,7 +41,7 @@ def correlations(csv_file)
   specials += [
     ' inc', 'gmbh', ' llc', ' zoo', ' ltd', ' labs', ' cloud', ' ag',
     ' it', 'cloud ', ' lp', 'ab', ' corp', ' co', 'the ', ' pvt', ' sa',
-    '.com', '.net', '.inc'
+    '.com', '.net', '.inc', 'io'
   ].uniq
   affs.each do |a, n|
     c = a.downcase.gsub(/[^0-9a-z ]/, '')
