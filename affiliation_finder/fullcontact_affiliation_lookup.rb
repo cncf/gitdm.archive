@@ -73,7 +73,7 @@ CSV.open('fullcontact_lookup_data.csv', modifier) do |csv|
   end
   email_list.each do |email_with_exclamation|
     # check_cnt is the max NUMBER of emails to PROCESS in this BATCH
-    break if check_cnt > 1200
+    break if ok_cnt > 1200
     begin
       email_with_at = email_with_exclamation.sub('!', '@')
       next unless email_with_at.include? '@'
