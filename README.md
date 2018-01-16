@@ -324,22 +324,22 @@ All those tools are automatically called when running the full data regeneration
 	- `clearbit_affiliation_lookup.rb`
 	- `ruby clearbit_affiliation_merge.rb`
 
-The first one works with one argument and generates a file `clearbit_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false'. Invocation would be `clearbit_affiliation_lookup.rb` or `clearbit_affiliation_lookup.rb false` or `clearbit_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwriten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value this: 
+The first one works with one argument and generates a file `clearbit_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false' - default. Invocation would be `clearbit_affiliation_lookup.rb` or `clearbit_affiliation_lookup.rb false` or `clearbit_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwriten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value for this: 
 	```
 	Clearbit.key = ENV['CLEARBIT_KEY']
 	```
 It is a secret API key on a Clearbit account which has been set up for subscription. When the file is generated, open it in a csv editor, sort by the 'chance' field. Visually check and correct data in the 'affiliation_suggestion' column. Replace values such as 'http://www.ghostcloud.cn/' with 'Ghostcloud'. If you find affiliations for other developers manually, just change the 'none' value in the 'chance' column to 'high' and provide a value in the 'affiliation_suggestion' column. Columns to the right of 'affiliation_suggestion' are not required.
 
-The second scripts reads the 'clearbit_affiliation_lookup.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered.
+The second script reads the 'clearbit_affiliation_lookup.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered.
 
 - To automatically find affiliations (email to company) using FullContact, run two scripts from affiliation_finder folder in order:
 	- `ruby fullcontact_affiliation_lookup.rb`
 	- `ruby fullcontact_affiliation_merge.rb`
 
-The first one works with one argument and generates a file `fullcontact_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false'. Invocation would be `fullcontact_affiliation_lookup.rb` or `fullcontact_affiliation_lookup.rb false` or `fullcontact_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwriten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value this: 
+The first one works with one argument and generates a file `fullcontact_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false' - default. Invocation would be `fullcontact_affiliation_lookup.rb` or `fullcontact_affiliation_lookup.rb false` or `fullcontact_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwriten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value for this: 
 	```
 	config.api_key = ENV['FULLCONTACT_KEY']
 	```
 It is a secret API key on a FullContact account which has been set up for subscription. The columns differ in this file compared to that of Clearbit. If you find affiliations for other developers manually, just change the value in the 'org_1' column. The column by default should have 5 pipe-delimited values. If you do not have the values for the other 4, just type 4 pipes. Columns to the right of 'org_1' are not required.
 
-The second scripts reads the 'clearbit_affiliation_lookup.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered. The merge scripts export developer work history to `fullcontact_developer_historical_irganizations.csv`.
+The second script reads the 'clearbit_affiliation_lookup.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered. The merge scripts export developer work history to `fullcontact_developer_historical_irganizations.csv`.
