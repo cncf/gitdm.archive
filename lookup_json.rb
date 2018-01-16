@@ -57,7 +57,8 @@ def lookup_json(json_file, args, output_json)
             val = user[key]
           end
         end
-        matches << (val || '').match?(re)
+        # matches << (val || '').match?(re)
+        matches << ((val || '') =~ re)
       end
       # now we have array of match results and apply ruby method to it (default :all?) and get final match for all keys
       matched = matches.send(mode)

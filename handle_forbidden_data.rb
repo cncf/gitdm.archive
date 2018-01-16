@@ -20,9 +20,13 @@ def handle_forbidden_data(filenames)
   split_exp = /[\s+,;'"]/
   filenames.each do |filename|
     File.readlines(filename).each_with_index do |line, line_num|
-      line.split(split_exp).reject(&:empty?).each do |token|
-        sha = sha256.hexdigest token.strip
-        puts "File: #{filename}, Line: #{line_num + 1}, Token: #{token}" if shas.key?(sha)
+      begin
+        line.split(split_exp).reject(&:empty?).each do |token|
+          sha = sha256.hexdigest token.strip
+          puts "File: #{filename}, Line: #{line_num + 1}, Token: #{token}" if shas.key?(sha)
+        end
+      rescue ArgumentError => e
+        next
       end
     end
   end
