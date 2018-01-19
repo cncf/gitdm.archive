@@ -2,6 +2,6 @@
 unset LC_ALL
 unset LANG
 cd ./cncf-config || exit 1
-cat email-map | sort > out; mv out email-map
-cat domain-map | sort > out; mv out domain-map
-cat aliases | sort > out; mv out aliases
+cat email-map | sort | uniq > out; mv out email-map
+cat domain-map | sort | uniq > out; mv out domain-map
+cat aliases | sort | uniq > out; mv out aliases
