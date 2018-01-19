@@ -56,7 +56,7 @@ def merge_github_logins(json_file)
 end
 
 if ARGV.size < 1
-    puts "Missing argument: JSON_file"
+  puts "Missing argument: JSON_file"
   exit(1)
 end
 
