@@ -5,8 +5,14 @@ require 'octokit'
 require './comment'
 require './email_code'
 require './ghapi'
+require './merge'
 
 def enchance_json(json_file, csv_file, actors_file)
+  # This enables guessing if multiple final affiliations are given
+  # Best option is to avoid this, by specifying exact affiliations everywhere!
+  guess_by_email = true
+  guess_by_name = false
+
   # Process actors file: it is a "," separated list of GitHub logins
   actors_data = File.read actors_file
   actors_array = actors_data.split(',').map(&:strip)
@@ -30,7 +36,7 @@ def enchance_json(json_file, csv_file, actors_file)
     n = h['name'].strip
     d = h['date_to'].strip
 
-    # email -> names mapping (unique alway, but dict just in case)
+    # email -> names mapping (unique always, but dict just in case)
     names[e] = {} unless names.key?(e)
     names[e][n] = true
 
@@ -57,10 +63,10 @@ def enchance_json(json_file, csv_file, actors_file)
 
   # Make results as strings
   email_affs.each do |email, comps|
-    email_affs[email] = comps.uniq.join ', '
+    email_affs[email] = check_affs_list email, comps, guess_by_email
   end
   name_affs.each do |name, comps|
-    name_affs[name] = comps.uniq.join ', '
+    name_affs[name] = check_affs_list name, comps, guess_by_name
   end
   
   # Parse JSON
@@ -97,6 +103,9 @@ def enchance_json(json_file, csv_file, actors_file)
     end
     user['affiliation'] = v
   end
+
+  # Merge multiple logins
+  merge_multiple_logins data, false
 
   skip_logins = {}
   skip_logins_arr = [
