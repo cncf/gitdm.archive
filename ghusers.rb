@@ -396,15 +396,15 @@ def ghusers(repos, start_date, args)
 
   octokit_init()
 
+  # Process repositories general info
+  hs = []
+  n_repos = repos.count
+
   rate_limit()
   puts "Type exit-program if You want to exit"
   # This is to ensure You want to continue, it displays Your limit, should be close to 5000
   # If not type 'exit-program' if Yes type 'quit' (to quit debugger & continue)
   binding.pry
-
-  # Process repositories general info
-  hs = []
-  n_repos = repos.count
   repos.each_with_index do |repo_name, repo_index|
     begin
       puts "Processing #{repo_index + 1}/#{n_repos} #{repo_name}"
