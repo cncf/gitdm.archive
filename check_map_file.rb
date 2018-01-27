@@ -9,7 +9,7 @@ def check_map_file(map_file)
       puts line
       next
     end
-    ary = line.split' '
+    ary = line.split ' '
     email = ary[0]
     aff = ary[1..-1].join(' ')
     affs[email] = [] unless affs.key?(email)
