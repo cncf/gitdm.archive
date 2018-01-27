@@ -47,7 +47,7 @@ def check_affs_list(key, affiliations, guess)
       # We have 1 unknown and no final
       if nR == 0
         # only unknown
-        return '(Unknown)'
+        return unknowns.first
       else
         # 1 unknown, no final and ranges
         puts "#{key}: wrong affiliations: #{affiliations} - no final, unknown, ranges present"
