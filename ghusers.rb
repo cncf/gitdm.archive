@@ -6,7 +6,7 @@ require './email_code'
 require './ghapi'
 
 # Ask each repo for commits newer than...
-start_date = '2014-04-01'
+start_date = '2014-01-01'
 
 # List of repositories to retrieve commits from (and get their basic data)
 repos = [
@@ -366,7 +366,7 @@ repos = [
   'rkt/stage1-xen',
   'rktproject/rkt',
   'rook/artwork',
-  'rook/ceph',
+  'rook/ceph',  # this is the same as ceph/ceph - *HUGE* with 85k commits!!
   'rook/coreos-kubernetes',
   'rook/operator-kit',
   'rook/rook',
@@ -477,6 +477,7 @@ def ghusers(repos, start_date, args)
   puts "Commits analysis..."
   skip_logins = [
     'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]', 'stale[bot]',
+    'googlebot', 'coveralls', 'rktbot',
     '', nil
   ]
   email2github = {}
