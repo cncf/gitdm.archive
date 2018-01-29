@@ -1,6 +1,6 @@
 #!/bin/sh
-rm -f github_users.json ghusers/*
 cp github_users.json github_users.old
+rm -f github_users.json ghusers/*
 # To reuse all data (repo metadata, commits, users)
 ruby ghusers.rb
 # To force fetch new commits (it will reuse repos metadata & users)

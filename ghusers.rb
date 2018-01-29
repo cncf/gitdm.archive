@@ -6,12 +6,13 @@ require './email_code'
 require './ghapi'
 
 # Ask each repo for commits newer than...
-start_date = '2014-04-01'
+start_date = '2014-01-01'
 
 # List of repositories to retrieve commits from (and get their basic data)
 repos = [
   'BuoyantIO/linkerd',
   'GoogleCloudPlatform/kubernetes',
+  'appc/cni',
   'cncf/ambassadors',
   'cncf/artwork',
   'cncf/awards',
@@ -55,6 +56,8 @@ repos = [
   'containerd/go-runc',
   'containerd/typeurl',
   'containerd/zfs',
+  'containernetworking/cni',
+  'containernetworking/plugins',
   'coredns/ci',
   'coredns/cloud',
   'coredns/coredns',
@@ -66,9 +69,21 @@ repos = [
   'coredns/logo',
   'coredns/perf-tests',
   'coredns/presentations',
+  'coredns/unbound',
   'coreos/rkt',
   'coreos/rocket',
   'docker/containerd',
+  'docker/notary',
+  'envoyproxy/artwork',
+  'envoyproxy/control-plane',
+  'envoyproxy/data-plane-api',
+  'envoyproxy/envoy',
+  'envoyproxy/envoy-api',
+  'envoyproxy/envoy-filter-example',
+  'envoyproxy/envoy-perf',
+  'envoyproxy/envoy-tools',
+  'envoyproxy/envoyproxy.github.io',
+  'envoyproxy/go-control-plane',
   'fluent/NLog.Targets.Fluentd',
   'fluent/data-collection',
   'fluent/fluent-bit',
@@ -138,6 +153,23 @@ repos = [
   'grpc/grpc.github.io',
   'grpc/homebrew-grpc',
   'grpc/proposal',
+  'jaegertracing/artwork',
+  'jaegertracing/cpp-client',
+  'jaegertracing/documentation',
+  'jaegertracing/jaeger',
+  'jaegertracing/jaeger-client-go',
+  'jaegertracing/jaeger-client-java',
+  'jaegertracing/jaeger-client-javascript',
+  'jaegertracing/jaeger-client-node',
+  'jaegertracing/jaeger-client-python',
+  'jaegertracing/jaeger-documentation',
+  'jaegertracing/jaeger-idl',
+  'jaegertracing/jaeger-kubernetes',
+  'jaegertracing/jaeger-lib',
+  'jaegertracing/jaeger-openshift',
+  'jaegertracing/jaeger-ui',
+  'jaegertracing/spark-dependencies',
+  'jaegertracing/xdock-zipkin-brave',
   'kubernetes-client/client-python',
   'kubernetes-client/community',
   'kubernetes-client/csharp',
@@ -260,6 +292,8 @@ repos = [
   'linkerd/namerctl',
   'linkerd/rustup-nightly-docker',
   'linkerd/tacho',
+  'lyft/envoy',
+  'miekg/coredns',
   'opentracing/api-go',
   'opentracing/api-golang',
   'opentracing/api-java',
@@ -293,7 +327,6 @@ repos = [
   'prometheus/client_python',
   'prometheus/client_ruby',
   'prometheus/cloudwatch_exporter',
-  'prometheus/cloudwatch_exporter',
   'prometheus/collectd_exporter',
   'prometheus/common',
   'prometheus/consul_exporter',
@@ -303,7 +336,6 @@ repos = [
   'prometheus/golang-builder',
   'prometheus/graphite_exporter',
   'prometheus/haproxy_exporter',
-  'prometheus/haproxy_exporter',
   'prometheus/host_exporter',
   'prometheus/influxdb_exporter',
   'prometheus/jmx_exporter',
@@ -311,7 +343,6 @@ repos = [
   'prometheus/memcached_exporter',
   'prometheus/mesos_exporter',
   'prometheus/migrate',
-  'prometheus/mysqld_exporter',
   'prometheus/mysqld_exporter',
   'prometheus/nagios_plugins',
   'prometheus/node_exporter',
@@ -333,7 +364,24 @@ repos = [
   'rkt/rkt',
   'rkt/rkt-builder',
   'rkt/stage1-xen',
-  'rktproject/rkt'
+  'rktproject/rkt',
+  'rook/artwork',
+  'rook/ceph',  # this is the same as ceph/ceph - *HUGE* with 85k commits!!
+  'rook/coreos-kubernetes',
+  'rook/operator-kit',
+  'rook/rook',
+  'rook/rook.github.io',
+  'theupdateframework/artwork',
+  'theupdateframework/notary',
+  'theupdateframework/pep-maximum-security-model',
+  'theupdateframework/pep-on-pypi-with-tuf',
+  'theupdateframework/pip',
+  'theupdateframework/pypi.updateframework.com',
+  'theupdateframework/specification',
+  'theupdateframework/taps',
+  'theupdateframework/theupdateframework.github.io',
+  'theupdateframework/tuf',
+  'uber/jaeger'
 ]
 
 # args[0]: 1st arg is: 'r' - force repos metadata fetch, 'c' - force commits fetch, 'u' force users fetch
@@ -348,15 +396,15 @@ def ghusers(repos, start_date, args)
 
   octokit_init()
 
+  # Process repositories general info
+  hs = []
+  n_repos = repos.count
+
   rate_limit()
   puts "Type exit-program if You want to exit"
   # This is to ensure You want to continue, it displays Your limit, should be close to 5000
   # If not type 'exit-program' if Yes type 'quit' (to quit debugger & continue)
   binding.pry
-
-  # Process repositories general info
-  hs = []
-  n_repos = repos.count
   repos.each_with_index do |repo_name, repo_index|
     begin
       puts "Processing #{repo_index + 1}/#{n_repos} #{repo_name}"
@@ -429,6 +477,7 @@ def ghusers(repos, start_date, args)
   puts "Commits analysis..."
   skip_logins = [
     'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]', 'stale[bot]',
+    'googlebot', 'coveralls', 'rktbot',
     '', nil
   ]
   email2github = {}
