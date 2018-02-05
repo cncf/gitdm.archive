@@ -72,6 +72,15 @@ repos = [
   'coredns/unbound',
   'coreos/rkt',
   'coreos/rocket',
+  'crosscloudci/cncf-configuration',
+  'crosscloudci/coredns-configuration',
+  'crosscloudci/cross-cloud',
+  'crosscloudci/cross-project',
+  'crosscloudci/crosscloudci',
+  'crosscloudci/fluentd-configuration',
+  'crosscloudci/kubernetes-configuration',
+  'crosscloudci/linkerd-configuration',
+  'crosscloudci/prometheus-configuration',
   'docker/containerd',
   'docker/notary',
   'envoyproxy/artwork',
@@ -146,6 +155,7 @@ repos = [
   'grpc/grpc-go',
   'grpc/grpc-haskell',
   'grpc/grpc-java',
+  'grpc/grpc-java-api-checker',
   'grpc/grpc-node',
   'grpc/grpc-php',
   'grpc/grpc-proto',
@@ -359,6 +369,7 @@ repos = [
   'prometheus/snmp_exporter',
   'prometheus/statsd_bridge',
   'prometheus/statsd_exporter',
+  'prometheus/talks',
   'prometheus/tsdb',
   'prometheus/utils',
   'rkt/rkt',
@@ -366,7 +377,7 @@ repos = [
   'rkt/stage1-xen',
   'rktproject/rkt',
   'rook/artwork',
-  'rook/ceph',  # this is the same as ceph/ceph - *HUGE* with 85k commits!!
+  'rook/ceph',    # This is crazy huge 85k commits
   'rook/coreos-kubernetes',
   'rook/operator-kit',
   'rook/rook',
@@ -381,7 +392,8 @@ repos = [
   'theupdateframework/taps',
   'theupdateframework/theupdateframework.github.io',
   'theupdateframework/tuf',
-  'uber/jaeger'
+  'uber/jaeger',
+  'youtube/vitess'
 ]
 
 # args[0]: 1st arg is: 'r' - force repos metadata fetch, 'c' - force commits fetch, 'u' force users fetch
