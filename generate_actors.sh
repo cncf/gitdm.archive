@@ -14,5 +14,7 @@ sudo -u postgres psql jaeger < ~/dev/go/src/devstats/util_sql/contributing_actor
 sudo -u postgres psql notary < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql tuf < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql rook < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
+sudo -u postgres psql vitess < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
+sudo -u postgres psql opencontainers < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql cncf < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 vim actors.txt
