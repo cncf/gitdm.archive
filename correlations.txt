@@ -1,14 +1,15 @@
 Those companies are unmappable to ASCII only symbols
 [["МТС", 1], ["НИИ АА", 1], ["徳を積む", 1], ["倫理的に妥当な箱", 1], ["中佑", 1], ["心动网络", 1], ["الصحيفة الآقتصادية", 1], ["패스트캠퍼스", 1], ["НГС", 1], ["欢聚时代", 1], ["豆瓣", 1], ["うんこ", 1], ["カブク", 1], ["스마일게이트", 1], ["株式会社ドヴァ", 1], ["✕✕✕✕✕", 1], ["北京天威诚信电子商务服务有限公司", 1], ["Cloud Security", 1], ["Восход", 1], ["社会大学", 1], ["株式会社アニメイトラボ", 1]]
 Those companies map into the same key 'jdcom':
-[["Jd.Com", 6], ["JD.COM", 2]]
+[["Jd.Com", 6], ["Jd.COM", 2]]
+Those companies map into the same key 'cloudflare':
+[["Cloudflare", 21], ["CloudFlare", 1]]
 Those companies map into the same key 'fusn':
 [["Fusion-io", 1], ["Fusion Electronics", 1]]
 Similar mappings > 70.0% similar:
 [88.0, [["7digital", 1]], [["eDigitalResearch", 1]], "7digital <> edigital"]
 [86.0, [["Anchor", 1]], [["Anchore", 1]], "anchor <> anchore"]
 [86.0, [["Directi", 1]], [["Directv", 2]], "directi <> directv"]
-[86.0, [["Quipped", 1]], [["Quipper", 2]], "quipped <> quipper"]
 [86.0, [["Stream.io", 1]], [["Streamlio", 1]], "stream <> streaml"]
 [86.0, [["Stream.io", 1]], [["Ustream", 4]], "stream <> ustream"]
 [86.0, [["Streamlio", 1]], [["Ustream", 4]], "streaml <> ustream"]
@@ -65,7 +66,7 @@ Similar mappings > 70.0% similar:
 [75.0, [["Streamlio", 1]], [["StreamMe", 1]], "streaml <> streamme"]
 [75.0, [["StreamMe", 1]], [["Ustream", 4]], "streamme <> ustream"]
 [75.0, [["Twitch", 1]], [["twitch.tv", 1]], "twitch <> twitchtv"]
-[75.0, [["Uber", 19]], [["Vube", 1]], "uber <> vube"]
+[75.0, [["Uber", 25]], [["Vube", 1]], "uber <> vube"]
 [75.0, [["Wish", 1]], [["W.I.S.V", 1]], "wish <> wisv"]
 [73.0, [["HomeAway", 1]], [["HomeAway.com", 2]], "homeaway <> homeawaycom"]
 [73.0, [["Informatica", 1]], [["Information Security", 1]], "informatica <> informatn"]
