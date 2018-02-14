@@ -22,4 +22,5 @@
 # To sync maintainers:
 1. Open [maintainers list](https://docs.google.com/spreadsheets/d/1QShmHcStYh5BjTjdOAASFK9V4WaYwJSFu1maBdcV5YA/edit#gid=0)
 2. Save "Company" and "GitHub name" columns to a new sheet and download it as "maintainers.csv".
-3. Run `./maintainers.sh` script.
+3. Add "company,login" CSV header.
+4. Run `./maintainers.sh` script. Follow its instructions.
