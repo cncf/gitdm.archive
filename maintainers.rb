@@ -40,8 +40,12 @@ def maintainers(maintainers_file, users_file, config_file)
     email[e] = [] unless email.key?(e)
     email[e] << c
   end
+  final = {}
   email.each do |e, c|
-    email[e] = c.sort
+    c.each do |co|
+      final[e] = co unless co.include?(' < ')
+    end
+    email[e] = c.sort.join(', ')
   end
 
   # Check/update
@@ -49,13 +53,49 @@ def maintainers(maintainers_file, users_file, config_file)
   data = []
   affs.each do |login, company|
     if emails.key?(login)
+      ems = emails[login]
+      first_affs = nil
+      first_email = nil
+      miss = []
+      ems.each do |em|
+        affs_list = email[em]
+        if affs_list
+          unless first_affs
+            first_affs = affs_list
+            first_email = em
+          end
+          if affs_list != first_affs
+            STDERR.puts "Affiliations mismatch: first: #{first_affs}(#{first_email}), current: #{affs_list}(#{em}), email list: #{ems}, login: #{login}"
+            binding.pry
+          end
+          if final[em] != company
+            STDERR.puts "Final affiliations mismatch: #{affs_list}, should be: #{company}, email list: #{ems}, login: #{login}"
+            binding.pry
+          end
+        else
+          STDERR.puts "Missing affiliation: email: #{em}, company: #{company}, login: #{login}"
+          miss << em
+        end
+      end
+      if miss.length > 0
+        miss.each do |em|
+          if first_affs
+            first_affs.split(', ').each do |co|
+              puts "#{em} #{co}"
+            end
+          else
+            puts "#{em} #{company}"
+          end
+        end
+        STDERR.puts"Correct affiliations generated to STDOUT, redirect them '>> cncf-config/email-map' and then ./sort_configs.sh"
+      end
     else
       unless oinited
         octokit_init()
         rate_limit()
         oinited = true
       end
-      puts "We don't know GitHub login: #{login}, company: #{company}"
+      STDERR.puts "We don't know GitHub login: #{login}, company: #{company}"
       e = "#{login}!users.noreply.github.com"
       u = Octokit.user login
       u['email'] = e
