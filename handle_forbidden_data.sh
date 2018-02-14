@@ -12,6 +12,7 @@ find . -type f -iname "*.db" >> ./flist.txt
 find . -type f -iname "*.dump" >> ./flist.txt
 find . -type f -iname "*.dat" >> ./flist.txt
 find . -type f -iname "*.log" >> ./flist.txt
+find . -type f -iname "*.old" >> ./flist.txt
 find ./cncf-config -type f >> ./flist.txt
 ./handle_forbidden_data.rb `cat flist.txt`
 rm ./flist.txt
