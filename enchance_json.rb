@@ -159,7 +159,8 @@ def enchance_json(json_file, csv_file, actors_file)
     'wenwenwenjun', 'winniwinter', 'WinstonSureChill', 'wo8113596', 'wolfador', 'woodbor', 'worldfirst1', 'xiangli-cmu',
     'xLegoz', 'XsWack', 'xylin821', 'yangguilei', 'YdnaRa', 'YingBurden', 'yjww', 'ymqytw', 'yoo2767', 'yoshuaalvin',
     'yslzsl', 'YuquanRen', 'yxu900331', 'Zapadlo', 'ZhangBanger', 'zhaoguoxin', 'zhaoxpZTE', 'zhi-feng', 'zine2hamster',
-    'ZMI-JayGorrell', 'zyren88',
+    'ZMI-JayGorrell', 'zyren88', 'cobaugh', 'WesleySugarFree', 'byzhangyong', 'gabriel-caruso', 'harshitgangal',
+    'ilmerovingio', 'ITPROMatthew', 'PatrickDropbox', 'tvaillancourt', 'badbug0101', 'gitido', 'hobarrera', 'jlb13',
     '1810755jiawei', 'aaroncai-myob', 'Agrosis', 'Atlashugged', 'better88', 'bitbyteshort', 'blemagicleap', 'brdude',
     'Cedric-Venet', 'Doron-offir', 'DreamLog', 'dxarm', 'FlorianOnmyown', 'Gr1dd', 'guoliang88', 'jamesawebb1',
     'kargakis-bot', 'kavehmzta', 'kbrinnehl', 'klud1', 'leftyhitchens', 'lukaseichler', 'MaksymDev', 'markbarks',
@@ -192,7 +193,7 @@ def enchance_json(json_file, csv_file, actors_file)
     'Advil-Robin', 'bordeltabernacle', 'brookerj11211', 'castillobg', 'charliedrage', 'drumulonimbus', 'erikano',
     'fwilson42', 'justiniac', 'laurchris', 'meganuke19', 'mezcalero', 'pmatts', 'progrn', 'ramitsurana05',
     'talon-hartmann', 'virtualswede', 'zhq527725', 'Kdcm', 'akshayadatta', 'GeorgiKhomeriki', 'isaach1000',
-    'MengZhi825', 'ZAntony', 'ali-yousuf-10p', 'mkonakan', 'mstanleyjones', 'Kwang100'
+    'MengZhi825', 'ZAntony', 'ali-yousuf-10p', 'mkonakan', 'mstanleyjones', 'Kwang100', 'november-eleven', 'PointMicro'
   ]
   skip_logins_arr.each { |skip_login| skip_logins[skip_login] = true }
 
