@@ -194,7 +194,10 @@ def enchance_json(json_file, csv_file, actors_file)
     'Advil-Robin', 'bordeltabernacle', 'brookerj11211', 'castillobg', 'charliedrage', 'drumulonimbus', 'erikano',
     'fwilson42', 'justiniac', 'laurchris', 'meganuke19', 'mezcalero', 'pmatts', 'progrn', 'ramitsurana05',
     'talon-hartmann', 'virtualswede', 'zhq527725', 'Kdcm', 'akshayadatta', 'GeorgiKhomeriki', 'isaach1000',
-    'MengZhi825', 'ZAntony', 'ali-yousuf-10p', 'mkonakan', 'mstanleyjones', 'Kwang100', 'november-eleven', 'PointMicro'
+    'MengZhi825', 'ZAntony', 'ali-yousuf-10p', 'mkonakan', 'mstanleyjones', 'Kwang100', 'november-eleven', 'PointMicro',
+    'abdulcoolguy', 'aelsen', 'AnatoliiPrylutskyi', 'ApfelUser', 'irobert91', 'jnsone11', 'jonas-lu', 'joshglendenning',
+    'kawaiiushio', 'kraipichj', 'longnguyen11288', 'noname1488', 'piyushtiwari123456', 'romonopoly', 'salerio',
+    'SotirisSalloumis', 'tisov', 'uwillis', 'vitorduque', 'wideawake', 'zbyzhengzong', 'zz-bmj'
   ]
   skip_logins_arr.each { |skip_login| skip_logins[skip_login] = true }
 
