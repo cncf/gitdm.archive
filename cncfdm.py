@@ -56,6 +56,7 @@ BotEmails = [
     "abbott@squareup.com",
     "containers-bot@bitnami.com",
     "deploy-bot@opentracing.io",
+    "github+dockerlibrarybot@infosiftr.com",
     "greenkeeper[bot]@users.noreply.github.com",
     "hudson@openstack.org",
     "info@bitergia.com",

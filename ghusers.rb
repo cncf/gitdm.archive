@@ -558,7 +558,7 @@ def ghusers(repos, start_date, args)
   puts "Commits analysis..."
   skip_logins = [
     'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]', 'stale[bot]',
-    'googlebot', 'coveralls', 'rktbot',
+    'googlebot', 'coveralls', 'rktbot', 'Docker Library Bot',
     '', nil
   ]
   email2github = {}
