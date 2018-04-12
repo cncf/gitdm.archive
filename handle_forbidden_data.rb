@@ -23,7 +23,7 @@ def handle_forbidden_data(filenames)
       begin
         line.split(split_exp).reject(&:empty?).each do |token|
           sha = sha256.hexdigest token.strip
-          puts "File: #{filename}, Line: #{line_num + 1}, Token: #{token}" if shas.key?(sha)
+          puts "File: #{filename}, Line: #{line_num + 1}, Token: #{token}, SHA: #{sha}" if shas.key?(sha)
         end
       rescue ArgumentError => e
         next
