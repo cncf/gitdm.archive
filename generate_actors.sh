@@ -16,6 +16,9 @@ sudo -u postgres psql -tA tuf < ~/dev/go/src/devstats/util_sql/contributing_acto
 sudo -u postgres psql -tA rook < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql -tA vitess < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql -tA nats < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
+sudo -u postgres psql -tA opa < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
+sudo -u postgres psql -tA spiffe < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
+sudo -u postgres psql -tA spire < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql -tA opencontainers < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql -tA cncf < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 cat actors.txt | sort | uniq > actors.tmp

@@ -8,12 +8,16 @@ require './ghapi'
 def maintainers(maintainers_file, users_file, config_file)
   # Process maintainers file
   affs = {}
+  affs_names = {}
   CSV.foreach(maintainers_file, headers: true) do |row|
     next if is_comment row
     h = row.to_h
+    next if h['company'].nil?
     c = h['company'].strip
     l = h['login'].strip
+    n = h['name'].strip
     affs[l] = c
+    affs_names[l] = n
   end
   # p affs
 
@@ -87,7 +91,7 @@ def maintainers(maintainers_file, users_file, config_file)
             puts "#{em} #{company}"
           end
         end
-        STDERR.puts"Correct affiliations generated to STDOUT, redirect them '>> cncf-config/email-map' and then ./sort_configs.sh"
+        STDERR.puts "Correct affiliations generated to STDOUT, redirect them '>> cncf-config/email-map' and then ./sort_configs.sh"
       end
     else
       unless oinited
@@ -97,12 +101,21 @@ def maintainers(maintainers_file, users_file, config_file)
       end
       STDERR.puts "We don't know GitHub login: #{login}, company: #{company}"
       e = "#{login}!users.noreply.github.com"
-      u = Octokit.user login
-      u['email'] = e
-      u['commits'] = 0
-      u['affiliation'] = company
-      h = u.to_h
-      data << h
+      name = affs_names[login]
+      begin
+        u = Octokit.user login
+        puts "#{u['email']} #{company}" unless u['email'].nil?
+        u['email'] = e
+        u['commits'] = 0
+        u['affiliation'] = company
+        u['name'] = name if u['name'].nil?
+        h = u.to_h
+        puts "#{e} #{company}"
+        data << h
+      rescue Octokit::NotFound => err
+        STDERR.puts "GitHub API exception"
+        next
+      end
     end
   end
   if data.length > 0
