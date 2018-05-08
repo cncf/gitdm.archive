@@ -197,7 +197,7 @@ def enchance_json(json_file, csv_file, actors_file)
     'MengZhi825', 'ZAntony', 'ali-yousuf-10p', 'mkonakan', 'mstanleyjones', 'Kwang100', 'november-eleven', 'PointMicro',
     'abdulcoolguy', 'aelsen', 'AnatoliiPrylutskyi', 'ApfelUser', 'irobert91', 'jnsone11', 'jonas-lu', 'joshglendenning',
     'kawaiiushio', 'kraipichj', 'longnguyen11288', 'noname1488', 'piyushtiwari123456', 'romonopoly', 'salerio',
-    'SotirisSalloumis', 'tisov', 'uwillis', 'vitorduque', 'wideawake', 'zbyzhengzong', 'zz-bmj'
+    'SotirisSalloumis', 'tisov', 'uwillis', 'vitorduque', 'wideawake', 'zbyzhengzong', 'zz-bmj',
     'AbangSD', 'AronT-Emelai', 'Arvon2014', 'cla-bot[bot]', 'clintonskitson', 'd0b3r', 'danh22', 'FrankJuH',
     'ghostcloud-zhanglikun', 'grandiose-fqh', 'itham', 'IvanFateev', 'lmpetrie13', 'lwhhhh', 'meganokeefe', 'mycpatin',
     'qinghuawulang', 'rajatvcsbuild', 'rchenv', 'rebellionyu', 'shweta426060', 'spiffe-clabot[bot]', 'sysinvader',
