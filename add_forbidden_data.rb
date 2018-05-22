@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'pry'
 require 'csv'
 require 'digest'
 
