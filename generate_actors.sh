@@ -20,6 +20,9 @@ sudo -u postgres psql -tA opa < ~/dev/go/src/devstats/util_sql/contributing_acto
 sudo -u postgres psql -tA spiffe < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql -tA spire < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql -tA opencontainers < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
+sudo -u postgres psql -tA contrib < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
+sudo -u postgres psql -tA cloudevents < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
+sudo -u postgres psql -tA telepresence < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 sudo -u postgres psql -tA cncf < ~/dev/go/src/devstats/util_sql/contributing_actors.sql >> actors.txt
 cat actors.txt | sort | uniq > actors.tmp
 tr '\n' ',' < actors.tmp > out
