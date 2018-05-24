@@ -201,7 +201,24 @@ def enchance_json(json_file, csv_file, actors_file)
     'AbangSD', 'AronT-Emelai', 'Arvon2014', 'cla-bot[bot]', 'clintonskitson', 'd0b3r', 'danh22', 'FrankJuH',
     'ghostcloud-zhanglikun', 'grandiose-fqh', 'itham', 'IvanFateev', 'lmpetrie13', 'lwhhhh', 'meganokeefe', 'mycpatin',
     'qinghuawulang', 'rajatvcsbuild', 'rchenv', 'rebellionyu', 'shweta426060', 'spiffe-clabot[bot]', 'sysinvader',
-    'Tarun17github', 'theopenlab-ci[bot]', 'UserNameSoMany', 'yashtewarisaab', 'zuobaojing'
+    'Tarun17github', 'theopenlab-ci[bot]', 'UserNameSoMany', 'yashtewarisaab', 'zuobaojing', '0003ydlom', '0x04C2',
+    '1tush', 'abel-navarro', 'adulteratedjedi', 'ae-m', 'ahenobarbi', 'airywenter', 'akaey', 'Aqiling',
+    'atteroTheGreatest', 'automatedtendencies', 'Ayayaaaa', 'bai471051357', 'banmawangqin', 'bassrob',
+    'benjaminkaehne', 'bingoarunprasath', 'BlackNoxis', 'bluesea147', 'bobzhouHW', 'brilliantmichael', 'caniggiagoal',
+    'CasonChan', 'cbrown2', 'cmeadRackspace', 'co1inlee', 'cosmos-alivas', 'daniel-sd', 'davidfontenot', 'donghongshuai',
+    'drymonsoon', 'dvrts', 'Edwardro22', 'Egis-Moshe', 'eMxyzptlk', 'ewang93', 'fhfuwei', 'flyxiuMay', 'fr3dm4n',
+    'gerebdavid', 'gerrive', 'grkg8tr', 'gxela', 'HadockHanif', 'hayesShi', 'hd1de', 'HelloJennie', 'HeorhiSidorin',
+    'HuffMoody', 'imranity', 'inimitableharish', 'IvanKiryanov', 'JAIVISH', 'jakekit', 'JChamz', 'jcherqui',
+    'jiangzhao00', 'jianyunet', 'joe2farrell', 'JohnSmithX', 'jonstacks13', 'kboratynski', 'kenny-freeman', 'khnd',
+    'KillerDiller', 'koahmad98', 'kwibbly', 'lafe3402', 'Lakshman-LD', 'lenovo-network', 'lesilva00', 'liker12134',
+    'linjunjie008', 'lomotony', 'luke0922', 'lzcy5151', 'mafrashteh', 'MattAitchison', 'mc2014', 'med-abidi',
+    'mengjuesh', 'MentalMasochist', 'Mooxmirror', 'mukulika-applatix', 'naseemkamalullah', 'nd2730', 'nexusz99',
+    'nicholasli137', 'nihilifer', 'Ofekmeister', 'openbluemei', 'oxkipo', 'paranoidgabe', 'pilotmattk', 'poll0rz',
+    'pwwebdev', 'Ram-Raja', 'rdefeo', 'richard-zhang94', 'Rocknrolla91', 'rouxcorp', 'ryandjurovich',
+    'shoham-stratoscale', 'shubhekshajalan', 'shwhl', 'Siysun', 'smallen3', 'spmpina', 'svetlovildar', 'swarvanusg',
+    'TamerTas', 'tehnomaag', 'therealjessesanford', 'tianxiaopang', 'tigermian', 'timbordemann', 'TrungACZNE',
+    'userwave01', 'vbnmmnbv1986', 'visquis', 'vortex610', 'whimatthew', 'WithLin0510', 'wjdan94', 'wwb-dev',
+    'xiangningDaocloud', 'xiaogang2169', 'yangyun0374', 'zamotivator', 'zaumreit', 'zhang-yujun', 'zrs233'
   ]
   skip_logins_arr.each { |skip_login| skip_logins[skip_login] = true }
 
@@ -225,6 +242,7 @@ def enchance_json(json_file, csv_file, actors_file)
     octokit_init()
     rate_limit()
     puts "We need to process additional actors using GitHub API, type exit-program if you want to exit"
+    puts "uacts.join(\"', '\")"
     uacts = unknown_actors.keys
     n_users = uacts.size
     binding.pry
