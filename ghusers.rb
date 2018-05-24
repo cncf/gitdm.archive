@@ -731,7 +731,7 @@ def ghusers(repos, start_date, args)
   end
   json = email_encode(JSON.pretty_generate(final))
   File.write 'github_users.json', json
-  puts "All done: please not that new JSON has *only* data for committers"
+  puts "All done: please note that new JSON has *only* data for committers"
   # I had 908/5000 points left when running < 1 hour
 end
 
