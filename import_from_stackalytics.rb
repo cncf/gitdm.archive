@@ -21,6 +21,21 @@ months = {
   '12': 'Dec'
 }
 
+months_rev = {
+  'Jan': '01',
+  'Feb': '02',
+  'Mar': '03',
+  'Apr': '04',
+  'May': '05',
+  'Jun': '06',
+  'Jul': '07',
+  'Aug': '08',
+  'Sep': '09',
+  'Oct': '10',
+  'Nov': '11',
+  'Dec': '12'
+}
+
 existing = {}
 File.readlines('cncf-config/email-map').each do |line|
   line = line.strip
@@ -47,6 +62,7 @@ data = JSON.parse File.read 'default_data.json'
 conf = 0
 new = 0
 same = 0
+expired = 0
 
 data['users'].each do |user|
   user['emails'].each do |email|
@@ -54,17 +70,46 @@ data['users'].each do |user|
     if existing.key?(email)
       user['companies'].each do |company|
         if existing[email][company['company_name']] != company['end_date']
-          p [email, company, existing[email], existing[email][company['company_name']], company['end_date']]
+          # p [email, company, existing[email], existing[email][company['company_name']], company['end_date']]
           conf += 1
         else
           same += 1
         end
       end
     else
-      new += 1
+      user['companies'].each do |company|
+        new += 1
+        existing[email] = {} unless existing.key?(email)
+        existing[email][company['company_name']] = company['end_date']
+      end
     end
   end
 end
 
-puts "Same: #{same}, new: #{new}, conflict: #{conf}"
+existing.each do |email, companies|
+  has_nil = false
+  companies.each do |company, dtto|
+    if dtto.nil?
+      has_nil = true
+      break
+    end
+  end
+  unless has_nil
+    expired += 1
+  end
+end
+
+existing.each do |email, companies|
+  companies.each do |company, dtto|
+    if dtto
+      a = dtto.split '-'
+      dtto = "#{a[0]}-#{months_rev[a[1].to_sym]}-#{a[2]}"
+      puts "#{email} #{company} < #{dtto}"
+    else
+      puts "#{email} #{company}"
+    end
+  end
+end
+
+puts "Same: #{same}, new: #{new}, conflict: #{conf}, expired: #{expired}"
 binding.pry
