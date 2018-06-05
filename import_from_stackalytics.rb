@@ -111,5 +111,5 @@ existing.each do |email, companies|
   end
 end
 
-puts "Same: #{same}, new: #{new}, conflict: #{conf}, expired: #{expired}"
-binding.pry
+STDERR.puts "Same: #{same}, new: #{new}, conflict: #{conf}, expired: #{expired}"
+# binding.pry
