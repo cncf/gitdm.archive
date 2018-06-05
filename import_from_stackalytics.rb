@@ -6,6 +6,21 @@ require 'net/http'
 require 'uri'
 require './email_code'
 
+months = {
+  '01': 'Jan',
+  '02': 'Feb',
+  '03': 'Mar',
+  '04': 'Apr',
+  '05': 'May',
+  '06': 'Jun',
+  '07': 'Jul',
+  '08': 'Aug',
+  '09': 'Sep',
+  '10': 'Oct',
+  '11': 'Nov',
+  '12': 'Dec'
+}
+
 existing = {}
 File.readlines('cncf-config/email-map').each do |line|
   line = line.strip
@@ -19,6 +34,8 @@ File.readlines('cncf-config/email-map').each do |line|
   if didx
     comp = company[0..didx - 1]
     dtto = company[didx + 3..-1]
+    a = dtto.split '-'
+    dtto = "#{a[0]}-#{months[a[1].to_sym]}-#{a[2]}"
   end
   next if company.strip == 'NotFound' || company.strip[0..11] == 'Independent'
   existing[email] = {} unless existing.key?(email)
