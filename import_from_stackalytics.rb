@@ -54,10 +54,33 @@ File.readlines('cncf-config/email-map').each do |line|
     dtto = "#{a[0]}-#{months[a[1].to_sym]}-#{a[2]}"
   end
   existing[email] = {} unless existing.key?(email)
-  existing[email][comp] = dtto
+  existing[email][comp] = [] unless existing[email].key?(comp)
+  existing[email][comp] << dtto
 end
 
 data = JSON.parse File.read 'default_data.json'
+# Some name transformations
+slf = {}
+slf['Self'] = true
+slf['*independent'] = true
+data['companies'][0]['aliases'].each do |als|
+  slf[als] = true
+end
+data['users'].each do |user|
+  comps = []
+  user['companies'].each do |company|
+    cname = company['company_name']
+    dtto = company['end_date']
+    if slf.key?(cname)
+      cname = 'Independent'
+    end
+    rec = {}
+    rec['company_name'] = cname
+    rec['end_date'] = dtto
+    comps << rec
+  end
+  user['companies'] = comps
+end
 
 conf1 = 0
 conf2 = 0
@@ -74,11 +97,16 @@ data['users'].each do |user|
     if existing.key?(email)
       user['companies'].each do |company|
         if existing[email].key?(company['company_name'])
-          if existing[email][company['company_name']] != company['end_date']
-            # p [email, company, existing[email], existing[email][company['company_name']], company['end_date']]
+          found = false
+          existing[email][company['company_name']].each do |dt|
+            if dt == company['end_date']
+              found = true
+              same1 += 1
+              break
+            end
+          end
+          unless found
             conf1 += 1
-          else
-            same1 += 1
           end
         else
           if existing[email].keys.length == 1 && user['companies'].length == 1
@@ -99,33 +127,35 @@ data['users'].each do |user|
             end
             break
           end
-          existing[email][company['company_name']] = company['end_date']
+          existing[email][company['company_name']] = [company['end_date']]
           newc += 1
         end
       end
-      existing[email].delete 'NotFound'
-      existing[email].each do |ecompany, dtto|
-        found = false
-        user['companies'].each do |company|
-          if company['company_name'] == ecompany
-            found = true
-            if company['end_date'] != dtto
-              conf2 += 1
-            else
-              same2 += 1
+      #existing[email].delete 'NotFound'
+      existing[email].each do |ecompany, dttos|
+        dttos.each do |dtto|
+          found = false
+          user['companies'].each do |company|
+            if company['company_name'] == ecompany
+              found = true
+              if company['end_date'] != dtto
+                conf2 += 1
+              else
+                same2 += 1
+              end
+              break
             end
-            break
           end
-        end
-        unless found
-          miss += 1
+          unless found
+            miss += 1
+          end
         end
       end
     else
       user['companies'].each do |company|
         newe += 1
         existing[email] = {}
-        existing[email][company['company_name']] = company['end_date']
+        existing[email][company['company_name']] = [company['end_date']]
       end
     end
   end
@@ -135,9 +165,11 @@ expired = []
 mult = []
 existing.each do |email, companies|
   nils = 0
-  companies.each do |company, dtto|
-    if dtto.nil?
-      nils += 1
+  companies.each do |company, dttos|
+    dttos.each do |dtto|
+      if dtto.nil?
+        nils += 1
+      end
     end
   end
   if nils == 0
@@ -149,13 +181,15 @@ end
 
 File.open('email-map', 'w') do |file|
   existing.each do |email, companies|
-    companies.each do |company, dtto|
-      if dtto
-        a = dtto.split '-'
-        dtto = "#{a[0]}-#{months_rev[a[1].to_sym]}-#{a[2]}"
-        file.write "#{email} #{company} < #{dtto}\n"
-      else
+    companies.each do |company, dttos|
+      dttos.each do |dtto|
+        if dtto
+          a = dtto.split '-'
+          dtto = "#{a[0]}-#{months_rev[a[1].to_sym]}-#{a[2]}"
+          file.write "#{email} #{company} < #{dtto}\n"
+        else
           file.write "#{email} #{company}\n"
+        end
       end
     end
   end
@@ -165,3 +199,5 @@ puts "Skip_121: #{skip_1to1}"
 puts "Same: #{same1}+#{same2}=#{same1+same2}, newe: #{newe}, newc: #{newc}, miss: #{miss}, conflict: #{conf1}+#{conf2}=#{conf1+conf2}, expired: #{expired.count}, multiple: #{mult.count}"
 puts "Expired: #{expired}"
 puts "Multiple: #{mult}"
+
+#binding.pry
