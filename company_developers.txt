@@ -2,15 +2,31 @@
 # If you see an error, please update developers_affiliations.txt and this file will be fixed
 # when regenerated.
 (Robots):
+	Kubernetes Publisher: k8s-publishing-bot!users.noreply.github.com
+	cf-bosh-eng: cf-bosh-eng!pivotal.io
+	cf-buildpacks-eng: cf-buildpacks-eng!pivotal.io
+	cf-capi-eng+ci: cf-capi-eng+ci!pivotal.io
+	cf-infrastructure: cf-infrastructure!pivotal.io
+	cf-loggregator: cf-loggregator!pivotal.io
+	cf-mega: cf-mega!pivotal.io
+	cf-release-integration: cf-release-integration!pivotal.io
+	cf-routing-eng: cf-routing-eng!pivotal.io
+	cf-syslog: cf-syslog!pivotal.io
+	ci: ci!localhost
+	ci-pool: ci-pool!localhost
 	hudson: hudson!openstack.org
 	info: info!bitergia.com
 	infra-root: infra-root!openstack.org
+	istio.testing: istio.testing!gmail.com
 	jenkins: jenkins!openstack.org
 	jenkins: jenkins!review.openstack.org
 	k8s-merge-robot: k8s-merge-robot!users.noreply.github.com
 	k8s-publish-robot: k8s-publish-robot!users.noreply.github.com
+	minikube-bot: minikube-bot!google.com
 	openstack-infra: openstack-infra!lists.openstack.org
+	pyup-bot: github-bot!pyup.io
 	review: review!openstack.org
+	submoduleupdate: submoduleupdate!localhost
 	zuul: zuul!openstack.org
 	zuul: zuul!zuul.openstack.org
 1&1:
@@ -55,6 +71,9 @@
 	Giacomo Tagliabue: giacomo.tag!gmail.com
 5 Monkeys Agency AB:
 	Joar Wandborg: joar!wandborg.se
+5G Lab Germany:
+	doantungbk.203: doantungbk.203!gmail.com
+	tung.doan_van: tung.doan_van!tu-dresden.de
 6WIND:
 	maxime.leroy: maxime.leroy!6wind.com
 7digital:
@@ -66,34 +85,48 @@
 99cloud:
 	1004988384: 1004988384!qq.com
 	1392607554: 1392607554!qq.com
+	1534057243: 1534057243!qq.com
 	Jeffrey Zhang: zhang.lei.fly!gmail.com
 	Yu Shengzuo: yu.shengzuo!99cloud.net
 	aaronzhu1121: aaronzhu1121!gmail.com until 2016-12-15
 	cao.wei: cao.wei!99cloud.net
 	caowei010: caowei010!gmail.com
 	caowei_e: caowei_e!aliyun.com
+	chason.chan: chason.chan!foxmail.com until 2017-09-22
 	chen.qiaomin: chen.qiaomin!99cloud.net
 	chenqiaomin: chenqiaomin!99cloud.net
+	cyzh1202: cyzh1202!163.com
+	easyzlj: easyzlj!gmail.com
 	einstcrazy: einstcrazy!gmail.com
+	fan.guiju: fan.guiju!99cloud.net
+	fanguiju1992: fanguiju1992!163.com
 	gong yong sheng: gong.yongsheng!99cloud.net from 2014-11-10
 	gong_ys2004: gong_ys2004!aliyun.com from 2014-11-10
 	gong_ys2013: gong_ys2013!yahoo.com from 2014-11-10
 	gongysh: gongysh!cn.ibm.com from 2014-11-10
 	gongysh: gongysh!linux.vnet.ibm.com from 2014-11-10
 	gongysh: gongysh!unitedstack.com from 2014-11-10
+	guanalbertjone: guanalbertjone!gmail.com
 	huachaomao: huachaomao!gmail.com from 2016-12-04
 	jeffrey.zhang: jeffrey.zhang!99cloud.net
 	jiang.junbo: jiang.junbo!99cloud.net
+	jin.ke: jin.ke!99cloud.net
 	jing.liuqing: jing.liuqing!99cloud.net
 	junbo4242: junbo4242!gmail.com
 	lawrancejing: lawrancejing!gmail.com
 	liang.bo: liang.bo!99cloud.net
 	liang.bo.os: liang.bo.os!99cloud.net
+	lijiawang8866: lijiawang8866!gmail.com
 	mao.huachao: mao.huachao!99cloud.net from 2016-12-04
+	net.eric.zhang: net.eric.zhang!gmail.com
 	onetown: onetown!gmail.com
 	phenoxim: phenoxim!gmail.com from 2015-10-16
 	qiaomin032: qiaomin032!sina.com
+	qiu.jibao: qiu.jibao!99cloud.net
+	qiujibao: qiujibao!outlook.com
+	rogeryuqian: rogeryuqian!gmail.com from 2018-04-10
 	wei.zhijun: wei.zhijun!99cloud.net
+	wu.chunyang: wu.chunyang!99cloud.net
 	wzj334965317: wzj334965317!outlook.com
 	xi.yang: xi.yang!emc.com from 2015-10-16
 	xiabingyao: xiabingyao!tencent.com until 2017-03-10
@@ -101,10 +134,13 @@
 	yao.xiabing: yao.xiabing!99cloud.net until 2017-03-10
 	yao3690093: yao3690093!gmail.com until 2017-03-10
 	yu.changcai: yu.changcai!99cloud.net
+	yu.qian: yu.qian!99cloud.net from 2018-04-10
+	zhang.chao: zhang.chao!99cloud.net
 	zhang.jinnan: zhang.jinnan!99cloud.net
 	zhang.yongqian: zhang.yongqian!99cloud.net
 	zhang.yufei: zhang.yufei!99cloud.net
 	zhangjinnan87: zhangjinnan87!gmail.com
+	zhangyf: zhangyf!rc.inesa.com until 2017-04-24
 	zhu.bingbing: zhu.bingbing!99cloud.net
 	zhu.rong1: zhu.rong1!zte.com.cn until 2016-12-15
 	zhubingbing10: zhubingbing10!gmail.com
@@ -172,6 +208,8 @@ ARM:
 	Matt Spencer: matt.spencer!arm.com
 	Penny Zheng: penny.zheng!arm.com
 	Wei Chen: wei.chen!arm.com
+	dexter.fryar: dexter.fryar!arm.com
+	dexter.fryar: dexter.fryar!protonmail.com from 2015-10-31
 	kevin.zhao: kevin.zhao!arm.com from 2017-05-12
 	kevin.zhao: kevin.zhao!linaro.org from 2017-05-12
 AReed Studios:
@@ -193,6 +231,7 @@ AT&T:
 	DJO3: DJO3!users.noreply.github.com
 	Dan Timoney: dtimoney!att.com
 	Determe, Sebastien (sd378r): sd378r!intl.att.com
+	Gage Hugo: gagehugo!gmail.com
 	Gokul Singaraju: gs244f!att.com
 	Hector Anapan-Lavalle: ha076r!att.com
 	Ikramullah, Ikram: ikram!research.att.com
@@ -224,12 +263,16 @@ AT&T:
 	bjozsa: bjozsa!att.com
 	changbin.liu: changbin.liu!gmail.com
 	changbl: changbl!research.att.com
+	cw: cw!f00f.org
 	davidmichaelkarr: davidmichaelkarr!users.noreply.github.com
 	dglFromAtt: dgl!research.att.com
 	divi7727: divi7727!users.noreply.github.com
 	eh552t: eh552t!intl.att.com
 	ek844y: ek844y!att.com
 	erakorn: erakorn!outlook.com
+	felipe.carneiro.monteiro: felipe.carneiro.monteiro!gmail.com
+	felipe.monteiro: felipe.monteiro!att.com
+	fmontei: fmontei!g.clemson.edu
 	jamemcc: jamemcc!users.noreply.github.com
 	jeffwebster: jeffwebster!users.noreply.github.com
 	jhtran: jhtran!att.com
@@ -241,12 +284,19 @@ AT&T:
 	kbringard: kbringard!attinteractive.com until 2013-12-31
 	kevinbri: kevinbri!cisco.com until 2013-12-31
 	kevinbringard: kevinbringard!gmail.com until 2013-12-31
+	larry.rensing: larry.rensing!charter.com until 2017-08-22
 	leigh schrandt: leigh!null.net, stealthybox!users.noreply.github.com from 2015-06-15
+	lr699s: lr699s!att.com until 2017-08-22
+	mark.burnett.1: mark.burnett.1!att.com
+	mark.m.burnett: mark.m.burnett!gmail.com
 	mh.raies: mh.raies!ericsson.com from 2015-01-12 until 2017-01-31
 	mh.raies: mh.raies!nectechnologies.in from 2015-01-12 until 2017-01-31
 	mmueen: mmueen!users.noreply.github.com
 	mohd.raies: mohd.raies!ericsson.com from 2015-01-12 until 2017-01-31
 	mr290n: mr290n!att.com from 2015-01-12 until 2017-01-31
+	otleimat: otleimat!ucla.edu
+	pete: pete!port.direct from 2017-03-13
+	pete.birley: pete.birley!att.com from 2017-03-13
 	pk5294: pk5294!att.com until 2017-01-31
 	pradeep.sreenivas: pradeep.sreenivas!gmail.com until 2017-01-31
 	pradeepkumar.ks: pradeepkumar.ks!ericsson.com until 2017-01-31
@@ -421,20 +471,48 @@ Akanda:
 	seanrob: seanrob!yahoo-inc.com from 2015-03-27
 	seanroberts66: seanroberts66!gmail.com from 2015-03-27
 Alauda:
+	344905745: 344905745!qq.com
+	354068083: 354068083!qq.com
+	413281174: 413281174!qq.com
+	Bin Liu: liubin!users.noreply.github.com
 	Chengfei Shang: cfshang!alauda.io
 	CoderAway28th: CoderAway28th!users.noreply.github.com
+	Daniel Morinigo: danielfbm!gmail.com
+	Hang Yan: hang.yan!hotmail.com, hangyan!alauda.io
+	He Xiaoxi: xxhe!alauda.io
+	Jiaren Liu: jrliu!alauda.io
+	JounQin: admin!1stg.me
 	Kai Chen: kaichen!outlook.com
 	Lihua Tang: lhtang!alauda.io
+	Lingming Xia: lmxia!alauda.io
 	Mengxin Liu: mengxin!alauda.io
 	Rui Cao: ruicao!alauda.io
+	Wei Li: weili!alauda.io
+	alaudazs: 35983778+alaudazs!users.noreply.github.com
+	binliu: binliu!alauda.io
+	chenjianhua: jhchen!alauda.io
+	daniel: daniel!alauda.io
 	fohnwind: fohnwind!users.noreply.github.com
+	halfcrazy: hackzhuyan!gmail.com
+	hhjin: hhjin!alauda.io
+	huanghuangzym: huanghuangzym!126.com
+	kaichen: kaichen!alauda.io
 	kyhwsk: kyhwsk!users.noreply.github.com
+	lewiiwel: lewiiwel!gmail.com
 	lihuang: lihuang!alauda.io
 	nashasha1: a4012017!sina.com, xdzhang!alauda.io
 	oilbeater: liumengxinfly!gmail.com
+	pengxiao: pengxiao!alauda.io
+	sheng zhang: 1150283637!qq.com, shengzhang!alauda.io
+	shiyuan1992: 35836235+shiyuan1992!users.noreply.github.com
 	shiyuan1992: shiyuan1992!users.noreply.github.com
+	shuxun.yin: shuxun.yin!gmail.com
+	tossmilestone: tossmilestone!gmail.com
+	wqlu: wqlu!alauda.io
 	yangfan: fanyang!alauda.io
-	yinshuxun: 18052012746!163.com
+	yinshuxun: 18052012746!163.com, sxyin!alauda.io
+	yuanshi: yuanshi!alauda.io
+	zhuyan: yanzhu!alauda.io
 Alberta Energy:
 	Eric Elliott: dilvie!dilvie.com
 Alcatel-Lucent:
@@ -453,12 +531,39 @@ AliCloud:
 Alianza:
 	josh keife: jkeife!alianza.com
 Alibaba:
+	1187766782: 1187766782!qq.com
+	1741651: 1741651!qq.com
+	445436286: 445436286!qq.com
 	Jin Cai: caijin.caij!alibaba-inc.com, caijin11331007!gmail.com
+	Jizhong Jiang: jiangjizhong!gmail.com
 	LouZhengwei: lzw19860818!aliyun.com
 	Malcolm Lee: fengxueyu35!126.com
 	PengTaoWW: PengTaoWW!users.noreply.github.com
+	Xianglin Gao: xianglin.gxl!alibaba-inc.com
 	Xiaoguang Sun: sunxiaoguang!hoolai.com
-	chenxingyu: wizard_cxy!hotmail.com
+	bingshen.wbs: bingshen.wbs!alibaba-inc.com
+	chenxingyu: wizard_cxy!hotmail.com from 2017-09-08
+	dahukuang: dahukuang!126.com
+	danielyanch: danielyanch!hotmail.com
+	duffqiu: duffqiu!gmail.com
+	duffqiu: duffqiu!qq.com
+	frank.ch: frank.ch!foxmail.com
+	guimin.hgm: guimin.hgm!alibaba-inc.com
+	haoshuwei24: haoshuwei24!gmail.com
+	jimmycmh: jimmycmh!gmail.com
+	jqlu: pingthere!gmail.com
+	marckywu: marckywu!gmail.com
+	scorpiocph: scorpiocph!gmail.com
+	toolchainX: toolchainX!gmail.com
+	wbs9399: wbs9399!sina.com
+	wizard: wizardcxy!126.com from 2017-09-08
+	wsxiaozhang: wsxiaozhang!gmail.com
+	xh4n3: xyn1016!gmail.com
+	xianwei.zw: xianwei.zw!alibaba-inc.com
+	yushan0624: yushan0624!gmail.com
+	yyb196: yyb196!gmail.com
+	zhanghuanzhong90: zhanghuanzhong90!gmail.com
+	zhongwei.lzw: zhongwei.lzw!alibaba-inc.com
 	宇慕: xingyu.chenxingyu!alibaba-inc.com
 	陈小玉: smallfish.xy!gmail.com
 Aliyun:
@@ -467,6 +572,7 @@ Allegro:
 	Lukasz Jernas: lukasz.jernas!allegrogroup.com
 	Michal Rostecki: michal!kinvolk.io, mrostecki!mirantis.com until 2015-08-07
 	Michal Rostecki: michal.rostecki!gmail.com until 2015-08-07
+	Michal Rostecki: mrostecki!suse.com until 2015-08-07
 	Przemo Nowaczyk: pnowaczyk.mail!gmail.com
 	michal.rostecki: michal.rostecki!allegrogroup.com until 2015-08-07
 	Łukasz Jernaś: deejay1!srem.org
@@ -819,6 +925,7 @@ Aptira:
 	kispear: kispear!gmail.com from 2015-02-25
 	lakshman: lakshman!aptira.com
 	marcus: marcus!aptira.com from 2015-02-27
+	michael: michael!aptira.com from 2017-09-01
 	michchap: michchap!cisco.com from 2014-01-25
 	russell: russell!aptira.com from 2015-02-27
 	russell.sim: russell.sim!gmail.com from 2015-02-27
@@ -972,9 +1079,15 @@ Avito:
 	theairkit: theairkit!gmail.com
 	theairkit: theairkit!users.noreply.github.com
 Awcloud:
+	1523688226: 1523688226!qq.com
+	19921207pq: 19921207pq!gmail.com
 	2994859298: 2994859298!qq.com
 	344677472: 344677472!qq.com
+	374519141: 374519141!qq.com until 2017-04-01
 	57320398: 57320398!qq.com
+	caishan1993: caishan1993!foxmail.com
+	cdyangzhenyu: cdyangzhenyu!gmail.com
+	chason.chan: chason.chan!foxmail.com from 2017-09-22
 	chengyang: chengyang!awcloud.com
 	chenjhfrontend: chenjhfrontend!163.com
 	chenjianhua: chenjianhua!awcloud.com
@@ -998,12 +1111,16 @@ Awcloud:
 	hellochosen: hellochosen!gmail.com
 	huanght: huanght!awcloud.com
 	huangsm: huangsm!awcloud.com
+	huifeng_qin: huifeng_qin!163.com
 	huyujie: huyujie!awcloud.com
 	leixin: leixin!awcloud.com
 	leixin487: leixin487!hotmail.com
 	lhh_youzi: lhh_youzi!163.com
+	liangzhenyang: liangzhenyang!yeah.net
+	liangzy: liangzy!awcloud.com
 	lifan: lifan!awcloud.com
 	limeng: limeng!awcloud.com
+	lisy_email: lisy_email!163.com
 	liuhh: liuhh!awcloud.com
 	liulei: liulei!awcloud.com
 	liuxing: liuxing!awcloud.com
@@ -1014,11 +1131,15 @@ Awcloud:
 	lxstar01: lxstar01!gmail.com
 	masw: masw!awcloud.com
 	nick.ma: nick.ma!live.cn until 2017-02-28
+	renlixing: renlixing!gmail.com
 	roy01cheng: roy01cheng!hotmail.com
+	simonxuemin: simonxuemin!163.com
 	skywalker.nick: skywalker.nick!gmail.com until 2017-02-28
 	sunshuai: sunshuai!awcloud.com
+	tianliang: tianliang!awcloud.com
 	wangxf: wangxf!awcloud.com
 	wangye: wangye!awcloud.com
+	wangzh21: wangzh21!lenovo.com until 2016-06-12
 	wangzhh: wangzhh!awcloud.com
 	weike: weike!awcloud.com
 	weike.cs: weike.cs!gmail.com
@@ -1032,6 +1153,8 @@ Awcloud:
 	xiaofeix.wang: xiaofeix.wang!gmail.com
 	xuao: xuao!awcloud.com
 	yedongcan: yedongcan!awcloud.com
+	zengjia: zengjia!awcloud.com
+	zengly: zengly!awcloud.com
 	zhangjl: zhangjl!awcloud.com
 	zhangjl_cn: zhangjl_cn!qq.com
 	zhangly: zhangly!awcloud.com
@@ -1041,6 +1164,8 @@ Awcloud:
 	zhouwei.wh: zhouwei.wh!awcloud.com
 	zhuangzh: zhuangzh!awcloud.com
 	zzj123389602: zzj123389602!gmail.com
+Awnix:
+	eric: eric!awnix.com
 Axado:
 	Amim Knabben: amim.knabben!gmail.com
 Axonista:
@@ -1072,9 +1197,15 @@ B1 Systems GmbH:
 	christian: christian!berendt.io
 	mail: mail!cberendt.net
 	mueller: mueller!b1-systems.de
+B3IT Management AB:
+	jose.romero: jose.romero!b3it.se
+	jose.romero: jose.romero!core-developers.com
+	jose.romero.miret: jose.romero.miret!gmail.com
 BBC:
 	Sam Starling: mail!samstarling.co.uk, sam!soundcloud.com until 2015-01-01
 	Walter Dolce: walterdolce!gmail.com
+	jonathan.rosser: jonathan.rosser!rd.bbc.co.uk
+	jrosser: jrosser!rd.bbc.co.uk
 BBC Children in Need:
 	Charlie Briggs: charliebriggs!gmail.com
 BBVA:
@@ -1227,6 +1358,9 @@ Bilibili Group:
 	colstuwjx: wjx_colstu!hotmail.com from 2016-05-01
 Binary Services:
 	Mahdi Mohammadi: mahdix!gmail.com
+Binero:
+	tobias: tobias!busybox.se
+	tobias.urdin: tobias.urdin!binero.se
 Binti:
 	Gabe Kopley: gabe!philo.com
 BioSataAnalysis:
@@ -1297,6 +1431,9 @@ Blizzard:
 	eandersson: eandersson!blizzard.com
 	hacktastic: jackson.coakley!gmail.com
 	me: me!eandersson.net
+Blizzard Entertainment:
+	cstone: cstone!blizzard.com
+	cstone2101: cstone2101!gmail.com
 Blockai:
 	Oli Lalonde: olalonde!gmail.com
 Bloglovin:
@@ -1356,6 +1493,8 @@ Bluemove Carsharing:
 	Alexandr Burdiyan: burdiyan!gmail.com
 Bluescape:
 	Eli Young: elyscape!gmail.com
+BoCloud:
+	qinshijun: qinshijun!beyondcent.com from 2017-10-28
 Bobs Oil Field Service:
 	Gábor Lipták: gliptak!gmail.com
 Bodeco.io:
@@ -1449,6 +1588,12 @@ Building of:
 	ziyadbasheer: ziyadbasheer213!gmail.com
 Buildit:
 	Roman Safronov: electroma!gmail.com from 2016-10-15 until 2017-04-15
+Bull:
+	Simon Pasquier: spasquie!redhat.com until 2014-06-30
+	Simon Pasquier: spasquier!mirantis.com until 2014-06-30
+	patrick.michel.petit: patrick.michel.petit!gmail.com until 2014-03-01
+	ppetit: ppetit!mirantis.com until 2014-03-01
+	ppetit: ppetit!opennext.io until 2014-03-01
 Bull SAS:
 	pasquier-s: pasquier.simon!gmail.com until 2014-06-30
 	simon.pasquier: simon.pasquier!bull.net until 2014-06-30
@@ -1530,6 +1675,7 @@ CERN:
 	chaen: chaen!users.noreply.github.com
 	cjdcordeiro: cjdcordeiro!gmail.com
 	cristovao.cordeiro: cristovao.cordeiro!cern.ch
+	d.abad: d.abad!cern.ch
 	davidlt: davidlt!users.noreply.github.com
 	gtenagli: gtenagli!users.noreply.github.com
 	iago.santos.pardo: iago.santos.pardo!cern.ch
@@ -1539,6 +1685,7 @@ CERN:
 	jlauenercern: jlauenercern!users.noreply.github.com
 	jwdevs: jwdevs!users.noreply.github.com
 	labkode: labkode!users.noreply.github.com
+	markus.alexander.sommer: markus.alexander.sommer!cern.ch
 	moreira-belmiro-email-lists: moreira-belmiro-email-lists!gmail.com
 	noggin143: noggin143!users.noreply.github.com
 	rainer.toebbicke: rainer.toebbicke!cern.ch
@@ -1546,6 +1693,10 @@ CERN:
 	ricardo.rocha: ricardo.rocha!cern.ch from 2015-08-01
 	rocha.porto: rocha.porto!gmail.com from 2015-08-01
 	root: root!lxbre43a05.cern.ch
+	surya.seetharaman: surya.seetharaman!cern.ch
+	suryaseetharaman.9: suryaseetharaman.9!gmail.com
+	t.tsioutsias: t.tsioutsias!gmail.com
+	theodoros.tsioutsias: theodoros.tsioutsias!cern.ch
 	traylenator: traylenator!users.noreply.github.com
 	tssurya: tssurya!users.noreply.github.com
 CGI France:
@@ -1612,6 +1763,8 @@ Caicloud:
 	Penghao Cen: cenph!caicloud.io
 	Wen Gao: gaowen!caicloud.io
 	Xin Zhang: xinzhang1228!gmail.com
+	haoqingchuan: haoqingchuan!caicloud.io
+	haoqingchuan: haoqingchuan!hotmail.com
 	haoyuan: haoyuan.ge!caicloud.io, harryge00!gmail.com
 	harryge00: harryge!qq.com
 	hzliangmingqiang: hzliangmingqiang!corp.netease.com from 2015-10-30
@@ -1637,6 +1790,9 @@ Cake Solutions:
 Calsoft:
 	aniket.anikhindi: aniket.anikhindi!calsoftinc.com
 	aniketanikhindi: aniketanikhindi!gmail.com
+	digambar.patil: digambar.patil!calsoftinc.com from 2017-09-15
+	digambarpat: digambarpat!gmail.com from 2017-09-15
+	digambarpatil15: digambarpatil15!yahoo.co.in from 2017-09-15
 Calthorpe Associates:
 	Jamie Alessio: jamie!stoic.net
 Calxeda:
@@ -1717,6 +1873,7 @@ Canonical:
 	julian.wang: julian.wang!umcloud.com until 2015-01-11
 	jwang: jwang!mirantis.com until 2015-01-11
 	liang.chen: liang.chen!canonical.com from 2014-05-06
+	michael: michael!aptira.com until 2012-12-13
 	michael.still: michael.still!canonical.com until 2012-12-13
 	michael.still: michael.still!rackspace.com until 2012-12-13
 	mikal: mikal!stillhq.com until 2012-12-13
@@ -1730,6 +1887,7 @@ Canonical:
 	openstack: openstack!medberry.net until 2014-01-26
 	opentastic: opentastic!gmail.com
 	powersj: powersj!users.noreply.github.com
+	racedo: racedo!redhat.com until 2014-05-01
 	ramon: ramon!linux-labs.net until 2014-05-01
 	rogpeppe: rogpeppe!users.noreply.github.com
 	ryan-beisner: ryan-beisner!users.noreply.github.com
@@ -1843,7 +2001,8 @@ CertusNet:
 	chendy: chendy!certusnet.com.cn
 	chendy_0598: chendy_0598!163.com
 	chengs: chengs!certusnet.com.cn
-	chenhx: chenhx!certusnet.com.cn
+	chenhanxiao: chenhanxiao!cn.fujitsu.com from 2015-09-01
+	chenhx: chenhx!certusnet.com.cn from 2015-09-01
 	hqzhu918: hqzhu918!163.com
 	huiw: huiw!certusnet.com.cn
 	huiweics: huiweics!gmail.com
@@ -1872,17 +2031,23 @@ Chariot Solutions:
 Charter:
 	Bryan Stillwell: bryan.stillwell!twcable.com
 	Clayton O'Neill: clayton!oneill.net from 2016-05-18
+	Luke: lukephilips!gmail.com
 	Matt Fischer: matt!mattfischer.com from 2016-05-18 until 2017-04-07
 	a.vinsh1: a.vinsh1!comcast.net from 2016-05-18
 	adam.vinsh: adam.vinsh!hp.com from 2016-05-18
 	adam.vinsh: adam.vinsh!twcable.com from 2016-05-18
 	brad.klein: brad.klein!hp.com from 2016-05-18
 	bradley.klein: bradley.klein!twcable.com from 2016-05-18
+	c-harsh.kotak: c-harsh.kotak!charter.com
 	clayton.oneill: clayton.oneill!twcable.com from 2016-05-18
 	david.medberry: david.medberry!canonical.com from 2016-05-18
 	david.medberry: david.medberry!twcable.com from 2016-05-18
+	harsh.kotak: harsh.kotak!charter.com
+	harsh.kotak9: harsh.kotak9!gmail.com
 	kim.jensen: kim.jensen!twcable.com from 2016-05-18
 	kim.jensen2: kim.jensen2!hp.com from 2016-05-18
+	larry.rensing: larry.rensing!charter.com from 2017-08-22
+	lr699s: lr699s!att.com from 2017-08-22
 	mfisch: mfisch!ubuntu.com from 2016-05-18 until 2017-04-07
 	openstack: openstack!medberry.net from 2016-05-18
 	terrylhowe: terrylhowe!gmail.com from 2016-05-18
@@ -1924,6 +2089,7 @@ China Mobile:
 	donglinpeng: donglinpeng!cmss.chinamobile.com
 	guojiannan: guojiannan!cmss.chinamobile.com
 	invenfantasy: caogaojin.nk!gmail.com
+	jiaopengju: jiaopengju!cmss.chinamobile.com
 	junqingwang: junqingwang!139.com
 	junxu: xujun!cmss.chinamobile.com
 	lianghao: lianghao!cmss.chinamobile.com
@@ -1932,25 +2098,49 @@ China Mobile:
 	liuyuhong: liuyuhong!cmss.chinamobile.com
 	lvshuhua: lvshuhua!cmss.chinamobile.com
 	menglingkun: menglingkun!cmss.chinamobile.com
+	pengju jiao: pj.jiao!139.com
 	root: root!lh-test1.localdomain
 	shentao: shentao!chinamobile.com
 	shipeiqi: shipeiqi!cmss.chinamobile.com from 2015-09-30
 	uestc.shi: uestc.shi!gmail.com from 2015-09-30
 	wangdongxu: wangdongxu!cmss.chinamobile.com
 	wangjunqing: wangjunqing!cmss.chinamobile.com
+	wangyao: wangyao!cmss.chinamobile.com
 	wangzhengyong: wangzhengyong!cmss.chinamobile.com
 	yangyan: yangyanyj!chinamobile.com
 	yuliyang: yuliyang!cmss.chinamobile.com
+	z.zhuguihua: z.zhuguihua!gmail.com
 	zhaoyi: zhaoyi!cmss.chinamobile.com
 	zhaoyi44: zhaoyi44!hotmail.com
+	zhuguihua: zhuguihua!cmss.chinamobile.com
 	zoukeke: zoukeke!cmss.chinamobile.com
 	zouyee: zounengren!cmss.chinamobile.com, zouyee1989!gmail.com
 China Railway ITC:
+	ascendjohan: ascendjohan!163.com
 	duyahong: duyahong!sinorail.com
 	huayuev5: huayuev5!gmail.com
+	kongxyxian2010: kongxyxian2010!163.com
+	lijingxin: lijingxin!sinorail.com
+	wanglei5: wanglei5!sinorail.com
+	wangyuheng: wangyuheng!sinorail.com
+	wleionly: wleionly!126.com
 	xiakewudixl: xiakewudixl!163.com
 	xiaoli: xiaoli!sinorail.com
 	xjl__ljx: xjl__ljx!163.com
+	xugang: xugang!sinorail.com
+	xugangit: xugangit!126.com
+	yyuanyuee: yyuanyuee!163.com
+China Telecom:
+	magictao: magictao!gmail.com
+	mazengx: mazengx!chinatelecom.cn
+	mazengxie: mazengxie!126.com
+	vpbvmw651078: vpbvmw651078!gmail.com from 2017-12-31
+	yangt.yun: yangt.yun!chinatelecom.cn
+	zh.f: zh.f!outlook.com from 2017-12-31
+China Unicom:
+	iliul: liul.stone!gmail.com, liul124!chinaunicom.cn
+	thunder.xu: thunder.xu!outlook.com
+	xulei56: xulei56!chinaunicom.cn
 China Unicom Research Institute:
 	jiajie: jiaj12!chinaunicom.cn
 China UnionPay:
@@ -1977,6 +2167,8 @@ Chinac:
 	liusu8788: liusu8788!gmail.com
 	liuzhikun: liuzhikun!chinac.com from 2014-11-03
 	liuzhikun: liuzhikun!gmail.com from 2014-11-03
+	sugar-2008: sugar-2008!163.com
+	suzhengwei: suzhengwei!chinac.com
 	wangjianhe: wangjianhe!chinac.com
 	xinxin shu: shuxinxin!chinac.com
 	yin.zheng: yin.zheng!easystack.cn from 2017-04-24
@@ -2194,6 +2386,9 @@ Cisco:
 	wtie: wtie!cisco.com
 	yangzhangxian: yangzhangxian!users.noreply.github.com
 	zhangal1992: zhangal1992!gmail.com
+Cisco Systems:
+	zhenqin: zhenqin!cisco.com
+	zqinit: zqinit!gmail.com
 CiscoSpark:
 	Zack Gold: zg!users.noreply.github.com
 Cistoner:
@@ -2213,6 +2408,7 @@ Citrix:
 	john: john!johngarbutt.com until 2013-02-01
 	john.garbutt: john.garbutt!citrix.com until 2013-02-01
 	john.garbutt: john.garbutt!rackspace.com until 2013-02-01
+	john.garbutt: john.garbutt!stackhpc.com until 2013-02-01
 	mate.lakat: mate.lakat!citrix.com until 2014-12-19
 	mlakat: mlakat!suse.com until 2014-12-19
 Citygroup:
@@ -2319,6 +2515,7 @@ Cloudera:
 	cmccabe: cmccabe!users.noreply.github.com until 2016-10-01
 	fengjingchao: fengjingchao!users.noreply.github.com from 2013-09-01 until 2015-11-01
 Cloudin:
+	374519141: 374519141!qq.com from 2017-04-01
 	Bingyin Zhang: zhangbingyin!cloudin.cn
 	Xinying Song: songxinying!cloudin.cn
 	wangsongbo: wangsongbo!cloudin.cn
@@ -2347,6 +2544,7 @@ Cloudwatt:
 	cedric.soulas: cedric.soulas!cloudwatt.com
 	dev: dev!zinux.com until 2014-06-01
 	edouard.thuleau: edouard.thuleau!cloudwatt.com from 2013-01-31 until 2016-02-29
+	edouard.thuleau: edouard.thuleau!gmail.com from 2013-01-31 until 2016-02-29
 	edouard.thuleau: edouard.thuleau!orange.com from 2013-01-31 until 2016-02-29
 	edouard1.thuleau: edouard1.thuleau!orange.com from 2013-01-31 until 2016-02-29
 	erwan.gallen: erwan.gallen!cloudwatt.com until 2014-06-01
@@ -2417,6 +2615,7 @@ Codethink:
 	adam.coldrick: adam.coldrick!codethink.co.uk
 	palvarez89: palvarez89!gmail.com
 	pedro.alvarez: pedro.alvarez!codethink.co.uk
+	thezarazia: thezarazia!gmail.com until 2017-08-14
 	tom.pollard: tom.pollard!codethink.co.uk
 	tom_pollard: tom_pollard!hotmail.co.uk
 	zara.zaimeche: zara.zaimeche!codethink.co.uk
@@ -2434,10 +2633,18 @@ Codit:
 Cogini:
 	Tuan Nguyen: tuannvm!tuannvm.com
 Cognizant:
+	anilkumar.thovi: anilkumar.thovi!cognizant.com
 	arunkumar-3.r-3: arunkumar-3.r-3!cognizant.com
 	badhmapriya.boopalan: badhmapriya.boopalan!cognizant.com
+	binoy.v: binoy.v!cognizant.com
+	jayaprakash.rangaswamy: jayaprakash.rangaswamy!cognizant.com
+	kumarshantanu16: kumarshantanu16!gmail.com
+	mail2jayaprakashr: mail2jayaprakashr!gmail.com
 	pradeepkumar.v: pradeepkumar.v!cognizant.com
 	priya.openstack: priya.openstack!gmail.com
+	shanker.j.j: shanker.j.j!gmail.com
+	shanker.jj: shanker.jj!cognizant.com
+	shantanu.kumar: shantanu.kumar!cognizant.com
 	vijendra.soni: vijendra.soni!cognizant.com
 	vijendra.soni: vijendra.soni!gmail.com
 Coho Data:
@@ -2500,6 +2707,7 @@ Comcast:
 	gregfaust: gregfaust!gmail.com
 	gregory_faust: gregory_faust!cable.comcast.com
 	hvprash: hvprash!gmail.com until 2015-09-16
+	iam: iam!natejohnston.info until 2018-08-01
 	jackie_heitzer: jackie_heitzer!cable.comcast.com
 	james.reeves5546: james.reeves5546!gmail.com
 	jmbbat: jmbbat!gmail.com
@@ -2634,6 +2842,7 @@ CoreOS:
 	Ed Rooth: ed.rooth!coreos.com
 	Michael Marineau: michael.marineau!coreos.com
 	Rob Szumski: rob!falloutweb.com
+	Xiang: xiangli.cs!gmail.com until 2014-06-30
 	cpanato: ctadeu!gmail.com
 	lander2k2: lander2k2!users.noreply.github.com
 	redbeard: bharrington!alticon.net
@@ -2657,9 +2866,15 @@ Craftsy:
 Cray:
 	Stig Telfer: stig.github!telfer.org, stig.openstack!telfer.org until 2015-08-04
 	bmotz: bmotz!cray.com
+	d.s.szumski: d.s.szumski!gmail.com until 2017-09-15
+	doug: doug!stackhpc.com until 2017-09-15
 	dszumski: dszumski!cray.com
+	jjm: jjm!usebox.net from 2017-01-06 until 2018-01-26
+	jmartinez: jmartinez!cray.com from 2017-01-06 until 2018-01-26
+	juan: juan!memset.com from 2017-01-06 until 2018-01-26
 	mark: mark!stackhpc.com until 2016-12-02
 	mgoddard: mgoddard!cray.com until 2016-12-02
+	openstack: openstack!ouat.co.uk until 2017-11-01
 	ppiela: ppiela!cray.com
 	stelfer: stelfer!cray.com until 2015-08-14
 	tara: tara!blank.org
@@ -2748,6 +2963,9 @@ D3.do:
 	Victor Gama: hey!vito.io
 DBA:
 	hellwen: hellwen.wu!gmail.com
+DBLink Consult:
+	fernando.c.pimenta: fernando.c.pimenta!gmail.com
+	fernandopimenta: fernandopimenta!dblinkconsult.com.br
 DCMN:
 	Harmen: harm!dds.nl
 	Robert Vollmert: rfvollmert!gmail.com from 2017-02-01
@@ -2812,6 +3030,7 @@ DaoCloud:
 	allencloud: allen.sun!daocloud.io
 	anniedy: yu.dong!daocloud.io
 	carlory: baofa.fan!daocloud.io, fanbaofa!gmail.com
+	dengyi0215: dengyi0215!gmail.com
 	dengyi1996: yi.deng!daocloud.io
 	evelyn.xu: evelyn.xu!daocloud.io
 	evelynhsu21: evelynhsu21!gmail.com
@@ -2819,6 +3038,7 @@ DaoCloud:
 	hainesc: hainesc!users.noreply.github.com
 	heliping: liping.he!daocloud.io
 	huangjiuyuan: jiuyuan.huang!daocloud.io
+	huangjiuyuan: huangjiuyuan!163.com
 	jiahui.zhou: jiahui.zhou!daocloud.io
 	jian.tan: jian.tan!daocloud.io
 	lijianfeng1993: jianfeng.li!daocloud.io
@@ -2859,6 +3079,7 @@ DataCentred:
 	matt.jarvis: matt.jarvis!datacentred.co.uk
 	nick: nick!datacentred.co.uk
 	nick: nick!dischord.org
+	nick: nick!stackhpc.com until 2017-10-31
 	nick.jones: nick.jones!datacentred.co.uk
 	sean: sean!datacentred.co.uk
 	sean.handley: sean.handley!datacentred.co.uk
@@ -2897,9 +3118,12 @@ Datapipe:
 	Bryan Stone: aegixx!gmail.com from 2016-09-15
 	Patrick Barker: patrickbarkerco!gmail.com from 2016-10-15
 	Shane Starcher: shanestarcher!gmail.com
-Datawire.io:
+Datawire:
+	Abhay Saxena: ark3!datawire.io
 	Philip Lombardi: plombardi!datawire.io
+	Rafael Schloming: rhs!alum.mit.edu
 	Richard Li: richard!datawire.io
+	ark3: ark3!users.noreply.github.com
 Datera:
 	mike.perez: mike.perez!dreamhost.com from 2014-03-01
 	thingee: thingee!gmail.com from 2014-03-01
@@ -3033,6 +3257,12 @@ Dell:
 	wayofthepie: stephen.obrien4!emc.com
 	wongsteven: wongsteven!vmware.com until 2018-03-09
 	xing.yang: xing.yang!dell.com from 2017-01-31
+Dell EMC:
+	Ciara.stacke: Ciara.stacke!emc.com
+	Nagegowda.Praveen: Nagegowda.Praveen!emc.com from 2017-11-03
+	kumar.prashant: kumar.prashant!dell.com
+	michael.mcaleer: michael.mcaleer!dell.com
+	yong.huang: yong.huang!emc.com
 Dell KACE:
 	Payam Hekmat: payam.hekmat!gmail.com
 Delphix:
@@ -3107,6 +3337,10 @@ Devops:
 	tdemaret: tdemaret!users.noreply.github.com
 Devops Israel:
 	Eugene Zilman: ezilman!gmail.com from 2014-06-01 until 2015-06-01
+Devoteam:
+	kevin.tibi: kevin.tibi!devoteam.com
+	kevintibi: kevintibi!hotmail.com
+	kodokuu: kodokuu!gmail.com
 Devoxx4Kids:
 	nyener: nilaycoskun4155!gmail.com from 2015-09-01 until 2015-12-15
 	nyener: nyener!users.noreply.github.com from 2015-09-01 until 2015-12-15
@@ -3553,6 +3787,7 @@ Easy Taxi:
 EasyStack:
 	284517620: 284517620!qq.com from 2016-09-23
 	307419146: 307419146!qq.com
+	992641802: 992641802!qq.com
 	Carudy: zhaoyang.han!easystack.cn
 	Dongsheng Yang: dongsheng.yang!easystack.cn
 	Eugene: ezilman+github!gmail.com from 2016-08-01
@@ -3565,6 +3800,9 @@ EasyStack:
 	Rico Lin: rico.lin.guanyu!gmail.com from 2017-02-24
 	Wanlong Gao: wanlong.gao!easystack.cn
 	a383839105: a383839105!qq.com
+	apolloliuhx: apolloliuhx!gmail.com until 2018-04-28
+	bing.hao: bing.hao!easystack.cn from 2017-07-21
+	binghao0602: binghao0602!gmail.com from 2017-07-21
 	bo.wang: bo.wang!easystack.cn from 2014-12-26
 	braveliuchina: braveliuchina!gmail.com
 	bx_wang: bx_wang!outlook.com
@@ -3579,6 +3817,7 @@ EasyStack:
 	glongwave: glongwave!gmail.com from 2014-02-21
 	guochbo: guochbo!cn.ibm.com from 2014-02-21
 	guoyunxian: yunxian.guo!easystack.cn
+	hanxi.liu: hanxi.liu!easystack.cn until 2018-04-28
 	haodong.tang: haodong.tang!easystack.cn
 	houming-wang: houming.wang!easystack.cn
 	imtangchen: imtangchen!gmail.com from 2016-01-28
@@ -3591,10 +3830,14 @@ EasyStack:
 	liangliang.luo: liangliang.luo!easystack.cn
 	llsheldon: dandan.lu!easystack.cn
 	qiu: zhaokun.qiu!easystack.cn
+	rico.l: rico.l!inwinstack.com from 2017-02-24
 	rico.lin: rico.lin!easystack.cn from 2017-02-24
 	riverzhang: rong.zhang!easystack.cn
 	rocky-nupt: haigang.xu!easystack.cn
 	rocky0722: rocky0722!163.com
+	root: root!lhx-ceph-1.novalocal until 2018-04-28
+	shuaili.wang: shuaili.wang!easystack.cn
+	shuangyang.qian: shuangyang.qian!easystack.cn
 	skuicloud: skuicloud!gmail.com from 2015-04-16
 	szhsong: szhsong!cn.ibm.com from 2015-10-23
 	tangchen: tangchen!cn.fujitsu.com from 2016-01-28
@@ -3618,15 +3861,19 @@ EasyStack:
 Eayun:
 	Dunrong Huang: dunrong.huang!eayun.com
 	LiuYang: yippeetry!gmail.com
+	Xiaojun Liao: xiaojunliao85!gmail.com
 	Zhao Chao: zhaochao1984!gmail.com
 	blkart.org: blkart.org!gmail.com
 	cybing4: cybing4!gmail.com
 	danielwang461: danielwang461!gmail.com
+	jinhui23.li: jinhui23.li!gmail.com
 	mhuntxu: mhuntxu!gmail.com
 	tangch318: tangch318!gmail.com
+	vpbvmw651078: vpbvmw651078!gmail.com until 2017-12-31
 	xiaojun.liao: xiaojun.liao!eayun.com
 	yang.liu: yang.liu!eayun.com
 	yuanbin.chen: yuanbin.chen!eayun.com
+	zh.f: zh.f!outlook.com until 2017-12-31
 Ecor Ventures:
 	Corey Butler: corey!coreybutler.com
 EdSurge:
@@ -4018,6 +4265,7 @@ Fiberhome:
 	gn_zh: gn_zh!163.com
 	gnzhang: gnzhang!fiberhome.com
 	gongxiao: gongxiao!fiberhome.com
+	hdzhang: hdzhang!fiberhome.com
 	hnyang: hnyang!fiberhome.com
 	hpliu5898: hpliu5898!fiberhome.com
 	htpeng: htpeng!fiberhome.com
@@ -4026,8 +4274,10 @@ Fiberhome:
 	hwang7073: hwang7073!fiberhome.com from 2016-08-14
 	igis_gzy: igis_gzy!fiberhome.com
 	igis_lc: igis_lc!fiberhome.com
+	igis_pxy: igis_pxy!fiberhome.com
 	igis_xyy: igis_xyy!fiberhome.com
 	indicoliteplus: indicoliteplus!gmail.com
+	junbo85.li: junbo85.li!gmail.com
 	juwei006: juwei006!163.com
 	klyang: klyang!fiberhome.com
 	lcsong: lcsong!fiberhome.com
@@ -4040,7 +4290,10 @@ Fiberhome:
 	lihaijing321: lihaijing321!gmail.com
 	lijunbo: lijunbo!fiberhome.com
 	lilu7189: lilu7189!fiberhome.com
+	linyang: linyang!fiberhome.com
+	linyangwo0: linyangwo0!126.com
 	lioplhp: lioplhp!163.com
+	lipan7195: lipan7195!fiberhome.com
 	litao3721: litao3721!126.com
 	litao7050: litao7050!fiberhome.com
 	liuxiaoyang: liuxiaoyang!fiberhome.com
@@ -4056,8 +4309,10 @@ Fiberhome:
 	nick.ma: nick.ma!live.cn from 2017-02-28
 	open.fyu: open.fyu!gmail.com
 	pamata: pamata!126.com
+	panxy: panxy!fiberhome.com
 	pengyuan: pengyuan!fiberhome.com
 	phtao1982: phtao1982!gmail.com
+	pxy24680: pxy24680!sina.com
 	qkxu: qkxu!fiberhome.com
 	qtlu: qtlu!fiberhome.com
 	rtmdk: rtmdk!163.com
@@ -4068,8 +4323,11 @@ Fiberhome:
 	smokony: smokony!sina.com
 	sxmatch1986: sxmatch1986!gmail.com from 2016-08-14
 	syluo5695: syluo5695!fiberhome.com
+	wangganfu: wangganfu!fiberhome.com
+	wanglei7217: wanglei7217!fiberhome.com
 	wangzy: wangzy!fiberhome.com
 	waynechan76: waynechan76!gmail.com
+	wbluo: wbluo!fiberhome.com
 	wingwj: wingwj!gmail.com from 2016-06-25
 	wingwj.wu: wingwj.wu!huawei.com from 2016-06-25
 	wzy82522: wzy82522!163.com
@@ -4083,12 +4341,16 @@ Fiberhome:
 	yqli2016: yqli2016!fiberhome.com
 	zczhu: zczhu!fiberhome.com
 	zhangdaolong: zhangdaolong!fiberhome.com
+	zhangdongdong: zhangdongdong!fiberhome.com
 	zhanghongtao: zhanghongtao!fiberhome.com
 	zhanghongtao0826: zhanghongtao0826!126.com
+	zhanghuaikai: zhanghuaikai!fiberhome.com
 	zhangjun850: zhangjun850!fiberhome.com from 2015-10-22
 	zhangjun_inspur: zhangjun_inspur!163.com from 2015-10-22
+	zhangyifan: zhangyifan!fiberhome.com
 	zhaowei7146: zhaowei7146!fiberhome.com
 	zhaoyunfeng: zhaoyunfeng!fiberhome.com
+	zhengwei6082: zhengwei6082!fiberhome.com
 	zhiguo.lee: zhiguo.lee!foxmail.com
 	zhoumo: zhoumo!fiberhome.com
 	zhsun: zhsun!fiberhome.com
@@ -4232,16 +4494,25 @@ Fujitsu:
 	Zhao Lei: zhaolei!cn.fujitsu.com
 	artur-ba: artur-ba!users.noreply.github.com
 	chen.tang: chen.tang!easystack.cn until 2016-01-28
+	chenhanxiao: chenhanxiao!cn.fujitsu.com until 2015-09-01
+	chenhx: chenhx!certusnet.com.cn until 2015-09-01
+	daidv3: daidv3!viettel.com.vn from 2016-06-15 until 2018-04-30
+	daikk115: daikk115!gmail.com from 2016-06-15 until 2018-04-30
 	dkoper: dkoper!users.noreply.github.com
 	gaozx.fnst: gaozx.fnst!cn.fujitsu.com until 2017-02-17
 	gertipoppel: gertipoppel!users.noreply.github.com
+	hieulq19: hieulq19!gmail.com until 2018-01-30
+	hieulq2: hieulq2!viettel.com.vn until 2018-01-30
 	higashi isao: higashi.isao!jp.fujitsu.com
 	imtangchen: imtangchen!gmail.com until 2016-01-28
 	is-watanabe: is-watanabe!kddi.com until 2017-03-31
 	kato.tomoyuki: kato.tomoyuki!jp.fujitsu.com
+	kiennt2609: kiennt2609!gmail.com until 2018-04-13
+	kiennt65: kiennt65!viettel.com.vn until 2018-04-13
 	kwodzynski: kwodzynski!users.noreply.github.com
 	root: root!gluster5.gfs.fsw.fujitsu.com
 	shun-miyoshi-com: s.miyoshi!jp.fujitsu.com
+	sudo: sudo!rm-rf.cloud until 2018-01-30
 	tangchen: tangchen!cn.fujitsu.com until 2016-01-28
 	urcan: batikan.urcan!est.fujitsu.com
 	vollschwitz: alexander.vollschwitz!est.fujitsu.com
@@ -4462,6 +4733,8 @@ GoDaddy:
 	Stephen McQuaid: steve!stevemcquaid.com
 	adam.harwell: adam.harwell!rackspace.com from 2016-12-04
 	aharwell: aharwell!godaddy.com from 2016-12-04
+	bpavlovic: bpavlovic!godaddy.com from 2013-04-10
+	dorm: dorm!dorm.org until 2017-07-13
 	ethompson: ethompson!godaddy.com
 	flux.adam: flux.adam!gmail.com from 2016-12-04
 	gergelyke: gergelyke!users.noreply.github.com
@@ -4472,6 +4745,7 @@ GoDaddy:
 	harlowja: harlowja!yahoo-inc.com from 2016-03-16
 	jakeswenson: jakeswenson!users.noreply.github.com
 	jxharlow: jxharlow!godaddy.com from 2016-03-16
+	mdorman: mdorman!godaddy.com until 2017-07-13
 	rm-you: rm-you!users.noreply.github.com
 	sorrowless: sorrowless!users.noreply.github.com
 GoDataDriven:
@@ -4488,6 +4762,7 @@ GoQuo:
 Gogolook Co:
 	William Yeh: william.pjyeh!gmail.com
 GohighSec:
+	gongguilan: gongguilan!gohighsec.com
 	houwch: houwch!gohighsec.com
 	jiangpch: jiangpch!gohighsec.com until 2017-04-15
 	jiangpengcheng: jiangpengcheng!navercorp.com until 2017-04-15
@@ -4496,8 +4771,15 @@ GohighSec:
 	liuhj: liuhj!gohighsec.com
 	liujiong: liujiong!gohighsec.com
 	liyh: liyh!gohighsec.com
+	penghuan: penghuan!gohighsec.com
+	pengyuesheng: pengyuesheng!gohighsec.com
+	songhao: songhao!gohighsec.com
+	wangliangyu: wangliangyu!gohigh.com.cn
+	yanpeifei: yanpeifei!gohighsec.com until 2017-12-18
 	yushb: yushb!gohighsec.com
 	zhanghj: zhanghj!gohighsec.com
+	zhanglong: zhanglong!gohighsec.com
+	zongyimin600: zongyimin600!gmail.com until 2017-12-18
 Goldman Sachs:
 	Keith Burdis: keith.burdis!gs.com
 GoodData:
@@ -5655,6 +5937,8 @@ H3C:
 	fang.he: fang.he!hotmail.com
 	feige0304: feige0304!163.com
 	fwsakura: fwsakura!163.com
+	gu.jun: gu.jun!h3c.com
+	gujun1989: gujun1989!126.com
 	guoyongxhzhf: guoyongxhzhf!163.com
 	guoyongxhzhf: guoyongxhzhf!h3c.com
 	han.chaob: han.chaob!h3c.com
@@ -5662,16 +5946,20 @@ H3C:
 	hcn518: hcn518!gmail.com
 	huang.cheng: huang.cheng!h3c.com
 	jelan1022: jelan1022!163.com
+	jiang.pengfei: jiang.pengfei!h3c.com
+	jiangpf1992: jiangpf1992!outlook.com
 	jm_zhou: jm_zhou!126.com
 	kf.lijingb: kf.lijingb!h3c.com
 	kf.linlin: kf.linlin!h3c.com
 	kf.sunanchen: kf.sunanchen!h3c.com
 	kf.xiangbinbin: kf.xiangbinbin!h3c.com
+	l.xiaoqiang: l.xiaoqiang!qq.com
 	laly_liu: laly_liu!163.com
 	li.chunhan: li.chunhan!h3c.com
 	lijingjing: xiaosuiba!gmail.com
 	liu.danb: liu.danb!h3c.com
 	liu.qing: liu.qing!h3c.com
+	liu.xiaoqiang: liu.xiaoqiang!h3c.com
 	m13250816269: m13250816269!163.com
 	qu.zhaoyang: qu.zhaoyang!h3c.com
 	qzyjy666: qzyjy666!163.com
@@ -5715,7 +6003,16 @@ HERE:
 	Josh Dolitsky: jdolitsky!gmail.com
 	Ryan Roden-Corrent: ryan!rcorre.net
 HFBank:
+	1120773382: 1120773382!qq.com
+	1275544132: 1275544132!qq.com
+	1594282932: 1594282932!qq.com
+	582930393: 582930393!qq.com
+	952194414: 952194414!qq.com
+	jiayongpeng: jiayongpeng!gmail.com
 	liudong1: liudong1!hfbank.com.cn from 2015-10-23
+	peidongdong: peidongdong!hfbank.com.cn
+	peidongdong121: peidongdong121!163.com
+	wangcong202: wangcong202!163.com
 	willowd878: willowd878!gmail.com from 2015-10-23
 	wosunoo: wosunoo!qq.com
 	wosunoozzy: wosunoozzy!gmail.com
@@ -5902,6 +6199,7 @@ HP:
 	dexter.fryar: dexter.fryar!gmail.com until 2015-10-31
 	dexter.fryar: dexter.fryar!hp.com until 2015-10-31
 	dexter.fryar: dexter.fryar!outlook.com until 2015-10-31
+	dexter.fryar: dexter.fryar!protonmail.com until 2015-10-31
 	dexter.fryar: dexter.fryar!ymail.com until 2015-10-31
 	dgstangel: dgstangel!gmail.com until 2015-10-31
 	dhellmann: dhellmann!redhat.com from 2014-07-29 until 2015-10-31
@@ -6211,6 +6509,7 @@ HP:
 	tmcpeak: tmcpeak!us.ibm.com from 2014-08-15 until 2015-10-31
 	tom.cammann: tom.cammann!hp.com until 2015-10-31
 	travis.mcpeak: travis.mcpeak!hp.com from 2014-08-15 until 2015-10-31
+	travis.tripp: travis.tripp!hpe.com until 2015-10-31
 	travis_mcpeak: travis_mcpeak!symantec.com from 2014-08-15 until 2015-10-31
 	treinish: treinish!linux.vnet.ibm.com until 2015-10-31
 	tyagi.ishant: tyagi.ishant!gmail.com until 2015-10-31
@@ -6617,6 +6916,7 @@ HPE:
 	lyz: lyz!princessleia.com from 2015-10-31 until 2016-10-28
 	lyz: lyz!ubuntu.com from 2015-10-31 until 2016-10-28
 	m: m!metacloud.com from 2015-10-31 until 2016-03-25
+	m.nitesh: m.nitesh!nectechnologies.in
 	madhusudhan.kandadai: madhusudhan.kandadai!hp.com from 2015-10-31
 	madhusudhan.kandadai: madhusudhan.kandadai!hpe.com
 	madhusudhan.openstack: madhusudhan.openstack!gmail.com from 2015-10-31
@@ -6684,6 +6984,7 @@ HPE:
 	omri.gazitt: omri.gazitt!hpe.com
 	openstack: openstack!vmbrasseur.email from 2015-10-31
 	palecrow: palecrow!gmail.com from 2015-10-31
+	parimalanitesh: parimalanitesh!gmail.com
 	paul.carlton2: paul.carlton2!hp.com from 2015-10-31
 	paul.carlton2: paul.carlton2!hpe.com
 	phani.p3: phani.p3!gmail.com from 2015-10-31
@@ -6868,6 +7169,11 @@ HTC:
 	JamesJJ: james_hooper!htc.com
 HUGO BOSS:
 	blackbird29: robin.kurz!student.reutlingen-university.de
+HUST:
+	frank_openstack: frank_openstack!163.com
+	xu_lyman: xu_lyman!163.com
+HXT Semiconductor:
+	huan.xiong: huan.xiong!hxt-semitech.com
 Haaris:
 	Rob Paisley: github!rpaisley.com
 Hacce Soluciones TIC:
@@ -7143,6 +7449,8 @@ Huawei:
 	Wang Qilin: qilin.wang!huawei.com, wangqilin2!huawei.com
 	Weibin Lin: linweibin1!huawei.com
 	Wentao Zhang: zhangwentao234!huawei.com
+	William Chang: zhang.wanmin!zte.com.cn until 2010-03-08
+	William Zhang: warmchang!outlook.com until 2010-03-08
 	XiaoningDing: XiaoningDing!users.noreply.github.com
 	XsWack: XsWack!users.noreply.github.com
 	Yang Xu: yang.xu3!huawei.com
@@ -7170,6 +7478,7 @@ Huawei:
 	byHAN: byHAN!users.noreply.github.com
 	caizhiyuan1: caizhiyuan1!huawei.com
 	cathy: cathy.h.zhang!huawei.com
+	chenyingko: chenyingko!gmail.com
 	ching.sun: ching.sun!huawei.com from 2016-01-18
 	chingsun: chingsun!gmail.com from 2016-01-18
 	chingsun: chingsun!hotmail.com from 2016-01-18
@@ -7182,6 +7491,7 @@ Huawei:
 	dmitrykuzn: dmitrykuzn!gmail.com
 	dsrinivas: dsrinivas!mirantis.com from 2017-04-24
 	dujun1990: dujun1990!users.noreply.github.com
+	earnest.yefeng.wen: earnest.yefeng.wen!gmail.com
 	edisonxiang: xiang.edison!gmail.com
 	farhad.sunavala: farhad.sunavala!huawei.com
 	feihujiang: jiangfeihu!huawei.com
@@ -7201,6 +7511,7 @@ Huawei:
 	hangaoshuai: hangaoshuai1!huawei.com
 	hanxiaoshuai: 30897305+hanxiaoshuai!users.noreply.github.com
 	hfzqls: hfzqls!users.noreply.github.com
+	hongbin034: hongbin034!gmail.com until 2018-01-22
 	honghui_xiao: honghui_xiao!yeah.net from 2016-07-22 until 2017-04-30
 	honghuix: honghuix!vmware.com from 2016-07-22 until 2017-04-30
 	huangtianhua: huangtianhua!huawei.com
@@ -7237,6 +7548,8 @@ Huawei:
 	liguangbo: liguangbo!users.noreply.github.com
 	lihi.wishnitzer: lihi.wishnitzer!toganetworks.com
 	lihiwish: lihiwish!gmail.com
+	liliu1: liliu1!huawei.com
+	liliueecg: liliueecg!gmail.com
 	lingxian.kong: lingxian.kong!qq.com until 2015-11-17
 	liu-sheng: liu-sheng!users.noreply.github.com
 	liudong1: liudong1!hfbank.com.cn until 2015-10-23
@@ -7296,6 +7609,7 @@ Huawei:
 	wanghua7: wanghua7!huawei.com
 	wangxiyuan: wangxiyuan!huawei.com
 	wangxiyuan1007: wangxiyuan1007!gmail.com
+	warmchang: warmchang!163.com until 2010-03-08
 	wh: wh!chinanetcenter.com until 2015-04-02
 	willowd878: willowd878!gmail.com until 2015-10-23
 	wilson: wilson.wen.chn!gmail.com
@@ -7305,16 +7619,20 @@ Huawei:
 	xiaohhui123: xiaohhui123!gmail.com from 2016-07-22 until 2017-04-30
 	xiejunan: xiejunan!huawei.com
 	xiekeyang: xiekeyang!huawei.com
+	xing.yang: xing.yang!huawei.com
 	xu fei: 1004815462!qq.com, knightxun!users.noreply.github.com
 	xubo245: xubo245!users.noreply.github.com
 	xuxiaojun3: xuxiaojun3!huawei.com
 	xuzhonghu: xuzhonghu!huawei.com
+	xyang: xyang!alum.mit.edu
 	xyzjerry: xyzjerry!gmail.com until 2015-04-25
 	y00278980: yehui2!huawei.com
 	yangshukui: yangshu!huawei.com, yangshukui!huawei.com
 	yapeng.wu: yapeng.wu!huawei.com
 	yapengwu: yapengwu!gmail.com
+	ye.feng.wen: ye.feng.wen!huawei.com
 	yikunkero: yikunkero!gmail.com
+	ying.chen: ying.chen!huawei.com
 	yongle.li: yongle.li!gmail.com from 2016-10-01
 	yuli.stremovsky: yuli.stremovsky!huawei.com
 	yunlingzeng: yunlingzeng!hotmail.com
@@ -7332,6 +7650,7 @@ Huawei:
 	zheng.zhenyu: zheng.zhenyu!outlook.com
 	zhengguoyong: zhenggouyong.zheng!huawei.com
 	zhenguo: zhenguo!unitedstack.com from 2014-09-14
+	zhengzhengyu: zhengzhengyu!huawei.com
 	zhengzhenyu: zhengzhenyu!huawei.com
 	zhengzhenyulixi: zhengzhenyulixi!gmail.com
 	zhi-qiang.fan: zhi-qiang.fan!hp.com until 2015-06-05
@@ -7339,6 +7658,7 @@ Huawei:
 	zhipengh: huangzhipeng!huawei.com
 	zhiqiang.fan: zhiqiang.fan!huawei.com until 2015-06-05
 	zhuli: zhuli27!huawei.com
+	“xing-yang”: xingyang105!gmail.com
 HubSpot:
 	Dave Powell: poweld!gmail.com
 	bbeaudreault: bbeaudreault!users.noreply.github.com
@@ -7357,6 +7677,13 @@ Hupp:
 	Patrick Browne: pt.browne!gmail.com
 Huron:
 	Tao Chang: changtao!hihuron.com
+	lixipeng: lixipeng!hihuron.com until 2014-03-31
+	lixipeng: lixipeng!prophetech.cn until 2014-03-31
+	sunqi: sunqi!hihuron.com until 2014-03-31
+	sunqi: sunqi!prophetech.cn until 2014-03-31
+	xiaoquqi: xiaoquqi!gmail.com until 2014-03-31
+	zhengyue: zhengyue!hihuron.com until 2014-03-31
+	zhengyue: zhengyue!prophetech.cn until 2014-03-31
 Hyland Software:
 	joshrosso: joshrosso!gmail.com
 Hyper.sh:
@@ -7406,11 +7733,12 @@ IBM:
 	BillyD73: BillyD73!users.noreply.github.com
 	Brad Topol: btopol!us.ibm.com
 	Breno Leitao: breno.leitao!gmail.com
-	Carlton Semple: carltonsemple!users.noreply.github.com , from 2019-05-30
+	Carlton Semple: carltonsemple!users.noreply.github.com , from 2019-06-06
 	Carlton-Semple: carlton.semple!ibm.com
 	CarltonSemple: CarltonSemple!users.noreply.github.com
 	Charles: reachlin!gmail.com
 	Chen Li: shchenli!cn.ibm.com
+	Chen Zhiwei: zhiweik!gmail.com
 	Chris Hupman: chupman!us.ibm.com
 	Christian Will: chriwill!us.ibm.com
 	Christopher Jones: tophj!linux.vnet.ibm.com
@@ -7429,6 +7757,7 @@ IBM:
 	Doug Davis: dug!us.ibm.com, duglin!users.noreply.github.com
 	Edu Patrocinio: epatro!gmail.com
 	Erik Hollembeak: erik.hollembeak!gmail.com
+	Ethan Lynn: ethanlynnl!vmware.com until 2017-01-06
 	Fabio A. Oliveira: fabolive!us.ibm.com
 	Feilong Wang: flwang!catalyst.net.nz until 2014-05-22
 	Fernando Diaz: diazjf!us.ibm.com
@@ -7585,7 +7914,8 @@ IBM:
 	clint: clint!ubuntu.com from 2015-09-18
 	clint.byrum: clint.byrum!hp.com from 2015-09-18
 	clnperez: clnperez!users.noreply.github.com
-	cmluciano: christophermluciano!gmail.com
+	cmlucian: cmlucian!us.ibm.com
+	cmluciano: christophermluciano!gmail.com, cmluciano!cruznet.org
 	codemonkey77: arb77!hotmail.com
 	colette.alexander: colette.alexander!hp.com from 2015-08-01
 	colettealexander: colettealexander!gmail.com from 2015-08-01
@@ -7680,6 +8010,7 @@ IBM:
 	jamielennox: jamielennox!redhat.com from 2015-10-23
 	jared-wallace: jared-wallace!users.noreply.github.com
 	jay-lau: jay-lau!users.noreply.github.com
+	jay.s.bryant: jay.s.bryant!gmail.com until 2017-01-20
 	jaywcarman: jaywcarman!users.noreply.github.com
 	jbryant1: jbryant1!lenovo.com until 2017-01-20
 	jckasper: jckasper!users.noreply.github.com
@@ -7705,6 +8036,7 @@ IBM:
 	julia.ash.kreger: julia.ash.kreger!hpe.com from 2016-09-19
 	juliaashleykreger: juliaashleykreger!gmail.com from 2016-09-19
 	jungleboyj: jungleboyj!electronicjungle.net until 2017-01-20
+	jungleboyj: jungleboyj!gmail.com until 2017-01-20
 	jwcroppe: jwcroppe!us.ibm.com
 	jwende: jwende!users.noreply.github.com
 	k19810703: k19810703!users.noreply.github.com
@@ -7713,8 +8045,10 @@ IBM:
 	kairoaraujo: kairoaraujo!users.noreply.github.com
 	karstengr: karstengr!users.noreply.github.com
 	karthickrajamani: karthickrajamani!users.noreply.github.com
+	kennelson11: kennelson11!gmail.com until 2016-08-19
 	kitch: kitch!users.noreply.github.com
 	kmestery: kmestery!cisco.com from 2015-10-09
+	knelson: knelson!openstack.org until 2016-08-19
 	kocolosk: kocolosk!users.noreply.github.com
 	krtaylor: krtaylor!us.ibm.com
 	krum.spencer: krum.spencer!gmail.com from 2015-09-28
@@ -7746,9 +8080,12 @@ IBM:
 	maxbbender: maxbbender!users.noreply.github.com
 	mestery: mestery!mestery.com from 2015-10-09
 	mestery: mestery!noironetworks.com from 2015-10-09
+	michal.nasiadka: michal.nasiadka!nokia.com until 2018-03-31
+	michal.nasiadka: michal.nasiadka!pl.ibm.com until 2018-03-31
 	mikehollinger: mikehollinger!users.noreply.github.com
 	mkassawara: mkassawara!gmail.com from 2016-01-15
 	mmedvede: mmedvede!users.noreply.github.com
+	mnasiadka: mnasiadka!gmail.com until 2018-03-31
 	molepigeon: molepigeon!users.noreply.github.com
 	monty.taylor: monty.taylor!hp.com from 2015-08-16 until 2016-06-12
 	mordred: mordred!inaugust.com from 2015-08-16 until 2016-06-12
@@ -7855,6 +8192,7 @@ IBM:
 	xianghui: xianghui!cn.ibm.com until 2014-12-01
 	xiaohhui123: xiaohhui123!gmail.com until 2016-07-22
 	xixuejia: xixuejia!users.noreply.github.com
+	xuanlangjian: xuanlangjian!gmail.com until 2017-01-06
 	xuhj: xuhj!cn.ibm.com until 2014-11-21
 	xuhj: xuhj!linux.vnet.ibm.com until 2014-11-21
 	yacovm: yacovm!users.noreply.github.com
@@ -7866,6 +8204,7 @@ IBM:
 	zhhsng: zhhsng!gmail.com until 2015-10-23
 	zhhuabj: zhhuabj!cn.ibm.com until 2014-05-23
 	zhihai.song: zhihai.song!easystack.cn until 2015-10-23
+	zhiwchen: zhiwchen!cn.ibm.com
 	zhiyanl: zhiyanl!cn.ibm.com
 	zsais: zsais!users.noreply.github.com
 	zxkuqyb: zxkuqyb!gmail.com from 2015-09-04
@@ -7908,8 +8247,10 @@ IQ Option:
 IRT SystemX:
 	neith00: ja.lauricella!gmail.com
 ISCAS:
+	Shijun Qin: 272700767!qq.com, qinshijun16!mails.ucas.ac.cn until 2017-10-28
 	Shijun Qin: qinshijun16!otcaix.iscas.ac.cn
 	hanchao: hanchao!iscas.ac.cn from 2016-06-08
+	qinshijun: qinshijun!beyondcent.com until 2017-10-28
 ISE:
 	Andreas Pillath: andreas.pillath!gmail.com
 ISI.nc:
@@ -8026,6 +8367,7 @@ Independent:
 	Amit Saha: amitsaha!users.noreply.github.com
 	Andrea Melloncelli: andrea.melloncelli!gmail.com
 	Andrew Shu: talklittle!gmail.com
+	Andrey Kurilin: akurilin!mirantis.com, andr.kurilin!gmail.com until 2017-07-31
 	Andrés Bono: andresbonojimenez!gmail.com
 	Andy Xie: andy.xning!gmail.com
 	Antoine Roy-Gobeil: roygobeil.antoine!gmail.com
@@ -8050,6 +8392,7 @@ Independent:
 	Brandon Gonzalez: bg!lightstep.com, bg451!users.noreply.github.com, brandon.gonzalez.451!gmail.com until 2016-05-01
 	Brian Ketelsen: bketelsen!gmail.com
 	Bryan Larsen: bryan!larsen.st
+	CandiceGuo: guoqian!zju.edu.cn
 	Carl B. beethoven1110: beethoven1110!gmail.com
 	Carlos Souza: carloshrsouza!gmail.com
 	Chad Kunde: kunde21!gmail.com
@@ -8076,6 +8419,7 @@ Independent:
 	Davor Cubranic: davor!phas.ubc.ca
 	DenisBiondic: denisbiondic!hotmail.com
 	DenisBiondic: DenisBiondic!users.noreply.github.com
+	Derek Yarnell: derek!umiacs.umd.edu
 	Di Xu: dixudx!users.noreply.github.com, stephenhsu90!gmail.com, xudifsd!gmail.com
 	Dmitry Krasnoukhov: dmitry!krasnoukhov.com
 	Dmitry Minkovsky: dminkovsky!gmail.com
@@ -8119,8 +8463,11 @@ Independent:
 	James Sherwood-Jones: james.sherwoodjones!gmail.com until 2014-06-15
 	James Sulinski: james!federacy.com
 	Jeffrey Sica: jeef111x!gmail.com, jsica!umich.edu
+	Jeremy Meulemans: meule012!umn.edu
 	Jernej Kos: jernej!kos.mx until 2015-12-15
 	Jeroen Visser: jeroenvisser101!users.noreply.github.com
+	Jie Luo: luo612!zju.edu.cn
+	Jim Rollenhagen: jim!jimrollenhagen.com until 2017-12-04
 	Jisoo Park: xxxyel!gmail.com
 	Joan Rieu: joan!joanrieu.com
 	Johannes 'fish' Ziemke: fish!freigeist.org, github!freigeist.org from 2017-02-01
@@ -8145,6 +8492,7 @@ Independent:
 	Kyungho Jeon: kyungho.jeon!gmail.com
 	Kyâne Pichou: kyane!kyane.fr
 	Lewis Headden: lewis!lewisheadden.com, lewis_headden!condenast.com
+	Liam Monahan: liam!umiacs.umd.edu
 	Linerd: Linerd!users.noreply.github.com
 	LinxiFan: LinxiFan!users.noreply.github.com
 	Luca Berton: mr.evolution85!gmail.com
@@ -8160,6 +8508,7 @@ Independent:
 	Mark Janssen: mark!praseodym.net
 	Mark Railton: marksrailton!gmail.com
 	Markus Sommer: markus!splork.de
+	Martially: 21651061!zju.edu.cn
 	Martín Ferrari: tincho!tincho.org
 	Matt Crane: mcrane!cs.otago.ac.nz
 	Matt Crane: mcrane!snapbug.geek.nz from 2010-12-01
@@ -8173,6 +8522,7 @@ Independent:
 	Michal Cwienczek: vsmax!users.noreply.github.com until 2016-02-15, from 2017-01-15
 	Michal Rostecki: michal!kinvolk.io, mrostecki!mirantis.com from 2015-08-07 until 2015-08-19
 	Michal Rostecki: michal.rostecki!gmail.com from 2015-08-07 until 2015-08-19
+	Michal Rostecki: mrostecki!suse.com from 2015-08-07 until 2015-08-19
 	Mickey Reiss: mickeyreiss!gmail.com
 	Miguel Angel Rasero: skuda21!gmail.com
 	Miguel Baeta: bayetovsky!users.noreply.github.com
@@ -8194,6 +8544,7 @@ Independent:
 	NvanAdrichem: NvanAdrichem!users.noreply.github.com
 	OTSUKA, Yuanying: yuanying!fraction.jp
 	Owen Barton: github!owenbarton.com
+	Padraig O'Sullivan: posulliv!umd.edu
 	Pan Luo: xcompass!gmail.com
 	Parth Oberoi: parthoberoi!hotmail.com
 	Paulo Pires: pires!apprenda.com, pjpires!gmail.com until 2016-09-01
@@ -8221,6 +8572,7 @@ Independent:
 	Ryan: rdaniels6813!users.noreply.github.com
 	Ryan Cole: rcyoalne!gmail.com
 	Ryan McGinnis: ryanmcginnis!users.noreply.github.com
+	SRaddict: qishen!zju.edu.cn
 	Sam Stoelinga: sammiestoel!gmail.com until 2014-07-01
 	Sami Hiltunen: git!hiltunen.io
 	Sascha Hanse: shanse!gmail.com
@@ -8233,10 +8585,12 @@ Independent:
 	Shayne Wang: shaynewang!users.noreply.github.com, shaynexwang!gmail.com
 	ShengjieLuo: ShengjieLuo!users.noreply.github.com
 	Shidel: joeshidel!gmail.com
-	Shijun Qin: 272700767!qq.com, qinshijun16!mails.ucas.ac.cn
+	Shijun Qin: 272700767!qq.com, qinshijun16!mails.ucas.ac.cn from 2017-10-28
 	Shinichi Maeshima: netwillnet!gmail.com
 	Shoichi Kaji: skaji!cpan.org
 	Siddharth Shukla: siddharth.shukla!uber.com from 2017-08-01
+	Simon Pasquier: spasquie!redhat.com from 2017-10-21 until 2017-11-12
+	Simon Pasquier: spasquier!mirantis.com from 2014-06-30 until 2017-11-12
 	Siva Manivannan: sivabalan.manivannan!gmail.com
 	Sjoerd Talsma: sjoerd!talsma-ict.nl, sjoerdtalsma!users.noreply.github.com
 	Sree Kuchibhotla: sreecha!users.noreply.github.com from 2015-06-01
@@ -8248,6 +8602,7 @@ Independent:
 	Steven Wade: steven!stevenwade.co.uk
 	Stijn De Haes: stijn.de.haes!gmail.com until 2014-09-15
 	Sudharaka Palamakumbura: sudharakap!mun.ca
+	Sun Jianbo: wonderflow!zju.edu.cn
 	Suramya Shah: ss22ever!users.noreply.github.com
 	Taariq Levack: taariql!gmail.com from 2015-11-15 until 2016-10-15
 	Takahito Yamatoya: info!poop.jp from 2017-01-01
@@ -8257,12 +8612,13 @@ Independent:
 	Taras Glek: github!glek.net
 	Teoh Han Hui: teohhanhui!gmail.com
 	Thomas Catterall: swizzlr!users.noreply.github.com from 2016-10-15
+	Tim Dettrick: t.dettrick!uq.edu.au
 	Tim Emiola: tbetbetbe!users.noreply.github.com from 2016-12-01
 	Timothy Palpant: tim!palpant.us
 	Tobias Klauser: tklauser!distanz.ch, tobias.klauser!gmail.com
-	Tom: rothoerl!in.tum.de
 	Tomas Karasek: tom.to.the.k!gmail.com
 	Travis CI: travis!travis-ci.org
+	Unana.Okpoyo: Unana.Okpoyo!emc.com
 	Valentin Tjoncke: nouney!users.noreply.github.com from 2013-08-15 until 2014-06-15
 	Vincent De Smet: vincent.desmet!honestbee.com from 2016-04-01 until 2016-05-01
 	Vincent De Smet: vincent.drl!gmail.com until 2016-05-15
@@ -8274,6 +8630,7 @@ Independent:
 	Wes Turner: wes.turner!gmail.com
 	William Pain: pain.william!gmail.com
 	Xianglin Gao: xlgao!harmonycloud.cn, xlgao!zju.edu.cn
+	Xiao An: hac!zju.edu.cn
 	Xinbo Weng: xihuanbo_0521!zju.edu.cn
 	Xiuyu Li: nickleefly!gmail.com
 	Yancey1989: yancey1989!gmail.com
@@ -8287,6 +8644,8 @@ Independent:
 	Zach Aller: zachaller!hotmail.com, zachaller!users.noreply.github.com
 	ZeroMagic: ZeroMagic!users.noreply.github.com
 	Zoltan Burgermeiszter: zoltan!burgermeiszter.com
+	ZouRui89: 21751189!zju.edu.cn
+	ZouRui89: ZouRui89!users.noreply.github.com
 	aaron: aaron!greenbtn.com from 2014-08-01
 	abelgana: 32614067+abelgana!users.noreply.github.com
 	abhijeet.jain: abhijeet.jain!nectechnologies.in from 2014-06-18
@@ -8296,6 +8655,7 @@ Independent:
 	abhijeetjpjain: abhijeetjpjain!gmail.com from 2014-06-18
 	abhishek: abhishek!cloudscaling.com from 2016-11-30
 	abhishek.chanda: abhishek.chanda!emc.com from 2016-11-30
+	abhishek.kekane: abhishek.kekane!nttdata.com from 2017-11-03 until 2017-11-12
 	adam.harwell: adam.harwell!rackspace.com from 2016-09-23 until 2016-12-04
 	adieu: adieu!adieu.me
 	adriano.rosso: adriano.rosso!fit-tecnologia.org.br from 2017-03-31
@@ -8306,12 +8666,16 @@ Independent:
 	aislansaulo: aislansaulo!gmail.com
 	ajaya.agrawal: ajaya.agrawal!ril.com from 2016-01-08
 	ajku.agr: ajku.agr!gmail.com from 2016-01-08
+	akekane: akekane!redhat.com from 2017-11-03 until 2017-11-12
+	akholkin: akholkin!mirantis.com from 2017-12-08
 	akuno: akuno!lavabit.com from 2016-07-15
 	akutz: akutz!vmware.com until 2018-03-09
 	albatross0: albatross0!gmail.com
 	alex.meade: alex.meade!rackspace.com from 2016-06-10
+	alexmangt540: alexmangt540!gmail.com from 2017-12-08
 	alyson.rodrigues.rosa: alyson.rodrigues.rosa!gmail.com from 2017-03-02
 	alyson.rosa: alyson.rosa!fit-tecnologia.org.br from 2017-03-02
+	amrith.kumar: amrith.kumar!vzw.com from 2017-01-30 until 2017-04-23
 	andre.f.aranha: andre.f.aranha!gmail.com
 	andrew: andrew!andrewspiers.net
 	andrew: andrew!linuxjedi.co.uk from 2015-04-01
@@ -8325,11 +8689,14 @@ Independent:
 	anton.kremenetsky: anton.kremenetsky!yandex.ru
 	antonisp: antonisp!celebdor.com from 2016-08-09 until 2016-08-28
 	anusree.a04: anusree.a04!gmail.com
+	apolloliuhx: apolloliuhx!gmail.com from 2018-04-28
 	arundas1991: arundas1991!gmail.com
 	asegurap: asegurap!redhat.com from 2016-08-09 until 2016-08-28
 	ashlee: ashlee!onosfw.com
 	ashlee: ashlee!wildernessvoice.com
 	ashu: ashu!coolsvap.net
+	astaroverov: astaroverov!mirantis.com from 2017-05-31
+	avstaroverov: avstaroverov!gmail.com from 2017-05-31
 	belous.py: belous.py!gmail.com from 2016-10-18
 	beorn7: beorn!soundcloud.com until 2006-05-01, from 2013-06-01 until 2013-10-01
 	bg: bg!bgm.io
@@ -8341,6 +8708,7 @@ Independent:
 	bnemec: bnemec!us.ibm.com from 2013-07-12 until 2013-09-09
 	bobsky: bobsky!users.noreply.github.com
 	boris: boris!pavlovic.me until 2013-04-10
+	bpavlovic: bpavlovic!godaddy.com until 2013-04-10
 	bpavlovic: bpavlovic!mirantis.com until 2013-04-10
 	brian: brian!bdwarner.com until 2006-05-20
 	brian.rosmaita: brian.rosmaita!rackspace.com from 2017-04-28
@@ -8353,6 +8721,7 @@ Independent:
 	cedric.savignan: cedric.savignan!orange.com until 2016-04-25
 	cgag: cgag!cgag-deb.libcore.so
 	chanwit: chanwit!gmail.com
+	chenxingyu: wizard_cxy!hotmail.com until 2016-03-30
 	cherti: cherti!letopolis.de
 	ching.sun: ching.sun!huawei.com until 2016-01-18
 	chingsun: chingsun!gmail.com until 2016-01-18
@@ -8362,6 +8731,7 @@ Independent:
 	chroniclinux: chroniclinux!gmail.com from 2016-10-21
 	chshou: shou3301!outlook.com
 	clairew: clairew!users.noreply.github.com
+	contato: contato!stenioelson.com.br
 	corey.obrien: corey.obrien!rackspace.com until 2015-07-20
 	cortopy: cortopy!users.noreply.github.com
 	cr_hui: cr_hui!126.com
@@ -8369,7 +8739,11 @@ Independent:
 	crccheck: crccheck!users.noreply.github.com
 	ctracey: ctracey!bluebox.net until 2013-10-31
 	dabarren: dabarren!gmail.com until 2016-10-31
+	daidv3: daidv3!viettel.com.vn until 2016-06-15
+	daikk115: daikk115!gmail.com until 2016-06-15
+	dane.fichter: dane.fichter!jhuapl.edu
 	daniel.kuffner: daniel.kuffner!gmail.com
+	danielr: danielr!hostworks.com.au
 	danvaida: danvaida!users.noreply.github.com
 	dave.walker: dave.walker!canonical.com from 2013-09-02
 	davewalker: davewalker!ubuntu.com from 2013-09-02
@@ -8383,9 +8757,15 @@ Independent:
 	derek: derek!networkwhisperer.com
 	derek.morton25: derek.morton25!gmail.com
 	dguitarbite: dguitarbite!gmail.com from 2016-12-28
+	digambar.patil: digambar.patil!calsoftinc.com until 2017-09-15
+	digambarpat: digambarpat!gmail.com until 2017-09-15
+	digambarpatil15: digambarpatil15!yahoo.co.in until 2017-09-15
+	dinizmonteirogustavo: dinizmonteirogustavo!gmail.com
 	distroguy: distroguy!gmail.com until 2017-01-15
 	dkuffner: dkuffner!chilicat.net
 	dongz9: dongz9!users.noreply.github.com
+	dongziming: dongziming!zju.edu.cn
+	dorm: dorm!dorm.org from 2017-07-13
 	dragon889: dragon889!163.com until 2014-08-05
 	dt-github: dt-github!xr7.org from 2015-04-01 until 2015-04-27
 	dtroyer: dtroyer!gmail.com from 2015-04-01 until 2015-04-27
@@ -8435,13 +8815,17 @@ Independent:
 	georgebuckerfield: georgebuckerfield!gmail.com
 	glacierr.dev: glacierr.dev!gmail.com from 2015-04-30
 	gotteric: gotteric!users.noreply.github.com
+	gridnevvvit: gridnevvvit!gmail.com from 2017-06-13
 	grunskis: grunskis!users.noreply.github.com
 	gtt116: gtt116!126.com from 2016-05-31
 	gtt116: gtt116!gmail.com from 2016-05-31
 	guohaifang: guohaifang!zju.edu.cn
+	gustavo.monteiro: gustavo.monteiro!ccc.ufcg.edu.br
+	gustavomonteiro: gustavomonteiro!lsd.ufcg.edu.br
 	h452577895: h452577895!126.com
 	hallucynogenyc: hallucynogenyc!gmail.com
 	hanks: hanks!users.noreply.github.com, zhouhan315!gmail.com
+	hanxi.liu: hanxi.liu!easystack.cn from 2018-04-28
 	hardik.parekh047: hardik.parekh047!gmail.com from 2016-08-19
 	hasahni: hasahni!users.noreply.github.com
 	hasbro17: hasbro17!gmail.com
@@ -8451,6 +8835,8 @@ Independent:
 	heartlock: 21521209!zju.edu.cn
 	hejiawei: hejiawei!hnu.edu.cn
 	henriquecostatruta: henriquecostatruta!gmail.com
+	holkina: holkina!selectel.ru from 2016-10-10 until 2017-12-17
+	hongbin034: hongbin034!gmail.com from 2018-01-22
 	huachaomao: huachaomao!gmail.com until 2016-12-04
 	hugonicodemos: hugonicodemos!gmail.com
 	hydraspy: hydraspy!gmail.com
@@ -8475,9 +8861,12 @@ Independent:
 	isviridov: isviridov!mirantis.com from 2015-02-09
 	iurygregory: iurygregory!gmail.com
 	iurygregory: iurygregory!lsd.ufcg.edu.br
+	iyozhikov: iyozhikov!mirantis.com from 2017-06-21
 	jacek.tomasiak: jacek.tomasiak!gmail.com until 2016-06-30
+	jaewook_oh: jaewook_oh!naver.com
 	jaharkes: jaharkes!users.noreply.github.com
 	jake.yip: jake.yip!unimelb.edu.au
+	jan.openstack: jan.openstack!zerebecki.de until 2018-01-15
 	jatins: shridhar.jatin!gmail.com
 	jbpionnier: jbpionnier!users.noreply.github.com
 	jean-philippe: jean-philippe!evrard.me until 2016-03-18
@@ -8489,8 +8878,14 @@ Independent:
 	jerome.gallard: jerome.gallard!orange.com until 2014-02-03
 	jfreud: jfreud!bu.edu
 	jh1229965510: jh1229965510!163.com
+	jhesketh: jhesketh!suse.com from 2017-04-28 until 2017-07-31
 	jianhuiz: jianhui!outlook.com, jianhui.zhou!huawei.com until 2014-05-11
+	jiaweizhou: jiaweizhou!zju.edu.cn
+	jim.rollenhagen: jim.rollenhagen!oath.com from 2017-05-01 until 2017-12-04
+	jim.rollenhagen: jim.rollenhagen!rackspace.com until 2017-12-04
+	jjm: jjm!usebox.net from 2018-01-26
 	jkaplowitz: jkaplowitz!users.noreply.github.com
+	jmartinez: jmartinez!cray.com from 2018-01-26
 	jmesterh: jmesterh!users.noreply.github.com
 	jmn: norlund!gmail.com
 	jmn: jmn!users.noreply.github.com
@@ -8504,9 +8899,12 @@ Independent:
 	joshua.hesketh: joshua.hesketh!rackspace.com from 2017-04-28
 	jslusher: jslusher!discogsinc.com
 	jtomasiak: jtomasiak!suse.com until 2016-06-30
+	juan: juan!memset.com from 2018-01-26
 	judd: judd!newgoliath.com from 2016-12-31
 	judd_maltin: judd_maltin!dell.com from 2016-12-31
 	juliohm: juliohm!users.noreply.github.com
+	jwoh95: jwoh95!dcn.ssu.ac.kr
+	jzerebecki: jzerebecki!suse.com until 2018-01-15
 	k.zaitsev: k.zaitsev!me.com from 2017-03-13 until 2017-03-16
 	kanagaraj.manickam: kanagaraj.manickam!hp.com until 2012-11-21
 	kanagaraj.manickam: kanagaraj.manickam!hpe.com until 2012-11-21
@@ -8522,6 +8920,7 @@ Independent:
 	kiran.ranganath: kiran.ranganath!maplelabs.com until 2014-07-14, from 2016-07-29
 	kispear: kispear!gmail.com until 2015-02-25
 	knikolla: knikolla!bu.edu
+	konan.abhi: konan.abhi!gmail.com from 2017-11-03 until 2017-11-12
 	kovvalole: kovvalole!gmail.com from 2016-10-18
 	kristi: kristi!nikolla.me
 	krotscheck: krotscheck!gmail.com from 2016-09-02
@@ -8529,6 +8928,7 @@ Independent:
 	kshileev: kshileev!cisco.com from 2014-06-16 until 2014-06-22
 	kshileev: kshileev!gmail.com from 2014-06-16 until 2014-06-22
 	kshileev: kshileev!griddynamics.com from 2014-06-16 until 2014-06-22
+	kyle.oh95: kyle.oh95!gmail.com
 	lanceblais: lanceblais!users.noreply.github.com
 	lead4good: lead4good!users.noreply.github.com
 	letterj: letterj!gmail.com
@@ -8557,7 +8957,11 @@ Independent:
 	magesh.gv: magesh.gv!oneconvergence.com from 2016-03-31
 	mageshgv: mageshgv!gmail.com from 2016-03-31
 	mail: mail!csmart.io until 2017-01-15
+	major: major!mhtx.net until 2018-03-18
+	major.hayden: major.hayden!rackspace.com until 2018-03-18
 	makdharma: makdharma!users.noreply.github.com
+	maksim.malchuk: maksim.malchuk!gmail.com from 2016-10-26 until 2017-12-19
+	malchuk.m.a: malchuk.m.a!sberbank.ru from 2016-10-26 until 2017-12-19
 	mao.huachao: mao.huachao!99cloud.net until 2016-12-04
 	marcelodieder: marcelodieder!gmail.com
 	marcus: marcus!aptira.com until 2015-02-27
@@ -8573,8 +8977,10 @@ Independent:
 	maxlaverse: max!laverse.net
 	maxmalakhov: maxmalakhov!users.noreply.github.com
 	mck: mick!thelastpickle.com until 2015-05-01
+	mdorman: mdorman!godaddy.com from 2017-07-13
 	mdurnosvistov: mdurnosvistov!mirantis.com from 2015-04-30
 	me: me!ronaldbradford.com from 2016-05-27
+	medput: medput!gmail.com from 2017-06-21
 	mfisch: mfisch!ubuntu.com from 2017-04-07
 	mgcrea: mgcrea!users.noreply.github.com
 	michael.krotscheck: michael.krotscheck!hp.com from 2016-09-02
@@ -8586,6 +8992,7 @@ Independent:
 	mishra: mishra!inf.u-szeged.hu from 2017-02-28
 	mkr1481: mkr1481!gmail.com until 2012-11-21
 	mlakat: mlakat!suse.com from 2014-12-19 until 2016-10-09
+	mmalchuk: mmalchuk!mirantis.com from 2016-10-26 until 2017-12-19
 	mmason: mmason!hp.com from 2015-09-01
 	mmnelemane: mmnelemane!suse.com from 2015-06-15 until 2015-07-23
 	mmohan: mmohan!mvista.com from 2015-06-15 until 2015-07-23
@@ -8610,16 +9017,23 @@ Independent:
 	nstarodubtsev: nstarodubtsev!mirantis.com from 2016-10-18
 	ntindall: ntindall!users.noreply.github.com
 	nvartolomei: nvartolomei!users.noreply.github.com
+	obourdon: obourdon!mirantis.com until 2007-12-01
+	obourdon: obourdon!opennext.io until 2007-12-01
 	okopylova: okopylova!mirantis.com from 2014-12-31
+	olivier.bourdon: olivier.bourdon!usharesoft.com until 2007-12-01
 	olkonami: olkonami!gmail.com from 2014-12-31
 	openstack: openstack!nemebean.com from 2013-07-12 until 2013-09-09
+	openstack: openstack!ouat.co.uk from 2017-11-01
 	orangain: orangain!gmail.com
+	os.travis.tripp: os.travis.tripp!gmail.com
 	p.v.holkin: p.v.holkin!mail.ru from 2017-02-09
 	p0lyn0mial: lukasz.szaszkiewicz!gmail.com
 	paalkr: paalkr!users.noreply.github.com
 	pekowski: pekowski!gmail.com from 2016-12-31
 	persistencelzy: persistencelzy!163.com
 	persistencelzy: persistencelzy!gmail.com
+	pete: pete!port.direct until 2017-03-13
+	pete.birley: pete.birley!att.com until 2017-03-13
 	petergardfjall: peter.gardfjall.work!gmail.com until 2017-03-15
 	petergardfjall: petergardfjall!users.noreply.github.com until 2017-03-15
 	pkholkin: pkholkin!mirantis.com from 2017-02-09
@@ -8631,6 +9045,8 @@ Independent:
 	radoslaw: cabalrd!yahooo.com
 	raildo: raildo!lsd.ufcg.edu.br
 	rajasikulkarni18: rajasikulkarni18!gmail.com from 2016-01-08
+	rajiv.kumar: rajiv.kumar!nectechnologies.in
+	rajivnewid: rajivnewid!gmail.com
 	ramana: ramana!venus.lekha.org
 	raymond_pekowski: raymond_pekowski!dell.com from 2016-12-31
 	rellerreller: rellerreller!yahoo.com
@@ -8642,6 +9058,8 @@ Independent:
 	rodrigo.barbieri2010: rodrigo.barbieri2010!gmail.com from 2017-03-02
 	ronald.bradford: ronald.bradford!gmail.com from 2016-05-27
 	root: 837829664!qq.com, shah.suramya!gmail.com
+	root: root!lhx-ceph-1.novalocal from 2018-04-28
+	rory.yang: rory.yang!elits.com
 	roshandawrani: roshandawrani!gmail.com
 	rosmaita.fossdev: rosmaita.fossdev!gmail.com from 2017-04-28
 	rosso.af: rosso.af!gmail.com from 2017-03-31
@@ -8670,6 +9088,7 @@ Independent:
 	sbelous: sbelous!mirantis.com from 2016-10-18
 	scippio: scippio!users.noreply.github.com
 	scuxiayiqian: scuxiayiqian!gmail.com
+	shi.yan: shi.yan!unimelb.edu.au
 	shikhi7: mshikhar29!gmail.com
 	shiyangkai: shiyangkai!hnu.edu.cn
 	shiyangkai333: shiyangkai333!126.com
@@ -8678,6 +9097,7 @@ Independent:
 	sinval: sinval!lsd.ufcg.edu.br
 	sinvalneto01: sinvalneto01!gmail.com
 	skuda: skuda!users.noreply.github.com
+	smyang92: smyang92!qq.com
 	snackycracky: snackycracky!users.noreply.github.com
 	snmohan83: snmohan83!gmail.com from 2015-06-15 until 2015-07-23
 	sombrafam: sombrafam!gmail.com from 2017-03-31
@@ -8686,6 +9106,8 @@ Independent:
 	sstoelinga: sstoelinga!mirantis.com until 2014-07-01
 	stanislav_m: stanislav_m!dell.com from 2016-12-31
 	starodubcevna: starodubcevna!gmail.com from 2016-10-18
+	stenio.araujo: stenio.araujo!ccc.ufcg.edu.br
+	stenioaraujo: stenioaraujo!lsd.ufcg.edu.br
 	stephenemslie: stephenemslie!users.noreply.github.com
 	steve.lewis: steve.lewis!rackspace.com from 2017-04-28
 	stevelle: stevelle!gmail.com from 2017-04-28
@@ -8700,23 +9122,30 @@ Independent:
 	sylvain.bauza: sylvain.bauza!gmail.com until 2014-05-04
 	syn: syn!ronin.io
 	tachim: tachim!users.noreply.github.com
+	tadas: tadas!ring.lt
 	tenobreg: tenobreg!redhat.com until 2015-11-02
+	thenakliman: thenakliman!gmail.com
+	thezarazia: thezarazia!gmail.com from 2017-08-14
 	thnam: thnam!smartx.kr
 	thom: thom!legge.tt from 2015-12-01
 	thom: thom!tteggel.org from 2015-12-01
 	thomas.leggett: thomas.leggett!hp.com from 2015-12-01
 	tigerlinux: tigerlinux!users.noreply.github.com
+	tim-zju: 21651152!zju.edu.cn
 	tlashchova: tlashchova!gmail.com from 2016-10-10
 	tlashchova: tlashchova!mirantis.com from 2016-10-10
 	tom: tom!openstack.org until 2013-06-03
 	toni: toni!midokura.com from 2016-08-09 until 2016-08-28
 	tonixx23: tonixx23!gmail.com
+	travis.tripp: travis.tripp!hp.com
+	travis.tripp: travis.tripp!hpe.com from 2015-10-31
 	ujuc: ujuc!ujuc.kr
 	unisisdev: contacto!unisis.com.ar
 	vakovalchuk: vakovalchuk!mirantis.com from 2016-10-18
 	venkata.kotha: venkata.kotha!infinite.com until 2016-06-08
 	venkataharshitha186: venkataharshitha186!gmail.com
 	venkatamaheshkotha: venkatamaheshkotha!gmail.com until 2016-06-08
+	vgridnev: vgridnev!mirantis.com from 2017-06-13
 	victor: victor!lsd.ufcg.edu.br
 	victor.lowther: victor.lowther!gmail.com from 2015-05-01
 	victor_lowther: victor_lowther!dell.com from 2015-05-01
@@ -8726,11 +9155,12 @@ Independent:
 	vivek.nandavanam: vivek.nandavanam!vmturbo.com until 2013-01-31
 	vrv: vrv!users.noreply.github.com
 	vsoch: vsoch!users.noreply.github.com
+	vvarga: vvarga!inf.u-szeged.hu
 	waipengyip: waipengyip!gmail.com
 	waipengyip: waipengyip!yahoo.com
 	wangwei: wangwei!unitedstack.com until 2014-04-20
 	weekface: weekface!gmail.com
-	wizard: wizardcxy!126.com
+	wizard: wizardcxy!126.com until 2016-03-30
 	wolfgangihloff: wolfgangihloff!users.noreply.github.com
 	xie.taotao: xie.taotao!zte.com.cn from 2015-07-10
 	xuchenhao001: xu.chenhao!hotmail.com
@@ -8738,6 +9168,9 @@ Independent:
 	xueshanf: xueshanf!users.noreply.github.com
 	yab277: yab277!my.utsa.edu
 	yalogr: yalogr!163.com until 2014-08-05
+	yanan Lee: energylyn!zju.edu.cn
+	yanpeifei: yanpeifei!gohighsec.com from 2017-12-18
+	yanshi.403: yanshi.403!gmail.com
 	yongle.li: yongle.li!gmail.com until 2016-10-01
 	yqzhang: yqzhang!users.noreply.github.com
 	yuelongguang: yuelongguang!le.com until 2014-08-05
@@ -8748,6 +9181,7 @@ Independent:
 	zaro0508: zaro0508!gmail.com from 2016-10-28
 	zhangchaolei: creazy_stone!hotmail.com
 	zhangqx2010: zhangqx2010!gmail.com, zhangqx2010!users.noreply.github.com until 2016-12-01
+	zongyimin600: zongyimin600!gmail.com from 2017-12-18
 	ztang: ztang!hnu.edu.cn
 	zzchun: zzchun!users.noreply.github.com
 	zzxwill: zzxwill!gmail.com
@@ -8765,6 +9199,7 @@ Infineon Technologies:
 Infinera:
 	Sivasamy Kaliappan: sivasamyk!gmail.com
 Infinite:
+	Nagegowda.Praveen: Nagegowda.Praveen!emc.com until 2017-11-03
 	asmita.singh: asmita.singh!infinite.com
 	asmitas43: asmitas43!gmail.com
 	himanshu.kumar: himanshu.kumar!infinite.com
@@ -8901,6 +9336,7 @@ Inspur:
 	fuzk: fuzk!inspur.com
 	gaosibei: gaosb!inspur.com
 	guochunting: guochunting!inspur.com
+	kongpp: kongpp!inspur.com
 	leiyashuai: leiyashuai!inspur.com
 	li_ting: li_ting!inspur.com
 	lihongweibj: lihongweibj!inspur.com
@@ -8910,6 +9346,8 @@ Inspur:
 	qiky: qiky!inspur.com
 	shangfufei: shangfufei!inspur.com
 	shaomingwu: shaomingwu!inspur.com
+	sunguigang: sunguigang!inspur.com
+	sunguigang82901: sunguigang82901!163.com
 	suzhiyuan: suzhiyuan!inspur.com
 	wangshuguang: wangshugaung!inspur.com
 	weichuancheng: weichuancheng!hotmail.com
@@ -8946,6 +9384,7 @@ Instituto Atlântico:
 Instituto de Telecomunicacoes:
 	carlos.goncalves: carlos.goncalves!neclab.eu until 2014-09-15
 	cgoncalves: cgoncalves!av.it.pt until 2014-09-15
+	cgoncalves: cgoncalves!redhat.com until 2014-09-15
 	igor.duarte.cardoso: igor.duarte.cardoso!intel.com from 2014-10-14 until 2015-09-13
 	igordcard: igordcard!gmail.com from 2014-10-14 until 2015-09-13
 	mail: mail!cgoncalves.pt until 2014-09-15
@@ -9207,6 +9646,7 @@ Intel:
 	rbradford: rbradford!users.noreply.github.com
 	ritu.sood.: ritu.sood.!intel.com
 	ritus.sood: ritus.sood!gmail.com
+	rloo: rloo!oath.com from 2016-04-06 until 2018-03-26
 	rloo: rloo!yahoo-inc.com from 2016-04-06
 	rlooyahoo: rlooyahoo!gmail.com from 2016-04-06
 	rmevans88: rmevans88!gmail.com
@@ -9244,6 +9684,7 @@ Intel:
 	ss7pro: ss7pro!users.noreply.github.com
 	stephen.finucane: stephen.finucane!intel.com until 2016-07-15
 	stephen.watson: stephen.watson!intel.com
+	stephenfin: stephenfin!redhat.com until 2016-07-15
 	stephenfinucane: stephenfinucane!hotmail.com until 2016-07-15
 	sujitha.neti: sujitha.neti!intel.com
 	sumant.murke: sumant.murke!intel.com
@@ -9264,6 +9705,8 @@ Intel:
 	varun.vr850: varun.vr850!gmail.com
 	vinay.potluri: vinay.potluri!intel.com
 	winston.d: winston.d!gmail.com until 2013-06-22
+	wxr930217: wxr930217!gmail.com
+	xin-ran.wang: xin-ran.wang!intel.com
 	xinxin shu: xinxin.shu!intel.com
 	xuhj: xuhj!cn.ibm.com from 2014-11-21
 	xuhj: xuhj!linux.vnet.ibm.com from 2014-11-21
@@ -9391,6 +9834,11 @@ J.P. Morgan:
 	Robert Wilson: robert.wilson1717!gmail.com from 2016-06-15
 JBAT:
 	okahashi117: naruki_okahashi!jbat.co.jp
+JD.COM:
+	chaoleili2: chaoleili2!gmail.com
+	liangyongqing1: liangyongqing1!jd.com
+	lichaolei: lichaolei!jd.com
+	lovejoy: lyq.0617!gmail.com
 JFrog:
 	Jainish Shah: jainishshah!yahoo.com
 JMJ Financial:
@@ -9457,8 +9905,6 @@ John Lewis Partnership:
 	Timothy Clarke: timothy.clarke!serverbox.co.uk, timothyclarke!users.noreply.github.com from 2015-09-01 until 2017-10-01
 Johnko:
 	John Ko: git!johnko.ca
-Johns Hopkins Independent:
-	dane.fichter: dane.fichter!jhuapl.edu
 Jollyturns:
 	Ovidiu Predescu: ovidiu!gmail.com
 Jolt:
@@ -9478,6 +9924,8 @@ Joyent:
 	Richard Kiene: richard.kiene!gmail.com, richard.kiene!joyent.com
 Juju Ecosystem:
 	Matt Bruzek: mbruzek!gmail.com
+Juniper:
+	edouard.thuleau: edouard.thuleau!gmail.com from 2016-02-29
 Juniper Networks:
 	Ananth Suryanarayana: anantharamu!gmail.com
 	Jason Venner: jvenner!juniper.net
@@ -9518,8 +9966,10 @@ KAWANET:
 KAYAK:
 	Neil Hanlon: nhanlon!kayak.com
 KDDI:
+	ha-miyamoto: ha-miyamoto!kddi.com
 	is-watanabe: is-watanabe!kddi.com from 2017-03-31
 	kn-matsumoto: kn-matsumoto!kddi.com
+	radedance: radedance!gmail.com
 	watanabe.isao.openstack: watanabe.isao.openstack!gmail.com from 2017-03-31
 	yu-kasuya: yu-kasuya!kddilabs.jp
 KIWI.KI:
@@ -9614,9 +10064,12 @@ Kinvolk:
 	Lili Cosic: cosiclili!gmail.com
 	Michael Schubert: michael!kinvolk.io
 	Michal Rostecki: michal!kinvolk.io, mrostecki!mirantis.com from 2016-11-30
+	Michal Rostecki: michal.rostecki!gmail.com from 2016-11-30 until 2017-12-31
+	Michal Rostecki: mrostecki!suse.com from 2016-11-30 until 2017-12-31
 	Robert Günzler: robertguenzler!kinvolk.io
 	asymmetric: asymmetric!users.noreply.github.com
 	indradhanush: indradhanush!users.noreply.github.com
+	michal.rostecki: michal.rostecki!allegrogroup.com from 2016-11-30 until 2017-12-31
 	zeenix: zeenix!users.noreply.github.com
 Kipod:
 	Andrei Kopats: andrei.kopats!gmail.com from 2016-04-15
@@ -9659,6 +10112,7 @@ Koho:
 	Eric Richardson: ewr!squareup.com
 Kontron:
 	akremenetsky: akremenetsky!dev.rtsoft.ru
+	ekremenetsky: ekremenetsky!dev.rtsoft.ru
 Krave-n:
 	Franklin Wise: franklin!krave.io
 Krosan:
@@ -9757,24 +10211,38 @@ Lenovo:
 	419546439: 419546439!qq.com
 	Ilya Yakovlev: ihile!users.noreply.github.com
 	bzhou1: bzhou1!lenovo.com
+	changzhi2: changzhi2!lenovo.com from 2017-06-12
 	feng_xia41103: feng_xia41103!hotmail.com
+	finixlei: finixlei!gmail.com
 	fxia1: fxia1!lenovo.com
 	gaojh4: gaojh4!lenovo.com
+	goodtuninger: goodtuninger!gmail.com
+	hanchao7: hanchao7!lenovo.com from 2016-06-08
+	hanxl2: hanxl2!lenovo.com
 	heut2008: heut2008!gmail.com from 2016-12-30
+	jay.s.bryant: jay.s.bryant!gmail.com from 2017-01-20
 	jbryant1: jbryant1!lenovo.com from 2017-01-20
+	jiapei2: jiapei2!lenovo.com
+	jiapeish: jiapeish!gmail.com
 	jsbryant: jsbryant!electronicjungle.net from 2017-01-20
 	jsbryant: jsbryant!us.ibm.com from 2017-01-20
 	jungleboyj: jungleboyj!electronicjungle.net from 2017-01-20
+	jungleboyj: jungleboyj!gmail.com from 2017-01-20
 	lakerzhou: lakerzhou!gmail.com
+	leilei4: leilei4!lenovo.com
 	luciomitsuru.seki: luciomitsuru.seki!fit-tecnologia.org.br until 2015-11-03
 	lucioseki: lucioseki!gmail.com until 2015-11-03
 	rchugh1: rchugh1!lenovo.com from 2015-07-24
 	richwellum: richwellum!gmail.com
 	rushil.chugh: rushil.chugh!gmail.com from 2015-07-24
 	rwellum: rwellum!lenovo.com
+	rwellum: rwellum!nokia.com until 2015-03-16
 	sekelso: sekelso!gmail.com
 	skelso: skelso!lenovo.com
 	tangyg2: tangyg2!lenovo.com from 2016-12-30
+	wangxu17: wangxu17!lenovo.com
+	wangzh21: wangzh21!lenovo.com from 2016-06-12
+	wx6899923: wx6899923!163.com
 	yaguang: yaguang!umcloud.com from 2016-12-30
 	yaguang.tang: yaguang.tang!canonical.com from 2016-12-30
 	ytang: ytang!mirantis.com from 2016-12-30
@@ -9863,7 +10331,7 @@ LinkedIn:
 	Allan Caffee: allan.caffee!gmail.com
 	Oleg Anashkin: oleg.anashkin!gmail.com
 	Thomas Jackson: jacksontj.89!gmail.com until 2017-03-15
-	Tom: rothoerl!in.tum.de from 2019-05-30
+	Tom: rothoerl!in.tum.de
 	Travis Thompson: trthomps!confluent.io until 2014-09-15
 	Vikas Kumar: vkumar!linkedin.com
 	agargiulo: agargiulo!users.noreply.github.com
@@ -9994,7 +10462,6 @@ MIT:
 	Jeff Yuan: jwyuan!alum.mit.edu
 	Jiahao Chen: jiahao!mit.edu
 	Matthew D. Steele: mdsteele!alum.mit.edu
-	Rafael Schloming: rhs!alum.mit.edu
 	cmceniry: cmceniry!mit.edu
 	cmceniry: cmceniry!users.noreply.github.com
 	ethanocentricity: ethan.wolf!alum.mit.edu
@@ -10058,6 +10525,8 @@ Marcapo:
 	Julian Einwag: julian.einwag!marcapo.com
 Mars:
 	Giovanni Tirloni: giovanni.tirloni!gmail.com until 2015-03-15
+Mastercard:
+	Ken Owens: kenowens12!users.noreply.github.com
 MathWorks:
 	Anish Karandikar: anishkny!gmail.com until 2014-12-15, from 2017-01-15
 Mathspace:
@@ -10116,6 +10585,10 @@ Mellanox:
 	roeyc: roeyc!vmware.com until 2014-08-04
 Memrise:
 	jamiegwatkin: jamie!workshopx.com
+Memset:
+	jjm: jjm!usebox.net until 2017-01-06
+	jmartinez: jmartinez!cray.com until 2017-01-06
+	juan: juan!memset.com until 2017-01-06
 Mentor Graphics:
 	Alexey Firago: alexey_firago!mentor.com
 Mercari:
@@ -10436,6 +10909,7 @@ Midokura:
 	Yoshiaki Tamura: yoshi!midokura.jp
 	antonisp: antonisp!celebdor.com until 2016-08-09
 	aojea: aojea!midokura.com
+	aojeagarcia: aojeagarcia!suse.com until 2017-10-01
 	asegurap: asegurap!redhat.com until 2016-08-09
 	devvesa: devvesa!gmail.com from 2014-01-07
 	imuwoto: imuwoto!gmail.com from 2015-05-31
@@ -10464,8 +10938,6 @@ Minimum Distance:
 Minio:
 	Nitish Tiwari: nitish!minio.io from 2017-02-01
 	Nitish Tiwari: nitisht!users.noreply.github.com
-Ministry of Education:
-	Eugene Chow: eugene.chow.ct!gmail.com from 2019-05-30
 Mirantis:
 	ALelagin: ALelagin!users.noreply.github.com
 	Adam Kupczyk: a.kupczyk!mirantis.com, akupczyk!mirantis.com
@@ -10476,7 +10948,7 @@ Mirantis:
 	Alexey Sheplyakov: asheplyakov!mirantis.com
 	Andrew Woodward: awoodward!mirantis.com
 	Andrey Korolyov: andrey!xdel.ru
-	Andrey Kurilin: akurilin!mirantis.com, andr.kurilin!gmail.com
+	Andrey Kurilin: akurilin!mirantis.com, andr.kurilin!gmail.com from 2017-07-31
 	Angus Salkeld: asalkeld!mirantis.com from 2014-08-15
 	Artem Panchenko: apanchenko!mirantis.com
 	Artem Roma: aroma!mirantis.com
@@ -10500,7 +10972,9 @@ Mirantis:
 	Max Lobur: max_lobur!outlook.com
 	Michal Rostecki: michal!kinvolk.io, mrostecki!mirantis.com from 2015-08-19 until 2016-11-30
 	Michal Rostecki: michal.rostecki!gmail.com from 2015-08-19 until 2016-11-30
+	Michal Rostecki: mrostecki!suse.com from 2015-08-19 until 2016-11-30
 	Michal Skalski: mskalski!mirantis.com
+	Mike Fedosin: mfedosin!redhat.com until 2016-10-16
 	Mykola Golub: mgolub!mirantis.com
 	Paul Chechetin: paulche!yandex.ru
 	Paulche: Paulche!users.noreply.github.com
@@ -10516,7 +10990,8 @@ Mirantis:
 	Sergey Lukjanov: me!slukjanov.name, slukjanov!mirantis.com
 	Sergey Vasilenko: svasilenko!mirantis.com
 	Sergii Golovatiuk: holser!gmail.com, sgolovatiuk!mirantis.com
-	Simon Pasquier: spasquier!mirantis.com
+	Simon Pasquier: spasquie!redhat.com from 2014-06-30 until 2017-10-21
+	Simon Pasquier: spasquier!mirantis.com from 2017-11-12
 	Stan Lagun: slagun!mirantis.com
 	Stanislav Makar: stamak!users.noreply.github.com from 2014-09-15 until 2016-02-15
 	Sylwester Brzeczkowski: sbrzeczkowski!mirantis.com, sylwek1992!gmail.com from 2015-03-01 until 2016-07-15
@@ -10537,6 +11012,7 @@ Mirantis:
 	akaszuba: akaszuba!mirantis.com
 	akhivin: akhivin!gmail.com
 	akhivin: akhivin!mirantis.com
+	akholkin: akholkin!mirantis.com until 2017-12-08
 	akornienko: akornienko!mirantis.com
 	akorolev: akorolev!mirantis.com
 	akscram: akscram!gmail.com
@@ -10545,6 +11021,7 @@ Mirantis:
 	alex.schultz: alex.schultz!rackspace.com from 2015-04-03 until 2016-08-26
 	alexander_minakov: alexander_minakov!symantec.com from 2015-02-09
 	alexei.kornienko: alexei.kornienko!gmail.com
+	alexmangt540: alexmangt540!gmail.com until 2017-12-08
 	aminakov: aminakov!mirantis.com from 2015-02-09
 	andrew: andrew!lascii.com from 2016-01-08
 	andrew.laski: andrew.laski!rackspace.com from 2016-01-08
@@ -10559,8 +11036,10 @@ Mirantis:
 	aschultz: aschultz!aschultz.net from 2015-04-03 until 2016-08-26
 	aschultz: aschultz!mirantis.com from 2015-04-03 until 2016-08-26
 	aschultz: aschultz!redhat.com from 2015-04-03 until 2016-08-26
+	astaroverov: astaroverov!mirantis.com until 2017-05-31
 	ataraday: ataraday!mirantis.com
 	aurlapova: aurlapova!mirantis.com
+	avstaroverov: avstaroverov!gmail.com until 2017-05-31
 	b.bobrov: b.bobrov!corp.mail.ru until 2017-02-10
 	bbobrov: bbobrov!mirantis.com until 2017-02-10
 	bdudko: bdudko!mirantis.com
@@ -10597,7 +11076,9 @@ Mirantis:
 	geekinutah: geekinutah!gmail.com from 2014-04-25
 	glacierr.dev: glacierr.dev!gmail.com until 2015-04-30
 	gluke77: gluke77!ya.ru
+	gridnevvvit: gridnevvvit!gmail.com until 2017-06-13
 	heut2008: heut2008!gmail.com from 2015-01-09 until 2015-11-01
+	holkina: holkina!selectel.ru until 2016-10-10
 	hotsuka: hotsuka!mirantis.com
 	idegtiarov: idegtiarov!mirantis.com
 	idv1985: idv1985!gmail.com
@@ -10613,6 +11094,7 @@ Mirantis:
 	ishvedunov: ishvedunov!mirantis.om
 	istalker2: istalker2!users.noreply.github.com
 	isviridov: isviridov!mirantis.com until 2015-02-09
+	iyozhikov: iyozhikov!mirantis.com until 2017-06-21
 	jell: jell!jell.pl
 	jiribroulik: jiribroulik!users.noreply.github.com
 	jjainschigg-r: jjainschigg-r!users.noreply.github.com
@@ -10635,11 +11117,14 @@ Mirantis:
 	listomin: listomin!mirantis.com
 	loles: loles!mirantis.com
 	mail: mail!jedrzejnowak.pl
+	maksim.malchuk: maksim.malchuk!gmail.com until 2016-10-26
 	maksym_iarmak: maksym_iarmak!symantec.com from 2014-05-13
+	malchuk.m.a: malchuk.m.a!sberbank.ru until 2016-10-26
 	max_lobur: max_lobur!mirantis.com
 	mdurnosvistov: mdurnosvistov!mirantis.com until 2015-04-30
 	me: me!frostman.ru
 	me: me!romcheg.me
+	medput: medput!gmail.com until 2017-06-21
 	mfedosin: mfedosin!gmail.com until 2016-10-16
 	mfedosin: mfedosin!mirantis.com until 2016-10-16
 	mgrishkin: mgrishkin!gmail.com
@@ -10651,6 +11136,7 @@ Mirantis:
 	miradam: miradam!users.noreply.github.com
 	mlobur: mlobur!mirantis.com
 	mlvov: mlvov!mirantis.com
+	mmalchuk: mmalchuk!mirantis.com until 2016-10-26
 	mmcroberts: mmcroberts!mirantis.com from 2014-02-12
 	mscherbakov: mscherbakov!mirantis.com
 	mzawadzki: mzawadzki!mirantis.com
@@ -10662,12 +11148,16 @@ Mirantis:
 	nmarkov: nmarkov!mirantis.com
 	nobodycam: nobodycam!gmail.com from 2016-07-11
 	nstarodubtsev: nstarodubtsev!mirantis.com until 2016-10-18
+	obourdon: obourdon!mirantis.com from 2015-11-30 until 2017-10-23
+	obourdon: obourdon!opennext.io from 2015-11-30 until 2017-10-23
 	okopylova: okopylova!mirantis.com until 2014-12-31
 	olegeech-me: olegeech-me!users.noreply.github.com
 	oleksandr.minakov: oleksandr.minakov!gmail.com from 2015-02-09
+	olivier.bourdon: olivier.bourdon!usharesoft.com from 2015-11-30 until 2017-10-23
 	olkonami: olkonami!gmail.com until 2014-12-31
 	p.v.holkin: p.v.holkin!mail.ru until 2017-02-09
 	pasquier-s: pasquier.simon!gmail.com from 2014-06-30
+	patrick.michel.petit: patrick.michel.petit!gmail.com from 2014-03-01 until 2017-07-15
 	pekelny: pekelny!gmail.com
 	petr.michalec: petr.michalec!gmail.com from 2016-10-31
 	petr.michalec: petr.michalec!tcpcloud.eu from 2016-10-31
@@ -10676,6 +11166,8 @@ Mirantis:
 	pmichalec: pmichalec!mirantis.com from 2016-10-31
 	pomeo92: pomeo92!gmail.com until 2016-10-28
 	post.ilya: post.ilya!gmail.com until 2016-10-12
+	ppetit: ppetit!mirantis.com from 2014-03-01 until 2017-07-15
+	ppetit: ppetit!opennext.io from 2014-03-01 until 2017-07-15
 	pupapaik: pupapaik!users.noreply.github.com
 	raytrac3r: raytrac3r!gmail.com
 	rbogorodskiy: rbogorodskiy!mirantis.com
@@ -10698,6 +11190,7 @@ Mirantis:
 	sergey.vilgelm: sergey.vilgelm!gmail.com
 	sergmelikyan: sergmelikyan!users.noreply.github.com
 	seshiro.wang: seshiro.wang!gmail.com from 2015-01-11 until 2016-01-15
+	sgolovat: sgolovat!redhat.com until 2017-10-13
 	shakhat: shakhat!gmail.com until 2017-05-31
 	simon.pasquier: simon.pasquier!bull.net from 2014-06-30
 	smelikyan: smelikyan!mirantis.com
@@ -10725,6 +11218,7 @@ Mirantis:
 	vakovalchuk: vakovalchuk!mirantis.com until 2016-10-18
 	vdenisov: vdenisov!mirantis.com
 	vefimova: vefimova!mirantis.com
+	vgridnev: vgridnev!mirantis.com until 2017-06-13
 	vkozhukalov: vkozhukalov!mirantis.com
 	vkrayneva: vkrayneva!mirantis.com
 	vkuklin: vkuklin!mirantis.com
@@ -10858,6 +11352,7 @@ NEC:
 	aqsamm: aqsamm!gmail.com from 2016-08-31
 	carlos.goncalves: carlos.goncalves!neclab.eu from 2014-09-15
 	cgoncalves: cgoncalves!av.it.pt from 2014-09-15
+	cgoncalves: cgoncalves!redhat.com from 2014-09-15 until 2017-08-31
 	codevulture: janonymous.codevulture!gmail.com
 	codevulture: codevulture!users.noreply.github.com
 	deepak.kumar: deepak.kumar!nectechnologies.in
@@ -10886,6 +11381,9 @@ NEC:
 	pradeep.singh: pradeep.singh!nectechnologies.in until 2015-12-09
 	ps4openstack: ps4openstack!gmail.com until 2015-12-09
 	raiesmh08: raiesmh08!gmail.com until 2015-01-12
+	reedip.banerjee: reedip.banerjee!gmail.com
+	reedip.banerjee: reedip.banerjee!nectechnologies.in
+	reedip14: reedip14!gmail.com
 	shu-mutou: shu-mutou!rf.jp.nec.com
 	vishal.yadav: vishal.yadav!nectechnologies.in
 	vishalcdac07: vishalcdac07!gmail.com
@@ -10926,6 +11424,8 @@ NTT:
 	Yuki Nishiwaki: yuki.nishiwaki!ntt.com
 	abhijeet.malawade: abhijeet.malawade!gmail.com until 2015-11-30
 	abhijeet.malawade: abhijeet.malawade!nttdata.com until 2015-11-30
+	abhishek.kekane: abhishek.kekane!nttdata.com until 2017-11-03
+	akekane: akekane!redhat.com until 2017-11-03
 	aswad: aswad!wanclouds.net until 2014-02-01
 	aswad.r: aswad.r!gmail.com until 2014-02-01
 	aswad.rangnekar: aswad.rangnekar!gmail.com until 2014-02-01
@@ -10941,7 +11441,11 @@ NTT:
 	itoumsn: itoumsn!nttdata.co.jp until 2014-07-31
 	jacek.swiderski: jacek.swiderski!codilime.com
 	jacek.swiderski: jacek.swiderski!ntti3.com
+	kazunori.shinohara: kazunori.shinohara!ntt.com
 	kimura.tatsuro: kimura.tatsuro!lab.ntt.co.jp
+	kimura.yasuhiro: kimura.yasuhiro!nttcom.co.jp
+	konan.abhi: konan.abhi!gmail.com until 2017-11-03
+	ksnhr.tech: ksnhr.tech!gmail.com
 	ktatsuro1024: ktatsuro1024!gmail.com
 	m.ogura: m.ogura!ntt.com
 	mandar.vaze: mandar.vaze!vertex.co.in
@@ -10972,6 +11476,8 @@ NTT:
 	unmesh.gurjar: unmesh.gurjar!hpe.com until 2013-01-18
 	unmesh.gurjar: unmesh.gurjar!nttdata.com until 2013-01-18
 	unmesh.gurjar: unmesh.gurjar!vertex.co.in until 2013-01-18
+	xinni.ge: xinni.ge!ntt.com
+	xinni.ge1990: xinni.ge1990!gmail.com
 NTT Communications:
 	Mahito: earthdragon77!gmail.com
 NTT Data Services:
@@ -11154,6 +11660,7 @@ NetApp:
 	goutham.pacharavi: goutham.pacharavi!netapp.com
 	gouthampravi: gouthampravi!gmail.com
 	gouthamr: gouthamr!netapp.com
+	gpachara: gpachara!redhat.com until 2018-03-28
 	hatboy112: hatboy112!yahoo.com from 2014-02-13 until 2016-06-10
 	mr.alex.meade: mr.alex.meade!gmail.com from 2014-02-13 until 2016-06-10
 	rchugh1: rchugh1!lenovo.com until 2015-07-24
@@ -11201,8 +11708,13 @@ Netlify:
 	David Calavera: david.calavera!gmail.com
 Netmarble:
 	Kiseok Kim: kiseok7!gmail.com
+	harry2853: harry2853!naver.com
+	harry2853: harry2853!netmarble.com
 	kskim: kskim!netmarble.com
+	slamdunkbk: slamdunkbk!gmail.com
 	yongiman: yongiman!gmail.com from 2016-04-14
+	youngilkim: youngilkim!netmarble.com
+	zeroxkim78: zeroxkim78!gmail.com
 Netmonk:
 	Netmonk: netmonk!netmonk.org
 Netquest:
@@ -11217,6 +11729,10 @@ Network Applied Communication Laboratory:
 	Yuki Morohoshi: hoshi.sanou!gmail.com, morohoshi!netlab.jp
 Network Business Systems:
 	Kale Blankenship: kale!lemnisys.com until 2014-04-15
+Neunn:
+	cheneydc: cheneydc!gmail.com
+	dongc: dongc!neunn.com
+	kkkodc: kkkodc!126.com
 New Cloud Technologies:
 	Vitaly Isaev: vitalyisaev2!gmail.com
 New Ed:
@@ -11287,6 +11803,7 @@ Nokia:
 	Gergo Huszty: gergo.huszty!nokia.com, huszty.gergo!digitaltrip.hu
 	JanosLiebe: JanosLiebe!users.noreply.github.com
 	Levovar: Levovar!users.noreply.github.com
+	Mike Fedosin: mfedosin!redhat.com from 2017-01-04 until 2017-11-30
 	Niklas Wik: niklas.wik!iki.fi
 	Rueben Ramirez: ruebenramirez!gmail.com
 	bob.haddleton: bob.haddleton!nokia.com from 2016-01-14
@@ -11297,9 +11814,13 @@ Nokia:
 	liuliuzi: liuliuzi!users.noreply.github.com
 	mfedosin: mfedosin!gmail.com from 2017-01-04
 	mfedosin: mfedosin!mirantis.com from 2017-01-04
+	michal.nasiadka: michal.nasiadka!nokia.com from 2018-03-31
+	michal.nasiadka: michal.nasiadka!pl.ibm.com from 2018-03-31
 	mikhail.fedosin.ext: mikhail.fedosin.ext!nokia.com from 2017-01-04
 	miljank: miljank!users.noreply.github.com
+	mnasiadka: mnasiadka!gmail.com from 2018-03-31
 	renat.akhmerov: renat.akhmerov!gmail.com from 2016-03-31
+	rwellum: rwellum!nokia.com from 2015-03-16
 	tookko: tookko!users.noreply.github.com
 	vijaykumark: vijaykumark!users.noreply.github.com
 Noppo:
@@ -11344,7 +11865,6 @@ NotFound:
 	Johannes: jojow!users.noreply.github.com
 	Jon Davies: jpds!protonmail.com
 	Justin Johnson: justin!balduncle.com
-	Ken Owens: kenowens12!users.noreply.github.com
 	Lucina: lixuna!users.noreply.github.com
 	Mark Joseph Ronquillo: markronquillo23!gmail.com
 	Martin Gannholm: martin!way2clever.com
@@ -11372,7 +11892,6 @@ NotFound:
 	Tong: slowlight!yeah.net
 	Vlad Gorodetsky: v!gor.io
 	Vladi: emve.dev!yandex.ru
-	Wei Wei: weiwei!qiniu.com, weiwei.inf!gmail.com
 	XrXr: xrsquared!gmail.com
 	Yang Meng: yangm3ng!gmail.com
 	Yicheng Qin: qycqycqycqycqyc!gmail.com
@@ -11492,6 +12011,11 @@ OH@COOL:
 	Casper CY Chiang: cychiang0823!gmail.com
 OJOHome:
 	David Pratt: david.pratt!gmail.com, dpratt!ojolabs.com
+OP5:
+	amofakhar: amofakhar!op5.com
+	jchandwaskar: jchandwaskar!op5.com
+	jui.136: jui.136!gmail.com
+	pangan: pangan!gmail.com
 OPES Software:
 	Derek Mahar: derek.mahar!gmail.com
 ORIGIN Investing:
@@ -11508,6 +12032,7 @@ OVH:
 	Paweł Sadowski: pawel.sadowski!corp.ovh.com
 	Piotr Dałek: piotr.dalek!corp.ovh.com
 	adam.kijak: adam.kijak!ovh.pl
+	alexandre.lecuyer: alexandre.lecuyer!corp.ovh.com
 	arnaud.jost: arnaud.jost!ovh.net
 	arnaud.morin: arnaud.morin!corp.ovh.net
 	arnaud.morin: arnaud.morin!gmail.com
@@ -11519,6 +12044,7 @@ OVH:
 	jean-daniel.bonnetot: jean-daniel.bonnetot!ovh.net
 	jean.caron: jean.caron!corp.ovh.com
 	maciej.jozefczyk: maciej.jozefczyk!corp.ovh.com
+	pawel.suder: pawel.suder!corp.ovh.com
 	raphael.glon: raphael.glon!ovh.net
 	romain.ledisez: romain.ledisez!ovh.net
 	slawek: slawek!kaplonski.pl
@@ -11530,6 +12056,9 @@ OVO Energy:
 	Martino Visintin: vise890!gmail.com from 2016-04-15
 OWOX:
 	Borys Borysenko: borys.borysenko!gmail.com
+Oath:
+	jim.rollenhagen: jim.rollenhagen!oath.com from 2017-12-04
+	rloo: rloo!oath.com from 2018-03-26
 Oberthur Technologies:
 	Igor Korsun: igor.korsun!gmail.com
 ObjectRocket:
@@ -11618,6 +12147,14 @@ OpenBet:
 OpenCredo:
 	Adrian Ursu: development!advance-leap.com
 	pegerto: pegerto!users.noreply.github.com
+OpenNext:
+	obourdon: obourdon!mirantis.com from 2017-10-23
+	obourdon: obourdon!opennext.io from 2017-10-23
+	olivier.bourdon: olivier.bourdon!usharesoft.com from 2017-10-23
+	olivierbourdon38: olivierbourdon38!gmail.com
+	patrick.michel.petit: patrick.michel.petit!gmail.com from 2017-07-15
+	ppetit: ppetit!mirantis.com from 2017-07-15
+	ppetit: ppetit!opennext.io from 2017-07-15
 OpenRuko:
 	Matt Freeman: matt!nowprovision.com, nowprovision!users.noreply.github.com
 OpenStack:
@@ -11655,12 +12192,15 @@ OpenStack Foundation:
 	jeblair: jeblair!us.ibm.com from 2011-12-01 until 2014-06-04
 	jeremy: jeremy!openstack.org from 2013-04-08
 	jimmytipit: jimmytipit!users.noreply.github.com
+	kennelson11: kennelson11!gmail.com from 2016-08-19
+	knelson: knelson!openstack.org from 2016-08-19
 	lsell: lsell!users.noreply.github.com
 	smaffulli: smaffulli!gmail.com
 	thierry: thierry!openstack.org
 	thierry.carrez: thierry.carrez!ubuntu.com
 	todd: todd!toddmorey.com
 	toddmorey: toddmorey!todds-macbook-pro-2.local
+	toddmorey: toddmorey!todds-mbp-2.(none)
 	toddmorey: toddmorey!todds-mbp-2.grandenetworks.net
 	tom: tom!openstack.org from 2013-06-03
 Operable:
@@ -11719,6 +12259,7 @@ Orange:
 	cedric.savignan: cedric.savignan!orange.com from 2016-04-25
 	cristicalin: cristicalin!users.noreply.github.com
 	edouard.thuleau: edouard.thuleau!cloudwatt.com until 2013-01-31
+	edouard.thuleau: edouard.thuleau!gmail.com until 2013-01-31
 	edouard.thuleau: edouard.thuleau!orange.com until 2013-01-31
 	edouard1.thuleau: edouard1.thuleau!orange.com until 2013-01-31
 	ethuleau: ethuleau!juniper.net until 2013-01-31
@@ -11727,11 +12268,13 @@ Orange:
 	jerome.david.gallard: jerome.david.gallard!gmail.com from 2014-02-03
 	jerome.gallard: jerome.gallard!orange.com from 2014-02-03
 	liced: liced!liced.fr from 2016-04-25
+	loic.nicolle: loic.nicolle!orange.com
 	mathieu.rohon: mathieu.rohon!gmail.com
 	mimizone: mimizone!users.noreply.github.com
 	morganrOL: morganrOL!users.noreply.github.com
 	mrichomme: morgan.richomme!orange.com
 	poblin-orange: poblin-orange!users.noreply.github.com
+	rebirthmonkey: rebirthmonkey!gmail.com
 	shipeiqi: shipeiqi!cmss.chinamobile.com until 2015-09-30
 	thomas.morin: thomas.morin!orange.com
 	thuleau: thuleau!gmail.com until 2013-01-31
@@ -11745,6 +12288,14 @@ Orion Health:
 	Matthew Jones: mlety2!gmail.com
 Orion Web Technologies:
 	Nic Doye: nic!worldofnic.org
+Ormuco:
+	gaetan.trellu: gaetan.trellu!enovance.com from 2016-10-07
+	gaetan.trellu: gaetan.trellu!incloudus.com from 2016-10-07
+	gaetan.trellu: gaetan.trellu!ormuco.com from 2016-10-07
+	gtrellu: gtrellu!redhat.com from 2016-10-07
+	pblanc: pblanc!redhat.com from 2017-12-01
+	pierre.blanc: pierre.blanc!ormuco.com from 2017-12-01
+	pierreblanc75: pierreblanc75!gmail.com from 2017-12-01
 Oro:
 	Michael Bessolov: mbessolov!users.noreply.github.com
 OrusPay:
@@ -12128,6 +12679,14 @@ Propeller Ads:
 	mkrasilnikov: m.krasilnikov!propellerads.net
 PropertyGuru.com:
 	Abhishek Parolkar: abhishek!parolkar.com
+PropheTech.cn:
+	lixipeng: lixipeng!hihuron.com from 2014-03-31
+	lixipeng: lixipeng!prophetech.cn from 2014-03-31
+	sunqi: sunqi!hihuron.com from 2014-03-31
+	sunqi: sunqi!prophetech.cn from 2014-03-31
+	xiaoquqi: xiaoquqi!gmail.com from 2014-03-31
+	zhengyue: zhengyue!hihuron.com from 2014-03-31
+	zhengyue: zhengyue!prophetech.cn from 2014-03-31
 ProphetStor:
 	rick.chen: rick.chen!prophetstor.com
 Prosper Marketplace:
@@ -12182,17 +12741,47 @@ QIANKUN:
 QIYI:
 	Chengwei Yang: yangchengwei!qiyi.com
 	Xiaoshuang LU: luxiaoshuang!qiyi.com
+	guanzuoyu: guanzuoyu!qiyi.com
+	guanzuoyudev: guanzuoyudev!gmail.com
 	me: me!chengweiyang.cn
 Qihoo 360 Technology:
 	Gu Zhongyan: guzhongyan!360.cn
 	Xuehan Xu: xuxuehan!360.cn
 Qiniu:
 	Chenxingyu: chenxingyu!qiniu.com
+	Demonbane.cn: Demonbane.cn!gmail.com
 	Kaijun Chen: kaijun!users.noreply.github.com
 	Liu Chang: liuchang!qiniu.com, studywiller!gmail.com
+	Wei Wei: weiwei!qiniu.com, weiwei.inf!gmail.com
 	Yecheng Fu: fuyecheng!qiniu.com until 2014-06-15, from 2015-09-15
 	Ziqi Zhao: zhaoziqi!qiniu.com
+	bertyuan: bertyuan!gmail.com
+	chenkaijun: chenkaijun!qiniu.com
+	chenxingyu: wizard_cxy!hotmail.com from 2016-03-30 until 2017-09-08
+	du: du!njut.edu.cn
+	duhongwei: duhongwei!qiniu.com
+	flyer103: flyer103!gmail.com
+	ldnvnbl: ldnvnbl!gmail.com
+	linyushen: linyushen!qiniu.com
+	lixueli: lixueli!qiniu.com
+	lulongwen: lulongwen!qiniu.com
+	lutao: lutao!qiniu.com
+	lutaoact: lutaoact!hotmail.com
+	makebin: makebin!qiniu.com
+	richardyi0110: richardyi0110!hotmail.com
 	u2takey: wanglei2!qiniu.com
+	u2takey: u2takey!gmail.com
+	wanghaoyu: wanghaoyu!qiniu.com
+	whypro: whypro!live.cn
+	wizard: wizardcxy!126.com from 2016-03-30 until 2017-09-08
+	xiaqunfeng: xiaqunfeng!qiniu.com
+	xurui: xurui!qiniu.com
+	yanshen: yanshen!qiniu.com
+	yitao: yitao!qiniu.com
+	yuanxiaopei: yuanxiaopei!qiniu.com
+	zhangdongqi: zhangdongqi!qiniu.com
+	zhangyifei: zhangyifei!qiniu.com
+	zhaoziqi9146: zhaoziqi9146!gmail.com
 Qualcomm:
 	Mitchel Humpherys: mitch!directangular.com until 2016-08-15
 Quamotion:
@@ -12267,7 +12856,7 @@ Rackspace:
 	Jamie Hannaford: jamie!limetree.org until 2018-01-01
 	Jamie Hannaford: jamie.hannaford!rackspace.com
 	Jay Pipes: jaypipes!gmail.com, jpipes!serialcoder until 2011-12-01
-	Jim Rollenhagen: jim!jimrollenhagen.com
+	Jim Rollenhagen: jim!jimrollenhagen.com from 2017-12-04
 	Johannes Erdfelt: johannes!compute3.221.st, johannes!erdfelt.com, johannes.erdfelt!rackspace.com
 	Keith Bartholomew: keith.bartholomew!rackspace.com
 	Kent Wang: kent.wang!cheanjia.com
@@ -12451,7 +13040,9 @@ Rackspace:
 	jesse: jesse!gigantor.local until 2012-07-20
 	jesse.pretorius: jesse.pretorius!gmail.com from 2014-10-31
 	jesse.pretorius: jesse.pretorius!rackspace.co.uk from 2014-10-31
-	jim.rollenhagen: jim.rollenhagen!rackspace.com
+	jhesketh: jhesketh!suse.com until 2017-04-28
+	jim.rollenhagen: jim.rollenhagen!oath.com until 2017-05-01
+	jim.rollenhagen: jim.rollenhagen!rackspace.com from 2017-12-04
 	jkoelker: jkoelker!rackspace.com
 	jmckenzi: jmckenzi!rackspace.com
 	jmckind: jmckind!gmail.com
@@ -12466,6 +13057,7 @@ Rackspace:
 	john.eo: john.eo!rackspace.com
 	john.garbutt: john.garbutt!citrix.com from 2013-02-01
 	john.garbutt: john.garbutt!rackspace.com from 2013-02-01
+	john.garbutt: john.garbutt!stackhpc.com from 2013-02-01 until 2017-05-12
 	john.mckenzie: john.mckenzie!rackspace.com
 	johnrdavidge: johnrdavidge!gmail.com from 2016-04-21
 	johnsom: johnsom!hp.com from 2016-06-17
@@ -12504,8 +13096,9 @@ Rackspace:
 	lbragstad: lbragstad!gmail.com from 2014-06-26
 	ldbragst: ldbragst!us.ibm.com from 2014-06-26
 	mail: mail!csmart.io from 2017-01-15
-	major: major!mhtx.net
-	major.hayden: major.hayden!rackspace.com
+	major: major!mhtx.net from 2018-03-18
+	major: major!redhat.com until 2018-03-09
+	major.hayden: major.hayden!rackspace.com from 2018-03-18
 	marcelo.martins: marcelo.martins!rackspace.com
 	mario.villaplana: mario.villaplana!gmail.com
 	mario.villaplana: mario.villaplana!rackspace.com
@@ -12520,6 +13113,7 @@ Rackspace:
 	mbasnigh: mbasnigh!rackspace.com
 	mbasnight: mbasnight!gmail.com
 	me: me!clifhouck.com
+	michael: michael!aptira.com from 2012-12-13 until 2017-09-01
 	michael: michael!the-davies.net until 2017-04-28
 	michael.barton: michael.barton!rackspace.com
 	michael.d.johnson: michael.d.johnson!hpe.com from 2016-06-17
@@ -12892,7 +13486,7 @@ Red Hat:
 	Jan Pazdziora: jpazdziora!redhat.com
 	Jan Safranek: jsafrane!redhat.com
 	Jason Brooks: jbrooks!redhat.com
-	Jason Dillaman: dillaman!redhat.com  , from 2019-05-30
+	Jason Dillaman: dillaman!redhat.com  , from 2019-06-06
 	Jason Dillaman: dillamana!redhat.com, jdillama!redhat.com, jdillaman!redhat.com
 	Jay Boyd: jaboyd!redhat.com
 	Jeeva Kandasamy: jkandasa!gmail.com, jkandasa!redhat.com
@@ -12988,12 +13582,12 @@ Red Hat:
 	Michael Vorburger ⛑️: mike!vorburger.ch
 	Michal Fojtik: mfojtik!redhat.com
 	Michal Minar: miminar!redhat.com
-	Michal Rostecki: michal.rostecki!gmail.com from 2016-11-30
+	Michal Rostecki: michal.rostecki!gmail.com from 2017-12-31
 	Michalis Kargakis: mkargaki!redhat.com
 	Miciah Masters: miciah.masters!gmail.com, mmasters!redhat.com
 	Mike Christie: mchristi!redhat.com
 	Mike Dame: mdame!redhat.com
-	Mike Fedosin: mfedosin!redhat.com
+	Mike Fedosin: mfedosin!redhat.com from 2017-11-30
 	Mike Hackett: mhackett!redhat.com
 	Milan Broz: mbroz!redhat.com
 	Miloslav Trmač: mitr!redhat.com
@@ -13079,7 +13673,7 @@ Red Hat:
 	Shylesh Kumar: shmohan!redhat.com
 	Siddharth Sharma: siddharth!redhat.com
 	Simo Sorce: simo!redhat.com
-	Simon Pasquier: spasquie!redhat.com
+	Simon Pasquier: spasquie!redhat.com from 2017-11-12
 	Slava Semushin: vsemushi!redhat.com from 2015-09-15
 	Solly Ross: directxman12+github!gmail.com, sross!redhat.com
 	Stef Walter: stefw!redhat.com
@@ -13138,7 +13732,7 @@ Red Hat:
 	William Markito: markito!users.noreply.github.com
 	William Markito Oliveira: markito!redhat.com
 	William Temple: wtemple!redhat.com
-	Xiang: xiangli.cs!gmail.com
+	Xiang: xiangli.cs!gmail.com from 2014-06-30
 	Xiang Li: xiang.li!coreos.com
 	Xiubo Li: lixiubo!cmss.chinamobile.com
 	Yan, Zheng: ukernel!gmail.com
@@ -13151,11 +13745,13 @@ Red Hat:
 	Zack Cerza: zack!cerza.org, zack!redhat.com, zack.cerza!inktank.com, zcerza!redhat.com
 	Zheng Yan: zyan!redhat.com
 	ZhiMing Zhang: maple_m!hotmail.com
+	abhishek.kekane: abhishek.kekane!nttdata.com from 2017-11-12
 	aburdenthehand: aburden!redhat.com
 	adarazs: adarazs!users.noreply.github.com
 	adellape: adellape!users.noreply.github.com
 	admiyo: admiyo!users.noreply.github.com
 	ahardin-rh: ahardin-rh!users.noreply.github.com
+	akekane: akekane!redhat.com from 2017-11-12
 	akostadinov: akostadinov!users.noreply.github.com
 	aldavud: aldavud!crimson.ch from 2014-07-31
 	alex.schultz: alex.schultz!rackspace.com from 2016-08-26
@@ -13194,9 +13790,13 @@ Red Hat:
 	caleb miles: caleb.miles!coreos.com, calebamiles!users.noreply.github.com, caselim!gmail.com
 	cdent: cdent!anticdent.org until 2015-11-13
 	cdent: cdent!mirantis.com until 2015-11-13
+	cdent+os: cdent+os!anticdent.org until 2015-11-13
 	celebdor: celebdor!users.noreply.github.com
+	cgoncalves: cgoncalves!redhat.com from 2017-08-31
 	chandankumar.093047: chandankumar.093047!gmail.com
 	chao007: chao007!users.noreply.github.com
+	charcol: charcol!redhat.com
+	charelle.collett: charelle.collett!gmail.com
 	chdent: chdent!redhat.com until 2015-11-13
 	chem: chem!sathlan.org from 2014-06-24
 	chengzhang1016: chengzhang1016!users.noreply.github.com
@@ -13294,6 +13894,7 @@ Red Hat:
 	emonty: emonty!users.noreply.github.com
 	ericavonb: ericavonb!users.noreply.github.com
 	erwan.gallen: erwan.gallen!cloudwatt.com from 2014-06-01
+	etingof: etingof!gmail.com
 	etingof: etingof!users.noreply.github.com
 	ewolinetz: ewolinetz!users.noreply.github.com
 	fabianvf: fabianvf!users.noreply.github.com
@@ -13314,6 +13915,9 @@ Red Hat:
 	fuzzball81: fuzzball81!users.noreply.github.com
 	fweimer: fweimer!users.noreply.github.com
 	gabemontero: gabemontero!users.noreply.github.com
+	gaetan.trellu: gaetan.trellu!enovance.com from 2014-07-08 until 2016-10-07
+	gaetan.trellu: gaetan.trellu!incloudus.com from 2014-07-08 until 2016-10-07
+	gaetan.trellu: gaetan.trellu!ormuco.com from 2014-07-08 until 2016-10-07
 	garagatyi: garagatyi!users.noreply.github.com
 	garyk: garyk!radware.com from 2012-02-20 until 2013-07-17
 	gashcrumb: gashcrumb!users.noreply.github.com
@@ -13331,7 +13935,9 @@ Red Hat:
 	gord: gord!live.ca from 2014-06-27 until 2015-05-31
 	gord.chung: gord.chung!huawei.com from 2014-06-27 until 2015-05-31
 	gordon.chung: gordon.chung!enovance.com from 2014-06-27 until 2015-05-31
+	gpachara: gpachara!redhat.com from 2018-03-28
 	gperiste: gperiste!redhat.com from 2014-06-24
+	gtrellu: gtrellu!redhat.com from 2014-07-08 until 2016-10-07
 	gunnarmorling: gunnarmorling!users.noreply.github.com
 	halcyondude: halcyondude!users.noreply.github.com
 	haleyb.dev: haleyb.dev!gmail.com from 2017-03-10
@@ -13340,7 +13946,9 @@ Red Hat:
 	hferentschik: hferentschik!users.noreply.github.com
 	higginsd: higginsd!gmail.com
 	hrishin: hrishin!users.noreply.github.com
+	iam: iam!natejohnston.info from 2018-08-01
 	idryomov: idryomov!users.noreply.github.com
+	ietingof: ietingof!redhat.com
 	ilackarms: sdw35!cornell.edu from 2017-03-15
 	iocanel: iocanel!users.noreply.github.com
 	ipbabble: ipbabble!users.noreply.github.com
@@ -13373,6 +13981,8 @@ Red Hat:
 	jianchen2580: jianchen2580!users.noreply.github.com
 	jianlinliu: jianlinliu!users.noreply.github.com
 	jlennox: jlennox!redhat.com until 2015-10-23
+	jlibosva: jlibosva!redhat.com
+	jlibosva-redhat: jlibosva-redhat!email.cz
 	jmontleon: jmontleon!users.noreply.github.com
 	jmrodri: jmrodri!users.noreply.github.com
 	joe.hakim.rahme: joe.hakim.rahme!enovance.com from 2014-06-24
@@ -13404,6 +14014,7 @@ Red Hat:
 	kenzhaoyihui: kenzhaoyihui!users.noreply.github.com
 	kevinearls: kevinearls!users.noreply.github.com
 	kforde: kforde!redhat.com from 2016-08-17
+	konan.abhi: konan.abhi!gmail.com from 2017-11-12
 	krsacme: krsacme!users.noreply.github.com
 	kseifriedredhat: kseifriedredhat!users.noreply.github.com
 	ksingh7: ksingh7!users.noreply.github.com
@@ -13416,6 +14027,7 @@ Red Hat:
 	legionus: legionus!users.noreply.github.com
 	lhinds: lhinds!redhat.com
 	liangxia: lxia!redhat.com
+	libosvar: libosvar!redhat.com
 	liewegas: liewegas!users.noreply.github.com
 	lordofthejars: lordofthejars!users.noreply.github.com
 	luan-cestari: luan.cestari!gmail.com
@@ -13427,6 +14039,8 @@ Red Hat:
 	m.andre: m.andre!redhat.com from 2015-08-25
 	mabaakou: mabaakou!redhat.com from 2014-06-24
 	maci0: maci0!users.noreply.github.com
+	mail2nadeem92: mail2nadeem92!gmail.com
+	major: major!redhat.com from 2018-03-09
 	major: major!users.noreply.github.com
 	mangelajo: mangelajo!users.noreply.github.com
 	manuvaldi: manuvaldi!users.noreply.github.com
@@ -13450,6 +14064,7 @@ Red Hat:
 	mbaldess: mbaldess!redhat.com
 	mbogoevici: mbogoevici!users.noreply.github.com
 	mburns72h: mburns72h!users.noreply.github.com
+	md.nadeem: md.nadeem!nectechnologies.in
 	mdshuai: dma!redhat.com
 	me: me!mark.atwood.name until 2012-09-30
 	meghanschofield: meghan.schofield!coreos.com
@@ -13461,7 +14076,7 @@ Red Hat:
 	miabbott: miabbott!users.noreply.github.com
 	michaelgugino: michaelgugino!users.noreply.github.com
 	michaeltchapman: michaeltchapman!users.noreply.github.com
-	michal.rostecki: michal.rostecki!allegrogroup.com from 2016-11-30
+	michal.rostecki: michal.rostecki!allegrogroup.com from 2017-12-31
 	michele: michele!acksyn.org
 	michele: michele!baldessari.info
 	michele: michele!redhat.com
@@ -13469,6 +14084,7 @@ Red Hat:
 	mishaone: mishaone!users.noreply.github.com
 	mjudeikis: mjudeikis!users.noreply.github.com
 	mkaliyam: mkaliyam!redhat.com from 2014-06-24
+	mnadeem: mnadeem!redhat.com
 	mnewby: mnewby!internap.com
 	mohammedzee1000: mohammedzee1000!users.noreply.github.com
 	monty.taylor: monty.taylor!hp.com from 2016-06-12
@@ -13510,13 +14126,17 @@ Red Hat:
 	pabelanger: pabelanger!redhat.com
 	pabelanger: pabelanger!users.noreply.github.com
 	patriot1burke: patriot1burke!users.noreply.github.com
+	paul.belanger: paul.belanger!polybeacon.com
 	pblaho: pblaho!redhat.com
+	pblanc: pblanc!redhat.com until 2017-12-01
 	pbrady: pbrady!redhat.com
 	pednape: pednape!gmail.com from 2014-03-01
 	peter.portante: peter.portante!redhat.com
 	petervo: petervo!redhat.com
 	petrblaho: petrblaho!gmail.com
 	phoracek: phoracek!users.noreply.github.com
+	pierre.blanc: pierre.blanc!ormuco.com until 2017-12-01
+	pierreblanc75: pierreblanc75!gmail.com until 2017-12-01
 	pkilambi: pkilambi!cisco.com from 2015-03-27
 	pkilambi: pkilambi!redhat.com from 2015-03-27
 	pkilambi: pkilambi!users.noreply.github.com
@@ -13531,9 +14151,10 @@ Red Hat:
 	purpleidea: purpleidea!users.noreply.github.com
 	pweil-: pweil!redhat.com
 	qiancai: qiancai!users.noreply.github.com
-	racedo: racedo!redhat.com
+	racedo: racedo!redhat.com from 2014-05-01
 	raffaelespazzoli: raffaele.spazzoli!gmail.com
 	raffaelespazzoli: raffaelespazzoli!users.noreply.github.com
+	raildom: raildom!gmail.com
 	ralphbean: ralphbean!users.noreply.github.com
 	ramon: ramon!linux-labs.net from 2014-05-01
 	ravisantoshgudimetla: ravisantoshgudimetla!gmail.com
@@ -13554,6 +14175,8 @@ Red Hat:
 	rkanade: rkanade!redhat.com from 2014-05-16
 	rktbot: rktbot!users.noreply.github.com
 	rkukura: rkukura!redhat.com until 2014-02-01
+	rmascena: rmascena!redhat.com
+	rodrigo: rodrigo!waltznetworks.com until 2017-06-15
 	rodrigods: rodrigods!lsd.ufcg.edu.br
 	rodrigodsousa: rodrigodsousa!gmail.com
 	rohan.kanade: rohan.kanade!izeltech.com from 2014-05-16
@@ -13583,12 +14206,14 @@ Red Hat:
 	sferich888: sferich888!users.noreply.github.com
 	sfinucan: sfinucan!redhat.com from 2016-07-15
 	sgaddam: sgaddam!redhat.com from 2014-06-24
+	sgolovat: sgolovat!redhat.com from 2017-10-13
 	shaded-enmity: shaded-enmity!users.noreply.github.com
 	shan: shan!redhat.com from 2014-06-24
 	shawn-hurley: shawn-hurley!users.noreply.github.com
 	shylesh kumar: shylesh.mohan!gmail.com
 	sijhu: sijhu!users.noreply.github.com
 	sinnykumari: sinnykumari!users.noreply.github.com
+	skaplons: skaplons!redhat.com
 	sofer.athlan-guyot: sofer.athlan-guyot!enovance.com from 2014-06-24
 	songbird159: songbird159!users.noreply.github.com
 	sosiouxme: sosiouxme!users.noreply.github.com
@@ -13601,6 +14226,7 @@ Red Hat:
 	sspeiche: sspeiche!users.noreply.github.com
 	staebler: staebler!redhat.com
 	stephen.finucane: stephen.finucane!intel.com from 2016-07-15
+	stephenfin: stephenfin!redhat.com from 2016-07-15
 	stephenfinucane: stephenfinucane!hotmail.com from 2016-07-15
 	steve: steve!stevebaker.org
 	stevegrubb: stevegrubb!users.noreply.github.com
@@ -13693,6 +14319,8 @@ Reddit:
 	rrmckinley: mckinley1411!gmail.com
 Redpill Linpro:
 	pepijn: pepijn!redpill-linpro.com
+	tobias: tobias!redpill-linpro.com
+	tobixen: tobixen!gmail.com
 	tore: tore!fud.no
 	tore: tore!redpill-linpro.com
 	trygve.vea: trygve.vea!gmail.com
@@ -13748,7 +14376,7 @@ Repro:
 Republic:
 	Tim Brockman: timbrockman!users.noreply.github.com
 Requirements:
-	SandeepPissay: sandeeppissay!users.noreply.github.com from 2019-05-30
+	SandeepPissay: sandeeppissay!users.noreply.github.com from 2019-06-06
 	SandeepPissay: ssrinivas!vmware.com
 ResearchGate:
 	Bastian Hofmann: bashofmann!gmail.com
@@ -13923,6 +14551,8 @@ SAP:
 	samjeyam: sam.jeyam!gmail.com
 	vlerenc: vlerenc!users.noreply.github.com
 	voelzmo: voelzmo!users.noreply.github.com
+SBCloud:
+	aschadin: aschadin!sbcloud.ru from 2018-04-02
 SC5 Online Ltd:
 	Antti Ahti: antti.ahti!gmail.com
 SCSK:
@@ -13980,6 +14610,11 @@ SK Telecom:
 	jawon.choo: jawon.choo!sk.com from 2016-07-31
 	jay.ahn: jay.ahn!sk.com from 2016-12-31
 	powerds0111: powerds0111!gmail.com from 2016-12-31
+SK telecom:
+	si.im: si.im!sk.com
+	siri.kim: siri.kim!sk.com
+	taeilchoi1: taeilchoi1!gmail.com
+	usnexp: usnexp!gmail.com
 SNCF:
 	Rudy YAYON: ryayon!outlook.com
 SORINT.lab:
@@ -14039,7 +14674,7 @@ SUSE:
 	Markos Chandras: mchandras!suse.de
 	Michal Jura: mjura!suse.com
 	Michal Koutný: mkoutny!suse.com
-	Michal Rostecki: mrostecki!suse.com
+	Michal Rostecki: mrostecki!suse.com from 2017-12-31
 	Miquel Sabaté: mikisabate!gmail.com
 	Mohamad Gebai: mgebai!suse.com
 	Nathan Cutler: nculter!suse.com, ncutler!suse.com, ncutler!suse.cz, presnypreklad!gmail.com
@@ -14057,6 +14692,8 @@ SUSE:
 	Tim Serong: tserong!suse.com
 	Valentin Rothberg: vrothberg!suse.com
 	aagate: aagate!suse.com from 2017-03-08
+	abel.navarro: abel.navarro!gmail.com
+	abel.navarro: abel.navarro!suse.com
 	abonillasuse: abonillasuse!users.noreply.github.com
 	adolfo.duarte: adolfo.duarte!suse.com from 2017-03-08
 	adolfod: adolfod!hpe.com from 2017-03-08
@@ -14066,6 +14703,7 @@ SUSE:
 	ajaeger: ajaeger!users.noreply.github.com
 	amigliaccio: amigliaccio!internap.com from 2017-03-08
 	amigliaccio: amigliaccio!nicira.com from 2017-03-08
+	aojeagarcia: aojeagarcia!suse.com from 2017-10-01
 	aplanas: aplanas!gmail.com
 	aplanas: aplanas!suse.de
 	aplanas: aplanas!users.noreply.github.com
@@ -14077,6 +14715,7 @@ SUSE:
 	ashwin.agate: ashwin.agate!suse.com from 2017-03-08
 	asselin: asselin!hpe.com from 2017-03-08
 	asselinr: asselinr!suse.com from 2017-03-08
+	bbobrov: bbobrov!suse.com
 	c.thiel: c.thiel!telekom.de until 2013-01-30
 	cduch: cduch!users.noreply.github.com
 	cedric.bosdonnat: cedric.bosdonnat!free.fr
@@ -14111,11 +14750,13 @@ SUSE:
 	irfanhabib: irfanhabib!users.noreply.github.com
 	jacek.tomasiak: jacek.tomasiak!gmail.com from 2016-06-30
 	jan--f: jan--f!users.noreply.github.com
+	jan.openstack: jan.openstack!zerebecki.de from 2018-01-15
 	jeremy-moffitt: jeremy-moffitt!users.noreply.github.com
 	jeremy.moffitt: jeremy.moffitt!hp.com from 2017-03-08
 	jeremy.moffitt: jeremy.moffitt!hpe.com from 2017-03-08
 	jeremy.moffitt: jeremy.moffitt!suse.com from 2017-03-08
 	jgravel: jgravel!suse.com from 2017-03-08
+	jhesketh: jhesketh!suse.com from 2017-07-31
 	jhesketh: jhesketh!users.noreply.github.com
 	jmoffitt: jmoffitt!suse.com from 2017-03-08
 	jodavis: jodavis!suse.com from 2016-03-08
@@ -14127,6 +14768,7 @@ SUSE:
 	julie.gravel: julie.gravel!hp.com from 2017-03-08
 	julie.gravel: julie.gravel!hpe.com from 2017-03-08
 	julie.gravel: julie.gravel!suse.com from 2017-03-08
+	jzerebecki: jzerebecki!suse.com from 2018-01-15
 	kbaikov: kbaikov!suse.com
 	keith.berger: keith.berger!hpe.com from 2017-03-08
 	keith.berger: keith.berger!suse.com from 2017-03-08
@@ -14139,12 +14781,14 @@ SUSE:
 	masayuki.igawa: masayuki.igawa!hpe.com from 2017-03-08
 	masayuki.igawa: masayuki.igawa!suse.com from 2017-03-08
 	mate.lakat: mate.lakat!citrix.com from 2016-10-09
+	matthew.oliver: matthew.oliver!suse.com
 	mjura: mjura!users.noreply.github.com
 	mlakat: mlakat!suse.com from 2016-10-09
 	mmnelemane: mmnelemane!suse.com from 2015-07-23
 	mmohan: mmohan!mvista.com from 2015-07-23
 	mnowaksuse: mnowaksuse!users.noreply.github.com
 	moio: moio!users.noreply.github.com
+	moliver: moliver!suse.com
 	nicolas.bock: nicolas.bock!suse.com
 	nicolasbock: nicolasbock!gmail.com
 	ramy.asselin: ramy.asselin!hp.com from 2017-03-08
@@ -14172,6 +14816,13 @@ SUSE:
 	victoryang: victoryang!users.noreply.github.com
 SVA System Vertrieb Alexander GmbH:
 	uwe.schreiber: uwe.schreiber!sva.de
+SZZT Electronics.:
+	chenyaguang: chenyaguang!szzt.com.cn
+	songbaisen: songbaisen!szzt.com.cn
+	tangzhuo: tangzhuo!szzt.com.cn
+	yo.zed: yo.zed!qq.com
+	zhangchi: zhangchi!szzt.com.cn
+	zmj1981123: zmj1981123!163.com
 Sabre Airline Solutions:
 	Thorhallur Sverrisson: thorhallur.sverrisson!sabre.com
 Saffron Digital:
@@ -14236,6 +14887,7 @@ Samsung:
 	Marc Tremblay: marcandre.tr!gmail.com
 	Matt Farina: matt!mattfarina.com, matthew.farina!hp.com, matthew.farina!hpe.com from 2017-08-15
 	Michael Venezia: mvenezia!gmail.com
+	Mike Fedosin: mfedosin!redhat.com from 2016-10-16 until 2017-01-04
 	Mikel Nelson: github!mikelnelson.net
 	Nayan Deshmukh: n.deshmukh!samsung.com
 	Rick Sostheim: rick!sostheim.com
@@ -14248,33 +14900,54 @@ Samsung:
 	ashish.billore: ashish.billore!gmail.com from 2015-06-20
 	ashish.billore: ashish.billore!outlook.com from 2015-06-20
 	ashish.billore1: ashish.billore1!in.ibm.com from 2015-06-20
+	bong4235: bong4235!gmail.com
 	brian: brian!bdwarner.com from 2015-07-05
 	d.golov: d.golov!partner.samsung.com
+	ej218.baek: ej218.baek!samsung.com
+	ejbaek218: ejbaek218!gmail.com
 	eundoo-song: eundoo.song!samsung.com
+	forhim.park: forhim.park!gmail.com
 	fsoppelsa: fsoppelsa!users.noreply.github.com
+	heetae82.ahn: heetae82.ahn!samsung.com
 	hyangii: hyangii!gmail.com until 2015-08-21
+	i.dyukov: i.dyukov!samsung.com
 	iampiyush: iampiyush!users.noreply.github.com
 	il9ue: il9ue!users.noreply.github.com
+	irisis: irisis!gmail.com
 	jaesang_lee: jaesang_lee!sk.com until 2015-08-21
 	jawon.choo: jawon.choo!gmail.com until 2016-07-31
 	jawon.choo: jawon.choo!sk.com until 2016-07-31
+	jhan12.park: jhan12.park!samsung.com
 	joejulian: joejulian!users.noreply.github.com
+	joo.oh: joo.oh!samsung.com
+	juhyun.joh: juhyun.joh!samsung.com
 	k.zaitsev: k.zaitsev!me.com from 2017-03-16
+	kthguru: kthguru!gmail.com
 	m.kucia: m.kucia!partner.samsung.com
 	maciej: maciej!kucia.net
 	mfedosin: mfedosin!gmail.com from 2016-10-16 until 2017-01-04
 	mfedosin: mfedosin!mirantis.com from 2016-10-16 until 2017-01-04
+	mhban: mhban!samsung.com
 	mikhail.fedosin.ext: mikhail.fedosin.ext!nokia.com from 2016-10-16 until 2017-01-04
 	notjames: notjames!users.noreply.github.com
+	oh011798: oh011798!gmail.com
 	parkjaeman: parkjaeman!users.noreply.github.com
 	philoserf: philoserf!users.noreply.github.com
+	puffmine: puffmine!gmail.com
 	rfyiamcool: rfyiamcool!users.noreply.github.com
 	sdague: sdague!gmail.com until 2014-04-26
 	sean.dague: sean.dague!ibm.com until 2014-04-26
 	seungkyu.ahn: seungkyu.ahn!samsung.com until 2015-02-28
+	shpark91: shpark91!samsung.com
+	sj.bark: sj.bark!samsung.com
 	skanddh: skanddh!gmail.com until 2015-02-28
 	ted-jung: ted-jung!users.noreply.github.com
+	thlab.kim: thlab.kim!samsung.com
+	unino1: unino1!korea.com
+	v.kuramshin: v.kuramshin!samsung.com
 	vsjulu: s.varanasi!ssi.samsung.com
+	wonil0522: wonil0522!gmail.com
+	wonil22.choi: wonil22.choi!samsung.com
 	yongiman: yongiman!gmail.com until 2016-04-14
 Samsung SDS:
 	Aaron Crickenberger: spiffxp!gmail.com from 2015-06-01
@@ -14322,13 +14995,20 @@ Sberbank:
 	avmerzlyakov.sbt: avmerzlyakov.sbt!sberbank.ru
 	bargool: bargool!gmail.com
 	darland.maik: darland.maik!gmail.com
+	dnplakhov.sbt: dnplakhov.sbt!sberbank.ru
 	e.khripunova: e.khripunova!gmail.com
 	eakhripunova.sbt: eakhripunova.sbt!sberbank.ru
 	ilvpopov.sbt: ilvpopov.sbt!sberbank.ru
 	ilya_p: ilya_p!hotmail.com
+	info: info!openstack.school
+	maksim.malchuk: maksim.malchuk!gmail.com from 2017-12-19
+	malchuk.m.a: malchuk.m.a!sberbank.ru from 2017-12-19
 	mbshakhova.sbt: mbshakhova.sbt!sberbank.ru
+	mmalchuk: mmalchuk!mirantis.com from 2017-12-19
 	shakhova.margarita: shakhova.margarita!gmail.com
 	troschinsky: troschinsky!gmail.com
+	yaraat: yaraat!gmail.com
+	yaroslavmt: yaroslavmt!gmail.com
 	zinoviev.ii: zinoviev.ii!gmail.com
 ScaleChain.io:
 	Kangmo Kim: kangmo.kim!gmail.com
@@ -14421,6 +15101,9 @@ Seldon:
 	Clive Cox: cc!seldon.io
 Selectel:
 	Nikolay Mahotkin: makhotkin!selectel.ru, nikolay.makhotkin!gmail.com until 2017-01-01
+	holkina: holkina!selectel.ru from 2017-12-17
+	ponomarev: ponomarev!selectel.ru
+	velizarx: velizarx!gmail.com
 Sematext Cloud:
 	Marko Bonaći: mbonaci!users.noreply.github.com
 Sencha:
@@ -14437,6 +15120,7 @@ Serverless:
 	Raees Iqbal: raeesiqbal!users.noreply.github.com from 2016-11-15
 Servionica:
 	a.chadin: a.chadin!servionica.ru
+	aschadin: aschadin!sbcloud.ru until 2018-04-02
 Servosity:
 	sam: sam!yaple.net from 2014-07-27 until 2016-08-12
 	sam.yaple: sam.yaple!rackspace.com from 2014-07-27 until 2016-08-12
@@ -14869,9 +15553,15 @@ Stack Overflow:
 StackEngine:
 	Karthik Gaekwad: karthequian!users.noreply.github.com until 2016-02-15
 StackHPC:
+	Bharat Kunwar: b.kunwar!gmail.com
 	Stig Telfer: stig.github!telfer.org, stig.openstack!telfer.org from 2015-08-04
+	bharat: bharat!stackhpc.com
+	d.s.szumski: d.s.szumski!gmail.com from 2017-09-15
+	doug: doug!stackhpc.com from 2017-09-15
+	john.garbutt: john.garbutt!stackhpc.com from 2017-05-12
 	mark: mark!stackhpc.com from 2016-12-02
 	mgoddard: mgoddard!cray.com from 2016-12-02
+	nick: nick!stackhpc.com from 2017-10-31
 	stelfer: stelfer!cray.com from 2015-08-14
 	steve: steve!stackhpc.com
 	stevejims: stevejims!gmail.com
@@ -14927,6 +15617,9 @@ Steria:
 	Lars Solberg: lars.solberg+github!gmail.com from 2013-03-15 until 2015-01-15
 Steve Mitchell:
 	Steve Mitchell: steve!sgmitchell.net
+StorPool:
+	openstack-dev-s: openstack-dev-s!storpool.com
+	pp: pp!storpool.com
 Storyful:
 	Shai Coleman: git!shaicoleman.com
 Stout:
@@ -15125,6 +15818,7 @@ TU Delft Solar Boat Team:
 	Boris Mattijssen: borismattijssen!gmail.com until 2014-09-15
 TUBITAK:
 	celik.esra: celik.esra!tubitak.gov.tr
+	gokhan.isik: gokhan.isik!tubitak.gov.tr
 TUNE:
 	Mike Kobyakov: mkobyakov!cyngn.com
 	Peter Rifel: pgrifel!gmail.com from 2016-06-15
@@ -15255,6 +15949,20 @@ Tencent:
 Tensorflight:
 	Robert Kozikowski: r.kozikowski!gmail.com
 	kozikow: kozikow!users.noreply.github.com
+TenxCloud:
+	Lei Wang: nkwanglei!126.com
+	huangqg: huangqg!tenxcloud.com
+	jekyang: jekyang!hotmail.com
+	lizhen: lizhen!outlook.jp
+	lizhen: lizhen!tenxcloud.com
+	mengyuan: mengyuan!tenxcloud.com
+	shouhong.zhang: shouhong.zhang!outlook.com
+	songrongxiang: songrongxiang!tenxcloud.com
+	wanglei: wanglei!tenxcloud.com
+	weiwei: weiwei!tenxcloud.com
+	yangle: yangle!tenxcloud.com
+	yubiao: yubiao!tenxcloud.com
+	zhangsh: zhangsh!tenxcloud.com
 Teracy:
 	Hoat Le: hoatlevan!gmail.com
 Teradata:
@@ -15282,8 +15990,11 @@ Tesora:
 	amrith: amrith!parelastic.com until 2017-01-30
 	amrith: amrith!tesora.com until 2017-01-30
 	amrith.kumar: amrith.kumar!gmail.com until 2017-01-30
+	amrith.kumar: amrith.kumar!vzw.com until 2017-01-30
 	andrew: andrew!parelastic.com
 	andrew: andrew!tesora.com
+	andrew.bramley: andrew.bramley!verizonwireless.com until 2017-08-11
+	andrew.bramley: andrew.bramley!vzw.com until 2017-08-11
 	atomic: atomic!tesora.com
 	atomic777: atomic777!gmail.com
 	doug: doug!parelastic.com
@@ -15463,6 +16174,9 @@ Thumbtack:
 	Tom Meagher: keypusher!gmail.com
 Thumbtack Technology:
 	Andrey Sokolov: asokolov!thumbtack.net
+TiCOMM:
+	gw.xue: gw.xue!ticomm.cn
+	xgw1989: xgw1989!sina.com
 Ticketfly:
 	Dennis Adjei-Baah: dadjeibaah!gmail.com until 2017-10-01
 Ticketmaster:
@@ -15723,6 +16437,8 @@ UKCloud:
 	cllewellyn: cllewellyn!ukcloud.com
 	rcoward: rcoward!ukcloud.com
 	rob: rob!jive-videos.net
+	srelf: srelf!ukcloud.com
+	stephenrelf: stephenrelf!aol.com
 UMCloud:
 	Enming Zhang: enming.zhang!umcloud.com
 	Jiaying Ren: jiaying.ren!umcloud.com
@@ -15747,6 +16463,10 @@ UPMC:
 	Steve Sloka: slokas!upmc.edu
 US Navy:
 	Dardo D Kleiner: dkleiner!cmf.nrl.navy.mil
+UShareSoft:
+	obourdon: obourdon!mirantis.com from 2007-12-01 until 2015-11-30
+	obourdon: obourdon!opennext.io from 2007-12-01 until 2015-11-30
+	olivier.bourdon: olivier.bourdon!usharesoft.com from 2007-12-01 until 2015-11-30
 USwitch:
 	Ragnar Dahlén: r.dahlen!gmail.com
 UTi Worldwide:
@@ -15872,8 +16592,10 @@ UnitedStack:
 	Weibing Zhang: zhangweibing!unitedstack.com
 	Yankun Li: liyankun!unitedstack.com
 	Zhenguo Niu: niu.zglinux!gmail.com until 2014-09-14
+	angeiv.zhang: angeiv.zhang!gmail.com
 	changzhi: changzhi!unitedstack.com
 	changzhi1990: changzhi1990!gmail.com
+	changzhi2: changzhi2!lenovo.com until 2017-06-12
 	damon.devops: damon.devops!gmail.com from 2014-04-20
 	denny: denny!unitedstack.com
 	filebat.mark: filebat.mark!gmail.com
@@ -15889,6 +16611,7 @@ UnitedStack:
 	gongysh: gongysh!unitedstack.com from 2013-06-15 until 2014-11-10
 	guangyu: guangyu!unitedstack.com
 	hanchao: hanchao!iscas.ac.cn until 2016-06-08
+	hanchao7: hanchao7!lenovo.com until 2016-06-08
 	iamljj: iamljj!gmail.com
 	jiajun: jiajun!unitedstack.com
 	jiangwt100: jiangwt100!gmail.com
@@ -15898,6 +16621,8 @@ UnitedStack:
 	mathematrix: mathematrix!foxmail.com from 2014-04-20
 	niuzhenguo: niuzhenguo!huawei.com until 2014-09-14
 	penghui: penghui!polex.com.cn until 2016-09-04
+	pyhex2dec: pyhex2dec!gmail.com
+	rogeryuqian: rogeryuqian!gmail.com until 2018-04-10
 	rongze: rongze!unitedstack.com from 2013-01-15 until 2015-04-30
 	rongze: rongze!ustack.com from 2013-01-15 until 2015-04-30
 	rzhu: rzhu!mirantis.com from 2013-01-15 until 2015-04-30
@@ -15910,10 +16635,12 @@ UnitedStack:
 	xingchao: xingchao!unitedstack.com until 2016-08-29
 	xyj.asmy: xyj.asmy!gmail.com
 	yejia: yejia!unitedstack.com
+	yu.qian: yu.qian!99cloud.net until 2018-04-10
 	yugsuo: yugsuo!gmail.com
 	yuweifree: yuweifree!gmail.com
 	yuxcer: yuxcer!126.com until 2016-08-29
 	yuxcer: yuxcer!gmail.com until 2016-08-29
+	zhangxing: zhangxing!unitedstack.com
 	zhenguo: zhenguo!unitedstack.com until 2014-09-14
 Unity Technologies:
 	Matti Savolainen: matti!applifier.com, matti!unity3d.com from 2008-09-01
@@ -15926,14 +16653,6 @@ Univa:
 Universal Bank:
 	yakitorii: yakitorii!users.noreply.github.com
 	鳥井 雪: yuki.torii.23!gmail.com
-University of Maryland:
-	Derek Yarnell: derek!umiacs.umd.edu
-	Liam Monahan: liam!umiacs.umd.edu
-	Padraig O'Sullivan: posulliv!umd.edu
-University of Minnesota:
-	Jeremy Meulemans: meule012!umn.edu
-University of Queensland:
-	Tim Dettrick: t.dettrick!uq.edu.au
 Unizin:
 	Howie Benefiel: hben592!gmail.com
 UpGuard:
@@ -15995,7 +16714,7 @@ VMware:
 	Dhawal Yogesh Bhanushali: dbhanushali!vmware.com
 	Divyen Patel: divyenp!vmware.com
 	Doug MacEachern: dougm!vmware.com
-	Ethan Lynn: ethanlynnl!vmware.com
+	Ethan Lynn: ethanlynnl!vmware.com from 2017-01-06
 	Fabio Rapposelli: fabio!vmware.com
 	Ferran Rodenas: frodenas!gmail.com, rodenasf!vmware.com from 2017-10-29
 	Giri Kuncoro: girikuncoro!users.noreply.github.com, gkuncoro!vmware.com
@@ -16062,6 +16781,7 @@ VMware:
 	buptliuwei: buptliuwei!users.noreply.github.com
 	carpenterm: carpenterm!users.noreply.github.com
 	casualjim: casualjim!users.noreply.github.com
+	cdent+os: cdent+os!anticdent.org from 2015-11-13
 	chen.roey: chen.roey!gmail.com from 2014-08-04
 	clinton.kitson: clinton.kitson!dell.com from 2018-03-09
 	clinton.kitson: clinton.kitson!emc.com from 2018-03-09
@@ -16164,6 +16884,7 @@ VMware:
 	wlam: wlam!vmware.com
 	wongsteven: wongsteven!vmware.com from 2018-03-09
 	xiaohhui123: xiaohhui123!gmail.com from 2017-04-30
+	xuanlangjian: xuanlangjian!gmail.com from 2017-01-06
 	yash1425: yash1425!users.noreply.github.com
 VONQ:
 	Gediminas Šedbaras: gediminas.sedbaras!gmail.com
@@ -16220,6 +16941,22 @@ Verizon:
 	dshamanthreddy: dshamanthreddy!users.noreply.github.com
 Verizon Telecom:
 	Rajat Jindal: rajatjindal83!gmail.com
+Verizon Wireless:
+	amrith.kumar: amrith.kumar!vzw.com from 2017-04-23
+	andrew.bramley: andrew.bramley!verizonwireless.com from 2017-08-11
+	andrew.bramley: andrew.bramley!vzw.com from 2017-08-11
+	brian.rosmaita: brian.rosmaita!verizonwireless.com
+	carlos.konstanski: carlos.konstanski!verizonwireless.com
+	ckonstanski: ckonstanski!pippiandcarlos.com
+	craig.cerny: craig.cerny!verizonwireless.com
+	david.hillyard: david.hillyard!verizonwireless.com
+	dennis.eastman: dennis.eastman!verizonwireless.com
+	dreastman: dreastman!gmail.com
+	enoch.nkansah: enoch.nkansah!verizonwireless.com
+	etannor: etannor!gmail.com
+	jlwhittyos: jlwhittyos!gmail.com
+	jordan.dao: jordan.dao!verizonwireless.com
+	scott.mcclymont: scott.mcclymont!verizonwireless.com
 Verse Technologies:
 	Albert Vaca: albertvaka!gmail.com
 	Dario Nieuwenhuis: dirbaio!dirbaio.net
@@ -16243,6 +16980,14 @@ VideoFruit:
 	Chris Marshall: chris!chrismar035.com
 Vidible:
 	Mykhailo Oleksiuk: mykhail.oleksiuk!teamaol.com
+Viettel:
+	daidv3: daidv3!viettel.com.vn from 2018-04-30
+	daikk115: daikk115!gmail.com from 2018-04-30
+	hieulq19: hieulq19!gmail.com from 2018-01-30
+	hieulq2: hieulq2!viettel.com.vn from 2018-01-30
+	kiennt2609: kiennt2609!gmail.com from 2018-04-13
+	kiennt65: kiennt65!viettel.com.vn from 2018-04-13
+	sudo: sudo!rm-rf.cloud from 2018-01-30
 Ville Hellman (FxN):
 	Ville Hellman (FxN): fxn!fxndev.com
 Vimond Media Solutions:
@@ -16389,6 +17134,8 @@ Walmart:
 	bea_surajit_roy: bea_surajit_roy!yahoo.com
 	beasurajitroy: beasurajitroy!gmail.com
 	bkrishna: bkrishna!walmartlabs.com
+	carlos.puga: carlos.puga!walmart.com
+	carlpuga: carlpuga!gmail.com
 	charles.burkett: charles.burkett!walmart.com from 2016-10-17
 	chuck: chuck!burkett.org from 2016-10-17
 	chuck_burkett: chuck_burkett!cable.comcast.com from 2016-10-17
@@ -16797,6 +17544,8 @@ Yahoo:
 	slupers1: slupers1!yahoo.com
 	suresh: sureshv!yahoo-inc.com
 	surojit-pathak: surojit-pathak!users.noreply.github.com
+Yahoo!:
+	rloo: rloo!oath.com until 2016-04-06
 Yahoo! JAPAN:
 	takashi.sogabe: takashi.sogabe!gmail.com
 	tasogabe: tasogabe!yahoo-corp.jp
@@ -16842,12 +17591,18 @@ YouTube:
 	Greg Haines: greg!greghaines.net, greghaines!google.com, gresrun!gmail.com
 	Sugu Sougoumarane: sougou!google.com, ssougou!gmail.com until 2018-02-01
 	sougou: sougou!users.noreply.github.com until 2018-02-01
+Yovole:
+	me: me!xiexianbin.cn
+	xiexianbin: xiexianbin!yovole.com
 Yowza:
 	Itamar Ostricher: itamar!yowza3d.com, itamarost!gmail.com
 Yoyo Holdings:
 	Hidemasa Togashi: togachiro!gmail.com
 	Zak B. Elep: zakame!zakame.net
 	hide_gloops: h.togashi!gloops.com
+Yunrong Technology:
+	yu_qearl: yu_qearl!163.com
+	yutingting: yutingting!yunrongtech.com
 Z Lab:
 	Tatsuhiro Tsujikawa: tatsuhiro.t!gmail.com, ttsujika!zlab.co.jp
 Z Lab Corporation:
@@ -16885,8 +17640,8 @@ ZTE:
 	Song Shun: song.shun3!zte.com.cn
 	SongRuixia: song.ruixia!zte.com.cn
 	StudyNick: wei.chuanhui1!zte.com.cn
-	William Chang: zhang.wanmin!zte.com.cn
-	William Zhang: warmchang!outlook.com
+	William Chang: zhang.wanmin!zte.com.cn from 2010-03-08
+	William Zhang: warmchang!outlook.com from 2010-03-08
 	Wuliang: wu.liang30!zte.com.cn
 	XuJun00192603: xu.jun!zte.com.cn
 	Yan Jun: yan.jun8!zte.com.cn
@@ -17028,7 +17783,21 @@ ZTE:
 ZTE Corporation:
 	WuLiang: 37668789+z10127852!users.noreply.github.com
 	allen7lee: allen7lee!users.noreply.github.com
+	bing.hao: bing.hao!easystack.cn until 2017-07-21
+	binghao0602: binghao0602!gmail.com until 2017-07-21
 	databill: databill!users.noreply.github.com
+	guo.shuaijie: guo.shuaijie!zte.com.cn
+	hfzhengliuyang: hfzhengliuyang!163.com
+	jin.zhenguo3: jin.zhenguo3!zte.com.cn
+	shen.lihua: shen.lihua!zte.com.cn
+	shengqin922: shengqin922!163.com
+	wang.changyu: wang.changyu!zte.com.cn
+	wangchangyu315: wangchangyu315!126.com
+	warmchang: warmchang!163.com from 2010-03-08
+	zhang.yanxian: zhang.yanxian!zte.com.cn
+	zhangyanxianmail: zhangyanxianmail!163.com
+	zhengy23: zhengy23!163.com
+	zhu.xuanpeng: zhu.xuanpeng!zte.com.cn
 Zalando:
 	Andrey Kuzmin: andrey.kuzmin!soundcloud.com, unsoundscapes!gmail.com until 2016-10-01
 	Asko Kauppi: akauppi!gmail.com
@@ -17113,19 +17882,6 @@ Zetta.IO Technology AS:
 	dag: dag!aicondi.com
 	dag: dag!stenstad.net
 	dag: dag!zetta.io
-Zhejiang University:
-	CandiceGuo: guoqian!zju.edu.cn
-	Jie Luo: luo612!zju.edu.cn
-	Martially: 21651061!zju.edu.cn
-	SRaddict: qishen!zju.edu.cn
-	Sun Jianbo: wonderflow!zju.edu.cn
-	Xiao An: hac!zju.edu.cn
-	ZouRui89: 21751189!zju.edu.cn
-	ZouRui89: ZouRui89!users.noreply.github.com
-	dongziming: dongziming!zju.edu.cn
-	jiaweizhou: jiaweizhou!zju.edu.cn
-	tim-zju: 21651152!zju.edu.cn
-	yanan Lee: energylyn!zju.edu.cn
 Zipkin:
 	Bas van Beek: bas!xacte.com
 Zmlka:
@@ -17331,6 +18087,9 @@ eNovance:
 	fboucher: fboucher!redhat.com until 2014-06-24
 	flepied: flepied!redhat.com until 2014-06-24
 	frederic.lepied: frederic.lepied!enovance.com until 2014-06-24
+	gaetan.trellu: gaetan.trellu!enovance.com until 2014-07-08
+	gaetan.trellu: gaetan.trellu!incloudus.com until 2014-07-08
+	gaetan.trellu: gaetan.trellu!ormuco.com until 2014-07-08
 	gchung: gchung!redhat.com until 2014-06-24
 	george.peristerakis: george.peristerakis!enovance.com until 2014-06-24
 	gleboude: gleboude!redhat.com until 2014-06-24
@@ -17339,6 +18098,7 @@ eNovance:
 	gord.chung: gord.chung!huawei.com until 2014-06-24
 	gordon.chung: gordon.chung!enovance.com until 2014-06-24
 	gperiste: gperiste!redhat.com until 2014-06-24
+	gtrellu: gtrellu!redhat.com until 2014-07-08
 	jdanjou: jdanjou!redhat.com until 2014-06-24
 	jhakimra: jhakimra!redhat.com until 2014-06-24
 	joe.hakim.rahme: joe.hakim.rahme!enovance.com until 2014-06-24
@@ -17507,10 +18267,19 @@ indiehosters:
 indigitus:
 	Stanislav Makar: stamak!users.noreply.github.com until 2014-09-15
 inesa:
+	chensh: chensh!rc.inesa.com
+	dongjxf: dongjxf!rc.inesa.com
+	gaoyl: gaoyl!rc.inesa.com
+	guans: guans!rc.inesa.com
 	lalasjtu: lalasjtu!gmail.com
 	liuc: liuc!rc.inesa.com
+	liumk: liumk!rc.inesa.com
+	peiy: peiy!rc.inesa.com
+	sunc: sunc!rc.inesa.com
+	sunrx: sunrx!rc.inesa.com
 	wangy: wangy!rc.inesa.com
 	zhangpf: zhangpf!rc.inesa.com
+	zhangyf: zhangyf!rc.inesa.com from 2017-04-24
 inetss:
 	Ilya Semenov: ilya!semenov.co
 innoscale AB:
@@ -17530,6 +18299,7 @@ inwinSTACK:
 	jeffxie: jeffxie!iii.org.tw until 2017-02-10
 	kairen: kyle.b!inwinstack.com
 	pcp33307: pcp33307!gmail.com
+	rico.l: rico.l!inwinstack.com until 2017-02-24
 	rico.lin: rico.lin!easystack.cn until 2017-02-24
 	simon.l: simon.l!inwinstack.com
 	tyranron: tyranron!gmail.com
@@ -17713,6 +18483,7 @@ systemli.org:
 	louis: louis!systemli.org
 t2cloud:
 	Leo Zhang: nguzcf!gmail.com
+	chenze: chenze!t2cloud.net
 	chinabjalex: chinabjalex!gmail.com
 	coolias.lj: coolias.lj!gmail.com
 	fengbeihong: fengbeihong!gmail.com
@@ -17726,11 +18497,13 @@ t2cloud:
 	qitianbiao: qitianbiao!gmail.com
 	qitianbiao: qitianbiao!t2cloud.net
 	shidonghao: shidonghao!t2cloud.net
+	sunluning: sunluning!t2cloud.net
 	tian694293774: tian694293774!gmail.com
 	tianjie: tianjie!t2cloud.net
 	wujian: wujian!t2cloud.net
 	xiechao: xiechao!t2cloud.net
 	xutao: xutao!t2cloud.net
+	zackchen517: zackchen517!gmail.com
 	zhangchengfei: zhangchengfei!t2cloud.net
 takealot:
 	Stephan van Ellewee: stephan.van.ellewee!gmail.com
@@ -17777,6 +18550,8 @@ thinkstep:
 	kulke: magnus.kulke!thinkstep.com
 thoughtbot:
 	Bernerd Schaefer: bj.schaefer!gmail.com until 2016-09-01
+timanetworks:
+	chao.xu: chao.xu!timanetworks.com
 titicacadev:
 	Mark Lee: code0x9!gmail.com
 tobin.cc:
