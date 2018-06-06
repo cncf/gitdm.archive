@@ -114,12 +114,15 @@ data['users'].each do |user|
             ncompany = company['company_name']
             break if skip_1to1[[ncompany, ecompany]]
           end
+          puts "Email: #{email}"
           puts "Existing: #{existing[email]}"
           puts "New: #{company}"
           puts "Add?"
           #c = mgetc
           c = 'n'
-          if c != 'y'
+          if c == 'q'
+            exit 1
+          elsif c != 'y'
             if existing[email].keys.length == 1 && user['companies'].length == 1
               ecompany = existing[email].keys.first
               ncompany = company['company_name']
