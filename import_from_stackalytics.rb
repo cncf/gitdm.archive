@@ -5,6 +5,7 @@ require 'json'
 require 'net/http'
 require 'uri'
 require './email_code'
+require './mgetc'
 
 months = {
   '01': 'Jan',
@@ -52,64 +53,115 @@ File.readlines('cncf-config/email-map').each do |line|
     a = dtto.split '-'
     dtto = "#{a[0]}-#{months[a[1].to_sym]}-#{a[2]}"
   end
-  next if company.strip == 'NotFound' || company.strip[0..11] == 'Independent'
   existing[email] = {} unless existing.key?(email)
   existing[email][comp] = dtto
 end
 
 data = JSON.parse File.read 'default_data.json'
 
-conf = 0
-new = 0
-same = 0
-expired = 0
+conf1 = 0
+conf2 = 0
+newe = 0
+newc = 0
+same1 = 0
+same2 = 0
+miss = 0
+skip_1to1 = {}
 
 data['users'].each do |user|
   user['emails'].each do |email|
     email = email_encode email
     if existing.key?(email)
       user['companies'].each do |company|
-        if existing[email][company['company_name']] != company['end_date']
-          # p [email, company, existing[email], existing[email][company['company_name']], company['end_date']]
-          conf += 1
+        if existing[email].key?(company['company_name'])
+          if existing[email][company['company_name']] != company['end_date']
+            # p [email, company, existing[email], existing[email][company['company_name']], company['end_date']]
+            conf1 += 1
+          else
+            same1 += 1
+          end
         else
-          same += 1
+          if existing[email].keys.length == 1 && user['companies'].length == 1
+            ecompany = existing[email].keys.first
+            ncompany = company['company_name']
+            break if skip_1to1[[ncompany, ecompany]]
+          end
+          puts "Existing: #{existing[email]}"
+          puts "New: #{company}"
+          puts "Add?"
+          #c = mgetc
+          c = 'n'
+          if c != 'y'
+            if existing[email].keys.length == 1 && user['companies'].length == 1
+              ecompany = existing[email].keys.first
+              ncompany = company['company_name']
+              skip_1to1[[ncompany, ecompany]] = true
+            end
+            break
+          end
+          existing[email][company['company_name']] = company['end_date']
+          newc += 1
+        end
+      end
+      existing[email].delete 'NotFound'
+      existing[email].each do |ecompany, dtto|
+        found = false
+        user['companies'].each do |company|
+          if company['company_name'] == ecompany
+            found = true
+            if company['end_date'] != dtto
+              conf2 += 1
+            else
+              same2 += 1
+            end
+            break
+          end
+        end
+        unless found
+          miss += 1
         end
       end
     else
       user['companies'].each do |company|
-        new += 1
-        existing[email] = {} unless existing.key?(email)
+        newe += 1
+        existing[email] = {}
         existing[email][company['company_name']] = company['end_date']
       end
     end
   end
 end
 
+expired = []
+mult = []
 existing.each do |email, companies|
-  has_nil = false
+  nils = 0
   companies.each do |company, dtto|
     if dtto.nil?
-      has_nil = true
-      break
+      nils += 1
     end
   end
-  unless has_nil
-    expired += 1
+  if nils == 0
+    expired << email
+  elsif nils > 1
+    mult << email
   end
 end
 
-existing.each do |email, companies|
-  companies.each do |company, dtto|
-    if dtto
-      a = dtto.split '-'
-      dtto = "#{a[0]}-#{months_rev[a[1].to_sym]}-#{a[2]}"
-      puts "#{email} #{company} < #{dtto}"
-    else
-      puts "#{email} #{company}"
+File.open('email-map', 'w') do |file|
+  existing.each do |email, companies|
+    companies.each do |company, dtto|
+      if dtto
+        a = dtto.split '-'
+        dtto = "#{a[0]}-#{months_rev[a[1].to_sym]}-#{a[2]}"
+        file.write "#{email} #{company} < #{dtto}\n"
+      else
+          file.write "#{email} #{company}\n"
+      end
     end
   end
 end
 
-STDERR.puts "Same: #{same}, new: #{new}, conflict: #{conf}, expired: #{expired}"
-# binding.pry
+puts "Skip_121: #{skip_1to1}"
+puts "Same: #{same1}+#{same2}=#{same1+same2}, newe: #{newe}, newc: #{newc}, miss: #{miss}, conflict: #{conf1}+#{conf2}=#{conf1+conf2}, expired: #{expired.count}, multiple: #{mult.count}"
+puts "Expired: #{expired}"
+puts "Multiple: #{mult}"
