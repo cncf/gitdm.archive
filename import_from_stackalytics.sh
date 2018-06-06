@@ -4,4 +4,5 @@
 ./import_from_stackalytics.rb || exit 3
 cat email-map | sort | uniq > cncf-config/email-map || exit 4
 ./sort_configs.sh
+rm email-map
 echo 'OK'
