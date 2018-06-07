@@ -34,8 +34,8 @@ def handle_conflict(ghid, email, saaff, ghaff)
   puts '1 - use SA data'
   puts '2 - use current GH data'
   return $gcfg[[saaff, ghaff]] if $gcfg.key?([saaff, ghaff])
-  # c = mgetc
-  c = '0'
+  c = mgetc
+  # c = '0'
   $gcfg[[saaff, ghaff]] = c
   return c
 end
@@ -141,7 +141,11 @@ end
 puts "same: #{same}, new emails: #{newemail}, new logins: #{newghid}, conflict: #{conf1}+#{conf2}=#{conf1+conf2}"
 
 gh_cache = {}
+n = 0
+g = 0
+nf = 0
 news.each do |data|
+  n += 1
   ghid = data[0]
   email = data[1]
   aff = data[2]
@@ -163,9 +167,11 @@ news.each do |data|
         sleep td
         retry
       rescue => err
-        puts "Uups, somethig bad happened, check `err` variable!"
-        binding.pry
+        p err
+        nf += 1
+        next
       end
+      g += 1
     end
   end
   gh_data['email'] = email
@@ -175,7 +181,7 @@ news.each do |data|
   gh << gh_data
 end
 
-json = email_encode(JSON.pretty_generate(gh))
-File.write 'github_users.json', json
+puts "Added #{n} entries, asked for #{g} GitHub users, #{nf} GitHub requests failed"
 
-binding.pry
+json = JSON.pretty_generate(gh)
+File.write 'github_users.json', json
