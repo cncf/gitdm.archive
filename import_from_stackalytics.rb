@@ -2,8 +2,6 @@
 
 require 'pry'
 require 'json'
-require 'net/http'
-require 'uri'
 require './email_code'
 require './mgetc'
 
