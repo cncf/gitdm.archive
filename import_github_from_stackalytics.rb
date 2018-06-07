@@ -20,7 +20,7 @@ def make_affiliation(companies)
   affs = []
   dates.keys.sort.each do |date|
     company = dates[date]
-    sdate = date.strftime '%Y-%b-%d'
+    sdate = date.strftime '%Y-%m-%d'
     affs << "#{company} < #{sdate}"
   end
   return affs.join(', ') if final == ''
@@ -32,10 +32,12 @@ $gcfg = {}
 def handle_conflict(ghid, email, saaff, ghaff)
   puts '0 - do nothing'
   puts '1 - use SA data'
-  puts '2 - use current GH data'
+  puts '2 - use GH data'
+  puts 'q - quit'
   return $gcfg[[saaff, ghaff]] if $gcfg.key?([saaff, ghaff])
   c = mgetc
   # c = '0'
+  exit(1) if c == 'q'
   $gcfg[[saaff, ghaff]] = c
   return c
 end
@@ -104,7 +106,8 @@ sa_users.each do |key, saaff|
   if gh_users.key?(key)
     ghaff = gh_users[key]
     if saaff != ghaff
-      puts "conflict1: [#{ghid}, #{email}]: SA: '#{saaff}', GH: '#{ghaff}'"
+      puts "conflict with existing entry:"
+      puts "[#{ghid}, #{email}]: SA: '#{saaff}', GH: '#{ghaff}'"
       res = handle_conflict(ghid, email, saaff, ghaff)
       if res == '1'
         gh[gh_index[key]]['affiliation'] = saaff
@@ -119,7 +122,8 @@ sa_users.each do |key, saaff|
       puts "found by login: #{ghid} --> #{ghaff}"
       newemail += 1
       if saaff != ghaff
-        puts "conflict2: [#{ghid}, #{email}]: SA: '#{saaff}', GH: '#{ghaff}'"
+        puts "conflict with other entry with different email:"
+        puts "[#{ghid}, #{email}]: SA: '#{saaff}', GH: '#{ghaff}'"
         res = handle_conflict(ghid, email, saaff, ghaff)
         if res == '1'
           news << [ghid, email, saaff]
