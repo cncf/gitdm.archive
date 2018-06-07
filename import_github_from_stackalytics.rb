@@ -36,7 +36,7 @@ def handle_conflict(ghid, email, saaff, ghaff)
   puts 'q - quit'
   return $gcfg[[saaff, ghaff]] if $gcfg.key?([saaff, ghaff])
   c = mgetc
-  # c = '0'
+  #c = '0'
   exit(1) if c == 'q'
   $gcfg[[saaff, ghaff]] = c
   return c
@@ -161,6 +161,7 @@ news.each do |data|
       gh_data = gh_cache[ghid].clone
     else
       begin
+        g += 1
         rate_limit()
         puts "Asking for #{ghid}"
         u = Octokit.user ghid
@@ -175,7 +176,6 @@ news.each do |data|
         nf += 1
         next
       end
-      g += 1
     end
   end
   gh_data['email'] = email
