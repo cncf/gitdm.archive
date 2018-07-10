@@ -629,17 +629,23 @@ def ghusers(repos, start_date, args)
   # 56k commits took 162/5000 points
   # After processed all 70 repos I had ~3900/5000 points remaining
   comms = []
+  processed = {}
   n_repos = hs.count
   hs.each_with_index do |repo, repo_index|
     begin
       repo_name = repo['full_name'] || repo[:full_name]
       puts "Getting commits from #{repo_index + 1}/#{n_repos} #{repo_name}"
+      if processed.key?(repo_name)
+        puts "#{repo_name} was already processed"
+        next
+      end
       fn = 'ghusers/' + repo_name.gsub('/', '__') + '__commits'
       ofn = force_commits ? SecureRandom.hex(80) : fn
       f = File.read(ofn)
       puts "Got commits JSON from saved file"
       comm = JSON.parse f
       comms << comm
+      processed[repo_name] = true
     rescue Errno::ENOENT => err1
       begin
         puts "No previously saved #{fn}, getting commits from GitHub" unless force_commits
@@ -650,6 +656,7 @@ def ghusers(repos, start_date, args)
         json = email_encode(JSON.pretty_generate(h))
         File.write fn, json
         comms << comm
+        processed[repo_name] = true
       rescue Octokit::TooManyRequests => err2
         td = rate_limit()
         puts "Too many GitHub requests, sleeping for #{td} seconds"
