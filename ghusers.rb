@@ -669,6 +669,8 @@ def ghusers(repos, start_date, args)
     end
   end
 
+  puts "Processed #{processed.keys.length} repos"
+
   hs = nil
   # Now analysis of different authors
   puts "Commits analysis..."
@@ -708,6 +710,7 @@ def ghusers(repos, start_date, args)
       end
     end
   end
+  puts "Processed #{processed.keys.length} repos"
   puts "Processed #{n_processed}/#{n_commits} commits"
 
   comms = nil
