@@ -668,7 +668,6 @@ def ghusers(repos, start_date, args)
       end
     end
   end
-
   puts "Processed #{processed.keys.length} repos"
 
   hs = nil
@@ -692,8 +691,8 @@ def ghusers(repos, start_date, args)
       committer['login'] = (comm['committer'] && comm['committer']['login']) || (comm[:committer] && comm[:committer][:login])
       author['login'] = (comm['author'] && comm['author']['login']) || (comm[:author] && comm[:author][:login])
       h = {}
-      h[author['email']] = author['login']
-      h[committer['email']] = committer['login']
+      h[email_encode(author['email'])] = author['login']
+      h[email_encode(committer['email'])] = committer['login']
       h.each do |email, login|
         next unless email.include?('!')
         next if email == nil || email == ''
