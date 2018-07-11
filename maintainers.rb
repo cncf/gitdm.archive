@@ -70,11 +70,11 @@ def maintainers(maintainers_file, users_file, config_file)
           end
           if affs_list != first_affs
             STDERR.puts "Affiliations mismatch: first: #{first_affs}(#{first_email}), current: #{affs_list}(#{em}), email list: #{ems}, login: #{login}"
-            binding.pry
+            #binding.pry
           end
           if final[em] != company
             STDERR.puts "Final affiliations mismatch: #{affs_list}, should be: #{company}, email list: #{ems}, login: #{login}"
-            binding.pry
+            #binding.pry
           end
         else
           STDERR.puts "Missing affiliation: email: #{em}, company: #{company}, login: #{login}"
