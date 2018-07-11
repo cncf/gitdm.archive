@@ -1,6 +1,7 @@
 require 'json'
 
 def check_affs_list(key, affiliations, guess)
+  puts "Guessing allowed: #{guess}"
   unknowns = []
   ranges = []
   finals = []

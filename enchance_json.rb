@@ -62,9 +62,12 @@ def enchance_json(json_file, csv_file, actors_file)
   end
 
   # Make results as strings
+  puts "Checking affiliations by email #{guess_by_email} - this should not generate warnings"
   email_affs.each do |email, comps|
     email_affs[email] = check_affs_list email, comps, guess_by_email
   end
+
+  puts "Checking affiliations by name #{guess_by_name} - this can generate a lot of warnings"
   name_affs.each do |name, comps|
     name_affs[name] = check_affs_list name, comps, guess_by_name
   end
