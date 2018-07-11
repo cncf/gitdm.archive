@@ -21,7 +21,8 @@
 - `./all_repos_log.sh /root/devstats_repos/BuoyantIO/* /root/devstats_repos/GoogleCloudPlatform/* /root/devstats_repos/cncf/* /root/devstats_repos/containerd/* /root/devstats_repos/coredns/* /root/devstats_repos/coreos/* /root/devstats_repos/docker/* /root/devstats_repos/fluent/* /root/devstats_repos/grpc/* /root/devstats_repos/kubernetes/* /root/devstats_repos/kubernetes-client/* /root/devstats_repos/kubernetes-helm/* /root/devstats_repos/kubernetes-incubator/* /root/devstats_repos/linkerd/* /root/devstats_repos/opentracing/* /root/devstats_repos/prometheus/* /root/devstats_repos/rkt/* /root/devstats_repos/rktproject/*`
 
 # To sync maintainers:
-1. Open [maintainers list](https://docs.google.com/spreadsheets/d/1QShmHcStYh5BjTjdOAASFK9V4WaYwJSFu1maBdcV5YA/edit#gid=0)
+1. Open [CNCF projects maintainers list](https://docs.google.com/spreadsheets/d/1Pr8cyp8RLrNGx9WBAgQvBzUUmqyOv69R7QAFKhacJEM/edit#gid=262035321) 
 2. Save "Name", "Company", "GitHub name" columns to a new sheet and download it as "maintainers.csv".
 3. Add "name,company,login" CSV header.
+4. Example [file](https://docs.google.com/spreadsheets/d/1QShmHcStYh5BjTjdOAASFK9V4WaYwJSFu1maBdcV5YA/edit#gid=0)
 4. Run `./maintainers.sh` script. Follow its instructions.
