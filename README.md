@@ -343,3 +343,7 @@ The first one works with one argument and generates a file `fullcontact_affiliat
 It is a secret API key on a FullContact account which has been set up for subscription. The columns differ in this file compared to that of Clearbit. If you find affiliations for other developers manually, just change the value in the 'org_1' column. The column by default should have 5 pipe-delimited values. If you do not have the values for the other 4, just type 4 pipes. Columns to the right of 'org_1' are not required.
 
 The second script reads the 'clearbit_affiliation_lookup.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered. The merge scripts export developer work history to `fullcontact_developer_historical_irganizations.csv`.
+
+# Add new project ( cncf or non-cncf) to get affiliation for it.
+
+Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/gitdm/blob/master/ADD_PROJECT.md).
