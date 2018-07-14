@@ -26,3 +26,7 @@
 3. Add "name,company,login" CSV header.
 4. Example [file](https://docs.google.com/spreadsheets/d/1QShmHcStYh5BjTjdOAASFK9V4WaYwJSFu1maBdcV5YA/edit#gid=0)
 4. Run `./maintainers.sh` script. Follow its instructions.
+
+# Add new project ( cncf or non-cncf) to get affiliation for it.
+
+Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/gitdm/blob/master/ADD_PROJECT.md).
