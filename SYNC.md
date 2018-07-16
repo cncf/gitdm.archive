@@ -1,5 +1,7 @@
 # Syncing new affiliations
 
+Make sure that you don't have different case email duplicates in `cncf-config/email-map`
+
 1. If you generated new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`
 2. To generate `git.log` file and make sure it includes all orgs used by `devstats` use cncf/devstats\'s `GHA2DB_PROJECTS_OVERRIDE="+cncf" PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 ./get_repos` and then final command line it generates. Make it `uniq`.
 3. To run `cncf/gitdm` on a generated `git.log` file do: `~/dev/alt/gitdm/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`
