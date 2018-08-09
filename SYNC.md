@@ -1,6 +1,6 @@
 # Syncing new affiliations
 
-Make sure that you don't have different case email duplicates in `cncf-config/email-map`
+Make sure that you don't have different case email duplicates in `cncf-config/email-map`: `./lower_unique.sh cncf-config/email-map`.
 
 1. If you generated new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`
 2. To generate `git.log` file and make sure it includes all orgs used by `devstats` use cncf/devstats\'s `GHA2DB_PROJECTS_OVERRIDE="+cncf" PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 ./get_repos` and then final command line it generates. Make it `uniq`.
@@ -29,6 +29,6 @@ Make sure that you don't have different case email duplicates in `cncf-config/em
 4. Example [file](https://docs.google.com/spreadsheets/d/1QShmHcStYh5BjTjdOAASFK9V4WaYwJSFu1maBdcV5YA/edit#gid=0)
 4. Run `./maintainers.sh` script. Follow its instructions.
 
-# Add new project ( cncf or non-cncf) to get affiliation for it.
+# Add new project (cncf or non-cncf) to get affiliation for it.
 
 Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/gitdm/blob/master/ADD_PROJECT.md).
