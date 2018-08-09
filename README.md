@@ -8,7 +8,7 @@ This is the Cloud Native Computing Foundation's fork of Jon Corbet and Greg KH's
 
 # Adding/Updating affiliation
 
-If you find any errors ior missing affiliations in those lists, please submit a pull request with edits to [developer affiliations](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) file.
+If you find any errors or missing affiliations in those lists, please submit a pull request with edits to [developer affiliations](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) file.
 
 However, only the [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) should be edited manually.
 
