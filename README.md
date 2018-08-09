@@ -6,7 +6,13 @@ This is the Cloud Native Computing Foundation's fork of Jon Corbet and Greg KH's
 
 [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt)
 
-If you find any errors in those lists, please submit a pull request with edits. However, only the [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) should be edited manually. The [Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt) is a computed derivative of the first list.
+# Adding/Updating affiliation
+
+If you find any errors ior missing affiliations in those lists, please submit a pull request with edits to [developer affiliations](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) file.
+
+However, only the [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) should be edited manually.
+
+The [Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt) is a computed derivative of the first list.
 
 # Removing affiliations
 
