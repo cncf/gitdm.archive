@@ -10,9 +10,11 @@ This is the Cloud Native Computing Foundation's fork of Jon Corbet and Greg KH's
 
 If you find any errors or missing affiliations in those lists, please submit a pull request with edits to [developer affiliations](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) file.
 
-However, only the [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) should be edited manually.
+Only the [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) should be edited manually.
 
 The [Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt) is a computed derivative of the first list.
+
+Other files used for affiliations are [email map file](https://github.com/cncf/gitdm/blob/master/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/github_users.json) file.
 
 # Removing affiliations
 
