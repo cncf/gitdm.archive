@@ -12,7 +12,7 @@ Make sure that you don't have different case email duplicates in `cncf-config/em
 7. To update (enchance) `github_users.json` with new affiliations `./enchance_json.sh`. If you run `ghusers` you may need to update `enchance_jsons.rb` with GitHub exclude logins (broken ones etc.): `puts uacts.join("', '")` when stooped in the debugger.
 8. To merge multiple GitHub logins data (for example propagate known affiliation to unknown or not found on the same GitHub login) run: `./merge_github_logins.sh`.
 9. Because this can find new affiliations you can now use `./import_from_github_users.sh` to import back from `github_users.json` and then `./lower_unique.sh cncf-config/email-map` and restart from step 3.
-10. Run `./correlation.sh` and examine its output `correlations.txt` to try to normalize company names and remove common suffixes like Ltd., Corp. and downcase/upcase differences.
+10. Run `./correlations.sh` and examine its output `correlations.txt` to try to normalize company names and remove common suffixes like Ltd., Corp. and downcase/upcase differences.
 11. Run `./lookup_json.sh` and examine its output JSONs - those GitHub profiles have some useful data directly available - this will save you some manual research work.
 12. *ALWAYS* before any commit to GitHub run: `./handle_forbidden_data.sh` to remove any forbiden affiliations, please also see `FORBIDDEN_DATA.md`.
 13. You can use `./clear_affiliations_in_json.sh` to clear all affiliations on a generated `github_users.json`.

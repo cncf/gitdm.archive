@@ -1,7 +1,5 @@
 Those companies are unmappable to ASCII only symbols
 [["МТС", 1], ["НИИ АА", 1], ["徳を積む", 1], ["倫理的に妥当な箱", 1], ["中佑", 1], ["الصحيفة الآقتصادية", 1], ["패스트캠퍼스", 1], ["НГС", 1], ["欢聚时代", 1], ["豆瓣", 1], ["うんこ", 1], ["カブク", 1], ["스마일게이트", 1], ["株式会社ドヴァ", 1], ["✕✕✕✕✕", 1], ["北京天威诚信电子商务服务有限公司", 1], ["Cloud Security", 1], ["Восход", 1], ["社会大学", 1], ["株式会社アニメイトラボ", 1]]
-Those companies map into the same key 'zte':
-[["ZTE", 79], ["ZTE Corporation", 1]]
 Those companies map into the same key 'fusn':
 [["Fusion-io", 1], ["Fusion Electronics", 1]]
 Similar mappings > 70.0% similar:
@@ -25,9 +23,9 @@ Similar mappings > 70.0% similar:
 [80.0, [["Kik Interactive", 1]], [["Ve Interactive", 1]], "kik interactive <> ve interactive"]
 [80.0, [["Nivas", 1]], [["Univa", 2]], "nivas <> univa"]
 [80.0, [["Realm", 1]], [["VREAL", 1]], "realm <> vreal"]
-[79.0, [["Neo Technology", 1]], [["TNG Technology", 3]], "neo technology <> tng technology"]
+[79.0, [["Neo Technology", 1]], [["TNG Technology", 2]], "neo technology <> tng technology"]
 [79.0, [["Sourcegraph", 4]], [["Sourcegraph.com", 1]], "sourcegraph <> sourcegraphcom"]
-[78.0, [["Cloudbase Solutions", 3]], [["Cloudbau", 1]], "cloudbase <> cloudbau"]
+[78.0, [["Cloudbase Solutions", 4]], [["Cloudbau", 1]], "cloudbase <> cloudbau"]
 [78.0, [["Informa", 1]], [["Information Security", 1]], "informa <> informatn"]
 [78.0, [["Network Business Systems", 1]], [["s1network", 1]], "network <> s1network"]
 [77.0, [["InTechnology", 1]], [["LOFTechnology", 1]], "intechnology <> loftechnology"]
@@ -63,7 +61,7 @@ Similar mappings > 70.0% similar:
 [75.0, [["Streamlio", 1]], [["StreamMe", 1]], "streaml <> streamme"]
 [75.0, [["StreamMe", 1]], [["Ustream", 4]], "streamme <> ustream"]
 [75.0, [["Twitch", 1]], [["twitch.tv", 1]], "twitch <> twitchtv"]
-[75.0, [["Uber", 27]], [["Vube", 1]], "uber <> vube"]
+[75.0, [["Uber", 30]], [["Vube", 1]], "uber <> vube"]
 [75.0, [["Wish", 1]], [["W.I.S.V", 1]], "wish <> wisv"]
 [73.0, [["HomeAway", 1]], [["HomeAway.com", 2]], "homeaway <> homeawaycom"]
 [73.0, [["Informatica", 1]], [["Information Security", 1]], "informatica <> informatn"]
@@ -96,10 +94,10 @@ Similar mappings > 70.0% similar:
 [71.0, [["Gitter", 1]], [["Twitter", 5]], "gitter <> twitter"]
 [71.0, [["HyperHQ", 2]], [["Hyper.sh", 5]], "hyperhq <> hypersh"]
 [71.0, [["InTechnology", 1]], [["Neo Technology", 1]], "intechnology <> neo technology"]
-[71.0, [["InTechnology", 1]], [["TNG Technology", 3]], "intechnology <> tng technology"]
+[71.0, [["InTechnology", 1]], [["TNG Technology", 2]], "intechnology <> tng technology"]
 [71.0, [["LANCOM Systems", 2]], [["Lancope", 1]], "lancom <> lancope"]
 [71.0, [["LOFTechnology", 1]], [["Neo Technology", 1]], "loftechnology <> neo technology"]
-[71.0, [["LOFTechnology", 1]], [["TNG Technology", 3]], "loftechnology <> tng technology"]
+[71.0, [["LOFTechnology", 1]], [["TNG Technology", 2]], "loftechnology <> tng technology"]
 [71.0, [["Luiza Labs", 1]], [["Luizalabs", 2]], "luiza <> luizals"]
 [71.0, [["OSIsoft", 1]], [["Ubisoft", 7]], "osisoft <> ubisoft"]
 [71.0, [["Scaler Labs", 1]], [["WeScale", 1]], "scaler <> wescale"]
