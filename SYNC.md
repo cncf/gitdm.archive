@@ -9,7 +9,7 @@ Make sure that you don't have different case email duplicates in `cncf-config/em
 5. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too.
 6. Consider `./ghusers_cached.sh` or `./ghusers.sh` (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points). Sometimes you should just run `./ghusers.sh` without cache.
 7. `ghusers_partially_cached.sh` will refetch repos metadata and commits and get users data from `github_users.json` so you can save a lot of API points.
-7. To update (enchance) `github_users.json` with new affiliations `./enchance_json.sh`. If you run `ghusers` you may need to update `ghusers.rb` with GitHub exclude logins (broken ones etc.).
+7. To update (enchance) `github_users.json` with new affiliations `./enchance_json.sh`. If you run `ghusers` you may need to update `enchance_jsons.rb` with GitHub exclude logins (broken ones etc.): `puts uacts.join("', '")` when stooped in the debugger.
 8. To merge multiple GitHub logins data (for example propagate known affiliation to unknown or not found on the same GitHub login) run: `./merge_github_logins.sh`.
 9. Because this can find new affiliations you can now use `./import_from_github_users.sh` to import back from `github_users.json` and then restart from step 3.
 10. Run `./correlation.sh` and examine its output `correlations.txt` to try to normalize company names and remove common suffixes like Ltd., Corp. and downcase/upcase differences.
