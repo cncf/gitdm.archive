@@ -19,7 +19,9 @@ end
 email2gh = {}
 gh = JSON.parse File.read 'github_users.json'
 gh.each do |user|
-  email2gh[user['email']] = user['login']
+  email = user['email']
+  puts "Duplicate email in JSON: #{email}" if email2gh.key?(email)
+  email2gh[email] = user['login']
 end
 
 f = nf = 0
