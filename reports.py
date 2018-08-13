@@ -490,13 +490,16 @@ def ReportUnknowns(hlist, cscount):
     ulist.sort(ComparePCount)
     count = 0
     BeginReport('Developers with unknown affiliation')
+    unknownsFile = open('unknowns.txt', 'w')
     for h in ulist:
         pcount = len(h.patches)
         if pcount > 0:
             ReportLine(h.full_name_with_aff(), pcount, (pcount*100.0)/cscount)
+            unknownsFile.write(email_encode('%s\t%d\n' % (h.full_name_with_aff_tabs(), pcount)))
             count += 1
         if count >= ListCount:
             break
+    unknownsFile.close()
     EndReport()
 
 def ReportSelfs(hlist, cscount):
