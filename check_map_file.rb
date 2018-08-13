@@ -50,7 +50,7 @@ def check_map_file(map_file)
 end
 
 if ARGV.size < 1
-  puts "Missing argument: cncf-config/email-mpa"
+  puts "Missing argument: cncf-config/email-map"
   exit(1)
 end
 
