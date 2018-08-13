@@ -225,7 +225,19 @@ def enchance_json(json_file, csv_file, actors_file)
     'black-perl', 'codymccain', 'craig-mulligan', 'danielryan2430', 'fabian4', 'mycapatin', 'nomad911', 'swoo3000',
     'alvin-coding', 'fmcocoa', 'Frenjon', 'hska06', 'iloayuil', 'itsuugo', 'jmunsch', 'jtwp470', 'mathieu-rohon',
     'micumatei', 'nowprovision', 'omidnavi', 'opalus666', 'p8712351', 'pkrishanth', 'pmbenjamin', 'RA489', 'rlp2006',
-    'samlinbris', 'sbr464', 'SKRVulupala', 'sllawap', 'tiaobug', 'Vibzy19', 'whatevsz', 'YlzatFromOxford', 'adriancole'
+    'samlinbris', 'sbr464', 'SKRVulupala', 'sllawap', 'tiaobug', 'Vibzy19', 'whatevsz', 'YlzatFromOxford', 'adriancole',
+    '4Oranges', '735254599', '9923', 'aa23', 'akd31', 'allan1991', 'amelius0712', 'AndyLCorp', 'arasmax', 'aryadrottning',
+    'atiamo', 'atulverma1997', 'basielski', 'bitencourts', 'BNUZ-YLSY', 'bryanpfremmer', 'budjizu', 'caparzo82999',
+    'cbouscal', 'cfrett', 'chansn', 'chenliping972385283', 'ciscoruijie', 'clouderding', 'cloudm2', 'conradkleinespel',
+    'cosmincojocar', 'csskuber', 'dbubs', 'deady', 'dpatel06', 'EgoAleSum', 'enjoisnow', 'fairy-tale007', 'GaborLukacs',
+    'genevievelesperance', 'guntherboeckmann', 'hantiangang123', 'hwshin16', 'hyper-carrot', 'IlyaMarkovMipt',
+    'inc-cloitsch', 'javaforfun', 'jiangj6', 'jiyuan10240987', 'jonahgao', 'jy02471192', 'koesik', 'krisoul', 'Lampo6th',
+    'lbknoc', 'least-olegs', 'manish149', 'Martindlut', 'MattParker89', 'mikael84', 'm-masataka-n', 'mshahpalerra',
+    'msylinux', 'mumhero', 'nixlike', 'OGrape', 'OochaseoO', 'ostrichjockey', 'paoooooo', 'pateld982', 'PenyZhang',
+    'Planet2010', 'playmice', 'pyronicide', 'qinershi', 'raoofmd', 'reods', 'Richard-FogCreek', 'robodendron',
+    'roboFactory', 'sbatschelet', 'sirchen', 'skabet', 'sr34', 'srm912', 'Suranga-nizi', 'tinhtooaung', 'Vargsyn',
+    'vdemedes', 'Vish0007', 'wangxin0706', 'wenxin1234114', 'winhongscutcwl', 'wtsang8', 'wyt0125', 'x6j', 'XuChao-918',
+    'yanvalue', 'zgb2017', 'zgdxiaoxiao', 'zhangsm'
   ]
   skip_logins_arr.each { |skip_login| skip_logins[skip_login] = true }
 
