@@ -20,15 +20,19 @@ email2gh = {}
 gh = JSON.parse File.read 'github_users.json'
 gh.each do |user|
   email = user['email']
-  puts "Duplicate email in JSON: #{email}" if email2gh.key?(email)
-  email2gh[email] = user['login']
+  email2gh[email] = [] unless email2gh.key?(email)
+  email2gh[email] << user['login'].downcase
+end
+
+email2gh.each do |email, logins|
+  email2gh[email] = logins.uniq
 end
 
 f = nf = 0
 email2line.each do |email, line|
   if email2gh.key?(email)
-    login = email2gh[email]
-    email2line[email] = "#{line}\t#{login}"
+    logins = email2gh[email]
+    email2line[email] = "#{line}\t#{logins.join(',')}"
     f += 1
   else
     email2line[email] = "#{line}\t-"
