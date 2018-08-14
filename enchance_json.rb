@@ -111,7 +111,7 @@ def enchance_json(json_file, csv_file, actors_file)
   merge_multiple_logins data, false
 
   skip_logins = {}
-  str = File.read('skip_github_logins.txt')
+  str = File.read 'skip_github_logins.txt'
   skip_logins_arr = str.strip.split(',') + [nil]
   skip_logins_arr.each { |skip_login| skip_logins[skip_login] = true }
   File.write 'skip_github_logins.txt', skip_logins_arr.reject { |l| l.nil? }.sort.join(',')
