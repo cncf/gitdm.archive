@@ -4,21 +4,21 @@ Make sure that you don't have different case email duplicates in `cncf-config/em
 
 1. If you generated new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`
 2. To generate `git.log` file and make sure it includes all orgs used by `devstats` use cncf/devstats\'s `GHA2DB_PROJECTS_OVERRIDE="+cncf" PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 ./get_repos` and then final command line it generates. Make it `uniq`.
-3. To run `cncf/gitdm` on a generated `git.log` file do: `~/dev/alt/gitdm/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`
-4. To generate human readable text affiliation files: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`
-5. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too.
-6. Consider `./ghusers_cached.sh` or `./ghusers.sh` (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points). Sometimes you should just run `./ghusers.sh` without cache.
-7. `ghusers_partially_cached.sh` will refetch repos metadata and commits and get users data from `github_users.json` so you can save a lot of API points.
-7. To update (enchance) `github_users.json` with new affiliations `./enchance_json.sh`. If you run `ghusers` you may need to update `skip_github_logins.txt` with new broken GitHub logins found.
-8. To merge multiple GitHub logins data (for example propagate known affiliation to unknown or not found on the same GitHub login) run: `./merge_github_logins.sh`.
-9. Because this can find new affiliations you can now use `./import_from_github_users.sh` to import back from `github_users.json` and then `./lower_unique.sh cncf-config/email-map` and restart from step 3.
-10. Run `./correlations.sh` and examine its output `correlations.txt` to try to normalize company names and remove common suffixes like Ltd., Corp. and downcase/upcase differences.
-11. Run `./lookup_json.sh` and examine its output JSONs - those GitHub profiles have some useful data directly available - this will save you some manual research work.
-12. *ALWAYS* before any commit to GitHub run: `./handle_forbidden_data.sh` to remove any forbiden affiliations, please also see `FORBIDDEN_DATA.md`.
-13. You can use `./clear_affiliations_in_json.sh` to clear all affiliations on a generated `github_users.json`.
-14. You can create smaller final json for `cncf/devstats` using `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`.
-15. To generate final `unknowns.csv` manual research task file run: `./unknowns.rb`.
-
+3. Update `repos.txt` to contain all repositories returned by the above command.
+4. To run `cncf/gitdm` on a generated `git.log` file do: `~/dev/alt/gitdm/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`
+5. To generate human readable text affiliation files: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`
+6. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too.
+7. Consider `./ghusers_cached.sh` or `./ghusers.sh` (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points). Sometimes you should just run `./ghusers.sh` without cache.
+8. `ghusers_partially_cached.sh` will refetch repos metadata and commits and get users data from `github_users.json` so you can save a lot of API points.
+9. To update (enchance) `github_users.json` with new affiliations `./enchance_json.sh`. If you run `ghusers` you may need to update `skip_github_logins.txt` with new broken GitHub logins found.
+10. To merge multiple GitHub logins data (for example propagate known affiliation to unknown or not found on the same GitHub login) run: `./merge_github_logins.sh`.
+11. Because this can find new affiliations you can now use `./import_from_github_users.sh` to import back from `github_users.json` and then `./lower_unique.sh cncf-config/email-map` and restart from step 3.
+12. Run `./correlations.sh` and examine its output `correlations.txt` to try to normalize company names and remove common suffixes like Ltd., Corp. and downcase/upcase differences.
+13. Run `./lookup_json.sh` and examine its output JSONs - those GitHub profiles have some useful data directly available - this will save you some manual research work.
+14. *ALWAYS* before any commit to GitHub run: `./handle_forbidden_data.sh` to remove any forbiden affiliations, please also see `FORBIDDEN_DATA.md`.
+15. You can use `./clear_affiliations_in_json.sh` to clear all affiliations on a generated `github_users.json`.
+16. You can create smaller final json for `cncf/devstats` using `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`.
+17. To generate final `unknowns.csv` manual research task file run: `./unknowns.rb`.
 
 # Example command generated by `cncf/devstats/get_repos`:
 - `./all_repos_log.sh /root/devstats_repos/BuoyantIO/* /root/devstats_repos/GoogleCloudPlatform/* /root/devstats_repos/cncf/* /root/devstats_repos/containerd/* /root/devstats_repos/coredns/* /root/devstats_repos/coreos/* /root/devstats_repos/docker/* /root/devstats_repos/fluent/* /root/devstats_repos/grpc/* /root/devstats_repos/kubernetes/* /root/devstats_repos/kubernetes-client/* /root/devstats_repos/kubernetes-helm/* /root/devstats_repos/kubernetes-incubator/* /root/devstats_repos/linkerd/* /root/devstats_repos/opentracing/* /root/devstats_repos/prometheus/* /root/devstats_repos/rkt/* /root/devstats_repos/rktproject/*`
