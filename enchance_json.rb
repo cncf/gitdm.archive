@@ -113,7 +113,7 @@ def enchance_json(json_file, csv_file, actors_file)
   skip_logins = {}
   skip_logins_arr = [
     # invalid
-    '', nil,
+    '',
     # bots
     'greenkeeper[bot]', 'web-flow', 'k8s-merge-robot', 'codecov[bot]', 'stale[bot]', 'Docker Library Bot',
     'rootcause[bot]',
@@ -239,6 +239,7 @@ def enchance_json(json_file, csv_file, actors_file)
     'vdemedes', 'Vish0007', 'wangxin0706', 'wenxin1234114', 'winhongscutcwl', 'wtsang8', 'wyt0125', 'x6j', 'XuChao-918',
     'yanvalue', 'zgb2017', 'zgdxiaoxiao', 'zhangsm'
   ]
+  File.write 'skip_github_logins.txt', skip_logins_arr.sort.join(',')
   skip_logins_arr.each { |skip_login| skip_logins[skip_login] = true }
 
   # Actors from cncf/devstats that are missing in our JSON
