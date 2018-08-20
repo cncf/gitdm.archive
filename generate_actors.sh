@@ -27,6 +27,7 @@ sudo -u postgres psql -tA helm < ~/dev/go/src/devstats/util_sql/actors.sql >> ac
 sudo -u postgres psql -tA harbor < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA openmetrics < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA etcd < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA tikv < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA cncf < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA allprj < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 cat actors.txt | sort | uniq > actors.tmp
