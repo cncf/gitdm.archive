@@ -1,5 +1,9 @@
 Those companies are unmappable to ASCII only symbols
 [["МТС", 1], ["НИИ АА", 1], ["徳を積む", 1], ["倫理的に妥当な箱", 1], ["中佑", 1], ["الصحيفة الآقتصادية", 1], ["패스트캠퍼스", 1], ["НГС", 1], ["欢聚时代", 1], ["豆瓣", 1], ["うんこ", 1], ["カブク", 1], ["스마일게이트", 1], ["株式会社ドヴァ", 1], ["✕✕✕✕✕", 1], ["北京天威诚信电子商务服务有限公司", 1], ["Cloud Security", 1], ["Восход", 1], ["社会大学", 1], ["株式会社アニメイトラボ", 1]]
+Those companies map into the same key 'jdcom':
+[["Jd.Com", 10], ["JD.COM", 2]]
+Those companies map into the same key 'cockroach':
+[["Cockroach Labs", 9], ["Cockroach", 2]]
 Those companies map into the same key 'fusn':
 [["Fusion-io", 1], ["Fusion Electronics", 1]]
 Similar mappings > 70.0% similar:
@@ -32,7 +36,7 @@ Similar mappings > 70.0% similar:
 [76.0, [["Pieter Lange PTLC", 1]], [["Pieter Lange Snow", 1]], "pieter lange ptlc <> pieter lange snow"]
 [75.0, [["2GIS", 5]], [["Egis Software", 1]], "2gis <> egis"]
 [75.0, [["Ada", 1]], [["SADA Systems", 1]], "ada <> sada"]
-[75.0, [["AliCloud", 1]], [["Caicloud", 23]], "alicloud <> caicloud"]
+[75.0, [["AliCloud", 1]], [["Caicloud", 24]], "alicloud <> caicloud"]
 [75.0, [["ALO7 爱乐奇", 2]], [["Elo7", 1]], "alo7 <> elo7"]
 [75.0, [["CI&T", 1]], [["Citygroup", 2]], "cit <> city"]
 [75.0, [["Cloudin", 3]], [["Cloudius Systems", 1]], "cloudin <> cloudius"]
@@ -61,7 +65,7 @@ Similar mappings > 70.0% similar:
 [75.0, [["Streamlio", 1]], [["StreamMe", 1]], "streaml <> streamme"]
 [75.0, [["StreamMe", 1]], [["Ustream", 4]], "streamme <> ustream"]
 [75.0, [["Twitch", 1]], [["twitch.tv", 1]], "twitch <> twitchtv"]
-[75.0, [["Uber", 30]], [["Vube", 1]], "uber <> vube"]
+[75.0, [["Uber", 32]], [["Vube", 1]], "uber <> vube"]
 [75.0, [["Wish", 1]], [["W.I.S.V", 1]], "wish <> wisv"]
 [73.0, [["HomeAway", 1]], [["HomeAway.com", 2]], "homeaway <> homeawaycom"]
 [73.0, [["Informatica", 1]], [["Information Security", 1]], "informatica <> informatn"]
