@@ -21,7 +21,7 @@ gh = JSON.parse File.read 'github_users.json'
 gh.each do |user|
   email = user['email']
   email2gh[email] = [] unless email2gh.key?(email)
-  email2gh[email] << user['login'].downcase
+  email2gh[email] << "https://github.com/#{user['login'].downcase}"
 end
 
 email2gh.each do |email, logins|
