@@ -99,7 +99,7 @@ def maintainers(maintainers_file, users_file, config_file)
         rate_limit()
         oinited = true
       end
-      STDERR.puts "We don't know GitHub login: #{login}, company: #{company}"
+      STDERR.puts "We don't know GitHub login: #{login}, company: #{company}, asking GitHub"
       e = "#{login}!users.noreply.github.com"
       name = affs_names[login]
       begin
