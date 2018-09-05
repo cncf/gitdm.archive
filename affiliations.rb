@@ -7,8 +7,13 @@ def affiliations(affiliations_file)
   CSV.foreach(affiliations_file, headers: true) do |row|
     next if is_comment row
     h = row.to_h
+    possible_emails = (h['new emails'] || '').split(',').map(&:strip) << h['email'].strip
     emails = ((h['new emails'] || '').split(',').map(&:strip).map { |e| email_encode(e) } << email_encode(h['email'].strip)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
-    p(emails) if emails.length > 1
+    if emails.length != possible_emails.length
+      puts "Wrong config"
+      p h
+      binding.pry
+    end
   end
 end
 
