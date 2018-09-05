@@ -14,13 +14,15 @@ def affiliations(affiliations_file)
       puts "Wrong emails config"
       p h
       binding.pry
+      next
     end
     possible_affs = (h['affiliations'] || '').split(',').map(&:strip)
-    affs = possible_affs.reject { |a| a.nil? || a.empty? }.uniq
+    affs = possible_affs.reject { |a| a.nil? || a.empty? || a == '/' }.uniq
     if affs.length != possible_affs.length
       puts "Wrong affiliations config"
       p h
       binding.pry
+      next
     end
     affs.each do |aff|
       possible_data = aff.split('<').map(&:strip)
@@ -30,6 +32,7 @@ def affiliations(affiliations_file)
         p data
         p h
         binding.pry
+        next
       end
       if data.length == 1
         emails.each { |e| all_affs << "#{e} #{aff}" }
@@ -40,6 +43,7 @@ def affiliations(affiliations_file)
           p data
           p h
           binding.pry
+          next
         end
         begin
           ddt = DateTime.strptime(dt, '%Y-%m-%d')
@@ -51,6 +55,7 @@ def affiliations(affiliations_file)
           p data
           p h
           binding.pry
+          next
         end
       end
     end
