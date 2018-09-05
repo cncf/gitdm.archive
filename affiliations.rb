@@ -55,7 +55,8 @@ def affiliations(affiliations_file)
       end
     end
   end
-  p all_affs
+  puts "Imported #{all_affs.length} affiliations"
+  all_affs.each { |d| STDERR.puts d }
 end
 
 if ARGV.size < 1
