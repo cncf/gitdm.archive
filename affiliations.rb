@@ -27,6 +27,7 @@ def affiliations(affiliations_file)
       binding.pry
       next
     end
+    next if affs == []
     n_final = 0
     affs.each do |aff|
       ary = aff.split('<').map(&:strip)
