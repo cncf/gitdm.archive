@@ -32,8 +32,19 @@ f = nf = 0
 email2line.each do |email, line|
   ary = line.split "\t"
   name = ary[2]
+  email = ary[1]
+  ary2 = email.split '!'
+  uname = ary2[0]
+  dom = ary2[1]
   escaped_name = URI.escape(name)
-  search = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}"
+  escaped_uname = URI.escape(name + ' ' + uname)
+  search = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}\nhttps://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}"
+  if !dom.nil? && dom.length > 0
+    ary3 = dom.split '.'
+    domain = ary3[0]
+    escaped_domain = URI.escape(name + ' ' + domain)
+    search += "\nhttps://www.linkedin.com/search/results/index/?keywords=#{escaped_domain}"
+  end
   if email2gh.key?(email)
     logins = email2gh[email]
     email2line[email] = "#{line}\t#{logins.join(',')}\t#{search}"
