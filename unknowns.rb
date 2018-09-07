@@ -38,12 +38,13 @@ email2line.each do |email, line|
   dom = ary2[1]
   escaped_name = URI.escape(name)
   escaped_uname = URI.escape(name + ' ' + uname)
-  search = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}\nhttps://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}"
   if !dom.nil? && dom.length > 0
     ary3 = dom.split '.'
     domain = ary3[0]
     escaped_domain = URI.escape(name + ' ' + domain)
-    search += "\nhttps://www.linkedin.com/search/results/index/?keywords=#{escaped_domain}"
+    search = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}\thttps://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}\thttps://www.linkedin.com/search/results/index/?keywords=#{escaped_domain}"
+  else
+    search = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}\thttps://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}\t-"
   end
   if email2gh.key?(email)
     logins = email2gh[email]
@@ -61,11 +62,11 @@ arr = []
 email2line.each { |email, line| arr << line.split("\t") }
 arr = arr.sort_by { |item| [item[0], -item[3].to_i] }
 
-hdr = %w(type email name github search patches)
+hdr = %w(type email name github linkedin1 linkedin2 linkedin3 patches)
 CSV.open('unknowns.csv', 'w', headers: hdr) do |csv|
   csv << hdr
   arr.each do |ary|
-    csv << [ary[0], ary[1], ary[2], ary[4], ary[5], ary[3]]
+    csv << [ary[0], ary[1], ary[2], ary[4], ary[5], ary[6], ary[7], ary[3]]
   end
 end
 
