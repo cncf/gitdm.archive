@@ -35,7 +35,7 @@ def gen_geodata(geodata_file)
     geodata << ary if ary.length > 0
     ary2 = vals[3].split(',').map(&:strip).reject(&:nil?)
     altnames << [gnid, vals[3].split(',').map(&:strip).reject(&:nil?)] if ary2.length > 0
-    if rows % 2000 == 0
+    if rows % 2500 == 0
         puts "Execute bucket row: #{rows} (altnames #{altnames.length}, geonames #{geodata.length})"
       ########
       # alternate names
@@ -44,7 +44,7 @@ def gen_geodata(geodata_file)
       n = 0
       vars = []
       altnames.each_with_index do |data, idx|
-        puts "Record #{idx}" if idx > 0 && idx % 200 == 0
+        puts "Record #{idx}" if idx > 0 && idx % 500 == 0
         gnid = data[0]
         data[1].each do |altname|
           q += "($#{n+1}, $#{n+2}), "
@@ -53,29 +53,33 @@ def gen_geodata(geodata_file)
           vars << altname
         end
       end
-      q = q[0..(q.length-3)] if n > 0
-      q = q + " on conflict do nothing" if skip_conflict_alt
-      puts "Final SQL exec prepared #{vars.length}..."
-      c.prepare('alternatenames_q', q)
-      c.exec_prepared('alternatenames_q', vars)
-      c.exec("deallocate alternatenames_q")
+      if n > 0
+        q = q[0..(q.length-3)]
+        q = q + " on conflict do nothing" if skip_conflict_alt
+        puts "Final SQL exec prepared #{vars.length}..."
+        c.prepare('alternatenames_q', q)
+        c.exec_prepared('alternatenames_q', vars)
+        c.exec("deallocate alternatenames_q")
+      end
       # geodata
       puts "Mass inserting geonames"
       q = "insert into geonames(geonameid, name, asciiname, latitude, longitude, countrycode, ac1, ac2, ac3, ac4, population, tz) values "
       n = 0
       vars = []
       geodata.each_with_index do |row, idx|
-        puts "Record #{idx}" if idx > 0 && idx % 200 == 0
+        puts "Record #{idx}" if idx > 0 && idx % 500 == 0
         q += "($#{n+1}, $#{n+2}, $#{n+3}, $#{n+4}, $#{n+5}, $#{n+6}, $#{n+7}, $#{n+8}, $#{n+9}, $#{n+10}, $#{n+11}, $#{n+12}), "
         n += 12
         row.each { |col| vars << col }
       end
-      q = q[0..(q.length-3)] if n > 0
-      q = q + " on conflict do nothing" if skip_conflict_geo
-      puts "Final SQL exec prepared #{vars.length}..."
-      c.prepare('geodata_q', q)
-      c.exec_prepared('geodata_q', vars)
-      c.exec("deallocate geodata_q")
+      if n > 0
+        q = q[0..(q.length-3)]
+        q = q + " on conflict do nothing" if skip_conflict_geo
+        puts "Final SQL exec prepared #{vars.length}..."
+        c.prepare('geodata_q', q)
+        c.exec_prepared('geodata_q', vars)
+        c.exec("deallocate geodata_q")
+      end
       # cleanup for next iteration
       altnames = []
       geodata = []
