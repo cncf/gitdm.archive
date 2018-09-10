@@ -56,54 +56,66 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
   ['P', 'A'].each do |fcl|
     data = check_stmt c, 'direct_name_fcl', [fcl, loc]
     data.each { |row| ret << row }
-    if aloc != loc
+    if data.length < 1 && aloc != loc
       data = check_stmt c, 'direct_aname_fcl', [fcl, aloc]
       data.each { |row| ret << row }
     end
-    data = check_stmt c, 'direct_lname_fcl', [fcl, lloc]
-    data.each { |row| ret << row }
-    if aloc != loc
-      data = check_stmt c, 'direct_laname_fcl', [fcl, laloc]
+    if data.legth < 1
+      data = check_stmt c, 'direct_lname_fcl', [fcl, lloc]
       data.each { |row| ret << row }
-    end
-    data = check_stmt c, 'alt_name_fcl', [fcl, loc]
-    data.each { |row| ret << row }
-    if aloc != loc
-      data = check_stmt c, 'alt_name_fcl', [fcl, aloc]
-      data.each { |row| ret << row }
-    end
-    data = check_stmt c, 'direct_lname_fcl', [fcl, lloc]
-    data.each { |row| ret << row }
-    if aloc != loc
-      data = check_stmt c, 'direct_lname_fcl', [fcl, laloc]
-      data.each { |row| ret << row }
+      if data.length < 1 && aloc != loc
+        data = check_stmt c, 'direct_laname_fcl', [fcl, laloc]
+        data.each { |row| ret << row }
+      end
+      if data.length < 1
+        data = check_stmt c, 'alt_name_fcl', [fcl, loc]
+        data.each { |row| ret << row }
+        if data.length < 1 && aloc != loc
+          data = check_stmt c, 'alt_name_fcl', [fcl, aloc]
+          data.each { |row| ret << row }
+        end
+        if data.length < 1
+          data = check_stmt c, 'alt_lname_fcl', [fcl, lloc]
+          data.each { |row| ret << row }
+          if data.length < 1 && aloc != loc
+            data = check_stmt c, 'alt_lname_fcl', [fcl, laloc]
+            data.each { |row| ret << row }
+          end
+        end
+      end
     end
   end
   data = check_stmt c, 'direct_name', [loc]
   data.each { |row| ret << row }
-  if aloc != loc
+  if data.length < 1 && aloc != loc
     data = check_stmt c, 'direct_aname', [aloc]
     data.each { |row| ret << row }
   end
-  data = check_stmt c, 'direct_lname', [lloc]
-  data.each { |row| ret << row }
-  if aloc != loc
-    data = check_stmt c, 'direct_laname', [laloc]
+  if data.length < 1
+    data = check_stmt c, 'direct_lname', [lloc]
     data.each { |row| ret << row }
+    if data.length < 1 && aloc != loc
+      data = check_stmt c, 'direct_laname', [laloc]
+      data.each { |row| ret << row }
+    end
+    if data.length < 1
+      data = check_stmt c, 'alt_name', [loc]
+      data.each { |row| ret << row }
+      if data.length < 1 && aloc != loc
+        data = check_stmt c, 'alt_name', [aloc]
+        data.each { |row| ret << row }
+      end
+      if data.length < 1
+        data = check_stmt c, 'direct_lname', [lloc]
+        data.each { |row| ret << row }
+        if data.length < 1 && aloc != loc
+          data = check_stmt c, 'direct_lname', [laloc]
+          data.each { |row| ret << row }
+        end
+      end
+    end
   end
-  data = check_stmt c, 'alt_name', [loc]
-  data.each { |row| ret << row }
-  if aloc != loc
-    data = check_stmt c, 'alt_name', [aloc]
-    data.each { |row| ret << row }
-  end
-  data = check_stmt c, 'direct_lname', [lloc]
-  data.each { |row| ret << row }
-  if aloc != loc
-    data = check_stmt c, 'direct_lname', [laloc]
-    data.each { |row| ret << row }
-  end
-  if rec
+  if data.length < 1 && rec
     dloc = loc.delete '$*+={}:"|\\`~?/.<>'
     if loc != dloc
       data = get_cid_from_loc c, dloc, false, pref, suff
@@ -127,7 +139,10 @@ def get_cid(c, loc)
     data = get_cid_from_loc c, dloc, false, '%', '%'
     data.each { |row| ret << row }
   end
-  return ret
+  return nil if ret.length < 1
+  ret = ret.sort_by { |row| -row[1] }
+  binding.pry
+  return ret[0][0]
 end
 
 def geousers(json_file)
