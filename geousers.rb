@@ -3,102 +3,131 @@ require 'json'
 require 'pg'
 require 'unidecoder'
 
+$gcache = {}
+
 def check_stmt(c, stmt_name, args)
   begin
+    key = [stmt_name, args]
+    p key
+    binding.pry
+    if $gcache.key?(key)
+      return $gcache[key]
+    end
     rs = c.exec_prepared stmt_name, args
     if rs.values && rs.values.count > 0
-      return rs.values.first.first
+      $gcache[key] = [rs.values.first]
+      return [rs.values.first]
     end
+    $gcache[key] = []
   rescue PG::Error => e
     puts e
     binding.pry
   ensure
     rs.clear if rs
   end
-  return nil
+  return []
 end
 
-def get_cid_from_loc(c, iloc, rec)
+def get_cid_from_loc(c, iloc, rec, pref, suff)
+  ret = []
   loc = iloc.strip
   loc.gsub! ';', ','
+  loc = loc.delete '%_[^]'
   binding.pry if loc.length < 1
   loc = loc[1..-1] if loc[0] == '@'
   if loc.length < 3
     puts "Too short: #{loc}"
-    # return nil
+    return []
   end
   ary = loc.split(',').map(&:strip)
-  binding.pry if ary.length > 2
   if ary.length > 1
     ary.each do |part|
-      cid = get_cid_from_loc c, part, rec
-      return cid unless cid.nil?
+      data = get_cid_from_loc c, part, rec, pref, suff
+      data.each { |row| data << row }
     end
-    return nil
+    return data
   end
+  loc = pref + loc if pref != ''
+  loc = loc  + suff if suff != ''
   aloc = loc.to_ascii.strip
   lloc = loc.downcase
   laloc = aloc.downcase
 
-  ['A', 'P'].each do |fcl|
-    cid = check_stmt c, 'direct_name_fcl', [fcl, loc]
-    return cid unless cid.nil?
+  ['P', 'A'].each do |fcl|
+    data = check_stmt c, 'direct_name_fcl', [fcl, loc]
+    data.each { |row| ret << row }
     if aloc != loc
-      cid = check_stmt c, 'direct_aname_fcl', [fcl, aloc]
-      return cid unless cid.nil?
+      data = check_stmt c, 'direct_aname_fcl', [fcl, aloc]
+      data.each { |row| ret << row }
     end
-    cid = check_stmt c, 'direct_lname_fcl', [fcl, lloc]
-    return cid unless cid.nil?
+    data = check_stmt c, 'direct_lname_fcl', [fcl, lloc]
+    data.each { |row| ret << row }
     if aloc != loc
-      cid = check_stmt c, 'direct_laname_fcl', [fcl, laloc]
-      return cid unless cid.nil?
+      data = check_stmt c, 'direct_laname_fcl', [fcl, laloc]
+      data.each { |row| ret << row }
     end
-    cid = check_stmt c, 'alt_name_fcl', [fcl, loc]
-    return cid unless cid.nil?
+    data = check_stmt c, 'alt_name_fcl', [fcl, loc]
+    data.each { |row| ret << row }
     if aloc != loc
-      cid = check_stmt c, 'alt_name_fcl', [fcl, aloc]
-      return cid unless cid.nil?
+      data = check_stmt c, 'alt_name_fcl', [fcl, aloc]
+      data.each { |row| ret << row }
     end
-    cid = check_stmt c, 'direct_lname_fcl', [fcl, lloc]
-    return cid unless cid.nil?
+    data = check_stmt c, 'direct_lname_fcl', [fcl, lloc]
+    data.each { |row| ret << row }
     if aloc != loc
-      cid = check_stmt c, 'direct_lname_fcl', [fcl, laloc]
-      return cid unless cid.nil?
+      data = check_stmt c, 'direct_lname_fcl', [fcl, laloc]
+      data.each { |row| ret << row }
     end
   end
-  cid = check_stmt c, 'direct_name', [loc]
-  return cid unless cid.nil?
+  data = check_stmt c, 'direct_name', [loc]
+  data.each { |row| ret << row }
   if aloc != loc
-    cid = check_stmt c, 'direct_aname', [aloc]
-    return cid unless cid.nil?
+    data = check_stmt c, 'direct_aname', [aloc]
+    data.each { |row| ret << row }
   end
-  cid = check_stmt c, 'direct_lname', [lloc]
-  return cid unless cid.nil?
+  data = check_stmt c, 'direct_lname', [lloc]
+  data.each { |row| ret << row }
   if aloc != loc
-    cid = check_stmt c, 'direct_laname', [laloc]
-    return cid unless cid.nil?
+    data = check_stmt c, 'direct_laname', [laloc]
+    data.each { |row| ret << row }
   end
-  cid = check_stmt c, 'alt_name', [loc]
-  return cid unless cid.nil?
+  data = check_stmt c, 'alt_name', [loc]
+  data.each { |row| ret << row }
   if aloc != loc
-    cid = check_stmt c, 'alt_name', [aloc]
-    return cid unless cid.nil?
+    data = check_stmt c, 'alt_name', [aloc]
+    data.each { |row| ret << row }
   end
-  cid = check_stmt c, 'direct_lname', [lloc]
-  return cid unless cid.nil?
+  data = check_stmt c, 'direct_lname', [lloc]
+  data.each { |row| ret << row }
   if aloc != loc
-    cid = check_stmt c, 'direct_lname', [laloc]
-    return cid unless cid.nil?
+    data = check_stmt c, 'direct_lname', [laloc]
+    data.each { |row| ret << row }
   end
   if rec
-    dloc = loc.delete '$%^*+=[]{}:"|\\`~?/.<>_'
+    dloc = loc.delete '$*+={}:"|\\`~?/.<>'
     if loc != dloc
-      cid = get_cid_from_loc c, dloc, false
-      binding.pry
-      return cid
+      data = get_cid_from_loc c, dloc, false, pref, suff
+      data.each { |row| ret << row }
     end
   end
-  return nil
+  return ret
+end
+
+def get_cid(c, loc)
+  ret = get_cid_from_loc c, loc, true, '', ''
+  if data.length < 1
+    data = get_cid_from_loc c, dloc, false, '', '%'
+    data.each { |row| ret << row }
+  end
+  if data.length < 1
+    data = get_cid_from_loc c, dloc, false, '%', ''
+    data.each { |row| ret << row }
+  end
+  if data.length < 1
+    data = get_cid_from_loc c, dloc, false, '%', '%'
+    data.each { |row| ret << row }
+  end
+  return ret
 end
 
 def geousers(json_file)
@@ -106,18 +135,26 @@ def geousers(json_file)
   c = PG.connect host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS']
 
   # PSQL statements used to get country codes
-  c.prepare 'direct_name_fcl', 'select countrycode from geonames where fcl = $1 and name = $2 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_aname_fcl', 'select countrycode from geonames where fcl = $1 and asciiname = $2 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_lname_fcl', 'select countrycode from geonames where fcl = $1 and lower(name) = $2 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_laname_fcl', 'select countrycode from geonames where fcl = $1 and lower(asciiname) = $2 order by population desc, geonameid asc limit 1'
-  c.prepare 'alt_name_fcl', 'select countrycode from geonames where fcl = $1 and geonameid in (select geonameid from alternatenames where altname = $2) order by population desc, geonameid asc limit 1'
-  c.prepare 'alt_lname_fcl', 'select countrycode from geonames where fcl = $1 and geonameid in (select geonameid from alternatenames where lower(altname) = $2) order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_name', 'select countrycode from geonames where name = $1 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_aname', 'select countrycode from geonames where asciiname = $1 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_lname', 'select countrycode from geonames where lower(name) = $1 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_laname', 'select countrycode from geonames where lower(asciiname) = $1 order by population desc, geonameid asc limit 1'
-  c.prepare 'alt_name', 'select countrycode from geonames where geonameid in (select geonameid from alternatenames where altname = $1) order by population desc, geonameid asc limit 1'
-  c.prepare 'alt_lname', 'select countrycode from geonames where geonameid in (select geonameid from alternatenames where lower(altname) = $1) order by population desc, geonameid asc limit 1'
+  c.prepare 'direct_name_fcl', 'select countrycode, population, name from geonames where fcl = $1 and name like $2 order by population desc, geonameid asc limit 1'
+  c.prepare 'direct_aname_fcl', 'select countrycode, population, name from geonames where fcl = $1 and asciiname like $2 order by population desc, geonameid asc limit 1'
+  c.prepare 'direct_lname_fcl', 'select countrycode, population, name from geonames where fcl = $1 and lower(name) like $2 order by population desc, geonameid asc limit 1'
+  c.prepare 'direct_laname_fcl', 'select countrycode, population, name from geonames where fcl = $1 and lower(asciiname) like $2 order by population desc, geonameid asc limit 1'
+  c.prepare 'alt_name_fcl', 'select countrycode, population, name from geonames where fcl = $1 and geonameid in (select geonameid from alternatenames where altname like $2) order by population desc, geonameid asc limit 1'
+  c.prepare 'alt_lname_fcl', 'select countrycode, population, name from geonames where fcl = $1 and geonameid in (select geonameid from alternatenames where lower(altname) like $2) order by population desc, geonameid asc limit 1'
+  c.prepare 'direct_name', 'select countrycode, population, name from geonames where name like $1 order by population desc, geonameid asc limit 1'
+  c.prepare 'direct_aname', 'select countrycode, population, name from geonames where asciiname like $1 order by population desc, geonameid asc limit 1'
+  c.prepare 'direct_lname', 'select countrycode, population, name from geonames where lower(name) like $1 order by population desc, geonameid asc limit 1'
+  c.prepare 'direct_laname', 'select countrycode, population, name from geonames where lower(asciiname) like $1 order by population desc, geonameid asc limit 1'
+  c.prepare 'alt_name', 'select countrycode, population, name from geonames where geonameid in (select geonameid from alternatenames where altname like $1) order by population desc, geonameid asc limit 1'
+  c.prepare 'alt_lname', 'select countrycode, population, name from geonames where geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by population desc, geonameid asc limit 1'
+
+  [
+    'Los Angeles, CA, USA',
+  ].each do |loc|
+    cid = get_cid c, loc
+    puts "Row #{loc} -> #{cid}"
+  end
+
   # Parse input JSON
   data = JSON.parse File.read json_file
 
@@ -132,7 +169,7 @@ def geousers(json_file)
     cid = nil
     if !loc.nil? && loc.length > 0
       l += 1
-      cid = get_cid_from_loc c, loc, true
+      cid = get_cid c, loc
       f += 1 unless cid.nil?
     end
     user['country_id'] = cid
@@ -142,8 +179,8 @@ def geousers(json_file)
   end
 
   # Write JSON back
-  # pretty = JSON.pretty_generate newj
-  # File.write json_file, newj
+  pretty = JSON.pretty_generate newj
+  File.write json_file, newj
 
   # Deallocate prepared statements
   c.exec 'deallocate direct_name_fcl'
