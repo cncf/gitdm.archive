@@ -1,10 +1,11 @@
 require 'pry'
 require 'pg'
 
-def geodata(geodata_file)
+def gen_geodata(geodata_file)
   c = PG.connect( host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS'] )
-  # set skip_conflict to true to skip insert conflicts, this should not be needed on a clean database
-  skip_conflict = false
+  # set skip_conflictX to true to skip insert conflicts, this should not be needed on a clean database
+  skip_conflict_alt = true
+  skip_conflict_geo = false
   cols = 19
   rows = 0
   altnames = []
@@ -34,44 +35,53 @@ def geodata(geodata_file)
     geodata << ary if ary.length > 0
     ary2 = vals[3].split(',').map(&:strip).reject(&:nil?)
     altnames << [gnid, vals[3].split(',').map(&:strip).reject(&:nil?)] if ary2.length > 0
-    puts "Row #{rows}" if rows % 10000 == 0
-  end
-  # alternate names
-  puts "Rows #{rows}\nMass inserting altername names..."
-  q = "insert into alternatenames(geonameid, altname) values "
-  n = 0
-  vars = []
-  altnames.each_with_index do |data, idx|
-    puts "Record #{idx}" if idx % 10000 == 0
-    gnid = data[0]
-    data[1].each do |altname|
-      q += "($#{n+1}, $#{n+2}), "
-      n += 2
-      vars << gnid
-      vars << altname
+    if rows % 2000 == 0
+        puts "Execute bucket row: #{rows} (altnames #{altnames.length}, geonames #{geodata.length})"
+      ########
+      # alternate names
+      puts "Mass inserting alternatenames"
+      q = "insert into alternatenames(geonameid, altname) values "
+      n = 0
+      vars = []
+      altnames.each_with_index do |data, idx|
+        puts "Record #{idx}" if idx > 0 && idx % 200 == 0
+        gnid = data[0]
+        data[1].each do |altname|
+          q += "($#{n+1}, $#{n+2}), "
+          n += 2
+          vars << gnid
+          vars << altname
+        end
+      end
+      q = q[0..(q.length-3)] if n > 0
+      q = q + " on conflict do nothing" if skip_conflict_alt
+      puts "Final SQL exec prepared #{vars.length}..."
+      c.prepare('alternatenames_q', q)
+      c.exec_prepared('alternatenames_q', vars)
+      c.exec("deallocate alternatenames_q")
+      # geodata
+      puts "Mass inserting geonames"
+      q = "insert into geonames(geonameid, name, asciiname, latitude, longitude, countrycode, ac1, ac2, ac3, ac4, population, tz) values "
+      n = 0
+      vars = []
+      geodata.each_with_index do |row, idx|
+        puts "Record #{idx}" if idx > 0 && idx % 200 == 0
+        q += "($#{n+1}, $#{n+2}, $#{n+3}, $#{n+4}, $#{n+5}, $#{n+6}, $#{n+7}, $#{n+8}, $#{n+9}, $#{n+10}, $#{n+11}, $#{n+12}), "
+        n += 12
+        row.each { |col| vars << col }
+      end
+      q = q[0..(q.length-3)] if n > 0
+      q = q + " on conflict do nothing" if skip_conflict_geo
+      puts "Final SQL exec prepared #{vars.length}..."
+      c.prepare('geodata_q', q)
+      c.exec_prepared('geodata_q', vars)
+      c.exec("deallocate geodata_q")
+      # cleanup for next iteration
+      altnames = []
+      geodata = []
+      ########
     end
   end
-  q = q[0..(q.length-3)] if n > 0
-  q = q + " on conflict do nothing" if skip_conflict
-  puts "Final SQL exec prepared..."
-  c.prepare('alternatenames_q', q) 
-  c.exec_prepared('alternatenames_q', vars)
-  # geodata
-  puts "Mass inserting geonames"
-  q = "insert into geonames(geonameid, name, asciiname, latitude, longitude, countrycode, ac1, ac2, ac3, ac4, population, tz) values "
-  n = 0
-  vars = []
-  geodata.each_with_index do |row, idx|
-    puts "Record #{idx}" if idx % 10000 == 0
-    q += "($#{n+1}, $#{n+2}, $#{n+3}, $#{n+4}, $#{n+5}, $#{n+6}, $#{n+7}, $#{n+8}, $#{n+9}, $#{n+10}, $#{n+11}, $#{n+12}), "
-    n += 12
-    row.each { |col| vars << col }
-  end
-  q = q[0..(q.length-3)] if n > 0
-  q = q + " on conflict do nothing" if skip_conflict
-  puts "Final SQL exec prepared..."
-  c.prepare('geodata_q', q)
-  c.exec_prepared('geodata_q', vars)
 end
 
 if ARGV.size < 1
@@ -79,4 +89,4 @@ if ARGV.size < 1
   exit(1)
 end
 
-geodata(ARGV[0])
+gen_geodata(ARGV[0])
