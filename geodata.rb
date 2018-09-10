@@ -24,18 +24,21 @@ def gen_geodata(geodata_file)
       vals[2],
       vals[4].to_f,
       vals[5].to_f,
+      vals[6],
+      vals[7],
       vals[8],
       vals[10],
       vals[11],
       vals[12],
       vals[13],
       vals[14].to_i,
+      vals[15].to_i,
       vals[17]
     ]
     geodata << ary if ary.length > 0
     ary2 = vals[3].split(',').map(&:strip).reject(&:nil?)
     altnames << [gnid, vals[3].split(',').map(&:strip).reject(&:nil?)] if ary2.length > 0
-    if rows % 2500 == 0
+    if rows % 3000 == 0
         puts "Execute bucket row: #{rows} (altnames #{altnames.length}, geonames #{geodata.length})"
       ########
       # alternate names
@@ -63,13 +66,13 @@ def gen_geodata(geodata_file)
       end
       # geodata
       puts "Mass inserting geonames"
-      q = "insert into geonames(geonameid, name, asciiname, latitude, longitude, countrycode, ac1, ac2, ac3, ac4, population, tz) values "
+      q = "insert into geonames(geonameid, name, asciiname, latitude, longitude, fcl, fco, countrycode, ac1, ac2, ac3, ac4, population, elevation, tz) values "
       n = 0
       vars = []
       geodata.each_with_index do |row, idx|
         puts "Record #{idx}" if idx > 0 && idx % 500 == 0
-        q += "($#{n+1}, $#{n+2}, $#{n+3}, $#{n+4}, $#{n+5}, $#{n+6}, $#{n+7}, $#{n+8}, $#{n+9}, $#{n+10}, $#{n+11}, $#{n+12}), "
-        n += 12
+        q += "($#{n+1}, $#{n+2}, $#{n+3}, $#{n+4}, $#{n+5}, $#{n+6}, $#{n+7}, $#{n+8}, $#{n+9}, $#{n+10}, $#{n+11}, $#{n+12}, $#{n+13}, $#{n+14}, $#{n+15}), "
+        n += 15
         row.each { |col| vars << col }
       end
       if n > 0
