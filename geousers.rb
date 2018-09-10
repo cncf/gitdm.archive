@@ -18,7 +18,7 @@ def check_stmt(c, stmt_name, args)
   return nil
 end
 
-def get_cid_from_loc(c, iloc)
+def get_cid_from_loc(c, iloc, rec)
   loc = iloc.strip
   loc.gsub! ';', ','
   binding.pry if loc.length < 1
@@ -31,7 +31,7 @@ def get_cid_from_loc(c, iloc)
   binding.pry if ary.length > 2
   if ary.length > 1
     ary.each do |part|
-      cid = get_cid_from_loc c, part
+      cid = get_cid_from_loc c, part, rec
       return cid unless cid.nil?
     end
     return nil
@@ -90,6 +90,14 @@ def get_cid_from_loc(c, iloc)
     cid = check_stmt c, 'direct_lname', [laloc]
     return cid unless cid.nil?
   end
+  if rec
+    dloc = loc.delete '$%^*+=[]{}:"|\\`~?/.<>_'
+    if loc != dloc
+      cid = get_cid_from_loc c, dloc, false
+      binding.pry
+      return cid
+    end
+  end
   return nil
 end
 
@@ -124,7 +132,7 @@ def geousers(json_file)
     cid = nil
     if !loc.nil? && loc.length > 0
       l += 1
-      cid = get_cid_from_loc c, loc
+      cid = get_cid_from_loc c, loc, true
       f += 1 unless cid.nil?
     end
     user['country_id'] = cid
