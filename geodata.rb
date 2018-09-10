@@ -60,9 +60,9 @@ def gen_geodata(geodata_file)
         q = q[0..(q.length-3)]
         q = q + " on conflict do nothing" if skip_conflict_alt
         puts "Final SQL exec prepared #{vars.length}..."
-        c.prepare('alternatenames_q', q)
-        c.exec_prepared('alternatenames_q', vars)
-        c.exec("deallocate alternatenames_q")
+        c.prepare 'alternatenames_q', q
+        c.exec_prepared 'alternatenames_q', vars
+        c.exec 'deallocate alternatenames_q'
       end
       # geodata
       puts "Mass inserting geonames"
@@ -79,9 +79,9 @@ def gen_geodata(geodata_file)
         q = q[0..(q.length-3)]
         q = q + " on conflict do nothing" if skip_conflict_geo
         puts "Final SQL exec prepared #{vars.length}..."
-        c.prepare('geodata_q', q)
-        c.exec_prepared('geodata_q', vars)
-        c.exec("deallocate geodata_q")
+        c.prepare 'geodata_q', q
+        c.exec_prepared 'geodata_q', vars
+        c.exec 'deallocate geodata_q'
       end
       # cleanup for next iteration
       altnames = []
