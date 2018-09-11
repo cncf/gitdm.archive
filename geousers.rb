@@ -37,6 +37,7 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
   loc = loc.delete '%_[^]'
   binding.pry if loc.length < 1
   loc = loc[1..-1] if loc[0] == '@'
+  # Change 3 --> 2 for next pass
   if loc.length < 3
     #puts "Too short: #{loc}"
     return []
@@ -172,12 +173,12 @@ def geousers(json_file)
   # Parse input JSON
   data = JSON.parse File.read json_file
 
-  # Strip JSON
+  # Process JSON
   newj = []
   n = 0
   l = 0
   f = 0
-  all = data.length
+  all_n = data.length
   data.each do |user|
     loc = user['location']
     login = user['login']
@@ -188,10 +189,10 @@ def geousers(json_file)
       cid = get_cid c, loc
       f += 1 unless cid.nil?
     end
-    user['country_id'] = cid
+    user['country_id'] = cid unless cid.nil?
     newj << user
     n += 1
-    puts "Row #{n}/#{n}: #{login}: (#{loc} -> #{cid}) locations #{l}, found #{f}, cache: #{$hit}/#{$miss}"
+    puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid}) locations #{l}, found #{f}, cache: #{$hit}/#{$miss}"
   end
 
   # Write JSON back
