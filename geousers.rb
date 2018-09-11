@@ -24,6 +24,7 @@ def check_stmt(c, stmt_name, args)
   rescue PG::Error => e
     puts e
     binding.pry
+    return []
   ensure
     rs.clear if rs
   end
@@ -35,7 +36,7 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
   loc = iloc.strip
   loc.gsub! ';', ','
   loc = loc.delete '%_[^]'
-  binding.pry if loc.length < 1
+  return [] if loc.length < 1
   loc = loc[1..-1] if loc[0] == '@'
   # Change 3 --> 2 for next pass
   if loc.length < 3
