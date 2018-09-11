@@ -39,8 +39,7 @@ def gen_geodata(geodata_file)
     ary2 = vals[3].split(',').map(&:strip).reject(&:nil?)
     altnames << [gnid, vals[3].split(',').map(&:strip).reject(&:nil?)] if ary2.length > 0
     if rows % 3000 == 0
-        puts "Execute bucket row: #{rows} (altnames #{altnames.length}, geonames #{geodata.length})"
-      ########
+      puts "Execute bucket row: #{rows} (altnames #{altnames.length}, geonames #{geodata.length})"
       # alternate names
       puts "Mass inserting alternatenames"
       q = "insert into alternatenames(geonameid, altname) values "
@@ -86,7 +85,6 @@ def gen_geodata(geodata_file)
       # cleanup for next iteration
       altnames = []
       geodata = []
-      ########
     end
   end
 end
