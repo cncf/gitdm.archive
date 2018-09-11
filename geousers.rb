@@ -11,7 +11,7 @@ def check_stmt(c, stmt_name, args)
   begin
     key = [stmt_name, args]
     if $gcache.key?(key)
-        $hit += 1
+      $hit += 1
       return $gcache[key]
     end
     $miss += 1
