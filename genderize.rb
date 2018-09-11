@@ -22,24 +22,27 @@ def get_sex(name, login, cid)
     alln << aname if aname != name
   end
   alln = alln.uniq
-  p alln
-  apikey = ENV['API_KEY']
+  api_key = ENV['API_KEY']
+  ret = []
   alln.each do |name|
     if $gcache.key?(name)
-        $hit += 1
-      return $gcache[name]
+      $hit += 1
+      ret << $gcache[name]
+      next
     end
     $miss += 1
-    uri = URI.parse("https://api.genderize.io?")
-    if !api_key.nil? && api_key != ''
-      uri += "apikey=#{api_key}&"
-    end
-    # name=kim&country_id=dk
+    suri = "https://api.genderize.io?name=#{URI.encode(name)}"
+    suri += "&apikey=#{api_key}" if !api_key.nil? && api_key != ''
+    suri += "&country_id=#{URI.encode(cid)}" if !cid.nil? && cid != ''
+    uri = URI.parse(suri)
     response = Net::HTTP.get_response(uri)
     data = JSON.parse(response.body)
-    p data
+    $gcache[name] = data
+    ret << data
   end
-  return nil
+  r = ret.reject { |r| r['gender'].nil? }.sort_by { |r| [-r['probability'], -r['count']] }
+  return nil, nil if r.count < 1
+  return r.first['gender'][0], r.first['probability']
 end
 
 def genderize(json_file)
@@ -56,12 +59,14 @@ def genderize(json_file)
     name = user['name']
     cid = user['country_id']
     csex = user['sex']
+    cprob = user['sex_prob']
     sex = nil
-    if csex.nil?
-      sex = get_sex name, login, cid
+    if csex.nil? || cprob.nil?
+      sex, prob = get_sex name, login, cid
       f += 1 unless sex.nil?
+      user['sex'] = sex
+      user['sex_prob'] = prob
     end
-    user['sex'] = sex unless sex.nil?
     newj << user
     n += 1
     puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex}) found #{f}, cache: #{$hit}/#{$miss}"
