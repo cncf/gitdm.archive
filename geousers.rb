@@ -128,22 +128,22 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
 end
 
 def get_cid(c, loc)
-  data = get_cid_from_loc c, loc, true, '', ''
-  if data.length < 1
-    data = get_cid_from_loc c, dloc, false, '', '%'
+  ret = get_cid_from_loc c, loc, true, '', ''
+  if ret.length < 1
+    data = get_cid_from_loc c, loc, false, '', '%'
     data.each { |row| ret << row }
   end
-  if data.length < 1
-    data = get_cid_from_loc c, dloc, false, '%', ''
+  if ret.length < 1
+    data = get_cid_from_loc c, loc, false, '%', ''
     data.each { |row| ret << row }
   end
-  if data.length < 1
-    data = get_cid_from_loc c, dloc, false, '%', '%'
+  if ret.length < 1
+    data = get_cid_from_loc c, loc, false, '%', '%'
     data.each { |row| ret << row }
   end
-  return nil if data.length < 1
-  data = data.sort_by { |row| -row[1].to_i }
-  return data[0][0]
+  return nil if ret.length < 1
+  ret = ret.sort_by { |row| -row[1].to_i }
+  return ret[0][0]
 end
 
 def geousers(json_file)
