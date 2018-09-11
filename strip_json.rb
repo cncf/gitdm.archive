@@ -7,7 +7,7 @@ def strip_json(json_in, json_out)
 
   # Strip JSON
   stripped = []
-  keys = %w(login email affiliation name commits)
+  keys = %w(login email affiliation name commits country_id)
   data.each do |row|
     stripped_row = {}
     keys.each { |key| stripped_row[key] = row[key] }

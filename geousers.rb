@@ -164,9 +164,7 @@ def geousers(json_file)
   c.prepare 'alt_name', 'select countrycode, population, name from geonames where geonameid in (select geonameid from alternatenames where altname like $1) order by population desc, geonameid asc limit 1'
   c.prepare 'alt_lname', 'select countrycode, population, name from geonames where geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by population desc, geonameid asc limit 1'
 
-  #[
-  #  'China',
-  #].each do |loc|
+  #['Россия',].each do |loc|
   #  cid = get_cid c, loc
   #  puts "Row #{loc} -> #{cid}"
   #end
