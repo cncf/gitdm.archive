@@ -38,7 +38,7 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
   binding.pry if loc.length < 1
   loc = loc[1..-1] if loc[0] == '@'
   if loc.length < 3
-    puts "Too short: #{loc}"
+    #puts "Too short: #{loc}"
     return []
   end
   ary = loc.split(',').map(&:strip)
@@ -129,15 +129,15 @@ end
 
 def get_cid(c, loc)
   ret = get_cid_from_loc c, loc, true, '', ''
-  if ret.length < 1
+  if ret.length < 1e10
     data = get_cid_from_loc c, loc, false, '', '%'
     data.each { |row| ret << row }
   end
-  if ret.length < 1
+  if ret.length < 1e10
     data = get_cid_from_loc c, loc, false, '%', ''
     data.each { |row| ret << row }
   end
-  if ret.length < 1
+  if ret.length < 1e10
     data = get_cid_from_loc c, loc, false, '%', '%'
     data.each { |row| ret << row }
   end
@@ -165,7 +165,7 @@ def geousers(json_file)
   c.prepare 'alt_lname', 'select countrycode, population, name from geonames where geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by population desc, geonameid asc limit 1'
 
   #[
-  #  'Los Angeles, CA, USA',
+  #  'China',
   #].each do |loc|
   #  cid = get_cid c, loc
   #  puts "Row #{loc} -> #{cid}"
