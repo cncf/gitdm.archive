@@ -25,9 +25,9 @@ def get_sex(name, login, cid)
   api_key = ENV['API_KEY']
   ret = []
   alln.each do |name|
-    if $gcache.key?(name)
+    if $gcache.key?([name, cid])
       $hit += 1
-      ret << $gcache[name]
+      ret << $gcache[[name, cid]]
       next
     end
     $miss += 1
@@ -37,7 +37,7 @@ def get_sex(name, login, cid)
     uri = URI.parse(suri)
     response = Net::HTTP.get_response(uri)
     data = JSON.parse(response.body)
-    $gcache[name] = data
+    $gcache[[name, cid]] = data
     ret << data
   end
   r = ret.reject { |r| r['gender'].nil? }.sort_by { |r| [-r['probability'], -r['count']] }
