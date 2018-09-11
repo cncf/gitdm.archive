@@ -69,7 +69,7 @@ def genderize(json_file)
     end
     newj << user
     n += 1
-    puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex}) found #{f}, cache: #{$hit}/#{$miss}"
+    puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{$hit}/#{$miss}"
   end
 
   # Write JSON back
