@@ -153,18 +153,18 @@ def geousers(json_file)
   c = PG.connect host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS']
 
   # PSQL statements used to get country codes
-  c.prepare 'direct_name_fcl', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and fcl = $1 and name like $2 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_aname_fcl', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and fcl = $1 and asciiname like $2 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_lname_fcl', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and fcl = $1 and lower(name) like $2 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_laname_fcl', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and fcl = $1 and lower(asciiname) like $2 order by population desc, geonameid asc limit 1'
-  c.prepare 'alt_name_fcl', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and fcl = $1 and geonameid in (select geonameid from alternatenames where altname like $2) order by population desc, geonameid asc limit 1'
-  c.prepare 'alt_lname_fcl', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and fcl = $1 and geonameid in (select geonameid from alternatenames where lower(altname) like $2) order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_name', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and name like $1 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_aname', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and asciiname like $1 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_lname', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and lower(name) like $1 order by population desc, geonameid asc limit 1'
-  c.prepare 'direct_laname', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and lower(asciiname) like $1 order by population desc, geonameid asc limit 1'
-  c.prepare 'alt_name', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and geonameid in (select geonameid from alternatenames where altname like $1) order by population desc, geonameid asc limit 1'
-  c.prepare 'alt_lname', 'select countrycode, population, name, tz from geonames where tz != \'\' and countrycode != \'\' and geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by population desc, geonameid asc limit 1'
+  c.prepare 'direct_name_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and name like $2 order by tz = '', population desc, geonameid asc limit 1'
+  c.prepare 'direct_aname_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and asciiname like $2 order tz = '', by population desc, geonameid asc limit 1'
+  c.prepare 'direct_lname_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and lower(name) like $2 order tz = '', by population desc, geonameid asc limit 1'
+  c.prepare 'direct_laname_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and lower(asciiname) like $2 order tz = '', by population desc, geonameid asc limit 1'
+  c.prepare 'alt_name_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and geonameid in (select geonameid from alternatenames where altname like $2) order by tz = '', population desc, geonameid asc limit 1'
+  c.prepare 'alt_lname_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and geonameid in (select geonameid from alternatenames where lower(altname) like $2) order by tz = '', population desc, geonameid asc limit 1'
+  c.prepare 'direct_name', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and name like $1 order by tz = '', population desc, geonameid asc limit 1'
+  c.prepare 'direct_aname', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and asciiname like $1 order by tz = '', population desc, geonameid asc limit 1'
+  c.prepare 'direct_lname', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and lower(name) like $1 order by tz = '', population desc, geonameid asc limit 1'
+  c.prepare 'direct_laname', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and lower(asciiname) like $1 order by tz = '', population desc, geonameid asc limit 1'
+  c.prepare 'alt_name', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where altname like $1) order by tz = '', population desc, geonameid asc limit 1'
+  c.prepare 'alt_lname', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by tz = '', population desc, geonameid asc limit 1'
 
   #['Россия',].each do |loc|
   #  cid = get_cid c, loc
