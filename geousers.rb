@@ -177,11 +177,13 @@ def geousers(json_file)
   n = 0
   l = 0
   f = 0
+  all = data.length
   data.each do |user|
     loc = user['location']
     login = user['login']
+    ccid = user['country_id']
     cid = nil
-    if !loc.nil? && loc.length > 0
+    if ccid.nil? && !loc.nil? && loc.length > 0
       l += 1
       cid = get_cid c, loc
       f += 1 unless cid.nil?
@@ -189,7 +191,7 @@ def geousers(json_file)
     user['country_id'] = cid
     newj << user
     n += 1
-    puts "Row #{n}: #{login}: (#{loc} -> #{cid}) locations #{l}, found #{f}, cache: #{$hit}/#{$miss}"
+    puts "Row #{n}/#{n}: #{login}: (#{loc} -> #{cid}) locations #{l}, found #{f}, cache: #{$hit}/#{$miss}"
   end
 
   # Write JSON back
