@@ -191,7 +191,7 @@ def geousers(json_file)
     user['country_id'] = cid
     newj << user
     n += 1
-    puts "Row #{login}: (#{loc} -> #{cid}) #{n}, locations #{l}, found #{f}, cache: #{$hit}/#{$miss}"
+    puts "Row #{n}: #{login}: (#{loc} -> #{cid}) locations #{l}, found #{f}, cache: #{$hit}/#{$miss}"
   end
 
   # Write JSON back
