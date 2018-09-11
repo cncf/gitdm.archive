@@ -196,7 +196,7 @@ def geousers(json_file)
 
   # Write JSON back
   pretty = JSON.pretty_generate newj
-  File.write json_file, newj
+  File.write json_file, pretty
 
   # Deallocate prepared statements
   c.exec 'deallocate direct_name_fcl'
