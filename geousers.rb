@@ -4,15 +4,17 @@ require 'pg'
 require 'unidecoder'
 
 $gcache = {}
+$hit = 0
+$miss = 0
 
 def check_stmt(c, stmt_name, args)
   begin
     key = [stmt_name, args]
-    p key
-    binding.pry
     if $gcache.key?(key)
+        $hit += 1
       return $gcache[key]
     end
+    $miss += 1
     rs = c.exec_prepared stmt_name, args
     if rs.values && rs.values.count > 0
       $gcache[key] = [rs.values.first]
@@ -43,9 +45,9 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
   if ary.length > 1
     ary.each do |part|
       data = get_cid_from_loc c, part, rec, pref, suff
-      data.each { |row| data << row }
+      data.each { |row| ret << row }
     end
-    return data
+    return ret
   end
   loc = pref + loc if pref != ''
   loc = loc  + suff if suff != ''
@@ -60,7 +62,7 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
       data = check_stmt c, 'direct_aname_fcl', [fcl, aloc]
       data.each { |row| ret << row }
     end
-    if data.legth < 1
+    if data.length < 1
       data = check_stmt c, 'direct_lname_fcl', [fcl, lloc]
       data.each { |row| ret << row }
       if data.length < 1 && aloc != loc
@@ -126,7 +128,7 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
 end
 
 def get_cid(c, loc)
-  ret = get_cid_from_loc c, loc, true, '', ''
+  data = get_cid_from_loc c, loc, true, '', ''
   if data.length < 1
     data = get_cid_from_loc c, dloc, false, '', '%'
     data.each { |row| ret << row }
@@ -139,10 +141,9 @@ def get_cid(c, loc)
     data = get_cid_from_loc c, dloc, false, '%', '%'
     data.each { |row| ret << row }
   end
-  return nil if ret.length < 1
-  ret = ret.sort_by { |row| -row[1] }
-  binding.pry
-  return ret[0][0]
+  return nil if data.length < 1
+  data = data.sort_by { |row| -row[1].to_i }
+  return data[0][0]
 end
 
 def geousers(json_file)
@@ -163,12 +164,12 @@ def geousers(json_file)
   c.prepare 'alt_name', 'select countrycode, population, name from geonames where geonameid in (select geonameid from alternatenames where altname like $1) order by population desc, geonameid asc limit 1'
   c.prepare 'alt_lname', 'select countrycode, population, name from geonames where geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by population desc, geonameid asc limit 1'
 
-  [
-    'Los Angeles, CA, USA',
-  ].each do |loc|
-    cid = get_cid c, loc
-    puts "Row #{loc} -> #{cid}"
-  end
+  #[
+  #  'Los Angeles, CA, USA',
+  #].each do |loc|
+  #  cid = get_cid c, loc
+  #  puts "Row #{loc} -> #{cid}"
+  #end
 
   # Parse input JSON
   data = JSON.parse File.read json_file
@@ -190,7 +191,7 @@ def geousers(json_file)
     user['country_id'] = cid
     newj << user
     n += 1
-    puts "Row #{login}: (#{loc} -> #{cid}) #{n}, locations #{l}, found #{f}"
+    puts "Row #{login}: (#{loc} -> #{cid}) #{n}, locations #{l}, found #{f}, cache: #{$hit}/#{$miss}"
   end
 
   # Write JSON back
