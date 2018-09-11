@@ -179,7 +179,7 @@ def geousers(json_file)
   l = 0
   f = 0
   all_n = data.length
-  data.each do |user|
+  data.each_with_index do |user, idx|
     loc = user['location']
     login = user['login']
     ccid = user['country_id']
@@ -197,6 +197,10 @@ def geousers(json_file)
     newj << user
     n += 1
     puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid}, #{tz}) locations #{l}, found #{f}, cache: #{$hit}/#{$miss}"
+    if idx > 0 && idx % 500 == 0
+      pretty = JSON.pretty_generate newj
+      File.write 'partial.json', pretty
+    end
   end
 
   # Write JSON back
