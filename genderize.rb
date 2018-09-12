@@ -43,6 +43,10 @@ def get_sex(name, login, cid)
       #data = { 'gender' => 'x', 'probability' => 1.0, 'count' => 10 }
       $gcache[[name, cid]] = data
       ret << data
+      if data.key? 'error'
+        puts data['error']
+        return nil, nil, false
+      end
     rescue StandardError => e
       puts e
       return nil, nil, false
@@ -60,25 +64,7 @@ def get_gcache
 end
 
 def generate_global_cache(cache)
-  #cache.each { |key, val| $gcache[key] = val }
-  cache.each do |key, val|
-    ary = key.scanf('["%[^"]", "%[^"]"]')
-    if ary.length == 2
-      $gcache[ary] = val
-    elsif ary.length == 1
-      ary2 = key.scanf('["%[^"]", %s]')
-      if ary2.length == 2 && ary2[1] == 'nil]'
-        ary2[1] = nil
-        $gcache[ary2] = val
-      else
-        puts "Wrong cache, skipping"
-        p [key, val]
-      end
-    else
-      puts "Wrong cache, skipping"
-      p [key, val]
-    end
-  end
+  cache.each { |key, val| $gcache[key] = val }
 end
 
 def genderize(json_file, json_file2, json_cache)
@@ -87,9 +73,6 @@ def genderize(json_file, json_file2, json_cache)
   data2 = JSON.parse File.read json_file2
   cache = JSON.parse File.read json_cache
   generate_global_cache cache
-  pretty = JSON.pretty_generate get_gcache
-  File.write json_cache, pretty
-  exit 1
 
   # Process JSONs
   # Create cache from second file

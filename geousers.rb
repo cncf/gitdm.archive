@@ -23,7 +23,6 @@ def check_stmt(c, stmt_name, args)
     $gcache[key] = []
   rescue PG::Error => e
     puts e
-    binding.pry
     return []
   ensure
     rs.clear if rs
