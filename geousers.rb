@@ -231,6 +231,10 @@ def geousers(json_file, json_file2)
   pretty = JSON.pretty_generate newj
   File.write json_file, pretty
 
+  # Write gcache to file for future use
+  pretty = JSON.pretty_generate $gcache
+  File.write 'geousers_cache.json', pretty
+
   # Deallocate prepared statements
   c.exec 'deallocate direct_name_fcl'
   c.exec 'deallocate direct_aname_fcl'

@@ -3,6 +3,7 @@ require 'json'
 require 'uri'
 require 'pry'
 require 'unidecoder'
+require 'scanf'
 
 $gcache = {}
 $hit = 0
@@ -25,6 +26,8 @@ def get_sex(name, login, cid)
   api_key = ENV['API_KEY']
   ret = []
   alln.each do |name|
+    name.delete! '"\'[]%_^@$*+={}:|\\`~?/.<>'
+    binding.pry
     if $gcache.key?([name, cid])
       $hit += 1
       ret << $gcache[[name, cid]]
@@ -52,10 +55,33 @@ def get_sex(name, login, cid)
   return r.first['gender'][0], r.first['probability'], true
 end
 
-def genderize(json_file, json_file2)
+def generate_global_cache(cache)
+  cache.each do |key, val|
+    ary = key.scanf('["%[^"]", "%[^"]"]')
+    if ary.length == 2
+      $gcache[ary] = val
+    elsif ary.length == 1
+      ary2 = key.scanf('["%[^"]", %s]')
+      if ary2.length == 2 && ary2[1] == 'nil]'
+        ary2[1] = nil
+        $gcache[ary2] = val
+      else
+        puts "Wrong cache, skipping"
+        p [key, val]
+      end
+    else
+      puts "Wrong cache, skipping"
+      p [key, val]
+    end
+  end
+end
+
+def genderize(json_file, json_file2, json_cache)
   # Parse input JSONs
   data = JSON.parse File.read json_file
   data2 = JSON.parse File.read json_file2
+  cache = JSON.parse File.read json_cache
+  generate_global_cache cache
 
   # Process JSONs
   # Create cache from second file
@@ -91,6 +117,8 @@ def genderize(json_file, json_file2)
         unless ok
           pretty = JSON.pretty_generate newj
           File.write 'backup.json', pretty
+          pretty = JSON.pretty_generate $gcache
+          File.write 'genderize_cache.json', pretty
         end
       end
     end
@@ -100,17 +128,23 @@ def genderize(json_file, json_file2)
     if idx > 0 && idx % 1000 == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
+      pretty = JSON.pretty_generate $gcache
+      File.write 'genderize_cache.json', pretty
     end
   end
 
   # Write JSON back
   pretty = JSON.pretty_generate newj
   File.write json_file, pretty
+
+  # Write gcache to file for future use
+  pretty = JSON.pretty_generate $gcache
+  File.write 'genderize_cache.json', pretty
 end
 
-if ARGV.size < 2
-    puts "Missing arguments: github_users.json stripped.json"
+if ARGV.size < 3
+  puts "Missing arguments: github_users.json stripped.json genderize_cache.json"
   exit(1)
 end
 
-genderize ARGV[0], ARGV[1]
+genderize ARGV[0], ARGV[1], ARGV[2]
