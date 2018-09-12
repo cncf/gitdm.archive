@@ -80,7 +80,8 @@ def genderize(json_file, json_file2, json_cache)
   cache = {}
   data2.each do |user|
     login = user['login']
-    cache[login] = user
+    commits = user['commits']
+    cache[[login, commits]] = user
   end
   newj = []
   n = 0
@@ -89,10 +90,11 @@ def genderize(json_file, json_file2, json_cache)
   all_n = data.length
   data.each_with_index do |user, idx|
     login = user['login']
+    commits = user['commits']
     name = user['name']
     cid = user['country_id']
-    if cache.key?(login)
-      rec = cache[login]
+    if cache.key?([login, commits])
+      rec = cache[[login, commits]]
       sex = user['sex'] = rec['sex']
       prob = user['sex_prob'] = rec['sex_prob']
       ca += 1
