@@ -44,9 +44,11 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - Create `geonames` database via: `sudo -u postgres createdb geonames`, `sudo -u postgres psql -f geonames.sql`. Table details in `geonames.info`
 - Unzip `allCountries.zip` and run `PG_PASS=... ./geodata.sh allCountries.tsv` - this will populate the DB.
 - Create indices on columns to speedup localization: `sudo -u postgres psql -f geonames_idx.sql`.
-- Enchance `github_users.json` via `PG_PASS=... ./geousers.sh github_users.json stripped.json`. It will add `country_id` and `tz` fields.
+- If this is a first geousers run create `geousers_cache.json` via `cp empty.json geousers_cache.json`.
+- Enchance `github_users.json` via `PG_PASS=... ./geousers.sh github_users.json stripped.json geousers_cache.json`. It will add `country_id` and `tz` fields.
 - Go to [store.genderize.io](https://store.genderize.io) and get you `API_KEY`, basic subscription ($9) allows 100,000 monthly gender lookups.
-- Enchance `github_users.json` via `API_KEY=... ./genderize.sh github_users.json stripped.json`. iIt will add `sex` and `sex_prob` fields.
+- If this is a first genderize run create `genderize_cache.json` via `cp empty.json genderize_cache.json`.
+- Enchance `github_users.json` via `API_KEY=... ./genderize.sh github_users.json stripped.json genderize_cache.json`. It will add `sex` and `sex_prob` fields.
 - You can skip `API_KEY=...` but only 1000 gender lookups/day are allowed then.
 - Copy enchanced json to devstats: `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`
 - Import new json on devstats using `./import_affs` tool.
