@@ -247,5 +247,5 @@ if ARGV.size < 2
   exit(1)
 end
 
-geousers(ARGV[0], ARGV[1])
+geousers ARGV[0], ARGV[1]
 
