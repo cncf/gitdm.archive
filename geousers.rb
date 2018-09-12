@@ -153,11 +153,14 @@ def get_cid(c, loc)
   return r[0][0].downcase, tz
 end
 
+def get_gcache
+  ary = []
+  $gcache.each { |key, val| ary << [key, val] }
+  ary
+end
+
 def generate_global_cache(cache)
-  cache.each do |key, val|
-    ary = key.scanf('["%[^"]", "%[^"]"]')
-    binding.pry
-  end
+  cache.each { |key, val| $gcache[key] = val }
 end
 
 def geousers(json_file, json_file2, json_cache)
@@ -235,8 +238,8 @@ def geousers(json_file, json_file2, json_cache)
       File.write 'partial.json', pretty
 
       # Write gcache to file for future use
-      pretty = JSON.pretty_generate $gcache
-      File.write 'geousers_cache.json', pretty
+      pretty = JSON.pretty_generate get_gcache
+      File.write json_cache, pretty
     end
   end
 
@@ -245,8 +248,8 @@ def geousers(json_file, json_file2, json_cache)
   File.write json_file, pretty
 
   # Write gcache to file for future use
-  pretty = JSON.pretty_generate $gcache
-  File.write 'geousers_cache.json', pretty
+  pretty = JSON.pretty_generate get_gcache
+  File.write json_cache, pretty
 
   # Deallocate prepared statements
   c.exec 'deallocate direct_name_fcl'
