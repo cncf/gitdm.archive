@@ -217,7 +217,7 @@ def geousers(json_file, json_file2)
     newj << user
     n += 1
     puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, #{$hit}/#{$miss}"
-    if idx > 0 && idx % 500 == 0
+    if idx > 0 && idx % 1000 == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
     end
