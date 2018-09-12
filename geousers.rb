@@ -145,8 +145,12 @@ def get_cid(c, loc)
   end
   return nil if ret.length < 1
   r = ret.sort_by { |row| -row[1].to_i }
-  r2 = ret.sort_by { |row| [(row[3] == '') ? 1 : 0, -row[1].to_i] }
-  return r[0][0].downcase, r2[0][3]
+  tz = r[0][3]
+  if tz == '' || tz.nil?
+    r2 = ret.sort_by { |row| [(row[3] == '') ? 1 : 0, -row[1].to_i] }
+    tz = r2[0][3]
+  end
+  return r[0][0].downcase, tz
 end
 
 def geousers(json_file, json_file2)
