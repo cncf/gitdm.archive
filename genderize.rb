@@ -97,7 +97,7 @@ def genderize(json_file, json_file2)
     newj << user
     n += 1
     puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, #{$hit}/#{$miss}"
-    if idx > 0 && idx % 2000 == 0
+    if idx > 0 && idx % 1000 == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
     end
