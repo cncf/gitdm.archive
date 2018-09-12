@@ -153,7 +153,14 @@ def get_cid(c, loc)
   return r[0][0].downcase, tz
 end
 
-def geousers(json_file, json_file2)
+def generate_global_cache(cache)
+  cache.each do |key, val|
+    ary = key.scanf('["%[^"]", "%[^"]"]')
+    binding.pry
+  end
+end
+
+def geousers(json_file, json_file2, json_cache)
   # Connect to 'geonames' database
   c = PG.connect host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS']
 
@@ -179,6 +186,8 @@ def geousers(json_file, json_file2)
   # Parse input JSONs
   data = JSON.parse File.read json_file
   data2 = JSON.parse File.read json_file2
+  cache = JSON.parse File.read json_cache
+  generate_global_cache cache
 
   # Process JSONs
   # Create cache from second file
@@ -224,6 +233,10 @@ def geousers(json_file, json_file2)
     if idx > 0 && idx % 1000 == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
+
+      # Write gcache to file for future use
+      pretty = JSON.pretty_generate $gcache
+      File.write 'geousers_cache.json', pretty
     end
   end
 
@@ -250,10 +263,10 @@ def geousers(json_file, json_file2)
   c.exec 'deallocate alt_lname'
 end
 
-if ARGV.size < 2
-    puts "Missing arguments: github_users.json stripped.json"
+if ARGV.size < 3
+    puts "Missing arguments: github_users.json stripped.json geousers_cache.json"
   exit(1)
 end
 
-geousers ARGV[0], ARGV[1]
+geousers ARGV[0], ARGV[1], ARGV[2]
 

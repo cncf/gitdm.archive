@@ -27,7 +27,6 @@ def get_sex(name, login, cid)
   ret = []
   alln.each do |name|
     name.delete! '"\'[]%_^@$*+={}:|\\`~?/.<>'
-    binding.pry
     if $gcache.key?([name, cid])
       $hit += 1
       ret << $gcache[[name, cid]]
@@ -46,7 +45,6 @@ def get_sex(name, login, cid)
       ret << data
     rescue StandardError => e
       puts e
-      binding.pry
       return nil, nil, false
     end
   end
