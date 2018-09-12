@@ -149,7 +149,7 @@ def get_cid(c, loc)
   return r[0][0].downcase, r2[0][3]
 end
 
-def geousers(json_file)
+def geousers(json_file, json_file2)
   # Connect to 'geonames' database
   c = PG.connect host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS']
 
@@ -172,33 +172,51 @@ def geousers(json_file)
   #  puts "Row #{loc} -> #{cid}"
   #end
 
-  # Parse input JSON
+  # Parse input JSONs
   data = JSON.parse File.read json_file
+  data2 = JSON.parse File.read json_file2
 
-  # Process JSON
+  # Process JSONs
+  # Create cache from second file
+  cache = {}
+  data2.each do |user|
+    login = user['login']
+    cache[login] = user
+  end
   newj = []
   n = 0
   l = 0
   f = 0
+  ca = 0
   all_n = data.length
   data.each_with_index do |user, idx|
-    loc = user['location']
     login = user['login']
-    ccid = user['country_id']
-    ctz = user['tz']
-    cid = nil
-    if (ccid.nil? || ctz.nil?) && !loc.nil? && loc.length > 0
-      l += 1
-      cid, tz = get_cid c, loc
+    loc = user['location']
+    if cache.key?(login)
+      rec = cache[login]
+      cid = user['country_id'] = rec['country_id']
+      tz = user['tz'] = rec['tz']
+      ca += 1
+      l += 1 if !loc.nil? && loc.length > 0
       f += 1 unless cid.nil?
-      user['country_id'] = cid
-      user['tz'] = tz
+    else
+      ccid = user['country_id']
+      ctz = user['tz']
+      cid = nil
+      if (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
+      #if (ctz.nil? || ctz == '') && !ccid.nil? && ccid.length > 0 && !loc.nil? && loc.length > 0
+        l += 1
+        cid, tz = get_cid c, loc
+        f += 1 unless cid.nil?
+        user['country_id'] = cid
+        user['tz'] = tz
+      end
+      user['country_id'] = nil if user['country_id'].nil?
+      user['tz'] = nil if user['tz'].nil?
     end
-    user['country_id'] = nil if user['country_id'].nil?
-    user['tz'] = nil if user['tz'].nil?
     newj << user
     n += 1
-    puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{$hit}/#{$miss}"
+    puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, #{$hit}/#{$miss}"
     if idx > 0 && idx % 500 == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
@@ -224,10 +242,10 @@ def geousers(json_file)
   c.exec 'deallocate alt_lname'
 end
 
-if ARGV.size < 1
-  puts "Missing arguments: github_users.json"
+if ARGV.size < 2
+    puts "Missing arguments: github_users.json stripped.json"
   exit(1)
 end
 
-geousers(ARGV[0])
+geousers(ARGV[0], ARGV[1])
 
