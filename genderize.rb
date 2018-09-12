@@ -53,25 +53,14 @@ def get_sex(name, login, cid)
   return r.first['gender'][0], r.first['probability'], true
 end
 
+def get_gcache
+  ary = []
+  $gcache.each { |key, val| ary << [key, val] }
+  ary
+end
+
 def generate_global_cache(cache)
-  cache.each do |key, val|
-    ary = key.scanf('["%[^"]", "%[^"]"]')
-    if ary.length == 2
-      $gcache[ary] = val
-    elsif ary.length == 1
-      ary2 = key.scanf('["%[^"]", %s]')
-      if ary2.length == 2 && ary2[1] == 'nil]'
-        ary2[1] = nil
-        $gcache[ary2] = val
-      else
-        puts "Wrong cache, skipping"
-        p [key, val]
-      end
-    else
-      puts "Wrong cache, skipping"
-      p [key, val]
-    end
-  end
+  cache.each { |key, val| $gcache[key] = val }
 end
 
 def genderize(json_file, json_file2, json_cache)
@@ -115,8 +104,8 @@ def genderize(json_file, json_file2, json_cache)
         unless ok
           pretty = JSON.pretty_generate newj
           File.write 'backup.json', pretty
-          pretty = JSON.pretty_generate $gcache
-          File.write 'genderize_cache.json', pretty
+          pretty = JSON.pretty_generate get_gcache
+          File.write json_cache, pretty
         end
       end
     end
@@ -126,8 +115,8 @@ def genderize(json_file, json_file2, json_cache)
     if idx > 0 && idx % 1000 == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
-      pretty = JSON.pretty_generate $gcache
-      File.write 'genderize_cache.json', pretty
+      pretty = JSON.pretty_generate get_gcache
+      File.write json_cache, pretty
     end
   end
 
@@ -136,8 +125,8 @@ def genderize(json_file, json_file2, json_cache)
   File.write json_file, pretty
 
   # Write gcache to file for future use
-  pretty = JSON.pretty_generate $gcache
-  File.write 'genderize_cache.json', pretty
+  pretty = JSON.pretty_generate get_gcache
+  File.write json_cache, pretty
 end
 
 if ARGV.size < 3
