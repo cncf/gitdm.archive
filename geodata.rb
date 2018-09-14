@@ -13,7 +13,7 @@ def gen_geodata(geodata_file)
   File.readlines(geodata_file).each do |row|
     vals = row.split "\t"
     if vals.count != cols
-      puts "Wrong values count: #{vals.count}, shoould be #{cols}"
+      puts "Wrong values count: #{vals.count}, should be #{cols}"
       binding.pry
     end
     rows += 1
