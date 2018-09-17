@@ -3,9 +3,10 @@ require 'csv'
 require './comment'
 require './email_code'
 
-def affiliations(affiliations_file)
+def affiliations(affiliations_file, json_file)
   all_affs = []
   ln = 1
+  wip = 0
   CSV.foreach(affiliations_file, headers: true) do |row|
     ln += 1
     next if is_comment row
@@ -22,6 +23,10 @@ def affiliations(affiliations_file)
     possible_affs = (h['affiliations'] || '').split(',').map(&:strip)
     affs = possible_affs.reject { |a| a.nil? || a.empty? || a == '/' }.uniq
     if affs.length != possible_affs.length
+      if h['affiliations'] == '/'
+        wip += 1
+        next
+      end
       puts "Wrong affiliations config (some discarded)"
       p h
       binding.pry
@@ -88,13 +93,13 @@ def affiliations(affiliations_file)
       end
     end
   end
-  puts "Imported #{all_affs.length} affiliations"
+  puts "Imported #{all_affs.length} affiliations (#{wip} marked as work in progress)"
   all_affs.each { |d| STDERR.puts d }
 end
 
-if ARGV.size < 1
-  puts "Missing arguments: affiliations.csv"
+if ARGV.size < 2
+    puts "Missing arguments: affiliations.csv github_users.json"
   exit(1)
 end
 
-affiliations(ARGV[0])
+affiliations(ARGV[0], ARGV[1])
