@@ -7,10 +7,10 @@ require './email_code'
 def affiliations(affiliations_file, json_file)
   # Parse input JSON
   users = {}
-  data = JSON.parse File.read json_file
-  data.each_with_index do |user, index|
-    email = user['email']
-    login = user['login']
+  json_data = JSON.parse File.read json_file
+  json_data.each_with_index do |user, index|
+    email = user['email'].downcase
+    login = user['login'].downcase
     users[email] = [index, user]
     users[login] = [] unless users.key?(login)
     users[login] << [index, user]
@@ -68,11 +68,34 @@ def affiliations(affiliations_file, json_file)
     end
     gender = 'f' if gender == 'w'
     emails.each do |email|
-      user = users[email]
-      if !user && gh != '-'
-        login = gh.split('/').last
-        user = users[login]
-        binding.pry unless user
+      next if gh == '-'
+      entry = users[email]
+      login = gh.split('/').last
+      entries = users[login]
+      unless entry
+        if entries
+          user = json_data[entries.first[0]].clone
+          user['email'] = email
+          user['commits'] = 0
+          index = json_data.length
+          json_data << user
+          users[email] = [index, user]
+          users[login] << [index, user]
+        else
+          puts "Wrong affiliations config, entries not found for email #{email}, login #{login}"
+          p affs
+          p h
+          binding.pry
+        end
+      end
+      entries.each do |entry|
+        index = entry[0]
+        user = entry[1]
+        if gender && user['sex'] != gender
+          puts "Overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}" unless user['sex'].nil?
+          json_data[index]['sex'] = gender
+          json_data[index]['sex_prob'] = 1
+        end
       end
     end
 
@@ -125,6 +148,10 @@ def affiliations(affiliations_file, json_file)
   end
   puts "Imported #{all_affs.length} affiliations (#{wip} marked as work in progress)"
   all_affs.each { |d| STDERR.puts d }
+
+  # Write JSON back
+  pretty = JSON.pretty_generate json_data
+  File.write json_file, pretty
 end
 
 if ARGV.size < 2
