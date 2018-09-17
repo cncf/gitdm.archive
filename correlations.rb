@@ -1,5 +1,6 @@
 require 'pry'
 require 'csv'
+require 'json'
 
 def correlation_metric(strings)
   shortest = strings.min_by(&:length)
@@ -16,19 +17,37 @@ def correlation_metric(strings)
   return 0.0
 end
 
-def correlations(csv_file)
+def correlations(input_file, input_type, company_column)
   min_correlation = 70.0
 
   affs = {}
-  skip_set = ['Independent', 'NotFound', '?', '(Unknown)', 'Funky']
-  CSV.foreach(csv_file, headers: true) do |row|
-    h = row.to_h
-    a = h['company']
-    next if !a || skip_set.include?(a)
-    a = a.strip
-    affs[a] = 0 unless affs.key?(a)
-    affs[a] += 1
+  # skip_set = ['Independent', 'NotFound', '?', '(Unknown)', 'Funky']
+  skip_set = []
+  if input_type == 'csv'
+    CSV.foreach(input_file, headers: true) do |row|
+      h = row.to_h
+      a = h[company_column]
+      next if !a || skip_set.include?(a)
+      a = a.strip
+      affs[a] = 0 unless affs.key?(a)
+      affs[a] += 1
+    end
+  elsif input_type == 'json'
+    data = JSON.parse File.read input_file
+    data.each do |row|
+      h = row.to_h
+      saff = h[company_column]
+      saff.split(', ').each do |aff|
+        ary = aff.split('<').map(&:strip)
+        a = ary[0]
+        next if !a || skip_set.include?(a)
+        a = a.strip
+        affs[a] = 0 unless affs.key?(a)
+        affs[a] += 1
+      end
+    end
   end
+  binding.pry
 
   affs2 = {}
   specials = %w(
@@ -84,9 +103,9 @@ def correlations(csv_file)
   end
 end
 
-if ARGV.size < 1
-  puts "Missing argument: CSV_file aliases (all_affs.csv)"
+if ARGV.size < 3
+  puts "Missing argument: file (file.csv or file.json) file type (csv or json) company_column (company, affiliation)"
   exit(1)
 end
 
-correlations(ARGV[0])
+correlations(ARGV[0], ARGV[1], ARGV[2])

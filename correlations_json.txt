@@ -1,0 +1,16 @@
+
+[1mFrom:[0m /home/justa/dev/alt/gitdm/correlations.rb @ line 50 Object#correlations:
+
+    [1;34m45[0m:         affs[a] = [1;34m0[0m [32munless[0m affs.key?(a)
+    [1;34m46[0m:         affs[a] += [1;34m1[0m
+    [1;34m47[0m:       [32mend[0m
+    [1;34m48[0m:     [32mend[0m
+    [1;34m49[0m:   [32mend[0m
+ => [1;34m50[0m:   binding.pry
+    [1;34m51[0m: 
+    [1;34m52[0m:   affs2 = {}
+    [1;34m53[0m:   specials = [31m[1;31m%w([0m[31m[0m
+    [1;34m54[0m:     corporation limited company development technologies solutions
+    [1;34m55[0m:     consulting systems international software university networks
+
+[0G[1] pry(main)> 

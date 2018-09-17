@@ -1,2 +1,2 @@
 #!/bin/sh
-ruby correlations.rb all_affs.csv > correlations.txt
+ruby correlations.rb all_affs.csv csv company > correlations.txt
