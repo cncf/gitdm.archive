@@ -109,6 +109,15 @@ def affiliations(affiliations_file, json_file, email_map)
       end
     end
     saffs = aaffs.sort_by { |r| r[0] }.map { |r| r[1] }.join(', ')
+    dta = aaffs.map { |r| r[0] }
+    dtau = dta.uniq
+    if dta.length != dtau.length
+      puts "Wrong affiliation config - non unique end dates"
+      p affs
+      p dta
+      p h
+      binding.pry
+    end
 
     gender = h['gender']
     gender = gender.downcase if gender
@@ -150,7 +159,7 @@ def affiliations(affiliations_file, json_file, email_map)
         end
         if user['affiliation'] != saffs
           caffs = user['affiliation']
-          unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?'
+          unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?' || saffs == 'NotFound'
             puts "Overwritten affiliation #{user['affiliation']} --> #{saffs} for #{login}/#{user['email']}, commits #{user['commits']}"
           end
           json_data[index]['affiliation'] = saffs
