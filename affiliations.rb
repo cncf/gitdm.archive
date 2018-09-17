@@ -12,6 +12,10 @@ def affiliations(affiliations_file, json_file)
     next if is_comment row
     h = row.to_h
     h['line_no'] = ln
+    if h['affiliations'] == '/'
+      wip += 1
+      next
+    end
     possible_emails = (h['new emails'] || '').split(',').map(&:strip) << h['email'].strip
     emails = ((h['new emails'] || '').split(',').map(&:strip).map { |e| email_encode(e) } << email_encode(h['email'].strip)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
     if emails.length != possible_emails.length
@@ -23,10 +27,6 @@ def affiliations(affiliations_file, json_file)
     possible_affs = (h['affiliations'] || '').split(',').map(&:strip)
     affs = possible_affs.reject { |a| a.nil? || a.empty? || a == '/' }.uniq
     if affs.length != possible_affs.length
-      if h['affiliations'] == '/'
-        wip += 1
-        next
-      end
       puts "Wrong affiliations config (some discarded)"
       p h
       binding.pry
