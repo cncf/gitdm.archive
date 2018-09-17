@@ -18,7 +18,7 @@ def correlation_metric(strings)
 end
 
 def correlations(input_file, input_type, company_column)
-  min_correlation = 70.0
+  min_correlation = 60.0
 
   affs = {}
   # skip_set = ['Independent', 'NotFound', '?', '(Unknown)', 'Funky']
@@ -47,7 +47,15 @@ def correlations(input_file, input_type, company_column)
       end
     end
   end
-  binding.pry
+  affs.each do |a, n|
+    sa = a.split(/(?=[A-Z])/).reject { |s| s.length < 3 }.map(&:strip)
+    if sa.length > 1
+      s = sa.join ' '
+      if s != a
+        puts "#{a} is similar to #{s}" if affs.key?(s)
+      end
+    end
+  end
 
   affs2 = {}
   specials = %w(
@@ -55,7 +63,7 @@ def correlations(input_file, input_type, company_column)
     consulting systems international software university networks
     financial group informatics consultancy commerce services
     engineering security business entertainment research technologie
-    associates investments electronics healthcare
+    associates investments electronics healthcare design network
   ).uniq
   specials += [
     ' inc', 'gmbh', ' llc', ' zoo', ' ltd', ' labs', ' cloud', ' ag',
