@@ -1,9 +1,21 @@
 require 'pry'
 require 'csv'
+require 'json'
 require './comment'
 require './email_code'
 
 def affiliations(affiliations_file, json_file)
+  # Parse input JSON
+  users = {}
+  data = JSON.parse File.read json_file
+  data.each_with_index do |user, index|
+    email = user['email']
+    login = user['login']
+    users[email] = [index, user]
+    users[login] = [] unless users.key?(login)
+    users[login] << [index, user]
+  end
+
   all_affs = []
   ln = 1
   wip = 0
@@ -16,6 +28,7 @@ def affiliations(affiliations_file, json_file)
       wip += 1
       next
     end
+    gh = h['github']
     possible_emails = (h['new emails'] || '').split(',').map(&:strip) << h['email'].strip
     emails = ((h['new emails'] || '').split(',').map(&:strip).map { |e| email_encode(e) } << email_encode(h['email'].strip)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
     if emails.length != possible_emails.length
@@ -44,6 +57,23 @@ def affiliations(affiliations_file, json_file)
       p h
       binding.pry
       next
+    end
+    gender = h['gender']
+    gender = gender.downcase if gender
+    if gender && gender != 'm' && gender != 'w' && gender != 'f'
+      puts "Wrong affiliation config - gender must be m, w, f or nil"
+      p affs
+      p h
+      binding.pry
+    end
+    gender = 'f' if gender == 'w'
+    emails.each do |email|
+      user = users[email]
+      if !user && gh != '-'
+        login = gh.split('/').last
+        user = users[login]
+        binding.pry unless user
+      end
     end
 
     affs.each do |aff|
