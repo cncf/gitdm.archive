@@ -1,16 +1,44 @@
-
-[1mFrom:[0m /home/justa/dev/alt/gitdm/correlations.rb @ line 50 Object#correlations:
-
-    [1;34m45[0m:         affs[a] = [1;34m0[0m [32munless[0m affs.key?(a)
-    [1;34m46[0m:         affs[a] += [1;34m1[0m
-    [1;34m47[0m:       [32mend[0m
-    [1;34m48[0m:     [32mend[0m
-    [1;34m49[0m:   [32mend[0m
- => [1;34m50[0m:   binding.pry
-    [1;34m51[0m: 
-    [1;34m52[0m:   affs2 = {}
-    [1;34m53[0m:   specials = [31m[1;31m%w([0m[31m[0m
-    [1;34m54[0m:     corporation limited company development technologies solutions
-    [1;34m55[0m:     consulting systems international software university networks
-
-[0G[1] pry(main)> 
+TwoSigma is similar to Two Sigma
+CapitalOne is similar to Capital One
+Those companies are unmappable to ASCII only symbols
+[["?", 31360], ["Восход", 1], ["社会大学", 2], ["✕✕✕✕✕", 1], ["中科院计算技术研究所", 2], ["НИИ АА", 1], ["株式会社アニメイトラボ", 2], ["カブク", 1], ["Cloud Security", 1], ["НГС", 1], ["欢聚时代", 2], ["株式会社ドヴァ", 1], ["徳を積む", 1], ["الصحيفة الآقتصادية", 1], ["うんこ", 2], ["中佑", 2], ["패스트캠퍼스", 2], ["Network Business Systems", 1], ["스마일게이트", 1], ["豆瓣", 1], ["МТС", 2]]
+Those companies map into the same key 'pingcap':
+[["PingCAP", 23], ["PingCap", 10]]
+Those companies map into the same key 'datawire':
+[["Datawire", 6], ["Datawire.io", 2]]
+Those companies map into the same key 'scytale':
+[["Scytale", 19], ["Scytale.io", 8]]
+Those companies map into the same key 'nginx':
+[["NGINX", 1], ["Nginx", 2]]
+Those companies map into the same key 'ebay':
+[["eBay", 36], ["Ebay", 1]]
+Those companies map into the same key 'broadcom':
+[["Broadcom Limited", 3], ["Broadcom", 1]]
+Those companies map into the same key 'zulily':
+[["Zulily", 2], ["zulily", 2]]
+Those companies map into the same key 'nvidia':
+[["NVidia", 8], ["NVIDIA", 2]]
+Those companies map into the same key 'aliba':
+[["Alibaba", 33], ["Alibaba Group", 3]]
+Those companies map into the same key 'fusn':
+[["Fusion-io", 2], ["Fusion Electronics", 1]]
+Those companies map into the same key 'crate':
+[["Crate.io", 1], ["Crate", 2]]
+Those companies map into the same key 'dwango':
+[["DWANGO", 2], ["Dwango", 5]]
+Those companies map into the same key 'cloudbau':
+[["cloudbau", 2], ["Cloudbau", 2]]
+Those companies map into the same key 'xn':
+[["X-ion", 2], ["x-ion", 1]]
+Those companies map into the same key 'chef':
+[["Chef Software", 2], ["Chef", 5]]
+Those companies map into the same key 'pixiv':
+[["Pixiv Inc", 2], ["Pixiv", 2]]
+Those companies map into the same key 'akamai':
+[["Akamai", 3], ["Akamai Technologies", 2]]
+Those companies map into the same key 'kl':
+[["Klab Inc", 2], ["KLab", 3]]
+Those companies map into the same key 'palantir':
+[["Palantir Technologies", 2], ["Palantir", 6]]
+Those companies map into the same key 'puppet':
+[["Puppet Labs", 3], ["Puppet", 5]]
