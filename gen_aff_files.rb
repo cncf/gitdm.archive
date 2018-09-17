@@ -1,5 +1,6 @@
 require 'csv'
 require 'json'
+require 'pry'
 require './comment'
 require './email_code'
 
@@ -20,11 +21,11 @@ def gen_aff_files(csv_file)
   CSV.foreach(csv_file, headers: true) do |row|
     next if is_comment row
     h = row.to_h
-    c = h['company'].strip
+    c = h['company'] = h['company'].strip
     next if skip.key?(c)
-    e = email_encode(h['email'].strip)
+    e = h['email'] = email_encode(h['email'].strip)
     n = h['name'] = email_encode(h['name'].strip.gsub(': ', ' '))
-    d = h['date_to'].strip
+    d = h['date_to'] = h['date_to'].strip
     h['date_to'] = d = dt_future if !d || d == ''
     next unless e.include?('!')
     names[n] = {} unless names.key?(n)
@@ -63,6 +64,18 @@ def gen_aff_files(csv_file)
     comps[c][n] = {} unless comps[c].key?(n)
     comps[c][n][e] = [] unless comps[c][n].key?(e)
     comps[c][n][e] << h
+  end
+
+  # Unique
+  emails.each do |k, v|
+    emails[k] = v.uniq
+  end
+  comps.each do |k1, v1|
+    v1.each do |k2, v2|
+      v2.each do |k3, v3|
+        comps[k1][k2][k3] = v3.uniq
+      end
+    end
   end
 
   wrongs = []
@@ -144,7 +157,10 @@ def gen_aff_files(csv_file)
       end
     end
   end
-  hdr = "# This is the main developers affiliations file\n"
+  hdr = "# This is the main developers affiliations file.\n"
+  hdr += "# If you see your name with asterisk '*' sign - it means that\n"
+  hdr += "# multiple affiliations were found for you with different email addresses.\n"
+  hdr += "# Please merge all of them into one then.\n"
   File.write 'developers_affiliations.txt', hdr + t
 
   if wrongs.count > 0
@@ -157,7 +173,7 @@ def gen_aff_files(csv_file)
     un = w.select { |r| r[1].any? { |a| a.any? { |b| b[1] == '(Unknown)' } } }
     dt = w.select { |r| r[1].any? { |a| a.any? { |b| b[2] != dt_future } } }
     puts 'Special cases found, consider binding.pry it!'
-    # binding.pry
+    binding.pry
   end
 end
 
