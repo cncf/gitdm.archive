@@ -4,7 +4,7 @@ require 'json'
 require './comment'
 require './email_code'
 
-def affiliations(affiliations_file, json_file)
+def affiliations(affiliations_file, json_file, email_map)
   # Parse input JSON
   users = {}
   json_data = JSON.parse File.read json_file
@@ -58,6 +58,58 @@ def affiliations(affiliations_file, json_file)
       binding.pry
       next
     end
+
+    aaffs = []
+    affs.each do |aff|
+      begin
+        ddt = DateTime.strptime(aff, '%Y-%m-%d')
+        sdt = ddt.strftime("%Y-%m-%d")
+        puts "Wrong affiliation config - YYYY-MM-DD date found where company name expected"
+        p aff
+        p h
+        binding.pry
+        next
+      rescue
+      end
+      possible_data = aff.split('<').map(&:strip)
+      data = possible_data.reject { |a| a.nil? || a.empty? }.uniq
+      if data.length < 1 || data.length > 2 || data.length != possible_data.length
+        puts "Wrong affiliation config (multiple < or empty discarded values)"
+        p data
+        p h
+        binding.pry
+        next
+      end
+      if data.length == 1
+        emails.each { |e| all_affs << "#{e} #{aff}" }
+        aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
+      elsif data.length == 2
+        dt = data[1]
+        if dt.length != 10
+          puts "Wrong date format expected YYYY-MM-DD, got #{dt} (wrong length)"
+          p data
+          p h
+          binding.pry
+          next
+        end
+        begin
+          ddt = DateTime.strptime(dt, '%Y-%m-%d')
+          sdt = ddt.strftime("%Y-%m-%d")
+          com = data[0]
+          emails.each { |e| all_affs << "#{e} #{com} < #{sdt}" }
+          aaffs << [ddt, "#{com} < #{sdt}"]
+        rescue => err
+          puts "Wrong date format expected YYYY-MM-DD, got #{dt} (invalid date)"
+          p data
+          p h
+          p err
+          binding.pry
+          next
+        end
+      end
+    end
+    saffs = aaffs.sort_by { |r| r[0] }.map { |r| r[1] }.join(', ')
+
     gender = h['gender']
     gender = gender.downcase if gender
     if gender && gender != 'm' && gender != 'w' && gender != 'f'
@@ -92,71 +144,33 @@ def affiliations(affiliations_file, json_file)
         index = entry[0]
         user = entry[1]
         if gender && user['sex'] != gender
-          puts "Overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}" unless user['sex'].nil?
+          puts "Overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}" unless user['sex'].nil?
           json_data[index]['sex'] = gender
           json_data[index]['sex_prob'] = 1
         end
-      end
-    end
-
-    affs.each do |aff|
-      begin
-        ddt = DateTime.strptime(aff, '%Y-%m-%d')
-        sdt = ddt.strftime("%Y-%m-%d")
-        puts "Wrong affiliation config - YYYY-MM-DD date found where company name expected"
-        p aff
-        p h
-        binding.pry
-        next
-      rescue
-      end
-      possible_data = aff.split('<').map(&:strip)
-      data = possible_data.reject { |a| a.nil? || a.empty? }.uniq
-      if data.length < 1 || data.length > 2 || data.length != possible_data.length
-        puts "Wrong affiliation config (multiple < or empty discarded values)"
-        p data
-        p h
-        binding.pry
-        next
-      end
-      if data.length == 1
-        emails.each { |e| all_affs << "#{e} #{aff}" }
-      elsif data.length == 2
-        dt = data[1]
-        if dt.length != 10
-          puts "Wrong date format expected YYYY-MM-DD, got #{dt} (wrong length)"
-          p data
-          p h
-          binding.pry
-          next
-        end
-        begin
-          ddt = DateTime.strptime(dt, '%Y-%m-%d')
-          sdt = ddt.strftime("%Y-%m-%d")
-          com = data[0]
-          emails.each { |e| all_affs << "#{e} #{com} < #{sdt}" }
-        rescue => err
-          puts "Wrong date format expected YYYY-MM-DD, got #{dt} (invalid date)"
-          p data
-          p h
-          p err
-          binding.pry
-          next
+        if user['affiliation'] != saffs
+          caffs = user['affiliation']
+          unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?'
+            puts "Overwritten affiliation #{user['affiliation']} --> #{saffs} for #{login}/#{user['email']}, commits #{user['commits']}"
+          end
+          json_data[index]['affiliation'] = saffs
         end
       end
     end
   end
   puts "Imported #{all_affs.length} affiliations (#{wip} marked as work in progress)"
-  all_affs.each { |d| STDERR.puts d }
+  File.open(email_map, 'a') do |file|
+    all_affs.each { |d| file.puts d }
+  end
 
   # Write JSON back
   pretty = JSON.pretty_generate json_data
   File.write json_file, pretty
 end
 
-if ARGV.size < 2
-    puts "Missing arguments: affiliations.csv github_users.json"
+if ARGV.size < 3
+    puts "Missing arguments: affiliations.csv github_users.json cncf-config/email-map"
   exit(1)
 end
 
-affiliations(ARGV[0], ARGV[1])
+affiliations(ARGV[0], ARGV[1], ARGV[2])
