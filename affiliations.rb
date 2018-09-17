@@ -16,6 +16,19 @@ def affiliations(affiliations_file, json_file, email_map)
     users[login] << [index, user]
   end
 
+  eaffs = {}
+  File.readlines(email_map).each do |line|
+    line.strip!
+    if line.length > 0 && line[0] == '#'
+      next
+    end
+    ary = line.split ' '
+    email = ary[0]
+    eaffs[email] = {} unless eaffs.key?(email)
+    aff = ary[1..-1].join(' ')
+    eaffs[email][aff] = true
+  end
+
   all_affs = []
   ln = 1
   wip = 0
@@ -105,6 +118,15 @@ def affiliations(affiliations_file, json_file, email_map)
           p err
           binding.pry
           next
+        end
+      end
+    end
+    aaffs.each do |aaff|
+      emails.each do |email|
+        if eaffs.key?(email)
+          unless eaffs[email].key?(aaff[1])
+            puts "Adding #{aaff[1]} affiliation to the existing email #{email}: #{eaffs[email]}"
+          end
         end
       end
     end
