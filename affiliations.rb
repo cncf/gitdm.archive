@@ -5,6 +5,8 @@ require './comment'
 require './email_code'
 
 def affiliations(affiliations_file, json_file, email_map)
+  # dbg: set to true to have very verbose output
+  dbg = false
   # Parse input JSON, store current data in 'users'
   users = {}
   json_data = JSON.parse File.read json_file
@@ -99,24 +101,35 @@ def affiliations(affiliations_file, json_file, email_map)
         emails.each do |e|
           if eaffs.key?(e) && !eaffs[e].key?(aff)
             if aff == 'NotFound'
-              puts "Note: New not found #{e}"
+              puts "Note: New not found for existing #{e} with '#{eaffs[e].keys}', line #{ln}"
+              eaffs[e][aff] = true
             else
               if eaffs[e].key?('NotFound')
-                puts "Note: No longer not found #{e} now #{aff}"
+                puts "Note: No longer not found #{e} now '#{aff}', line #{ln}"
                 eaffs[e].delete 'NotFound'
                 eaffs[e][aff] = true
               else
-                  puts "Note: #{e} already have affiliation: #{eaffs[e].keys}, adding #{aff}"
+                puts "Note: #{e} already have affiliation: #{eaffs[e].keys}, adding '#{aff}', line #{ln}" if dbg
                 eaffs[e].each do |k|
-                  ary = k.split('<').map(&:strip)
+                  ary = k[0].split('<').map(&:strip)
                   if ary.length != 2
-                    puts "#{e} already have a final affiliation #{k} while trying to add another final one: #{aff}"
+                    puts "Wrong: #{e} already have a final affiliation '#{k}' while trying to add another final one: '#{aff}', line #{ln}"
                     binding.pry
                   end
                 end
                 eaffs[e][aff] = true
               end
             end
+          else
+            if dbg
+              if aff == 'NotFound'
+                puts "Note: new unknown email #{e}"
+              else
+                puts "Note: new email #{e} with '#{aff}'"
+              end
+            end
+            eaffs[e] = {}
+            eaffs[e][aff] = true
           end
           all_affs << "#{e} #{aff}"
         end
@@ -136,21 +149,27 @@ def affiliations(affiliations_file, json_file, email_map)
           sdt = ddt.strftime("%Y-%m-%d")
           com = data[0]
           emails.each do |e|
-            ###
             aff = "#{com} < #{sdt}"
             if eaffs.key?(e) && !eaffs[e].key?(aff)
               if eaffs[e].key?('NotFound')
-                puts "Note: No longer not found #{e} now #{aff}"
+                puts "Note: No longer not found #{e} now '#{aff}', line #{ln}"
                 eaffs[e].delete 'NotFound'
                 eaffs[e][aff] = true
-                binding.pry
               else
-                  puts "Note: #{e} already have affiliation: #{eaffs[e].keys}, adding #{aff}"
+                puts "Note: #{e} already have affiliation: #{eaffs[e].keys}, adding '#{aff}', line #{ln}" if dbg
                 eaffs[e][aff] = true
-                binding.pry
               end
+            else
+              if dbg
+                if aff == 'NotFound'
+                  puts "Note: new unknown email #{e}"
+                else
+                  puts "Note: new email #{e} with '#{aff}'"
+                end
+              end
+              eaffs[e] = {}
+              eaffs[e][aff] = true
             end
-            ###
             all_affs << "#{e} #{com} < #{sdt}"
           end
           aaffs << [ddt, "#{com} < #{sdt}"]
@@ -180,7 +199,8 @@ def affiliations(affiliations_file, json_file, email_map)
       emails.each do |email|
         if eaffs.key?(email)
           unless eaffs[email].key?(aaff[1])
-            puts "Note: Adding #{aaff[1]} affiliation to the existing email #{email}: #{eaffs[email]}"
+            binding.pry
+            puts "Note: Adding '#{aaff[1]}' affiliation to the existing email #{email}: #{eaffs[email].keys}, line #{ln}"
           end
         end
       end
@@ -236,23 +256,36 @@ def affiliations(affiliations_file, json_file, email_map)
         index = entry[0]
         user = entry[1]
         if gender && user['sex'] != gender
-          puts "Note: Overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}" unless user['sex'].nil?
+          puts "Note: overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
           json_data[index]['sex'] = gender
           json_data[index]['sex_prob'] = 1
         end
         if user['affiliation'] != saffs
           caffs = user['affiliation']
           unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?' || saffs == 'NotFound'
-            puts "Note: Overwritten affiliation #{user['affiliation']} --> #{saffs} for #{login}/#{user['email']}, commits #{user['commits']}"
+            puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
           end
-          json_data[index]['affiliation'] = saffs
+          if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && saffs == 'NotFound'
+            puts "Wrong: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+          else
+            json_data[index]['affiliation'] = saffs
+          end
         end
       end
     end
   end
   puts "Imported #{all_affs.length} affiliations (#{wip} marked as work in progress)"
-  File.open(email_map, 'a') do |file|
-    all_affs.each { |d| file.puts d }
+  # File.open(email_map, 'a') do |file|
+  #   all_affs.each { |d| file.puts d }
+  # end
+  File.open(email_map, 'w') do |file|
+     file.puts "# Here is a set of mappings of domain names onto employer names."
+     file.puts "# [user!]domain  employer  [< yyyy-mm-dd]"
+     eaffs.each do |email, affs|
+        affs.each do |aff, _|
+          file.puts "#{email} #{aff}"
+        end
+     end
   end
 
   # Write JSON back
