@@ -97,8 +97,26 @@ def affiliations(affiliations_file, json_file, email_map)
       end
       if data.length == 1
         emails.each do |e|
-            if eaffs.key?(e) && !eaffs[e].key?(aff)
-            binding.pry
+          if eaffs.key?(e) && !eaffs[e].key?(aff)
+            if aff == 'NotFound'
+              puts "Note: New not found #{e}"
+            else
+              if eaffs[e].key?('NotFound')
+                puts "Note: No longer not found #{e} now #{aff}"
+                eaffs[e].delete 'NotFound'
+                eaffs[e][aff] = true
+              else
+                  puts "Note: #{e} already have affiliation: #{eaffs[e].keys}, adding #{aff}"
+                eaffs[e].each do |k|
+                  ary = k.split('<').map(&:strip)
+                  if ary.length != 2
+                    puts "#{e} already have a final affiliation #{k} while trying to add another final one: #{aff}"
+                    binding.pry
+                  end
+                end
+                eaffs[e][aff] = true
+              end
+            end
           end
           all_affs << "#{e} #{aff}"
         end
@@ -117,7 +135,24 @@ def affiliations(affiliations_file, json_file, email_map)
           ddt = DateTime.strptime(dt, '%Y-%m-%d')
           sdt = ddt.strftime("%Y-%m-%d")
           com = data[0]
-          emails.each { |e| all_affs << "#{e} #{com} < #{sdt}" }
+          emails.each do |e|
+            ###
+            aff = "#{com} < #{sdt}"
+            if eaffs.key?(e) && !eaffs[e].key?(aff)
+              if eaffs[e].key?('NotFound')
+                puts "Note: No longer not found #{e} now #{aff}"
+                eaffs[e].delete 'NotFound'
+                eaffs[e][aff] = true
+                binding.pry
+              else
+                  puts "Note: #{e} already have affiliation: #{eaffs[e].keys}, adding #{aff}"
+                eaffs[e][aff] = true
+                binding.pry
+              end
+            end
+            ###
+            all_affs << "#{e} #{com} < #{sdt}"
+          end
           aaffs << [ddt, "#{com} < #{sdt}"]
         rescue => err
           puts "Wrong date format expected YYYY-MM-DD, got #{dt} (invalid date)"
