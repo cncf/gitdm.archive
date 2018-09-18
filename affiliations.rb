@@ -230,45 +230,49 @@ def affiliations(affiliations_file, json_file, email_map)
     gender = 'f' if gender == 'w'
 
     # process affiliations vs existing JSON data
-    gh = h['github']
-    emails.each do |email|
-      next if gh == '-'
-      entry = users[email]
-      login = gh.split('/').last
-      entries = users[login]
-      unless entry
-        if entries
-          user = json_data[entries.first[0]].clone
-          user['email'] = email
-          user['commits'] = 0
-          index = json_data.length
-          json_data << user
-          users[email] = [index, user]
-          users[login] << [index, user]
-        else
-          puts "Wrong affiliations config, entries not found for email #{email}, login #{login}"
-          p affs
-          p h
-          binding.pry
-        end
-      end
-      entries.each do |entry|
-        index = entry[0]
-        user = entry[1]
-        if gender && user['sex'] != gender
-          puts "Note: overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
-          json_data[index]['sex'] = gender
-          json_data[index]['sex_prob'] = 1
-        end
-        if user['affiliation'] != saffs
-          caffs = user['affiliation']
-          unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?' || saffs == 'NotFound'
-            puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
-          end
-          if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && saffs == 'NotFound'
-            puts "Wrong: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+    ghs = h['github']
+    gha = ghs.split(',').map(&:strip)
+    puts "Note: multiple GH logins #{gha} for emails #{emails}" if gha.length > 1
+    gha.each do |gh|
+      emails.each do |email|
+        next if gh == '-'
+        entry = users[email]
+        login = gh.split('/').last
+        entries = users[login]
+        unless entry
+          if entries
+            user = json_data[entries.first[0]].clone
+            user['email'] = email
+            user['commits'] = 0
+            index = json_data.length
+            json_data << user
+            users[email] = [index, user]
+            users[login] << [index, user]
           else
-            json_data[index]['affiliation'] = saffs
+            puts "Wrong affiliations config, entries not found for email #{email}, login #{login}"
+            p affs
+            p h
+            binding.pry
+          end
+        end
+        entries.each do |entry|
+          index = entry[0]
+          user = entry[1]
+          if gender && user['sex'] != gender
+            puts "Note: overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
+            json_data[index]['sex'] = gender
+            json_data[index]['sex_prob'] = 1
+          end
+          if user['affiliation'] != saffs
+            caffs = user['affiliation']
+            unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?' || saffs == 'NotFound'
+              puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+            end
+            if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && saffs == 'NotFound'
+              puts "Wrong: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+            else
+              json_data[index]['affiliation'] = saffs
+            end
           end
         end
       end
