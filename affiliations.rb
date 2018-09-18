@@ -187,6 +187,7 @@ def affiliations(affiliations_file, json_file, email_map)
           json_data[index]['affiliation'] = saffs
         end
       end
+      binding.pry
     end
   end
   puts "Imported #{all_affs.length} affiliations (#{wip} marked as work in progress)"
