@@ -232,7 +232,7 @@ def affiliations(affiliations_file, json_file, email_map)
     # process affiliations vs existing JSON data
     ghs = h['github']
     gha = ghs.split(',').map(&:strip)
-    puts "Note: multiple GH logins #{gha} for emails #{emails}" if gha.length > 1
+    puts "Note: multiple GH logins #{gha} for emails #{emails}, line #{ln}" if dbg && gha.length > 1
     gha.each do |gh|
       emails.each do |email|
         next if gh == '-'
