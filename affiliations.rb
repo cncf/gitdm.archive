@@ -5,7 +5,7 @@ require './comment'
 require './email_code'
 
 def affiliations(affiliations_file, json_file, email_map)
-  # Parse input JSON
+  # Parse input JSON, store current data in 'users'
   users = {}
   json_data = JSON.parse File.read json_file
   json_data.each_with_index do |user, index|
@@ -16,6 +16,7 @@ def affiliations(affiliations_file, json_file, email_map)
     users[login] << [index, user]
   end
 
+  # parse current email-map, store data in 'eaffs'
   eaffs = {}
   File.readlines(email_map).each do |line|
     line.strip!
@@ -29,6 +30,7 @@ def affiliations(affiliations_file, json_file, email_map)
     eaffs[email][aff] = true
   end
 
+  # process new affiliations CSV
   all_affs = []
   ln = 1
   wip = 0
@@ -41,7 +43,8 @@ def affiliations(affiliations_file, json_file, email_map)
       wip += 1
       next
     end
-    gh = h['github']
+
+    # emails bugs/typos
     possible_emails = (h['new emails'] || '').split(',').map(&:strip) << h['email'].strip
     emails = ((h['new emails'] || '').split(',').map(&:strip).map { |e| email_encode(e) } << email_encode(h['email'].strip)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
     if emails.length != possible_emails.length
@@ -50,6 +53,8 @@ def affiliations(affiliations_file, json_file, email_map)
       binding.pry
       next
     end
+
+    # affiliations bugs/typos
     possible_affs = (h['affiliations'] || '').split(',').map(&:strip)
     affs = possible_affs.reject { |a| a.nil? || a.empty? || a == '/' }.uniq
     if affs.length != possible_affs.length
@@ -64,20 +69,16 @@ def affiliations(affiliations_file, json_file, email_map)
       ary = aff.split('<').map(&:strip)
       n_final += 1 if ary.length == 1
     end
-    if n_final != 1
-      puts "Wrong affiliation config - there must be exactly one final affiliation"
-      p affs
-      p h
-      binding.pry
-      next
-    end
 
+    # process affiliations
     aaffs = []
+    err = false
     affs.each do |aff|
       begin
         ddt = DateTime.strptime(aff, '%Y-%m-%d')
         sdt = ddt.strftime("%Y-%m-%d")
         puts "Wrong affiliation config - YYYY-MM-DD date found where company name expected"
+        err = true
         p aff
         p h
         binding.pry
@@ -88,13 +89,19 @@ def affiliations(affiliations_file, json_file, email_map)
       data = possible_data.reject { |a| a.nil? || a.empty? }.uniq
       if data.length < 1 || data.length > 2 || data.length != possible_data.length
         puts "Wrong affiliation config (multiple < or empty discarded values)"
+        err = true
         p data
         p h
         binding.pry
         next
       end
       if data.length == 1
-        emails.each { |e| all_affs << "#{e} #{aff}" }
+        emails.each do |e|
+            if eaffs.key?(e) && !eaffs[e].key?(aff)
+            binding.pry
+          end
+          all_affs << "#{e} #{aff}"
+        end
         aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
       elsif data.length == 2
         dt = data[1]
@@ -103,6 +110,7 @@ def affiliations(affiliations_file, json_file, email_map)
           p data
           p h
           binding.pry
+          err = true
           next
         end
         begin
@@ -113,6 +121,7 @@ def affiliations(affiliations_file, json_file, email_map)
           aaffs << [ddt, "#{com} < #{sdt}"]
         rescue => err
           puts "Wrong date format expected YYYY-MM-DD, got #{dt} (invalid date)"
+          err = true
           p data
           p h
           p err
@@ -121,16 +130,29 @@ def affiliations(affiliations_file, json_file, email_map)
         end
       end
     end
+    next if err
+
+    if n_final != 1
+      puts "Wrong affiliation config - there must be exactly one final affiliation"
+      p affs
+      p h
+      binding.pry
+      next
+    end
+
+    # info if adding affiliation to the existing email
     aaffs.each do |aaff|
       emails.each do |email|
         if eaffs.key?(email)
           unless eaffs[email].key?(aaff[1])
-            puts "Adding #{aaff[1]} affiliation to the existing email #{email}: #{eaffs[email]}"
+            puts "Note: Adding #{aaff[1]} affiliation to the existing email #{email}: #{eaffs[email]}"
           end
         end
       end
     end
     saffs = aaffs.sort_by { |r| r[0] }.map { |r| r[1] }.join(', ')
+
+    # non unique end dates for affiliations
     dta = aaffs.map { |r| r[0] }
     dtau = dta.uniq
     if dta.length != dtau.length
@@ -141,6 +163,7 @@ def affiliations(affiliations_file, json_file, email_map)
       binding.pry
     end
 
+    # gender
     gender = h['gender']
     gender = gender.downcase if gender
     if gender && gender != 'm' && gender != 'w' && gender != 'f'
@@ -150,6 +173,9 @@ def affiliations(affiliations_file, json_file, email_map)
       binding.pry
     end
     gender = 'f' if gender == 'w'
+
+    # process affiliations vs existing JSON data
+    gh = h['github']
     emails.each do |email|
       next if gh == '-'
       entry = users[email]
@@ -175,19 +201,18 @@ def affiliations(affiliations_file, json_file, email_map)
         index = entry[0]
         user = entry[1]
         if gender && user['sex'] != gender
-          puts "Overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}" unless user['sex'].nil?
+          puts "Note: Overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}" unless user['sex'].nil?
           json_data[index]['sex'] = gender
           json_data[index]['sex_prob'] = 1
         end
         if user['affiliation'] != saffs
           caffs = user['affiliation']
           unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?' || saffs == 'NotFound'
-            puts "Overwritten affiliation #{user['affiliation']} --> #{saffs} for #{login}/#{user['email']}, commits #{user['commits']}"
+            puts "Note: Overwritten affiliation #{user['affiliation']} --> #{saffs} for #{login}/#{user['email']}, commits #{user['commits']}"
           end
           json_data[index]['affiliation'] = saffs
         end
       end
-      binding.pry
     end
   end
   puts "Imported #{all_affs.length} affiliations (#{wip} marked as work in progress)"
