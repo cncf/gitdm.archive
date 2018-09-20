@@ -196,9 +196,8 @@ def geousers(json_file, json_file2, json_cache)
   cache = {}
   data2.each do |user|
     login = user['login']
-    commits = user['commits']
     email = user['email']
-    cache[[login, commits, email]] = user
+    cache[[login, email]] = user
   end
   newj = []
   n = 0
@@ -208,11 +207,10 @@ def geousers(json_file, json_file2, json_cache)
   all_n = data.length
   data.each_with_index do |user, idx|
     login = user['login']
-    commits = user['commits']
     email = user['email']
     loc = user['location']
-    if cache.key?([login, commits, email])
-      rec = cache[[login, commits, email]]
+    if cache.key?([login, email])
+      rec = cache[[login, email]]
       cid = user['country_id'] = rec['country_id']
       tz = user['tz'] = rec['tz']
       ca += 1
