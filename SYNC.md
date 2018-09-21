@@ -17,7 +17,7 @@ Make sure that you don't have different case email duplicates in `cncf-config/em
 13. Run `./lookup_json.sh` and examine its output JSONs - those GitHub profiles have some useful data directly available - this will save you some manual research work.
 14. *ALWAYS* before any commit to GitHub run: `./handle_forbidden_data.sh` to remove any forbiden affiliations, please also see `FORBIDDEN_DATA.md`.
 15. You can use `./clear_affiliations_in_json.sh` to clear all affiliations on a generated `github_users.json`.
-16. To make json unique, call `./unique_json.rb github_users.json`.
+16. To make json unique, call `./unique_json.rb github_users.json`. To sort JSON by commits, login, email use: `./sort_json.rb github_users.json`.
 17. You can create smaller final json for `cncf/devstats` using `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`.
 18. To generate final `unknowns.csv` manual research task file run: `./unknowns.rb`.
 19. To manually edit all affiliations related files: edit `cncf-config/email-map all.txt all.csv all_affs.csv github_users.json developers_affiliations.txt company_developers.txt affiliations.csv`
