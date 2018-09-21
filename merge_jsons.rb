@@ -89,7 +89,7 @@ def merge_jsons(primary_json, new_json, email_map)
 
   # Write JSON back
   pretty = JSON.pretty_generate users
-  File.write json_file, new_json
+  File.write new_json, pretty
 end
 
 if ARGV.size < 3
