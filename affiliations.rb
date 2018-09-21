@@ -298,7 +298,7 @@ def affiliations(affiliations_file, json_file, email_map)
 end
 
 if ARGV.size < 3
-    puts "Missing arguments: affiliations.csv github_users.json cncf-config/email-map"
+  puts "Missing arguments: affiliations.csv github_users.json cncf-config/email-map"
   exit(1)
 end
 
