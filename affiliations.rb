@@ -156,6 +156,15 @@ def affiliations(affiliations_file, json_file, email_map)
         end
         begin
           ddt = DateTime.strptime(dt, '%Y-%m-%d')
+          if ddt.year < 2000 || ddt.year > 2099
+            puts "Wrong date format expected YYYY-MM-DD, got #{ddt} (invalid year: < 2000 or > 2099)"
+            err = true
+            p data
+            p h
+            p err
+            binding.pry
+            next
+          end
           sdt = ddt.strftime("%Y-%m-%d")
           com = data[0]
           emails.each do |e|
