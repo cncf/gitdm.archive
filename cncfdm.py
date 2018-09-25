@@ -72,7 +72,21 @@ BotEmails = [
     "review@openstack.org",
     "support@greenkeeper.io",
     "zuul@openstack.org",
-    "zuul@zuul.openstack.org"
+    "zuul@zuul.openstack.org",
+    "envoy-docs@users.noreply.github.com",
+    "envoy-filter-example@users.noreply.github.com",
+    "data-plane-api@users.noreply.github.com",
+    "info@cncf.io",
+    "info@rook.io",
+    "nobody@k8s.io",
+    "info@arangodb.com",
+    "support@dependabot.com",
+    "git-bot@tilosp.de",
+    "badges@fossa.io",
+    "deploy@travis-ci.org",
+    "release-bot@arangodb.com",
+    "bot@example.com",
+    "jenkins@doi-janky.infosiftr.net"
 ]
 
 #
