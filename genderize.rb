@@ -69,6 +69,8 @@ def generate_global_cache(cache)
 end
 
 def genderize(json_file, json_file2, json_cache)
+  # set to false to retry gender lookups where name is set but no gender is found
+  always_cache = true
   # Parse input JSONs
   data = JSON.parse File.read json_file
   data2 = JSON.parse File.read json_file2
@@ -81,7 +83,14 @@ def genderize(json_file, json_file2, json_cache)
   data2.each do |user|
     login = user['login']
     email = user['email']
-    cache[[login, email]] = user
+    name = user['name']
+    sex = user['sex']
+    sex_prob = user['sex_prob']
+    if always_cache || (name.nil? || name == '' || (sex != nil && sex != '' && sex_prob != nil && sex_prob != ''))
+      cache[[login, email]] = user
+    else
+      binding.pry
+    end
   end
   newj = []
   n = 0
@@ -120,7 +129,7 @@ def genderize(json_file, json_file2, json_cache)
     newj << user
     n += 1
     puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, #{$hit}/#{$miss}"
-    if idx > 0 && idx % 1000 == 0
+    if idx > 0 && idx % 2000 == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
       pretty = JSON.pretty_generate get_gcache
