@@ -102,15 +102,15 @@ def genderize(json_file, json_file2, json_cache)
     email = user['email']
     name = user['name']
     cid = user['country_id']
-    if cache.key?([login, email])
+    csex = user['sex']
+    cprob = user['sex_prob']
+    if (csex.nil? || csex == '' || cprob.nil? || cprob == '') && cache.key?([login, email])
       rec = cache[[login, email]]
       sex = user['sex'] = rec['sex']
       prob = user['sex_prob'] = rec['sex_prob']
       ca += 1
       f += 1 unless sex.nil?
     else
-      csex = user['sex']
-      cprob = user['sex_prob']
       sex = nil
       if csex.nil? || cprob.nil?
         sex, prob, ok = get_sex name, login, cid

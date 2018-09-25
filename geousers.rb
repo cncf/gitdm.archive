@@ -216,7 +216,9 @@ def geousers(json_file, json_file2, json_cache)
     login = user['login']
     email = user['email']
     loc = user['location']
-    if cache.key?([login, email])
+    ccid = user['country_id']
+    ctz = user['tz']
+    if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && cache.key?([login, email])
       rec = cache[[login, email]]
       cid = user['country_id'] = rec['country_id']
       tz = user['tz'] = rec['tz']
@@ -224,8 +226,6 @@ def geousers(json_file, json_file2, json_cache)
       l += 1 if !loc.nil? && loc.length > 0
       f += 1 unless cid.nil?
     else
-      ccid = user['country_id']
-      ctz = user['tz']
       cid = nil
       if (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
         l += 1
