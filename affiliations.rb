@@ -3,6 +3,7 @@ require 'csv'
 require 'json'
 require './comment'
 require './email_code'
+require './mgetc'
 
 def affiliations(affiliations_file, json_file, email_map)
   # dbg: set to true to have very verbose output
@@ -110,14 +111,23 @@ def affiliations(affiliations_file, json_file, email_map)
                 eaffs[e][aff] = true
               else
                 puts "Note: #{e} already have affiliation: #{eaffs[e].keys}, adding '#{aff}', line #{ln}" if dbg
+                dels = []
+                add = true
                 eaffs[e].each do |k|
                   ary = k[0].split('<').map(&:strip)
                   if ary.length != 2
                     puts "Wrong: #{e} already have a final affiliation '#{k}' while trying to add another final one: '#{aff}', line #{ln}"
-                    binding.pry
+                    puts "Update? (y/n)"
+                    upd = mgetc
+                    if upd == 'y' || upd == 'Y'
+                      dels << k[0]
+                    else
+                      add = false
+                    end
                   end
                 end
-                eaffs[e][aff] = true
+                dels.each { |d| eaffs[e].delete d }
+                eaffs[e][aff] = true if add
               end
             end
           else
@@ -269,7 +279,7 @@ def affiliations(affiliations_file, json_file, email_map)
               puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
             end
             if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && saffs == 'NotFound'
-              puts "Wrong: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+              puts "Wrong: not overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
             else
               json_data[index]['affiliation'] = saffs
             end
