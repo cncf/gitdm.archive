@@ -163,6 +163,8 @@ def generate_global_cache(cache)
 end
 
 def geousers(json_file, json_file2, json_cache)
+  # set to false to retry localization lookups where location is set but no country/tz is found
+  always_cache = true
   # Connect to 'geonames' database
   c = PG.connect host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS']
 
@@ -197,7 +199,12 @@ def geousers(json_file, json_file2, json_cache)
   data2.each do |user|
     login = user['login']
     email = user['email']
-    cache[[login, email]] = user
+    loc = user['location']
+    cid = user['country_id']
+    tz = user['tz']
+    if always_cache || (loc.nil? || loc == '' || (cid != nil && cid != '' && tz != nil && tz != ''))
+      cache[[login, email]] = user
+    end
   end
   newj = []
   n = 0
@@ -221,7 +228,6 @@ def geousers(json_file, json_file2, json_cache)
       ctz = user['tz']
       cid = nil
       if (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
-      #if (ctz.nil? || ctz == '') && !ccid.nil? && ccid.length > 0 && !loc.nil? && loc.length > 0
         l += 1
         cid, tz = get_cid c, loc
         f += 1 unless cid.nil?
@@ -234,7 +240,7 @@ def geousers(json_file, json_file2, json_cache)
     newj << user
     n += 1
     puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, #{$hit}/#{$miss}"
-    if idx > 0 && idx % 1000 == 0
+    if idx > 0 && idx % 2000 == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
 
