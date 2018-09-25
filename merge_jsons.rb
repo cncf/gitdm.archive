@@ -1,5 +1,6 @@
 require 'json'
 require 'pry'
+require './mgetc'
 
 def merge_jsons(primary_json, new_json, email_map)
   # set dbg = true to have verbose output
@@ -47,10 +48,14 @@ def merge_jsons(primary_json, new_json, email_map)
     end
     if pri_user
       commits += ",#{pri_user['commits']}"
-      if user['affiliation'] != pri_user['affiliation'] && pri_user['affiliation'] != '?' && pri_user['affiliation'] != '(Unknown)'
-        puts "#{mode} Using primary affiliation '#{pri_user['affiliation']}' instead of new '#{user['affiliation']}' for #{login}/#{email}/#{commits}"
-        user['affiliation'] = pri_user['affiliation']
-        a += 1
+      if user['affiliation'] != pri_user['affiliation'] && pri_user['affiliation'] != '?' && pri_user['affiliation'] != '(Unknown)' && pri_user['affiliation'] != 'NotFound'
+        puts "#{mode} Use primary affiliation '#{pri_user['affiliation']}' instead of new '#{user['affiliation']}' for #{login}/#{email}/#{commits}?"
+        answer = mgetc
+        if answer == 'y' || answer == 'Y'
+          puts "#{mode} Using primary affiliation '#{pri_user['affiliation']}' instead of new '#{user['affiliation']}' for #{login}/#{email}/#{commits}"
+          user['affiliation'] = pri_user['affiliation']
+          a += 1
+        end
       end
       if user['sex'] != pri_user['sex'] || user['sex_prob'] != pri_user['sex_prob']
         if (pri_user['sex'] != nil || pri_user['sex_prob'] != nil) && (user['sex'] == nil || user['sex_prob'] == nil)
