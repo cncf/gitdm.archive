@@ -225,8 +225,8 @@ def affiliations(affiliations_file, json_file, email_map)
       emails.each do |email|
         if eaffs.key?(email)
           unless eaffs[email].key?(aaff[1])
-            binding.pry
             puts "Note: Adding '#{aaff[1]}' affiliation to the existing email #{email}: #{eaffs[email].keys}, line #{ln}"
+            binding.pry
           end
         end
       end
