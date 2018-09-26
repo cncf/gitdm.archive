@@ -42,9 +42,16 @@ def affiliations(affiliations_file, json_file, email_map)
     next if is_comment row
     h = row.to_h
     h['line_no'] = ln
-    if h['affiliations'] == '/'
+    if h['affiliations'] && h['affiliations'].strip == '/'
       wip += 1
       next
+    end
+
+    # Bots
+    gender = h['gender'].downcase if h['gender']
+    if gender == 'b'
+      h['affiliations'] = '(Robots)'
+      h['gender'] = nil
     end
 
     # emails bugs/typos
