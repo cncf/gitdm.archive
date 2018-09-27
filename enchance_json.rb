@@ -6,8 +6,9 @@ require './comment'
 require './email_code'
 require './ghapi'
 require './merge'
+require './mgetc'
 
-def enchance_json(json_file, csv_file, actors_file)
+def enchance_json(json_file, csv_file, actors_file, map_file)
   # This enables guessing if multiple final affiliations are given
   # Best option is to avoid this, by specifying exact affiliations everywhere!
   guess_by_email = true
@@ -21,6 +22,20 @@ def enchance_json(json_file, csv_file, actors_file)
     actors[actor] = true
   end
   actors_array = actors_data = nil
+
+  # parse current email-map, store data in 'eaffs'
+  eaffs = {}
+  File.readlines(map_file).each do |line|
+    line.strip!
+    if line.length > 0 && line[0] == '#'
+      next
+    end
+    ary = line.split ' '
+    email = ary[0]
+    eaffs[email] = {} unless eaffs.key?(email)
+    aff = ary[1..-1].join(' ')
+    eaffs[email][aff] = true
+  end
 
   # Process affiliations found by Python cncf/gitdm saved in CSV
   # "email","name","company","date_to"
@@ -111,8 +126,16 @@ def enchance_json(json_file, csv_file, actors_file)
       user['affiliation'] = v
     else
       if cv != v && v != '?' && v != '(Unknown)'
-        puts "Warning: #{e}: Current '#{cv}', new '#{v}'"
+        puts "Warning: #{e}: Current '#{cv}', new '#{v}', c/n?"
         binding.pry if v.is_a?(Array)
+        answer = mgetc
+        if answer == 'n' || answer == 'N'
+          user['affiliation'] = v
+        elsif answer == 'c' || answer == 'C'
+          binding.pry
+        else
+          exit 1
+        end
       end
     end
   end
@@ -226,8 +249,8 @@ def enchance_json(json_file, csv_file, actors_file)
 end
 
 if ARGV.size < 3
-    puts "Missing arguments: JSON_file CSV_file Actors_file (github_users.json all_affs.csv actors.txt)"
+    puts "Missing arguments: json_file csv_file actors_file map_file (github_users.json all_affs.csv actors.txt cncf-config/email-map)"
   exit(1)
 end
 
-enchance_json(ARGV[0], ARGV[1], ARGV[2])
+enchance_json(ARGV[0], ARGV[1], ARGV[2], ARGV[3])
