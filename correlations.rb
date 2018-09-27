@@ -18,7 +18,7 @@ def correlation_metric(strings)
 end
 
 def correlations(input_file, input_type, company_column)
-  min_correlation = 60.0
+  min_correlation = 71.0
 
   affs = {}
   # skip_set = ['Independent', 'NotFound', '?', '(Unknown)', 'Funky']
