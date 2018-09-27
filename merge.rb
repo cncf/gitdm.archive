@@ -1,6 +1,6 @@
 require 'json'
 
-def check_affs_list(key, affiliations, guess)
+def check_affs_list(key, affiliations, guess, verbose)
   unknowns = []
   ranges = []
   finals = []
@@ -36,11 +36,11 @@ def check_affs_list(key, affiliations, guess)
       # we have no unknown and no final
       if nR == 0
         # no ranges
-        puts "#{key}: wrong affiliations: #{affiliations} - no final, no unknown, no ranges"
+        puts "#{key}: wrong affiliations: #{affiliations} - no final, no unknown, no ranges" if verbose
         exit 1
       else
         # we have ranges
-        puts "#{key}: wrong affiliations: #{affiliations} - no final, no unknown, ranges present"
+        puts "#{key}: wrong affiliations: #{affiliations} - no final, no unknown, ranges present" if verbose
         exit 1
       end
     else
@@ -50,7 +50,7 @@ def check_affs_list(key, affiliations, guess)
         return unknowns.first
       else
         # 1 unknown, no final and ranges
-        puts "#{key}: wrong affiliations: #{affiliations} - no final, unknown, ranges present"
+        puts "#{key}: wrong affiliations: #{affiliations} - no final, unknown, ranges present" if verbose
         exit 1
       end
     end
@@ -66,10 +66,10 @@ def check_affs_list(key, affiliations, guess)
             break
           end
         end
-        puts "#{key}: wrong affiliations: #{affiliations} - multiple final affiliations, picked: #{fin}"
+        puts "#{key}: wrong affiliations: #{affiliations} - multiple final affiliations, picked: #{fin}" if verbose
         finals = [fin]
       else
-        puts "#{key}: wrong affiliations: #{affiliations} - multiple final affiliations, treating as unknown"
+        puts "#{key}: wrong affiliations: #{affiliations} - multiple final affiliations, treating as unknown" if verbose
         return '(Unknown)'
       end
     end

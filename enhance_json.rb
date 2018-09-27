@@ -79,14 +79,12 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   # Make results as strings
   puts "Checking affiliations by email #{guess_by_email} - this should not generate warnings"
   email_affs.each do |email, comps|
-    email_affs[email] = check_affs_list email, comps, guess_by_email
+    email_affs[email] = check_affs_list email, comps, guess_by_email, guess_by_email
   end
 
-  if guess_by_name
-    puts "Checking affiliations by name #{guess_by_name} - this can generate a lot of warnings"
-    name_affs.each do |name, comps|
-      name_affs[name] = check_affs_list name, comps, guess_by_name
-    end
+  puts "Checking affiliations by name #{guess_by_name} - this can generate a lot of warnings"
+  name_affs.each do |name, comps|
+    name_affs[name] = check_affs_list name, comps, guess_by_name, guess_by_name
   end
   
   # Parse JSON
@@ -106,7 +104,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
     known_logins[l] = true
     json_emails[e] = true
     v = '?'
-    if email_affs.key?(e)
+    if guess_by_email && email_affs.key?(e)
       # p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
       enchanced += 1
       v = email_affs[e]
@@ -123,21 +121,37 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
     end
     cv = user['affiliation']
     if cv.nil? || cv == '(Unknown)' || cv == 'NotFound' || cv == '?'
-      user['affiliation'] = v
+      user['affiliation'] = v unless v == '(Unknown)' || v == '?'
     else
       if cv != v && v != '?' && v != '(Unknown)'
-        puts "Warning: #{e}: Current '#{cv}', new '#{v}', c/n?"
+        puts "Warning: #{e}: Current '#{cv}', new '#{v}', c/n/q?"
         binding.pry if v.is_a?(Array)
         answer = mgetc
+        # answer = 'c'
         if answer == 'n' || answer == 'N'
           user['affiliation'] = v
         elsif answer == 'c' || answer == 'C'
-          binding.pry
+          if eaffs.key?(e)
+            eaffs.delete e
+          end
+          eaffs[e] = {}
+          cv.split(', ').each { |a| eaffs[e][a] = true }
         else
           exit 1
         end
       end
     end
+  end
+
+  # Write new email-map
+  File.open(map_file, 'w') do |file|
+     file.puts "# Here is a set of mappings of domain names onto employer names."
+     file.puts "# [user!]domain  employer  [< yyyy-mm-dd]"
+     eaffs.each do |email, affs|
+        affs.each do |aff, _|
+          file.puts "#{email} #{aff}"
+        end
+     end
   end
 
   # Merge multiple logins
@@ -184,12 +198,12 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
         u['email'] = e
         u['commits'] = 0
         v = '?'
-        if email_affs.key?(e)
+        if guess_by_email && email_affs.key?(e)
           p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
           actors_found += 1
           v = email_affs[e]
         else
-          if name_affs.key?(n)
+          if guess_by_name && name_affs.key?(n)
             p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
             actors_found += 1
             v = name_affs[n]
