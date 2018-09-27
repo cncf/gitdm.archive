@@ -67,9 +67,11 @@ def enchance_json(json_file, csv_file, actors_file)
     email_affs[email] = check_affs_list email, comps, guess_by_email
   end
 
-  puts "Checking affiliations by name #{guess_by_name} - this can generate a lot of warnings"
-  name_affs.each do |name, comps|
-    name_affs[name] = check_affs_list name, comps, guess_by_name
+  if guess_by_name
+    puts "Checking affiliations by name #{guess_by_name} - this can generate a lot of warnings"
+    name_affs.each do |name, comps|
+      name_affs[name] = check_affs_list name, comps, guess_by_name
+    end
   end
   
   # Parse JSON
@@ -94,7 +96,7 @@ def enchance_json(json_file, csv_file, actors_file)
       enchanced += 1
       v = email_affs[e]
     else
-      if name_affs.key?(n)
+      if guess_by_name && name_affs.key?(n)
         # p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
         enchanced += 1
         v = name_affs[n]
@@ -104,7 +106,15 @@ def enchance_json(json_file, csv_file, actors_file)
         name_unks << n
       end
     end
-    user['affiliation'] = v
+    cv = user['affiliation']
+    if cv.nil? || cv == '(Unknown)' || cv == 'NotFound' || cv == '?'
+      user['affiliation'] = v
+    else
+      if cv != v && v != '?' && v != '(Unknown)'
+        puts "Warning: #{e}: Current '#{cv}', new '#{v}'"
+        binding.pry if v.is_a?(Array)
+      end
+    end
   end
 
   # Merge multiple logins
