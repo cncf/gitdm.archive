@@ -114,7 +114,7 @@ def enchance_json(json_file, csv_file, actors_file)
   str = File.read 'skip_github_logins.txt'
   skip_logins_arr = str.strip.split(',') + [nil]
   skip_logins_arr.each { |skip_login| skip_logins[skip_login] = true }
-  File.write 'skip_github_logins.txt', skip_logins_arr.reject { |l| l.nil? }.sort.join(',')
+  File.write 'skip_github_logins.txt', skip_logins_arr.reject { |l| l.nil? }.sort.uniq.join(',')
 
   # Actors from cncf/devstats that are missing in our JSON
   unknown_actors = {}
