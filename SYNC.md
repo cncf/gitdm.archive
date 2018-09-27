@@ -10,7 +10,7 @@ Make sure that you don't have different case email duplicates in `cncf-config/em
 6. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too.
 7. Consider `./ghusers_cached.sh` or `./ghusers.sh` (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points). Sometimes you should just run `./ghusers.sh` without cache.
 8. `ghusers_partially_cached.sh` will refetch repos metadata and commits and get users data from `github_users.json` so you can save a lot of API points.
-9. To update (enchance) `github_users.json` with new affiliations `./enchance_json.sh`. If you run `ghusers` you may need to update `skip_github_logins.txt` with new broken GitHub logins found. This is optional if you already have an enchanced json.
+9. To update (enhance) `github_users.json` with new affiliations `./enhance_json.sh`. If you run `ghusers` you may need to update `skip_github_logins.txt` with new broken GitHub logins found. This is optional if you already have an enhanced json.
 10. To merge with previous JSON use: `./merge_jsons.sh`.
 11. To merge multiple GitHub logins data (for example propagate known affiliation to unknown or not found on the same GitHub login) run: `./merge_github_logins.sh`.
 12. Because this can find new affiliations you can now use `./import_from_github_users.sh` to import back from `github_users.json` and then `./lower_unique.sh cncf-config/email-map` and restart from step 4.
@@ -54,7 +54,7 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - If this is a first genderize run create `genderize_cache.json` via `cp empty.json genderize_cache.json`.
 - Enchance `github_users.json` via `API_KEY=... ./genderize.sh github_users.json stripped.json genderize_cache.json`. It will add `sex` and `sex_prob` fields.
 - You can skip `API_KEY=...` but only 1000 gender lookups/day are allowed then.
-- Copy enchanced json to devstats: `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`
+- Copy enhanced json to devstats: `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`
 - Import new json on devstats using `./import_affs` tool.
 
 # Manual affiliations
