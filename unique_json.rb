@@ -24,7 +24,7 @@ ARGV.each do |json_file|
     login = row['login']
     email = row['email']
     if replaces.key?([login, email])
-      echo "Using non downcased login: '#{row['login']}/#{row['email']}' --> '#{replaces[[login, email]][0]}/#{replaces[[login, email]][1]}'"
+      puts "Using non downcased login: '#{replaces[[login, email]][0]}/#{replaces[[login, email]][1]}' for '#{row['login']}/#{row['email']}'"
       row['login'] = replaces[[login, email]][0]
       row['email'] = replaces[[login, email]][1]
     end
