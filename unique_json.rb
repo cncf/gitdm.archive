@@ -23,7 +23,10 @@ ARGV.each do |json_file|
   new_data.each do |row|
     login = row['login']
     email = row['email']
-    row['login'] = replaces[[login, email]][0] if replaces.key?([login, email])
+    if replaces.key?([login, email])
+      echo "Using non downcased login: '#{row['login']}' --> '#{eplaces[[login, email]][0]}'"
+      row['login'] = replaces[[login, email]][0]
+    end
   end
   pretty = JSON.pretty_generate new_data
   File.write json_file, pretty
