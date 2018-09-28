@@ -5,6 +5,8 @@ require './mgetc'
 def merge_jsons(primary_json, new_json, email_map)
   # set dbg = true to have verbose output
   dbg = false
+
+  # primary JSON
   pdata = JSON.parse File.read primary_json
   users = {}
   np = 0
@@ -18,13 +20,16 @@ def merge_jsons(primary_json, new_json, email_map)
     users[email] << user
     np += 1
   end
+
+  # new JSON
   data = JSON.parse File.read new_json
   nusers = {}
   nn = 0
   e = l = le = n = 0
   a = s = lo = 0
   data.each_with_index do |user, index|
-    login = user['login'].downcase
+    ologin = user['login']
+    login = ologin.downcase
     email = user['email'].downcase
     pri_user = nil
     mode = nil
@@ -51,18 +56,18 @@ def merge_jsons(primary_json, new_json, email_map)
       if user['affiliation'] != pri_user['affiliation'] && pri_user['affiliation'] != '?' && pri_user['affiliation'] != '(Unknown)' && pri_user['affiliation'] != 'NotFound'
         answer = 'y'
         if user['affiliation'] != '?' && user['affiliation'] != '(Unknown)' && user['affiliation'] != 'NotFound'
-          puts "#{mode} Use primary affiliation '#{pri_user['affiliation']}' instead of new '#{user['affiliation']}' for #{login}/#{email}/#{commits} ?"
+          puts "#{mode} Use primary affiliation '#{pri_user['affiliation']}' instead of new '#{user['affiliation']}' for #{ologin}/#{email}/#{commits} ?"
           answer = mgetc
         end
         if answer == 'y' || answer == 'Y'
-          puts "#{mode} Using primary affiliation '#{pri_user['affiliation']}' instead of new '#{user['affiliation']}' for #{login}/#{email}/#{commits}"
+          puts "#{mode} Using primary affiliation '#{pri_user['affiliation']}' instead of new '#{user['affiliation']}' for #{ologin}/#{email}/#{commits}"
           user['affiliation'] = pri_user['affiliation']
           a += 1
         end
       end
       if user['sex'] != pri_user['sex'] || user['sex_prob'] != pri_user['sex_prob']
         if (pri_user['sex'] != nil || pri_user['sex_prob'] != nil) && (user['sex'] == nil || user['sex_prob'] == nil)
-          puts "#{mode} Using primary gender '#{pri_user['sex']}, #{pri_user['sex_prob']}' instead of new '#{user['sex']}, #{user['sex_prob']}' for #{login}/#{email}/#{commits}" if dbg
+          puts "#{mode} Using primary gender '#{pri_user['sex']}, #{pri_user['sex_prob']}' instead of new '#{user['sex']}, #{user['sex_prob']}' for #{ologin}/#{email}/#{commits}" if dbg
           user['sex'] = pri_user['sex']
           user['sex_prob'] = pri_user['sex_prob']
           s += 1
@@ -70,7 +75,7 @@ def merge_jsons(primary_json, new_json, email_map)
       end
       if user['country_id'] != pri_user['country_id'] || user['tz'] != pri_user['tz']
         if (pri_user['country_id'] != nil || pri_user['tz'] != nil) && (user['country_id'] == nil || user['tz'] == nil)
-          puts "#{mode} Using primary location '#{pri_user['country_id']}, #{pri_user['tz']}' instead of new '#{user['country_id']}, #{user['tz']}' for #{login}/#{email}/#{commits}" if dbg
+          puts "#{mode} Using primary location '#{pri_user['country_id']}, #{pri_user['tz']}' instead of new '#{user['country_id']}, #{user['tz']}' for #{ologin}/#{email}/#{commits}" if dbg
           user['country_id'] = pri_user['country_id']
           user['tz'] = pri_user['tz']
           lo += 1
