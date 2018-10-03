@@ -56,7 +56,7 @@ def affiliations(affiliations_file, json_file, email_map)
 
     # affiliations in new emails
     new_emails = h['new emails']
-    if new_emails.include?('<')
+    if new_emails && new_emails.include?('<')
       puts "Wrong new emails config (includes <)"
       p h
       binding.pry
