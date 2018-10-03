@@ -54,9 +54,18 @@ def affiliations(affiliations_file, json_file, email_map)
       h['gender'] = nil
     end
 
+    # affiliations in new emails
+    new_emails = h['new emails']
+    if new_emails.include?('<')
+      puts "Wrong new emails config (includes <)"
+      p h
+      binding.pry
+      next
+    end
+
     # emails bugs/typos
-    possible_emails = (h['new emails'] || '').split(',').map(&:strip) << h['email'].strip
-    emails = ((h['new emails'] || '').split(',').map(&:strip).map { |e| email_encode(e) } << email_encode(h['email'].strip)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
+    possible_emails = (new_emails || '').split(',').map(&:strip) << h['email'].strip
+    emails = ((new_emails || '').split(',').map(&:strip).map { |e| email_encode(e) } << email_encode(h['email'].strip)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
     if emails.length != possible_emails.length
       puts "Wrong emails config (some discarded)"
       p h
