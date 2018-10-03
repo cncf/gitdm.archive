@@ -73,6 +73,22 @@ def affiliations(affiliations_file, json_file, email_map)
       next
     end
 
+    # dates in emails
+    err = false
+    emails.each do |email|
+      begin
+        ddt = DateTime.strptime(email, '%Y-%m-%d')
+        sdt = ddt.strftime("%Y-%m-%d")
+        puts "Wrong affiliation config - YYYY-MM-DD date found where new email expected"
+        err = true
+        p h
+        binding.pry
+        next
+      rescue
+      end
+    end
+    next if err
+
     # affiliations bugs/typos
     possible_affs = (h['affiliations'] || '').split(',').map(&:strip)
     affs = possible_affs.reject { |a| a.nil? || a.empty? || a == '/' }.uniq
