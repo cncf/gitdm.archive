@@ -33,6 +33,19 @@ def affiliations(affiliations_file, json_file, email_map)
     eaffs[email][aff] = true
   end
 
+  # Check for carriage returns in CSV file
+  ln = 0
+  File.readlines(affiliations_file).each do |line|
+    ln += 1
+    next if ln == 1
+    line.strip!
+    if !line.start_with?('(Unknown),') && !line.start_with?('NotFound,')
+      puts "#{ln} Line start is wrong: '#{line}'"
+      binding.pry
+      exit 1
+    end
+  end
+
   # process new affiliations CSV
   all_affs = []
   ln = 1
