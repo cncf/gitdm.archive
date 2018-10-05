@@ -152,4 +152,4 @@ if ARGV.size < 4
   exit(1)
 end
 
-genderize ARGV[0], ARGV[1], ARGV[2]
+genderize ARGV[0], ARGV[1], ARGV[2], ARGV[3]
