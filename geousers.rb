@@ -162,7 +162,8 @@ def generate_global_cache(cache)
   cache.each { |key, val| $gcache[key] = val }
 end
 
-def geousers(json_file, json_file2, json_cache)
+def geousers(json_file, json_file2, json_cache, backup_freq)
+  freq = backup_freq.to_i
   # set to false to retry localization lookups where location is set but no country/tz is found
   always_cache = true
   # Connect to 'geonames' database
@@ -240,7 +241,7 @@ def geousers(json_file, json_file2, json_cache)
     newj << user
     n += 1
     puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, #{$hit}/#{$miss}"
-    if idx > 0 && idx % 2000 == 0
+    if idx > 0 && idx % freq == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
 
@@ -273,8 +274,8 @@ def geousers(json_file, json_file2, json_cache)
   c.exec 'deallocate alt_lname'
 end
 
-if ARGV.size < 3
-    puts "Missing arguments: github_users.json stripped.json geousers_cache.json"
+if ARGV.size < 4
+  puts "Missing arguments: github_users.json stripped.json geousers_cache.json backup_freq"
   exit(1)
 end
 

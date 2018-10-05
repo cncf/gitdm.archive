@@ -68,7 +68,8 @@ def generate_global_cache(cache)
   cache.each { |key, val| $gcache[key] = val }
 end
 
-def genderize(json_file, json_file2, json_cache)
+def genderize(json_file, json_file2, json_cache, backup_freq)
+  freq = backup_freq.to_i
   # set to false to retry gender lookups where name is set but no gender is found
   always_cache = true
   # Parse input JSONs
@@ -129,7 +130,7 @@ def genderize(json_file, json_file2, json_cache)
     newj << user
     n += 1
     puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, #{$hit}/#{$miss}"
-    if idx > 0 && idx % 2000 == 0
+    if idx > 0 && idx % freq == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
       pretty = JSON.pretty_generate get_gcache
@@ -146,8 +147,8 @@ def genderize(json_file, json_file2, json_cache)
   File.write json_cache, pretty
 end
 
-if ARGV.size < 3
-  puts "Missing arguments: github_users.json stripped.json genderize_cache.json"
+if ARGV.size < 4
+  puts "Missing arguments: github_users.json stripped.json genderize_cache.json backup_freq"
   exit(1)
 end
 
