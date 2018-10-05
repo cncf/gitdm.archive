@@ -5,4 +5,9 @@ then
   echo "$0: API_KEY=... ./genderize.sh github_users.json stripped.json genderize_cache.json"
   exit 1
 fi
-ruby genderize.rb $1 $2 $3
+backup=$4
+if [ -z "$4" ]
+then
+  backup=2000
+fi
+ruby genderize.rb $1 $2 $3 $backup

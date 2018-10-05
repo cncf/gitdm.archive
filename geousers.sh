@@ -5,4 +5,10 @@ then
   echo "$0: PG_PASS=... ./geousers.sh github_users.json stripped.json geousers_cache.json"
   exit 1
 fi
-ruby geousers.rb $1 $2 $3
+backup=$4
+if [ -z "$4" ]
+then
+  backup=2000
+fi
+
+ruby geousers.rb $1 $2 $3 $backup
