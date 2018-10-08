@@ -481,6 +481,23 @@ def IsSelf(h):
     empl = h.employer[0][0][1].name
     return empl == 'Independent'
 
+def ReportAll(hlist, cscount):
+    ulist = hlist
+    ulist.sort(ComparePCount)
+    count = 0
+    BeginReport('All developers')
+    alldevsFile = open('alldevs.txt', 'w')
+    for h in ulist:
+        pcount = len(h.patches)
+        if pcount > 0:
+            ReportLine(h.full_name_with_aff(), pcount, (pcount*100.0)/cscount)
+            alldevsFile.write(email_encode('%s\t%d\n' % (h.full_name_with_aff_tabs(), pcount)))
+            count += 1
+        if count >= ListCount:
+            break
+    alldevsFile.close()
+    EndReport()
+
 def ReportUnknowns(hlist, cscount):
     #
     # Trim the list to just the unknowns; try to work properly whether
