@@ -47,6 +47,7 @@ Aggregate = 'month'
 Numstat = 0
 ReportByFileType = 0
 ReportUnknowns = False
+ReportAll = False
 InputData = sys.stdin
 InputDataIsFile = False
 DebugHalt = False
@@ -121,10 +122,10 @@ def ParseOpts ():
     global MapUnknown, DevReports, FileStats
     global DateStats, AuthorSOBs, FileFilter, InvertFilter, DumpDB
     global CFName, CSVFile, CSVPrefix, DirName, Aggregate, Numstat
-    global ReportByFileType, ReportUnknowns, AffFile
+    global ReportByFileType, ReportUnknowns, AffFile, ReportAll
     global InputData, InputDataIsFile, DebugHalt, DateFrom, DateTo
 
-    opts, rest = getopt.getopt (sys.argv[1:], 'a:i:I:b:dc:Dh:l:no:p:r:stUumwx:yzXf:e:R')
+    opts, rest = getopt.getopt (sys.argv[1:], 'a:i:I:b:dc:Dh:l:no:p:r:stAUumwx:yzXf:e:R')
     for opt in opts:
         if opt[0] == '-b':
             DirName = opt[1]
@@ -159,6 +160,8 @@ def ParseOpts ():
             MapUnknown = 2
         elif opt[0] == '-U':
             ReportUnknowns = True
+        elif opt[0] == '-A':
+            ReportAll = True
         elif opt[0] == '-I':
             FileStats = open (opt[1], 'w')
             print "Save all file statistics in " + opt[1] + "\n"
@@ -702,6 +705,8 @@ if DevReports:
 if ReportUnknowns:
     reports.ReportUnknowns(hlist, CSCount)
     reports.ReportSelfs(hlist, CSCount)
+if ReportAll:
+    reports.ReportAll(hlist, CSCount)
 reports.EmplReports (elist, TotalChanged, CSCount)
 
 if ReportByFileType and Numstat:
