@@ -23,12 +23,14 @@ end
 
 email2gh = {}
 genders = {}
+caffs = {}
 gh = JSON.parse File.read 'github_users.json'
 gh.each do |user|
   email = user['email']
   email2gh[email] = [] unless email2gh.key?(email)
   email2gh[email] << "https://github.com/#{user['login'].downcase}"
   genders[email] = user['sex']
+  caffs[email] = user['affiliation']
 end
 
 email2gh.each do |email, logins|
@@ -55,12 +57,14 @@ email2line.each do |email, line|
   end
   gender = genders[email]
   gender = '' if gender.nil?
+  caff = caffs[email]
+  caff = '' if caff.nil? || caff == 'NotFound' || caff == '(Unknown)'
   if email2gh.key?(email)
     logins = email2gh[email]
-    email2line[email] = "#{line}\t#{logins.join(',')}\t#{search}\t#{gender}"
+    email2line[email] = "#{line}\t#{logins.join(',')}\t#{search}\t#{gender}\t#{caff}"
     f += 1
   else
-    email2line[email] = "#{line}\t-\t#{search}\t#{gender}"
+    email2line[email] = "#{line}\t-\t#{search}\t#{gender}\t#{caff}"
     nf += 1
   end
 end
@@ -69,13 +73,13 @@ puts "Found #{f}, not found #{nf}"
 
 arr = []
 email2line.each { |email, line| arr << line.split("\t") }
-arr = arr.sort_by { |item| [item[0], -item[3].to_i] }
+arr = arr.sort_by { |item| [-item[3].to_i] }
 
-hdr = %w(type email name github linkedin1 linkedin2 linkedin3 patches gender)
+hdr = %w(type email name github linkedin1 linkedin2 linkedin3 patches gender affiliations)
 CSV.open(ARGV[0].split('.')[0...-1].join('.')+'.csv', 'w', headers: hdr) do |csv|
   csv << hdr
   arr.each do |ary|
-    csv << [ary[0], ary[1], ary[2], ary[4], ary[5], ary[6], ary[7], ary[3], ary[8]]
+    csv << [ary[0], ary[1], ary[2], ary[4], ary[5], ary[6], ary[7], ary[3], ary[8], ary[9]]
   end
 end
 
