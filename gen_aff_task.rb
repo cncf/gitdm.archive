@@ -4,8 +4,13 @@ require 'csv'
 require 'json'
 require 'pry'
 
+if ARGV.size < 1
+  puts "Missing argument: unknowns.txt|alldevs.txt"
+  exit(1)
+end
+
 email2line = {}
-File.readlines('unknowns.txt').each do |line|
+File.readlines(ARGV[0]).each do |line|
   line.strip!
   ary = line.split "\t"
   email = ary[1]
@@ -67,7 +72,7 @@ email2line.each { |email, line| arr << line.split("\t") }
 arr = arr.sort_by { |item| [item[0], -item[3].to_i] }
 
 hdr = %w(type email name github linkedin1 linkedin2 linkedin3 patches gender)
-CSV.open('unknowns.csv', 'w', headers: hdr) do |csv|
+CSV.open(ARGV[0].split('.')[0...-1].join('.')+'.csv', 'w', headers: hdr) do |csv|
   csv << hdr
   arr.each do |ary|
     csv << [ary[0], ary[1], ary[2], ary[4], ary[5], ary[6], ary[7], ary[3], ary[8]]
