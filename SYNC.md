@@ -21,7 +21,7 @@ Make sure that you don't have different case email duplicates in `cncf-config/em
 17. To make json unique, call `./unique_json.rb github_users.json`. To sort JSON by commits, login, email use: `./sort_json.rb github_users.json`.
 18. You should run genderize/geousers (if needed) before the next step.
 19. You can create smaller final json for `cncf/devstats` using `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`.
-20. To generate final `unknowns.csv` manual research task file run: `./gen_aff_task.rb unknowns.txt`.
+20. To generate final `unknowns.csv` manual research task file run: `./gen_aff_task.rb unknowns.txt`. You can also generate all actors `./gen_aff_task.rb alldevs.txt`.
 21. To manually edit all affiliations related files: edit `cncf-config/email-map all.txt all.csv all_affs.csv github_users.json stripped.json developers_affiliations.txt company_developers.txt affiliations.csv`
 22. To add all possible entries from `github_users.json` to `cncf-config/email-map` use :`github_users_to_map.sh`. This is optional.
 23. Finally copy `github_users.json` to `github_users.old`.
@@ -51,10 +51,10 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - Create indices on columns to speedup localization: `sudo -u postgres psql -f geonames_idx.sql`.
 - If this is a first geousers run create `geousers_cache.json` via `cp empty.json geousers_cache.json`.
 - To use cache it is best to have `stripped.json` from the previous run. See step 18.
-- Enchance `github_users.json` via `PG_PASS=... ./geousers.sh github_users.json stripped.json geousers_cache.json`. It will add `country_id` and `tz` fields.
+- Enchance `github_users.json` via `PG_PASS=... ./geousers.sh github_users.json stripped.json geousers_cache.json 2000`. It will add `country_id` and `tz` fields.
 - Go to [store.genderize.io](https://store.genderize.io) and get you `API_KEY`, basic subscription ($9) allows 100,000 monthly gender lookups.
 - If this is a first genderize run create `genderize_cache.json` via `cp empty.json genderize_cache.json`.
-- Enchance `github_users.json` via `API_KEY=... ./genderize.sh github_users.json stripped.json genderize_cache.json`. It will add `sex` and `sex_prob` fields.
+- Enchance `github_users.json` via `API_KEY=... ./genderize.sh github_users.json stripped.json genderize_cache.json 2000`. It will add `sex` and `sex_prob` fields.
 - You can skip `API_KEY=...` but only 1000 gender lookups/day are allowed then.
 - Copy enhanced json to devstats: `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`
 - Import new json on devstats using `./import_affs` tool.
