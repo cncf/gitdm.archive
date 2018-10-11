@@ -19,7 +19,6 @@ sudo -u postgres psql -tA nats < ~/dev/go/src/devstats/util_sql/actors.sql >> ac
 sudo -u postgres psql -tA opa < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA spiffe < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA spire < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
-sudo -u postgres psql -tA opencontainers < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA contrib < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA cloudevents < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA telepresence < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
@@ -33,6 +32,9 @@ sudo -u postgres psql -tA buildpacks < ~/dev/go/src/devstats/util_sql/actors.sql
 sudo -u postgres psql -tA falco < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA cncf < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA allprj < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA opencontainers < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA istio < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA spinnaker < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 cat actors.txt | sort | uniq > actors.tmp
 tr '\n' ',' < actors.tmp > out
 rm actors.tmp
