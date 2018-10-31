@@ -69,7 +69,7 @@ func fatalf(f string, a ...interface{}) {
 }
 
 func checkSpell() {
-	fn := "stripped.json"
+	fn := "github_users.json"
 	var users gitHubUsers
 	data, err := ioutil.ReadFile(fn)
 	if err != nil {
