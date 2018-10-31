@@ -102,8 +102,7 @@ def ghusers(start_date, args)
           unless shas.key?(c[:sha])
             nc += 1
             comm << c
-          else
-            puts "#{repo_name}:#{c[:sha]} already processed"
+            # else: puts "#{repo_name}:#{c[:sha]} already processed"
           end
         end
         puts "Got #{nc} new commits"
