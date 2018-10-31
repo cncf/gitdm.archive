@@ -93,6 +93,8 @@ def ghusers(start_date, args)
         maxdt = maxdt[0...10] if maxdt.length >= 10
         shas = {}
         comm.each { |c| shas[c[:sha] || c['sha']] = true }
+        rate_limit()
+        puts "Getting new commits for #{repo_name} from #{maxdt}"
         ocomm = Octokit.commits_since(repo_name, maxdt)
         h = ocomm.map(&:to_h)
         nc = 0
