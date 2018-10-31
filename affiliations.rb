@@ -329,10 +329,10 @@ def affiliations(affiliations_file, json_file, email_map)
             end
             if user['affiliation'] != saffs
               caffs = user['affiliation']
-              unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?' || saffs == 'NotFound'
+              unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?' || saffs == 'NotFound' || caffs.nil?
                 puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
               end
-              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && saffs == 'NotFound'
+              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs == 'NotFound'
                 puts "Wrong: not overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
               else
                 json_data[index]['affiliation'] = saffs
