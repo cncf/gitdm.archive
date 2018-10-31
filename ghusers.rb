@@ -90,7 +90,11 @@ def ghusers(start_date, args)
         author_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
         committer_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
         maxdt = [author_maxdt, committer_maxdt].max
-        maxdt = maxdt[0...10] if maxdt.length >= 10
+        if maxdt.nil?
+          maxdt = start_date
+        else
+          maxdt = maxdt[0...10] if maxdt.length >= 10
+        end
         shas = {}
         comm.each { |c| shas[c[:sha] || c['sha']] = true }
         rate_limit()
