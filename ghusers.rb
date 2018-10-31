@@ -8,7 +8,7 @@ require './ghapi'
 # Ask each repo for commits newer than...
 start_date = '2014-01-01'
 
-# args[0]: 1st arg is: 'r' - force repos metadata fetch, 'c' - force commits fetch, 'u' force users fetch
+# args[0]: 1st arg is: 'r' - force repos metadata fetch, 'c' - force commits fetch, 'u' force users fetch, 'n' fetch commits never than newest from cache
 def ghusers(start_date, args)
 
   # List of repositories to retrieve commits from (and get their basic data): from repos.txt file
@@ -20,9 +20,11 @@ def ghusers(start_date, args)
   force_repo = false
   force_commits = false
   force_users = false
+  new_commits = false
   force_repo = true if args.length > 0 && args[0].downcase.include?('r')
   force_commits = true if args.length > 0 && args[0].downcase.include?('c')
   force_users = true if args.length > 0 && args[0].downcase.include?('u')
+  new_commits = true if args.length > 0 && args[0].downcase.include?('n')
 
   octokit_init()
 
@@ -84,6 +86,28 @@ def ghusers(start_date, args)
       f = File.read(ofn)
       puts "Got commits JSON from saved file"
       comm = JSON.parse f
+      if new_commits
+        author_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
+        committer_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
+        maxdt = [author_maxdt, committer_maxdt].max
+        maxdt = maxdt[0...10] if maxdt.length >= 10
+        shas = {}
+        comm.each { |c| shas[c[:sha] || c['sha']] = true }
+        ocomm = Octokit.commits_since(repo_name, maxdt)
+        h = ocomm.map(&:to_h)
+        nc = 0
+        h.each do |c|
+          unless shas.key?(c[:sha])
+            nc += 1
+            comm << c
+          else
+            puts "#{repo_name}:#{c[:sha]} already processed"
+          end
+        end
+        puts "Got #{nc} new commits"
+        json = email_encode(JSON.pretty_generate(comm))
+        File.write fn, json
+      end
       comms << comm
       processed[repo_name] = true
     rescue Errno::ENOENT => err1
