@@ -37,6 +37,7 @@ def correlations(input_file, input_type, company_column)
     data.each do |row|
       h = row.to_h
       saff = h[company_column]
+      next if saff.nil?
       saff.split(', ').each do |aff|
         ary = aff.split('<').map(&:strip)
         a = ary[0]
