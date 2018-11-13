@@ -30,6 +30,7 @@ sudo -u postgres psql -tA tikv < ~/dev/go/src/devstats/util_sql/actors.sql >> ac
 sudo -u postgres psql -tA cortex < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA buildpacks < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA falco < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA dragonfly < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA cncf < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA allprj < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA opencontainers < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
