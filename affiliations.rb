@@ -33,33 +33,51 @@ def affiliations(affiliations_file, json_file, email_map)
     eaffs[email][aff] = true
   end
 
+  update = !ENV['UPDATE'].nil?
+
   # Check for carriage returns in CSV file
-  ln = 0
-  File.readlines(affiliations_file).each do |line|
-    ln += 1
-    next if ln == 1
-    line.strip!
-    if !line.start_with?('(Unknown),') && !line.start_with?('NotFound,')
-      puts "#{ln} Line start is wrong: '#{line}'"
-      binding.pry
-      exit 1
+  unless update
+    ln = 0
+    File.readlines(affiliations_file).each do |line|
+      ln += 1
+      next if ln == 1
+      line.strip!
+      if !line.start_with?('(Unknown),') && !line.start_with?('NotFound,')
+        puts "#{ln} Line start is wrong: '#{line}'"
+        binding.pry
+        exit 1
+      end
     end
   end
 
-  # process new affiliations CSV
+  # Process new affiliations CSV
   all_affs = []
   ln = 1
   wip = 0
+  n_keys = -1
+  nu = 0
   begin
     CSV.foreach(affiliations_file, headers: true) do |row|
       ln += 1
       next if is_comment row
       h = row.to_h
+      if n_keys < 0
+        n_keys = h.keys.count
+      else
+        if n_keys != h.keys.count
+          puts "Keys number mismatch: #{n_keys} != #{h.keys.count}"
+          binding.pry
+        end
+      end
       h['line_no'] = ln
       if h['affiliations'] && h['affiliations'].strip == '/'
         wip += 1
         next
       end
+
+      # In update mode only take rows with column changes=x
+      next if update && h['changes'] != 'x'
+      nu += 1
 
       # Bots
       gender = h['gender'].downcase if h['gender']
@@ -346,6 +364,7 @@ def affiliations(affiliations_file, json_file, email_map)
     puts "CSV error on line #{ln}: #{e}"
     binding.pry
   end
+  puts "Processed #{nu} update rows " if update
   puts "Imported #{all_affs.length} affiliations (#{wip} marked as work in progress)"
   # File.open(email_map, 'a') do |file|
   #   all_affs.each { |d| file.puts d }
