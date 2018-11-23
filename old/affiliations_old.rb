@@ -7,7 +7,7 @@ require './mgetc'
 
 def affiliations(affiliations_file, json_file, email_map)
   # dbg: set to true to have very verbose output
-  dbg = !ENV['DBG'].nil?
+  dbg = true
   # Parse input JSON, store current data in 'users'
   users = {}
   json_data = JSON.parse File.read json_file
@@ -34,7 +34,6 @@ def affiliations(affiliations_file, json_file, email_map)
   end
 
   update = !ENV['UPDATE'].nil?
-  replace = !ENV['REPLACE'].nil?
 
   # Check for carriage returns in CSV file
   unless update
@@ -142,7 +141,6 @@ def affiliations(affiliations_file, json_file, email_map)
       aaffs = []
       err = false
       affs_str = affs.join(', ')
-      replaced_emails = {}
       affs.each do |aff|
         begin
           ddt = DateTime.strptime(aff, '%Y-%m-%d')
@@ -167,11 +165,6 @@ def affiliations(affiliations_file, json_file, email_map)
         end
         if data.length == 1
           emails.each do |e|
-            if replace && !replaced_emails.key?(e)
-              eaffs[e] = {}
-              eaffs[e][aff] = true
-              replaced_emails[e] = true
-            end
             if eaffs.key?(e) && !eaffs[e].key?(aff)
               if aff == 'NotFound'
                 puts "Note: New not found for existing #{e} with '#{eaffs[e].keys}', line #{ln}"
@@ -189,9 +182,14 @@ def affiliations(affiliations_file, json_file, email_map)
                   eaffs[e].each do |k|
                     ary = k[0].split('<').map(&:strip)
                     if ary.length != 2
-                      puts "Wrong: #{e} already have a final affiliation '#{k[0]}' (all: #{eaffs_str}) while trying to add another final one: '#{aff}' (all: #{affs_str}), line #{ln}"
-                      puts "Update? (y/n)"
-                      upd = mgetc
+                      upd = 'y'
+                      if update
+                        puts "Note update: #{e} already have a final affiliation '#{k[0]}' (all: #{eaffs_str}) while trying to add another final one: '#{aff}' (all: #{affs_str}), line #{ln}"
+                      else
+                        puts "Wrong: #{e} already have a final affiliation '#{k[0]}' (all: #{eaffs_str}) while trying to add another final one: '#{aff}' (all: #{affs_str}), line #{ln}"
+                        puts "Update? (y/n)"
+                        upd = mgetc
+                      end
                       if upd == 'y' || upd == 'Y'
                         dels << k[0]
                       else
@@ -208,7 +206,7 @@ def affiliations(affiliations_file, json_file, email_map)
                 if aff == 'NotFound'
                   puts "Note: new unknown email #{e}"
                 else
-                  puts "Note: new email #{e} with '#{aff}'" unless replace
+                  puts "Note: new email #{e} with '#{aff}'"
                 end
               end
               eaffs[e] = {}
@@ -242,11 +240,6 @@ def affiliations(affiliations_file, json_file, email_map)
             com = data[0]
             emails.each do |e|
               aff = "#{com} < #{sdt}"
-              if replace && !replaced_emails.key?(e)
-                eaffs[e] = {}
-                eaffs[e][aff] = true
-                replaced_emails[e] = true
-              end
               if eaffs.key?(e) && !eaffs[e].key?(aff)
                 if eaffs[e].key?('NotFound')
                   puts "Note: No longer not found #{e} now '#{aff}', line #{ln}"
@@ -262,7 +255,7 @@ def affiliations(affiliations_file, json_file, email_map)
                   if aff == 'NotFound'
                     puts "Note: new unknown email #{e}"
                   else
-                    puts "Note: new email #{e} with '#{aff}'" unless replace
+                    puts "Note: new email #{e} with '#{aff}'"
                   end
                 end
                 eaffs[e] = {}
