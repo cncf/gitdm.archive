@@ -66,7 +66,7 @@ def affiliations(affiliations_file, json_file, email_map)
         n_keys = h.keys.count
       else
         if n_keys != h.keys.count
-          puts "Keys number mismatch: #{n_keys} != #{h.keys.count}"
+          puts "Keys number mismatch: #{n_keys} != #{h.keys.count}, line #{ln}"
           binding.pry
         end
       end
