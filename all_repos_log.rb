@@ -6,6 +6,7 @@ require 'pry'
 
 def generate_logs(repos)
   ts = Time.now
+  log = 'git.log'
   dbg = !ENV['DBG'].nil?
   silent = !ENV['SILENT'].nil?
   pwd = `pwd`.strip!
@@ -93,6 +94,19 @@ def generate_logs(repos)
       puts "Timeout PID #{pid}: #{lfn}"
     else
       puts "Error #{code} PID #{pid}: #{lfn}"
+    end
+  end
+  res = `> "#{log}"`
+  rcode = $?.exitstatus
+  unless rcode.zero?
+    puts "Error #{rcode} for '#{cmd}': '#{res}'"
+  end
+  pdata.each do |pid, lfn|
+    cmd = "cat '#{lfn}' >> '#{log}'"
+    res = `#{cmd}`
+    rcode = $?.exitstatus
+    unless rcode.zero?
+      puts "Error #{rcode} for '#{cmd}': '#{res}'"
     end
   end
   # final stats
