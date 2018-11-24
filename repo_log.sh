@@ -5,14 +5,12 @@ then
   exit 1
 fi
 WD=`pwd`
-FN="$WD/git_logs/${1//\//_}.log"
-cd "$1" || exit 2
-git config merge.renameLimit 100000 || exit 3
-git config diff.renameLimit 100000 || exit 4
-git fetch origin || exit 4
-git reset --hard origin/master || exit 5
-git pull || exit 6
-git log --numstat -M > $FN || exit 7
-git config --unset diff.renameLimit || exit 8
-git config --unset merge.renameLimit || exit 9
-ls -l $FN
+FNR="${WD}/git_logs/${1//\//_}"
+LFN="${FNR}.log"
+FN1="${FNR}.1"
+FN2="${FNR}.2"
+cd "$1" 1>"$FN1" 2>"$FN2" || exit 2
+git fetch origin 1>>"$FN1" 2>>"$FN2"
+git reset --hard origin/master 1>>"$FN1" 2>>"$FN2"
+git pull 1>>"$FN1" 2>>"$FN2"
+git log --numstat -M 2>>"$FN2" 1> $LFN
