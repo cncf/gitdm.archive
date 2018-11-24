@@ -70,6 +70,13 @@ def affiliations(affiliations_file, json_file, email_map)
           binding.pry
         end
       end
+      h.each do |k, v|
+        next if v.nil?
+        if v.include?("\r") || v.include?("\n")
+          puts "Key #{k}, value '#{v}' conatins new line, line #{ln}"
+          binding.pry
+        end
+      end
       h['line_no'] = ln
       if h['affiliations'] && h['affiliations'].strip == '/'
         wip += 1
