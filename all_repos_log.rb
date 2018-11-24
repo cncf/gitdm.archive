@@ -20,7 +20,9 @@ def generate_logs(repos)
   else
     timeout_seconds = 900
   end
-  repos.each do |repo|
+  n_repos = repos.length
+  repos.each_with_index do |repo, idx|
+    puts "#{idx}/#{n_repos}" if !silent && idx > 0 && idx%10 == 0
     fnr="#{pwd}/git_logs/#{repo.gsub('/', '_')}"
     lfn="#{fnr}.log"
     fn1="#{fnr}.1"
