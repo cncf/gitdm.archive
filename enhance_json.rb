@@ -12,7 +12,10 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   # This enables guessing if multiple final affiliations are given
   # Best option is to avoid this, by specifying exact affiliations everywhere!
   guess_by_email = true
-  guess_by_name = false
+  guess_by_name = !ENV['GUESS_BY_EMAIL'].nil?
+
+  # When asking for current 'c' or new 'n' -> just use the longer one
+  use_longer = !ENV['USE_LONGER'].nil?
 
   # Process actors file: it is a "," separated list of GitHub logins
   actors_data = File.read actors_file
@@ -97,7 +100,8 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   name_unks = []
   json_emails = {}
   known_logins = {}
-  data.each do |user|
+  n_users = data.length
+  data.each_with_index do |user, idx|
     e = email_encode(user['email'])
     n = user['name']
     l = user['login']
@@ -124,9 +128,23 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
       user['affiliation'] = v unless v == '(Unknown)' || v == '?'
     else
       if cv != v && v != '?' && v != '(Unknown)'
-        puts "Warning: #{e}: Current '#{cv}', new '#{v}', c/n/q?"
+        puts "Warning #{idx}/#{n_users}: #{e}: Current '#{cv}', new '#{v}', c/n/q?"
         binding.pry if v.is_a?(Array)
-        answer = mgetc
+        answer = '?'
+        if use_longer
+          cvi = cv.include? ' < '
+          nvi = v.include? ' < '
+          if cvi && !nvi
+            answer = 'c'
+          elsif !cvi && nvi
+            answer = 'n'
+          elsif cvi && nvi
+            answer = (cv.length >= v.length) ? 'c' : 'n'
+          end
+        end
+        if answer == '?'
+          answer = mgetc
+        end
         # answer = 'c'
         if answer == 'n' || answer == 'N'
           user['affiliation'] = v
