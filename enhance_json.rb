@@ -128,7 +128,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
       user['affiliation'] = v unless v == '(Unknown)' || v == '?'
     else
       if cv != v && v != '?' && v != '(Unknown)'
-        puts "Warning #{idx}/#{n_users}: #{e}: Current '#{cv}', new '#{v}', c/n/q?"
+        puts "Warning #{idx}/#{n_users}: #{e}:\nCurrent '#{cv}'\nNew     '#{v}'\nc/n/q?"
         binding.pry if v.is_a?(Array)
         answer = '?'
         if use_longer
