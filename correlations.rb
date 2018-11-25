@@ -18,7 +18,7 @@ def correlation_metric(strings)
 end
 
 def correlations(input_file, input_type, company_column)
-  min_correlation = 71.0
+  min_correlation = 81.0
 
   affs = {}
   # skip_set = ['Independent', 'NotFound', '?', '(Unknown)', 'Funky']
@@ -50,8 +50,11 @@ def correlations(input_file, input_type, company_column)
   elsif input_type == 'cfg'
     File.readlines(input_file).each do |row|
       next if row[0] == '#'
-      vals = row.split " "
-      vals = [vals[0], vals[1..-1].join(' ')]
+      vals = row.split ' '
+      em = vals[0]
+      ary = vals[1..-1].join(' ').split(' < ')
+      com = ary[0]
+      vals = [em, com]
       a = vals[company_column.to_i]
       next if !a || skip_set.include?(a)
       a = a.strip
