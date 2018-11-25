@@ -56,7 +56,7 @@ def merge_jsons(primary_json, new_json, email_map)
       if user['affiliation'] != pri_user['affiliation'] && pri_user['affiliation'] != '?' && pri_user['affiliation'] != '(Unknown)' && pri_user['affiliation'] != 'NotFound'
         answer = 'y'
         if user['affiliation'] != '?' && user['affiliation'] != '(Unknown)' && user['affiliation'] != 'NotFound'
-          puts "#{mode} Use primary affiliation '#{pri_user['affiliation']}' instead of new '#{user['affiliation']}' for #{ologin}/#{email}/#{commits} ?"
+          puts "#{mode} Use primary affiliation: '#{pri_user['affiliation']}'\n#{mode} instead of new           '#{user['affiliation']}'\nfor #{ologin}/#{email}/#{commits} ?"
           answer = mgetc
         end
         if answer == 'y' || answer == 'Y'
