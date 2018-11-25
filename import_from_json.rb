@@ -347,7 +347,8 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
         last_date = dct.keys.sort.reverse.first
         last_empl = affs[email][last_date]
         puts "Email #{email} has no current employer, last was #{last_empl} till #{last_date}"
-        file.write("#{email} Was: #{last_empl}\n")
+        # file.write("#{email} Was: #{last_empl}\n")
+        file.write("#{email} Independent\n")
       end
     end
   end
