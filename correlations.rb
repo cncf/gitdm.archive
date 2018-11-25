@@ -47,6 +47,17 @@ def correlations(input_file, input_type, company_column)
         affs[a] += 1
       end
     end
+  elsif input_type == 'cfg'
+    File.readlines(input_file).each do |row|
+      next if row[0] == '#'
+      vals = row.split " "
+      vals = [vals[0], vals[1..-1].join(' ')]
+      a = vals[company_column.to_i]
+      next if !a || skip_set.include?(a)
+      a = a.strip
+      affs[a] = 0 unless affs.key?(a)
+      affs[a] += 1
+    end
   end
   affs.each do |a, n|
     sa = a.split(/(?=[A-Z])/).reject { |s| s.length < 3 }.map(&:strip)
