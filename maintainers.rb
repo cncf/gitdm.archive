@@ -4,8 +4,10 @@ require 'csv'
 require './comment'
 require './email_code'
 require './ghapi'
+require './mgetc'
 
 def maintainers(maintainers_file, users_file, config_file)
+  dbg = !ENV['DBG'].nil?
   # Process maintainers file
   affs = {}
   affs_names = {}
@@ -55,6 +57,8 @@ def maintainers(maintainers_file, users_file, config_file)
   # Check/update
   oinited = false
   data = []
+  new_affs = ''
+  del_affs = ''
   affs.each do |login, company|
     if emails.key?(login)
       ems = emails[login]
@@ -69,15 +73,28 @@ def maintainers(maintainers_file, users_file, config_file)
             first_email = em
           end
           if affs_list != first_affs
-            STDERR.puts "Affiliations mismatch: first: #{first_affs}(#{first_email}), current: #{affs_list}(#{em}), email list: #{ems}, login: #{login}"
-            #binding.pry
+            STDERR.puts "#{em} affiliations mismatch:\nfirst:   '#{first_affs}' email: #{first_email}\ncurrent: '#{affs_list}' email: #{em}\nEmail list: #{ems}, login: #{login}, maintainer company: #{company}, use first, current, maintainer f/c/m?"
+            upd = mgetc
+            if upd == 'c' || upd == 'C'
+              STDERR.puts 'Updated to current'
+              first_affs = affs_list
+              first_email = em
+            end
+            if upd == 'm' || upd == 'M'
+              STDERR.puts 'Updated to maintainer'
+              first_affs = company
+              first_email = 'M'
+            end
           end
           if final[em] != company
-            STDERR.puts "Final affiliations mismatch: #{affs_list}, should be: #{company}, email list: #{ems}, login: #{login}"
-            #binding.pry
+            STDERR.puts "#{em} final affiliation '#{final[em]}' mismatch: '#{affs_list}', should be: #{company}\nemail list: #{ems}, login: #{login}, add to delete list?"
+            upd = mgetc
+            if upd == 'y' || upd == 'Y'
+              del_affs += "#{em} #{final[em]}\n" 
+            end
           end
         else
-          STDERR.puts "Missing affiliation: email: #{em}, company: #{company}, login: #{login}"
+          STDERR.puts "Missing affiliation: email: #{em}, company: #{company}, login: #{login}" if dbg
           miss << em
         end
       end
@@ -85,13 +102,13 @@ def maintainers(maintainers_file, users_file, config_file)
         miss.each do |em|
           if first_affs
             first_affs.split(', ').each do |co|
-              puts "#{em} #{co}"
+              new_affs += "#{em} #{co}\n"
             end
           else
-            puts "#{em} #{company}"
+            new_affs += "#{em} #{company}\n"
           end
         end
-        STDERR.puts "Correct affiliations generated to STDOUT, redirect them '>> cncf-config/email-map' and then ./sort_configs.sh"
+        STDERR.puts "Correct affiliations generated to email-map, redirect them '>> cncf-config/email-map' and then ./sort_configs.sh"
       end
     else
       unless oinited
@@ -104,13 +121,13 @@ def maintainers(maintainers_file, users_file, config_file)
       name = affs_names[login]
       begin
         u = Octokit.user login
-        puts "#{u['email']} #{company}" unless u['email'].nil?
+        new_affs += "#{u['email']} #{company}\n" unless u['email'].nil?
         u['email'] = e
         u['commits'] = 0
         u['affiliation'] = company
         u['name'] = name if u['name'].nil?
         h = u.to_h
-        puts "#{e} #{company}"
+        new_affs += "#{e} #{company}\n"
         data << h
       rescue Octokit::NotFound => err
         STDERR.puts "GitHub API exception"
@@ -123,7 +140,15 @@ def maintainers(maintainers_file, users_file, config_file)
     json = JSON.pretty_generate data
     fn = 'unknowns.json'
     File.write fn, json
-    puts "Written file: #{fn}, update your github_users.json with this new data, then generate stripped.json and update cncf-config/email-map too."
+    STDERR.puts "Written file: #{fn}, update your github_users.json with this new data, then generate stripped.json and update cncf-config/email-map too."
+  end
+  if new_affs != ''
+    File.write 'email-map', new_affs
+    STDERR.puts 'email-map written, you should add its contents to cncf-config/email-map'
+  end
+  if del_affs != ''
+    File.write 'delete.txt', del_affs
+    STDERR.puts 'delete.txt written, you should add its contents to cncf-config/email-map'
   end
 end
 
