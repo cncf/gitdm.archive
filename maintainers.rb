@@ -108,7 +108,6 @@ def maintainers(maintainers_file, users_file, config_file)
             new_affs += "#{em} #{company}\n"
           end
         end
-        STDERR.puts "Correct affiliations generated to email-map, redirect them '>> cncf-config/email-map' and then ./sort_configs.sh"
       end
     else
       unless oinited
@@ -144,7 +143,7 @@ def maintainers(maintainers_file, users_file, config_file)
   end
   if new_affs != ''
     File.write 'email-map', new_affs
-    STDERR.puts 'email-map written, you should add its contents to cncf-config/email-map'
+    STDERR.puts 'email-map written, you should add its contents to cncf-config/email-map \'>> cncf-config/email-map\' and then ./sort_configs.sh'
   end
   if del_affs != ''
     File.write 'delete.txt', del_affs
