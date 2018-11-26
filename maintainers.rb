@@ -16,7 +16,7 @@ def maintainers(maintainers_file, users_file, config_file)
     h = row.to_h
     next if h['company'].nil?
     c = h['company'].strip
-    l = h['login'].strip
+    l = h['login'].strip.downcase
     n = h['name'].strip
     affs[l] = c
     affs_names[l] = n
@@ -27,8 +27,8 @@ def maintainers(maintainers_file, users_file, config_file)
   data = JSON.parse File.read users_file
   emails = {}
   data.each do |user|
-    e = email_encode(user['email'])
-    l = user['login']
+    e = email_encode(user['email']).downcase
+    l = user['login'].downcase
     emails[l] = [] unless emails.key?(l)
     emails[l] << e
   end
@@ -41,7 +41,7 @@ def maintainers(maintainers_file, users_file, config_file)
     next if line[0] == '#'
     arr = line.split ' '
     h = {}
-    e = email_encode(arr[0])
+    e = email_encode(arr[0]).downcase
     c = arr[1..-1].join ' '
     email[e] = [] unless email.key?(e)
     email[e] << c
