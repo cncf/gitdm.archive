@@ -31,11 +31,13 @@ sudo -u postgres psql -tA cortex < ~/dev/go/src/devstats/util_sql/actors.sql >> 
 sudo -u postgres psql -tA buildpacks < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA falco < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA dragonfly < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA virtualkubelet < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA cncf < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA allprj < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA opencontainers < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA istio < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA spinnaker < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA knative < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 cat actors.txt | sort | uniq > actors.tmp
 tr '\n' ',' < actors.tmp > out
 rm actors.tmp
