@@ -126,7 +126,7 @@ def merge_multiple_logins(data, verbose)
         profile, i = *profile_data
         data[i]['affiliation'] = aff
         email = profile['email']
-        if verbose
+        if verbose && aff
           aff.split(', ').each do |aff_line|
             puts "#{email} #{aff_line}"
           end
