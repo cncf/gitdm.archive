@@ -37,11 +37,11 @@ def generate_logs(repos)
       tm = t2 - t1
       puts "Time '#{cmd}': #{tm}" if dbg
       unless silent || rcode.zero?
-        puts "Command PID: #{p}', #{cmd}', retuned error code #{rcode}, time: #{tm}, see: #{fnr}"
+        puts "Command PID: #{p}, '#{cmd}', retuned error code #{rcode}, time: #{tm}, see: #{fnr}"
         o1 = `cat "#{fn1}"`.strip!
         o2 = `cat "#{fn2}"`.strip!
-        puts "Command PID: #{p}', '#{cmd}' stdout: '#{o1}'" if o1 && o1.length > 0
-        puts "Command PID: #{p}', '#{cmd}' stderr: '#{o2}'" if o2 && o2.length > 0
+        puts "Command PID: #{p}, '#{cmd}' stdout: '#{o1}'" if o1 && o1.length > 0
+        puts "Command PID: #{p}, '#{cmd}' stderr: '#{o2}'" if o2 && o2.length > 0
       end
       exit rcode
     end
