@@ -393,7 +393,7 @@ def affiliations(affiliations_file, json_file, email_map)
   # end
   File.open(email_map, 'w') do |file|
      file.puts "# Here is a set of mappings of domain names onto employer names."
-     file.puts "# [user!]domain  employer  [< yyyy-mm-dd]"
+     file.puts "# src_type user!domain  employer  [< yyyy-mm-dd]"
      eaffs.each do |email, affs|
         affs.each do |aff, _|
           file.puts "#{email} #{aff}"

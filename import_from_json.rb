@@ -314,10 +314,10 @@ def import_from_json(dom_file, csv_file, json_file, new_domain_map, new_email_ma
   end
 
   # Write new domain mapping
-  # [user@]domain  employer  [< yyyy-mm-dd]
+  # src_type [user!]domain  employer  [< yyyy-mm-dd]
   File.open(new_email_map, 'w') do |file|
     file.write("# Here is a set of mappings of domain names\n")
-    file.write("# [user@]domain  employer  [< yyyy-mm-dd]\n")
+    file.write("# src_type user!domain  employer  [< yyyy-mm-dd]\n")
     affs.keys.sort.each do |email|
       email = email_encode(email)
       dct = affs[email]

@@ -154,7 +154,7 @@ def import_affs(dev_affs, comp_devs)
   return unless dfs
   hdr = [
     '# Here is a set of mappings of domain names onto employer names.',
-    '# [user!]domain  employer  [< yyyy-mm-dd]'
+    '# src_type user!domain  employer  [< yyyy-mm-dd]'
   ]
   File.write 'email-map', (hdr + dfs).join("\n")
   puts 'Generated email-map file, consider using it as a cncfdm.py config file `cncf-config/email-map`'
