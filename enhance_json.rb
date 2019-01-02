@@ -164,7 +164,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   # Write new email-map
   File.open(map_file, 'w') do |file|
      file.puts "# Here is a set of mappings of domain names onto employer names."
-     file.puts "# src_type user!domain  employer  [< yyyy-mm-dd]"
+     file.puts "# [user!]domain  employer  [< yyyy-mm-dd]"
      eaffs.each do |email, affs|
         affs.each do |aff, _|
           file.puts "#{email} #{aff}"
