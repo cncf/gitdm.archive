@@ -8,7 +8,8 @@ require './mgetc'
 def affiliations(affiliations_file, json_file, email_map)
   # affiliation sources priorities
   prios = {}
-  prios['user'] = 2
+  prios['user'] = 3
+  prios['user_manual'] = 2
   prios['manual'] = 1
   prios['config'] = 0
   prios[true] = 0
@@ -229,10 +230,11 @@ def affiliations(affiliations_file, json_file, email_map)
                 end
               end
               if ans == 'y'
-                sources[e] = 'manual'
+                source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
+                sources[e] = source_type
                 eaffs[e] = {}
-                eaffs[e][aff] = 'manual'
-                replaced_emails[e] = 'manual'
+                eaffs[e][aff] = source_type
+                replaced_emails[e] = source_type
                 replaced += 1
                 aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
               else
@@ -240,14 +242,16 @@ def affiliations(affiliations_file, json_file, email_map)
               end
             end
             if eaffs.key?(e) && !eaffs[e].key?(aff) && replaced_emails.key?(e) && aff != 'NotFound'
-              eaffs[e][aff] = 'manual'
+              source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
+              eaffs[e][aff] = source_type
               multiple += 1
               aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
             end
             if !eaffs.key?(e)
-              sources[e] = 'manual'
+              source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
+              sources[e] = source_type
               eaffs[e] = {}
-              eaffs[e][aff] = 'manual'
+              eaffs[e][aff] = source_type
               if dbg && aff == 'NotFound'
                 puts "Note: new unknown email #{e}"
                 unknown += 1
@@ -296,10 +300,11 @@ def affiliations(affiliations_file, json_file, email_map)
                   end
                 end
                 if ans == 'y'
-                  sources[e] = 'manual'
+                  source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
+                  sources[e] = source_type
                   eaffs[e] = {}
-                  eaffs[e][aff] = 'manual'
-                  replaced_emails[e] = 'manual'
+                  eaffs[e][aff] = source_type
+                  replaced_emails[e] = source_type
                   replaced += 1
                   aaffs << [ddt, "#{com} < #{sdt}"]
                 else
@@ -307,14 +312,16 @@ def affiliations(affiliations_file, json_file, email_map)
                 end
               end
               if eaffs.key?(e) && !eaffs[e].key?(aff) && replaced_emails.key?(e)
-                eaffs[e][aff] = 'manual'
+                source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
+                eaffs[e][aff] = source_type
                 multiple += 1
                 aaffs << [ddt, "#{com} < #{sdt}"]
               end
               if !eaffs.key?(e)
-                sources[e] = 'manual'
+                source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
+                sources[e] = source_type
                 eaffs[e] = {}
-                eaffs[e][aff] = 'manual'
+                eaffs[e][aff] = source_type
                 added += 1
                 aaffs << [ddt, "#{com} < #{sdt}"]
               end
@@ -385,7 +392,8 @@ def affiliations(affiliations_file, json_file, email_map)
           entry = users[email]
           login = gh.split('/').last
           entries = users[login]
-          source = prev_sources[email]
+          prev_source = prev_sources[email]
+          source = sources[email]
           unless entry
             if entries
               user = json_data[entries.first[0]].clone
@@ -405,7 +413,7 @@ def affiliations(affiliations_file, json_file, email_map)
           entries.each do |entry|
             index = entry[0]
             user = entry[1]
-            higher_prio = prios[source] > manual_prio
+            higher_prio = prios[prev_source] > prios[source]
             if gender && gender.length == 1 && user['sex'] != gender
               puts "Note: overwriting gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" if dbg && !user['sex'].nil?
               answer = 'y'
@@ -414,7 +422,7 @@ def affiliations(affiliations_file, json_file, email_map)
                   ans = answers[login]
                 else
                   puts "Overwrite gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}?"
-                  puts "Current data has higher priority '#{source}' than 'manual', replace? (y/n)"
+                  puts "Current data has higher priority '#{source}' than '#{prev_source}', replace? (y/n)"
                   ans = mgetc.downcase
                   answers[login] = ans
                 end
@@ -423,7 +431,7 @@ def affiliations(affiliations_file, json_file, email_map)
                 puts "Note: overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
                 json_data[index]['sex'] = gender
                 json_data[index]['sex_prob'] = 1
-                json_data[index]['source'] = 'manual'
+                json_data[index]['source'] = source
               end
             end
             if user['affiliation'] != saffs
@@ -440,7 +448,7 @@ def affiliations(affiliations_file, json_file, email_map)
                     ans = answers[login]
                   else
                     puts "Overwritte affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}?"
-                    puts "Current data has higher priority '#{source}' than 'manual', replace? (y/n)"
+                    puts "Current data has higher priority '#{source}' than '#{prev_source}', replace? (y/n)"
                     ans = mgetc.downcase
                     answers[login] = ans
                   end
@@ -448,7 +456,7 @@ def affiliations(affiliations_file, json_file, email_map)
                 if ans == 'y'
                   puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
                   json_data[index]['affiliation'] = saffs
-                  json_data[index]['source'] = 'manual'
+                  json_data[index]['source'] = source
                 end
               end
             end
