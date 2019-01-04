@@ -220,7 +220,7 @@ def affiliations(affiliations_file, json_file, email_map)
         end
         if data.length == 1
           emails.each do |e|
-            if eaffs.key?(e) && !replaced_emails.key?(e)
+            if eaffs.key?(e) && !eaffs[e].key?(aff) && !replaced_emails.key?(e)
               ans = 'y'
               ans = 'n' if aff == 'NotFound'
               if prios[sources[e]] > manual_prio
@@ -293,7 +293,7 @@ def affiliations(affiliations_file, json_file, email_map)
             com = data[0]
             emails.each do |e|
               aff = "#{com} < #{sdt}"
-              if eaffs.key?(e) && !replaced_emails.key?(e)
+              if eaffs.key?(e) && !eaffs[e].key?(aff) && !replaced_emails.key?(e)
                 ans = 'y'
                 if prios[sources[e]] > manual_prio
                   if answers.key?(e)
