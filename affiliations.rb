@@ -21,6 +21,7 @@ def affiliations(affiliations_file, json_file, email_map)
   # Parse input JSON, store current data in 'users'
   users = {}
   sources = {}
+  prev_sources = {}
   json_data = JSON.parse File.read json_file
   json_data.each_with_index do |user, index|
     email = user['email'].downcase
@@ -30,10 +31,12 @@ def affiliations(affiliations_file, json_file, email_map)
     users[login] = [] unless users.key?(login)
     users[login] << [index, user]
     sources[email] = source unless source.nil?
+    prev_sources[email] = source unless prev_sources.nil?
   end
 
   # parse current email-map, store data in 'eaffs'
   eaffs = {}
+  prev_eaffs = {}
   File.readlines(email_map).each do |line|
     line.strip!
     if line.length > 0 && line[0] == '#'
@@ -43,8 +46,10 @@ def affiliations(affiliations_file, json_file, email_map)
     email = ary[0]
     source = sources[email]
     eaffs[email] = {} unless eaffs.key?(email)
+    prev_eaffs[email] = {} unless prev_eaffs.key?(email)
     aff = ary[1..-1].join(' ')
     eaffs[email][aff] = source ? source : true
+    prev_eaffs[email][aff] = source ? source : true
   end
   puts "Default affiliation sources: #{eaffs.values.map { |v| v.values }.flatten.count { |v| v === true }}"
   sourcetypes = eaffs.values.map { |v| v.values }.flatten.uniq
@@ -361,6 +366,7 @@ def affiliations(affiliations_file, json_file, email_map)
       # gender
       gender = h['gender']
       gender = gender.downcase if gender
+      gender = gender.strip if gender
       if gender && gender != 'm' && gender != 'w' && gender != 'f'
         puts "Wrong affiliation config - gender must be m, w, f or nil"
         p affs
@@ -379,8 +385,7 @@ def affiliations(affiliations_file, json_file, email_map)
           entry = users[email]
           login = gh.split('/').last
           entries = users[login]
-          source = sources[email]
-          binding.pry
+          source = prev_sources[email]
           unless entry
             if entries
               user = json_data[entries.first[0]].clone
@@ -400,20 +405,47 @@ def affiliations(affiliations_file, json_file, email_map)
           entries.each do |entry|
             index = entry[0]
             user = entry[1]
-            if gender && user['sex'] != gender
-              puts "Note: overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
-              json_data[index]['sex'] = gender
-              json_data[index]['sex_prob'] = 1
+            higher_prio = prios[source] > manual_prio
+            if gender && gender.length == 1 && user['sex'] != gender
+              puts "Note: overwriting gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
+              answer = 'y'
+              if higher_prio
+                if answers.key?(login)
+                  ans = answers[login]
+                else
+                  puts "Current data has higher priority '#{source}' than 'manual', replace? (y/n)"
+                  ans = mgetc.downcase
+                  answers[login] = ans
+                end
+              end
+              if ans == 'y'
+                json_data[index]['sex'] = gender
+                json_data[index]['sex_prob'] = 1
+                puts "Note: overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
+              end
             end
             if user['affiliation'] != saffs
               caffs = user['affiliation']
-              unless caffs == '(Unknown)' || caffs == 'NotFound' || caffs == '?' || saffs == 'NotFound' || caffs.nil?
-                puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs != 'NotFound'
+                puts "Note: overwriting affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
               end
               if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs == 'NotFound'
                 puts "Wrong: not overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
               else
-                json_data[index]['affiliation'] = saffs
+                answer = 'y'
+                if higher_prio
+                  if answers.key?(login)
+                    ans = answers[login]
+                  else
+                    puts "Current data has higher priority '#{source}' than 'manual', replace? (y/n)"
+                    ans = mgetc.downcase
+                    answers[login] = ans
+                  end
+                end
+                if ans == 'y'
+                  json_data[index]['affiliation'] = saffs
+                  puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+                end
               end
             end
           end
