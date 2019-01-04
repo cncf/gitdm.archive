@@ -10,13 +10,16 @@ def affiliations(affiliations_file, json_file, email_map)
   dbg = !ENV['DBG'].nil?
   # Parse input JSON, store current data in 'users'
   users = {}
+  sources = {}
   json_data = JSON.parse File.read json_file
   json_data.each_with_index do |user, index|
     email = user['email'].downcase
     login = user['login'].downcase
+    source = user['source']
     users[email] = [index, user]
     users[login] = [] unless users.key?(login)
     users[login] << [index, user]
+    sources[email] = source unless source.nil?
   end
 
   # parse current email-map, store data in 'eaffs'
@@ -28,10 +31,18 @@ def affiliations(affiliations_file, json_file, email_map)
     end
     ary = line.split ' '
     email = ary[0]
+    source = sources[email]
     eaffs[email] = {} unless eaffs.key?(email)
     aff = ary[1..-1].join(' ')
-    eaffs[email][aff] = true
+    eaffs[email][aff] = source ? source : true
   end
+  puts "Default affiliation sources: #{eaffs.values.map { |v| v.values }.flatten.select { |v| v === true }.count}"
+  sourcetypes = eaffs.values.map { |v| v.values }.flatten.uniq
+  sourcetypes.each do |source_type|
+    next if source_type === true
+    puts "#{source_type.capitalize} affiliation sources: #{eaffs.values.map { |v| v.values }.flatten.select { |v| v == source_type }.count}"
+  end
+  binding.pry
 
   update = !ENV['UPDATE'].nil?
   replace = !ENV['REPLACE'].nil?
@@ -63,7 +74,6 @@ def affiliations(affiliations_file, json_file, email_map)
       end
     end
   end
-  #binding.pry
 
   # Process new affiliations CSV
   all_affs = []
@@ -98,7 +108,7 @@ def affiliations(affiliations_file, json_file, email_map)
       end
 
       # In update mode only take rows with column changes=x
-      next if update && h['changes'] != 'x'
+      next if update && h['changes'].strip != 'x'
       nu += 1
 
       # Bots
@@ -347,6 +357,7 @@ def affiliations(affiliations_file, json_file, email_map)
       end
       gender = 'f' if gender == 'w'
 
+      binding.pry
       # process affiliations vs existing JSON data
       ghs = h['github']
       gha = ghs.split(',').map(&:strip)
