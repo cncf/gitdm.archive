@@ -6,16 +6,6 @@ require './email_code'
 require './mgetc'
 
 def affiliations(affiliations_file, json_file, email_map)
-  # affiliation sources priorities
-  prios = {}
-  prios['user'] = 2
-  prios['manual'] = 1
-  prios['config'] = 0
-  prios[true] = 0
-  prios[nil] = 0
-  prios['domain'] = -1
-  manual_prio = prios['manual']
-
   # dbg: set to true to have very verbose output
   dbg = !ENV['DBG'].nil?
   # Parse input JSON, store current data in 'users'
@@ -54,6 +44,7 @@ def affiliations(affiliations_file, json_file, email_map)
   end
 
   update = !ENV['UPDATE'].nil?
+  replace = !ENV['REPLACE'].nil?
 
   # Check for carriage returns in CSV file
   if update
@@ -84,11 +75,11 @@ def affiliations(affiliations_file, json_file, email_map)
   end
 
   # Process new affiliations CSV
+  all_affs = []
   ln = 1
   wip = 0
   n_keys = -1
   nu = 0
-  replaced = skipped = added = unknown = multiple = 0
   begin
     CSV.foreach(affiliations_file, headers: true) do |row|
       ln += 1
@@ -116,9 +107,7 @@ def affiliations(affiliations_file, json_file, email_map)
       end
 
       # In update mode only take rows with column changes=x
-      x = h['changes']
-      x = x.strip if x
-      next if update && x != 'x'
+      next if update && h['changes'].strip != 'x'
       nu += 1
 
       # Bots
@@ -184,7 +173,6 @@ def affiliations(affiliations_file, json_file, email_map)
       err = false
       affs_str = affs.join(', ')
       replaced_emails = {}
-      answers = {}
       affs.each do |aff|
         begin
           ddt = DateTime.strptime(aff, '%Y-%m-%d')
@@ -209,49 +197,56 @@ def affiliations(affiliations_file, json_file, email_map)
         end
         if data.length == 1
           emails.each do |e|
-            if eaffs.key?(e) && !replaced_emails.key?(e)
-              ans = 'y'
-              ans = 'n' if aff == 'NotFound'
-              if prios[sources[e]] > manual_prio
-                if answers.key?(e)
-                  ans = answers[e]
+            if replace && !replaced_emails.key?(e)
+              eaffs[e] = {}
+              eaffs[e][aff] = true
+              replaced_emails[e] = true
+            end
+            if eaffs.key?(e) && !eaffs[e].key?(aff)
+              if aff == 'NotFound'
+                puts "Note: New not found for existing #{e} with '#{eaffs[e].keys}', line #{ln}"
+                eaffs[e][aff] = true
+              else
+                if eaffs[e].key?('NotFound')
+                  puts "Note: No longer not found #{e} now '#{aff}', line #{ln}"
+                  eaffs[e].delete 'NotFound'
+                  eaffs[e][aff] = true
                 else
-                  s = "Line #{ln}, user #{users[e][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
-                  s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n)"
-                  puts s
-                  ans = mgetc.downcase
-                  answers[e] = ans
+                  eaffs_str = eaffs[e].keys.join(', ')
+                  puts "Note: #{e} already have affiliation: #{eaffs_str}, adding '#{aff}', line #{ln}" if dbg
+                  dels = []
+                  add = true
+                  eaffs[e].each do |k|
+                    ary = k[0].split('<').map(&:strip)
+                    if ary.length != 2
+                      puts "Wrong: #{e} already have a final affiliation '#{k[0]}' (all: #{eaffs_str}) while trying to add another final one: '#{aff}' (all: #{affs_str}), line #{ln}"
+                      puts "Update? (y/n)"
+                      upd = mgetc
+                      if upd == 'y' || upd == 'Y'
+                        dels << k[0]
+                      else
+                        add = false
+                      end
+                    end
+                  end
+                  dels.each { |d| eaffs[e].delete d }
+                  eaffs[e][aff] = true if add
                 end
               end
-              if ans == 'y'
-                sources[e] = 'manual'
-                eaffs[e] = {}
-                eaffs[e][aff] = 'manual'
-                replaced_emails[e] = 'manual'
-                replaced += 1
-                aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
-              else
-                skipped += 1
+            else
+              if dbg
+                if aff == 'NotFound'
+                  puts "Note: new unknown email #{e}"
+                else
+                  puts "Note: new email #{e} with '#{aff}'" unless replace
+                end
               end
-            end
-            if eaffs.key?(e) && !eaffs[e].key?(aff) && replaced_emails.key?(e) && aff != 'NotFound'
-              eaffs[e][aff] = 'manual'
-              multiple += 1
-              aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
-            end
-            if !eaffs.key?(e)
-              sources[e] = 'manual'
               eaffs[e] = {}
-              eaffs[e][aff] = 'manual'
-              if dbg && aff == 'NotFound'
-                puts "Note: new unknown email #{e}"
-                unknown += 1
-              else
-                added += 1
-              end
-              aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
+              eaffs[e][aff] = true
             end
+            all_affs << "#{e} #{aff}"
           end
+          aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
         elsif data.length == 2
           dt = data[1]
           if dt.length != 10
@@ -277,43 +272,35 @@ def affiliations(affiliations_file, json_file, email_map)
             com = data[0]
             emails.each do |e|
               aff = "#{com} < #{sdt}"
-              if eaffs.key?(e) && !replaced_emails.key?(e)
-                ans = 'y'
-                if prios[sources[e]] > manual_prio
-                  if answers.key?(e)
-                    ans = answers[e]
+              if replace && !replaced_emails.key?(e)
+                eaffs[e] = {}
+                eaffs[e][aff] = true
+                replaced_emails[e] = true
+              end
+              if eaffs.key?(e) && !eaffs[e].key?(aff)
+                if eaffs[e].key?('NotFound')
+                  puts "Note: No longer not found #{e} now '#{aff}', line #{ln}"
+                  eaffs[e].delete 'NotFound'
+                  eaffs[e][aff] = true
+                else
+                  eaffs_str = eaffs[e].keys.join(', ')
+                  puts "Note: #{e} already have affiliation: #{eaffs_str}, adding '#{aff}', line #{ln}" if dbg
+                  eaffs[e][aff] = true
+                end
+              else
+                if dbg
+                  if aff == 'NotFound'
+                    puts "Note: new unknown email #{e}"
                   else
-                    s = "Line #{ln}, user #{users[e][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
-                    s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n)"
-                    puts s
-                    ans = mgetc.downcase
-                    answers[e] = ans
+                    puts "Note: new email #{e} with '#{aff}'" unless replace
                   end
                 end
-                if ans == 'y'
-                  sources[e] = 'manual'
-                  eaffs[e] = {}
-                  eaffs[e][aff] = 'manual'
-                  replaced_emails[e] = 'manual'
-                  replaced += 1
-                  aaffs << [ddt, "#{com} < #{sdt}"]
-                else
-                  skipped += 1
-                end
-              end
-              if eaffs.key?(e) && !eaffs[e].key?(aff) && replaced_emails.key?(e)
-                eaffs[e][aff] = 'manual'
-                multiple += 1
-                aaffs << [ddt, "#{com} < #{sdt}"]
-              end
-              if !eaffs.key?(e)
-                sources[e] = 'manual'
                 eaffs[e] = {}
-                eaffs[e][aff] = 'manual'
-                added += 1
-                aaffs << [ddt, "#{com} < #{sdt}"]
+                eaffs[e][aff] = true
               end
+              all_affs << "#{e} #{com} < #{sdt}"
             end
+            aaffs << [ddt, "#{com} < #{sdt}"]
           rescue => err
             puts "Wrong date format expected YYYY-MM-DD, got #{dt} (invalid date)"
             err = true
@@ -369,6 +356,7 @@ def affiliations(affiliations_file, json_file, email_map)
       end
       gender = 'f' if gender == 'w'
 
+      binding.pry
       # process affiliations vs existing JSON data
       ghs = h['github']
       gha = ghs.split(',').map(&:strip)
@@ -379,8 +367,6 @@ def affiliations(affiliations_file, json_file, email_map)
           entry = users[email]
           login = gh.split('/').last
           entries = users[login]
-          source = sources[email]
-          binding.pry
           unless entry
             if entries
               user = json_data[entries.first[0]].clone
@@ -425,15 +411,18 @@ def affiliations(affiliations_file, json_file, email_map)
     binding.pry
   end
   puts "Processed #{nu} update rows " if update
-  puts "Replaced: #{replaced}, skipped: #{skipped}, added new: #{added}, added affiliation: #{multiple}, new unknown: #{unknown}"
+  puts "Imported #{all_affs.length} affiliations (#{wip} marked as work in progress)"
+  # File.open(email_map, 'a') do |file|
+  #   all_affs.each { |d| file.puts d }
+  # end
   File.open(email_map, 'w') do |file|
-    file.puts "# Here is a set of mappings of domain names onto employer names."
-    file.puts "# [user!]domain  employer  [< yyyy-mm-dd]"
-    eaffs.each do |email, affs|
-      affs.each do |aff, _|
-        file.puts "#{email} #{aff}"
-      end
-    end
+     file.puts "# Here is a set of mappings of domain names onto employer names."
+     file.puts "# [user!]domain  employer  [< yyyy-mm-dd]"
+     eaffs.each do |email, affs|
+        affs.each do |aff, _|
+          file.puts "#{email} #{aff}"
+        end
+     end
   end
 
   # Write JSON back
