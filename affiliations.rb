@@ -15,6 +15,7 @@ def affiliations(affiliations_file, json_file, email_map)
   prios[true] = 0
   prios[nil] = 0
   prios['domain'] = -1
+  prios['notfound'] = -2
   manual_prio = prios['manual']
 
   # dbg: set to true to have very verbose output
@@ -260,6 +261,8 @@ def affiliations(affiliations_file, json_file, email_map)
               if dbg && aff == 'NotFound'
                 puts "Note: new unknown email #{e}"
                 unknown += 1
+                eaffs[e][aff] = 'notfound'
+                sources[e] = 'notfound'
               else
                 added += 1
               end
@@ -403,7 +406,8 @@ def affiliations(affiliations_file, json_file, email_map)
           prev_source = prev_sources[email]
           source = sources[email]
           #next unless source
-          source = 'manual' if source.nil? && update
+          source = 'config' if source.nil?
+          source = 'notfound' if saffs == 'NotFound'
           unless entry
             if entries
               user = json_data[entries.first[0]].clone
