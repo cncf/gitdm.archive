@@ -425,7 +425,7 @@ def affiliations(affiliations_file, json_file, email_map)
             higher_prio = prios[prev_source] > prios[source]
             if gender && gender.length == 1 && user['sex'] != gender
               puts "Note: overwriting gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" if dbg && !user['sex'].nil?
-              answer = 'y'
+              ans = 'y'
               if higher_prio
                 if answers.key?(login)
                   ans = answers[login]
@@ -439,7 +439,7 @@ def affiliations(affiliations_file, json_file, email_map)
                 end
               end
               if ans == 'y'
-                puts "Note: overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
+                puts "Note: '#{prev_source}' -> '#{source}' overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
                 json_data[index]['sex'] = gender
                 json_data[index]['sex_prob'] = 1
                 json_data[index]['source'] = source
@@ -453,7 +453,7 @@ def affiliations(affiliations_file, json_file, email_map)
               if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs == 'NotFound'
                 puts "Wrong: not overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
               else
-                answer = 'y'
+                ans = 'y'
                 if higher_prio
                   if answers.key?(login)
                     ans = answers[login]
@@ -467,7 +467,7 @@ def affiliations(affiliations_file, json_file, email_map)
                   end
                 end
                 if ans == 'y'
-                  puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+                  puts "Note: '#{prev_source}' -> '#{source}' overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
                   json_data[index]['affiliation'] = saffs
                   json_data[index]['source'] = source
                 end
