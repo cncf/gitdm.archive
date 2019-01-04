@@ -432,12 +432,12 @@ def affiliations(affiliations_file, json_file, email_map)
               puts "Note: overwriting gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" if dbg && !user['sex'].nil?
               ans = 'y'
               if higher_prio
+                answers[login] = 'y' if user['sex'].nil? || user['sex'] == ''
                 if answers.key?(login)
                   ans = answers[login]
                 else
                   puts "Overwrite gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}?"
                   puts "Current data has higher priority '#{source}' than '#{prev_source}', replace? (y/n)"
-                  binding.pry
                   ans = mgetc.downcase
                   answers[login] = ans
                   pretty = JSON.pretty_generate answers
@@ -461,12 +461,12 @@ def affiliations(affiliations_file, json_file, email_map)
               else
                 ans = 'y'
                 if higher_prio
+                  answers[login] = 'y' if saffs == 'NotFound' && ['?', '(Unknown)', nil].include?(user['affiliation'])
                   if answers.key?(login)
                     ans = answers[login]
                   else
                     puts "Overwritte affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}?"
                     puts "Current data has higher priority '#{source}' than '#{prev_source}', replace? (y/n)"
-                    binding.pry
                     ans = mgetc.downcase
                     answers[login] = ans
                     pretty = JSON.pretty_generate answers
