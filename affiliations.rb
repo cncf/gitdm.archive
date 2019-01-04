@@ -94,6 +94,7 @@ def affiliations(affiliations_file, json_file, email_map)
   n_keys = -1
   nu = 0
   replaced = skipped = added = unknown = multiple = 0
+  answers = {}
   begin
     CSV.foreach(affiliations_file, headers: true) do |row|
       ln += 1
@@ -189,7 +190,6 @@ def affiliations(affiliations_file, json_file, email_map)
       err = false
       affs_str = affs.join(', ')
       replaced_emails = {}
-      answers = {}
       affs.each do |aff|
         begin
           ddt = DateTime.strptime(aff, '%Y-%m-%d')
@@ -407,26 +407,28 @@ def affiliations(affiliations_file, json_file, email_map)
             user = entry[1]
             higher_prio = prios[source] > manual_prio
             if gender && gender.length == 1 && user['sex'] != gender
-              puts "Note: overwriting gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
+              puts "Note: overwriting gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" if dbg && !user['sex'].nil?
               answer = 'y'
               if higher_prio
                 if answers.key?(login)
                   ans = answers[login]
                 else
+                  puts "Overwrite gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}?"
                   puts "Current data has higher priority '#{source}' than 'manual', replace? (y/n)"
                   ans = mgetc.downcase
                   answers[login] = ans
                 end
               end
               if ans == 'y'
+                puts "Note: overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
                 json_data[index]['sex'] = gender
                 json_data[index]['sex_prob'] = 1
-                puts "Note: overwritten gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless user['sex'].nil?
+                json_data[index]['source'] = 'manual'
               end
             end
             if user['affiliation'] != saffs
               caffs = user['affiliation']
-              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs != 'NotFound'
+              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs != 'NotFound' && dbg
                 puts "Note: overwriting affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
               end
               if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs == 'NotFound'
@@ -437,14 +439,16 @@ def affiliations(affiliations_file, json_file, email_map)
                   if answers.key?(login)
                     ans = answers[login]
                   else
+                    puts "Overwritte affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}?"
                     puts "Current data has higher priority '#{source}' than 'manual', replace? (y/n)"
                     ans = mgetc.downcase
                     answers[login] = ans
                   end
                 end
                 if ans == 'y'
-                  json_data[index]['affiliation'] = saffs
                   puts "Note: overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+                  json_data[index]['affiliation'] = saffs
+                  json_data[index]['source'] = 'manual'
                 end
               end
             end
