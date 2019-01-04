@@ -243,7 +243,6 @@ def affiliations(affiliations_file, json_file, email_map)
                 eaffs[e][aff] = source_type
                 replaced_emails[e] = source_type
                 replaced += 1
-                aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
               else
                 skipped += 1
               end
@@ -252,7 +251,6 @@ def affiliations(affiliations_file, json_file, email_map)
               source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
               eaffs[e][aff] = source_type
               multiple += 1
-              aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
             end
             if !eaffs.key?(e)
               source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
@@ -265,8 +263,8 @@ def affiliations(affiliations_file, json_file, email_map)
               else
                 added += 1
               end
-              aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
             end
+            aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
           end
         elsif data.length == 2
           dt = data[1]
@@ -315,7 +313,6 @@ def affiliations(affiliations_file, json_file, email_map)
                   eaffs[e][aff] = source_type
                   replaced_emails[e] = source_type
                   replaced += 1
-                  aaffs << [ddt, "#{com} < #{sdt}"]
                 else
                   skipped += 1
                 end
@@ -324,7 +321,6 @@ def affiliations(affiliations_file, json_file, email_map)
                 source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
                 eaffs[e][aff] = source_type
                 multiple += 1
-                aaffs << [ddt, "#{com} < #{sdt}"]
               end
               if !eaffs.key?(e)
                 source_type = %w(user user_manual).include?(sources[e]) ? 'user_manual' : 'manual'
@@ -332,8 +328,8 @@ def affiliations(affiliations_file, json_file, email_map)
                 eaffs[e] = {}
                 eaffs[e][aff] = source_type
                 added += 1
-                aaffs << [ddt, "#{com} < #{sdt}"]
               end
+              aaffs << [ddt, "#{com} < #{sdt}"]
             end
           rescue => err
             puts "Wrong date format expected YYYY-MM-DD, got #{dt} (invalid date)"
@@ -361,7 +357,10 @@ def affiliations(affiliations_file, json_file, email_map)
         emails.each do |email|
           if eaffs.key?(email)
             unless eaffs[email].key?(aaff[1])
-              puts "Note: Adding '#{aaff[1]}' affiliation to the existing email #{email}: #{eaffs[email].keys}, line #{ln}"
+              puts "Note: Adding '#{aaff[1]}' affiliation to the existing email #{email}: #{eaffs[email].keys}, line #{ln}" if dbg
+              source_type = %w(user user_manual).include?(sources[email]) ? 'user_manual' : 'manual'
+              eaffs[email][aaff[1]] = source_type
+              multiple += 1
             end
           end
         end
@@ -403,6 +402,8 @@ def affiliations(affiliations_file, json_file, email_map)
           entries = users[login]
           prev_source = prev_sources[email]
           source = sources[email]
+          #next unless source
+          source = 'manual' if source.nil? && update
           unless entry
             if entries
               user = json_data[entries.first[0]].clone
