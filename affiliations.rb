@@ -37,7 +37,20 @@ def affiliations(affiliations_file, json_file, email_map)
   replace = !ENV['REPLACE'].nil?
 
   # Check for carriage returns in CSV file
-  unless update
+  if update
+    ln = 0
+    File.readlines(affiliations_file).each do |line|
+      ln += 1
+      next if ln == 1
+      line.strip!
+      ary = line.split ','
+      if !ary[1].match?(/[^\s!]+![^\s!]+/) || !ary[0].match?(/\w+/)
+        puts "#{ln} Line start is wrong: '#{line}'"
+        binding.pry
+        exit 1
+      end
+    end
+  else
     ln = 0
     File.readlines(affiliations_file).each do |line|
       ln += 1
@@ -50,6 +63,7 @@ def affiliations(affiliations_file, json_file, email_map)
       end
     end
   end
+  #binding.pry
 
   # Process new affiliations CSV
   all_affs = []
