@@ -96,6 +96,11 @@ def affiliations(affiliations_file, json_file, email_map)
   nu = 0
   replaced = skipped = added = unknown = multiple = 0
   answers = {}
+  json_cache = 'affiliations_answers_cache.json'
+  begin
+    answers = JSON.parse File.read json_cache
+  rescue
+  end
   begin
     CSV.foreach(affiliations_file, headers: true) do |row|
       ln += 1
@@ -227,6 +232,8 @@ def affiliations(affiliations_file, json_file, email_map)
                   puts s
                   ans = mgetc.downcase
                   answers[e] = ans
+                  pretty = JSON.pretty_generate answers
+                  File.write json_cache, pretty
                 end
               end
               if ans == 'y'
@@ -297,6 +304,8 @@ def affiliations(affiliations_file, json_file, email_map)
                     puts s
                     ans = mgetc.downcase
                     answers[e] = ans
+                    pretty = JSON.pretty_generate answers
+                    File.write json_cache, pretty
                   end
                 end
                 if ans == 'y'
@@ -425,6 +434,8 @@ def affiliations(affiliations_file, json_file, email_map)
                   puts "Current data has higher priority '#{source}' than '#{prev_source}', replace? (y/n)"
                   ans = mgetc.downcase
                   answers[login] = ans
+                  pretty = JSON.pretty_generate answers
+                  File.write json_cache, pretty
                 end
               end
               if ans == 'y'
@@ -451,6 +462,8 @@ def affiliations(affiliations_file, json_file, email_map)
                     puts "Current data has higher priority '#{source}' than '#{prev_source}', replace? (y/n)"
                     ans = mgetc.downcase
                     answers[login] = ans
+                    pretty = JSON.pretty_generate answers
+                    File.write json_cache, pretty
                   end
                 end
                 if ans == 'y'
