@@ -64,5 +64,4 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 
 - To import manual affiliations from a google sheet save this sheet as `affiliations.csv` and then use `./affiliations.sh` script.
 - Prepend with `UPDATE=1` to only import those marked as changed: column `changes='x'`.
-- Prepend with 'REPLACE=1` to delete any existing affiliation first and then use new value from CSV (effeciively fully replace).
 - Prepend with `DBG=1` to enable verbose output.
