@@ -458,6 +458,7 @@ def affiliations(affiliations_file, json_file, email_map)
               end
               if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs == 'NotFound'
                 puts "Wrong: not overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+                eaffs[user['email']].delete('NotFound') if eaffs.key?(user['email'])
               else
                 ans = 'y'
                 if higher_prio
