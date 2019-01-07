@@ -54,7 +54,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
     c = h['company'].strip
     n = h['name'].strip
     d = h['date_to'].strip
-    s = h['source'].strip
+    s = h['source']
 
     # email -> names mapping (unique always, but dict just in case)
     names[e] = {} unless names.key?(e)

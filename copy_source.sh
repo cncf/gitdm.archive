@@ -1,2 +1,2 @@
 #!/bin/bash
-ruby copy_source.rb github_users.json stripped.json all-affs.csv
+ruby copy_source.rb github_users.json stripped.json all_affs.csv
