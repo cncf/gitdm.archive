@@ -31,6 +31,8 @@ def copy_source(json_file, json_file2, csv_file)
       user['source'] = ns
     end
   end
+  json = JSON.pretty_generate data
+  File.write json_file, json
 end
 
 if ARGV.size < 3
