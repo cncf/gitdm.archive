@@ -15,7 +15,7 @@ EmailAliases cncf-config/aliases
 # EmailMap does the main work of mapping addresses onto 
 # employers.
 #
-EmailMap cncf-config/domain-map
+DomainMap cncf-config/domain-map
 EmailMap cncf-config/email-map
 
 #

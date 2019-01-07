@@ -77,7 +77,7 @@ def ReadCompanyMap (name):
 #
 EMMpat = re.compile (r'^([^\s]+)\s+([^<]+)\s*(<\s*(\d+-\d+-\d+)\s*)?$')
 
-def ReadEmailEmployers (name):
+def ReadEmailEmployers (name, domain):
     try:
         file = open (name, 'r')
     except IOError:
@@ -90,7 +90,7 @@ def ReadEmailEmployers (name):
         email = m.group (1)
         company = m.group (2).strip ()
         enddate = ParseDate (m.group (4))
-        database.AddEmailEmployerMapping (email, company, enddate)
+        database.AddEmailEmployerMapping (email, company, enddate, domain)
         line = ReadConfigLine (file)
     file.close ()
 
@@ -198,7 +198,9 @@ def ConfigFile (name, confdir):
         elif sline[0] == 'CompanyMap':
             ReadCompanyMap (os.path.join (confdir, sline[1]))
         elif sline[0] == 'EmailMap':
-            ReadEmailEmployers (os.path.join (confdir, sline[1]))
+            ReadEmailEmployers (os.path.join (confdir, sline[1]), False)
+        elif sline[0] == 'DomainMap':
+            ReadEmailEmployers (os.path.join (confdir, sline[1]), True)
         elif sline[0] == 'GroupMap':
             if len (sline) != 3:
                 croak ('Funky group map line "%s"' % (line))
