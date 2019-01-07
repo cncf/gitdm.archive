@@ -41,11 +41,12 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   end
 
   # Process affiliations found by Python cncf/gitdm saved in CSV
-  # "email","name","company","date_to"
+  # "email","name","company","date_to","source"
   email_affs = {}
   name_affs = {}
   names = {}
   emails = {}
+  sources = {}
   CSV.foreach(csv_file, headers: true) do |row|
     next if is_comment row
     h = row.to_h
@@ -53,6 +54,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
     c = h['company'].strip
     n = h['name'].strip
     d = h['date_to'].strip
+    s = h['source'].strip
 
     # email -> names mapping (unique always, but dict just in case)
     names[e] = {} unless names.key?(e)
@@ -77,6 +79,8 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
     else
       name_affs[n] << c
     end
+
+    sources[e] = s
   end
 
   # Make results as strings
