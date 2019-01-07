@@ -220,7 +220,7 @@ def affiliations(affiliations_file, json_file, email_map)
           next
         end
         if data.length == 1
-          emails.each do |e|
+          emails.each_with_index do |e, idx|
             if eaffs.key?(e) && !eaffs[e].key?(aff) && !replaced_emails.key?(e)
               ans = 'y'
               ans = 'n' if aff == 'NotFound'
@@ -267,7 +267,7 @@ def affiliations(affiliations_file, json_file, email_map)
                 added += 1
               end
             end
-            aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"]
+            aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"] if idx == 0
           end
         elsif data.length == 2
           dt = data[1]
@@ -292,7 +292,7 @@ def affiliations(affiliations_file, json_file, email_map)
             end
             sdt = ddt.strftime("%Y-%m-%d")
             com = data[0]
-            emails.each do |e|
+            emails.each_with_index do |e, idx|
               aff = "#{com} < #{sdt}"
               if eaffs.key?(e) && !eaffs[e].key?(aff) && !replaced_emails.key?(e)
                 ans = 'y'
@@ -332,7 +332,7 @@ def affiliations(affiliations_file, json_file, email_map)
                 eaffs[e][aff] = source_type
                 added += 1
               end
-              aaffs << [ddt, "#{com} < #{sdt}"]
+              aaffs << [ddt, "#{com} < #{sdt}"] if idx == 0
             end
           rescue => err
             puts "Wrong date format expected YYYY-MM-DD, got #{dt} (invalid date)"
