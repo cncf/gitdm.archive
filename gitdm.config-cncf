@@ -15,7 +15,7 @@ EmailAliases cncf-config/aliases
 # EmailMap does the main work of mapping addresses onto 
 # employers.
 #
-EmailMap cncf-config/domain-map
+DomainMap cncf-config/domain-map
 EmailMap cncf-config/email-map
 
 #
@@ -45,7 +45,7 @@ GroupMap cncf-config/groups/rackspace Rackspace
 GroupMap cncf-config/groups/redhat Red Hat
 GroupMap cncf-config/groups/sina SINA
 GroupMap cncf-config/groups/stackops StackOps
-GroupMap cncf-config/groups/unimelb University of Melbourne
+GroupMap cncf-config/groups/unimelb Independent
 
 #
 # Use FileTypeMap to map a file types to file names using regular
