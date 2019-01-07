@@ -29,6 +29,10 @@ class Hacker:
         self.bugsfixed = [ ]
         self.testcred = self.repcred = 0
         self.versions = [ ]
+        if elist[0][2]:
+            self.source = 'domain'
+        else:
+            self.source = 'config'
 
     def full_name(self):
         return self.email[0] + ' ' + self.name
@@ -50,7 +54,7 @@ class Hacker:
     def emailemployer (self, email, date):
         for i in range (0, len (self.email)):
             if self.email[i] == email:
-                for edate, empl in self.employer[i]:
+                for edate, empl, dom in self.employer[i]:
                     if edate > date:
                         return empl
         # pdb.set_trace()
@@ -162,7 +166,7 @@ def AllAffsCSV(file, hlist):
     if file is None:
         return
     writer = csv.writer (file, quoting=csv.QUOTE_NONNUMERIC)
-    writer.writerow (['email', 'name', 'company', 'date_to'])
+    writer.writerow (['email', 'name', 'company', 'date_to', 'source'])
     emails = list(set(sum(map(lambda el: el.email, hlist), [])))
     emails.sort()
     for email in emails:
@@ -171,12 +175,15 @@ def AllAffsCSV(file, hlist):
         email = RemapEmail(email)
         name = LookupEmail(email).name
         empls = MapToEmployer(email, 2)
-        for date, empl in empls:
+        for date, empl, domain in empls:
             datestr = str(date)
             if date > yesterday:
                 datestr = ''
             emplstr = empl.name.replace ('"', '.').replace ('\\', '.')
-            writer.writerow ([email_encode(email), email_encode(name), emplstr, datestr])
+            source = 'config'
+            if domain:
+                source = 'domain'
+            writer.writerow ([email_encode(email), email_encode(name), emplstr, datestr, source])
             for em in ReverseAlias(email):
                 if em in emails:
                     print 'This is bad, reverse email already in emails, check: `em`, `email`, `emails`'
@@ -199,7 +206,7 @@ def DumpDB ():
                                                         len (h.signoffs)))
         for i in range (0, len (h.email)):
             out.write ('\t%s -> \n' % (email_encode(h.email[i])))
-            for date, empl in h.employer[i]:
+            for date, empl, dom in h.employer[i]:
                 out.write ('\t\t %d-%d-%d %s\n' % (date.year, date.month, date.day,
                                                  empl.name))
         if h.versions:
@@ -367,7 +374,7 @@ EmailToEmployer = { }
 nextyear = datetime.date.today () + datetime.timedelta (days = 365)
 yesterday = datetime.date.today () - datetime.timedelta(days = 1)
 
-def AddEmailEmployerMapping (email, employer, end = nextyear):
+def AddEmailEmployerMapping (email, employer, end = nextyear, domain = False):
     if end is None:
         end = nextyear
     email = email.lower ()
@@ -375,15 +382,15 @@ def AddEmailEmployerMapping (email, employer, end = nextyear):
     try:
         l = EmailToEmployer[email]
         for i in range (0, len(l)):
-            date, xempl = l[i]
+            date, xempl, dom = l[i]
             if date == end:  # probably both nextyear
                 print 'WARNING: duplicate email/empl for %s' % (email_encode(email))
             if date > end:
-                l.insert (i, (end, empl))
+                l.insert (i, (end, empl, domain))
                 return
-        l.append ((end, empl))
+        l.append ((end, empl, domain))
     except KeyError:
-        EmailToEmployer[email] = [(end, empl)]
+        EmailToEmployer[email] = [(end, empl, domain)]
 
 # LG: Artificial Domains from Hacker's email domain names
 ArtificialDomains = {}
@@ -411,7 +418,7 @@ def MapToEmployer (email, unknown = 0):
     namedom = email.split ('@')
     if len (namedom) < 2:
         print 'Oops...funky email %s' % email_encode(email)
-        return [(nextyear, GetEmployer ('Funky'))]
+        return [(nextyear, GetEmployer ('Funky'), False)]
     s = namedom[1].split ('.')
     for dots in range (len (s) - 2, -1, -1):
         addr = '.'.join (s[dots:])
@@ -423,11 +430,11 @@ def MapToEmployer (email, unknown = 0):
     # We don't know who they work for.
     #
     if unknown == 0:
-        return [(nextyear, GetEmployer (email))]
+        return [(nextyear, GetEmployer (email), False)]
     elif unknown == 1:
-        return [(nextyear, GetEmployer (GetHackerDomain(addr, email)))]
+        return [(nextyear, GetEmployer (GetHackerDomain(addr, email)), False)]
     elif unknown == 2:
-        return [(nextyear, GetEmployer ('(Unknown)'))]
+        return [(nextyear, GetEmployer ('(Unknown)'), False)]
     else:
         print "Unsupported unknown parameter handling value"
 
