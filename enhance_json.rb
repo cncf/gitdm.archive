@@ -98,6 +98,12 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   data = JSON.parse File.read json_file
 
   # Enchance JSON
+  answers = {}
+  json_cache = 'enchance_cache.json'
+  begin
+    answers = JSON.parse File.read json_cache
+  rescue
+  end
   n_users = data.count
   enchanced = csv_not_found = 0
   email_unks = []
@@ -128,11 +134,12 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
       end
     end
     cv = user['affiliation']
+    cs = user['source']
     if cv.nil? || cv == '(Unknown)' || cv == 'NotFound' || cv == '?'
       user['affiliation'] = v unless v == '(Unknown)' || v == '?'
     else
       if cv != v && v != '?' && v != '(Unknown)'
-        puts "Warning #{idx}/#{n_users}: #{e}:\nCurrent '#{cv}'\nNew     '#{v}'\nc/n/q?"
+        puts "Warning #{idx}/#{n_users}: #{e}: #{cs}\nCurrent '#{cv}'\nNew     '#{v}'\nc/n/q?"
         binding.pry if v.is_a?(Array)
         answer = '?'
         if use_longer
@@ -147,12 +154,20 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
           end
         end
         if answer == '?'
-          answer = mgetc
+          if answers.key?(e)
+            answer = answers[e]
+            puts "#{answer}\n"
+          else
+            answer = mgetc.downcase
+            answers[e] = answer unless answer == 'q'
+            pretty = JSON.pretty_generate answers
+            File.write json_cache, pretty
+          end
         end
         # answer = 'c'
-        if answer == 'n' || answer == 'N'
+        if answer == 'n'
           user['affiliation'] = v
-        elsif answer == 'c' || answer == 'C'
+        elsif answer == 'c'
           if eaffs.key?(e)
             eaffs.delete e
           end
