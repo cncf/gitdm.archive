@@ -27,6 +27,12 @@ def merge_jsons(primary_json, new_json, email_map)
   nn = 0
   e = l = le = n = 0
   a = s = lo = 0
+  answers = {}
+  json_cache = 'merge_json_cache.json'
+  begin
+    answers = JSON.parse File.read json_cache
+  rescue
+  end
   data.each_with_index do |user, index|
     ologin = user['login']
     login = ologin.downcase
@@ -56,8 +62,16 @@ def merge_jsons(primary_json, new_json, email_map)
       if user['affiliation'] != pri_user['affiliation'] && pri_user['affiliation'] != '?' && pri_user['affiliation'] != '(Unknown)' && pri_user['affiliation'] != 'NotFound'
         answer = 'y'
         if user['affiliation'] != '?' && user['affiliation'] != '(Unknown)' && user['affiliation'] != 'NotFound'
-          puts "#{mode} Use primary affiliation: '#{pri_user['affiliation']}'\n#{mode} instead of new           '#{user['affiliation']}'\nfor #{ologin}/#{email}/#{commits} ?"
-          answer = mgetc
+          puts "#{mode} Use primary affiliation: '#{pri_user['affiliation']}' (#{pri_user['source']})\n#{mode} instead of new           '#{user['affiliation']}' (#{user['source']})\nfor #{ologin}/#{email}/#{commits} ?"
+          if answers.key?(email)
+            answer = answers[email]
+            puts "#{answer}\n"
+          else
+            answer = mgetc.downcase
+            answers[email] = answer if %w(y n).include?(answer)
+            pretty = JSON.pretty_generate answers
+            File.write json_cache, pretty
+          end
         end
         if answer == 'y' || answer == 'Y'
           puts "#{mode} Using primary affiliation '#{pri_user['affiliation']}' instead of new '#{user['affiliation']}' for #{ologin}/#{email}/#{commits}"
