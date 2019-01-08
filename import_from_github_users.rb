@@ -104,6 +104,7 @@ def import_from_github_json(json_file)
   #     file.write("#{company_name} -> #{company_name}\n")
   #   end
   # end
+  puts "Note that this import only attempts to find affiliation from GitHub 'company' field and only maps companies defined in 'company-names-mapping' file."
 end
 
 if ARGV.size < 1
