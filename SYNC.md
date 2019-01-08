@@ -52,7 +52,7 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - Unzip `allCountries.zip` and run `PG_PASS=... ./geodata.sh allCountries.tsv` - this will populate the DB.
 - Create indices on columns to speedup localization: `sudo -u postgres psql -f geonames_idx.sql`.
 - If this is a first geousers run create `geousers_cache.json` via `cp empty.json geousers_cache.json`.
-- To use cache it is best to have `stripped.json` from the previous run. See step 18.
+- To use cache it is best to have `stripped.json` from the previous run. See step 21.
 - Enchance `github_users.json` via `PG_PASS=... ./geousers.sh github_users.json stripped.json geousers_cache.json 2000`. It will add `country_id` and `tz` fields.
 - Go to [store.genderize.io](https://store.genderize.io) and get you `API_KEY`, basic subscription ($9) allows 100,000 monthly gender lookups.
 - If this is a first genderize run create `genderize_cache.json` via `cp empty.json genderize_cache.json`.
