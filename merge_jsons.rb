@@ -68,6 +68,7 @@ def merge_jsons(primary_json, new_json, email_map)
             puts "#{answer}\n"
           else
             answer = mgetc.downcase
+            exit(1) if answer == 'q'
             answers[email] = answer if %w(y n).include?(answer)
             pretty = JSON.pretty_generate answers
             File.write json_cache, pretty
