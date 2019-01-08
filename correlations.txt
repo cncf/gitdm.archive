@@ -1,46 +1,212 @@
+NetApp is similar to Net App
+RedHat is similar to Red Hat
+BlackRock is similar to Black Rock
+SoftServe is similar to Soft Serve
+Deutsche Telekom AG is similar to Deutsche Telekom
+GrafanaLabs is similar to Grafana Labs
+DigitalOcean is similar to Digital Ocean
+VoiceBox is similar to Voice Box
+PlayStation is similar to Play Station
+ReactiveOps is similar to Reactive Ops
+PlanGrid is similar to Plan Grid
+DocuSign is similar to Docu Sign
+ReadyTalk is similar to Ready Talk
+GlobalLogic is similar to Global Logic
+TrendMicro is similar to Trend Micro
 Those companies are unmappable to ASCII only symbols
-[["?", 2], ["МТС", 1], ["НИИ АА", 1], ["徳を積む", 1], ["倫理的に妥当な箱", 1], ["中佑", 1], ["Software Company", 1], ["الصحيفة الآقتصادية", 1], ["패스트캠퍼스", 1], ["НГС", 1], ["欢聚时代", 1], ["豆瓣", 1], ["Consulting", 1], ["うんこ", 1], ["Network Business Systems", 1], ["カブク", 1], ["스마일게이트", 1], ["IO", 1], ["株式会社ドヴァ", 1], ["Эвотор", 1], ["✕✕✕✕✕", 1], ["北京天威诚信电子商务服务有限公司", 1], ["Cloud Security", 1], ["社会大学", 1], ["实地地产", 1], ["株式会社アニメイトラボ", 1], ["中科院计算技术研究所", 1], ["江苏海隆软件技术有限公司", 1], ["中兴通讯股份有限公司", 1]]
+[["?", 3], ["МТС", 1], ["НИИ АА", 1], ["徳を積む", 1], ["倫理的に妥当な箱", 1], ["中佑", 1], ["Software Company", 1], ["الصحيفة الآقتصادية", 1], ["패스트캠퍼스", 1], ["堆糖", 1], ["НГС", 1], ["欢聚时代", 1], ["嘀嗒出行", 1], ["豆瓣", 1], ["Consulting", 1], ["うんこ", 1], ["Network Business Systems", 1], ["カブク", 1], ["스마일게이트", 1], ["IO", 1], ["株式会社ドヴァ", 1], ["Эвотор", 1], ["✕✕✕✕✕", 1], ["上海易路软件有限公司", 1], ["//////", 1], ["北京天威诚信电子商务服务有限公司", 1], ["Cloud Security", 1], ["社会大学", 1], ["实地地产", 1], ["株式会社アニメイトラボ", 1], [".АПСМАЙЛ. LTD", 1], ["中科院计算技术研究所", 1], ["江苏海隆软件技术有限公司", 1], ["中兴通讯股份有限公司", 1]]
+Those companies map into the same key 'notfound':
+[["NotFound", 664], ["Notfound", 1]]
+Those companies map into the same key 'independent':
+[["Independent", 1175], ["independent", 2]]
+Those companies map into the same key 'ca':
+[["CA", 1], ["CA Technologies", 4]]
+Those companies map into the same key 'intel':
+[["Intel", 157], ["Intel Security", 2]]
+Those companies map into the same key 'salesforce':
+[["Salesforce", 3], ["SalesForce", 42]]
+Those companies map into the same key 'suse':
+[["Suse", 3], ["SUSE", 93]]
+Those companies map into the same key 'akamai':
+[["Akamai Technologies", 3], ["Akamai", 5]]
+Those companies map into the same key 'pingcap':
+[["PingCAP", 37], ["PingCap", 2]]
+Those companies map into the same key 'here':
+[["Here", 5], ["HERE", 1]]
+Those companies map into the same key 'sap':
+[["SAp", 1], ["SAP", 65], ["Sap", 2]]
+Those companies map into the same key 'daocloud':
+[["DaoCloud", 34], ["Daocloud", 1]]
+Those companies map into the same key 'devops':
+[["Devops", 13], ["DevOps", 1]]
+Those companies map into the same key 'pivotal':
+[["Pivotal", 154], ["Pivotal Software", 1]]
+Those companies map into the same key 'turbine':
+[["Turbine", 3], ["Turbine Labs", 4]]
+Those companies map into the same key 'icflix':
+[["Icflix", 1], ["icflix", 1]]
+Those companies map into the same key 'tigerworks':
+[["TigerWorks", 1], ["The Tigerworks", 1]]
+Those companies map into the same key 'iron':
+[["Iron.io", 12], ["Iron", 1]]
+Those companies map into the same key 'tools':
+[["commercetools", 2], ["Commercetools", 1]]
+Those companies map into the same key 'cloudflare':
+[["CloudFlare", 26], ["Cloudflare", 1]]
+Those companies map into the same key 'bmc':
+[["BMC Software", 1], ["Bmc Software", 1]]
+Those companies map into the same key 'apache':
+[["Apache", 26], ["The Apache", 2]]
+Those companies map into the same key 'cern':
+[["CERN", 21], ["Cern", 1]]
 Those companies map into the same key 'city':
 [["City", 2], ["Citygroup", 2]]
+Those companies map into the same key 'rancher':
+[["Rancher", 10], ["Rancher Labs", 1]]
+Those companies map into the same key 'jpmorgan chase':
+[["JPMorgan Chase & Co", 1], ["JPMorgan Chase", 3]]
+Those companies map into the same key 'cockroach':
+[["Cockroach Labs", 14], ["Cockroach", 2]]
+Those companies map into the same key 'bookingcom':
+[["Booking.com", 9], ["Booking.Com", 1]]
+Those companies map into the same key 'blackrock':
+[["BlackRock", 1], ["blackrock", 1]]
+Those companies map into the same key 'avi':
+[["Avi Networks", 1], ["AVI Limited", 1]]
+Those companies map into the same key 'kakao':
+[["Kakao", 1], ["Kakao Corp", 1]]
+Those companies map into the same key 'deutsche telekom':
+[["Deutsche Telekom AG", 1], ["Deutsche Telekom", 11]]
+Those companies map into the same key 'endurance':
+[["Endurance", 1], ["Endurance International", 1]]
+Those companies map into the same key 'arm':
+[["ARM", 12], ["Arm", 1]]
+Those companies map into the same key 'tink':
+[["Tink", 2], ["TinkAB", 1]]
+Those companies map into the same key 'grafana':
+[["Grafana", 1], ["Grafana Labs", 11]]
+Those companies map into the same key 'uw':
+[["UW IT", 1], ["UW", 1]]
+Those companies map into the same key 'chef':
+[["Chef", 8], ["CHEF", 1]]
+Those companies map into the same key 'crate':
+[["Crate", 2], ["Crate.io", 7]]
+Those companies map into the same key 'rea':
+[["REA Group", 1], ["REA", 1]]
+Those companies map into the same key 'bytedance':
+[["Bytedance", 1], ["ByteDance", 1]]
+Those companies map into the same key 'ascend':
+[["Ascend", 1], ["Ascend.io", 1]]
+Those companies map into the same key 'bilibili':
+[["Bilibili Group", 2], ["Bilibili", 1]]
+Those companies map into the same key 'stealth startup':
+[["Stealth Startup", 3], ["Stealth Start-up", 1]]
+Those companies map into the same key 'iponweb':
+[["IPONWEB", 1], ["Iponweb", 1]]
+Those companies map into the same key 'black duck':
+[["Black Duck Software", 1], ["Black Duck", 1]]
+Those companies map into the same key 'codecentric':
+[["Codecentric", 1], ["Codecentric AG", 3]]
+Those companies map into the same key 'consol':
+[["ConSol", 1], ["ConSol Software", 1]]
+Those companies map into the same key 'everis':
+[["Everis", 1], ["everis", 3]]
+Those companies map into the same key 'gojek':
+[["Go-Jek", 1], ["gojek-engineering", 1]]
+Those companies map into the same key 'kiratech':
+[["kiratech", 1], ["Kiratech", 1]]
+Those companies map into the same key 'lightspeed':
+[["LIghtspeed", 1], ["Lightspeed", 1]]
+Those companies map into the same key 'suncorp':
+[["Suncorp Group", 1], ["Suncorp", 1]]
 Those companies map into the same key 'obsidian':
 [["Obsidiansystems", 1], ["Obsidian Solutions", 1]]
+Those companies map into the same key 'infracloud':
+[["InfraCloud", 1], ["Infracloud", 1]]
 Those companies map into the same key 'fusn':
 [["Fusion-io", 1], ["Fusion Electronics", 1]]
+Those companies map into the same key 'paytm':
+[["Paytm", 1], ["Paytm Labs", 1]]
+Those companies map into the same key 'symphony':
+[["Symphony Solutions", 4], ["Symphony Commerce", 1]]
+Those companies map into the same key 'travel audience':
+[["Travel audience", 1], ["Travel Audience", 1]]
+Those companies map into the same key 'atlas':
+[["Atlas", 1], ["Atlas Informatics", 1]]
 Those companies map into the same key 'j':
 [["Jcommerce", 1], ["Jio", 1]]
+Those companies map into the same key 'salt':
+[["SALT", 1], ["Salt", 1]]
+Those companies map into the same key 'sigma':
+[["Sigma IT Consulting", 1], ["Sigma", 1]]
+Those companies map into the same key 'talonone':
+[["Talon.One", 1], ["TalonOne", 1]]
+Those companies map into the same key 'ecraft':
+[["eCraft International", 1], ["eCraft", 1]]
+Those companies map into the same key 'eucalyptus':
+[["Eucalyptus", 1], ["Eucalyptus Systems", 2]]
 Similar mappings > 81.0% similar:
+[93.0, [["Mentor Graphic", 1]], [["Mentor Graphics", 1]], "mentor graphic <> mentor graphics"]
 [92.0, [["Akickstarter", 1]], [["Kickstarter", 2]], "akickstarter <> kickstarter"]
+[92.0, [["IIndependent", 1]], [["Independent", 1175], ["independent", 2]], "iindependent <> independent"]
+[91.0, [["Virtustream", 5]], [["Virtustrean", 1]], "virtustream <> virtustrean"]
 [90.0, [["BoCardless", 1]], [["GoCardless", 2]], "bocardless <> gocardless"]
+[90.0, [["Microsoft", 287]], [["Microsofts", 4]], "microsoft <> microsofts"]
+[90.0, [["Optimizel", 1]], [["Optimizely", 1]], "optimizel <> optimizely"]
+[89.0, [["ElementAI", 2]], [["Elemental", 1]], "elementai <> elemental"]
 [89.0, [["Eversight", 3]], [["Oversight", 1]], "eversight <> oversight"]
+[89.0, [["Outreach", 1]], [["Outreachy", 2]], "outreach <> outreachy"]
+[89.0, [["Platform", 2]], [["Platform9", 9]], "platform <> platform9"]
+[88.0, [["7digital", 1]], [["Digital Labs", 1]], "7digital <> digital"]
 [88.0, [["7digital", 1]], [["eDigitalResearch", 1]], "7digital <> edigital"]
-[86.0, [["Anchor", 1]], [["Anchore", 1]], "anchor <> anchore"]
-[86.0, [["Directi", 1]], [["Directv", 2]], "directi <> directv"]
+[88.0, [["Digital Labs", 1]], [["eDigitalResearch", 1]], "digital <> edigital"]
+[88.0, [["Finsight", 1]], [["Insighta", 1]], "finsight <> insighta"]
+[88.0, [["Recruit", 1]], [["Recruity", 1]], "recruit <> recruity"]
+[88.0, [["Transit", 1]], [["Transition Technologies", 5]], "transit <> transitn"]
+[86.0, [["Anchor", 1]], [["Anchore", 2]], "anchor <> anchore"]
+[86.0, [["Directi", 1]], [["Directv", 3]], "directi <> directv"]
 [86.0, [["Eymform", 2]], [["Symform", 3]], "eymform <> symform"]
+[86.0, [["F-Secure", 1]], [["Secure Com", 1]], "fsecure <> securem"]
 [86.0, [["Hadapt", 1]], [["Hadapta", 2]], "hadapt <> hadapta"]
+[86.0, [["Lendesk", 1]], [["Zendesk", 7]], "lendesk <> zendesk"]
 [86.0, [["Source", 2]], [["Source{d}", 1]], "source <> sourced"]
 [86.0, [["Stream.io", 2]], [["Streamlio", 2]], "stream <> streaml"]
-[86.0, [["Stream.io", 2]], [["Ustream", 4]], "stream <> ustream"]
-[86.0, [["Streamlio", 2]], [["Ustream", 4]], "streaml <> ustream"]
+[86.0, [["Stream.io", 2]], [["Ustream", 5]], "stream <> ustream"]
+[86.0, [["Streamlio", 2]], [["Ustream", 5]], "streaml <> ustream"]
 [86.0, [["Switch", 5]], [["USwitch", 1]], "switch <> uswitch"]
+[86.0, [["Turbina", 1]], [["Turbine", 3], ["Turbine Labs", 4]], "turbina <> turbine"]
+[86.0, [["Yandex", 9]], [["Yandexo", 1]], "yandex <> yandexo"]
+[85.0, [["Acatel-Lucent", 1]], [["Alcatel-Lucent", 3]], "acatellucent <> alcatellucent"]
 [85.0, [["Ping Identify", 1]], [["Ping Identity", 1]], "ping identify <> ping identity"]
 [83.0, [["3logic Systems", 1]], [["Logic Solutions", 1]], "3logic <> logic"]
 [83.0, [["AD/FIN", 1]], [["Radfin", 1]], "adfin <> radfin"]
-[83.0, [["Ascend.io", 1]], [["Ascent.io", 1]], "ascend <> ascent"]
+[83.0, [["Ambition", 2]], [["Gambit Research", 1]], "ambitn <> gambit"]
+[83.0, [["Arris", 3]], [["Harris Corporation", 1]], "arris <> harris"]
+[83.0, [["Ascend", 1], ["Ascend.io", 1]], [["Ascent.io", 1]], "ascend <> ascent"]
 [83.0, [["China Cloud", 7]], [["Chinac", 3]], "china <> chinac"]
 [83.0, [["Coding", 1]], [["Koding", 2]], "coding <> koding"]
+[83.0, [["Demond Media", 1]], [["Vimond Media Solutions", 1]], "demond media <> vimond media"]
+[83.0, [["Dumana", 1]], [["Design&Humana", 1]], "dumana <> humana"]
+[83.0, [["Eight", 1]], [["Eight-s", 1]], "eight <> eights"]
 [83.0, [["EMnify", 1]], [["Omnify", 1]], "emnify <> omnify"]
-[83.0, [["Envision&Company", 1]], [["InVision AG", 1]], "envisn <> invisn"]
-[83.0, [["Intel", 152]], [["Intellab", 1]], "intel <> intell"]
-[83.0, [["Intel", 152]], [["Mintel", 1]], "intel <> mintel"]
+[83.0, [["Envision&Company", 1]], [["InVision AG", 2]], "envisn <> invisn"]
+[83.0, [["Intel", 157], ["Intel Security", 2]], [["Intellab", 1]], "intel <> intell"]
+[83.0, [["Intel", 157], ["Intel Security", 2]], [["Mintel", 1]], "intel <> mintel"]
 [83.0, [["Intellab", 1]], [["Mintel", 1]], "intell <> mintel"]
-[83.0, [["Kenzam", 1]], [["Kenzan", 3]], "kenzam <> kenzan"]
+[83.0, [["Kenzam", 1]], [["Kenzan", 5]], "kenzam <> kenzan"]
 [83.0, [["Krave-n", 1]], [["Raven", 2]], "kraven <> raven"]
+[83.0, [["npower", 1]], [["Opower", 1]], "npower <> opower"]
 [83.0, [["Pixable", 2]], [["Pixlee", 1]], "pixle <> pixlee"]
 [83.0, [["pusher", 1]], [["Usher", 1]], "pusher <> usher"]
+[83.0, [["Qiniu", 15]], [["Qinium", 1]], "qiniu <> qinium"]
+[83.0, [["Scale", 1]], [["Scalec", 1]], "scale <> scalec"]
+[83.0, [["Scale", 1]], [["Scaler Labs", 1]], "scale <> scaler"]
 [83.0, [["Scalec", 1]], [["Scaler Labs", 1]], "scalec <> scaler"]
+[83.0, [["Sensu", 1]], [["Sensus", 1]], "sensu <> sensus"]
 [83.0, [["Sintef", 1]], [["Sintez", 1]], "sintef <> sintez"]
 [83.0, [["Streak", 1]], [["Stream.io", 2]], "streak <> stream"]
 [83.0, [["Switch", 5]], [["Twitch", 1]], "switch <> twitch"]
 [83.0, [["Virtu Financial", 1]], [["Virtua SA", 1]], "virtu <> virtua"]
 [83.0, [["Zenos", 2]], [["Zenoss", 1]], "zenos <> zenoss"]
-[81.0, [["Stealth Starttup", 1]], [["Stealth Startup", 2]], "stealth starttup <> stealth startup"]
+[82.0, [["FollContact", 1]], [["FullContact", 1]], "follcontact <> fullcontact"]
+[82.0, [["HelloFresch", 1]], [["HelloFresh", 6]], "hellofresch <> hellofresh"]
