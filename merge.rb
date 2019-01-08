@@ -117,7 +117,9 @@ def merge_multiple_logins(data, verbose)
         unless curr_aff == aff
           email = knowns.first[0]['email']
           curr_email = profile['email']
-          STDERR.puts "Affiliations conflict: login: #{login} #{email}:#{aff} != #{curr_email}:#{curr_aff}"
+          source = knowns.first[0]['source']
+          curr_source = profile['source']
+          STDERR.puts "Affiliations conflict: login: #{login} #{email}:#{aff}(#{source}) != #{curr_email}:#{curr_aff}(#{curr_source})"
           conflict = true
         end
       end
