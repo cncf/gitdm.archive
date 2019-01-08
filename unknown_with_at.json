@@ -1254,7 +1254,8 @@
     "country_id": "us",
     "tz": "America/New_York",
     "sex": "m",
-    "sex_prob": 1
+    "sex_prob": 1,
+    "source": "config"
   },
   {
     "login": "bgetsug",
@@ -4376,7 +4377,8 @@
     "country_id": "us",
     "tz": "America/New_York",
     "sex": "m",
-    "sex_prob": 1
+    "sex_prob": 1,
+    "source": "config"
   },
   {
     "login": "davidraleigh",
@@ -7228,7 +7230,8 @@
     "country_id": "no",
     "tz": "Europe/Oslo",
     "sex": null,
-    "sex_prob": null
+    "sex_prob": null,
+    "source": "config"
   },
   {
     "login": "szeestraten-ntnu",
@@ -9394,41 +9397,6 @@
     "sex_prob": 1
   },
   {
-    "login": "bgauduch",
-    "id": 5585755,
-    "node_id": "MDQ6VXNlcjU1ODU3NTU=",
-    "avatar_url": "https://avatars0.githubusercontent.com/u/5585755?v=4",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/bgauduch",
-    "html_url": "https://github.com/bgauduch",
-    "followers_url": "https://api.github.com/users/bgauduch/followers",
-    "following_url": "https://api.github.com/users/bgauduch/following{/other_user}",
-    "gists_url": "https://api.github.com/users/bgauduch/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/bgauduch/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/bgauduch/subscriptions",
-    "organizations_url": "https://api.github.com/users/bgauduch/orgs",
-    "repos_url": "https://api.github.com/users/bgauduch/repos",
-    "events_url": "https://api.github.com/users/bgauduch/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/bgauduch/received_events",
-    "type": "User",
-    "site_admin": false,
-    "name": "Baptiste Gauduchon",
-    "company": "!Zenika",
-    "blog": "",
-    "location": "France",
-    "email": "bgauduch!users.noreply.github.com",
-    "hireable": null,
-    "bio": null,
-    "public_repos": 11,
-    "public_gists": 2,
-    "followers": 11,
-    "following": 31,
-    "created_at": "2013-10-01 13:03:50 UTC",
-    "updated_at": "2018-12-17 17:46:13 UTC",
-    "commits": 0,
-    "affiliation": "(Unknown)"
-  },
-  {
     "login": "bgilmore",
     "id": 90837,
     "avatar_url": "https://avatars0.githubusercontent.com/u/90837?v=4",
@@ -9879,7 +9847,12 @@
     "created_at": "2011-09-22 15:52:54 UTC",
     "updated_at": "2019-01-07 05:21:18 UTC",
     "commits": 0,
-    "affiliation": "(Unknown)"
+    "affiliation": "(Unknown)",
+    "country_id": null,
+    "tz": null,
+    "sex": "m",
+    "sex_prob": 1,
+    "source": "config"
   },
   {
     "login": "chen23",
@@ -11253,7 +11226,12 @@
     "created_at": "2010-04-25 21:44:01 UTC",
     "updated_at": "2018-12-29 02:48:10 UTC",
     "commits": 0,
-    "affiliation": "(Unknown)"
+    "affiliation": "(Unknown)",
+    "country_id": null,
+    "tz": null,
+    "sex": "m",
+    "sex_prob": 1,
+    "source": "config"
   },
   {
     "login": "idcrosby",
@@ -11752,41 +11730,6 @@
     "sex_prob": 1
   },
   {
-    "login": "jschlichtholz",
-    "id": 6053734,
-    "node_id": "MDQ6VXNlcjYwNTM3MzQ=",
-    "avatar_url": "https://avatars0.githubusercontent.com/u/6053734?v=4",
-    "gravatar_id": "",
-    "url": "https://api.github.com/users/jschlichtholz",
-    "html_url": "https://github.com/jschlichtholz",
-    "followers_url": "https://api.github.com/users/jschlichtholz/followers",
-    "following_url": "https://api.github.com/users/jschlichtholz/following{/other_user}",
-    "gists_url": "https://api.github.com/users/jschlichtholz/gists{/gist_id}",
-    "starred_url": "https://api.github.com/users/jschlichtholz/starred{/owner}{/repo}",
-    "subscriptions_url": "https://api.github.com/users/jschlichtholz/subscriptions",
-    "organizations_url": "https://api.github.com/users/jschlichtholz/orgs",
-    "repos_url": "https://api.github.com/users/jschlichtholz/repos",
-    "events_url": "https://api.github.com/users/jschlichtholz/events{/privacy}",
-    "received_events_url": "https://api.github.com/users/jschlichtholz/received_events",
-    "type": "User",
-    "site_admin": false,
-    "name": "Julian Schlichtholz",
-    "company": "!salesforce",
-    "blog": "",
-    "location": "Jena, Germany",
-    "email": "jschlichtholz!users.noreply.github.com",
-    "hireable": null,
-    "bio": null,
-    "public_repos": 9,
-    "public_gists": 0,
-    "followers": 5,
-    "following": 5,
-    "created_at": "2013-11-27 21:31:49 UTC",
-    "updated_at": "2019-01-07 09:13:58 UTC",
-    "commits": 0,
-    "affiliation": "(Unknown)"
-  },
-  {
     "login": "jttyeung",
     "id": 985240,
     "avatar_url": "https://avatars2.githubusercontent.com/u/985240?v=4",
@@ -12048,7 +11991,12 @@
     "created_at": "2009-01-21 00:29:22 UTC",
     "updated_at": "2019-01-07 11:36:34 UTC",
     "commits": 0,
-    "affiliation": "(Unknown)"
+    "affiliation": "(Unknown)",
+    "country_id": "nl",
+    "tz": "Europe/Amsterdam",
+    "sex": null,
+    "sex_prob": null,
+    "source": "config"
   },
   {
     "login": "kunickiaj",
