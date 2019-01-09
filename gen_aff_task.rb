@@ -81,7 +81,7 @@ hdr = %w(type email name github linkedin1 linkedin2 linkedin3 patches gender aff
 CSV.open(ARGV[0].split('.')[0...-1].join('.')+'.csv', 'w', headers: hdr) do |csv|
   csv << hdr
   arr.each do |ary|
-    next if onlygh && ary[4] != '' && !ary[4].nil?
+    next if onlygh && ary[4] != '' && ary[4] != '-' && !ary[4].nil?
     next if onlyemp && ary[9] != '' && !ary[9].nil?
     csv << [ary[0], ary[1], ary[2], ary[4], ary[5], ary[6], ary[7], ary[3], ary[8], ary[9]]
   end
