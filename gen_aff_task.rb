@@ -71,7 +71,7 @@ end
 
 puts "Found #{f}, not found #{nf}"
 onlygh = !ENV['ONLY_GH'].nil?
-onlyemp = !ENV['ONLY_EMPTY'].nil?
+onlyemp = !ENV['ONLY_EMP'].nil?
 
 arr = []
 email2line.each { |email, line| arr << line.split("\t") }
