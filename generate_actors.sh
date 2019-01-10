@@ -38,6 +38,7 @@ sudo -u postgres psql -tA opencontainers < ~/dev/go/src/devstats/util_sql/actors
 sudo -u postgres psql -tA istio < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA spinnaker < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA knative < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA linux < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 cat actors.txt | sort | uniq > actors.tmp
 tr '\n' ',' < actors.tmp > out
 rm actors.tmp
