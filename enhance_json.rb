@@ -299,7 +299,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   File.write json_file, json
 end
 
-if ARGV.size < 3
+if ARGV.size < 4
     puts "Missing arguments: json_file csv_file actors_file map_file (github_users.json all_affs.csv actors.txt cncf-config/email-map)"
   exit(1)
 end
