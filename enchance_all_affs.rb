@@ -5,9 +5,17 @@ require './comment'
 require './email_code'
 require './mgetc'
 
+def mismatch(ary1, ary2)
+  s1 = ary1.map(&:strip).sort.join(', ')
+  s2 = ary2.map(&:strip).sort.join(', ')
+  s1 != s2
+end
+
 def enchance_all_affs(affs_file, json_file)
   # dbg: set to true to have very verbose output
+  # silent: set to skip almost all output 
   dbg = !ENV['DBG'].nil?
+  silent = !ENV['SILENT'].nil?
 
   # Process affiliations found by Python cncf/gitdm saved in CSV
   # "email","name","company","date_to","source"
@@ -18,7 +26,7 @@ def enchance_all_affs(affs_file, json_file)
   # Parse affiliations file
   ln = 1
   email_affs = {}
-  sources = {}
+  email_data = {}
   begin
     CSV.foreach(affs_file, headers: true) do |row|
       next if is_comment row
@@ -36,7 +44,9 @@ def enchance_all_affs(affs_file, json_file)
         email_affs[e] << c
       end
 
-      sources[e] = s
+      # needed to add new rows
+      email_data[[e, c, d]] = [n, s]
+
       ln += 1
     end
   rescue => e
@@ -65,10 +75,11 @@ def enchance_all_affs(affs_file, json_file)
 
   # Check if we have all emails from JSON in our CSV
   new_affs = {}
+  conflict = 0
   email_affs.each do |email, affs|
       next if ['NotFound', '(Unknown)'].include?(affs.first)
     unless logins.key?(email)
-      puts "JSON have no email '#{email}', skipping" if dbg
+      puts "JSON have no email '#{email}', skipping" if dbg && !silent
       next
     end
     l = logins[email]
@@ -79,11 +90,49 @@ def enchance_all_affs(affs_file, json_file)
     end
     ems.each do |em|
       next if em == email
-      new_affs[em] = affs unless email_affs.key?(em)
+      unless email_affs.key?(em)
+        new_affs[em] = [email, affs]
+        next
+      end
+      oaffs = email_affs[em]
+      if mismatch(affs, oaffs)
+        puts "Login '#{l}', original email '#{email}', other email '#{em}' all: #{ems}\nAffiliations mismatch: '#{affs}' != '#{oaffs}'" unless silent
+        conflict += 1
+      end
     end
   end
-
-  binding.pry
+  puts "Conflicts: #{conflict}"
+  csv_data = []
+  new_affs.each do |em, affs_data|
+    email = affs_data[0]
+    affs = affs_data[1]
+    affs.each do |aff_data|
+      ary = aff_data.split(' < ')
+      c = d = ''
+      if ary.length == 1
+        c = ary[0]
+      else
+        c = ary[0]
+        d = ary[1]
+      end
+      unless email_data.key?([email, c, d])
+        puts "This is bad: email '#{email}' should have a key for company '#{c}' and date_to '#{d}' while processing new email '#{em}'"
+        next
+      end
+      ary = email_data[[email, c, d]]
+      n = ary[0]
+      s = ary[1]
+      # "email","name","company","date_to","source"
+      csv_data << [em, n, c, d, s]
+    end
+  end
+  fn = 'new_affs.csv'
+  hdr = %w(email name company date_to source)
+  CSV.open(fn, 'w', headers: hdr) do |csv|
+    csv << hdr
+    csv_data.each { |row| csv << row }
+  end
+  puts "#{new_affs.length}/#{csv_data.length} new affiliations written to #{fn}, you can append them to #{affs_file}"
 end
 
 if ARGV.size < 2
