@@ -207,7 +207,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   end
   puts "We are missing #{unknown_actors.keys.count} contributors from #{actors_file}"
 
-  # Actors from out JSON that have no contributions in cncf/devstats
+  # Actors from our JSON that have no contributions in cncf/devstats
   unknown_logins = {}
   known_logins.keys.each do |login|
     unknown_logins[login] = true unless actors.key?(login)
@@ -300,7 +300,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
 end
 
 if ARGV.size < 4
-    puts "Missing arguments: json_file csv_file actors_file map_file (github_users.json all_affs.csv actors.txt cncf-config/email-map)"
+  puts "Missing arguments: json_file csv_file actors_file map_file (github_users.json all_affs.csv actors.txt cncf-config/email-map)"
   exit(1)
 end
 
