@@ -117,9 +117,11 @@ def ghusers(start_date, args)
       processed[repo_name] = true
     rescue Errno::ENOENT => err1
       begin
-        puts "No previously saved #{fn}, getting commits from GitHub" unless force_commits
+        from_date = start_date
+        from_date = '2015-01-01' if repo_name == 'torvalds/linux'
+        puts "No previously saved #{fn}, getting commits from GitHub from #{from_date}" unless force_commits
         rate_limit()
-        comm = Octokit.commits_since(repo_name, start_date)
+        comm = Octokit.commits_since(repo_name, from_date)
         h = comm.map(&:to_h)
         puts "Got #{h.count} commits"
         json = email_encode(JSON.pretty_generate(h))
