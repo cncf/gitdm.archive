@@ -118,9 +118,10 @@ def ghusers(start_date, args)
     rescue Errno::ENOENT => err1
       begin
         from_date = start_date
-        from_date = '2015-01-01' if repo_name == 'torvalds/linux'
+        from_date = '2012-07-01' if repo_name == 'torvalds/linux'
         puts "No previously saved #{fn}, getting commits from GitHub from #{from_date}" unless force_commits
         rate_limit()
+        # TODO: how to avoid 502 error for torvalds/linux repo?
         comm = Octokit.commits_since(repo_name, from_date)
         h = comm.map(&:to_h)
         puts "Got #{h.count} commits"
