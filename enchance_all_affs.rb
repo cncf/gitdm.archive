@@ -128,7 +128,7 @@ def enchance_all_affs(affs_file, json_file)
   end
   fn = 'new_affs.csv'
   hdr = %w(email name company date_to source)
-  CSV.open(fn, 'w', headers: hdr) do |csv|
+  CSV.open(fn, 'w', headers: hdr, force_quotes: true) do |csv|
     csv << hdr
     csv_data.each { |row| csv << row }
   end
