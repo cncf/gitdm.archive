@@ -37,6 +37,7 @@ def commits_since(repo, sdt)
     rescue => err2
       puts "Uups, somethis bad happened, check `err2` variable!"
       binding.pry
+    end
   end
   final_comms.flatten
 end
@@ -153,7 +154,6 @@ def ghusers(start_date, args)
         from_date = '2012-07-01' if repo_name == 'torvalds/linux'
         puts "No previously saved #{fn}, getting commits from GitHub from #{from_date}" unless force_commits
         rate_limit()
-        # TODO: how to avoid 502 error for torvalds/linux repo?
         comm = commits_since(repo_name, from_date)
         h = comm.map(&:to_h)
         puts "Got #{h.count} commits"
