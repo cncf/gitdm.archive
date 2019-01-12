@@ -19,16 +19,18 @@ def commits_since(repo, sdt)
     edt = dt + days_inc
     dtf = dt.strftime("%Y-%m-%d")
     dtt = edt.strftime("%Y-%m-%d")
-    puts "#{repo}: #{dtf} - #{dtt}"
-    dt = edt
     comms = []
     begin
+      rate_limit()
       if edt < now
+        puts "#{repo}: #{dtf} - #{dtt}"
         comms = Octokit.commits_between(repo, dtf, dtt)
       else
+        puts "#{repo}: #{dtf} - now"
         comms = Octokit.commits_since(repo, dtf)
       end
       final_comms << comms if comms.length > 0
+      dt = edt
     rescue Octokit::TooManyRequests => err2
       td = rate_limit()
       puts "Too many GitHub requests, sleeping for #{td} seconds"
@@ -267,6 +269,13 @@ def ghusers(start_date, args)
       puts "Uups, somethig bad happened, check `err2` variable!"
       binding.pry
     end
+  end
+
+  # Encode emails in JSON
+  final.each do |user|
+    e = user['email']
+    next if e.nil? || e == ''
+    user['email'] = email_encode(e)
   end
   json = email_encode(JSON.pretty_generate(final))
   File.write 'github_users.json', json

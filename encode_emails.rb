@@ -5,6 +5,7 @@ def encode_emails(input, output)
   File.open(output, 'w') do |file|
     File.readlines(input).each do |line|
       file.write email_encode(line)
+      #file.write line
     end
   end
 end
