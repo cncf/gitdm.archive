@@ -8,9 +8,41 @@ require './ghapi'
 # Ask each repo for commits newer than...
 start_date = '2014-01-01'
 
+def commits_since(repo, sdt)
+  days_inc = 730
+  days_inc = 30 if repo == 'torvalds/linux'
+  now = DateTime.now()
+  # now = DateTime.strptime('2016-02-01', '%Y-%m-%d')
+  dt = DateTime.strptime(sdt, '%Y-%m-%d')
+  final_comms = []
+  while dt < now
+    edt = dt + days_inc
+    dtf = dt.strftime("%Y-%m-%d")
+    dtt = edt.strftime("%Y-%m-%d")
+    puts "#{repo}: #{dtf} - #{dtt}"
+    dt = edt
+    comms = []
+    begin
+      if edt < now
+        comms = Octokit.commits_between(repo, dtf, dtt)
+      else
+        comms = Octokit.commits_since(repo, dtf)
+      end
+      final_comms << comms if comms.length > 0
+    rescue Octokit::TooManyRequests => err2
+      td = rate_limit()
+      puts "Too many GitHub requests, sleeping for #{td} seconds"
+      sleep td
+      retry
+    rescue => err2
+      puts "Uups, somethis bad happened, check `err2` variable!"
+      binding.pry
+  end
+  final_comms.flatten
+end
+
 # args[0]: 1st arg is: 'r' - force repos metadata fetch, 'c' - force commits fetch, 'u' force users fetch, 'n' fetch commits never than newest from cache
 def ghusers(start_date, args)
-
   # List of repositories to retrieve commits from (and get their basic data): from repos.txt file
   str = File.read 'repos.txt'
   repos = str.strip.split(",\n  ")
@@ -99,7 +131,7 @@ def ghusers(start_date, args)
         comm.each { |c| shas[c[:sha] || c['sha']] = true }
         rate_limit()
         puts "Getting new commits for #{repo_name} from #{maxdt}"
-        ocomm = Octokit.commits_since(repo_name, maxdt)
+        ocomm = commits_since(repo_name, maxdt)
         h = ocomm.map(&:to_h)
         nc = 0
         h.each do |c|
@@ -122,7 +154,7 @@ def ghusers(start_date, args)
         puts "No previously saved #{fn}, getting commits from GitHub from #{from_date}" unless force_commits
         rate_limit()
         # TODO: how to avoid 502 error for torvalds/linux repo?
-        comm = Octokit.commits_since(repo_name, from_date)
+        comm = commits_since(repo_name, from_date)
         h = comm.map(&:to_h)
         puts "Got #{h.count} commits"
         json = email_encode(JSON.pretty_generate(h))
