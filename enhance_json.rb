@@ -224,62 +224,76 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
     uacts = unknown_actors.keys
     n_users = uacts.size
     rpts = 0
+    thrs = []
     binding.pry
     uacts.each_with_index do |actor, index|
-      begin
-        if rpts <= 0
-          hint, rem, pts = rate_limit(gcs)
-          rpts = pts / 10
-          puts "Allowing #{rpts} calls without checking rate"
-        else
-          rpts -= 1
-          puts "#{rpts} calls remain before next rate check"
-        end
-        e = "#{actor}!users.noreply.github.com"
-        puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}, found so far: #{actors_found}"
-        u = gcs[hint].user actor
-        login = u['login']
-        n = u['name']
-        u['email'] = e
-        u['commits'] = 0
-        v = '?'
-        if guess_by_email && email_affs.key?(e)
-          p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
-          actors_found += 1
-          v = email_affs[e]
-        else
-          if guess_by_name && name_affs.key?(n)
+      thrs << Thread.new do
+        res = []
+        begin
+          if rpts <= 0
+            hint, rem, pts = rate_limit(gcs)
+            rpts = pts / 10
+            puts "Allowing #{rpts} calls without checking rate"
+          else
+            rpts -= 1
+            puts "#{rpts} calls remain before next rate check"
+          end
+          e = "#{actor}!users.noreply.github.com"
+          puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}, found so far: #{actors_found}"
+          u = gcs[hint].user actor
+          login = u['login']
+          n = u['name']
+          u['email'] = e
+          u['commits'] = 0
+          v = '?'
+          if guess_by_email && email_affs.key?(e)
             p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
             actors_found += 1
-            v = name_affs[n]
-            e2 = emails[n].keys.first
-            u['email'] = e2 unless e2 == e
+            v = email_affs[e]
           else
-            actor_not_found += 1
+            if guess_by_name && name_affs.key?(n)
+              p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
+              actors_found += 1
+              v = name_affs[n]
+              e2 = emails[n].keys.first
+              u['email'] = e2 unless e2 == e
+            else
+              actor_not_found += 1
+            end
           end
+          u['affiliation'] = v
+          puts "Got name: #{u[:name] || u['name']}, login: #{u[:login] || u['login']}"
+          h = u.to_h
+          res << h
+          if login != actor
+            u2 = u.clone
+            u2['login'] = actor
+            h2 = u2.to_h
+            res << h2
+          end
+        rescue Octokit::TooManyRequests => err
+          hint, td = rate_limit(gcs)
+          puts "Too many GitHub requests, sleeping for #{td} seconds"
+          sleep td
+          retry
+        rescue Octokit::NotFound => err
+          puts "GitHub doesn't know actor #{actor}"
+          puts err
+        rescue => err
+          puts "Uups, somethis bad happened, check `err` variable!"
+          STDERR.puts err
         end
-        u['affiliation'] = v
-        puts "Got name: #{u[:name] || u['name']}, login: #{u[:login] || u['login']}"
-        h = u.to_h
-        data << h
-        if login != actor
-          u2 = u.clone
-          u2['login'] = actor
-          h2 = u2.to_h
-          data << h2
-        end
-      rescue Octokit::TooManyRequests => err
-        hint, td = rate_limit(gcs)
-        puts "Too many GitHub requests, sleeping for #{td} seconds"
-        sleep td
-        retry
-      rescue Octokit::NotFound => err
-        puts "GitHub doesn't know actor #{actor}"
-        puts err
-      rescue => err
-        puts "Uups, somethis bad happened, check `err` variable!"
-        binding.pry
+        res
       end
+      while thrs.length >= n_thrs
+        res = thrs.first.value
+        res.each { |h| data << h }
+        thrs = thrs[1..-1]
+      end
+    end
+    thrs.each do |thr|
+      res = thr.value
+      res.each { |h| data << h }
     end
     puts "Found #{actors_found}, not found #{actor_not_found} from #{n_users} additional actors"
   end
