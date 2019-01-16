@@ -42,7 +42,7 @@ def handle_conflict(ghid, email, saaff, ghaff)
   return c
 end
 
-octokit_init()
+gcs = octokit_init()
 
 sa = JSON.parse File.read 'default_data.json'
 # Some name transformations
@@ -148,6 +148,7 @@ gh_cache = {}
 n = 0
 g = 0
 nf = 0
+hint = -1
 news.each do |data|
   n += 1
   ghid = data[0]
@@ -162,12 +163,12 @@ news.each do |data|
     else
       begin
         g += 1
-        rate_limit()
+        hint, rem = rate_limit(gcs, hint)
         puts "Asking for #{ghid}"
-        u = Octokit.user ghid
+        u = gcs[hint].user ghid
         gh_data = u.to_h
       rescue Octokit::TooManyRequests => err
-        td = rate_limit()
+        hint, td = rate_limit(gcs)
         puts "Too many GitHub requests, sleeping for #{td} seconds"
         sleep td
         retry
