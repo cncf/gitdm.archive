@@ -217,6 +217,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   actor_not_found = 0
   actors_found = 0
   if unknown_actors.keys.count > 0
+    n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
     gcs = octokit_init()
     hint = rate_limit(gcs)[0]
     puts "We need to process additional actors using GitHub API, type exit-program if you want to exit"

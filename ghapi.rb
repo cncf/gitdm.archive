@@ -16,7 +16,7 @@ def rate_limit(clients, last_hint = -1, debug = 1)
     rls[last_hint] = clients[last_hint].rate_limit
   else
     thrs = []
-    n_thrs = Etc.nprocessors
+    n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
     clients.each_with_index do |client, idx|
       thrs << Thread.new do
         puts "Checking rate limit for #{client.user[:login]}" if debug >= 2
@@ -115,7 +115,7 @@ def octokit_init()
   # Process tripples, create N threads to handle client creations
   clients = []
   thrs = []
-  n_thrs = Etc.nprocessors
+  n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   tokens.each_with_index do |token, idx|
     thrs << Thread.new do
       puts "Connecting client nr #{idx}"
@@ -128,6 +128,7 @@ def octokit_init()
     while thrs.length >= n_thrs
       client =  thrs.first.value
       clients << client
+      thrs = thrs[1..-1]
       puts "Connected #{client.user[:login]}"
     end
   end

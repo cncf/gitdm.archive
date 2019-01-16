@@ -10,7 +10,7 @@ def generate_logs(repos)
   dbg = !ENV['DBG'].nil?
   silent = !ENV['SILENT'].nil?
   pwd = `pwd`.strip!
-  maxProc = Etc.nprocessors
+  maxProc = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   pids = []
   pdata = {}
   failed = {}

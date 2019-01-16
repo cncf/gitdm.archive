@@ -15,7 +15,7 @@ def commits_since(gcs, repo, sdt)
   dt = DateTime.strptime(sdt, '%Y-%m-%d')
   final_comms = []
   thrs = []
-  n_thrs = Etc.nprocessors
+  n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   while dt < now
     edt = dt + days_inc
     dtf = dt.strftime("%Y-%m-%d")
@@ -98,7 +98,7 @@ def ghusers(start_date, args)
   # If not type 'exit-program' if Yes type 'quit' (to quit debugger & continue)
   binding.pry
   thrs = []
-  n_thrs = Etc.nprocessors
+  n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   repos.each_with_index do |repo_name, repo_index|
     thrs << Thread.new do
       h = nil
