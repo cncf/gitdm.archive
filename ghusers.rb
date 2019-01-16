@@ -44,7 +44,7 @@ def commits_since(gcs, repo, sdt)
         puts "Too many GitHub requests on #{repo}: #{dtf} - #{dtt}, sleeping for #{td} seconds"
         sleep td
         retry
-      rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err
+      rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed, Faraday::SSLError => err
         puts "Retryable error #{err} on #{repo}: #{dtf} - #{dtt}, sleeping 10 seconds"
         sleep 10
         retry
@@ -138,7 +138,7 @@ def ghusers(start_date, args)
           puts "Too many GitHub requests on #{repo_name}, sleeping for #{td} seconds"
           sleep td
           retry
-        rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err2
+        rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed, Faraday::SSLError => err2
           puts "Retryable error #{err2} on #{repo_name}, sleeping 10 seconds"
           sleep 10
           retry
@@ -350,7 +350,7 @@ def ghusers(start_date, args)
         puts "Too many GitHub requests for #{usr[1]}, sleeping for #{td} seconds"
         sleep td
         retry
-      rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err2
+      rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed, Faraday::SSLError => err2
         puts "Retryable error #{err2} for #{usr[1]}, sleeping 10 seconds"
         sleep 10
         retry
