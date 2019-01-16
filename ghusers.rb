@@ -8,7 +8,7 @@ require './ghapi'
 # Ask each repo for commits newer than...
 start_date = '2014-01-01'
 
-def commits_since(repo, sdt)
+def commits_since(gcs, repo, sdt)
   days_inc = 730
   days_inc = 30 if repo == 'torvalds/linux'
   now = DateTime.now()
@@ -21,18 +21,18 @@ def commits_since(repo, sdt)
     dtt = edt.strftime("%Y-%m-%d")
     comms = []
     begin
-      rate_limit()
+      hint, rem, pts = rate_limit(gcs)
       if edt < now
         puts "#{repo}: #{dtf} - #{dtt}"
-        comms = Octokit.commits_between(repo, dtf, dtt)
+        comms = gcs[hint].commits_between(repo, dtf, dtt)
       else
         puts "#{repo}: #{dtf} - now"
-        comms = Octokit.commits_since(repo, dtf)
+        comms = gcs[hint].commits_since(repo, dtf)
       end
       final_comms << comms if comms.length > 0
       dt = edt
     rescue Octokit::TooManyRequests => err2
-      td = rate_limit()
+      hint, td = rate_limit(gcs)
       puts "Too many GitHub requests, sleeping for #{td} seconds"
       sleep td
       retry
@@ -61,13 +61,14 @@ def ghusers(start_date, args)
   force_users = true if args.length > 0 && args[0].downcase.include?('u')
   new_commits = true if args.length > 0 && args[0].downcase.include?('n')
 
-  octokit_init()
+  gcs = octokit_init()
 
   # Process repositories general info
   hs = []
   n_repos = repos.count
 
-  rate_limit()
+  hint = rate_limit(gcs)[0]
+  rpts = 0
   puts "Type exit-program if You want to exit"
   # This is to ensure You want to continue, it displays Your limit, should be close to 5000
   # If not type 'exit-program' if Yes type 'quit' (to quit debugger & continue)
@@ -84,14 +85,21 @@ def ghusers(start_date, args)
     rescue Errno::ENOENT => err1
       begin
         puts "No previously saved #{fn}, getting repo from GitHub" unless force_repo
-        rate_limit()
-        repo = Octokit.repo repo_name
+        if rpts <= 0
+          hint, rem, pts = rate_limit(gcs)
+          rpts = pts / 10
+          puts "Allowing #{rpts} calls without checking rate"
+        else
+          rpts -= 1
+          puts "#{rpts} calls remain before next rate check"
+        end
+        repo = gcs[hint].repo repo_name
         h = repo.to_h
         json = email_encode(JSON.pretty_generate(h))
         File.write fn, json
         hs << h
       rescue Octokit::TooManyRequests => err2
-        td = rate_limit()
+        hint, td = rate_limit(gcs)
         puts "Too many GitHub requests, sleeping for #{td} seconds"
         sleep td
         retry
@@ -108,6 +116,7 @@ def ghusers(start_date, args)
   comms = []
   processed = {}
   n_repos = hs.count
+  rpts = 0
   hs.each_with_index do |repo, repo_index|
     begin
       repo_name = repo['full_name'] || repo[:full_name]
@@ -132,9 +141,9 @@ def ghusers(start_date, args)
         end
         shas = {}
         comm.each { |c| shas[c[:sha] || c['sha']] = true }
-        rate_limit()
+        # hint, rem, pts = rate_limit(gcs)
         puts "Getting new commits for #{repo_name} from #{maxdt}"
-        ocomm = commits_since(repo_name, maxdt)
+        ocomm = commits_since(gcs, repo_name, maxdt)
         h = ocomm.map(&:to_h)
         nc = 0
         h.each do |c|
@@ -155,8 +164,8 @@ def ghusers(start_date, args)
         from_date = start_date
         from_date = '2012-07-01' if repo_name == 'torvalds/linux'
         puts "No previously saved #{fn}, getting commits from GitHub from #{from_date}" unless force_commits
-        rate_limit()
-        comm = commits_since(repo_name, from_date)
+        # hint, rem, pts = rate_limit(gcs)
+        comm = commits_since(gcs, repo_name, from_date)
         h = comm.map(&:to_h)
         puts "Got #{h.count} commits"
         json = email_encode(JSON.pretty_generate(h))
@@ -164,7 +173,7 @@ def ghusers(start_date, args)
         comms << comm
         processed[repo_name] = true
       rescue Octokit::TooManyRequests => err2
-        td = rate_limit()
+        hint, td = rate_limit(gcs)
         puts "Too many GitHub requests, sleeping for #{td} seconds"
         sleep td
         retry
@@ -243,9 +252,17 @@ def ghusers(start_date, args)
     puts "No JSON saved yet, generating new one" unless force_users
   end
 
+  rpts = 0
   users.each_with_index do |usr, index|
     begin
-      rate_limit()
+      if rpts <= 0
+        hint, rem, pts = rate_limit(gcs)
+        rpts = pts / 10
+        puts "Allowing #{rpts} calls without checking rate"
+      else
+        rpts -= 1
+        puts "#{rpts} calls remain before next rate check"
+      end
       puts "Asking for #{index}/#{n_users}: GitHub: #{usr[1]}, email: #{usr[0]}, commits: #{usr[2]}"
       u = nil
       if data.key?(usr[0])
@@ -253,7 +270,7 @@ def ghusers(start_date, args)
         u = data[usr[0]]
       else
         # Ask GitHub by login (github unique)
-        u = Octokit.user usr[1]
+        u = gcs[hint].user usr[1]
       end
       u['email'] = usr[0]
       u['commits'] = usr[2]
@@ -261,7 +278,7 @@ def ghusers(start_date, args)
       h = u.to_h
       final << h
     rescue Octokit::TooManyRequests => err2
-      td = rate_limit()
+      hint, td = rate_limit(gcs)
       puts "Too many GitHub requests, sleeping for #{td} seconds"
       sleep td
       retry
