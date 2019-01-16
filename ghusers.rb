@@ -9,37 +9,50 @@ require './ghapi'
 start_date = '2014-01-01'
 
 def commits_since(gcs, repo, sdt)
-  days_inc = 730
+  days_inc = 365
   days_inc = 30 if repo == 'torvalds/linux'
   now = DateTime.now()
-  # now = DateTime.strptime('2016-02-01', '%Y-%m-%d')
   dt = DateTime.strptime(sdt, '%Y-%m-%d')
   final_comms = []
+  thrs = []
+  n_thrs = Etc.nprocessors
   while dt < now
     edt = dt + days_inc
     dtf = dt.strftime("%Y-%m-%d")
     dtt = edt.strftime("%Y-%m-%d")
-    comms = []
-    begin
-      hint, rem, pts = rate_limit(gcs)
-      if edt < now
-        puts "#{repo}: #{dtf} - #{dtt}"
-        comms = gcs[hint].commits_between(repo, dtf, dtt)
-      else
-        puts "#{repo}: #{dtf} - now"
-        comms = gcs[hint].commits_since(repo, dtf)
+    thrs << Thread.new(edt, dtf, dtt) do |edt, dtf, dtt|
+      comms = []
+      begin
+        hint, rem, pts = rate_limit(gcs, -1, true)
+        if edt < now
+          puts "#{repo}: #{dtf} - #{dtt}"
+          comms = gcs[hint].commits_between(repo, dtf, dtt)
+        else
+          puts "#{repo}: #{dtf} - now"
+          comms = gcs[hint].commits_since(repo, dtf)
+        end
+      rescue Octokit::TooManyRequests => err2
+        hint, td = rate_limit(gcs)
+        puts "Too many GitHub requests, sleeping for #{td} seconds"
+        sleep td
+        retry
+      rescue => err2
+        puts "Uups, somethis bad happened, check `err2` variable!"
+        STDERR.puts err2
       end
-      final_comms << comms if comms.length > 0
-      dt = edt
-    rescue Octokit::TooManyRequests => err2
-      hint, td = rate_limit(gcs)
-      puts "Too many GitHub requests, sleeping for #{td} seconds"
-      sleep td
-      retry
-    rescue => err2
-      puts "Uups, somethis bad happened, check `err2` variable!"
-      binding.pry
+      comms
     end
+    while thrs.length >= n_thrs
+      comms = thrs.first.value
+      final_comms << comms if comms.length > 0
+      thrs = thrs[1..-1]
+    end
+    dt = edt
+  end
+  # puts "Remains #{thrs.length} threads"
+  thrs.each do |thr|
+    comms = thr.value
+    final_comms << comms if comms.length > 0
   end
   final_comms.flatten
 end
