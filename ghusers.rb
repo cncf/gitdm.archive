@@ -158,41 +158,42 @@ def ghusers(start_date, args)
             already_processed = true
           end
         end
-        return nil if already_processed
-        fn = 'ghusers/' + repo_name.gsub('/', '__') + '__commits'
-        ofn = force_commits ? SecureRandom.hex(80) : fn
-        f = File.read(ofn)
-        puts "Got #{repo_name} commits JSON from saved file"
-        comm = JSON.parse f
-        if new_commits
-          author_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
-          committer_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
-          maxdt = [author_maxdt, committer_maxdt].max
-          if maxdt.nil?
-            maxdt = start_date
-          else
-            maxdt = maxdt[0...10] if maxdt.length >= 10
-          end
-          shas = {}
-          comm.each { |c| shas[c[:sha] || c['sha']] = true }
-          # hint, rem, pts = rate_limit(gcs)
-          puts "Getting new commits for #{repo_name} from #{maxdt}"
-          ocomm = commits_since(gcs, repo_name, maxdt)
-          h = ocomm.map(&:to_h)
-          nc = 0
-          h.each do |c|
-            unless shas.key?(c[:sha])
-              nc += 1
-              comm << c
-              # else: puts "#{repo_name}:#{c[:sha]} already processed"
+        unless already_processed
+          fn = 'ghusers/' + repo_name.gsub('/', '__') + '__commits'
+          ofn = force_commits ? SecureRandom.hex(80) : fn
+          f = File.read(ofn)
+          puts "Got #{repo_name} commits JSON from saved file"
+          comm = JSON.parse f
+          if new_commits
+            author_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
+            committer_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
+            maxdt = [author_maxdt, committer_maxdt].max
+            if maxdt.nil?
+              maxdt = start_date
+            else
+              maxdt = maxdt[0...10] if maxdt.length >= 10
             end
+            shas = {}
+            comm.each { |c| shas[c[:sha] || c['sha']] = true }
+            # hint, rem, pts = rate_limit(gcs)
+            puts "Getting new commits for #{repo_name} from #{maxdt}"
+            ocomm = commits_since(gcs, repo_name, maxdt)
+            h = ocomm.map(&:to_h)
+            nc = 0
+            h.each do |c|
+              unless shas.key?(c[:sha])
+                nc += 1
+                comm << c
+                # else: puts "#{repo_name}:#{c[:sha]} already processed"
+              end
+            end
+            puts "Got #{nc} new commits for #{repo_name}"
+            json = email_encode(JSON.pretty_generate(comm))
+            File.write fn, json
           end
-          puts "Got #{nc} new commits for #{repo_name}"
-          json = email_encode(JSON.pretty_generate(comm))
-          File.write fn, json
+          comms << comm
+          processed_mutex.synchronize { processed[repo_name] = true }
         end
-        comms << comm
-        processed_mutex.synchronize { processed[repo_name] = true }
       rescue Errno::ENOENT => err1
         begin
           from_date = start_date
