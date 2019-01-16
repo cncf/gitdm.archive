@@ -217,19 +217,27 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   actor_not_found = 0
   actors_found = 0
   if unknown_actors.keys.count > 0
-    octokit_init()
-    rate_limit()
+    gcs = octokit_init()
+    hint = rate_limit()[0]
     puts "We need to process additional actors using GitHub API, type exit-program if you want to exit"
     puts "uacts.join(\"', '\")"
     uacts = unknown_actors.keys
     n_users = uacts.size
+    rpts = 0
     binding.pry
     uacts.each_with_index do |actor, index|
       begin
-        rate_limit()
+        if rpts <= 0
+          hint, rem, pts = rate_limit(gcs)
+          rpts = pts / 10
+          puts "Allowing #{rpts} calls without checking rate"
+        else
+          rpts -= 1
+          puts "#{rpts} calls remain before next rate check"
+        end
         e = "#{actor}!users.noreply.github.com"
         puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}, found so far: #{actors_found}"
-        u = Octokit.user actor
+        u = gcs[hint].user actor
         login = u['login']
         n = u['name']
         u['email'] = e
@@ -261,7 +269,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
           data << h2
         end
       rescue Octokit::TooManyRequests => err
-        td = rate_limit()
+        hint, td = rate_limit()
         puts "Too many GitHub requests, sleeping for #{td} seconds"
         sleep td
         retry

@@ -57,6 +57,9 @@ def maintainers(maintainers_file, users_file, config_file)
   # Check/update
   oinited = false
   data = []
+  gcs = []
+  hint = -1
+  rpts = 0
   new_affs = ''
   del_affs = ''
   affs.each do |login, company|
@@ -111,15 +114,23 @@ def maintainers(maintainers_file, users_file, config_file)
       end
     else
       unless oinited
-        octokit_init()
-        rate_limit()
+        gcs = octokit_init()
+        hint = rate_limit(gcs)[0]
         oinited = true
       end
       STDERR.puts "We don't know GitHub login: #{login}, company: #{company}, asking GitHub"
       e = "#{login}!users.noreply.github.com"
       name = affs_names[login]
       begin
-        u = Octokit.user login
+        if rpts <= 0
+          hint, rem, pts = rate_limit(gcs)
+          rpts = pts / 10
+          puts "Allowing #{rpts} calls without checking rate"
+        else
+          rpts -= 1
+          puts "#{rpts} calls remain before next rate check"
+        end
+        u = gcs[hint].user login
         new_affs += "#{u['email']} #{company}\n" unless u['email'].nil?
         u['email'] = e
         u['commits'] = 0
