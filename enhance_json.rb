@@ -218,7 +218,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   actors_found = 0
   if unknown_actors.keys.count > 0
     gcs = octokit_init()
-    hint = rate_limit()[0]
+    hint = rate_limit(gcs)[0]
     puts "We need to process additional actors using GitHub API, type exit-program if you want to exit"
     puts "uacts.join(\"', '\")"
     uacts = unknown_actors.keys
@@ -269,7 +269,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
           data << h2
         end
       rescue Octokit::TooManyRequests => err
-        hint, td = rate_limit()
+        hint, td = rate_limit(gcs)
         puts "Too many GitHub requests, sleeping for #{td} seconds"
         sleep td
         retry
