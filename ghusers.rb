@@ -23,7 +23,7 @@ def commits_since(gcs, repo, sdt)
     thrs << Thread.new(edt, dtf, dtt) do |edt, dtf, dtt|
       comms = []
       begin
-        hint, rem, pts = rate_limit(gcs, -1, true)
+        hint, rem, pts = rate_limit(gcs, -1)
         if edt < now
           puts "#{repo}: #{dtf} - #{dtt}"
           comms = gcs[hint].commits_between(repo, dtf, dtt)
@@ -92,11 +92,11 @@ def ghusers(start_date, args)
     thrs << Thread.new do
       h = nil
       begin
-        puts "Processing #{repo_index + 1}/#{n_repos} #{repo_name}"
+        puts "Processing repository data #{repo_index + 1}/#{n_repos} #{repo_name}"
         fn = 'ghusers/' + repo_name.gsub('/', '__')
         ofn = force_repo ? SecureRandom.hex(80) : fn
         f = File.read(ofn)
-        puts "Got repository JSON from saved file"
+        puts "Got repository #{repo_name} JSON from saved file"
         h = JSON.parse f
       rescue Errno::ENOENT => err1
         begin
@@ -162,7 +162,7 @@ def ghusers(start_date, args)
         fn = 'ghusers/' + repo_name.gsub('/', '__') + '__commits'
         ofn = force_commits ? SecureRandom.hex(80) : fn
         f = File.read(ofn)
-        puts "Got commits JSON from saved file"
+        puts "Got #{repo_name} commits JSON from saved file"
         comm = JSON.parse f
         if new_commits
           author_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
@@ -187,7 +187,7 @@ def ghusers(start_date, args)
               # else: puts "#{repo_name}:#{c[:sha]} already processed"
             end
           end
-          puts "Got #{nc} new commits"
+          puts "Got #{nc} new commits for #{repo_name}"
           json = email_encode(JSON.pretty_generate(comm))
           File.write fn, json
         end
@@ -201,7 +201,7 @@ def ghusers(start_date, args)
           # hint, rem, pts = rate_limit(gcs)
           comm = commits_since(gcs, repo_name, from_date)
           h = comm.map(&:to_h)
-          puts "Got #{h.count} commits"
+          puts "Got #{h.count} commits for #{repo_name}"
           json = email_encode(JSON.pretty_generate(h))
           File.write fn, json
           comms << comm
