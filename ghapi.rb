@@ -1,28 +1,115 @@
 require 'pry'
 require 'octokit'
 
-# It tries to call GitHub only twice per repo (general repo data & commits), then saves data JSON to files
-# If file is saved (2 per repo) - it is read isnstead of quering GitHub
-def rate_limit()
-  rl = Octokit.rate_limit
-  puts "Your rate limit is: limit=#{rl.limit}, remaining=#{rl.remaining}, resets_at=#{rl.resets_at}, resets_in=#{rl.resets_in}"
-  (rl.resets_at - Time.now).to_i + 1
+# Check all clients rate limit or only check rate limit given by last_hint >= 0
+# You can use last_hint when you know that you only used client[last_hint] to avoid checking the remaining ones.
+$g_rls = []
+def rate_limit(clients, last_hint = -1)
+  # This is to force checking other clients state with 1/N probablity.
+  # Even if we don't use them, they can reset to a higher API points after <= 1h
+  last_hint = -1 if last_hint >= 0 && Time.now.to_i % clients.length == 0
+  rls = []
+  if $g_rls.length > 0 && last_hint >= 0
+    rls = $g_rls
+    puts "Checking rate limit for #{clients[last_hint].user[:login]}"
+    rls[last_hint] = clients[last_hint].rate_limit
+  else
+    clients.each_with_index do |client, idx|
+      puts "Checking rate limit for #{client.user[:login]}"
+      rls << client.rate_limit
+    end
+  end
+  $g_rls = rls
+  hint = 0
+  rls.each_with_index do |rl, idx|
+    if rl.remaining > rls[hint].remaining
+      hint = idx
+    elsif idx != hint && rl.remaining == rls[hint].remaining && rl.resets_in < rls[hint].resets_in
+      hint = idx
+    end
+  end
+  users = clients.map { |client| client.user[:login] }
+  limits = rls.map { |rl| rl.limit }
+  remainings = rls.map { |rl| rl.remaining }
+  resets_ats = rls.map { |rl| rl.resets_at.strftime("%H:%M:%S") }
+  resets_ins = rls.map { |rl| "#{rl.resets_in}s" }
+  rem = (rls[hint].resets_at - Time.now).to_i + 1
+  puts "#{users}: hint: #{hint}, limits=#{limits}, remainings=#{remainings}, resets_ats=#{resets_ats}, resets_ins=#{resets_ins}"
+  puts "Suggested client nr #{hint}: #{clients[hint].user[:login]}, remaining API points: #{remainings[hint]}, resets at #{resets_ats[hint]}, seconds till reset: #{rem}"
+  [hint, rem]
 end
 
+# Reads comma separated OAuth keys from '/etc/github/oauths' fallback to single OAuth key from '/etc/github/oauth'
+# Reads comma separated OAuth application client IDs from '/etc/github/client_ids' fallback to single client ID from '/etc/github/client_id'
+# Reads comma separated OAuth application client secrets from '/etc/github/client_secrets' fallback to single client secret from '/etc/github/client_secret'
+# If multiple keys, client IDs and client secrets are used then you need to have the same number of entries in all 3 files and in the same order line
+# '/etc/github/oauths': key1,key2,key3 (3 different github accounts)
+# '/etc/github/client_ids' id1,id2,id3 (the same 3 github accounts in the same order)
+# '/etc/github/client_secrets' secret1,secret2,secret3 (the same 3 github accounts in the same order)
 def octokit_init()
   # Auto paginate results, this uses maximum page size 100 internally and calls API # of results / 100 times.
   Octokit.auto_paginate = true
 
   # Login with standard OAuth token
   # https://github.com/settings/tokens --> Personal access tokens
-  client = Octokit::Client.new access_token: File.read('/etc/github/oauth').strip
-  user = client.user
-  user.login
+  puts "Processing OAuth data."
+  tokens = []
+  begin
+    data = File.read('/etc/github/oauths').strip
+    tokens = data.split(',').map(&:strip)
+  rescue Errno::ENOENT => e
+    begin
+      data = File.read('/etc/github/oauth').strip
+    rescue Errno::ENOENT => e
+      puts "No OAuth token(s) found"
+      exit 1
+    end
+    tokens = [data]
+  end
 
   # Increase rate limit from 60 to 5000
   # You will need Your own client_id & client_secret
   # See: https://github.com/settings/ --> OAuth application
-  Octokit.client_id = File.read('/etc/github/client_id').strip
-  Octokit.client_secret = File.read('/etc/github/client_secret').strip
-  # user = Octokit.user 'some_github_username'
+  client_ids = []
+  begin
+    data = File.read('/etc/github/client_ids').strip
+    client_ids = data.split(',').map(&:strip)
+  rescue Errno::ENOENT => e
+    begin
+      data = File.read('/etc/github/client_id').strip
+    rescue Errno::ENOENT => e
+      puts "No client ID(s) tokens found"
+      exit 1
+    end
+    client_ids = [data]
+  end
+  client_secrets = []
+  begin
+    data = File.read('/etc/github/client_secrets').strip
+    client_secrets = data.split(',').map(&:strip)
+  rescue Errno::ENOENT => e
+    begin
+      data = File.read('/etc/github/client_secret').strip
+    rescue Errno::ENOENT => e
+      puts "No client ID(s) tokens found"
+      exit 1
+    end
+    client_secrets = [data]
+  end
+
+  puts "Connecting #{tokens.length} clients."
+  # Process tripples
+  clients = []
+  tokens.each_with_index do |token, idx|
+    client = Octokit::Client.new(
+      access_token: token,
+      client_id: client_ids[idx],
+      client_secret: client_secrets[idx]
+    )
+    puts "Connected #{client.user[:login]}"
+    # user = client.user
+    # user.login
+    clients << client
+  end
+  clients
 end

@@ -49,8 +49,8 @@ def add_actors(json_file, actors_file)
   # Lookup those actors
   jdata = []
   if unknown_actors.keys.count > 0
-    octokit_init()
-    rate_limit()
+    gcs = octokit_init()
+    hint, rem = rate_limit(gcs)
     puts "We need to process additional actors using GitHub API, type exit-program if you want to exit"
     puts "uacts.join(\"', '\")"
     uacts = unknown_actors.keys
@@ -58,10 +58,10 @@ def add_actors(json_file, actors_file)
     n_users = uacts.length
     uacts.each_with_index do |actor, index|
       begin
-        rate_limit()
+        hint, rem = rate_limit(gcs, hint)
         e = "#{actor}!users.noreply.github.com"
         puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}"
-        u = Octokit.user actor
+        u = gcs[hint].user actor
         login = u['login']
         n = u['name']
         u['email'] = e
@@ -70,7 +70,7 @@ def add_actors(json_file, actors_file)
         h = u.to_h
         jdata << h
       rescue Octokit::TooManyRequests => err
-        td = rate_limit()
+        hint, td = rate_limit(gcs)
         puts "Too many GitHub requests, sleeping for #{td} seconds"
         sleep td
         retry
