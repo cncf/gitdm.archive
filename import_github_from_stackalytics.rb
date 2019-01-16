@@ -149,6 +149,7 @@ n = 0
 g = 0
 nf = 0
 hint = -1
+rpts = 0
 news.each do |data|
   n += 1
   ghid = data[0]
@@ -163,7 +164,14 @@ news.each do |data|
     else
       begin
         g += 1
-        hint, rem, pts = rate_limit(gcs, hint)
+        if rpts <= 0
+          hint, rem, pts = rate_limit(gcs)
+          rpts = pts / 10
+          puts "Allowing #{rpts} calls without checking rate"
+        else
+          rpts -= 1
+          puts "#{rpts} calls remain before next rate check"
+        end
         puts "Asking for #{ghid}"
         u = gcs[hint].user ghid
         gh_data = u.to_h
