@@ -27,9 +27,11 @@ def commits_since(gcs, repo, sdt)
         if edt < now
           puts "#{repo}: #{dtf} - #{dtt}"
           comms = gcs[hint].commits_between(repo, dtf, dtt)
+          puts "#{repo}: #{dtf} - #{dtt} --> #{comms.length} commits"
         else
           puts "#{repo}: #{dtf} - now"
           comms = gcs[hint].commits_since(repo, dtf)
+          puts "#{repo}: #{dtf} - now --> #{comms.length} commits"
         end
       rescue Octokit::NotFound => err
         puts "GitHub doesn't know repo #{repo}"
