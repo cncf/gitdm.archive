@@ -50,17 +50,26 @@ def add_actors(json_file, actors_file)
   jdata = []
   if unknown_actors.keys.count > 0
     gcs = octokit_init()
-    hint, rem = rate_limit(gcs)
+    hint = rate_limit(gcs)[0]
     puts "We need to process additional actors using GitHub API, type exit-program if you want to exit"
     puts "uacts.join(\"', '\")"
     uacts = unknown_actors.keys
-    uacts = uacts[0..10]
+    #uacts = uacts[0..10]
     n_users = uacts.length
+    binding.pry
+    rpts = 0
     uacts.each_with_index do |actor, index|
       begin
-        hint, rem = rate_limit(gcs, hint)
+        if rpts <= 0
+          hint, rem, pts = rate_limit(gcs)
+          rpts = pts / 10
+          puts "Allowing #{rpts} calls without checking rate"
+        else
+          rpts -= 1
+          puts "#{rpts} calls remain before next rate check"
+        end
         e = "#{actor}!users.noreply.github.com"
-        puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}"
+        puts "#{gcs[hint].user[:login]}: asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}"
         u = gcs[hint].user actor
         login = u['login']
         n = u['name']

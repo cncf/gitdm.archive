@@ -36,7 +36,7 @@ def rate_limit(clients, last_hint = -1)
   rem = (rls[hint].resets_at - Time.now).to_i + 1
   puts "#{users}: hint: #{hint}, limits=#{limits}, remainings=#{remainings}, resets_ats=#{resets_ats}, resets_ins=#{resets_ins}"
   puts "Suggested client nr #{hint}: #{clients[hint].user[:login]}, remaining API points: #{remainings[hint]}, resets at #{resets_ats[hint]}, seconds till reset: #{rem}"
-  [hint, rem]
+  [hint, rem, remainings[hint]]
 end
 
 # Reads comma separated OAuth keys from '/etc/github/oauths' fallback to single OAuth key from '/etc/github/oauth'
