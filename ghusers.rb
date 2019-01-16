@@ -31,14 +31,25 @@ def commits_since(gcs, repo, sdt)
           puts "#{repo}: #{dtf} - now"
           comms = gcs[hint].commits_since(repo, dtf)
         end
-      rescue Octokit::TooManyRequests => err2
+      rescue Octokit::NotFound => err
+        puts "GitHub doesn't know repo #{repo}"
+      rescue Octokit::AbuseDetected => err
+        puts "Abuse #{err} on #{repo}: #{dtf} - #{dtt}, sleeping 10 seconds"
+        sleep 10
+        retry
+      rescue Octokit::TooManyRequests => err
         hint, td = rate_limit(gcs)
-        puts "Too many GitHub requests, sleeping for #{td} seconds"
+        puts "Too many GitHub requests on #{repo}: #{dtf} - #{dtt}, sleeping for #{td} seconds"
         sleep td
         retry
-      rescue => err2
-        puts "Uups, somethis bad happened, check `err2` variable!"
-        STDERR.puts err2
+      rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err
+        puts "Retryable error #{err} on #{repo}: #{dtf} - #{dtt}, sleeping 10 seconds"
+        sleep 10
+        retry
+      rescue => err
+        puts "Uups, something bad happened on #{repo}: #{dtf} - #{dtt}, check `err` variable!"
+        STDERR.puts [err.class, err]
+        exit 1
       end
       comms
     end
@@ -107,20 +118,32 @@ def ghusers(start_date, args)
             puts "Allowing #{rpts} calls without checking rate"
           else
             rpts -= 1
-            puts "#{rpts} calls remain before next rate check"
+            #puts "#{rpts} calls remain before next rate check"
           end
           repo = gcs[hint].repo repo_name
           h = repo.to_h
           json = email_encode(JSON.pretty_generate(h))
           File.write fn, json
+        rescue Octokit::NotFound => err2
+          puts "GitHub doesn't know repo #{repo_name}"
+          puts err2
+        rescue Octokit::AbuseDetected => err2
+          puts "Abuse #{err2} on #{repo_name}, sleeping 10 seconds"
+          sleep 10
+          retry
         rescue Octokit::TooManyRequests => err2
           hint, td = rate_limit(gcs)
-          puts "Too many GitHub requests, sleeping for #{td} seconds"
+          puts "Too many GitHub requests on #{repo_name}, sleeping for #{td} seconds"
           sleep td
           retry
+        rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err2
+          puts "Retryable error #{err2} on #{repo_name}, sleeping 10 seconds"
+          sleep 10
+          retry
         rescue => err2
-          puts "Uups, somethis bad happened, check `err2` variable!"
-          STDERR.puts err2
+          puts "Uups, something bad happened on #{repo_name}, check `err2` variable!"
+          STDERR.puts [err2.class, err2]
+          exit 1
         end
       end
       h
@@ -175,7 +198,6 @@ def ghusers(start_date, args)
             end
             shas = {}
             comm.each { |c| shas[c[:sha] || c['sha']] = true }
-            # hint, rem, pts = rate_limit(gcs)
             puts "Getting new commits for #{repo_name} from #{maxdt}"
             ocomm = commits_since(gcs, repo_name, maxdt)
             h = ocomm.map(&:to_h)
@@ -195,27 +217,16 @@ def ghusers(start_date, args)
           processed_mutex.synchronize { processed[repo_name] = true }
         end
       rescue Errno::ENOENT => err1
-        begin
-          from_date = start_date
-          from_date = '2012-07-01' if repo_name == 'torvalds/linux'
-          puts "No previously saved #{fn}, getting commits from GitHub from #{from_date}" unless force_commits
-          # hint, rem, pts = rate_limit(gcs)
-          comm = commits_since(gcs, repo_name, from_date)
-          h = comm.map(&:to_h)
-          puts "Got #{h.count} commits for #{repo_name}"
-          json = email_encode(JSON.pretty_generate(h))
-          File.write fn, json
-          comms << comm
-          processed_mutex.synchronize { processed[repo_name] = true }
-        rescue Octokit::TooManyRequests => err2
-          hint, td = rate_limit(gcs)
-          puts "Too many GitHub requests, sleeping for #{td} seconds"
-          sleep td
-          retry
-        rescue => err2
-          puts "Uups, somethis bad happened, check `err2` variable!"
-          STDERR.puts err2
-        end
+        from_date = start_date
+        from_date = '2012-07-01' if repo_name == 'torvalds/linux'
+        puts "No previously saved #{fn}, getting commits from GitHub from #{from_date}" unless force_commits
+        comm = commits_since(gcs, repo_name, from_date)
+        h = comm.map(&:to_h)
+        puts "Got #{h.count} commits for #{repo_name}"
+        json = email_encode(JSON.pretty_generate(h))
+        File.write fn, json
+        comms << comm
+        processed_mutex.synchronize { processed[repo_name] = true }
       end
       comm
     end
@@ -310,7 +321,7 @@ def ghusers(start_date, args)
           puts "Allowing #{rpts} calls without checking rate"
         else
           rpts -= 1
-          puts "#{rpts} calls remain before next rate check"
+          #puts "#{rpts} calls remain before next rate check"
         end
         puts "Asking for #{index}/#{n_users}: GitHub: #{usr[1]}, email: #{usr[0]}, commits: #{usr[2]}"
         u = nil
@@ -325,14 +336,26 @@ def ghusers(start_date, args)
         u['commits'] = usr[2]
         puts "Got name: #{u[:name] || u['name']}, login: #{u[:login] || u['login']}"
         h = u.to_h
+      rescue Octokit::NotFound => err2
+        puts "GitHub doesn't know actor #{usr[1]}"
+        puts err2
+      rescue Octokit::AbuseDetected => err2
+        puts "Abuse #{err2} for #{usr[1]}, sleeping 10 seconds"
+        sleep 10
+        retry
       rescue Octokit::TooManyRequests => err2
         hint, td = rate_limit(gcs)
-        puts "Too many GitHub requests, sleeping for #{td} seconds"
+        puts "Too many GitHub requests for #{usr[1]}, sleeping for #{td} seconds"
         sleep td
         retry
+      rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err2
+        puts "Retryable error #{err2} for #{usr[1]}, sleeping 10 seconds"
+        sleep 10
+        retry
       rescue => err2
-        puts "Uups, somethig bad happened, check `err2` variable!"
-        STDERR.puts err2
+        puts "Uups, something bad happened for #{usr[1]}, check `err2` variable!"
+        STDERR.puts [err2.class, err2]
+        exit 1
       end
       h
     end

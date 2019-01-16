@@ -236,7 +236,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
             puts "Allowing #{rpts} calls without checking rate"
           else
             rpts -= 1
-            puts "#{rpts} calls remain before next rate check"
+            #puts "#{rpts} calls remain before next rate check"
           end
           e = "#{actor}!users.noreply.github.com"
           puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}, found so far: #{actors_found}"
@@ -271,20 +271,29 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
             h2 = u2.to_h
             res << h2
           end
-        rescue Octokit::TooManyRequests => err
-          hint, td = rate_limit(gcs)
-          puts "Too many GitHub requests, sleeping for #{td} seconds"
-          sleep td
-          retry
         rescue Octokit::NotFound => err
           puts "GitHub doesn't know actor #{actor}"
           puts err
+        rescue Octokit::AbuseDetected => err
+          puts "Abuse #{err} for #{actor}, sleeping 10 seconds"
+          sleep 10
+          retry
+        rescue Octokit::TooManyRequests => err
+          hint, td = rate_limit(gcs)
+          puts "Too many GitHub requests for #{actor}, sleeping for #{td} seconds"
+          sleep td
+          retry
+        rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err
+          puts "Retryable error #{err} for #{actor}, sleeping 10 seconds"
+          sleep 10
+          retry
         rescue => err
-          puts "Uups, somethis bad happened, check `err` variable!"
-          STDERR.puts err
+          puts "Uups, something bad happened for #{actor}, check `err` variable!"
+          STDERR.puts [err.class, err]
+          exit 1
+          end
+          res
         end
-        res
-      end
       while thrs.length >= n_thrs
         res = thrs.first.value
         res.each { |h| data << h }
