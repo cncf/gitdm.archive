@@ -14,9 +14,16 @@ def rate_limit(clients, last_hint = -1)
     puts "Checking rate limit for #{clients[last_hint].user[:login]}"
     rls[last_hint] = clients[last_hint].rate_limit
   else
+    thrs = []
     clients.each_with_index do |client, idx|
-      puts "Checking rate limit for #{client.user[:login]}"
-      rls << client.rate_limit
+      thrs << Thread.new do
+        puts "Checking rate limit for #{client.user[:login]}"
+        client.rate_limit
+      end
+    end
+    thrs.each_with_index do |thr, idx|
+      rls << thr.value
+      puts "Checked rate limit for #{clients[idx].user[:login]}"
     end
   end
   $g_rls = rls
@@ -98,18 +105,25 @@ def octokit_init()
   end
 
   puts "Connecting #{tokens.length} clients."
-  # Process tripples
+  # Process tripples, create N threads to handle client creations
   clients = []
+  thrs = []
   tokens.each_with_index do |token, idx|
-    client = Octokit::Client.new(
-      access_token: token,
-      client_id: client_ids[idx],
-      client_secret: client_secrets[idx]
-    )
-    puts "Connected #{client.user[:login]}"
+    thrs << Thread.new do
+      puts "Connecting client nr #{idx}"
+      client = Octokit::Client.new(
+        access_token: token,
+        client_id: client_ids[idx],
+        client_secret: client_secrets[idx]
+      )
+    end
+  end
+  thrs.each do |thr|
     # user = client.user
     # user.login
+    client = thr.value
     clients << client
+    puts "Connected #{client.user[:login]}"
   end
   clients
 end
