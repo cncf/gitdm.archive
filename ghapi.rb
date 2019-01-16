@@ -5,7 +5,7 @@ require 'octokit'
 # Check all clients rate limit or only check rate limit given by last_hint >= 0
 # You can use last_hint when you know that you only used client[last_hint] to avoid checking the remaining ones.
 $g_rls = []
-def rate_limit(clients, last_hint = -1, debug = 0)
+def rate_limit(clients, last_hint = -1, debug = 1)
   # This is to force checking other clients state with 1/N probablity.
   # Even if we don't use them, they can reset to a higher API points after <= 1h
   last_hint = -1 if last_hint >= 0 && Time.now.to_i % clients.length == 0
