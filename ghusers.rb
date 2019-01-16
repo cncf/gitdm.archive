@@ -33,8 +33,8 @@ def commits_since(gcs, repo, sdt)
           comms = gcs[hint].commits_since(repo, dtf)
           puts "#{repo}: #{dtf} - now --> #{comms.length} commits"
         end
-      rescue Octokit::NotFound => err
-        puts "GitHub doesn't know repo #{repo}"
+      rescue Octokit::NotFound, Octokit::BadGateway => err
+        puts "GitHub doesn't know repo #{repo}: #{err}"
       rescue Octokit::AbuseDetected => err
         puts "Abuse #{err} on #{repo}: #{dtf} - #{dtt}, sleeping 10 seconds"
         sleep 10
@@ -126,8 +126,8 @@ def ghusers(start_date, args)
           h = repo.to_h
           json = email_encode(JSON.pretty_generate(h))
           File.write fn, json
-        rescue Octokit::NotFound => err2
-          puts "GitHub doesn't know repo #{repo_name}"
+        rescue Octokit::NotFound, Octokit::BadGateway => err2
+          puts "GitHub doesn't know repo #{repo_name}: #{err2}"
           puts err2
         rescue Octokit::AbuseDetected => err2
           puts "Abuse #{err2} on #{repo_name}, sleeping 10 seconds"
@@ -338,8 +338,8 @@ def ghusers(start_date, args)
         u['commits'] = usr[2]
         puts "Got name: #{u[:name] || u['name']}, login: #{u[:login] || u['login']}"
         h = u.to_h
-      rescue Octokit::NotFound => err2
-        puts "GitHub doesn't know actor #{usr[1]}"
+      rescue Octokit::NotFound, Octokit::BadGateway => err2
+        puts "GitHub doesn't know actor #{usr[1]}: #{err2}"
         puts err2
       rescue Octokit::AbuseDetected => err2
         puts "Abuse #{err2} for #{usr[1]}, sleeping 10 seconds"
