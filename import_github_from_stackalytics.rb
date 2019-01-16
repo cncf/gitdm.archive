@@ -163,12 +163,12 @@ news.each do |data|
     else
       begin
         g += 1
-        hint, rem = rate_limit(gcs, hint)
+        hint, rem, pts = rate_limit(gcs, hint)
         puts "Asking for #{ghid}"
         u = gcs[hint].user ghid
         gh_data = u.to_h
       rescue Octokit::TooManyRequests => err
-        hint, td = rate_limit(gcs)
+        hint, td, pts = rate_limit(gcs)
         puts "Too many GitHub requests, sleeping for #{td} seconds"
         sleep td
         retry
