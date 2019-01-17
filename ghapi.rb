@@ -6,31 +6,35 @@ require 'octokit'
 # You can use last_hint when you know that you only used client[last_hint] to avoid checking the remaining ones.
 $g_rls = []
 def rate_limit(clients, last_hint = -1, debug = 1)
+  if clients.length == 0
+    puts 'No usable clients'
+    exit 1
+  end
   # This is to force checking other clients state with 1/N probablity.
   # Even if we don't use them, they can reset to a higher API points after <= 1h
   last_hint = -1 if last_hint >= 0 && Time.now.to_i % clients.length == 0
   rls = []
   if $g_rls.length > 0 && last_hint >= 0
     rls = $g_rls
-    puts "Checking rate limit for #{clients[last_hint].user[:login]}" if debug >= 2
+    puts "Checking rate limit for #{last_hint}" if debug >= 2
     rls[last_hint] = clients[last_hint].rate_limit
   else
     thrs = []
     n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
     clients.each_with_index do |client, idx|
       thrs << Thread.new do
-        puts "Checking rate limit for #{client.user[:login]}" if debug >= 2
+        puts "Checking rate limit for #{idx}" if debug >= 2
         client.rate_limit
       end
       while thrs.length >= n_thrs
         rls << thrs.first.value
-        puts "Checked rate limit for #{clients[rls.length-1].user[:login]}" if debug >= 2
+        puts "Checked rate limit for #{rls.length-1}" if debug >= 2
         thrs = thrs[1..-1]
       end
     end
     thrs.each_with_index do |thr, idx|
       rls << thr.value
-      puts "Checked rate limit for #{clients[idx].user[:login]}" if debug >= 2
+      puts "Checked rate limit for #{idx}" if debug >= 2
     end
   end
   $g_rls = rls
@@ -42,14 +46,13 @@ def rate_limit(clients, last_hint = -1, debug = 1)
       hint = idx
     end
   end
-  users = clients.map { |client| client.user[:login] }
   limits = rls.map { |rl| rl.limit }
   remainings = rls.map { |rl| rl.remaining }
   resets_ats = rls.map { |rl| rl.resets_at.strftime("%H:%M:%S") }
   resets_ins = rls.map { |rl| "#{rl.resets_in}s" }
   rem = (rls[hint].resets_at - Time.now).to_i + 1
-  puts "#{users}: hint: #{hint}, limits=#{limits}, remainings=#{remainings}, resets_ats=#{resets_ats}, resets_ins=#{resets_ins}" if debug >= 1
-  puts "Suggested client nr #{hint}: #{clients[hint].user[:login]}, remaining API points: #{remainings[hint]}, resets at #{resets_ats[hint]}, seconds till reset: #{rem}" if debug >= 0
+  puts "Hint: #{hint}, limits=#{limits}, remainings=#{remainings}, resets_ats=#{resets_ats}, resets_ins=#{resets_ins}" if debug >= 1
+  puts "Suggested client nr #{hint}, remaining API points: #{remainings[hint]}, resets at #{resets_ats[hint]}, seconds till reset: #{rem}" if debug >= 0
   [hint, rem, remainings[hint]]
 end
 
@@ -60,9 +63,12 @@ end
 # '/etc/github/oauths': key1,key2,key3 (3 different github accounts)
 # '/etc/github/client_ids' id1,id2,id3 (the same 3 github accounts in the same order)
 # '/etc/github/client_secrets' secret1,secret2,secret3 (the same 3 github accounts in the same order)
-def octokit_init()
+def octokit_init(check_usability = false)
   # Auto paginate results, this uses maximum page size 100 internally and calls API # of results / 100 times.
-  Octokit.auto_paginate = true
+  # Octokit.auto_paginate = true
+  Octokit.configure do |c|
+    c.auto_paginate = true
+  end
 
   # Login with standard OAuth token
   # https://github.com/settings/tokens --> Personal access tokens
@@ -111,6 +117,11 @@ def octokit_init()
     client_secrets = [data]
   end
 
+  # Debug specific token
+  #tokens = [tokens.last]
+  #client_ids = [client_ids.last]
+  #client_secrets = [client_secrets.last]
+
   puts "Connecting #{tokens.length} clients."
   # Process tripples, create N threads to handle client creations
   clients = []
@@ -126,18 +137,44 @@ def octokit_init()
       )
     end
     while thrs.length >= n_thrs
-      client =  thrs.first.value
-      clients << client
-      thrs = thrs[1..-1]
-      puts "Connected #{client.user[:login]}"
+      begin
+        client =  thrs.first.value
+        thrs = thrs[1..-1]
+        clients << client
+        puts "Connected #{clients.length}"
+      rescue Octokit::TooManyRequests => e
+        puts e
+      end
     end
   end
   thrs.each do |thr|
-    # user = client.user
-    # user.login
-    client = thr.value
-    clients << client
-    puts "Connected #{client.user[:login]}"
+    begin
+      # user = client.user
+      # user.login
+      client = thr.value
+      clients << client
+      puts "Connected #{clients.length}"
+    rescue Octokit::TooManyRequests => e
+      puts e
+    end
   end
-  clients
+  if clients.length == 0
+    puts 'Unable to initialize any client'
+    exit 1
+  end
+  final_clients = []
+  if check_usability
+    clients.each_with_index do |client, idx|
+      begin
+        puts "Client nr #{idx}: #{client.user[:login]} ok"
+        final_clients << client
+      rescue Octokit::TooManyRequests => e
+        hint, rem, pts = rate_limit [client], -1, -1
+        puts "Client nr #{idx} unusable: points: #{pts}, resets in: #{rem}s"
+      end
+    end
+  else
+    final_clients = clients
+  end
+  final_clients
 end

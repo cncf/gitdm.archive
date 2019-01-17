@@ -276,8 +276,8 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
           puts "GitHub doesn't know actor #{actor}"
           puts err
         rescue Octokit::AbuseDetected => err
-          puts "Abuse #{err} for #{actor}, sleeping 10 seconds"
-          sleep 10
+          puts "Abuse #{err} for #{actor}, sleeping 30 seconds"
+          sleep 30
           retry
         rescue Octokit::TooManyRequests => err
           hint, td = rate_limit(gcs)
