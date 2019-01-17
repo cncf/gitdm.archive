@@ -1,6 +1,6 @@
 require './ghapi'
 
-gcs = octokit_init true
+gcs = octokit_init
 puts "Client initialized, #{gcs.length} keys"
 hint = -1
 hint, rem, pts = rate_limit(gcs, hint, 2)
