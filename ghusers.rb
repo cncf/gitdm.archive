@@ -23,7 +23,7 @@ def commits_since(gcs, repo, sdt)
     thrs << Thread.new(edt, dtf, dtt) do |edt, dtf, dtt|
       comms = []
       begin
-        hint, rem, pts = rate_limit(gcs, -1)
+        hint, rem, pts = rate_limit(gcs)
         if edt < now
           puts "#{repo}: #{dtf} - #{dtt}"
           comms = gcs[hint].commits_between(repo, dtf, dtt)
@@ -36,8 +36,8 @@ def commits_since(gcs, repo, sdt)
       rescue Octokit::NotFound, Octokit::BadGateway => err
         puts "GitHub doesn't know repo #{repo}: #{err}"
       rescue Octokit::AbuseDetected => err
-        puts "Abuse #{err} on #{repo}: #{dtf} - #{dtt}, sleeping 10 seconds"
-        sleep 10
+        puts "Abuse #{err} on #{repo}: #{dtf} - #{dtt}, sleeping 30 seconds"
+        sleep 30
         retry
       rescue Octokit::TooManyRequests => err
         hint, td = rate_limit(gcs)
@@ -130,8 +130,8 @@ def ghusers(start_date, args)
           puts "GitHub doesn't know repo #{repo_name}: #{err2}"
           puts err2
         rescue Octokit::AbuseDetected => err2
-          puts "Abuse #{err2} on #{repo_name}, sleeping 10 seconds"
-          sleep 10
+          puts "Abuse #{err2} on #{repo_name}, sleeping 30 seconds"
+          sleep 30
           retry
         rescue Octokit::TooManyRequests => err2
           hint, td = rate_limit(gcs)
@@ -342,8 +342,8 @@ def ghusers(start_date, args)
         puts "GitHub doesn't know actor #{usr[1]}: #{err2}"
         puts err2
       rescue Octokit::AbuseDetected => err2
-        puts "Abuse #{err2} for #{usr[1]}, sleeping 10 seconds"
-        sleep 10
+        puts "Abuse #{err2} for #{usr[1]}, sleeping 30 seconds"
+        sleep 30
         retry
       rescue Octokit::TooManyRequests => err2
         hint, td = rate_limit(gcs)
