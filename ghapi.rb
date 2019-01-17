@@ -63,7 +63,7 @@ end
 # '/etc/github/oauths': key1,key2,key3 (3 different github accounts)
 # '/etc/github/client_ids' id1,id2,id3 (the same 3 github accounts in the same order)
 # '/etc/github/client_secrets' secret1,secret2,secret3 (the same 3 github accounts in the same order)
-def octokit_init(check_usability = false)
+def octokit_init()
   # Auto paginate results, this uses maximum page size 100 internally and calls API # of results / 100 times.
   # Octokit.auto_paginate = true
   Octokit.configure do |c|
@@ -117,10 +117,21 @@ def octokit_init(check_usability = false)
     client_secrets = [data]
   end
 
-  # Debug specific token
-  #tokens = [tokens.last]
-  #client_ids = [client_ids.last]
-  #client_secrets = [client_secrets.last]
+  # You can select subset of tokens with something like ONLY_TOKENS='1,3,5'
+  selected = ENV['ONLY_TOKENS']
+  if !selected.nil? && selected != ''
+    sel = selected.strip
+    idxa = sel.split(',').map(&:to_i)
+    ary = []
+    tokens.each_with_index { |token, idx| ary << token if idxa.include?(idx) }
+    tokens = ary
+    ary = []
+    client_ids.each_with_index { |client_id, idx| ary << client_id if idxa.include?(idx) }
+    client_ids = ary
+    ary = []
+    client_secrets.each_with_index { |client_secret, idx| ary << client_secret if idxa.include?(idx) }
+    client_secrets = ary
+  end
 
   puts "Connecting #{tokens.length} clients."
   # Process tripples, create N threads to handle client creations
@@ -162,8 +173,10 @@ def octokit_init(check_usability = false)
     puts 'Unable to initialize any client'
     exit 1
   end
+
+  # Use client array or eventually check it if CHECK_USABILITY is set.
   final_clients = []
-  if check_usability
+  unless ENV['CHECK_USABILITY'].nil?
     clients.each_with_index do |client, idx|
       begin
         puts "Client nr #{idx}: #{client.user[:login]} ok"
