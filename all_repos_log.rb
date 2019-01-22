@@ -98,6 +98,7 @@ def generate_logs(repos)
       puts "Error #{code} PID #{pid}: #{lfn}"
     end
   end
+  puts "Merging #{pdata.length} logs"
   res = `> "#{log}"`
   rcode = $?.exitstatus
   unless rcode.zero?
