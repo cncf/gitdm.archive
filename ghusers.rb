@@ -192,7 +192,7 @@ def ghusers(start_date, args)
             comm = JSON.parse f
           rescue => e
             puts "Broken JSON: #{ofn}"
-            binding.pry
+            return nil
           end
           if new_commits
             author_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
@@ -220,7 +220,6 @@ def ghusers(start_date, args)
             json = email_encode(JSON.pretty_generate(comm))
             File.write fn, json
           end
-          comms << comm
           processed_mutex.synchronize { processed[repo_name] = true }
         end
       rescue Errno::ENOENT => err1
@@ -232,7 +231,6 @@ def ghusers(start_date, args)
         puts "Got #{h.count} commits for #{repo_name}"
         json = email_encode(JSON.pretty_generate(h))
         File.write fn, json
-        comms << comm
         processed_mutex.synchronize { processed[repo_name] = true }
       end
       comm
