@@ -103,7 +103,11 @@ def generate_logs(repos)
   unless rcode.zero?
     puts "Error #{rcode} for '#{cmd}': '#{res}'"
   end
+  sums = {}
   pdata.each do |pid, lfn|
+    sum = `md5sum '#{lfn}'`.split
+    next if sum.length > 0 && sums.key?(sum[0])
+    sums[sum[0]] = true
     cmd = "cat '#{lfn}' >> '#{log}'"
     res = `#{cmd}`
     rcode = $?.exitstatus
