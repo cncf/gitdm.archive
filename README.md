@@ -14,7 +14,7 @@ Only the [Developers affiliations list](https://github.com/cncf/gitdm/blob/maste
 
 The [Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt) is a computed derivative of the first list.
 
-Other files used for affiliations are [email map file](https://github.com/cncf/gitdm/blob/master/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/github_users.json) file.
+Other files used for affiliations are [email map file](https://github.com/cncf/gitdm/blob/master/src/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/src/github_users.json) file.
 
 # Removing affiliations
 

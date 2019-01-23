@@ -1,5 +1,5 @@
 # Add a non-cncf project/org ( project must be opensource ) to generate affiliations for it.
-1. Add the developers of your organization/project to be get affiliated in `./developers_affiliations.txt` in the proper format. Now generate new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`.
+1. Add the developers of your organization/project to be get affiliated in `./developers_affiliations.txt` in the proper format. `cd src/`. Now generate new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`.
  For e.g.
      ```
     developer1: email1@xyz, email2@abc, ...
@@ -12,7 +12,7 @@
 2. Clone all repositories of the project at `~/dev/project_name/`. For cloning either you can use `cncf/velocity` project and writing sql query in BigQuery folder or you can create a new shellscript file in `~/dev/cncf/gitdm/` location with name `clone_project_name.sh`. 
     And just copy paste this code in that file
     ```
-    #!/bin/sh
+    #!/bin/bash
     mkdir ~/dev/project_name/ 2>/dev/null
     cd ~/dev/project_name || exit 1
     git clone github_repo_clone_url_for_your_project1 || exit 1
@@ -28,7 +28,7 @@
 
 3. To generate `git.log` file, use this command `./all_repos_log.sh ~/dev/project_name/*`. Make it `uniq`.
 
-4. To run `cncf/gitdm` on a generated `git.log` file do: `~/dev/cncf/gitdm/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`
+4. To run `cncf/gitdm` on a generated `git.log` file do: `~/dev/cncf/gitdm/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./src/ -t -z -d -D -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`
 
 5. To generate human readable text affiliation files: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`
 
@@ -38,7 +38,7 @@
 
 8. `ghusers_partially_cached.sh` will refetch repos metadata and commits and get users data from `github_users.json` so you can save a lot of API points.
 
-9. To update (enchance) github_users.json with new affiliations `./enchance_json.sh`.
+9. To update (enchance) `github_users.json` with new affiliations `./enchance_json.sh`.
 
 10. To merge multiple GitHub logins data (for example propagate known affiliation to unknown or not found on the same GitHub login) run: `./merge_github_logins.sh`.
 11. Because this can find new affiliations you can now use `./import_from_github_users.sh` to import back from `github_users.json` and then restart from step 3.
