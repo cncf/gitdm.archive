@@ -2,11 +2,11 @@
 *~
 .venv
 *.swp
-clearbit_tools/all_clearbit_queries.csv
-clearbit_tools/cncf_enriched.csv
-clearbit_tools/input_enriched.csv
-clearbit_tools/new_round_enriched.csv
-clearbit_tools/unknown_emails_enriched.csv
+src/clearbit_tools/all_clearbit_queries.csv
+src/clearbit_tools/cncf_enriched.csv
+src/clearbit_tools/input_enriched.csv
+src/clearbit_tools/new_round_enriched.csv
+src/clearbit_tools/unknown_emails_enriched.csv
 all.log
 git.log
 all.log.xz
@@ -16,7 +16,7 @@ database.dump
 datelc.csv
 header
 x
-ghusers/*
+src/ghusers/*
 # Data files
 # *.txt
 # *.csv
@@ -35,8 +35,8 @@ geodata.tsv.xz
 partial.json
 backup.json
 *.htm*
-/check_spell
-git_logs/*.log
-git_logs/*.1
-git_logs/*.2
-/flist.txt
+src/check_spell
+src/git_logs/*.log
+src/git_logs/*.1
+src/git_logs/*.2
+src/flist.txt
