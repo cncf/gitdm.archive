@@ -6,7 +6,6 @@ require 'pry'
 stats = {}
 stats['unknown'] = 0
 stats['notfound'] = 0
-stats['found'] = 0
 stats['config'] = 0
 
 data = JSON.parse File.read ARGV[0]
