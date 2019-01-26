@@ -24,7 +24,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 20. You should run genderize/geousers (if needed) before the next step.
 21. You can create smaller final json for `cncf/devstats` using `./delete_json_fields.sh github_users.json; ./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`.
 22. To generate final `unknowns.csv` manual research task file run: `./gen_aff_task.rb unknowns.txt`. You can also generate all actors `./gen_aff_task.rb alldevs.txt`. You can prepend with `ONLY_GH=1` to skip entries without GitHub. You can prepend with `ONLY_EMP=1` to skip entries with any affiliation already set.
-23. To manually edit all affiliations related files: edit `cncf-config/email-map all.txt all.csv all_affs.csv github_users.json stripped.json developers_affiliations.txt company_developers.txt affiliations.csv`
+23. To manually edit all affiliations related files: edit `cncf-config/email-map all.txt all.csv all_affs.csv github_users.json stripped.json ../developers_affiliations.txt ../company_developers.txt affiliations.csv`
 24. To add all possible entries from `github_users.json` to `cncf-config/email-map` use :`github_users_to_map.sh`. This is optional.
 25. Finally copy `github_users.json` to `github_users.old`.
 26. If any file displays error with 'Invalid UTF-8' encoding, scrub it using Ruby tool: `./scrub.rb filename`.
