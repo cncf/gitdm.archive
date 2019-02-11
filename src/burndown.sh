@@ -13,6 +13,8 @@ function analysis {
   echo "$1,$affs,$unknowns" >> src/burndown.csv
 }
 
+> src/burndown.csv
+
 commits=`git log --format=format:'%H;%ci'`
 last_date=''
 for commit_data in $commits
@@ -52,7 +54,7 @@ do
   fi
 done
 
-cat src/burndown.csv | sort > out
+cat src/burndown.csv | sort | uniq > out
 echo 'Date,Found,Unknowns' > src/burndown.csv
 cat out >> src/burndown.csv
 rm out
