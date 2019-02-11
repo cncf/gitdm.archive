@@ -7,12 +7,33 @@ function cleanup {
 trap cleanup EXIT
 
 function analysis {
-  echo "Analysing files $1 $2"
+  unknowns=`grep -E '"affiliation": ("NotFound"|"\(Unknown\)"|""|"\?"|null)' "$3" | wc -l`
+  affs=`grep -E '[^\s!]+![^\s!]+' "$2" | wc -l`
+  echo "Analysing date $1, files $2 $3, unknowns: $unknowns, affiliations: $affs"
+  echo "$1;$affs;$unknowns" >> src/burndown.csv
 }
 
-commits=`git log --format=format:%H`
-for commit in $commits
+commits=`git log --format=format:'%H;%ci'`
+last_date=''
+echo 'Date;Found;Unknowns' > src/burndown.csv
+for commit_data in $commits
 do
+  IFS=';'
+  arr=($commit_data)
+  unset IFS
+  commit=${arr[0]}
+  len=${#commit}
+  if [ ! "$len" = "40" ]
+  then
+    continue
+  fi
+  date=${arr[1]}
+  if [ "$date" = "$last_date" ]
+  then
+    continue
+  fi
+  last_date=$date
+  # echo "Date: $date, commit: $commit"
   em='src/cncf-config/email-map'
   gu='src/github_users.json'
   git checkout $commit $em $gu 1>/dev/null 2>/dev/null
@@ -25,9 +46,9 @@ do
     res=$?
     if [ "$res" = "0" ]
     then
-      analysis $em $gu
+      analysis $date $em $gu
     fi
   else
-    analysis $em $gu
+    analysis $date $em $gu
   fi
 done
