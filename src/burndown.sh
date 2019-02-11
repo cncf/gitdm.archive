@@ -1,7 +1,7 @@
 #!/bin/bash
 function cleanup {
   git checkout master src/cncf-config/email-map src/github_users.json
-  rm -f cncf-config github_users.json
+  rm -rf cncf-config github_users.json
 }
 
 trap cleanup EXIT
