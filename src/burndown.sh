@@ -15,7 +15,6 @@ function analysis {
 
 commits=`git log --format=format:'%H;%ci'`
 last_date=''
-echo 'Date;Found;Unknowns' > src/burndown.csv
 for commit_data in $commits
 do
   IFS=';'
@@ -52,3 +51,7 @@ do
     analysis $date $em $gu
   fi
 done
+cat src/burndown.csv | sort > out
+echo 'Date;Found;Unknowns' > src/burndown.csv
+cat out >> src/burndown.csv
+rm out
