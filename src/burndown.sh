@@ -7,10 +7,11 @@ function cleanup {
 trap cleanup EXIT
 
 function analysis {
-  unknowns=`grep -E '"affiliation": ("NotFound"|"\(Unknown\)"|""|"\?"|null)' "$3" | wc -l`
-  affs=`grep -E '[^\s!]+![^\s!]+' "$2" | wc -l`
-  echo "Analysing date $1, files $2 $3, unknowns: $unknowns, affiliations: $affs"
-  echo "$1,$affs,$unknowns" >> src/burndown.csv
+  notchecked=`grep -E '"affiliation": ("\(Unknown\)"|""|"\?"|"-"|null)' "$3" | wc -l`
+  notfound=`grep 'NotFound' "$2" | wc -l`
+  found=`grep -E '[^\s!]+![^\s!]+' "$2" | wc -l`
+  echo "Analysing date $1, files $2 $3, not-founds: $notfound, not-checked: $notchecked, found: $found"
+  echo "$1,$found,$notfound,$notchecked" >> src/burndown.csv
 }
 
 > src/burndown.csv
@@ -55,7 +56,7 @@ do
 done
 
 cat src/burndown.csv | sort | uniq > out
-echo 'Date,Found,Unknowns' > src/burndown.csv
+echo 'Date,Found,Not Found,Not Checked' > src/burndown.csv
 cat out >> src/burndown.csv
 rm out
 
