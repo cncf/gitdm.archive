@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 sudo -u postgres psql -tA gha < ~/dev/go/src/devstats/util_sql/actors.sql > actors.txt
 sudo -u postgres psql -tA prometheus < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA opentracing < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
