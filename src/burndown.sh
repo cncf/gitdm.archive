@@ -12,7 +12,8 @@ function analysis {
   #found=`grep -E '[^\s!]+![^\s!]+' "$2" | wc -l`
   #echo "$1,$found,$notfound,$notchecked" >> src/burndown.csv
   echo "Analysing date $1, files $2 $3"
-  ruby src/calc_affs_stats.rb src/cncf-config/email-map src/github_users.json src/actors.txt src/actors_cncf.txt >> src/burndown.csv
+  echo -n "$1," >> src/burndown.csv
+  ruby src/calc_affs_stats.rb "$2" "$3" src/actors.txt src/actors_cncf.txt >> src/burndown.csv
 }
 
 > src/burndown.csv
@@ -57,7 +58,7 @@ do
 done
 
 cat src/burndown.csv | sort | uniq > out
-echo 'Date,Found,Not Found,Not Checked' > src/burndown.csv
+echo 'Date,All Found,All Not Found,All Not Checked,CNCF Found,CNCF Not Found,CNCF Not Checked' > src/burndown.csv
 cat out >> src/burndown.csv
 rm out
 
