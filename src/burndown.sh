@@ -58,7 +58,7 @@ do
 done
 
 cat src/burndown.csv | sort | uniq > out
-echo 'Date,All Found,All Not Found,All Not Checked,CNCF Found,CNCF Not Found,CNCF Not Checked' > src/burndown.csv
+echo 'Date,All Not Found,All Found,All Not Checked,CNCF Not Found,CNCF Found,CNCF Not Checked' > src/burndown.csv
 cat out >> src/burndown.csv
 rm out
 
