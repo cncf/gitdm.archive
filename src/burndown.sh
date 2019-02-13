@@ -7,11 +7,12 @@ function cleanup {
 trap cleanup EXIT
 
 function analysis {
-  notchecked=`grep -E '"affiliation": ("\(Unknown\)"|""|"\?"|"-"|null)' "$3" | wc -l`
-  notfound=`grep 'NotFound' "$2" | wc -l`
-  found=`grep -E '[^\s!]+![^\s!]+' "$2" | wc -l`
-  echo "Analysing date $1, files $2 $3, not-founds: $notfound, not-checked: $notchecked, found: $found"
-  echo "$1,$found,$notfound,$notchecked" >> src/burndown.csv
+  #notchecked=`grep -E '"affiliation": ("\(Unknown\)"|""|"\?"|"-"|null)' "$3" | wc -l`
+  #notfound=`grep 'NotFound' "$2" | wc -l`
+  #found=`grep -E '[^\s!]+![^\s!]+' "$2" | wc -l`
+  #echo "$1,$found,$notfound,$notchecked" >> src/burndown.csv
+  echo "Analysing date $1, files $2 $3"
+  ruby src/calc_affs_stats.rb src/cncf-config/email-map src/github_users.json src/actors.txt src/actors_cncf.txt >> src/burndown.csv
 }
 
 > src/burndown.csv
