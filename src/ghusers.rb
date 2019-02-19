@@ -188,13 +188,14 @@ def ghusers(start_date, args)
           ofn = force_commits ? SecureRandom.hex(80) : fn
           f = File.read(ofn)
           puts "Got #{repo_name} commits JSON from saved file"
+          ok_json = true
           begin
             comm = JSON.parse f
           rescue => e
             puts "Broken JSON: #{ofn}"
-            return nil
+            ok_json = false
           end
-          if new_commits
+          if ok_json && new_commits
             author_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
             committer_maxdt = comm.map { |c| (c.key?('commit') && c['commit'].key?('author') && c['commit']['author'].key?('date')) ? c['commit']['author']['date'] : start_date }.max
             maxdt = [author_maxdt, committer_maxdt].max
