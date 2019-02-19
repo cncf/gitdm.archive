@@ -2,9 +2,9 @@
 
 This is the Cloud Native Computing Foundation's fork of Jon Corbet and Greg KH's [gitdm](https://lwn.net/Articles/290957/) tool for calculating contributions based on developers and their companies. Companies and developers can check if they are correctly attributed at the following links:
 
-[Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt)
+Company Developers list: [1](https://github.com/cncf/gitdm/blob/master/company_developers1.txt), [2](https://github.com/cncf/gitdm/blob/master/company_developers2.txt).
 
-[Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt)
+Developers affiliations list: [1](https://github.com/cncf/gitdm/blob/master/developers_affiliations1.txt), [2](https://github.com/cncf/gitdm/blob/master/developers_affiliations2.txt).
 
 # Adding/Updating affiliation
 

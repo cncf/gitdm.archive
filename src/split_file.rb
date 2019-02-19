@@ -1,7 +1,7 @@
 require 'pry'
 
 def split_files(files)
-  max_size = 1024*1024
+  max_size = 950*1024
   files.each do |file|
     header = ''
     data = ''
