@@ -8,11 +8,11 @@ Developers affiliations list: [1](https://github.com/cncf/gitdm/blob/master/deve
 
 # Adding/Updating affiliation
 
-If you find any errors or missing affiliations in those lists, please submit a pull request with edits to [developer affiliations](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) file.
+If you find any errors or missing affiliations in those lists, please submit a pull request with edits to developers affiliations files: [1](https://github.com/cncf/gitdm/blob/master/developers_affiliations1.txt), [2](https://github.com/cncf/gitdm/blob/master/developers_affiliations2.txt).
 
-Only the [Developers affiliations list](https://github.com/cncf/gitdm/blob/master/developers_affiliations.txt) should be edited manually.
+Only the Developers affiliations list [1](https://github.com/cncf/gitdm/blob/master/developers_affiliations1.txt), [2](https://github.com/cncf/gitdm/blob/master/developers_affiliations2.txt) should be edited manually.
 
-The [Company Developers list](https://github.com/cncf/gitdm/blob/master/company_developers.txt) is a computed derivative of the first list.
+Company Developers lists [1](https://github.com/cncf/gitdm/blob/master/company_developers1.txt), [2](https://github.com/cncf/gitdm/blob/master/company_developers2.txt) are computed derivatives of the first list.
 
 Other files used for affiliations are [email map file](https://github.com/cncf/gitdm/blob/master/src/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/src/github_users.json) file.
 
