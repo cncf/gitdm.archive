@@ -46,7 +46,7 @@ def import_from_github_json(json_file)
     next unless c
     next if ['-', ''].include?(c)
     c = c.strip
-    c = c[1..-1] if c[0] == '@'
+    c = c[1..-1] if ['@', '!'].include?(c[0])
     next unless cmap[c]
     c = cmap[c]
     n_c += 1
