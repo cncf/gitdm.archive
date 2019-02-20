@@ -5,6 +5,9 @@ require './comment'
 require './email_code'
 
 def company_names_mapping(cmap_file, config_file, csv_file, json_file)
+  # dbg: set to true to have very verbose output
+  dbg = !ENV['DBG'].nil?
+
   # Read company mapping file `company-names-mapping`
   cmap = {}
   File.readlines(cmap_file).each do |line|
@@ -31,6 +34,7 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
   n_c = 0
   n = data.count
   comps = {}
+  n = 0
   data.each do |user|
     a = user['affiliation']
     next unless a
@@ -44,11 +48,12 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
         nc = cmap[c]
         if ary.length > 1
           n_affs << "#{nc} < #{ary[1]}"
-          puts "#{user['login']}/#{user['email']}/#{ary[1]}: #{c} -> #{nc}"
+          puts "#{user['login']}/#{user['email']}/#{ary[1]}: #{c} -> #{nc}" if dbg
         else
           n_affs << "#{nc}"
-          puts "#{user['login']}/#{user['email']}: #{c} -> #{nc}"
+          puts "#{user['login']}/#{user['email']}: #{c} -> #{nc}" if dbg
         end
+        n += 1
       else
         n_affs << aff
       end
@@ -59,10 +64,12 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
   # Write JSON back
   pretty = JSON.pretty_generate data
   File.write json_file, pretty
+  puts "JSON: updated #{n}"
 
   # Read existing mapping `cncf-config/email-map`
   existing = {}
   lines = ''
+  n = 0
   File.readlines(config_file).each do |line|
     line = line.strip
     if line[0] == '#'
@@ -84,18 +91,21 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
     end
     if didx
       lines += "#{email} #{cmap[company]} < #{date}\n"
-      puts "#{email}/#{date}: #{company} --> #{cmap[company]}"
+      puts "#{email}/#{date}: #{company} --> #{cmap[company]}" if dbg
     else
       lines += "#{email} #{cmap[company]}\n"
-      puts "#{email}: #{company} --> #{cmap[company]}"
+      puts "#{email}: #{company} --> #{cmap[company]}" if dbg
     end
+    n += 1
   end
   # Write back updated file
   File.write(config_file, lines)
+  puts "Config: updated #{n}"
 
   # Process all_affs.csv file
   hdr = []
   rows = []
+  n = 0
   CSV.foreach(csv_file, headers: true) do |row|
     next if is_comment row
     h = row.to_h
@@ -103,8 +113,9 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
     company = h['company']
     h['source'] = 'config' if ['', nil].include?(h['source'])
     if cmap.key?(company)
-      puts "#{h['email']}: #{company} -> #{cmap[company]}"
+      puts "#{h['email']}: #{company} -> #{cmap[company]}" if dbg
       h['company'] = cmap[company]
+      n += 1
     end
     rows << h
   end
@@ -115,6 +126,7 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
       csv << row
     end
   end
+  puts "CSV: updated #{n}"
 end
 
 if ARGV.length < 4

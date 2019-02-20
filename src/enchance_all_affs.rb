@@ -35,7 +35,7 @@ def enchance_all_affs(affs_file, json_file)
       c = h['company'].strip
       n = h['name'].strip
       d = h['date_to'].strip
-      s = h['source']
+      s = (h['source'] || '').strip
 
       email_affs[e] = [] unless email_affs.key?(e)
       if d && d.length > 0
