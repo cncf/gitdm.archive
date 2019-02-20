@@ -39,6 +39,7 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
     a = user['affiliation']
     next unless a
     next if ['-', '', 'NotFound', '?'].include?(a)
+    s = user['source']
     affs = a.split(', ')
     n_affs = []
     affs.each do |aff|
@@ -48,10 +49,10 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
         nc = cmap[c]
         if ary.length > 1
           n_affs << "#{nc} < #{ary[1]}"
-          puts "#{user['login']}/#{user['email']}/#{ary[1]}: #{c} -> #{nc}" if dbg
+          puts "#{user['login']}/#{user['email']}/#{ary[1]}: #{c} -> #{nc} (#{s})" if dbg || ['user', 'user_manual'].include?(s)
         else
           n_affs << "#{nc}"
-          puts "#{user['login']}/#{user['email']}: #{c} -> #{nc}" if dbg
+          puts "#{user['login']}/#{user['email']}: #{c} -> #{nc} (#{s})" if dbg || ['user', 'user_manual'].include?(s)
         end
         n += 1
       else
