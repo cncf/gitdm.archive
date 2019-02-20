@@ -74,7 +74,9 @@ end
 def ghusers(start_date, args)
   # List of repositories to retrieve commits from (and get their basic data): from repos.txt file
   str = File.read 'repos.txt'
-  repos = str.strip.split(",\n  ")
+  repos_raw = str.strip.split(",")
+  repos = []
+  repos_raw.each { |repo| repos << repo.strip }
   File.write 'repos.txt', '  ' + repos.reject.sort.join(",\n  ") + "\n"
 
   # Args processing
