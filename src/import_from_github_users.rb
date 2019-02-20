@@ -6,6 +6,7 @@ def import_from_github_json(json_file)
   # Read company mapping file `company-names-mapping`
   cmap = {}
   File.readlines('company-names-mapping').each do |line|
+    next if line[0] == '#'
     index = line.index(' -> ')
     unless index
       puts "Broken line: #{line}"
