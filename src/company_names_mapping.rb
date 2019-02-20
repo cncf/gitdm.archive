@@ -1,5 +1,7 @@
 require 'pry'
+require 'csv'
 require 'json'
+require './comment'
 require './email_code'
 
 def company_names_mapping(cmap_file, config_file, csv_file, json_file)
@@ -24,7 +26,31 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
     cmap[from] = to
   end
 
-  # Read existing mapping `cncf-config/email-map` - it has higher priority
+  # Process all_affs.csv file
+  hdr = []
+  rows = []
+  CSV.foreach(csv_file, headers: true) do |row|
+    next if is_comment row
+    h = row.to_h
+    hdr = h.keys if hdr.length == 0
+    company = h['company']
+    h['source'] = 'config' if ['', nil].include?(h['source'])
+    if cmap.key?(company)
+      puts "#{h['email']}: #{company} -> #{cmap[company]}"
+      h['company'] = cmap[company]
+    end
+    rows << h
+  end
+  CSV.open(csv_file, 'w', headers: hdr, force_quotes: true) do |csv|
+    csv << hdr
+    rows.each do |row|
+      # row = Hash[row.map { |k,v| [k,"#{v}"] }]
+      csv << row
+    end
+  end
+  exit
+
+  # Read existing mapping `cncf-config/email-map`
   existing = {}
   lines = ''
   File.readlines(config_file).each do |line|
