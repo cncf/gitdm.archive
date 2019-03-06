@@ -36,11 +36,11 @@ sudo -u postgres psql -tA cncf < ~/dev/go/src/devstats/util_sql/actors.sql >> ac
 sudo -u postgres psql -tA allprj < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA opencontainers < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA istio < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
-sudo -u postgres psql -tA spinnaker < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres PGPASSWORD="${PG_PASS}" psql -h devstats.cd.foundation -tA spinnaker < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA knative < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
-sudo -u postgres psql -tA tekton < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
-sudo -u postgres psql -tA jenkins < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
-sudo -u postgres psql -tA jenkinsx < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres PGPASSWORD="${PG_PASS}" psql -h devstats.cd.foundation -tA tekton < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres PGPASSWORD="${PG_PASS}" psql -h devstats.cd.foundation -tA jenkins < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres PGPASSWORD="${PG_PASS}" psql -h devstats.cd.foundation -tA jenkinsx < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA linux < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA zephyr < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 cat actors.txt | sort | uniq > actors.tmp
