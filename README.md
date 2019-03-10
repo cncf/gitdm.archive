@@ -355,3 +355,7 @@ The second script reads the 'clearbit_affiliation_lookup.csv' file. Data is proc
 # Add new project ( cncf or non-cncf) to get affiliation for it.
 
 Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/gitdm/blob/master/ADD_PROJECT.md).
+
+# Authors
+- Łukasz Gryglicki <lgryglicki@cncf.io> - developement.
+- Justyna Gryglicka <lgryglicka@cncf.io> - researching affiliations data.
