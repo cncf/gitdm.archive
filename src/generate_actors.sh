@@ -43,6 +43,7 @@ psql -h devstats.cd.foundation -U postgres -tA spinnaker < ~/dev/go/src/devstats
 psql -h devstats.cd.foundation -U postgres -tA tekton < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 psql -h devstats.cd.foundation -U postgres -tA jenkins < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 psql -h devstats.cd.foundation -U postgres -tA jenkinsx < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+psql -h devstats.cd.foundation -U postgres -tA allcdf < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 cat actors.txt | sort | uniq > actors.tmp
 tr '\n' ',' < actors.tmp > out
 rm actors.tmp
