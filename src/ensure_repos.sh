@@ -1,4 +1,6 @@
 #!/bin/bash
+# NOPULL=1 skip pulling existing repos
+# NOCLONE=1 skip cloning repos
 all=`cat $1`
 for f in $all
 do
@@ -18,11 +20,17 @@ do
   if [ -d "$r" ]
   then
     cd "$r" || exit 3
-    echo "pull $o/$r" || echo "failed pull $o/$r"
-    git pull
+    if [ -z "$NOPULL" ]
+    then
+      echo "pull $o/$r" || echo "failed pull $o/$r"
+      git pull
+    fi
   else
-    echo "clone $o/$r"
-    git clone "https://github.com/$o/${r}.git" || exit 4
+    if [ -z "$NOCLONE" ]
+    then
+      echo "clone $o/$r"
+      git clone "https://github.com/$o/${r}.git"
+  fi
   fi
 done
 echo 'OK'
