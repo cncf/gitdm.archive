@@ -294,6 +294,12 @@ def ghusers(start_date, args)
       h = {}
       h[email_encode(author['email'])] = author['login']
       h[email_encode(committer['email'])] = committer['login']
+      sha = nil
+      begin
+        sha = comm['commit']['tree']['sha'] || comm[:commit][:tree][:sha]
+      rescue => e
+        puts "Commit without SHA: #{comm['commit'] || comm[:commit]}"
+      end
       h.each do |email, login|
         next unless email.include?('!')
         next if email == nil || email == ''
@@ -302,13 +308,16 @@ def ghusers(start_date, args)
           if email2github[email][0] != login
             puts "Too bad, we already have email2github[#{email}] = #{email2github[email][0]}, and now new value: #{login}"
           else
-            email2github[email][1] += 1
+            email2github[email][1] << sha
           end
         else
-          email2github[email] = [login, 1]
+          email2github[email] = [login, Set[sha]]
         end
       end
     end
+  end
+  email2github.each do |email, data|
+    email2github[email] = [data[0], data[1].length]
   end
   puts "Processed #{processed.keys.length} repos"
   puts "Processed #{n_processed}/#{n_commits} commits"
