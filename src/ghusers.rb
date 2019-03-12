@@ -2,6 +2,8 @@ require 'pry'
 require 'octokit'
 require 'json'
 require 'securerandom'
+require 'set'
+require 'thwait'
 require './email_code'
 require './ghapi'
 
@@ -17,7 +19,7 @@ def commits_since(gcs, repo, sdt)
   now = DateTime.now()
   dt = DateTime.strptime(sdt, '%Y-%m-%d')
   final_comms = []
-  thrs = []
+  thrs = Set[]
   n_thrs = ENV['BOOST'].nil? ? 2 : ENV['BOOST'].to_i
   while dt < now
     edt = dt + days_inc
@@ -51,30 +53,32 @@ def commits_since(gcs, repo, sdt)
         puts "Retryable error #{err} on #{repo}: #{dtf} - #{dtt}, sleeping 10 seconds"
         sleep 10
         retry
+      rescue Octokit::Conflict => err
+        puts "Conflict (probably missing repository): #{err}"
+        STDERR.puts [err.class, err, "Threads: #{Thread.list.count}"]
+        comms = false
       rescue => err
-        puts "Uups, something bad happened on #{repo}: #{dtf} - #{dtt}, check `err` variable!"
+        puts "Error: Uups, something bad happened on #{repo}: #{dtf} - #{dtt}, check `err` variable!"
         STDERR.puts [err.class, err, "Threads: #{Thread.list.count}"]
         comms = false
       end
       comms
     end
     while thrs.length >= n_thrs
-      comms = thrs.first.value
-      if comms === false
-        binding.pry
-      else
+      tw = ThreadsWait.new(thrs.to_a)
+      t = tw.next_wait
+      comms = t.value
+      unless comms === false
         final_comms << comms unless comms.length == 0
       end
-      thrs = thrs[1..-1]
+      thrs = thrs.delete t
     end
     dt = edt
   end
   # puts "Remains #{thrs.length} threads"
-  thrs.each do |thr|
+  ThreadsWait.all_waits(thrs.to_a) do |thr|
     comms = thr.value
-    if comms === false
-      binding.pry
-    else
+    unless comms === false
       final_comms << comms unless comms.length == 0
     end
   end
@@ -112,7 +116,7 @@ def ghusers(start_date, args)
   # This is to ensure You want to continue, it displays Your limit, should be close to 5000
   # If not type 'exit-program' if Yes type 'quit' (to quit debugger & continue)
   binding.pry
-  thrs = []
+  thrs = Set[]
   n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   repos.each_with_index do |repo_name, repo_index|
     thrs << Thread.new do
@@ -156,7 +160,7 @@ def ghusers(start_date, args)
           sleep 10
           retry
         rescue => err2
-          puts "Uups, something bad happened on #{repo_name}, check `err2` variable!"
+          puts "Error: Uups, something bad happened on #{repo_name}, check `err2` variable!"
           STDERR.puts [err2.class, err2, "Threads: #{Thread.list.count}"]
           h = false
         end
@@ -164,22 +168,16 @@ def ghusers(start_date, args)
       h
     end
     while thrs.length >= n_thrs
-      h = thrs.first.value
-      if h === false
-        binding.pry
-      else
-        hs << h unless h.nil?
-      end
-      thrs = thrs[1..-1]
+      tw = ThreadsWait.new(thrs.to_a)
+      t = tw.next_wait
+      h = t.value
+      hs << h unless h.nil? || h === false
+      thrs = thrs.delete t
     end
   end
-  thrs.each do |thr|
+  ThreadsWait.all_waits(thrs.to_a) do |thr|
     h = thr.value
-    if h == false
-      binding.pry
-    else
-      hs << h unless h.nil?
-    end
+    hs << h unless h.nil? || h === false
   end
 
   # Process each repository's commits
@@ -190,7 +188,7 @@ def ghusers(start_date, args)
   processed_mutex = Mutex.new
   n_repos = hs.count
   rpts = 0
-  thrs = []
+  thrs = Set[]
   hs.each_with_index do |repo, repo_index|
     thrs << Thread.new do
       begin
@@ -258,12 +256,14 @@ def ghusers(start_date, args)
       comm
     end
     while thrs.length >= n_thrs
-      comm = thrs.first.value
+      tw = ThreadsWait.new(thrs.to_a)
+      t = tw.next_wait
+      comm = t.value
       comms << comm unless comm.nil?
-      thrs = thrs[1..-1]
+      thrs = thrs.delete t
     end
   end
-  thrs.each do |thr|
+  ThreadsWait.all_waits(thrs.to_a) do |thr|
     comm = thr.value
     comms << comm unless comm.nil?
   end
@@ -337,7 +337,7 @@ def ghusers(start_date, args)
   end
 
   rpts = 0
-  thrs = []
+  thrs = Set[]
   users.each_with_index do |usr, index|
     thrs << Thread.new do
       h = nil
@@ -380,29 +380,23 @@ def ghusers(start_date, args)
         sleep 10
         retry
       rescue => err2
-        puts "Uups, something bad happened for #{usr[1]}, check `err2` variable!"
+        puts "Error: Uups, something bad happened for #{usr[1]}, check `err2` variable!"
         STDERR.puts [err2.class, err2, "Threads: #{Thread.list.count}"]
         h = false
       end
       h
     end
     while thrs.length >= n_thrs
-      h = thrs.first.value
-      if h === false
-        binding.pry
-      else
-        final << h unless h.nil?
-      end
-      thrs = thrs[1..-1]
+      tw = ThreadsWait.new(thrs.to_a)
+      t = tw.next_wait
+      h = t.value
+      final << h unless h.nil? || h === false
+      thrs = thrs.delete t
     end
   end
-  thrs.each do |thr|
+  ThreadsWait.all_waits(thrs.to_a) do |thr|
     h = thr.value
-    if h === false
-      binding.pry
-    else
-      final << h unless h.nil?
-    end
+    final << h unless h.nil? || h === false
   end
 
   # Encode emails in JSON
