@@ -8,6 +8,9 @@ require './ghapi'
 # Ask each repo for commits newer than...
 start_date = '2014-01-01'
 
+# Environment variable BOOST (2 if not sets) sets the maximum numbe rof threads processing commits on a single repo.
+# Not that each repo is already processing in a separate thread, so settiung this to, say 8 will end up with a maximum
+# 8 * NCPUs threads created which will cause ruby thread creation errors. Default value `2` should be quite safe.
 def commits_since(gcs, repo, sdt)
   days_inc = 365
   days_inc = 30 if repo == 'torvalds/linux'
@@ -15,7 +18,7 @@ def commits_since(gcs, repo, sdt)
   dt = DateTime.strptime(sdt, '%Y-%m-%d')
   final_comms = []
   thrs = []
-  n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
+  n_thrs = ENV['BOOST'].nil? ? 2 : ENV['BOOST'].to_i
   while dt < now
     edt = dt + days_inc
     dtf = dt.strftime("%Y-%m-%d")
@@ -25,13 +28,13 @@ def commits_since(gcs, repo, sdt)
       begin
         hint, rem, pts = rate_limit(gcs)
         if edt < now
-          puts "#{repo}: #{dtf} - #{dtt}"
+          puts "#{repo}: #{dtf} - #{dtt}, threads: #{Thread.list.count}"
           comms = gcs[hint].commits_between(repo, dtf, dtt)
-          puts "#{repo}: #{dtf} - #{dtt} --> #{comms.length} commits"
+          puts "#{repo}: #{dtf} - #{dtt} --> #{comms.length} commits, threads: #{Thread.list.count}"
         else
-          puts "#{repo}: #{dtf} - now"
+          puts "#{repo}: #{dtf} - now, threads: #{Thread.list.count}"
           comms = gcs[hint].commits_since(repo, dtf)
-          puts "#{repo}: #{dtf} - now --> #{comms.length} commits"
+          puts "#{repo}: #{dtf} - now --> #{comms.length} commits, threads: #{Thread.list.count}"
         end
       rescue Octokit::NotFound, Octokit::BadGateway => err
         puts "GitHub doesn't know repo #{repo}: #{err}"
@@ -50,14 +53,18 @@ def commits_since(gcs, repo, sdt)
         retry
       rescue => err
         puts "Uups, something bad happened on #{repo}: #{dtf} - #{dtt}, check `err` variable!"
-        STDERR.puts [err.class, err]
-        exit 1
+        STDERR.puts [err.class, err, "Threads: #{Thread.list.count}"]
+        comms = false
       end
       comms
     end
     while thrs.length >= n_thrs
       comms = thrs.first.value
-      final_comms << comms if comms.length > 0
+      if comms === false
+        binding.pry
+      else
+        final_comms << comms unless comms.length == 0
+      end
       thrs = thrs[1..-1]
     end
     dt = edt
@@ -65,7 +72,11 @@ def commits_since(gcs, repo, sdt)
   # puts "Remains #{thrs.length} threads"
   thrs.each do |thr|
     comms = thr.value
-    final_comms << comms if comms.length > 0
+    if comms === false
+      binding.pry
+    else
+      final_comms << comms unless comms.length == 0
+    end
   end
   final_comms.flatten
 end
@@ -146,21 +157,29 @@ def ghusers(start_date, args)
           retry
         rescue => err2
           puts "Uups, something bad happened on #{repo_name}, check `err2` variable!"
-          STDERR.puts [err2.class, err2]
-          exit 1
+          STDERR.puts [err2.class, err2, "Threads: #{Thread.list.count}"]
+          h = false
         end
       end
       h
     end
     while thrs.length >= n_thrs
       h = thrs.first.value
-      hs << h unless h.nil?
+      if h === false
+        binding.pry
+      else
+        hs << h unless h.nil?
+      end
       thrs = thrs[1..-1]
     end
   end
   thrs.each do |thr|
     h = thr.value
-    hs << h unless h.nil?
+    if h == false
+      binding.pry
+    else
+      hs << h unless h.nil?
+    end
   end
 
   # Process each repository's commits
@@ -362,20 +381,28 @@ def ghusers(start_date, args)
         retry
       rescue => err2
         puts "Uups, something bad happened for #{usr[1]}, check `err2` variable!"
-        STDERR.puts [err2.class, err2]
-        exit 1
+        STDERR.puts [err2.class, err2, "Threads: #{Thread.list.count}"]
+        h = false
       end
       h
     end
     while thrs.length >= n_thrs
       h = thrs.first.value
-      final << h unless h.nil?
+      if h === false
+        binding.pry
+      else
+        final << h unless h.nil?
+      end
       thrs = thrs[1..-1]
     end
   end
   thrs.each do |thr|
     h = thr.value
-    final << h unless h.nil?
+    if h === false
+      binding.pry
+    else
+      final << h unless h.nil?
+    end
   end
 
   # Encode emails in JSON
