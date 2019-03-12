@@ -208,7 +208,7 @@ def ghusers(start_date, args)
             end
             shas = {}
             comm.each { |c| shas[c[:sha] || c['sha']] = true }
-            puts "Getting new commits for #{repo_name} from #{maxdt}"
+            puts "Getting #{repo_index + 1}/#{n_repos} new commits for #{repo_name} from #{maxdt}"
             ocomm = commits_since(gcs, repo_name, maxdt)
             h = ocomm.map(&:to_h)
             nc = 0
@@ -219,7 +219,7 @@ def ghusers(start_date, args)
                 # else: puts "#{repo_name}:#{c[:sha]} already processed"
               end
             end
-            puts "Got #{nc} new commits for #{repo_name}"
+            puts "Got #{nc} new commits for #{repo_name} #{repo_index + 1}/#{n_repos}"
             json = email_encode(JSON.pretty_generate(comm))
             File.write fn, json
           end
