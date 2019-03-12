@@ -30,13 +30,13 @@ def commits_since(gcs, repo, sdt)
       begin
         hint, rem, pts = rate_limit(gcs)
         if edt < now
-          puts "#{repo}: #{dtf} - #{dtt}, threads: #{Thread.list.count}"
+          puts "#{repo}: #{dtf} - #{dtt}"
           comms = gcs[hint].commits_between(repo, dtf, dtt)
-          puts "#{repo}: #{dtf} - #{dtt} --> #{comms.length} commits, threads: #{Thread.list.count}"
+          puts "#{repo}: #{dtf} - #{dtt} --> #{comms.length} commits"
         else
-          puts "#{repo}: #{dtf} - now, threads: #{Thread.list.count}"
+          puts "#{repo}: #{dtf} - now"
           comms = gcs[hint].commits_since(repo, dtf)
-          puts "#{repo}: #{dtf} - now --> #{comms.length} commits, threads: #{Thread.list.count}"
+          puts "#{repo}: #{dtf} - now --> #{comms.length} commits"
         end
       rescue Octokit::NotFound, Octokit::BadGateway => err
         puts "GitHub doesn't know repo #{repo}: #{err}"
@@ -55,11 +55,11 @@ def commits_since(gcs, repo, sdt)
         retry
       rescue Octokit::Conflict => err
         puts "Conflict (probably missing repository): #{err}"
-        STDERR.puts [err.class, err, "Threads: #{Thread.list.count}"]
+        STDERR.puts [err.class, err]
         comms = false
       rescue => err
         puts "Error: Uups, something bad happened on #{repo}: #{dtf} - #{dtt}, check `err` variable!"
-        STDERR.puts [err.class, err, "Threads: #{Thread.list.count}"]
+        STDERR.puts [err.class, err]
         comms = false
       end
       comms
@@ -161,7 +161,7 @@ def ghusers(start_date, args)
           retry
         rescue => err2
           puts "Error: Uups, something bad happened on #{repo_name}, check `err2` variable!"
-          STDERR.puts [err2.class, err2, "Threads: #{Thread.list.count}"]
+          STDERR.puts [err2.class, err2]
           h = false
         end
       end
@@ -381,7 +381,7 @@ def ghusers(start_date, args)
         retry
       rescue => err2
         puts "Error: Uups, something bad happened for #{usr[1]}, check `err2` variable!"
-        STDERR.puts [err2.class, err2, "Threads: #{Thread.list.count}"]
+        STDERR.puts [err2.class, err2]
         h = false
       end
       h
