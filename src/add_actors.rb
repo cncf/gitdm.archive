@@ -5,6 +5,7 @@ require './comment'
 require './email_code'
 require './ghapi'
 
+# Not used by the default workflow
 def add_actors(json_file, actors_file)
   # Process actors file: it is a "," separated list of GitHub logins
   actors_data = File.read actors_file
