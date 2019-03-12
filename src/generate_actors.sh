@@ -1,5 +1,7 @@
 #!/bin/bash
-sudo -u postgres psql -tA gha < ~/dev/go/src/devstats/util_sql/actors.sql > actors.txt
+cp actors_lf.txt actors.txt
+./scrub.rb actors.txt
+sudo -u postgres psql -tA gha < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA prometheus < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA opentracing < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA fluentd < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
@@ -44,6 +46,7 @@ psql -h devstats.cd.foundation -U postgres -tA tekton < ~/dev/go/src/devstats/ut
 psql -h devstats.cd.foundation -U postgres -tA jenkins < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 psql -h devstats.cd.foundation -U postgres -tA jenkinsx < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 psql -h devstats.cd.foundation -U postgres -tA allcdf < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+# cp actors.txt all_actors.txt
 cat actors.txt | sort | uniq > actors.tmp
 tr '\n' ',' < actors.tmp > out
 rm actors.tmp
