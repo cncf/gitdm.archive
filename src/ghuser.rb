@@ -3,6 +3,8 @@
 require 'pry'
 require 'json'
 require 'octokit'
+require 'set'
+require 'thwait'
 require './ghapi'
 
 def ghuser(users)
@@ -10,7 +12,7 @@ def ghuser(users)
   gcs = octokit_init()
   hint = rate_limit(gcs)[0]
   rpts = 0
-  thrs = []
+  thrs = Set[]
   data = []
   n_users = users.length
   users.each_with_index do |actor, index|
@@ -60,12 +62,14 @@ def ghuser(users)
         res
       end
     while thrs.length >= n_thrs
-      res = thrs.first.value
+      tw = ThreadsWait.new(thrs.to_a)
+      t = tw.next_wait
+      res = t.value
       res.each { |h| data << h }
-      thrs = thrs[1..-1]
+      thrs = thrs.delete t
     end
   end
-  thrs.each do |thr|
+  ThreadsWait.all_waits(thrs.to_a) do |thr|
     res = thr.value
     res.each { |h| data << h }
   end
