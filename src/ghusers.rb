@@ -10,6 +10,10 @@ require './ghapi'
 # Ask each repo for commits newer than...
 start_date = '2014-01-01'
 
+def running_thread_count
+  Thread.list.select {|thread| thread.status == "run"}.count
+end
+
 # Environment variable BOOST (2 if not sets) sets the maximum numbe rof threads processing commits on a single repo.
 # Not that each repo is already processing in a separate thread, so settiung this to, say 8 will end up with a maximum
 # 8 * NCPUs threads created which will cause ruby thread creation errors. Default value `2` should be quite safe.
@@ -225,7 +229,7 @@ def ghusers(start_date, args)
             end
             shas = {}
             comm.each { |c| shas[c[:sha] || c['sha']] = true }
-            puts "Getting #{repo_index + 1}/#{n_repos} new commits for #{repo_name} from #{maxdt}"
+            puts "Getting #{repo_index + 1}/#{n_repos} new commits for #{repo_name} from #{maxdt}, threads: #{running_thread_count()}"
             ocomm = commits_since(gcs, repo_name, maxdt)
             h = ocomm.map(&:to_h)
             nc = 0
@@ -245,7 +249,7 @@ def ghusers(start_date, args)
       rescue Errno::ENOENT => err1
         from_date = start_date
         from_date = '2012-07-01' if repo_name == 'torvalds/linux'
-        puts "No previously saved #{fn}, getting commits from GitHub from #{from_date}" unless force_commits
+        puts "No previously saved #{fn}, getting commits from GitHub from #{from_date}, threads: #{running_thread_count()}" unless force_commits
         comm = commits_since(gcs, repo_name, from_date)
         h = comm.map(&:to_h)
         puts "Got #{h.count} commits for #{repo_name}"
