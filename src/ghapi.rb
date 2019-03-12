@@ -46,12 +46,11 @@ def rate_limit(clients, last_hint = -1, debug = 1)
       hint = idx
     end
   end
-  limits = rls.map { |rl| rl.limit }
   remainings = rls.map { |rl| rl.remaining }
   resets_ats = rls.map { |rl| rl.resets_at.strftime("%H:%M:%S") }
   resets_ins = rls.map { |rl| "#{rl.resets_in}s" }
   rem = (rls[hint].resets_at - Time.now).to_i + 1
-  puts "Hint: #{hint}, limits=#{limits}, remainings=#{remainings}, resets_ats=#{resets_ats}, resets_ins=#{resets_ins}" if debug >= 1
+  puts "Hint: #{hint}, remainings=#{remainings}, resets_ats=#{resets_ats}, resets_ins=#{resets_ins}" if debug >= 1
   puts "Suggested client nr #{hint}, remaining API points: #{remainings[hint]}, resets at #{resets_ats[hint]}, seconds till reset: #{rem}" if debug >= 0
   [hint, rem, remainings[hint]]
 end
