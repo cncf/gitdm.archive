@@ -185,8 +185,6 @@ def ghusers(start_date, args)
   end
 
   # Process each repository's commits
-  # 56k commits took 162/5000 points
-  # After processed all 70 repos I had ~3900/5000 points remaining
   comms = []
   processed = {}
   processed_mutex = Mutex.new
@@ -324,8 +322,6 @@ def ghusers(start_date, args)
   email2github = nil
 
   # Process distinct GitHub users
-  # 1 point/user --> took 3100 points
-  # I had 3896 points left after getting all repos metadata & commits
   final = []
   n_users = users.count
   puts "#{n_users} users"
@@ -412,7 +408,6 @@ def ghusers(start_date, args)
   json = email_encode(JSON.pretty_generate(final))
   File.write 'github_users.json', json
   puts "All done: please note that new JSON has *only* data for committers"
-  # I had 908/5000 points left when running < 1 hour
 end
 
 ghusers(start_date, ARGV)
