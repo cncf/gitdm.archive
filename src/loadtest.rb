@@ -1,10 +1,12 @@
+require 'set'
+require 'thwait'
 require './ghapi'
 
 gcs = octokit_init()
 puts "Client initialized, #{gcs.length} keys"
 hint, rem, pts = rate_limit(gcs, -1, 2)
 i = 0
-thrs = []
+thrs = Set[]
 n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
 loop do
   begin
@@ -18,8 +20,11 @@ loop do
       end
     end
     while thrs.length >= n_thrs
+      tw = ThreadsWait.new(thrs.to_a)
+      t = tw.next_wait
+      dummy = t.value
       dummy =  thrs.first.value
-      thrs = thrs[1..-1]
+      thrs = thrs.delete t
     end
     i += 1
     if i % 100 == 0

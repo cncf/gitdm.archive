@@ -2,6 +2,8 @@ require 'pry'
 require 'json'
 require 'csv'
 require 'octokit'
+require 'set'
+require 'thwait'
 require './comment'
 require './email_code'
 require './ghapi'
@@ -225,7 +227,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
     uacts = unknown_actors.keys
     n_users = uacts.size
     rpts = 0
-    thrs = []
+    thrs = Set[]
     binding.pry
     uacts.each_with_index do |actor, index|
       thrs << Thread.new do
@@ -296,12 +298,14 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
           res
         end
       while thrs.length >= n_thrs
-        res = thrs.first.value
+        tw = ThreadsWait.new(thrs.to_a)
+        t = tw.next_wait
+        res = t.value
         res.each { |h| data << h }
-        thrs = thrs[1..-1]
+        thrs = thrs.delete t
       end
     end
-    thrs.each do |thr|
+    ThreadsWait.all_waits(thrs.to_a) do |thr|
       res = thr.value
       res.each { |h| data << h }
     end
