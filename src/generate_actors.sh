@@ -1,6 +1,7 @@
 #!/bin/bash
 cp actors_lf.txt actors.txt
 ./scrub.rb actors.txt
+sed -i '$ d' actors.txt
 sudo -u postgres psql -tA gha < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA prometheus < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA opentracing < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
