@@ -25,11 +25,18 @@ def check_stmt(c, stmt_name, args)
     if $gcache.key?(key)
       v = $gcache[key]
       $gcache_mtx.release_read_lock
+      while v === false do
+        $gstats_mtx.with_read_lock { v = $gcache[key] }
+        # wait until real data become available (not a wip marker)
+        sleep 0.001
+      end
       $gstats_mtx.with_write_lock { $hit += 1 }
       return v
     end
     $gcache_mtx.release_read_lock
     $gstats_mtx.with_write_lock { $miss += 1 }
+    # Write marker that data is computing now: false
+    $gcache_mtx.with_write_lock { $gcache[key] = false }
     # Need to have one connection per thread. If using 'c' created in the main thread
     # It fails sometimes with a PG C library stack dump and segv. Ruby's PG exec is not thread safe
     # unless each thread has its own connection. We're keeping *at most* connection per thread
@@ -44,6 +51,7 @@ def check_stmt(c, stmt_name, args)
       puts "ERROR: #{e2}"
     end
     if rs.values && rs.values.count > 0
+      # write the final computed data instead of marker: false
       $gcache_mtx.with_write_lock { $gcache[key] = [rs.values.first] }
       return [rs.values.first]
     end
