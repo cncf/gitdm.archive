@@ -179,6 +179,7 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
       usr = data[0]
       ok = data[1]
       newj << usr
+      thrs = thrs.delete t
       if ok === false
         puts "Error state returned, backing up data"
         pretty = JSON.pretty_generate newj
@@ -186,7 +187,6 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
         pretty = JSON.pretty_generate get_gcache
         File.write json_cache, pretty
       end
-      thrs = thrs.delete t
     end
     if idx > 0 && idx % freq == 0
       pretty = JSON.pretty_generate newj
