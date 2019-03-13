@@ -18,7 +18,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 14. Run `./correlations.sh` and examine its output `correlations.txt` to try to normalize company names and remove common suffixes like Ltd., Corp. and downcase/upcase differences.
 15. Run `./check_spell` for fuzziness/spell check errors finder (uses Levenshtein distance to find bugs).
 16. Run `./lookup_json.sh` and examine its output JSONs - those GitHub profiles have some useful data directly available - this will save you some manual research work.
-17. Run `./company_names_mapping.sh` to fix typical company names spell errors, lower/upper case etc.
+17. Run `./company_names_mapping.sh` to fix typical company names spell errors, lower/upper case etc. Update `company-names-mapping` before runnign this (with a new typos/correlations data from the last 3 steps).
 18. *ALWAYS* before any commit to GitHub run: `./handle_forbidden_data.sh` to remove any forbiden affiliations, please also see `FORBIDDEN_DATA.md`.
 19. You can use `./clear_affiliations_in_json.sh` to clear all affiliations on a generated `github_users.json`.
 20. To make json unique, call `./unique_json.rb github_users.json`. To sort JSON by commits, login, email use: `./sort_json.rb github_users.json`.
