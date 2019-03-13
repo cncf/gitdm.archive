@@ -8,6 +8,8 @@ require 'concurrent'
 require 'set'
 require 'thwait'
 
+$gjson_cache_filename = nil
+
 $gcache = {}
 $gcache_mtx = Concurrent::ReadWriteLock.new
 
@@ -15,6 +17,7 @@ $hit = 0
 $miss = 0
 $gstats_mtx = Concurrent::ReadWriteLock.new
 
+# Thread safe
 def get_sex(name, login, cid)
   login = login.downcase.strip
   ary = [login]
@@ -34,12 +37,16 @@ def get_sex(name, login, cid)
   alln.each do |name|
     name.delete! '"\'[]%_^@$*+={}:|\\`~?/.<>'
     next if name == ''
+    $gcache_mtx.acquire_read_lock
     if $gcache.key?([name, cid])
-      $hit += 1
-      ret << $gcache[[name, cid]]
+      v = $gcache[[name, cid]]
+      $gcache_mtx.release_read_lock
+      $gstats_mtx.with_write_lock { $hit += 1 }
+      ret << v
       next
     end
-    $miss += 1
+    $gcache_mtx.release_read_lock
+    $gstats_mtx.with_write_lock { $miss += 1 }
     suri = "https://api.genderize.io?name=#{URI.encode(name)}"
     suri += "&apikey=#{api_key}" if !api_key.nil? && api_key != ''
     suri += "&country_id=#{URI.encode(cid)}" if !cid.nil? && cid != ''
@@ -48,7 +55,7 @@ def get_sex(name, login, cid)
       response = Net::HTTP.get_response(uri)
       data = JSON.parse(response.body)
       #data = { 'gender' => 'x', 'probability' => 1.0, 'count' => 10 }
-      $gcache[[name, cid]] = data
+      $gcache_mtx.with_write_lock { $gcache[[name, cid]] = data }
       ret << data
       if data.key? 'error'
         puts data['error']
@@ -64,12 +71,14 @@ def get_sex(name, login, cid)
   return r.first['gender'][0], r.first['probability'], true
 end
 
+# Not thread safe
 def get_gcache
   ary = []
   $gcache.each { |key, val| ary << [key, val] }
   ary
 end
 
+# Not thread safe
 def generate_global_cache(cache)
   cache.each { |key, val| $gcache[key] = val }
 end
@@ -83,6 +92,16 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
   data2 = JSON.parse File.read json_file2
   cache = JSON.parse File.read json_cache
   generate_global_cache cache
+
+  # Handle CTRL+C
+  $gjson_cache_filename = json_cache
+  Signal.trap('INT') do
+    puts "Caught signal, saving cache and exiting"
+    pretty = JSON.pretty_generate get_gcache
+    File.write $gjson_cache_filename, pretty
+    puts "Saved"
+    exit 1
+  end
 
   # Process JSONs
   # Create cache from second file
@@ -103,45 +122,72 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
   n = 0
   f = 0
   ca = 0
+  mtx = Concurrent::ReadWriteLock.new
   all_n = data.length
+  thrs = Set[]
+  n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   data.each_with_index do |user, idx|
-    login = user['login']
-    email = user['email']
-    name = user['name']
-    cid = user['country_id']
-    csex = user['sex']
-    cprob = user['sex_prob']
-    if (csex.nil? || csex == '' || cprob.nil? || cprob == '') && cache.key?([login, email])
-      rec = cache[[login, email]]
-      sex = user['sex'] = rec['sex']
-      prob = user['sex_prob'] = rec['sex_prob']
-      ca += 1
-      f += 1 unless sex.nil?
-    else
-      sex = nil
-      if csex.nil? || cprob.nil?
-        sex, prob, ok = get_sex name, login, cid
-        f += 1 unless sex.nil?
-        user['sex'] = sex
-        user['sex_prob'] = prob
-        unless ok
-          puts "Error state returned, backing up data"
-          pretty = JSON.pretty_generate newj
-          File.write 'backup.json', pretty
-          pretty = JSON.pretty_generate get_gcache
-          File.write json_cache, pretty
+    thrs << Thread.new(user) do |usr|
+      login = usr['login']
+      email = usr['email']
+      name = usr['name']
+      cid = usr['country_id']
+      csex = usr['sex']
+      cprob = usr['sex_prob']
+      ky = nil
+      ok = nil
+      $gcache_mtx.with_read_lock { ky = cache.key?([login, email]) }
+      if (csex.nil? || csex == '' || cprob.nil? || cprob == '') && ky
+        rec = nil
+        $gcache_mtx.with_read_lock { rec = cache[[login, email]] }
+        sex = usr['sex'] = rec['sex']
+        prob = usr['sex_prob'] = rec['sex_prob']
+        mtx.with_write_lock do
+          ca += 1
+          f += 1 unless sex.nil?
+        end
+      else
+        sex = nil
+        if csex.nil? || cprob.nil?
+          sex, prob, ok = get_sex name, login, cid
+          mtx.with_write_lock { f += 1 unless sex.nil? }
+          usr['sex'] = sex
+          usr['sex_prob'] = prob
         end
       end
+      mtx.with_write_lock { n += 1 }
+      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}" }
+      [usr, ok]
     end
-    newj << user
-    n += 1
-    puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, #{$hit}/#{$miss}"
+    puts "Index: #{idx}, Hits: #{$hit}, Miss: #{$miss}"
+    while thrs.length >= n_thrs
+      tw = ThreadsWait.new(thrs.to_a)
+      t = tw.next_wait
+      data = t.value
+      usr = data[0]
+      ok = data[1]
+      newj << usr
+      if ok === false
+        puts "Error state returned, backing up data"
+        pretty = JSON.pretty_generate newj
+        File.write 'backup.json', pretty
+        pretty = JSON.pretty_generate get_gcache
+        File.write json_cache, pretty
+      end
+      thrs = thrs.delete t
+    end
     if idx > 0 && idx % freq == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
       pretty = JSON.pretty_generate get_gcache
       File.write json_cache, pretty
     end
+  end
+  ThreadsWait.all_waits(thrs.to_a) do |thr|
+    data = thr.value
+    usr = data[0]
+    ok = data[1]
+    newj << usr
   end
 
   # Write JSON back
