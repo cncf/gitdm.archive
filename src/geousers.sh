@@ -12,4 +12,4 @@ then
 fi
 
 ruby geousers.rb $1 $2 $3 $backup
-./sort_json.sh $1
+./sort_json.rb $1

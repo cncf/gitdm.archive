@@ -46,6 +46,7 @@ def get_sex(name, login, cid)
       next
     end
     $gcache_mtx.release_read_lock
+    $gcache_mtx.acquire_write_lock
     $gstats_mtx.with_write_lock { $miss += 1 }
     suri = "https://api.genderize.io?name=#{URI.encode(name)}"
     suri += "&apikey=#{api_key}" if !api_key.nil? && api_key != ''
@@ -55,13 +56,15 @@ def get_sex(name, login, cid)
       response = Net::HTTP.get_response(uri)
       data = JSON.parse(response.body)
       #data = { 'gender' => 'x', 'probability' => 1.0, 'count' => 10 }
-      $gcache_mtx.with_write_lock { $gcache[[name, cid]] = data }
+      $gcache[[name, cid]] = data
+      $gcache_mtx.release_write_lock
       ret << data
       if data.key? 'error'
         puts data['error']
         return nil, nil, false
       end
     rescue StandardError => e
+      $gcache_mtx.release_write_lock
       puts e
       return nil, nil, false
     end
