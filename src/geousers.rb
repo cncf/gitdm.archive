@@ -15,6 +15,12 @@ $hit = 0
 $miss = 0
 $gstats_mtx = Concurrent::ReadWriteLock.new
 
+$gsqls = {}
+
+def running_thread_count
+  Thread.list.select {|thread| thread.status == "run"}.count
+end
+
 # Thread safe!
 def check_stmt(c, stmt_name, args)
   begin
@@ -28,7 +34,7 @@ def check_stmt(c, stmt_name, args)
     end
     $gcache_mtx.release_read_lock
     $gstats_mtx.with_write_lock { $miss += 1 }
-    rs = c.exec_prepared stmt_name, args
+    rs = c.async_exec $gsqls[stmt_name], args
     if rs.values && rs.values.count > 0
       $gcache_mtx.with_write_lock { $gcache[key] = [rs.values.first] }
       return [rs.values.first]
@@ -186,18 +192,18 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   c = PG.connect host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS']
 
   # PSQL statements used to get country codes
-  c.prepare 'direct_name_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and name like $2 order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'direct_aname_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and asciiname like $2 order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'direct_lname_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and lower(name) like $2 order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'direct_laname_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and lower(asciiname) like $2 order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'alt_name_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and geonameid in (select geonameid from alternatenames where altname like $2) order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'alt_lname_fcl', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and geonameid in (select geonameid from alternatenames where lower(altname) like $2) order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'direct_name', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and name like $1 order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'direct_aname', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and asciiname like $1 order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'direct_lname', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and lower(name) like $1 order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'direct_laname', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and lower(asciiname) like $1 order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'alt_name', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where altname like $1) order by tz = \'\', population desc, geonameid asc limit 1'
-  c.prepare 'alt_lname', 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['direct_name_fcl'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and name like $2 order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['direct_aname_fcl'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and asciiname like $2 order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['direct_lname_fcl'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and lower(name) like $2 order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['direct_laname_fcl'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and lower(asciiname) like $2 order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['alt_name_fcl'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and geonameid in (select geonameid from alternatenames where altname like $2) order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['alt_lname_fcl'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and geonameid in (select geonameid from alternatenames where lower(altname) like $2) order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['direct_name'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and name like $1 order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['direct_aname'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and asciiname like $1 order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['direct_lname'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and lower(name) like $1 order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['direct_laname'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and lower(asciiname) like $1 order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['alt_name'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where altname like $1) order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['alt_lname'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by tz = \'\', population desc, geonameid asc limit 1'
 
   #['Россия', 'Russia, Moscow', 'San Francisco, CA, USA'].each do |loc|
   #  cid = get_cid c, loc
@@ -279,7 +285,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}" }
       usr
     end
-    puts "Index: #{idx}, Hits: #{$hit}, Miss: #{$miss}"
+    puts "Index: #{idx}, Threads: #{running_thread_count()}, Hits: #{$hit}, Miss: #{$miss}"
     while thrs.length >= n_thrs
       tw = ThreadsWait.new(thrs.to_a)
       t = tw.next_wait
@@ -308,20 +314,6 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   # Write gcache to file for future use
   pretty = JSON.pretty_generate get_gcache
   File.write json_cache, pretty
-
-  # Deallocate prepared statements
-  c.exec 'deallocate direct_name_fcl'
-  c.exec 'deallocate direct_aname_fcl'
-  c.exec 'deallocate direct_lname_fcl'
-  c.exec 'deallocate direct_laname_fcl'
-  c.exec 'deallocate alt_name_fcl'
-  c.exec 'deallocate alt_lname_fcl'
-  c.exec 'deallocate direct_name'
-  c.exec 'deallocate direct_aname'
-  c.exec 'deallocate direct_lname'
-  c.exec 'deallocate direct_laname'
-  c.exec 'deallocate alt_name'
-  c.exec 'deallocate alt_lname'
 end
 
 if ARGV.size < 4
