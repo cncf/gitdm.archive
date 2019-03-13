@@ -17,10 +17,6 @@ $gstats_mtx = Concurrent::ReadWriteLock.new
 
 $gsqls = {}
 
-def running_thread_count
-  Thread.list.select {|thread| thread.status == "run"}.count
-end
-
 # Thread safe!
 def check_stmt(c, stmt_name, args)
   begin
@@ -34,7 +30,14 @@ def check_stmt(c, stmt_name, args)
     end
     $gcache_mtx.release_read_lock
     $gstats_mtx.with_write_lock { $miss += 1 }
-    rs = c.async_exec $gsqls[stmt_name], args
+    begin
+      if c[0].nil?
+        c[0] = PG.connect host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS']
+      end
+      rs = c[0].exec $gsqls[stmt_name], args
+    rescue => e2
+      puts "ERROR: #{e2}"
+    end
     if rs.values && rs.values.count > 0
       $gcache_mtx.with_write_lock { $gcache[key] = [rs.values.first] }
       return [rs.values.first]
@@ -148,7 +151,8 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
 end
 
 # Thread safe!
-def get_cid(c, loc)
+def get_cid(loc)
+  c = [nil]
   ret = get_cid_from_loc c, loc, true, '', ''
   if ret.length < 1e10
     data = get_cid_from_loc c, loc, false, '', '%'
@@ -188,8 +192,6 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
   # set to false to retry localization lookups where location is set but no country/tz is found
   always_cache = true
-  # Connect to 'geonames' database
-  c = PG.connect host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS']
 
   # PSQL statements used to get country codes
   $gsqls['direct_name_fcl'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and name like $2 order by tz = \'\', population desc, geonameid asc limit 1'
@@ -206,7 +208,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   $gsqls['alt_lname'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by tz = \'\', population desc, geonameid asc limit 1'
 
   #['Россия', 'Russia, Moscow', 'San Francisco, CA, USA'].each do |loc|
-  #  cid = get_cid c, loc
+  #  cid = get_cid loc
   #  puts "Row #{loc} -> #{cid}"
   #end
 
@@ -270,7 +272,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       else
         cid = nil
         if (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
-          cid, tz = get_cid c, loc
+          cid, tz = get_cid loc
           mtx.with_write_lock do
             l += 1
             f += 1 unless cid.nil?
@@ -285,7 +287,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}" }
       usr
     end
-    puts "Index: #{idx}, Threads: #{running_thread_count()}, Hits: #{$hit}, Miss: #{$miss}"
+    puts "Index: #{idx}, Hits: #{$hit}, Miss: #{$miss}"
     while thrs.length >= n_thrs
       tw = ThreadsWait.new(thrs.to_a)
       t = tw.next_wait
