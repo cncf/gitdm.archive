@@ -127,7 +127,7 @@ def correlations(input_file, input_type, company_column)
 end
 
 if ARGV.size < 3
-  puts "Missing argument: file (file.csv or file.json) file type (csv or json) company_column (company, affiliation)"
+  puts "Missing argument: file (file.csv or file.json) file type (cfg, csv or json) company_column (index (1), company, affiliation)"
   exit(1)
 end
 
