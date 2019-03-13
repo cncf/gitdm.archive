@@ -62,7 +62,7 @@ def merge_jsons(primary_json, new_json, email_map)
       if user['affiliation'] != pri_user['affiliation'] && pri_user['affiliation'] != '?' && pri_user['affiliation'] != '(Unknown)' && pri_user['affiliation'] != 'NotFound'
         answer = 'y'
         if user['affiliation'] != '?' && user['affiliation'] != '(Unknown)' && user['affiliation'] != 'NotFound'
-          puts "#{mode} Use primary/old affiliation: '#{pri_user['affiliation']}' (#{pri_user['source']})\n#{mode} instead of new               '#{user['affiliation']}' (#{user['source']})\nfor #{ologin}/#{email}/#{commits} ?"
+          puts "\n#{mode} Use primary/old affiliation: '#{pri_user['affiliation']}' (#{pri_user['source']})\n#{mode} instead of new               '#{user['affiliation']}' (#{user['source']})\nfor #{ologin}/#{email}/#{commits} ?"
           if answers.key?(email)
             answer = answers[email]
             puts "#{answer}\n"
