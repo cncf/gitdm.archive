@@ -4,10 +4,16 @@ require 'uri'
 require 'pry'
 require 'unidecoder'
 require 'scanf'
+require 'concurrent'
+require 'set'
+require 'thwait'
 
 $gcache = {}
+$gcache_mtx = Concurrent::ReadWriteLock.new
+
 $hit = 0
 $miss = 0
+$gstats_mtx = Concurrent::ReadWriteLock.new
 
 def get_sex(name, login, cid)
   login = login.downcase.strip
