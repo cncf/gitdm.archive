@@ -46,8 +46,8 @@ def get_sex(name, login, cid)
       next
     end
     $gcache_mtx.release_read_lock
-    $gcache_mtx.acquire_write_lock
     $gstats_mtx.with_write_lock { $miss += 1 }
+    $gcache_mtx.acquire_write_lock
     suri = "https://api.genderize.io?name=#{URI.encode(name)}"
     suri += "&apikey=#{api_key}" if !api_key.nil? && api_key != ''
     suri += "&country_id=#{URI.encode(cid)}" if !cid.nil? && cid != ''
