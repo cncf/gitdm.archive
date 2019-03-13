@@ -292,7 +292,11 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}" }
       usr
     end
-    puts "Index: #{idx}, Hits: #{$hit}, Miss: #{$miss}"
+    begin
+      $gstats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$hit}, Miss: #{$miss}" }
+    rescue => ee
+      puts "Error: #{ee}"
+    end
     while thrs.length >= n_thrs
       tw = ThreadsWait.new(thrs.to_a)
       t = tw.next_wait
