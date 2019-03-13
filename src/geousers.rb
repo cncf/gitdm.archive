@@ -30,6 +30,11 @@ def check_stmt(c, stmt_name, args)
     end
     $gcache_mtx.release_read_lock
     $gstats_mtx.with_write_lock { $miss += 1 }
+    # Need to have one connection per thread. If using 'c' created in the main thread
+    # It fails sometimes with a PG C library stack dump and segv. Ruby's PG exec is not thread safe
+    # unless each thread has its own connection. We're keeping *at most* connection per thread
+    # If cache hit - thread creates no connections
+    # Otherwise it can create multipel connections for all possible SQLs from $gsqls
     begin
       if c[0].nil?
         c[0] = PG.connect host: 'localhost', dbname: 'geonames', user: 'gha_admin', password: ENV['PG_PASS']

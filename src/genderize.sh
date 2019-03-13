@@ -11,3 +11,4 @@ then
   backup=2000
 fi
 ruby genderize.rb $1 $2 $3 $backup
+./sort_json.sh $1
