@@ -218,7 +218,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   cache = JSON.parse File.read json_cache
   generate_global_cache cache
 
-  # handle CTRL+C
+  # Handle CTRL+C
   $gjson_cache_filename = json_cache
   Signal.trap('INT') do
     puts "Caught signal, saving cache and exiting"
