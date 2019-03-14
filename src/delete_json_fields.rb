@@ -1,14 +1,14 @@
 require 'pry'
 require './merge'
 
-def strip_json(json_file, fields)
+def delete_fields_json(json_file, fields)
   # Parse input JSON
   data = JSON.parse File.read json_file
 
   # Fields to delete
   dels = fields.split(',').map(&:strip)
 
-  # Strip JSON
+  # Delete fields from JSON
   stripped = []
   data.each do |row|
     dels.each { |field| row.delete(field) }
@@ -25,4 +25,4 @@ if ARGV.size < 2
   exit(1)
 end
 
-strip_json(ARGV[0], ARGV[1])
+delete_fields_json(ARGV[0], ARGV[1])
