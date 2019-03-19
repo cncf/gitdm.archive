@@ -35,6 +35,8 @@ sudo -u postgres psql -tA buildpacks < ~/dev/go/src/devstats/util_sql/actors.sql
 sudo -u postgres psql -tA falco < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA dragonfly < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA virtualkubelet < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA kubeedge < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA brigade < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA cncf < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA allprj < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA opencontainers < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
@@ -42,6 +44,7 @@ sudo -u postgres psql -tA istio < ~/dev/go/src/devstats/util_sql/actors.sql >> a
 sudo -u postgres psql -tA knative < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA linux < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA zephyr < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
+# Actors from CDF - assume they're CNCF actors
 psql -h devstats.cd.foundation -U postgres -tA spinnaker < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 psql -h devstats.cd.foundation -U postgres -tA tekton < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
 psql -h devstats.cd.foundation -U postgres -tA jenkins < ~/dev/go/src/devstats/util_sql/actors.sql >> actors.txt
