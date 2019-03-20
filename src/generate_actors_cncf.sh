@@ -33,6 +33,7 @@ sudo -u postgres psql -tA dragonfly < ~/dev/go/src/devstats/util_sql/actors.sql 
 sudo -u postgres psql -tA virtualkubelet < ~/dev/go/src/devstats/util_sql/actors.sql >> actors_cncf.txt
 sudo -u postgres psql -tA kubeedge < ~/dev/go/src/devstats/util_sql/actors.sql >> actors_cncf.txt
 sudo -u postgres psql -tA brigade < ~/dev/go/src/devstats/util_sql/actors.sql >> actors_cncf.txt
+sudo -u postgres psql -tA crio < ~/dev/go/src/devstats/util_sql/actors.sql >> actors_cncf.txt
 sudo -u postgres psql -tA cncf < ~/dev/go/src/devstats/util_sql/actors.sql >> actors_cncf.txt
 sudo -u postgres psql -tA allprj < ~/dev/go/src/devstats/util_sql/actors.sql >> actors_cncf.txt
 # Actors from CDF - assume they're CNCF actors
