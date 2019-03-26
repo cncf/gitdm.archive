@@ -88,12 +88,14 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   # Make results as strings
   puts "Checking affiliations by email #{guess_by_email} - this should not generate warnings"
   email_affs.each do |email, comps|
-    email_affs[email] = check_affs_list email, comps, guess_by_email, guess_by_email
+    a = check_affs_list email, comps, guess_by_email, guess_by_email
+    email_affs[email] = sort_affs(a)
   end
 
   puts "Checking affiliations by name #{guess_by_name} - this can generate a lot of warnings"
   name_affs.each do |name, comps|
-    name_affs[name] = check_affs_list name, comps, guess_by_name, guess_by_name
+    a = check_affs_list name, comps, guess_by_name, guess_by_name
+    name_affs[name] = sort_affs
   end
   
   # Parse JSON
@@ -135,7 +137,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
         name_unks << n
       end
     end
-    cv = user['affiliation']
+    cv = sort_affs(user['affiliation'])
     cs = user['source']
     if cv.nil? || cv == '(Unknown)' || cv == 'NotFound' || cv == '?'
       user['affiliation'] = v unless v == '(Unknown)' || v == '?'
