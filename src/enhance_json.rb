@@ -95,7 +95,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
   puts "Checking affiliations by name #{guess_by_name} - this can generate a lot of warnings"
   name_affs.each do |name, comps|
     a = check_affs_list name, comps, guess_by_name, guess_by_name
-    name_affs[name] = sort_affs
+    name_affs[name] = sort_affs(a)
   end
   
   # Parse JSON

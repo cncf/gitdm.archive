@@ -1,6 +1,7 @@
 require 'json'
 
 def sort_affs(affs)
+  return affs if affs.nil?
   affs.split(', ').sort.join(', ')
 end
 
