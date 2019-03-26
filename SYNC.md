@@ -7,7 +7,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 3. Update `repos.txt` to contain all repositories returned by the above command. Update `all_repos.sh` to include data from CNCF, CDF and LF.
 4. To run `cncf/gitdm` on a generated `git.log` file do: `cd src/; ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -A -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`
 5. To generate human readable text affiliation files: first run: `./enchance_all_affs.sh` then: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`.
-6. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too. If you need LF actors, run on `cncf/devstats`: `AWS_PROFILE=... PG_HOST="`cat devstats-helm/secrets/PG_HOST.secret`" PG_PASS="`cat devstats-helm/secrets/PG_PASS.secret`" ./devel/k8s_generate_actors_lf.sh > ~/dev/alt/gitdm/actors_lf.txt`.
+6. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too. If you need LF actors, run: `./generate_actors_lf.sh`.
 7. Consider `./ghusers_cached.sh` or `./ghusers.sh` (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points). Sometimes you should just run `./ghusers.sh` without cache.
 8. Recommended: `ghusers_partially_cached.sh 2> errors.txt` will refetch repos metadata and commits since last fetched and get users data from `github_users.json` so you can save a lot of API points. You can prepend with `NCPUS=N` to override autodetecting number of CPU cores available.
 9. To copy source type from previous JSON version do `./copy_source.sh`
