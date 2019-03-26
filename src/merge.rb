@@ -1,5 +1,9 @@
 require 'json'
 
+def sort_affs(affs)
+  affs.split(', ').sort.join(', ')
+end
+
 def check_affs_list(key, affiliations, guess, verbose)
   unknowns = []
   ranges = []
