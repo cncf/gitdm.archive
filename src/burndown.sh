@@ -1,6 +1,6 @@
 #!/bin/bash
 function cleanup {
-  git checkout master src/cncf-config/email-map src/github_users.json
+  git checkout master src/cncf-config/email-map src/github_users.json src/actors.txt src/actors_cncf.txt
   rm -rf cncf-config github_users.json err out 2>/dev/null
 }
 
