@@ -194,12 +194,19 @@ func mtp(fn string) error {
 	for idx := range tCommits {
 		go func(c chan error, i int, t [][]byte) {
 			// ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -A -U -u -o all.txt -x all.csv -a all_affs.csv > all.out
-			// ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -u -a all_affs.csv
+			// ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -d -u -a all_affs.csv
 			data = bytes.Join(t, []byte("\x0a"))
 			fmt.Printf("Thread %d: I have %d bytes from %d commits\n", i, len(data), len(t))
 			tfn := fmt.Sprintf("%s_%d", fn, i)
 			err := ioutil.WriteFile(tfn, data, 0644)
 			if err != nil {
+				c <- err
+				return
+			}
+			cmd := []string{"./cncfdm.py", "-i", tfn, "-r", "^vendor/|/vendor/|^Godeps/", "-R", "-n", "-b", "./", "-d", "-u", "-a", tfn + ".csv"}
+			res, err := execCommand(0, false, cmd, nil)
+			if err != nil {
+				fmt.Printf("Thread %d error: %+v, output:\n%s\n", i, err, res)
 				c <- err
 				return
 			}
@@ -209,8 +216,9 @@ func mtp(fn string) error {
 	go func(t int) {
 		cmd := []string{"ls", "-s"}
 		for i := 0; i < thrN; i++ {
-			cmd = append(cmd, fmt.Sprintf("%s_%d", fn, i))
+			cmd = append(cmd, fmt.Sprintf("%s_%d.csv", fn, i))
 		}
+		time.Sleep(10 * time.Second)
 		for {
 			res, err := execCommand(0, true, cmd, nil)
 			if err != nil {
@@ -218,7 +226,7 @@ func mtp(fn string) error {
 			} else {
 				fmt.Printf("Heartbeat: %d threads\n%s\n", t, res)
 			}
-			time.Sleep(1 * time.Second)
+			time.Sleep(30 * time.Second)
 		}
 	}(thrN)
 	fmt.Printf("Waiting for %d tasks to finish\n", thrN)
@@ -230,7 +238,6 @@ func mtp(fn string) error {
 			fmt.Printf("%d threads already finished\n", i+1)
 		}
 	}
-	time.Sleep(10 * time.Second)
 	return nil
 }
 
