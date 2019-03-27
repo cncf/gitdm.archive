@@ -12,6 +12,8 @@ import (
 	"sort"
 	"strings"
 	"time"
+
+	"github.com/tushar2708/altcsv"
 )
 
 type allAffs struct {
@@ -301,14 +303,15 @@ func mtp(fn string) error {
 		csvAry = append(csvAry, key)
 	}
 	sort.Sort(csvAry)
-	var writer *csv.Writer
+	var writer *altcsv.Writer
 	ofn := fn + ".csv"
 	oFile, err := os.Create(ofn)
 	if err != nil {
 		return err
 	}
 	defer func() { _ = oFile.Close() }()
-	writer = csv.NewWriter(oFile)
+	writer = altcsv.NewWriter(oFile)
+	writer.AllQuotes = true
 	defer writer.Flush()
 	hdr := []string{"email", "name", "company", "date_to", "source"}
 	err = writer.Write(hdr)
