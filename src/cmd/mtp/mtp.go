@@ -327,7 +327,7 @@ func mtp(fn string) error {
 			return err
 		}
 	}
-	fmt.Printf("Final %s written, you can now review it and eventually move to all-affs.csv\n", ofn)
+	fmt.Printf("Final %s written, you can now review it and eventually move to all_affs.csv, also take a look at enchance_msg.txt file to find usual thrash data\n", ofn)
 	return nil
 }
 
