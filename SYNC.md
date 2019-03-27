@@ -23,7 +23,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 19. You can use `./clear_affiliations_in_json.sh` to clear all affiliations on a generated `github_users.json`.
 20. To make json unique, call `./unique_json.rb github_users.json`. To sort JSON by commits, login, email use: `./sort_json.rb github_users.json`.
 21. You should run genderize/geousers (if needed) before the next step.
-22. You can create smaller final json for `cncf/devstats` using `./delete_json_fields.sh github_users.json; ./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`.
+22. You can create smaller final json for `cncf/devstats` using `./delete_json_fields.sh github_users.json; ./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/github.com/cncf/devstats/github_users.json`.
 23. To generate final `unknowns.csv` manual research task file run: `./gen_aff_task.rb unknowns.txt`. You can also generate all actors `./gen_aff_task.rb alldevs.txt`. You can prepend with `ONLY_GH=1` to skip entries without GitHub. You can prepend with `ONLY_EMP=1` to skip entries with any affiliation already set.
 24. To manually edit all affiliations related files: edit `cncf-config/email-map all.txt all.csv all_affs.csv github_users.json stripped.json ../developers_affiliations.txt ../company_developers.txt affiliations.csv`
 25. To add all possible entries from `github_users.json` to `cncf-config/email-map` use :`github_users_to_map.sh`. This is optional.
