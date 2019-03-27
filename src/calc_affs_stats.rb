@@ -26,7 +26,7 @@ def calc_affs_stats(email_map_file, json_file, all_actors_file, cncf_actors_file
       next
     end
     ary = line.split ' '
-    next unless ary
+    next unless ary && ary[0]
     email = ary[0].downcase.strip
     next unless email.include?('!')
     aff = ary[1..-1].join(' ').downcase.strip
