@@ -74,4 +74,4 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - Prepend with `UPDATE=1` to only import those marked as changed: column `changes='x'`.
 - Prepend with `DBG=1` to enable verbose output.
 - After finishing import add a status line to `affiliations_import.txt` file.
-- After importing new data run `./burndown.sh`.
+- After importing new data run `./src/burndown.sh` (from the src's parrent directory).
