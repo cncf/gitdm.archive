@@ -1,4 +1,4 @@
-GO_BIN_FILES=check_spell.go
+GO_BIN_FILES=cmd/check_spell/check_spell.go cmd/mtp/mtp.go
 GO_ENV=CGO_ENABLED=0
 GO_BUILD=go build -ldflags '-s -w'
 GO_FMT=gofmt -s -w
@@ -8,13 +8,16 @@ GO_CONST=goconst
 GO_IMPORTS=goimports -w
 GO_USEDEXPORTS=usedexports
 GO_ERRCHECK=errcheck -asserts -ignore '[FS]?[Pp]rint*'
-BINARIES=check_spell
+BINARIES=check_spell mtp
 STRIP=strip
 
 all: check ${BINARIES}
 
-check_spell: check_spell.go
-	 ${GO_ENV} ${GO_BUILD} -o check_spell check_spell.go
+check_spell: cmd/check_spell/check_spell.go
+	 ${GO_ENV} ${GO_BUILD} -o check_spell cmd/check_spell/check_spell.go
+
+mtp: cmd/mtp/mtp.go
+	 ${GO_ENV} ${GO_BUILD} -o mtp cmd/mtp/mtp.go
 
 fmt: ${GO_BIN_FILES}
 	./for_each_go_file.sh "${GO_FMT}"
@@ -35,7 +38,7 @@ usedexports: ${GO_BIN_FILES}
 	${GO_USEDEXPORTS} ./...
 
 errcheck: ${GO_BIN_FILES}
-	${GO_ERRCHECK} ./...
+	${GO_ERRCHECK} ./cmd/
 
 check: fmt lint imports vet const usedexports errcheck
 
