@@ -5,7 +5,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 1. If you generated new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`
 2. To generate `git.log` file and make sure it includes all orgs used by `devstats` use cncf/devstats\'s `GHA2DB_PROJECTS_OVERRIDE="+cncf,+opencontainers,+istio,+spinnaker,+knative,+linux,+zephyr" PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 ./get_repos` and then final command line it generates. Make it `uniq`.
 3. Update `repos.txt` to contain all repositories returned by the above command. Update `all_repos.sh` to include data from CNCF, CDF and LF.
-4. To run `cncf/gitdm` on a generated `git.log` file do: `cd src/; ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -A -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`
+4. To run `cncf/gitdm` on a generated `git.log` file run: `./mtp` (old approach: `cd src/; ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -A -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`).
 5. To generate human readable text affiliation files: first run: `./enchance_all_affs.sh` then: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`.
 6. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too. If you need LF actors, run: `./generate_actors_lf.sh`.
 7. Consider `./ghusers_cached.sh` or `./ghusers.sh` (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points). Sometimes you should just run `./ghusers.sh` without cache.
