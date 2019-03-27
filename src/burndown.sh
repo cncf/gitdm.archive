@@ -12,6 +12,7 @@ function analysis {
   #found=`grep -E '[^\s!]+![^\s!]+' "$2" | wc -l`
   #echo "$1,$found,$notfound,$notchecked" >> src/burndown.csv
   echo "Analysing date $1, files $2 $3"
+  git checkout $4 src/actors.txt src/actors_cncf.txt 1>/dev/null 2>/dev/null
   echo -n "$1," >> src/burndown.csv
   ruby src/calc_affs_stats.rb "$2" "$3" src/actors.txt src/actors_cncf.txt >> src/burndown.csv
 }
@@ -50,10 +51,12 @@ do
     res=$?
     if [ "$res" = "0" ]
     then
-      analysis $date $em $gu
+      analysis $date $em $gu $commit
+    else
+      echo "failed $commit, last date: $last_date"
     fi
   else
-    analysis $date $em $gu
+    analysis $date $em $gu $commit
   fi
 done
 
