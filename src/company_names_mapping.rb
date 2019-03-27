@@ -112,6 +112,7 @@ def company_names_mapping(cmap_file, config_file, csv_file, json_file)
     h = row.to_h
     hdr = h.keys if hdr.length == 0
     company = h['company']
+    # Update source if missing
     h['source'] = 'config' if ['', nil].include?(h['source'])
     if cmap.key?(company)
       puts "#{h['email']}: #{company} -> #{cmap[company]}" if dbg

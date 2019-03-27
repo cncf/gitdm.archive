@@ -2,15 +2,42 @@ package main
 
 import (
 	"bytes"
+	"encoding/csv"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"os"
 	"os/exec"
 	"runtime"
+	"sort"
 	"strings"
 	"time"
 )
+
+type allAffs struct {
+	email   string
+	name    string
+	company string
+	dateTo  string
+	source  string
+}
+
+type allAffsAry []allAffs
+
+func (aa allAffsAry) Len() int {
+	return len(aa)
+}
+
+func (aa allAffsAry) Swap(i, j int) {
+	aa[i], aa[j] = aa[j], aa[i]
+}
+
+func (aa allAffsAry) Less(i, j int) bool {
+	if aa[i].email == aa[j].email {
+		return aa[i].dateTo < aa[j].dateTo
+	}
+	return aa[i].email < aa[j].email
+}
 
 func execCommand(debug int, output bool, cmdAndArgs []string, env map[string]string) (string, error) {
 	// Execution time
@@ -234,8 +261,67 @@ func mtp(fn string) error {
 		err := <-ch
 		if err != nil {
 			fmt.Printf("%d threads already finished, last thread returned error status: %+v\n", i+1, err)
-		} else {
-			fmt.Printf("%d threads already finished\n", i+1)
+			return err
+		}
+		fmt.Printf("%d threads already finished\n", i+1)
+	}
+	csvData := make(map[allAffs]struct{})
+	aff := allAffs{}
+	for i := 0; i < thrN; i++ {
+		cfn := fmt.Sprintf("%s_%d.csv", fn, i)
+		f, err := os.Open(cfn)
+		if err != nil {
+			return err
+		}
+		reader := csv.NewReader(f)
+		reader.FieldsPerRecord = -1
+		for {
+			row, err := reader.Read()
+			if err == io.EOF {
+				f.Close()
+				break
+			} else if err != nil {
+				f.Close()
+				fmt.Printf("Reading %s\n", cfn)
+				return err
+			}
+			if len(row) == 4 {
+				row = append(row, "config")
+			}
+			aff.email = row[0]
+			aff.name = row[1]
+			aff.company = row[2]
+			aff.dateTo = row[3]
+			aff.source = row[4]
+			csvData[aff] = struct{}{}
+		}
+	}
+	var csvAry allAffsAry
+	for key := range csvData {
+		csvAry = append(csvAry, key)
+	}
+	sort.Sort(csvAry)
+	var writer *csv.Writer
+	ofn := fn + ".csv"
+	oFile, err := os.Create(ofn)
+	if err != nil {
+		return err
+	}
+	defer func() { _ = oFile.Close() }()
+	writer = csv.NewWriter(oFile)
+	defer writer.Flush()
+	hdr := []string{"email", "name", "company", "date_to", "source"}
+	err = writer.Write(hdr)
+	if err != nil {
+		fmt.Printf("Wrining header: %+v\n", hdr)
+		return err
+	}
+	for i, row := range csvAry {
+		vals := []string{row.email, row.name, row.company, row.dateTo, row.source}
+		err = writer.Write(vals)
+		if err != nil {
+			fmt.Printf("Wrining %d row: %+v, vals: %+v\n", i, row, vals)
+			return err
 		}
 	}
 	return nil
