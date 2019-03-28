@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/sha256"
 	"encoding/csv"
 	"fmt"
 	"io"
@@ -54,7 +55,7 @@ func checkSHAs(files []string) error {
 	nFiles := len(files)
 	for idx, file := range files {
 		if idx%100 == 99 {
-			fmt.Printf("Lines analysis %d/%d\n", idx+1, nFiles)
+			fmt.Printf("Files analysis %d/%d\n", idx+1, nFiles)
 		}
 		go func(c chan string, i int, fn string) {
 			data, err := ioutil.ReadFile(fn)
@@ -105,8 +106,19 @@ func checkSHAs(files []string) error {
 	nonWordRE := regexp.MustCompile(`[^\w]`)
 	chs := make(chan struct{})
 	tMap := make(map[string][][3]int)
-	var tMapMtx sync.Mutex
+	shaCache := make(map[string]string)
+	var (
+		tMapMtx  sync.Mutex
+		cacheMtx sync.Mutex
+	)
+	k := 0
+	nLines := len(lMap)
+	all := os.Getenv("ALL") != ""
 	for line, data := range lMap {
+		if k%100000 == 99999 {
+			fmt.Printf("Lines analysis %d/%d\n", k+1, nLines)
+		}
+		k++
 		go func(c chan struct{}, l string, data [][2]int) {
 			tokens := nonWordRE.Split(l, -1)
 			toks := []string{}
@@ -118,6 +130,19 @@ func checkSHAs(files []string) error {
 				toks = append(toks, token)
 			}
 			for i, token := range toks {
+				if !all {
+					cacheMtx.Lock()
+					sum, ok := shaCache[token]
+					if !ok {
+						sum = fmt.Sprintf("%x", sha256.Sum256([]byte(token)))
+						shaCache[token] = sum
+					}
+					cacheMtx.Unlock()
+					_, ok = shas[sum]
+					if !ok {
+						continue
+					}
+				}
 				tMapMtx.Lock()
 				v, ok := tMap[token]
 				if !ok {
@@ -130,7 +155,7 @@ func checkSHAs(files []string) error {
 					for _, d := range data {
 						v = append(v, [3]int{d[0], d[1], i})
 					}
-					tMap[line] = v
+					tMap[token] = v
 				}
 				tMapMtx.Unlock()
 			}
@@ -147,15 +172,15 @@ func checkSHAs(files []string) error {
 		nThreads--
 	}
 	keys := []string{}
-	for k := range lMap {
+	for k := range tMap {
 		keys = append(keys, k)
 	}
 	sort.Strings(keys)
 	for _, k := range keys {
-		data := lMap[k]
+		data := tMap[k]
 		fmt.Printf("%s: ", k)
 		for _, row := range data {
-			fmt.Printf("%s:%d ", files[row[0]], row[1]+1)
+			fmt.Printf("%s:%d:%d ", files[row[0]], row[1]+1, row[2]+1)
 		}
 		fmt.Printf("\n")
 	}
