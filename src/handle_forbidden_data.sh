@@ -15,5 +15,6 @@ find . -type f -iname "*.log" >> ./flist.txt
 find . -type f -iname "*.old" >> ./flist.txt
 find . -type f -iname "*.new" >> ./flist.txt
 find ./cncf-config -type f >> ./flist.txt
-./handle_forbidden_data.rb `cat flist.txt`
+#./handle_forbidden_data.rb `cat flist.txt`
+./check_shas `cat flist.txt`
 rm ./flist.txt
