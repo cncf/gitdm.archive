@@ -103,7 +103,8 @@ func checkSHAs(files []string) error {
 		}
 	}
 	nThreads = 0
-	nonWordRE := regexp.MustCompile(`[^\w]`)
+	//nonWordRE := regexp.MustCompile(`[^\w]`)
+	nonWordRE := regexp.MustCompile(`[\s+,;'"/\\]`)
 	chs := make(chan struct{})
 	tMap := make(map[string][][3]int)
 	shaCache := make(map[string]string)
@@ -177,13 +178,21 @@ func checkSHAs(files []string) error {
 		keys = append(keys, k)
 	}
 	sort.Strings(keys)
+	if len(keys) > 0 {
+		fmt.Printf("Found %d tokens that need to be removed:\n===========================================\n", len(keys))
+	}
 	for _, k := range keys {
 		data := tMap[k]
 		fmt.Printf("%s: ", k)
 		for _, row := range data {
 			fmt.Printf("%s:%d:%d ", files[row[0]], row[1]+1, row[2]+1)
 		}
-		fmt.Printf("\n")
+		fmt.Printf("\n\n")
+	}
+	if len(keys) > 0 {
+		fmt.Printf("===========================================\n")
+	} else {
+		fmt.Printf("Nothing to remove, all data is OK\n")
 	}
 	return nil
 }
