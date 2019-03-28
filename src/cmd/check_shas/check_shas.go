@@ -114,6 +114,7 @@ func checkSHAs(files []string) error {
 	k := 0
 	nLines := len(lMap)
 	all := os.Getenv("ALL") != ""
+	fmt.Printf("Checking %d lines\n", nLines)
 	for line, data := range lMap {
 		if k%100000 == 99999 {
 			fmt.Printf("Lines analysis %d/%d\n", k+1, nLines)
