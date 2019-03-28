@@ -16,7 +16,7 @@ def handle_forbidden_data(filenames)
   # Process files
   sha256 = Digest::SHA256.new
   added = false
-  split_exp = /[\s+,;'"]/
+  split_exp = /[\s+,;'"\/\\]/
   filenames.each do |filename|
     File.readlines(filename).each_with_index do |line, line_num|
       begin
