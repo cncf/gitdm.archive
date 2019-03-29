@@ -73,7 +73,7 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - To import manual affiliations from a google sheet save this sheet as `affiliations.csv` and then use `./affiliations.sh` script.
 - Prepend with `UPDATE=1` to only import those marked as changed: column `changes='x'`.
 - Prepend with `DBG=1` to enable verbose output.
-- After finishing import add a status line to `affiliations_import.txt` file.
+- After finishing import add a status line to `affiliations_import.txt` file and update the online spreadsheet.
 - After importing new data run `./src/burndown.sh` (from the src's parrent directory).
 - Import generated `csv/burndown.csv` data into `https://docs.google.com/spreadsheets/d/1RxEbZNefBKkgo3sJ2UQz0OCA91LDOopacQjfFBRRqhQ/edit?usp=sharing`.
-- To calculate CNCF/LF ratio use number of CNCF found from last commit - number of CNCF found from some previous commit diveded by the same ration for all actors.
+- To calculate CNCF/LF ratio use number of CNCF found from last commit - number of CNCF found from some previous commit diveded by the same ratio for all actors.
