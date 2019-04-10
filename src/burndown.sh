@@ -33,7 +33,7 @@ fi
 
 > src/burndown.csv
 
-commits=`git log --format=format:'%H;%ci' --since "$since" --until "$until"`
+commits=`git log --all --format=format:'%H;%ci' --since "$since" --until "$until"`
 last_date=''
 for commit_data in $commits
 do

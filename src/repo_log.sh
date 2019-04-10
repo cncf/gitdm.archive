@@ -13,4 +13,4 @@ cd "$1" 1>"$FN1" 2>"$FN2" || exit 2
 git fetch origin 1>>"$FN1" 2>>"$FN2"
 git reset --hard origin/master 1>>"$FN1" 2>>"$FN2"
 git pull 1>>"$FN1" 2>>"$FN2"
-git log --numstat -M 2>>"$FN2" 1> $LFN
+git log --all --numstat -M 2>>"$FN2" 1> $LFN
