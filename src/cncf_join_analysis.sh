@@ -20,8 +20,8 @@ do
   cd "$REPOS_DIR/$var"
   git config merge.renameLimit 100000
   git config diff.renameLimit 100000
-  git log --numstat -M --since "$BEFORE_DATE" --until "$JOIN_DATE" >> $FN_BEFORE
-  git log --numstat -M --since "$JOIN_DATE" --until "$AFTER_DATE" >> $FN_AFTER
+  git log --all --numstat -M --since "$BEFORE_DATE" --until "$JOIN_DATE" >> $FN_BEFORE
+  git log --all --numstat -M --since "$JOIN_DATE" --until "$AFTER_DATE" >> $FN_AFTER
   git config --unset diff.renameLimit
   git config --unset merge.renameLimit
   ls -l $FN_BEFORE $FN_AFTER

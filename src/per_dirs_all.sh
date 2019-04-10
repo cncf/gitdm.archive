@@ -6,7 +6,7 @@ cd ~/dev/go/src/k8s.io/kubernetes/
 git config merge.renameLimit 100000
 git config diff.renameLimit 100000
 echo 'Generating git log...'
-git log --numstat -M > $LOG
+git log --all --numstat -M > $LOG
 ls -l $LOG
 echo 'Analysing data...'
 ~/dev/cncf/gitdm/cncfdm.py -i $LOG -r '^vendor/|/vendor/|^Godeps/' -R -d -n -b ~/dev/cncf/gitdm/ -u -o $FN.txt -I $FN.csv > $FN.out

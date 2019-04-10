@@ -13,7 +13,7 @@ echo "Collecting revisions..."
 grep -v '^#' havana-all | \
       while read project revisions; do \
         cd ~/git/openstack/$project; \
-        git log | awk -F '[<>]' '/^Author:/ {print $2}'; \
+        git log --all | awk -F '[<>]' '/^Author:/ {print $2}'; \
       done | sort | uniq | grep -v '\((none)\|\.local\)$' > tmp
 
 echo "Building email list..."

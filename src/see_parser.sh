@@ -1,3 +1,3 @@
 #!/bin/sh
-git log -p -M | ./logparser.py | less
+git log --all -p -M | ./logparser.py | less
 

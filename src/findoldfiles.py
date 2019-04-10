@@ -16,7 +16,7 @@ import sys, os
 OriginalSin = '1da177e4c3f41524e886b7f1b8a0c1fc7321cac2'
 
 def CheckFile(file):
-    git = os.popen('git log --pretty=oneline -1 ' + file, 'r')
+    git = os.popen('git log --all --pretty=oneline -1 ' + file, 'r')
     line = git.readline()
     if line.startswith(OriginalSin):
         print file
