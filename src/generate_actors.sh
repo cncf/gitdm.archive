@@ -37,6 +37,7 @@ sudo -u postgres psql -tA virtualkubelet < ~/dev/go/src/github.com/cncf/devstats
 sudo -u postgres psql -tA kubeedge < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA brigade < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA crio < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors.txt
+sudo -u postgres psql -tA networkservicemesh < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA cncf < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA allprj < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA opencontainers < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors.txt
