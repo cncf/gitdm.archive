@@ -6,6 +6,8 @@ Company Developers list: [1](https://github.com/cncf/gitdm/blob/master/company_d
 
 Developers affiliations list: [1](https://github.com/cncf/gitdm/blob/master/developers_affiliations1.txt), [2](https://github.com/cncf/gitdm/blob/master/developers_affiliations2.txt).
 
+New affiliations are imported into DevStats about 1-2 times/month.
+
 # DevStats
 
 This repository is used as a source of affiliations for all [DevStats projects](https://devstats.cncf.io). The final [affiliations JSON](https://github.com/cncf/devstats/blob/master/github_users.json) is periodically imported by the [DevStats project](https://github.com/cncf/devstats).
