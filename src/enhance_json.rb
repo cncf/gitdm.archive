@@ -233,72 +233,76 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
     binding.pry
     uacts.each_with_index do |actor, index|
       thrs << Thread.new do
-        res = []
-        begin
-          if rpts <= 0
-            hint, rem, pts = rate_limit(gcs)
-            rpts = pts / 10
-            puts "Allowing #{rpts} calls without checking rate"
-          else
-            rpts -= 1
-            #puts "#{rpts} calls remain before next rate check"
-          end
-          e = "#{actor}!users.noreply.github.com"
-          puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}, found so far: #{actors_found}"
-          u = gcs[hint].user actor
-          login = u['login']
-          n = u['name']
-          u['email'] = e
-          u['commits'] = 0
-          v = '?'
-          if guess_by_email && email_affs.key?(e)
-            p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
-            actors_found += 1
-            v = email_affs[e]
-          else
-            if guess_by_name && name_affs.key?(n)
+        while true
+          res = []
+          begin
+            if rpts <= 0
+              hint, rem, pts = rate_limit(gcs)
+              rpts = pts / 10
+              puts "Allowing #{rpts} calls without checking rate"
+            else
+              rpts -= 1
+              #puts "#{rpts} calls remain before next rate check"
+            end
+            e = "#{actor}!users.noreply.github.com"
+            puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, email: #{e}, found so far: #{actors_found}"
+            u = gcs[hint].user actor
+            login = u['login']
+            n = u['name']
+            u['email'] = e
+            u['commits'] = 0
+            v = '?'
+            if guess_by_email && email_affs.key?(e)
               p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
               actors_found += 1
-              v = name_affs[n]
-              e2 = emails[n].keys.first
-              u['email'] = e2 unless e2 == e
+              v = email_affs[e]
             else
-              actor_not_found += 1
+              if guess_by_name && name_affs.key?(n)
+                p [e, n, emails[n], names[e], email_affs[e], name_affs[n]]
+                actors_found += 1
+                v = name_affs[n]
+                e2 = emails[n].keys.first
+                u['email'] = e2 unless e2 == e
+              else
+                actor_not_found += 1
+              end
             end
+            u['affiliation'] = v
+            puts "Got name: #{u[:name] || u['name']}, login: #{u[:login] || u['login']}"
+            h = u.to_h
+            res << h
+            if login != actor
+              u2 = u.clone
+              u2['login'] = actor
+              h2 = u2.to_h
+              res << h2
+            end
+          rescue Octokit::NotFound => err
+            puts "GitHub doesn't know actor #{actor}"
+            puts err
+            break
+          rescue Octokit::AbuseDetected => err
+            puts "Abuse #{err} for #{actor}, sleeping 30 seconds"
+            sleep 30
+            next
+          rescue Octokit::TooManyRequests => err
+            hint, td = rate_limit(gcs)
+            puts "Too many GitHub requests for #{actor}, sleeping for #{td} seconds"
+            sleep td
+            next
+          rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err
+            puts "Retryable error #{err} for #{actor}, sleeping 10 seconds"
+            sleep 10
+            next
+          rescue => err
+            puts "Uups, something bad happened for #{actor}, check `err` variable!"
+            STDERR.puts [err.class, err]
+            exit 1
           end
-          u['affiliation'] = v
-          puts "Got name: #{u[:name] || u['name']}, login: #{u[:login] || u['login']}"
-          h = u.to_h
-          res << h
-          if login != actor
-            u2 = u.clone
-            u2['login'] = actor
-            h2 = u2.to_h
-            res << h2
-          end
-        rescue Octokit::NotFound => err
-          puts "GitHub doesn't know actor #{actor}"
-          puts err
-        rescue Octokit::AbuseDetected => err
-          puts "Abuse #{err} for #{actor}, sleeping 30 seconds"
-          sleep 30
-          retry
-        rescue Octokit::TooManyRequests => err
-          hint, td = rate_limit(gcs)
-          puts "Too many GitHub requests for #{actor}, sleeping for #{td} seconds"
-          sleep td
-          retry
-        rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err
-          puts "Retryable error #{err} for #{actor}, sleeping 10 seconds"
-          sleep 10
-          retry
-        rescue => err
-          puts "Uups, something bad happened for #{actor}, check `err` variable!"
-          STDERR.puts [err.class, err]
-          exit 1
-          end
-          res
+          break
         end
+        res
+      end # end of thread
       while thrs.length >= n_thrs
         tw = ThreadsWait.new(thrs.to_a)
         t = tw.next_wait
