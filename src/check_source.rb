@@ -12,7 +12,7 @@ def check_source(json_file)
   data.each do |row|
     s = row['source']
     a = row['affiliation']
-    if s == 'notfound' && a != 'NotFound'
+    if s == 'notfound' && !['NotFound', '?', '', '(Unknown)', nil].include?(a)
       row['source'] = 'config'
       puts "No longer not found: #{row['login']}/#{row['email']}: '#{a}'"
     end
