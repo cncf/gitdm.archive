@@ -78,7 +78,7 @@ def maintainers(maintainers_file, users_file, config_file)
             first_email = em
           end
           if affs_list != first_affs
-            STDERR.puts "#{em} affiliations mismatch:\nfirst:   '#{first_affs}' email: #{first_email}\ncurrent: '#{affs_list}' email: #{em}\nEmail list: #{ems}, login: #{login}, maintainer company: #{company}, use first, current, maintainer f/c/m?"
+            STDERR.puts "#{em} affiliations mismatch:\nfirst:   '#{first_affs}' email: #{first_email}\ncurrent: '#{affs_list}' email: #{em}\nEmail list: #{ems}, login: #{login}, maintainer company: #{company}, use first, current, maintainer, skip f/c/m/s?"
             upd = mgetc
             if upd == 'c' || upd == 'C'
               STDERR.puts 'Updated to current'
@@ -90,6 +90,7 @@ def maintainers(maintainers_file, users_file, config_file)
               first_affs = company
               first_email = 'M'
             end
+            break if upd == 's' || upd == 'S'
           end
           if final[em] != company
             STDERR.puts "#{em} final affiliation '#{final[em]}' mismatch: '#{affs_list}', should be: #{company}\nemail list: #{ems}, login: #{login}, add to delete list?"
