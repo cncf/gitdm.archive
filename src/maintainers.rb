@@ -8,13 +8,14 @@ require './mgetc'
 
 def maintainers(maintainers_file, users_file, config_file)
   dbg = !ENV['DBG'].nil?
+  onlynew = !ENV['ONLYNEW'].nil?
   # Process maintainers file
   affs = {}
   affs_names = {}
   CSV.foreach(maintainers_file, headers: true) do |row|
     next if is_comment row
     h = row.to_h
-    next if h['company'].nil?
+    next if h['company'].nil? || h['login'].nil?
     c = h['company'].strip
     l = h['login'].strip.downcase
     n = h['name'].strip
@@ -64,6 +65,7 @@ def maintainers(maintainers_file, users_file, config_file)
   del_affs = ''
   affs.each do |login, company|
     if emails.key?(login)
+      next if onlynew
       ems = emails[login]
       first_affs = nil
       first_email = nil
