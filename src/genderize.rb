@@ -127,7 +127,6 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
     end
   end
   newj = []
-  n = 0
   f = 0
   ca = 0
   mtx = Concurrent::ReadWriteLock.new
@@ -136,6 +135,7 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
   unless ENV['FROM'].nil?
     from = ENV['FROM'].to_i
   end
+  n = from
   thrs = Set[]
   n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   data.each_with_index do |user, idx|
