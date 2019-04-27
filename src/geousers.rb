@@ -261,9 +261,14 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   ca = 0
   mtx = Concurrent::ReadWriteLock.new
   all_n = data.length
+  from = 0
+  unless ENV['FROM'].nil?
+    from = ENV['FROM'].to_i
+  end
   thrs = Set[]
   n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   data.each_with_index do |user, idx|
+    next if idx < from
     thrs << Thread.new(user) do |usr|
       login = usr['login']
       email = usr['email']
