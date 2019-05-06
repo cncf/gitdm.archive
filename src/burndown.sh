@@ -1,6 +1,6 @@
 #!/bin/bash
 function cleanup {
-  git checkout master src/cncf-config/email-map src/github_users.json src/actors.txt src/actors_cncf.txt
+  git checkout master src/cncf-config/email-map src/github_users.json src/actors.txt src/actors_cncf.txt src/actors_lf.txt
   rm -rf cncf-config github_users.json err out 2>/dev/null
 }
 
@@ -12,9 +12,9 @@ function analysis {
   #found=`grep -E '[^\s!]+![^\s!]+' "$2" | wc -l`
   #echo "$1,$found,$notfound,$notchecked" >> src/burndown.csv
   echo "Analysing date $1, files $2 $3"
-  git checkout $4 src/actors.txt src/actors_cncf.txt 1>/dev/null 2>/dev/null || git checkout src/actors.txt src/actors_cncf.txt 1>/dev/null 2>/dev/null
+  git checkout $4 src/actors.txt src/actors_cncf.txt src/actors_lf.txt 1>/dev/null 2>/dev/null || git checkout src/actors.txt src/actors_cncf.txt src/actors_lf.txt 1>/dev/null 2>/dev/null
   echo -n "$1," >> src/burndown.csv
-  ruby src/calc_affs_stats.rb "$2" "$3" src/actors.txt src/actors_cncf.txt >> src/burndown.csv
+  ruby src/calc_affs_stats.rb "$2" "$3" src/actors.txt src/actors_cncf.txt src/actors_lf.txt >> src/burndown.csv
 }
 
 if [ -z "$1" ]
@@ -79,7 +79,7 @@ do
 done
 
 cat src/burndown.csv | sort | uniq > out
-echo 'Date,All Not Found,All Found,All Not Checked,CNCF Not Found,CNCF Found,CNCF Not Checked' > src/burndown.csv
+echo 'Date,All Not Found,All Found,All Not Checked,CNCF Not Found,CNCF Found,CNCF Not Checked,LF Not Found,LF Found,LF Not Checked' > src/burndown.csv
 cat out >> src/burndown.csv
 rm out
 

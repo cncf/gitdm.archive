@@ -1,7 +1,7 @@
 require 'pry'
 require 'json'
 
-def calc_affs_stats(email_map_file, json_file, all_actors_file, cncf_actors_file)
+def calc_affs_stats(email_map_file, json_file, all_actors_file, cncf_actors_file, lf_actors_file)
 
   # Process actors file: it is a "," separated list of GitHub logins
   actors_data = File.read all_actors_file
@@ -16,6 +16,14 @@ def calc_affs_stats(email_map_file, json_file, all_actors_file, cncf_actors_file
   cncf_actors = {}
   actors_array.each do |actor|
     cncf_actors[actor.downcase.strip] = true
+  end
+
+  # For actors LF this is "\n" separated data
+  actors_data = File.read lf_actors_file
+  actors_array = actors_data.split("\n").map(&:strip)
+  lf_actors = {}
+  actors_array.each do |actor|
+    lf_actors[actor.downcase.strip] = true
   end
 
   # parse current email-map, store data in 'eaffs'
@@ -76,6 +84,9 @@ def calc_affs_stats(email_map_file, json_file, all_actors_file, cncf_actors_file
   fc = 0
   nfc = 0
   ncc = 0
+  fl = 0
+  nfl = 0
+  ncl = 0
   eaffs.each do |e, a|
     l = nil
     unless logins.key?(e)
@@ -88,23 +99,26 @@ def calc_affs_stats(email_map_file, json_file, all_actors_file, cncf_actors_file
       nf += 1
       nfa += 1 if all_actors.key?(l)
       nfc += 1 if cncf_actors.key?(l)
+      nfl += 1 if lf_actors.key?(l)
     elsif a == ['nc']
       nc += 1
       nca += 1 if all_actors.key?(l)
       ncc += 1 if cncf_actors.key?(l)
+      ncl += 1 if lf_actors.key?(l)
     else
       f += a.length
       fa += a.length if all_actors.key?(l)
       fc += a.length if cncf_actors.key?(l)
+      fl += a.length if lf_actors.key?(l)
     end
   end
 
-  puts "#{nfa},#{fa},#{nca},#{nfc},#{fc},#{ncc}"
+  puts "#{nfa},#{fa},#{nca},#{nfc},#{fc},#{ncc},#{nfl},#{fl},#{ncl}"
 end
 
-if ARGV.size < 4
-  puts "Missing arguments: email_map_file json_file all_actors_file cncf_actors_file (cncf-config/email-map github_users.json actors.txt actors_cncf.txt)"
+if ARGV.size < 5
+  puts "Missing arguments: email_map_file json_file all_actors_file cncf_actors_file (cncf-config/email-map github_users.json actors.txt actors_cncf.txt actors_lf.txt)"
   exit(1)
 end
 
-calc_affs_stats(ARGV[0], ARGV[1], ARGV[2], ARGV[3])
+calc_affs_stats(ARGV[0], ARGV[1], ARGV[2], ARGV[3], ARGV[4])
