@@ -1,4 +1,6 @@
 #!/bin/bash
+cp actors_gql.txt actors_cncf.txt
+./scrub.rb actors_cncf.txt
 sudo -u postgres psql -tA gha < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql > actors_cncf.txt
 sudo -u postgres psql -tA prometheus < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors_cncf.txt
 sudo -u postgres psql -tA opentracing < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors_cncf.txt

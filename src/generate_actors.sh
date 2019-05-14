@@ -1,5 +1,6 @@
 #!/bin/bash
-cp actors_lf.txt actors.txt
+cat actors_lf.txt actors_gql.txt > actors.txt
+cat actors.txt | sort | uniq > out && mv out actors.txt
 ./scrub.rb actors.txt
 sudo -u postgres psql -tA gha < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors.txt
 sudo -u postgres psql -tA prometheus < ~/dev/go/src/github.com/cncf/devstats/util_sql/actors.sql >> actors.txt
