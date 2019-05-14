@@ -4,31 +4,32 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 
 1. If you generated new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`
 2. To generate `git.log` file and make sure it includes all orgs used by `devstats` use cncf/devstats\'s `GHA2DB_PROJECTS_OVERRIDE="+cncf,+opencontainers,+istio,+spinnaker,+knative,+linux,+zephyr" PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 ./get_repos` and then final command line it generates. Make it `uniq`.
-3. Update `repos.txt` to contain all repositories returned by the above command. Update `all_repos.sh` to include data from CNCF, CDF and LF.
-4. To run `cncf/gitdm` on a generated `git.log` file run: `cd src/; ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -A -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`. New approach is `./mtp` but it don't have a way (yet) to deal with the same emails mapped into different user names from different per-thread buckets.
-5. To generate human readable text affiliation files: first run: `./enchance_all_affs.sh` then: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`.
-6. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too. If you need LF actors, run: `AWS_PROFILE=... KUBECONFIG=... ./generate_actors_lf.sh` prior to running `./generate_actors.sh`.
-7. Consider `./ghusers_cached.sh` or `./ghusers.sh` (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points). Sometimes you should just run `./ghusers.sh` without cache.
-8. Recommended: `ghusers_partially_cached.sh 2> errors.txt` will refetch repos metadata and commits since last fetched and get users data from `github_users.json` so you can save a lot of API points. You can prepend with `NCPUS=N` to override autodetecting number of CPU cores available.
-9. To copy source type from previous JSON version do `./copy_source.sh`
-10. Run `./company_names_mapping.sh` to fix typical company names spell errors, lower/upper case etc. Update `company-names-mapping` before running this (with a new typos/correlations data from the last 3 steps).
-11. To update (enhance) `github_users.json` with new affiliations `./enhance_json.sh`. If you run `ghusers` you may need to update `skip_github_logins.txt` with new broken GitHub logins found. This is optional if you already have an enhanced json. You can prepend with `NCPUS=N` to override autodetecting number of CPU cores available.
-12. To merge with previous JSON use: `./merge_jsons.sh`.
-13. To merge multiple GitHub logins data (for example propagate known affiliation to unknown or not found on the same GitHub login) run: `./merge_github_logins.sh`.
-14. Because this can find new affiliations you can now use `./import_from_github_users.sh` to import back from `github_users.json` and then `./lower_unique.sh cncf-config/email-map` and restart from step 4. This uses `company-names-mapping` file to import from GitHub `company` field.
-15. Run `./correlations.sh` and examine its output `correlations.txt` to try to normalize company names and remove common suffixes like Ltd., Corp. and downcase/upcase differences.
-16. Run `./check_spell` for fuzziness/spell check errors finder (uses Levenshtein distance to find bugs).
-17. Run `./lookup_json.sh` and examine its output JSONs - those GitHub profiles have some useful data directly available - this will save you some manual research work.
-18. *ALWAYS* before any commit to GitHub run: `./handle_forbidden_data.sh` to remove any forbiden affiliations, please also see `FORBIDDEN_DATA.md`.
-19. You can use `./clear_affiliations_in_json.sh` to clear all affiliations on a generated `github_users.json`.
-20. To make json unique, call `./unique_json.rb github_users.json`. To sort JSON by commits, login, email use: `./sort_json.rb github_users.json`.
-21. You should run genderize/geousers (if needed) before the next step.
-22. You can create smaller final json for `cncf/devstats` using `./delete_json_fields.sh github_users.json; ./check_source.rb github_users.json; ./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/github.com/cncf/devstats/github_users.json`.
-23. To generate final `unknowns.csv` manual research task file run: `./gen_aff_task.rb unknowns.txt`. You can also generate all actors `./gen_aff_task.rb alldevs.txt`. You can prepend with `ONLY_GH=1` to skip entries without GitHub. You can prepend with `ONLY_EMP=1` to skip entries with any affiliation already set.
-24. To manually edit all affiliations related files: edit `cncf-config/email-map all.txt all.csv all_affs.csv github_users.json stripped.json ../developers_affiliations.txt ../company_developers.txt affiliations.csv`
-25. To add all possible entries from `github_users.json` to `cncf-config/email-map` use :`github_users_to_map.sh`. This is optional.
-26. Finally copy `github_users.json` to `github_users.old`. You can check if JSON fileds are correct via `./check_json_fields.sh github_users.json`, `./check_json_fields.sh stripped.json small`.
-27. If any file displays error with 'Invalid UTF-8' encoding, scrub it using Ruby tool: `./scrub.rb filename`.
+3. To get repos from CDF use: `PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_PROJECTS_YAML=cdf_projects.yaml get_repos`.
+4. Update `repos.txt` to contain all repositories returned by the above command. Update `all_repos.sh` to include data from CNCF, CDF and LF.
+5. To run `cncf/gitdm` on a generated `git.log` file run: `cd src/; ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -A -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`. New approach is `./mtp` but it don't have a way (yet) to deal with the same emails mapped into different user names from different per-thread buckets.
+6. To generate human readable text affiliation files: first run: `./enchance_all_affs.sh` then: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`.
+7. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too. If you need LF actors, run: `AWS_PROFILE=... KUBECONFIG=... ./generate_actors_lf.sh` prior to running `./generate_actors.sh`.
+8. Consider `./ghusers_cached.sh` or `./ghusers.sh` (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points). Sometimes you should just run `./ghusers.sh` without cache.
+9. Recommended: `ghusers_partially_cached.sh 2> errors.txt` will refetch repos metadata and commits since last fetched and get users data from `github_users.json` so you can save a lot of API points. You can prepend with `NCPUS=N` to override autodetecting number of CPU cores available.
+10. To copy source type from previous JSON version do `./copy_source.sh`
+11. Run `./company_names_mapping.sh` to fix typical company names spell errors, lower/upper case etc. Update `company-names-mapping` before running this (with a new typos/correlations data from the last 3 steps).
+12. To update (enhance) `github_users.json` with new affiliations `./enhance_json.sh`. If you run `ghusers` you may need to update `skip_github_logins.txt` with new broken GitHub logins found. This is optional if you already have an enhanced json. You can prepend with `NCPUS=N` to override autodetecting number of CPU cores available.
+13. To merge with previous JSON use: `./merge_jsons.sh`.
+14. To merge multiple GitHub logins data (for example propagate known affiliation to unknown or not found on the same GitHub login) run: `./merge_github_logins.sh`.
+15. Because this can find new affiliations you can now use `./import_from_github_users.sh` to import back from `github_users.json` and then `./lower_unique.sh cncf-config/email-map` and restart from step 4. This uses `company-names-mapping` file to import from GitHub `company` field.
+16. Run `./correlations.sh` and examine its output `correlations.txt` to try to normalize company names and remove common suffixes like Ltd., Corp. and downcase/upcase differences.
+17. Run `./check_spell` for fuzziness/spell check errors finder (uses Levenshtein distance to find bugs).
+18. Run `./lookup_json.sh` and examine its output JSONs - those GitHub profiles have some useful data directly available - this will save you some manual research work.
+19. *ALWAYS* before any commit to GitHub run: `./handle_forbidden_data.sh` to remove any forbiden affiliations, please also see `FORBIDDEN_DATA.md`.
+20. You can use `./clear_affiliations_in_json.sh` to clear all affiliations on a generated `github_users.json`.
+21. To make json unique, call `./unique_json.rb github_users.json`. To sort JSON by commits, login, email use: `./sort_json.rb github_users.json`.
+22. You should run genderize/geousers (if needed) before the next step.
+23. You can create smaller final json for `cncf/devstats` using `./delete_json_fields.sh github_users.json; ./check_source.rb github_users.json; ./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/github.com/cncf/devstats/github_users.json`.
+24. To generate final `unknowns.csv` manual research task file run: `./gen_aff_task.rb unknowns.txt`. You can also generate all actors `./gen_aff_task.rb alldevs.txt`. You can prepend with `ONLY_GH=1` to skip entries without GitHub. You can prepend with `ONLY_EMP=1` to skip entries with any affiliation already set.
+25. To manually edit all affiliations related files: edit `cncf-config/email-map all.txt all.csv all_affs.csv github_users.json stripped.json ../developers_affiliations.txt ../company_developers.txt affiliations.csv`
+26. To add all possible entries from `github_users.json` to `cncf-config/email-map` use :`github_users_to_map.sh`. This is optional.
+27. Finally copy `github_users.json` to `github_users.old`. You can check if JSON fileds are correct via `./check_json_fields.sh github_users.json`, `./check_json_fields.sh stripped.json small`.
+28. If any file displays error with 'Invalid UTF-8' encoding, scrub it using Ruby tool: `./scrub.rb filename`.
 
 
 # Example command generated by `cncf/devstats/get_repos`:
