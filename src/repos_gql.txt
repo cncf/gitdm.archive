@@ -1,0 +1,19 @@
+[
+  'facebook/graphql',
+  'graphql/codemirror-graphql',
+  'graphql/dataloader',
+  'graphql/express-graphql',
+  'graphql/f',
+  'graphql/foundation',
+  'graphql/graphiql',
+  'graphql/graphql-js',
+  'graphql/graphql-language-service',
+  'graphql/graphql-relay-js',
+  'graphql/graphql-spec',
+  'graphql/graphql-wg',
+  'graphql/graphql.github.io',
+  'graphql/libgraphqlparser',
+  'graphql/swapi-graphql',
+]
+Final command:
+./all_repos_log.sh /root/devstats_repos/facebook/* /root/devstats_repos/graphql/*
