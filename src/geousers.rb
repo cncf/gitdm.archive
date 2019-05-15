@@ -16,6 +16,7 @@ $miss = 0
 $gstats_mtx = Concurrent::ReadWriteLock.new
 
 $gsqls = {}
+$gdbg = false
 
 # Thread safe!
 def check_stmt(c, stmt_name, args)
@@ -202,6 +203,7 @@ def generate_global_cache(cache)
 end
 
 def geousers(json_file, json_file2, json_cache, backup_freq)
+  $gdbg = !ENV['DBG'].nil?
   freq = backup_freq.to_i
   # set to false to retry localization lookups where location is set but no country/tz is found
   always_cache = true
@@ -290,6 +292,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       else
         cid = nil
         if (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
+          puts "Querying #{login}, #{email}, #{loc}" if $gdbg
           cid, tz = get_cid loc
           mtx.with_write_lock do
             l += 1
