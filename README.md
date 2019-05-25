@@ -67,12 +67,12 @@ Final report:
 
 Pull requests are welcome.
 
-Our mapping is never complete, please see config files in [Config files](https://github.com/cncf/gitdm/blob/master/cncf-config/).
+Our mapping is never complete, please see config files in [Config files](https://github.com/cncf/gitdm/tree/master/src/cncf-config).
 
-File [email-map](https://github.com/cncf/gitdm/blob/master/cncf-config/email-map) is a direct email to the employer mapping.
+File [email-map](https://github.com/cncf/gitdm/blob/master/src/cncf-config/email-map) is a direct email to the employer mapping.
 
 There is also a long list of unknown emails. For that, scroll to the section called `Developers with unknown affiliation`:
-in [all.txt](https://github.com/cncf/gitdm/blob/master/all.txt)
+in [all.txt](https://github.com/cncf/gitdm/blob/master/src/all.txt)
 
 All of those were searched for in various sources but we were not able to find their affiliation.
 
