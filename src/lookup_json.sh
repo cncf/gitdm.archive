@@ -6,6 +6,9 @@ ruby lookup_json.rb github_users.json affiliation '/^\(Unknown\)$/' all_unknown.
 rm -f unknown_with_linkedin.json unknown_with_linkedin.date
 ruby lookup_json.rb github_users.json ':any?, blog, location, bio' '/linkedin/i' affiliation '/^\(Unknown\)$/' unknown_with_linkedin.json
 ./filter_task.rb unknowns.txt unknown_with_linkedin.json unknowns_with_linkedin.txt
+rm -f with_linkedin.json with_linkedin.date
+ruby lookup_json.rb github_users.json ':any?, blog, location, bio' '/linkedin/i' with_linkedin.json
+./filter_task.rb unknowns.txt with_linkedin.json with_linkedin.txt
 # Devs with Unknown affiliation having blog property non-empty
 rm -f unknown_with_blog.json unknown_with_blog.dat
 ruby lookup_json.rb github_users.json blog '/[^\s]+/' affiliation '/^\(Unknown\)$/' unknown_with_blog.json
@@ -24,6 +27,9 @@ ruby lookup_json.rb github_users.json 'commits.to_s' '/^2$/' affiliation '/^\(Un
 rm -f unknown_with_social.json unknown_with_social.dat
 ruby lookup_json.rb github_users.json '*' '/facebook|twitter|linkedin|instagram|crunchbase/i' affiliation '/^\(Unknown\)$/' unknown_with_social.json
 ./filter_task.rb unknowns.txt unknown_with_social.json unknowns_with_social.txt
+rm -f with_social.json with_social.dat
+ruby lookup_json.rb github_users.json '*' '/facebook|twitter|linkedin|instagram|crunchbase/i' with_social.json
+./filter_task.rb unknowns.txt with_social.json with_social.txt
 # Unknown with any facebook, twitter links in any field
 rm -f unknown_with_at.json unknown_with_at.dat
 ruby lookup_json.rb github_users.json ':any?,name,company,blog,bio' '/@/' affiliation '/^\(Unknown\)$/' unknown_with_at.json
