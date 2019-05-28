@@ -13,6 +13,7 @@ ruby lookup_json.rb github_users.json blog '/[^\s]+/' affiliation '/^\(Unknown\)
 # Devs with Unknown affiliation having location & name property non-empty
 rm -f unknown_with_location_and_name.json unknown_with_location_and_name.dat
 ruby lookup_json.rb github_users.json 'location,name' '/[^\s]+/' affiliation '/^\(Unknown\)$/' unknown_with_location_and_name.json
+./filter_task.rb unknowns.txt unknown_with_location_and_name.json unknowns_with_location_and_name.txt
 # 2 committers with Unknown affiliation having location & name property non-empty
 rm -f unknown_with_location_and_name2.json unknown_with_location_and_name2.dat
 ruby lookup_json.rb github_users.json 'location,name' '/[^\s]+/' 'commits.to_s' '/^2$/' affiliation '/^\(Unknown\)$/' unknown_with_location_and_name2.json
@@ -21,16 +22,20 @@ rm -f unknown_2_committers.json unknown_2_committers.dat
 ruby lookup_json.rb github_users.json 'commits.to_s' '/^2$/' affiliation '/^\(Unknown\)$/' unknown_2_committers.json
 # Unknown with any facebook, twitter links in any field
 rm -f unknown_with_social.json unknown_with_social.dat
-ruby lookup_json.rb github_users.json '*' '/facebook|twitter|linkedin/i' affiliation '/^\(Unknown\)$/' unknown_with_social.json
+ruby lookup_json.rb github_users.json '*' '/facebook|twitter|linkedin|instagram|crunchbase/i' affiliation '/^\(Unknown\)$/' unknown_with_social.json
+./filter_task.rb unknowns.txt unknown_with_social.json unknowns_with_social.txt
 # Unknown with any facebook, twitter links in any field
 rm -f unknown_with_at.json unknown_with_at.dat
 ruby lookup_json.rb github_users.json ':any?,name,company,blog,bio' '/@/' affiliation '/^\(Unknown\)$/' unknown_with_at.json
+./filter_task.rb unknowns.txt unknown_with_at.json unknowns_with_at.txt
 # With any bio, blog, location, name
 rm -f unknown_with_any_data.json unknown_with_any_data.dat
 ruby lookup_json.rb github_users.json ':any?,name,blog,bio,location' '/[^\s]+/' affiliation '/^\(Unknown\)$/' unknown_with_any_data.json
+./filter_task.rb unknowns.txt unknown_with_any_data.json unknowns_with_any_data.txt
 # With email other than noreply
 rm -f unknown_with_searchable_email.json unknown_with_searchable_email.dat
 ruby lookup_json.rb github_users.json ':none?,email' '/noreply/' affiliation '/^\(Unknown\)$/' unknown_with_searchable_email.json
+./filter_task.rb unknowns.txt unknown_with_searchable_email.json unknowns_with_searchable_email.txt
 # Gmailers
 rm -f unknown_gmail.json unknown_gmail.dat
 ruby lookup_json.rb github_users.json 'email' '/gmail/' affiliation '/^\(Unknown\)$/' unknown_gmail.json
