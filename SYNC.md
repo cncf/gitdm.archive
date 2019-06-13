@@ -68,6 +68,7 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - Create `geonames` database via: `sudo -u postgres createdb geonames`, `sudo -u postgres psql -f geonames.sql`. Table details in `geonames.info`
 - Unzip `allCountries.zip` and run `PG_PASS=... ./geodata.sh allCountries.tsv` - this will populate the DB.
 - Create indices on columns to speedup localization: `sudo -u postgres psql -f geonames_idx.sql`.
+- Make sure that you don't have any `nil` values saved in any `*_cache.json` file (those files are also saved when you `CTRL^C` running enchancement).
 - If this is a first geousers run create `geousers_cache.json` via `cp empty.json geousers_cache.json`.
 - To use cache it is best to have `stripped.json` from the previous run. See step 22.
 - Enchance `github_users.json` via `PG_PASS=... ./geousers.sh github_users.json stripped.json geousers_cache.json 2000`. It will add `country_id` and `tz` fields.
