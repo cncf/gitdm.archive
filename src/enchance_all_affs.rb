@@ -64,44 +64,28 @@ def enchance_all_affs(affs_file, json_file, old_affs_file)
   end
 
   # Parse old affs file
-  # XXX: start
-  ln = 1
-  email_affs = {}
-  email_data = {}
+  # email,name,company,date_to,source
+  oln = 1
+  old_email_data = {}
   begin
-    CSV.foreach(affs_file, headers: true) do |row|
+    CSV.foreach(old_affs_file, headers: true) do |row|
       next if is_comment row
       h = row.to_h
       e = email_encode(h['email'].strip)
-      c = h['company'].strip
       n = h['name'].strip
+      c = h['company'].strip
       d = h['date_to'].strip
       s = (h['source'] || '').strip
 
-      email_affs[e] = [] unless email_affs.key?(e)
-      if d && d.length > 0
-        email_affs[e] << "#{c} < #{d}"
-      else
-        email_affs[e] << c
-      end
-
       # needed to add new rows
-      email_data[[e, c, d]] = [n, s]
+      old_email_data[[e, c, d]] = [n, s]
 
-      ln += 1
+      oln += 1
     end
   rescue => e
-    puts "CSV error on line #{ln}: #{e}"
+    puts "CSV error on line #{oln}: #{e}"
     binding.pry
   end
-  email_affs.each do |email, affs|
-    saffs = affs.join(', ')
-    suaffs = affs.uniq.join(', ')
-    if saffs != suaffs
-      puts "Warning: email '#{email}' has non-unique affiliations: #{affs}: '#{saffs}' != '#{suaffs}'"
-    end
-  end
-  # XXX: end
 
   # Parse JSON (only login emails connections)
   data = JSON.parse File.read json_file
@@ -167,6 +151,14 @@ def enchance_all_affs(affs_file, json_file, old_affs_file)
       # "email","name","company","date_to","source"
       csv_data << [em, n, c, d, s]
     end
+  end
+
+  # Now check old affs CSV: all-affs.old
+  #
+  old_email_data.each do |ecd, ns|
+    e, c, d = ecd
+    n, s = ns
+    binding.pry
   end
   fn = 'new_affs.csv'
   hdr = %w(email name company date_to source)
