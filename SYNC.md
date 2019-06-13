@@ -20,8 +20,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 8. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too:
 - LF actors: `AWS_PROFILE=... KUBECONFIG=... ./generate_actors_lf.sh`.
 - CNCF, CDF and GraphQL actors: `KUBECONFIG=... ./generate_actors_nonlf.sh`.
-- `generate_actors_all.sh`, `generate_actors_cncf.sh`.
-- `AWS_PROFILE=... KUBECONFIG=... ./generate_actors_gql.sh` prior to running `./generate_actors.sh` and `./generate_actors_cncf.sh`.
+- Concat: `./generate_actors_all.sh`, `./generate_actors_cncf.sh`.
 9. Consider `./ghusers_cached.sh` or `./ghusers.sh` (if you run this, then copy result json somewhere and get 0-committers from previous version to save GH API points). Sometimes you should just run `./ghusers.sh` without cache.
 10. Recommended: `ghusers_partially_cached.sh 2> errors.txt` will refetch repos metadata and commits since last fetched and get users data from `github_users.json` so you can save a lot of API points. You can prepend with `NCPUS=N` to override autodetecting number of CPU cores available.
 11. To copy source type from previous JSON version do `./copy_source.sh`
