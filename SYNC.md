@@ -12,7 +12,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 5. Top get LF repos use:
 - `AWS_PROFILE=... KUBECONFIG=... helm2 install --name devstats-debug ./devstats-helm --set skipSecrets=1,skipPVs=1,skipProvisions=1,skipCrons=1,skipGrafanas=1,skipServices=1,skipNamespace=1,bootstrapPodName=debug,bootstrapCommand=sleep,bootstrapCommandArgs={36000s}`.
 - `AWS_PROFILE=... KUBECONFIG=... ../devstats-k8s-lf/util/pod_shell.sh debug`.
-- `ONLY='iovisor mininet opennetworkinglab opensecuritycontroller openswitch p4lang openbmp tungstenfabric cord' GHA2DB_PROPAGATE_ONLY_VAR=1 GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_PROJECTS_YAML=k8s/projects.yaml GHA2DB_LOCAL=1 get_repos`.
+- `ONLY='iovisor mininet opennetworkinglab opensecuritycontroller openswitch p4lang openbmp tungstenfabric cord' GHA2DB_PROPAGATE_ONLY_VAR=1 GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_LOCAL=1 get_repos`.
 - `AWS_PROFILE=... KUBECONFIG=... helm2 delete devstats-debug`.
 - `AWS_PROFILE=... KUBECONFIG=... kubectl delete po debug`.
 6. Update `repos.txt` to contain all repositories returned by the above commands. Update `all_repos.sh` to include data from CNCF, CDF, LF and GraphQL.
