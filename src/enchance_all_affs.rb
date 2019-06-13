@@ -103,7 +103,7 @@ def enchance_all_affs(affs_file, json_file, old_affs_file)
   new_affs = {}
   conflict = 0
   email_affs.each do |email, affs|
-      next if ['NotFound', '(Unknown)'].include?(affs.first)
+    next if ['NotFound', '(Unknown)'].include?(affs.first)
     unless logins.key?(email)
       puts "JSON have no email '#{email}', skipping" if dbg && !silent
       next
@@ -154,12 +154,22 @@ def enchance_all_affs(affs_file, json_file, old_affs_file)
   end
 
   # Now check old affs CSV: all-affs.old
-  #
   old_email_data.each do |ecd, ns|
     e, c, d = ecd
+    next if ['NotFound', '(Unknown)'].include?(c)
     n, s = ns
-    binding.pry
+    unless email_affs.key?(e) || new_affs.key?(e)
+      if logins.key?(e)
+        ems = emails[logins[e]]
+        ems.each do |em|
+          next if em == e
+          p [c, e, em, new_affs[e], new_affs[em], email_affs[e], email_affs[em]]
+        end
+      end
+      csv_data << [e, n, c, d, s]
+    end
   end
+
   fn = 'new_affs.csv'
   hdr = %w(email name company date_to source)
   CSV.open(fn, 'w', headers: hdr, force_quotes: true) do |csv|
@@ -170,7 +180,7 @@ def enchance_all_affs(affs_file, json_file, old_affs_file)
 end
 
 if ARGV.size < 3
-    puts "Missing arguments: affs_file json_file (all_affs.csv github_users.json all_affs.old)"
+  puts "Missing arguments: affs_file json_file (all_affs.csv github_users.json all_affs.old)"
   exit(1)
 end
 
