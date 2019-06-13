@@ -3,13 +3,18 @@
 Make sure that you don't have different case email duplicates in `src/cncf-config/email-map`: `cd src`, `./lower_unique.sh cncf-config/email-map`.
 
 1. If you generated new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`.
-2. To generate `git.log` file and make sure it includes all orgs used by `devstats` use cncf/devstats\'s `GHA2DB_PROJECTS_OVERRIDE="+cncf,+opencontainers,+istio,+spinnaker,+knative,+linux,+zephyr" PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 ./get_repos` and then final command line it generates. Make it `uniq`.
-
-
-
-3. To get repos from CDF use: `PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_PROJECTS_YAML=cdf_projects.yaml get_repos`.
-4. To get GraphQL repos use: `AWS_PROFILE=... KUBECONFIG=... helm install ./devstats-helm-graphql --set skipSecrets=1,skipPVs=1,skipProvisions=1,skipCrons=1,skipGrafanas=1,skipServices=1,skipPostgres=1,skipIngress=1,bootstrapPodName=debug,bootstrapCommand=sleep,bootstrapCommandArgs={36000s}`, `AWS_PROFILE=... KUBECONFIG=... ../devstats-k8s-lf/util/pod_shell.sh debug`, `GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_PROJECTS_YAML=gql/projects.yaml GHA2DB_LOCAL=1 get_repos`, `AWS_PROFILE=... KUBECONFIG=... kubectl delete po debug`.
-5. Top get LF repos use: `AWS_PROFILE=... KUBECONFIG=... helm install ./devstats-helm --set skipSecrets=1,skipPVs=1,skipProvisions=1,skipCrons=1,skipGrafanas=1,skipServices=1,bootstrapPodName=debug,bootstrapCommand=sleep,bootstrapCommandArgs={36000s}`, `AWS_PROFILE=... KUBECONFIG=... ../devstats-k8s-lf/util/pod_shell.sh debug`, `ONLY='iovisor mininet opennetworkinglab opensecuritycontroller openswitch p4lang openbmp tungstenfabric cord' GHA2DB_PROPAGATE_ONLY_VAR=1 GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_PROJECTS_YAML=k8s/projects.yaml GHA2DB_LOCAL=1 get_repos`, `AWS_PROFILE=... KUBECONFIG=... kubectl delete po debug`.
+2. To generate `git.log` file and make sure it includes all repos used by `devstats`. Use the final command line it generates. Make it `uniq`:
+- `helm install devstats-test-debug ./devstats-helm --set skipSecrets=1,skipPVs=1,skipBackupsPV=1,skipBackups=1,skipProvisions=1,skipCrons=1,skipGrafanas=1,skipServices=1,skipIngress=1,skipStatic=1,skipNamespaces=1,skipPostgres=1,projectsOverride='+cncf\,+opencontainers\,+istio\,+knative\,+zephyr\,+linux',bootstrapPodName=debug,bootstrapCommand=sleep,bootstrapCommandArgs={36000s}`.
+- `../devstats-k8s-lf/util/pod_shell.sh debug`.
+- `GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_LOCAL=1 get_repos`.
+- `helm delete devstats-test-debug`.
+- `kubectl delete pod debug`.
+5. Top get LF repos use:
+- `AWS_PROFILE=... KUBECONFIG=... helm2 install --name devstats-debug ./devstats-helm --set skipSecrets=1,skipPVs=1,skipProvisions=1,skipCrons=1,skipGrafanas=1,skipServices=1,skipNamespace=1,bootstrapPodName=debug,bootstrapCommand=sleep,bootstrapCommandArgs={36000s}`.
+- `AWS_PROFILE=... KUBECONFIG=... ../devstats-k8s-lf/util/pod_shell.sh debug`.
+- `ONLY='iovisor mininet opennetworkinglab opensecuritycontroller openswitch p4lang openbmp tungstenfabric cord' GHA2DB_PROPAGATE_ONLY_VAR=1 GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_PROJECTS_YAML=k8s/projects.yaml GHA2DB_LOCAL=1 get_repos`.
+- `AWS_PROFILE=... KUBECONFIG=... helm2 delete devstats-debug`.
+- `AWS_PROFILE=... KUBECONFIG=... kubectl delete po debug`.
 6. Update `repos.txt` to contain all repositories returned by the above commands. Update `all_repos.sh` to include data from CNCF, CDF, LF and GraphQL.
 7. To run `cncf/gitdm` on a generated `git.log` file run: `cd src/; ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -A -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`. New approach is `./mtp` but it don't have a way (yet) to deal with the same emails mapped into different user names from different per-thread buckets.
 8. To generate human readable text affiliation files: first run: `./enchance_all_affs.sh` then: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`.
