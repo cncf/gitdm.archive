@@ -11,7 +11,7 @@ def mismatch(ary1, ary2)
   s1 != s2
 end
 
-def enchance_all_affs(affs_file, json_file)
+def enchance_all_affs(affs_file, json_file, old_affs_file)
   # dbg: set to true to have very verbose output
   # silent: set to skip almost all output 
   dbg = !ENV['DBG'].nil?
@@ -22,6 +22,8 @@ def enchance_all_affs(affs_file, json_file)
   # Get rid of invalid UTF-8 chars
   contents = File.read(affs_file).scrub
   File.write(affs_file, contents)
+  contents = File.read(old_affs_file).scrub
+  File.write(old_affs_file, contents)
 
   # Parse affiliations file
   ln = 1
@@ -60,6 +62,46 @@ def enchance_all_affs(affs_file, json_file)
       puts "Warning: email '#{email}' has non-unique affiliations: #{affs}: '#{saffs}' != '#{suaffs}'"
     end
   end
+
+  # Parse old affs file
+  # XXX: start
+  ln = 1
+  email_affs = {}
+  email_data = {}
+  begin
+    CSV.foreach(affs_file, headers: true) do |row|
+      next if is_comment row
+      h = row.to_h
+      e = email_encode(h['email'].strip)
+      c = h['company'].strip
+      n = h['name'].strip
+      d = h['date_to'].strip
+      s = (h['source'] || '').strip
+
+      email_affs[e] = [] unless email_affs.key?(e)
+      if d && d.length > 0
+        email_affs[e] << "#{c} < #{d}"
+      else
+        email_affs[e] << c
+      end
+
+      # needed to add new rows
+      email_data[[e, c, d]] = [n, s]
+
+      ln += 1
+    end
+  rescue => e
+    puts "CSV error on line #{ln}: #{e}"
+    binding.pry
+  end
+  email_affs.each do |email, affs|
+    saffs = affs.join(', ')
+    suaffs = affs.uniq.join(', ')
+    if saffs != suaffs
+      puts "Warning: email '#{email}' has non-unique affiliations: #{affs}: '#{saffs}' != '#{suaffs}'"
+    end
+  end
+  # XXX: end
 
   # Parse JSON (only login emails connections)
   data = JSON.parse File.read json_file
@@ -135,9 +177,9 @@ def enchance_all_affs(affs_file, json_file)
   puts "#{new_affs.length}/#{csv_data.length} new affiliations written to #{fn}, you can append them to #{affs_file}"
 end
 
-if ARGV.size < 2
-  puts "Missing arguments: affs_file json_file (all_affs.csv github_users.json)"
+if ARGV.size < 3
+    puts "Missing arguments: affs_file json_file (all_affs.csv github_users.json all_affs.old)"
   exit(1)
 end
 
-enchance_all_affs(ARGV[0], ARGV[1])
+enchance_all_affs(ARGV[0], ARGV[1], ARGV[2])
