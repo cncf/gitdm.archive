@@ -23,7 +23,7 @@ do
     if [ -z "$NOPULL" ]
     then
       echo "reset $o/$r"
-      git reset --hard || echo "failed pull $o/$r"
+      git reset --hard || echo "failed reset $o/$r"
       echo "pull $o/$r"
       git pull || echo "failed pull $o/$r"
     fi
