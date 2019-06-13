@@ -22,8 +22,10 @@ do
     cd "$r" || exit 3
     if [ -z "$NOPULL" ]
     then
-      echo "pull $o/$r" || echo "failed pull $o/$r"
-      git pull
+      echo "reset $o/$r"
+      git reset --hard || echo "failed pull $o/$r"
+      echo "pull $o/$r"
+      git pull || echo "failed pull $o/$r"
     fi
   else
     if [ -z "$NOCLONE" ]
