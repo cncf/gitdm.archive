@@ -2,7 +2,7 @@
 
 Make sure that you don't have different case email duplicates in `src/cncf-config/email-map`: `cd src`, `./lower_unique.sh cncf-config/email-map`.
 
-1. If you generated new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`
+1. If you generated new email-map using `./import_affs.sh`, then: `mv email-map cncf-config/email-map`.
 2. To generate `git.log` file and make sure it includes all orgs used by `devstats` use cncf/devstats\'s `GHA2DB_PROJECTS_OVERRIDE="+cncf,+opencontainers,+istio,+spinnaker,+knative,+linux,+zephyr" PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 ./get_repos` and then final command line it generates. Make it `uniq`.
 3. To get repos from CDF use: `PG_PASS=... GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_PROJECTS_YAML=cdf_projects.yaml get_repos`.
 4. To get GraphQL repos use: `AWS_PROFILE=... KUBECONFIG=... helm install ./devstats-helm-graphql --set skipSecrets=1,skipPVs=1,skipProvisions=1,skipCrons=1,skipGrafanas=1,skipServices=1,skipPostgres=1,skipIngress=1,bootstrapPodName=debug,bootstrapCommand=sleep,bootstrapCommandArgs={36000s}`, `AWS_PROFILE=... KUBECONFIG=... ../devstats-k8s-lf/util/pod_shell.sh debug`, `GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_PROJECTS_YAML=gql/projects.yaml GHA2DB_LOCAL=1 get_repos`, `AWS_PROFILE=... KUBECONFIG=... kubectl delete po debug`.
