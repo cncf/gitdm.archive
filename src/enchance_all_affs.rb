@@ -180,7 +180,7 @@ def enchance_all_affs(affs_file, json_file, old_affs_file)
 end
 
 if ARGV.size < 3
-  puts "Missing arguments: affs_file json_file (all_affs.csv github_users.json all_affs.old)"
+    puts "Missing arguments: affs_file json_file all_affs.old (all_affs.csv github_users.json all_affs.old)"
   exit(1)
 end
 
