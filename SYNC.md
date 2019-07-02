@@ -15,7 +15,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 - `ONLY='iovisor mininet opennetworkinglab opensecuritycontroller openswitch p4lang openbmp tungstenfabric cord' GHA2DB_PROPAGATE_ONLY_VAR=1 GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_LOCAL=1 get_repos`.
 - `AWS_PROFILE=... KUBECONFIG=... helm2 delete --purge devstats-debug`.
 - `AWS_PROFILE=... KUBECONFIG=... kubectl delete po debug`.
-6. Update `repos.txt` to contain all repositories returned by the above commands. Update `all_repos.sh` to include data from CNCF, CDF, LF and GraphQL.
+6. Update `repos.txt` to contain all repositories returned by the above commands. Update `all_repos.sh` to include data from CNCF, CDF, LF and GraphQL. Run `./all_repos.sh`.
 7. To run `cncf/gitdm` on a generated `git.log` file run: `cd src/; cp all_affs.csv all_affs.old; ~/dev/alt/gitdm/src/cncfdm.py -i git.log -r "^vendor/|/vendor/|^Godeps/" -R -n -b ./ -t -z -d -D -A -U -u -o all.txt -x all.csv -a all_affs.csv > all.out`. New approach is `./mtp` but it don't have a way (yet) to deal with the same emails mapped into different user names from different per-thread buckets.
 8. Run: `./enchance_all_affs.sh`.
 9. If updating via `ghusers.sh` or `ghusers_cached.sh` (step 6) - run `generate_actors.sh` too:
