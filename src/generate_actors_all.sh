@@ -7,3 +7,4 @@ tr '\n' ',' < actors.tmp > out
 rm actors.tmp
 mv out actors.txt
 truncate -s-1 actors.txt
+./scrub.rb actors.txt
