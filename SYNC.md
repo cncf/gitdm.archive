@@ -80,7 +80,7 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - If this is a first genderize run create `genderize_cache.json` via `cp empty.json genderize_cache.json`.
 - Enchance `github_users.json` via `API_KEY=... ./genderize.sh github_users.json stripped.json genderize_cache.json 2000`. It will add `sex` and `sex_prob` fields.
 - You can skip `API_KEY=...` but only 1000 gender lookups/day are allowed then.
-- Copy enhanced json to devstats: `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/devstats/github_users.json`
+- Copy enhanced json to devstats: `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/github.com/cncf/devstats/github_users.json`
 - Import new json on devstats using `./import_affs` tool.
 
 
