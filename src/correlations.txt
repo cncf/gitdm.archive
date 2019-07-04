@@ -1,24 +1,40 @@
-StackRox is similar to Stack Rox
 FreshTracks is similar to Fresh Tracks
+BrightRoll is similar to Bright Roll
+Nordic Semiconductor ASA is similar to Nordic Semiconductor
 OpenWide is similar to Open Wide
+StarHub is similar to Star Hub
 Those companies are unmappable to ASCII only symbols
 [["中科院计算技术研究所", 2], ["中科曙光信息技术有限公司", 2], ["//////", 2], ["嘀嗒出行", 2], ["?", 7], ["МТС", 1], ["ОАО ТриА", 1], ["НИИ АА", 1], ["패스트캠퍼스", 2], ["徳を積む", 1], ["倫理的に妥当な箱", 1], ["中佑", 1], ["Networks", 2], ["Красное и белое", 2], ["Росбезопасность", 1], ["Software Company", 2], ["الصحيفة الآقتصادية", 1], ["Consulting", 2], ["北京大学人民医院", 1], ["うんこ", 2], ["堆糖", 1], ["НГС", 1], ["欢聚时代", 1], ["饿了么", 1], ["豆瓣", 1], ["IO", 2], ["Network Business Systems", 1], ["カブク", 1], ["스마일게이트", 1], ["Технологика", 1], ["株式会社ドヴァ", 1], ["快仓", 1], ["Эвотор", 1], ["Ттц останкино", 1], ["✕✕✕✕✕", 1], ["社会大学", 2], ["上海易路软件有限公司", 1], ["СИБРУС", 1], ["北京天威诚信电子商务服务有限公司", 1], ["ООО Фирма АНКАД", 2], ["Cloud Security", 1], ["实地地产", 1], ["天津南大通用数据技术股份有限公司", 1], ["株式会社アニメイトラボ", 1], [".АПСМАЙЛ. LTD", 2], ["中兴通讯股份有限公司", 1], ["江苏海隆软件技术有限公司", 1]]
+Those companies map into the same key 'independent':
+[["Independent", 2702], ["INdependent", 1]]
+Those companies map into the same key 'aliba':
+[["Alibaba", 69], ["alibaba", 2]]
 Those companies map into the same key 'ca':
-[["CA", 2], ["CA Technologies", 8]]
+[["CA", 3], ["CA Technologies", 8]]
 Those companies map into the same key 'mckinsey':
-[["McKinsey&Company", 3], ["McKinsey & Company", 1]]
+[["McKinsey&Company", 3], ["McKinsey & Company", 2]]
 Those companies map into the same key 'wipro':
-[["Wipro", 9], ["Wipro Limited", 1]]
+[["Wipro", 10], ["Wipro Limited", 1]]
 Those companies map into the same key 'udacity':
 [["Udacity", 2], ["udacity", 2]]
+Those companies map into the same key 'f5':
+[["F5 Networks", 1], ["F5Networks", 5]]
+Those companies map into the same key 'postmates':
+[["Postmates", 5], ["postmates", 2]]
+Those companies map into the same key 'pivotal':
+[["Pivotal", 301], ["Pivotal Software", 2]]
 Those companies map into the same key 'asml':
 [["Asml", 1], ["ASML", 2]]
 Those companies map into the same key 'ama':
 [["Amagroup", 2], ["AMA", 1]]
+Those companies map into the same key 'sigma':
+[["Sigma", 4], ["SIGMA", 2]]
 Those companies map into the same key 'elits':
 [["Elits", 2], ["ELITS", 3]]
 Those companies map into the same key 'rancher':
-[["Rancher Labs", 5], ["Rancher", 17]]
+[["Rancher", 21], ["Rancher Labs", 2]]
+Those companies map into the same key 'yoctol':
+[["Yoctol", 2], ["YOCTOL", 1]]
 Those companies map into the same key 'scania':
 [["Scania", 3], ["Scania Group", 2]]
 Those companies map into the same key 'dino':
@@ -26,7 +42,7 @@ Those companies map into the same key 'dino':
 Those companies map into the same key 'cube':
 [["Cube Networks", 2], ["CUBE", 1]]
 Those companies map into the same key 'didi':
-[["DiDi", 2], ["DiDI", 1]]
+[["DiDi", 2], ["DiDI", 1], ["didi", 1]]
 Those companies map into the same key 'hello2morrow':
 [["Hello2morrow", 1], ["hello2morrow", 2]]
 Those companies map into the same key 'tower':
@@ -37,14 +53,18 @@ Those companies map into the same key 'iweb':
 [["iWebSolutions", 2], ["iWeb", 5]]
 Those companies map into the same key 'arista':
 [["Arista Networks", 19], ["Arista", 1]]
+Those companies map into the same key 'veritas':
+[["Veritas", 15], ["Veritas Technologies", 1]]
 Those companies map into the same key 'x moonshot factory':
 [["X the moonshot factory", 1], ["X, the moonshot factory", 3]]
 Those companies map into the same key 'empear':
 [["Empear AB", 2], ["Empear", 1]]
 Those companies map into the same key 'webstep':
-[["Webstep AB", 1], ["Webstep", 2]]
+[["Webstep AB", 1], ["Webstep", 3]]
+Those companies map into the same key 'workday':
+[["Workday", 9], ["workday", 2]]
 Those companies map into the same key 'hcl':
-[["HCL", 14], ["HCL Technologies", 1]]
+[["HCL", 15], ["HCL Technologies", 3]]
 Those companies map into the same key 'denx':
 [["DENX Software Engineering", 15], ["DENX", 1]]
 Those companies map into the same key 'bmc':
@@ -60,7 +80,7 @@ Those companies map into the same key 'extreme':
 Those companies map into the same key 'andes':
 [["ANDES", 1], ["Andes", 1]]
 Those companies map into the same key 'liferay':
-[["Liferay", 4], ["Liferay Cloud", 2]]
+[["Liferay", 6], ["Liferay Cloud", 2]]
 Those companies map into the same key 'amarula':
 [["Amarula Solutions", 4], ["Amarula", 2]]
 Those companies map into the same key 'oliver':
@@ -70,25 +90,27 @@ Those companies map into the same key 'city':
 Those companies map into the same key 'radius':
 [["Network Radius", 1], ["Radius Networks", 1]]
 Those companies map into the same key 'juniper':
-[["Juniper Networks", 41], ["Juniper", 1]]
+[["Juniper Networks", 44], ["Juniper", 1]]
 Those companies map into the same key 'enea':
 [["ENEA AB", 8], ["Enea", 1]]
 Those companies map into the same key 'espressif':
-[["Espressif", 3], ["Espressif Systems", 7]]
+[["Espressif", 5], ["Espressif Systems", 9]]
 Those companies map into the same key 'imaginatn':
 [["Imagination", 11], ["Imagination Technologies", 1]]
 Those companies map into the same key 'assa loy':
 [["ASSA ABLOY", 2], ["Assa Abloy", 1]]
 Those companies map into the same key 'everis':
-[["Everis", 5], ["everis", 5]]
+[["Everis", 5], ["everis", 9]]
 Those companies map into the same key 'enghouse':
 [["Enghouse Networks", 1], ["Enghouse", 1]]
+Those companies map into the same key 'cumulus':
+[["Cumulus Networks", 7], ["Cumulus", 3]]
 Those companies map into the same key 'retail':
 [["Retailio", 1], ["Retail", 1]]
 Those companies map into the same key 'neo':
 [["Neo", 1], ["NEO-Technologies", 1]]
 Those companies map into the same key 'sina':
-[["Sina", 26], ["SINA", 1]]
+[["Sina", 25], ["SINA", 1]]
 Those companies map into the same key 'avi':
 [["Avi Networks", 3], ["AVI Limited", 1]]
 Those companies map into the same key 'kakao':
@@ -96,13 +118,15 @@ Those companies map into the same key 'kakao':
 Those companies map into the same key 'akka':
 [["Akka Technologies", 2], ["Akka", 2]]
 Those companies map into the same key 'b1':
-[["B1 Systems GmbH", 5], ["B1 Systems", 6]]
+[["B1 Systems GmbH", 6], ["B1 Systems", 6]]
 Those companies map into the same key 'connect':
 [["Connect", 1], ["Connect Group", 1]]
 Those companies map into the same key 'content':
 [["FinancialContent", 1], ["Content", 1]]
 Those companies map into the same key 'vainu':
 [["Vainu.io", 2], ["Vainu", 1]]
+Those companies map into the same key 'openebs':
+[["OpenEBS", 5], ["openebs", 1]]
 Those companies map into the same key 'opendaylight':
 [["OpenDaylight", 1], ["OpenDayLight", 1]]
 Those companies map into the same key 'volkswagen':
@@ -110,19 +134,21 @@ Those companies map into the same key 'volkswagen':
 Those companies map into the same key 'ubiquiti':
 [["Ubiquiti", 1], ["Ubiquiti Networks", 1], ["Ubiquiti Network", 1]]
 Those companies map into the same key 'check point':
-[["Check Point", 5], ["Check Point Software", 1]]
+[["Check Point", 5], ["Check Point Software Technologies", 1], ["Check Point Software", 1]]
 Those companies map into the same key 'fusn':
 [["Fusion-io", 6], ["Fusion Electronics", 1]]
 Those companies map into the same key 'acquia':
 [["ACQUIA", 2], ["Acquia", 1]]
 Those companies map into the same key 'mediatek':
-[["MediaTek", 11], ["Mediatek", 1]]
+[["MediaTek", 12], ["Mediatek", 1]]
 Those companies map into the same key 'ravello':
 [["Ravello Systems", 12], ["Ravello", 1]]
 Those companies map into the same key 'inria':
-[["Inria", 21], ["INRIA", 4]]
+[["Inria", 21], ["INRIA", 5]]
 Those companies map into the same key 'nexus':
 [["NEXUS", 1], ["Nexus", 2]]
+Those companies map into the same key 'harman':
+[["HARMAN", 2], ["Harman", 1], ["HARMAN International", 1]]
 Those companies map into the same key 'uw':
 [["UW IT", 1], ["UW", 1]]
 Those companies map into the same key 'container':
@@ -138,11 +164,13 @@ Those companies map into the same key 'arris':
 Those companies map into the same key 'bolcom':
 [["bol.com", 2], ["Bol.com", 3]]
 Those companies map into the same key 'bytedance':
-[["ByteDance", 4], ["Bytedance", 1]]
+[["ByteDance", 6], ["Bytedance", 1]]
 Those companies map into the same key 'startup':
-[["Startup", 11], ["Start-Up", 2], ["Start-UP", 1], ["Start-up", 1]]
+[["Startup", 11], ["Start-UP", 4], ["Start-up", 1]]
 Those companies map into the same key 'cit':
 [["Cit", 1], ["CI&T", 2]]
+Those companies map into the same key 'move':
+[["Move Networks", 1], ["Move", 4]]
 Those companies map into the same key 'casa':
 [["Casaba", 1], ["Casa Systems", 2]]
 Those companies map into the same key 'rsa':
@@ -151,6 +179,10 @@ Those companies map into the same key 'n':
 [["NIO", 2], ["ION", 1]]
 Those companies map into the same key 'naver':
 [["Naver", 2], ["NAVER", 2]]
+Those companies map into the same key 'sela':
+[["Sela Group", 3], ["Sela", 1]]
+Those companies map into the same key 'b enterprise':
+[["ABB Enterprise Software", 1], ["ABB Enterprise", 1]]
 Those companies map into the same key 'equinix':
 [["EQuinix", 1], ["Equinix", 1]]
 Those companies map into the same key 'viavi':
@@ -159,10 +191,14 @@ Those companies map into the same key 'it':
 [["itdesign GmbH", 2], ["IT Research", 1]]
 Those companies map into the same key 'visteon':
 [["Visteon", 2], ["Visteon Corporation", 1]]
-Those companies map into the same key 'cumulus':
-[["Cumulus", 2], ["Cumulus Networks", 5]]
 Those companies map into the same key 'time':
 [["Time Inc.", 1], ["Time", 1]]
+Those companies map into the same key 'lighthouse':
+[["Lighthouse", 1], ["Lighthouse Systems", 1]]
+Those companies map into the same key 'isys':
+[["iSYS", 1], ["ISYS Software", 1]]
+Those companies map into the same key 'hudsons bay':
+[["Hudsons Bay", 2], ["Hudson's Bay Company", 1]]
 Those companies map into the same key 'stealth mode startup':
 [["Stealth Mode Startup Company", 2], ["Stealth Mode Startup", 3]]
 Those companies map into the same key 'kiratech':
@@ -170,11 +206,9 @@ Those companies map into the same key 'kiratech':
 Those companies map into the same key 'obsidian':
 [["Obsidiansystems", 1], ["Obsidian Research", 3], ["Obsidian Solutions", 1]]
 Those companies map into the same key 'cloudius':
-[["Cloudius Systems", 2], ["Cloudius", 1]]
-Those companies map into the same key 'sela':
-[["Sela Group", 1], ["Sela", 1]]
+[["Cloudius Systems", 3], ["Cloudius", 1]]
 Those companies map into the same key 'davidson':
-[["Davidson Consulting", 1], ["Davidson", 1]]
+[["Davidson Consulting", 1], ["Davidson", 3]]
 Those companies map into the same key 'paytm':
 [["Paytm Labs", 3], ["Paytm", 2]]
 Those companies map into the same key 'nice':
@@ -197,18 +231,20 @@ Those companies map into the same key 'man':
 [["Man Group", 1], ["Man", 3]]
 Those companies map into the same key 'cnex':
 [["CNEX Labs", 1], ["CNEX", 2]]
+Those companies map into the same key 'aruba':
+[["Aruba Networks", 1], ["Aruba", 1]]
 Those companies map into the same key 'blue origin':
 [["Blue Origin", 2], ["BLUE ORIGIN", 1]]
 Those companies map into the same key 'gravitatnal':
 [["Gravitational", 3], ["gravitational", 1]]
-Those companies map into the same key 'harman':
-[["Harman", 1], ["HARMAN International", 1]]
 Those companies map into the same key 'ml':
 [["Mabl", 2], ["mLab", 1]]
 Those companies map into the same key 'eze':
 [["Eze", 1], ["Eze Software", 1]]
 Those companies map into the same key 'lancom':
 [["LANCOM Systems", 2], ["LANCOM", 1]]
+Those companies map into the same key 'novomatic':
+[["Novomatic", 2], ["NOVOMATIC", 1]]
 Those companies map into the same key 'one':
 [["One", 1], ["One Cloud Consulting", 2]]
 Those companies map into the same key 'diebold nixdorf':
@@ -219,18 +255,22 @@ Those companies map into the same key 'e':
 [["Econsultancy", 1], ["eGroup", 1], ["E-Solutions", 1]]
 Those companies map into the same key 'transitn':
 [["Transition", 1], ["Transition Technologies", 6]]
+Those companies map into the same key 'genius':
+[["Cloud Genius", 1], ["The Genius", 2], ["Genius", 1]]
 Those companies map into the same key 'ge':
 [["GE", 2], ["GE Healthcare", 3]]
 Those companies map into the same key 'desy':
 [["Desy", 1], ["DESY", 1]]
 Those companies map into the same key 'j':
 [["Jcommerce", 1], ["Jio", 1]]
+Those companies map into the same key 'zillow':
+[["Zillow Group", 1], ["Zillow", 2]]
 Those companies map into the same key 'avast':
 [["Avast", 1], ["AVAST Software", 1]]
 Those companies map into the same key 'man7org':
 [["man7.org", 1], ["Man7.org", 1]]
-Those companies map into the same key 'openebs':
-[["OpenEBS", 2], ["openebs", 1]]
+Those companies map into the same key 'kudelski':
+[["Kudelski Security", 3], ["Kudelski", 1]]
 Those companies map into the same key 'eucalyptus':
 [["Eucalyptus Systems", 4], ["Eucalyptus", 1]]
 Those companies map into the same key 'pebble':
@@ -247,18 +287,19 @@ Those companies map into the same key 'vector':
 [["Vector", 1], ["Vector Software", 1]]
 Similar mappings > 81.0% similar:
 [93.0, [["AZ Informática", 1]], [["AZ Informática Ltda", 1]], "az informtica <> az informticaa"]
-[90.0, [["BoCardless", 1]], [["GoCardless", 5]], "bocardless <> gocardless"]
+[90.0, [["BoCardless", 1]], [["GoCardless", 7]], "bocardless <> gocardless"]
 [90.0, [["Optimizel", 1]], [["Optimizely", 1]], "optimizel <> optimizely"]
 [89.0, [["ElementAI", 2]], [["Elemental", 2]], "elementai <> elemental"]
 [89.0, [["Eversight", 3]], [["Oversight", 1]], "eversight <> oversight"]
 [89.0, [["GE Global Research", 1]], [["Ve Global", 1]], "ge global <> ve global"]
-[89.0, [["Platform", 3]], [["Platform9", 19]], "platform <> platform9"]
+[89.0, [["Platform", 4]], [["Platform9", 19]], "platform <> platform9"]
 [88.0, [["7digital", 1]], [["Digital Labs", 1]], "7digital <> digital"]
 [88.0, [["7digital", 1]], [["eDigitalResearch", 1]], "7digital <> edigital"]
 [88.0, [["Adaptec", 9]], [["AdapTechSolutions", 2]], "adaptec <> adaptech"]
 [88.0, [["CSquared", 2]], [["DABSquared", 1]], "csquared <> dsquared"]
-[88.0, [["Cybercom", 6]], [["cyber:con", 1]], "cybercom <> cybercon"]
+[88.0, [["Cybercom", 7]], [["cyber:con", 1]], "cybercom <> cybercon"]
 [88.0, [["Digital Labs", 1]], [["eDigitalResearch", 1]], "digital <> edigital"]
+[88.0, [["Element Financial", 2]], [["Elementl", 1]], "element <> elementl"]
 [88.0, [["Finsight", 2]], [["Insighta", 2]], "finsight <> insighta"]
 [88.0, [["Infinite", 3]], [["Zinfinit", 3]], "infinite <> zinfinit"]
 [88.0, [["Mojatata", 1]], [["Mojatatu", 2]], "mojatata <> mojatatu"]
@@ -269,11 +310,11 @@ Similar mappings > 81.0% similar:
 [86.0, [["Amesys", 2]], [["NameSys", 6]], "amesys <> namesys"]
 [86.0, [["Anchor", 4]], [["Anchore", 5]], "anchor <> anchore"]
 [86.0, [["Andela", 2]], [["Candela", 1]], "andela <> candela"]
-[86.0, [["Cumulus", 2], ["Cumulus Networks", 5]], [["Kumulus", 4]], "cumulus <> kumulus"]
+[86.0, [["Cumulus Networks", 7], ["Cumulus", 3]], [["Kumulus", 4]], "cumulus <> kumulus"]
 [86.0, [["Datalep", 2]], [["Datalex", 1]], "datalep <> datalex"]
-[86.0, [["Delphi", 2]], [["Delphix", 5]], "delphi <> delphix"]
+[86.0, [["Delphi", 5]], [["Delphix", 6]], "delphi <> delphix"]
 [86.0, [["Directi", 1]], [["Directv", 2]], "directi <> directv"]
-[86.0, [["Eamsung", 1]], [["Samsung", 533]], "eamsung <> samsung"]
+[86.0, [["Eamsung", 1]], [["Samsung", 536]], "eamsung <> samsung"]
 [86.0, [["Eclips", 1]], [["Eclipse", 2]], "eclips <> eclipse"]
 [86.0, [["Eymform", 2]], [["Symform", 4]], "eymform <> symform"]
 [86.0, [["F-Secure Corporation", 1], ["F-Secure", 2]], [["Secure Com", 1]], "fsecure <> securem"]
@@ -288,16 +329,17 @@ Similar mappings > 81.0% similar:
 [86.0, [["Streamlio", 2]], [["Xstream", 2]], "streaml <> xstream"]
 [86.0, [["Switch", 5]], [["uSwitch", 7]], "switch <> uswitch"]
 [86.0, [["Turbina", 1]], [["Turbine Labs", 8]], "turbina <> turbine"]
-[86.0, [["Updater", 1]], [["Updates", 2]], "updater <> updates"]
+[86.0, [["Updater", 1]], [["Updates", 3]], "updater <> updates"]
 [86.0, [["Ustream", 6]], [["Xstream", 2]], "ustream <> xstream"]
 [86.0, [["Virtua SA", 1]], [["Virtual", 1]], "virtua <> virtual"]
 [86.0, [["Virtusa", 1]], [["VirtusLab", 1]], "virtusa <> virtusl"]
 [86.0, [["Vulcan", 1]], [["Vulcano Security", 1]], "vulcan <> vulcano"]
+[85.0, [["ABB Enterprise Software", 1], ["ABB Enterprise", 1]], [["HP Enterprise", 7]], "b enterprise <> hp enterprise"]
 [85.0, [["Ping Identify", 1]], [["Ping Identity", 2]], "ping identify <> ping identity"]
 [83.0, [["3logic Systems", 1]], [["Logic Solutions", 2]], "3logic <> logic"]
 [83.0, [["3logic Systems", 1]], [["QLogic", 119]], "3logic <> qlogic"]
-[83.0, [["3Shape", 2]], [["Shape", 1]], "3shape <> shape"]
-[83.0, [["3Shape", 2]], [["Shaper", 1]], "3shape <> shaper"]
+[83.0, [["3Shape", 1]], [["Shape", 1]], "3shape <> shape"]
+[83.0, [["3Shape", 1]], [["Shaper", 1]], "3shape <> shaper"]
 [83.0, [["Adaption", 1]], [["Adap.tv", 1]], "adaptn <> adaptv"]
 [83.0, [["Adaption", 1]], [["Hadapt", 1]], "adaptn <> hadapt"]
 [83.0, [["Adap.tv", 1]], [["Hadapt", 1]], "adaptv <> hadapt"]
@@ -313,20 +355,22 @@ Similar mappings > 81.0% similar:
 [83.0, [["Change", 1]], [["Chango", 2]], "change <> chango"]
 [83.0, [["China Cloud", 9]], [["Chinac", 3]], "china <> chinac"]
 [83.0, [["Coding", 1]], [["Koding", 2]], "coding <> koding"]
-[83.0, [["Datera", 5]], [["MATERA", 1]], "datera <> matera"]
+[83.0, [["Datera", 7]], [["MATERA", 1]], "datera <> matera"]
 [83.0, [["Demond Media", 1]], [["Vimond Media Solutions", 1]], "demond media <> vimond media"]
 [83.0, [["Dumana", 1]], [["Design&Humana", 1]], "dumana <> humana"]
 [83.0, [["Eight", 1]], [["Eight-s", 1]], "eight <> eights"]
 [83.0, [["EMnify", 2]], [["Omnify", 1]], "emnify <> omnify"]
 [83.0, [["Envision&Company", 1]], [["InVision", 1], ["InVision AG", 2]], "envisn <> invisn"]
 [83.0, [["E*TRADE", 1]], [["Tradeo", 1]], "etrade <> tradeo"]
+[83.0, [["Fiser", 1]], [["Fiserv", 2]], "fiser <> fiserv"]
 [83.0, [["Icron", 1]], [["Micron", 2]], "icron <> micron"]
 [83.0, [["Infuse", 1]], [["Infusion", 2]], "infuse <> infusn"]
 [83.0, [["InTechnology", 1]], [["Qtechnology", 1]], "intechnology <> qtechnology"]
-[83.0, [["Intel", 2336]], [["Intellab", 1]], "intel <> intell"]
-[83.0, [["Intel", 2336]], [["Mintel", 2]], "intel <> mintel"]
+[83.0, [["Intel", 2339]], [["Intellab", 1]], "intel <> intell"]
+[83.0, [["Intel", 2339]], [["Mintel", 2]], "intel <> mintel"]
 [83.0, [["Intellab", 1]], [["Mintel", 2]], "intell <> mintel"]
-[83.0, [["iRobot", 1]], [["(Robots)", 16]], "irobot <> robots"]
+[83.0, [["iRobot", 1]], [["MRobot", 4]], "irobot <> mrobot"]
+[83.0, [["iRobot", 1]], [["(Robots)", 18]], "irobot <> robots"]
 [83.0, [["ItSoftGroup", 2]], [["RTSoft", 2]], "itsoft <> rtsoft"]
 [83.0, [["Krave-n", 1]], [["Raven", 2]], "kraven <> raven"]
 [83.0, [["LeafLabs", 2]], [["Leafly", 2]], "leafls <> leafly"]
@@ -334,7 +378,9 @@ Similar mappings > 81.0% similar:
 [83.0, [["McAfec", 1]], [["McAfee", 2]], "mcafec <> mcafee"]
 [83.0, [["MercadoLibre", 3]], [["MwrcadoLibre", 2]], "mercadolibre <> mwrcadolibre"]
 [83.0, [["Micro", 2]], [["Micron", 2]], "micro <> micron"]
+[83.0, [["MRobot", 4]], [["(Robots)", 18]], "mrobot <> robots"]
 [83.0, [["Nimbi S/A", 1]], [["Nimbis Services", 2]], "nimbi <> nimbis"]
+[83.0, [["Nordic Semiconductor", 49]], [["Nordic Semiconductor ASA", 2]], "nordic semiconductor <> nordic semiconductor asa"]
 [83.0, [["npower", 1]], [["Opower", 1]], "npower <> opower"]
 [83.0, [["Pager", 2]], [["Pagero", 4]], "pager <> pagero"]
 [83.0, [["Pixable", 2]], [["Pixlee", 1]], "pixle <> pixlee"]
@@ -348,7 +394,7 @@ Similar mappings > 81.0% similar:
 [83.0, [["Shape", 1]], [["Shaper", 1]], "shape <> shaper"]
 [83.0, [["Sintef", 2]], [["Sintez", 1]], "sintef <> sintez"]
 [83.0, [["Smart", 1]], [["SmartX", 2]], "smart <> smartx"]
-[83.0, [["SMWare", 1]], [["VMware", 597]], "smware <> vmware"]
+[83.0, [["SMWare", 1]], [["VMware", 621]], "smware <> vmware"]
 [83.0, [["SPIDEO", 1]], [["Spidex", 2]], "spideo <> spidex"]
 [83.0, [["Stock", 1]], [["StockX", 1]], "stock <> stockx"]
 [83.0, [["Streak", 1]], [["Stream.io", 2]], "streak <> stream"]
@@ -358,10 +404,8 @@ Similar mappings > 81.0% similar:
 [83.0, [["Zenos", 2]], [["Zenoss", 2]], "zenos <> zenoss"]
 [82.0, [["FollContact", 1]], [["FullContact", 1]], "follcontact <> fullcontact"]
 [82.0, [["HXT Semiconductor", 1]], [["RDC Semiconductor", 4]], "hxt semiconductor <> rdc semiconductor"]
-[82.0, [["Independemt", 1]], [["Independent", 2610]], "independemt <> independent"]
-[82.0, [["Independemt", 1]], [["Independet", 1]], "independemt <> independet"]
-[82.0, [["Independent", 2610]], [["Independet", 1]], "independent <> independet"]
+[82.0, [["Independent", 2702], ["INdependent", 1]], [["Independet", 2]], "independent <> independet"]
 [82.0, [["Informatica", 3]], [["Informatix", 1]], "informatica <> informatix"]
 [82.0, [["PostFinance", 2]], [["ZestFinance", 2]], "postfinance <> zestfinance"]
-[81.0, [["Marvell Semiconductor", 3]], [["Marwell Semiconductor", 1]], "marvell semiconductor <> marwell semiconductor"]
-[81.0, [["Open Networking Foundation", 6]], [["Open Networking Foundation (ONF)", 11]], "open ing foundatn <> open ing foundatn onf"]
+[81.0, [["Marvell Semiconductor", 5]], [["Marwell Semiconductor", 1]], "marvell semiconductor <> marwell semiconductor"]
+[81.0, [["Open Networking Foundation", 7]], [["Open Networking Foundation (ONF)", 11]], "open ing foundatn <> open ing foundatn onf"]
