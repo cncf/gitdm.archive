@@ -23,9 +23,17 @@ end
 k = {}
 u = {}
 known.each do |c, n|
-  k[c] = n if c <= 10
+  k[c] = n if c == 0
+  if c <= 5
+    k[5] = 0 unless k.key?(5)
+    k[5] += n
+  end
+  if c > 5 && c <= 10
+    k[10] = 0 unless k.key?(10)
+    k[10] += n
+  end
   if c > 10 && c <= 15
-    k[15] = 0 unless k.key?(11)
+    k[15] = 0 unless k.key?(15)
     k[15] += n
   end
   if c > 15 && c <= 20
@@ -51,7 +59,15 @@ known.each do |c, n|
 end
 
 unknown.each do |c, n|
-  u[c] = n if c <= 10
+  u[c] = n if c == 0
+  if c <= 5
+    u[5] = 0 unless u.key?(5)
+    u[5] += n
+  end
+  if c > 5 && c <= 10
+    u[10] = 0 unless u.key?(10)
+    u[10] += n
+  end
   if c > 10 && c <= 15
     u[15] = 0 unless u.key?(15)
     u[15] += n
@@ -79,11 +95,11 @@ unknown.each do |c, n|
 end
 sk = ''
 k.keys.sort.reverse.each do |ky|
-  sk += k[ky].to_s + ";"
+  sk += k[ky].to_s + ","
 end
-print sk.chomp(';')+"\n"
+print sk.chomp(',')+"\n"
 su = ''
 u.keys.sort.reverse.each do |k|
-  su += u[k].to_s + ";"
+  su += u[k].to_s + ","
 end
-STDERR.print su.chomp(';')+"\n"
+STDERR.print su.chomp(',')+"\n"

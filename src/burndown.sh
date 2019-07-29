@@ -15,8 +15,8 @@ function analysis {
   git checkout $4 src/actors.txt src/actors_cncf.txt src/actors_lf.txt 1>/dev/null 2>/dev/null || git checkout src/actors.txt src/actors_cncf.txt src/actors_lf.txt 1>/dev/null 2>/dev/null
   echo -n "$1," >> src/burndown.csv
   ruby src/calc_affs_stats.rb "$2" "$3" src/actors.txt src/actors_cncf.txt src/actors_lf.txt >> src/burndown.csv
-  echo -n "$1;" >> src/nstats_known.csv
-  echo -n "$1;" >> src/nstats_unknown.csv
+  echo -n "$1," >> src/nstats_known.csv
+  echo -n "$1," >> src/nstats_unknown.csv
   ruby src/nstats.rb "$3" 1>>src/nstats_known.csv 2>>src/nstats_unknown.csv
 }
 
@@ -89,12 +89,12 @@ cat out >> src/burndown.csv
 rm out
 
 cat src/nstats_known.csv | sort | uniq > out
-echo 'Date;1001+;101-1000;51-100;21-50;16-20;11-15;10;9;8;7;6;5;4;3;2;1;0' > src/nstats_known.csv
+echo 'Date,1001+,101-1000,51-100,21-50,16-20,11-15,6-10,1-5,0' > src/nstats_known.csv
 cat out >> src/nstats_known.csv
 rm out
 
 cat src/nstats_unknown.csv | sort | uniq > out
-echo 'Date;1001+;101-1000;51-100;21-50;16-20;11-15;10;9;8;7;6;5;4;3;2;1;0' > src/nstats_unknown.csv
+echo 'Date,1001+,101-1000,51-100,21-50,16-20,11-15,6-10,1-5,0' > src/nstats_unknown.csv
 cat out >> src/nstats_unknown.csv
 rm out
 
