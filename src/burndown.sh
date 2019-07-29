@@ -89,12 +89,12 @@ cat out >> src/burndown.csv
 rm out
 
 cat src/nstats_known.csv | sort | uniq > out
-echo 'date,0,1,2,3,4,5,6,7,8,9,10,11-15,16-20,21-50,51-100,100-1000,1000+' > src/nstats_known.csv
+echo 'Date,1001+,101-1000,51-100,21-50,16-20,11-15,10,9,8,7,6,5,4,3,2,1,0' > src/nstats_known.csv
 cat out >> src/nstats_known.csv
 rm out
 
 cat src/nstats_unknown.csv | sort | uniq > out
-echo 'Date,0,1,2,3,4,5,6,7,8,9,10,11-15,16-20,21-50,51-100,100-1000,1000+' > src/nstats_unknown.csv
+echo 'Date,1001+,101-1000,51-100,21-50,16-20,11-15,10,9,8,7,6,5,4,3,2,1,0' > src/nstats_unknown.csv
 cat out >> src/nstats_unknown.csv
 rm out
 
