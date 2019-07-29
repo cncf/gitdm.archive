@@ -14,7 +14,7 @@ data.each do |user|
     unknown[c] = 0 unless unknown.key?(c)
     unknown[c] += 1
   else
-    binding.pry if s == 'notfound'
+    #binding.pry if s == 'notfound'
     known[c] = 0 unless known.key?(c)
     known[c] += 1
   end
