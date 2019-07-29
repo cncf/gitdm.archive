@@ -15,6 +15,9 @@ function analysis {
   git checkout $4 src/actors.txt src/actors_cncf.txt src/actors_lf.txt 1>/dev/null 2>/dev/null || git checkout src/actors.txt src/actors_cncf.txt src/actors_lf.txt 1>/dev/null 2>/dev/null
   echo -n "$1," >> src/burndown.csv
   ruby src/calc_affs_stats.rb "$2" "$3" src/actors.txt src/actors_cncf.txt src/actors_lf.txt >> src/burndown.csv
+  echo -n "$1," >> src/nstats_known.csv
+  echo -n "$1," >> src/nstats_unknown.csv
+  ruby src/nstats.rb "$3" 1>>src/nstats_known.csv 2>>src/nstats_unknown.csv
 }
 
 if [ -z "$1" ]
@@ -32,6 +35,8 @@ else
 fi
 
 > src/burndown.csv
+> src/nstats_known.csv
+> src/nstats_unknown.csv
 
 commits=`git log --all --format=format:'%H;%ci' --since "$since" --until "$until"`
 last_date=''
@@ -81,6 +86,16 @@ done
 cat src/burndown.csv | sort | uniq > out
 echo 'Date,All Not Found,All Found,All Not Checked,CNCF Not Found,CNCF Found,CNCF Not Checked,LF Not Found,LF Found,LF Not Checked' > src/burndown.csv
 cat out >> src/burndown.csv
+rm out
+
+cat src/nstats_known.csv | sort | uniq > out
+echo 'date,0,1,2,3,4,5,6,7,8,9,10,11-15,16-20,21-50,51-100,100-1000,1000+' > src/nstats_known.csv
+cat out >> src/nstats_known.csv
+rm out
+
+cat src/nstats_unknown.csv | sort | uniq > out
+echo 'Date,0,1,2,3,4,5,6,7,8,9,10,11-15,16-20,21-50,51-100,100-1000,1000+' > src/nstats_unknown.csv
+cat out >> src/nstats_unknown.csv
 rm out
 
 cleanup
