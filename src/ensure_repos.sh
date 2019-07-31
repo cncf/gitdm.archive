@@ -27,7 +27,7 @@ do
       echo "reset $o/$r"
       git reset --hard origin/master || echo "failed reset $o/$r"
       echo "pull $o/$r"
-      git pull || echo "failed pull $o/$r"
+      git pull --no-edit || echo "failed pull $o/$r"
     fi
   else
     if [ -z "$NOCLONE" ]
