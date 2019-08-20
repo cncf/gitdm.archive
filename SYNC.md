@@ -90,6 +90,7 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - Prepend with `UPDATE=1` to only import those marked as changed: column `changes='x'`.
 - Prepend with `DBG=1` to enable verbose output.
 - After finishing import add a status line to `affiliations_import.txt` file and update the online spreadsheet.
+- Update `company-names-mapping` if needed and then run `./company_names_mapping.sh`.
 - After importing new data run `./src/burndown.sh` (from the src's parent directory). Do this after processing all data mentioned here, not after just importing new CSV.
 - Import generated `csv/burndown.csv` data into `https://docs.google.com/spreadsheets/d/1RxEbZNefBKkgo3sJ2UQz0OCA91LDOopacQjfFBRRqhQ/edit?usp=sharing`.
 - To calculate CNCF/LF ratio use number of CNCF found from last commit - number of CNCF found from some previous commit diveded by the same ratio for all actors.
