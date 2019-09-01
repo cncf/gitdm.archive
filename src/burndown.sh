@@ -88,13 +88,14 @@ echo 'Date,All Not Found,All Found,All Not Checked,CNCF Not Found,CNCF Found,CNC
 cat out >> src/burndown.csv
 rm out
 
+hdr='Date,1001+,101-1000,51-100,21-50,16-20,11-15,10,9,8,7,6,5,4,3,2,1,0'
 cat src/nstats_known.csv | sort | uniq > out
-echo 'Date,1001+,101-1000,51-100,21-50,16-20,11-15,6-10,1-5,0' > src/nstats_known.csv
+echo $hdr > src/nstats_known.csv
 cat out >> src/nstats_known.csv
 rm out
 
 cat src/nstats_unknown.csv | sort | uniq > out
-echo 'Date,1001+,101-1000,51-100,21-50,16-20,11-15,6-10,1-5,0' > src/nstats_unknown.csv
+echo $hdr > src/nstats_unknown.csv
 cat out >> src/nstats_unknown.csv
 rm out
 
