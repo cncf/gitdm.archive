@@ -22,77 +22,45 @@ end
 
 k = {}
 u = {}
+
+ranges = [
+  [-1, 0, 0],
+  [0, 1, 1],
+  [1, 2, 2],
+  [2, 3, 3],
+  [3, 4, 4],
+  [4, 5, 5],
+  [5, 6, 6],
+  [6, 7, 7],
+  [7, 8, 8],
+  [8, 9, 9],
+  [9, 10, 10],
+  [10, 15, 15],
+  [15, 20, 20],
+  [20, 50, 50],
+  [50, 100, 100],
+  [100, 1000, 1000],
+  [1000, 1e9, 1001]
+]
+
 known.each do |c, n|
-  k[c] = n if c == 0
-  if c <= 5
-    k[5] = 0 unless k.key?(5)
-    k[5] += n
-  end
-  if c > 5 && c <= 10
-    k[10] = 0 unless k.key?(10)
-    k[10] += n
-  end
-  if c > 10 && c <= 15
-    k[15] = 0 unless k.key?(15)
-    k[15] += n
-  end
-  if c > 15 && c <= 20
-    k[20] = 0 unless k.key?(20)
-    k[20] += n
-  end
-  if c > 20 && c <= 50
-    k[50] = 0 unless k.key?(50)
-    k[50] += n
-  end
-  if c > 50 && c <= 100
-    k[100] = 0 unless k.key?(100)
-    k[100] += n
-  end
-  if c > 100 && c <= 1000
-    k[1000] = 0 unless k.key?(1000)
-    k[1000] += n
-  end
-  if c > 1000
-    k[10000] = 0 unless k.key?(10000)
-    k[10000] += n
+  ranges.each do |f, t, idx|
+    if c > f && c <= t
+      k[idx] = 0 unless k.key?(idx)
+      k[idx] += n
+    end
   end
 end
 
 unknown.each do |c, n|
-  u[c] = n if c == 0
-  if c <= 5
-    u[5] = 0 unless u.key?(5)
-    u[5] += n
-  end
-  if c > 5 && c <= 10
-    u[10] = 0 unless u.key?(10)
-    u[10] += n
-  end
-  if c > 10 && c <= 15
-    u[15] = 0 unless u.key?(15)
-    u[15] += n
-  end
-  if c > 15 && c <= 20
-    u[20] = 0 unless u.key?(20)
-    u[20] += n
-  end
-  if c > 20 && c <= 50
-    u[50] = 0 unless u.key?(50)
-    u[50] += n
-  end
-  if c > 50 && c <= 100
-    u[100] = 0 unless u.key?(100)
-    u[100] += n
-  end
-  if c > 100 && c <= 1000
-    u[1000] = 0 unless u.key?(1000)
-    u[1000] += n
-  end
-  if c > 1000
-    u[10000] = 0 unless u.key?(10000)
-    u[10000] += n
+  ranges.each do |f, t, idx|
+    if c > f && c <= t
+      u[idx] = 0 unless u.key?(idx)
+      u[idx] += n
+    end
   end
 end
+
 sk = ''
 k.keys.sort.reverse.each do |ky|
   sk += k[ky].to_s + ","
