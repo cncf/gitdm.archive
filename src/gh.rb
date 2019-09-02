@@ -18,7 +18,11 @@ h = u.to_h
 
 init_sqls()
 
-h[:country_id], h[:tz] = get_cid h[:location]
+if h[:location]
+  h[:country_id], h[:tz] = get_cid h[:location]
+else
+  h[:country_id], h[:tz] = nil, nil
+end
 h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
 
 h[:commits] = 0
