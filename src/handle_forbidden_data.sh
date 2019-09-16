@@ -16,6 +16,8 @@ find . -type f -iname "*.sh" >> ./flist.txt
 find . -type f -iname "*.go" >> ./flist.txt
 find . -type f -iname "*.new" >> ./flist.txt
 find ./cncf-config -type f >> ./flist.txt
+find .. -iname "devel*.txt" >> ./flist.txt
+find .. -iname "compan*.txt" >> ./flist.txt
 #./handle_forbidden_data.rb `cat flist.txt`
 ./check_shas `cat flist.txt`
 rm ./flist.txt
