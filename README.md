@@ -22,6 +22,8 @@ Company Developers lists [1](https://github.com/cncf/gitdm/blob/master/company_d
 
 Other files used for affiliations are [email map file](https://github.com/cncf/gitdm/blob/master/src/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/src/github_users.json) file.
 
+Please note that `cncf/gitdm` affiliations are imported into DevStats (`cncf/devstats`) weekly.
+
 # Removing affiliations
 
 If you **do not want** to have your email listed here please read [how to remove your email](https://github.com/cncf/gitdm/blob/master/FORBIDDEN_DATA.md).
