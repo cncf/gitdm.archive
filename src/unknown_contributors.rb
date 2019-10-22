@@ -31,23 +31,28 @@ end
 ary = []
 new_objs = []
 contributions = {}
+idx = 0
 CSV.foreach('unknown_contributors.csv', headers: true) do |row|
   #rank_number,actor,contributions,percent,cumulative_sum,cumulative_percent,all_contributions
+  idx += 1
   ghid = row['actor']
   contributions[ghid] = row['contributions']
   if data.key?(ghid)
     ary << data[ghid]
   else
-    puts "Asking GitHub for #{ghid}"
+    puts "#{idx}) Asking GitHub for #{ghid}"
     u = gcs[hint].user ghid
     h = u.to_h
     if h[:location]
-      puts "Geolocation for #{h[:location]}"
+      print "Geolocation for #{h[:location]} "
       h[:country_id], h[:tz] = get_cid h[:location]
+      puts "-> (#{h[:country_id]}, #{h[:tz]})"
     else
       h[:country_id], h[:tz] = nil, nil
     end
+    print "(#{h[:name]}, #{h[:login]}, #{h[:country_id]}) "
     h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
+    puts "-> (#{h[:sex]}, #{h[:sex_prob]})"
     h[:commits] = 0
     h[:affiliation] = "(Unknown)"
     h[:email] = "#{ghid}!users.noreply.github.com"
