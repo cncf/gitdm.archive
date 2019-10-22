@@ -117,6 +117,8 @@ def get_cid_from_loc(c, iloc, rec, pref, suff)
     end
   end
   data = check_stmt c, 'direct_name', [loc]
+  #p loc
+  #p data
   data.each { |row| ret << row }
   if data.length < 1 && aloc != loc
     data = check_stmt c, 'direct_aname', [aloc]
