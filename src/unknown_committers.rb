@@ -125,6 +125,7 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     escaped_name = URI.escape(name)
     escaped_uname = URI.escape(name + ' ' + uname)
     lin1 = lin2 = lin3 = ''
+    gh = "https://github.com/#{login}"
     if !dom.nil? && dom.length > 0 && dom != 'users.noreply.github.com'
       ary3 = dom.split '.'
       domain = ary3[0]
@@ -143,7 +144,7 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     else
       loc += row['country_id'] unless row['country_id'].nil?
     end
-    csv << ['(Unknown)', email, name, lin1, lin2, lin3, commits[login], row['sex'], loc, '']
+    csv << ['(Unknown)', email, name, gh, lin1, lin2, lin3, commits[login], row['sex'], loc, '']
   end
 end
 
