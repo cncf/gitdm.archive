@@ -28,6 +28,8 @@ json.each do |row|
   data[email] << row
 end
 
+skipenc = !ENV['SKIP_ENC'].nil?
+
 ary = []
 new_objs = []
 contributions = {}
@@ -67,16 +69,21 @@ CSV.foreach('unknown_contributors.csv', headers: true) do |row|
       next
     end
     h = u.to_h
-    if h[:location]
-      print "Geolocation for #{h[:location]} "
-      h[:country_id], h[:tz] = get_cid h[:location]
-      puts "-> (#{h[:country_id]}, #{h[:tz]})"
+    unless skipenc
+      if h[:location]
+        print "Geolocation for #{h[:location]} "
+        h[:country_id], h[:tz] = get_cid h[:location]
+        puts "-> (#{h[:country_id]}, #{h[:tz]})"
+      else
+        h[:country_id], h[:tz] = nil, nil
+      end
+      print "(#{h[:name]}, #{h[:login]}, #{h[:country_id]}) "
+      h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
+      puts "-> (#{h[:sex]}, #{h[:sex_prob]})"
     else
-      h[:country_id], h[:tz] = nil, nil
+        h[:country_id], h[:tz] = nil, nil
+        h[:sex], h[:sex_prob] = nil, nil
     end
-    print "(#{h[:name]}, #{h[:login]}, #{h[:country_id]}) "
-    h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
-    puts "-> (#{h[:sex]}, #{h[:sex_prob]})"
     h[:commits] = 0
     h[:affiliation] = "(Unknown)"
     h[:email] = "#{ghid}!users.noreply.github.com"
@@ -96,7 +103,7 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     login = row['login']
     email = row['email']
     email = "#{login}!users.noreply.github.com" if email.nil?
-    name = row['name']
+    name = row['name'] || ''
     ary2 = email.split '!'
     uname = ary2[0]
     dom = ary2[1]
