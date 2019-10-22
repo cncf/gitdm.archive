@@ -22,8 +22,8 @@ json = JSON.parse(File.read('github_users.json'))
 data = {}
 ks = {}
 json.each do |row|
-  login = row['login']
-  email = row['email']
+  login = row['login'].downcase
+  email = row['email'].downcase
   row.keys.each { |k| ks[k] = 0 }
   data[login] = {} unless data.key?(login)
   data[login][email] = row
@@ -39,19 +39,22 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
   #rank_number,actor,commits,percent,cumulative_sum,cumulative_percent,all_commits
   idx += 1
   ghid = row['actor']
+  lghid = ghid.downcase
   commits[ghid] = row['commits']
   email = "#{ghid}!users.noreply.github.com"
-  if data.key?(ghid)
-    if data[ghid].key?(email)
-      ary << data[ghid][email]
-      binding.pry
+  lemail = email.downcase
+  if data.key?(lghid)
+    if data[lghid].key?(lemail)
+      puts "Exact match #{lghid}/#{lemail}"
+      ary << data[lghid][lemail]
     else
-      obj = data[ghid][data[ghid].keys[0]]
+      puts "Partial match: #{lghid}"
+      obj = data[lghid][data[lghid].keys[0]].dup
       obj['email'] = email
-      obj['commits'] = commits[ghid]
+      # obj['commits'] = commits[ghid]
+      obj['commits'] = 0
       new_objs << obj
       ary << obj
-      binding.pry
     end
   else
     puts "#{idx}) Asking GitHub for #{ghid}"
@@ -135,7 +138,11 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     end
     loc = ''
     loc += row['location'] unless row['location'].nil?
-    loc += ' ' + row['country_id'] unless row['country_id'].nil?
+    if loc != ''
+      loc += '/' + row['country_id'] unless row['country_id'].nil?
+    else
+      loc += row['country_id'] unless row['country_id'].nil?
+    end
     csv << ['(Unknown)', email, name, lin1, lin2, lin3, commits[login], row['sex'], loc, '']
   end
 end
