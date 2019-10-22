@@ -1,4 +1,4 @@
-with contributions as (
+with commits as (
   select committer_id as actor_id,
     dup_committer_login as actor,
     event_id
@@ -23,7 +23,7 @@ with contributions as (
   where
     type in ('PushEvent')
     and (lower(dup_actor_login) {{exclude_bots}})
-), known_contributions as (
+), known_commits as (
   select distinct c.committer_id as actor_id,
     c.dup_committer_login as actor,
     c.event_id
@@ -54,43 +54,43 @@ with contributions as (
     e.type in ('PushEvent')
     and (lower(e.dup_actor_login) {{exclude_bots}})
     and e.actor_id = aa.actor_id
-), contributors as (
+), committers as (
   select actor,
-    count(distinct event_id) as contributions
+    count(distinct event_id) as commits
   from
-    contributions
+    commits
   group by
     actor
   order by
-    contributions desc
-), known_contributors as (
+    commits desc
+), known_committers as (
   select actor,
-    count(distinct event_id) as contributions
+    count(distinct event_id) as commits
   from
-    known_contributions
+    known_commits
   group by
     actor
   order by
-    contributions desc
-), all_contributions as (
-  select sum(contributions) as cnt
+    commits desc
+), all_commits as (
+  select sum(commits) as cnt
   from
-    contributors
+    committers
 )
 select
-  row_number() over cumulative_contributions as rank_number,
+  row_number() over cumulative_commits as rank_number,
   c.actor,
-  c.contributions,
-  round((c.contributions * 100.0) / a.cnt, 5) as percent,
-  sum(c.contributions) over cumulative_contributions as cumulative_sum,
-  round((sum(c.contributions) over cumulative_contributions * 100.0) / a.cnt, 5) as cumulative_percent,
-  a.cnt as all_contributions
+  c.commits,
+  round((c.commits * 100.0) / a.cnt, 5) as percent,
+  sum(c.commits) over cumulative_commits as cumulative_sum,
+  round((sum(c.commits) over cumulative_commits * 100.0) / a.cnt, 5) as cumulative_percent,
+  a.cnt as all_commits
 from
-  known_contributors c,
-  all_contributions a
+  known_committers c,
+  all_commits a
 window
-  cumulative_contributions as (
-    order by c.contributions desc, c.actor asc
+  cumulative_commits as (
+    order by c.commits desc, c.actor asc
     range between unbounded preceding
     and current row
   )

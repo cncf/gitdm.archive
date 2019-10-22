@@ -13,7 +13,7 @@ require './ghapi'
 require './genderize_lib'
 require './geousers_lib'
 
-# type,email,name,github,linkedin1,linkedin2,linkedin3,contributions,gender,location,affiliations
+# type,email,name,github,linkedin1,linkedin2,linkedin3,commits,gender,location,affiliations
 gcs = octokit_init()
 hint = rate_limit(gcs)[0]
 init_sqls()
@@ -32,13 +32,13 @@ skipenc = !ENV['SKIP_ENC'].nil?
 
 ary = []
 new_objs = []
-contributions = {}
+commits = {}
 idx = 0
-CSV.foreach('unknown_contributors.csv', headers: true) do |row|
-  #rank_number,actor,contributions,percent,cumulative_sum,cumulative_percent,all_contributions
+CSV.foreach('unknown_committers.csv', headers: true) do |row|
+  #rank_number,actor,commits,percent,cumulative_sum,cumulative_percent,all_commits
   idx += 1
   ghid = row['actor']
-  contributions[ghid] = row['contributions']
+  commits[ghid] = row['commits']
   if data.key?(ghid)
     ary << data[ghid]
   else
@@ -96,7 +96,7 @@ CSV.foreach('unknown_contributors.csv', headers: true) do |row|
 end
 
 puts "Writting CSV..."
-hdr = %w(type email name github linkedin1 linkedin2 linkedin3 contributions gender location affiliations)
+hdr = %w(type email name github linkedin1 linkedin2 linkedin3 commits gender location affiliations)
 CSV.open('task.csv', 'w', headers: hdr) do |csv|
   csv << hdr
   ary.each do |row|
@@ -124,7 +124,7 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     loc = ''
     loc += row['location'] unless row['location'].nil?
     loc += ' ' + row['country_id'] unless row['country_id'].nil?
-    csv << ['(Unknown)', email, name, lin1, lin2, lin3, contributions[login], row['sex'], loc, '']
+    csv << ['(Unknown)', email, name, lin1, lin2, lin3, commits[login], row['sex'], loc, '']
   end
 end
 
