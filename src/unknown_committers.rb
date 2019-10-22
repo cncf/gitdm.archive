@@ -40,6 +40,7 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
   ghid = row['actor']
   commits[ghid] = row['commits']
   if data.key?(ghid)
+    binding.pry
     ary << data[ghid]
   else
     puts "#{idx}) Asking GitHub for #{ghid}"
@@ -81,8 +82,8 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
       h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
       puts "-> (#{h[:sex]}, #{h[:sex_prob]})"
     else
-        h[:country_id], h[:tz] = nil, nil
-        h[:sex], h[:sex_prob] = nil, nil
+      h[:country_id], h[:tz] = nil, nil
+      h[:sex], h[:sex_prob] = nil, nil
     end
     h[:commits] = 0
     h[:affiliation] = "(Unknown)"
