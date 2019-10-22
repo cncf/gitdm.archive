@@ -22,10 +22,11 @@ json = JSON.parse(File.read('github_users.json'))
 data = {}
 ks = {}
 json.each do |row|
+  login = row['login']
   email = row['email']
   row.keys.each { |k| ks[k] = 0 }
-  data[email] = [] unless data.key?(email)
-  data[email] << row
+  data[login] = {} unless data.key?(login)
+  data[login][email] = row
 end
 
 skipenc = !ENV['SKIP_ENC'].nil?
@@ -39,9 +40,19 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
   idx += 1
   ghid = row['actor']
   commits[ghid] = row['commits']
+  email = "#{ghid}!users.noreply.github.com"
   if data.key?(ghid)
-    binding.pry
-    ary << data[ghid]
+    if data[ghid].key?(email)
+      ary << data[ghid][email]
+      binding.pry
+    else
+      obj = data[ghid][data[ghid].keys[0]]
+      obj['email'] = email
+      obj['commits'] = commits[ghid]
+      new_objs << obj
+      ary << obj
+      binding.pry
+    end
   else
     puts "#{idx}) Asking GitHub for #{ghid}"
     begin
