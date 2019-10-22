@@ -41,7 +41,31 @@ CSV.foreach('unknown_contributors.csv', headers: true) do |row|
     ary << data[ghid]
   else
     puts "#{idx}) Asking GitHub for #{ghid}"
-    u = gcs[hint].user ghid
+    begin
+      u = gcs[hint].user ghid
+    rescue Octokit::NotFound => err
+      puts "GitHub doesn't know actor #{ghid}"
+      puts err
+      next
+    rescue Octokit::AbuseDetected => err
+      puts "Abuse #{err} for #{ghid}, sleeping 30 seconds"
+      sleep 30
+      retry
+    rescue Octokit::TooManyRequests => err
+      hint, td = rate_limit(gcs)
+      puts "Too many GitHub requests for #{ghid}, sleeping for #{td} seconds"
+      sleep td
+      retry
+    rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err
+      puts "Retryable error #{err} for #{ghid}, sleeping 10 seconds"
+      sleep 10
+      retry
+    rescue => err
+      puts "Uups, something bad happened for #{ghid}, check `err` variable!"
+      STDERR.puts [err.class, err]
+      binding.pry
+      next
+    end
     h = u.to_h
     if h[:location]
       print "Geolocation for #{h[:location]} "
