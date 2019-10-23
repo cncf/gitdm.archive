@@ -223,6 +223,5 @@
 /root/devstats_repos/yargs/* \
 /root/devstats_repos/youtube/* \
 /root/devstats_repos/zeit/* \
-/root/devstats_repos/zephyrproject-rtos/*
 /root/devstats_repos/zephyrproject-rtos/* \
 /root/devstats_repos/zloirock/*

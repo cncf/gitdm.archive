@@ -5,6 +5,7 @@ require 'pry'
 require 'unidecoder'
 require 'scanf'
 require 'concurrent'
+require 'pg'
 require 'set'
 require 'thwait'
 require './nationalize_lib'
@@ -23,6 +24,7 @@ def generate_global_cache(cache)
 end
 
 def nationalize(json_file, json_file2, json_cache, backup_freq)
+  init_sqls()
   freq = backup_freq.to_i
   # set to false to retry gender lookups where name is set but no gender is found
   always_cache = true
@@ -100,7 +102,6 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         if ccid.nil? || ctz.nil?
           cid, ok = get_nat name, login
           tz = nil
-          binding.pry
           tz, ok = get_tz cid if ok
           cid = ccid unless ccid.nil? || ccid  == ''
           tz = ctz unless ctz.nil? || ctz  == ''
