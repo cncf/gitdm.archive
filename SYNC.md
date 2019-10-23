@@ -77,7 +77,7 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - Make sure that you don't have any `nil`, `null` and `false` values saved in any `*_cache.json` file (those files are also saved when you `CTRL^C` running enchancement).
 - If this is a first geousers run create `geousers_cache.json` via `cp empty.json geousers_cache.json`.
 - To use cache it is best to have `stripped.json` from the previous run. See step 22.
-- Enchance `github_users.json` via `PG_PASS=... ./geousers.sh github_users.json stripped.json geousers_cache.json 2000`. It will add `country_id` and `tz` fields.
+- Enchance `github_users.json` via `PG_PASS=... ./geousers.sh github_users.json stripped.json geousers_cache.json 20000`. It will add `country_id` and `tz` fields.
 - Go to [store.genderize.io](https://store.genderize.io) and get you `API_KEY`, basic subscription ($9) allows 100,000 monthly gender lookups.
 - If this is a first genderize run create `genderize_cache.json` via `cp empty.json genderize_cache.json`.
 - Enchance `github_users.json` via `PG_PASS=... API_KEY=... ./nationalize.sh github_users.json stripped.json nationalize_cache.json 20000`. It will eventually fill missing `country_id` and `tz` fields.
