@@ -71,6 +71,6 @@ def get_nat(name, login)
     end
   end
   r = ret.reject { |r| r['country_id'].nil? }.sort_by { |r| [-r['probability']] }
-  return nil, false if r.count < 1
+  return nil, true if r.count < 1
   return r.first['country_id'], true
 end

@@ -86,6 +86,7 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
       ctz = usr['tz']
       ky = nil
       ok = nil
+      ok2 = nil
       $gcache_mtx.with_read_lock { ky = cache.key?([login, email]) }
       if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
         rec = nil
@@ -102,7 +103,7 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         if ccid.nil? || ctz.nil?
           cid, ok = get_nat name, login
           tz = nil
-          tz, ok = get_tz cid if ok
+          tz, ok2 = get_tz cid unless tz.nil?
           cid = ccid unless ccid.nil? || ccid  == ''
           tz = ctz unless ctz.nil? || ctz  == ''
           mtx.with_write_lock { f += 1 unless cid.nil? || tz.nil? }
@@ -111,8 +112,8 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         end
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: #{name} -> (#{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}" }
-      [usr, ok]
+      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: #{name} -> (#{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}, state: #{ok}/#{ok2}" }
+      [usr, ok, ok2]
     end
     begin
       $gstats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$hit}, Miss: #{$miss}" }
@@ -125,6 +126,7 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
       data = t.value
       usr = data[0]
       ok = data[1]
+      ok2 = data[2]
       newj << usr
       thrs = thrs.delete t
       if ok === false
@@ -146,6 +148,7 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
     data = thr.value
     usr = data[0]
     ok = data[1]
+    ok2 = data[2]
     newj << usr
   end
 
