@@ -121,7 +121,15 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
       puts "Error: #{ee}"
     end
     while thrs.length >= n_thrs
-      tw = ThreadsWait.new(thrs.to_a)
+      tw = nil
+      begin
+        tw = ThreadsWait.new(thrs.to_a)
+      rescue => ee
+        puts "Error: #{ee}"
+        sleep 0.25
+        puts "Retry"
+        retry
+      end
       t = tw.next_wait
       data = t.value
       usr = data[0]
