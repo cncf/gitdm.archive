@@ -102,8 +102,8 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         tz = nil
         if ccid.nil? || ctz.nil?
           cid, ok = get_nat name, login
-          tz = nil
-          tz, ok2 = get_tz cid unless tz.nil?
+          tz, ok2 = get_tz cid unless cid.nil?
+          puts "Got #{name}, #{login} -> #{cid}, #{tz}, #{ok}, #{ok2}" unless cid.nil? || tz.nil?
           cid = ccid unless ccid.nil? || ccid  == ''
           tz = ctz unless ctz.nil? || ctz  == ''
           mtx.with_write_lock { f += 1 unless cid.nil? || tz.nil? }
