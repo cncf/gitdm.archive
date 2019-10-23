@@ -74,6 +74,10 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
     from = ENV['FROM'].to_i
   end
   n = from
+  prob = 0.5
+  unless ENV['PROB'].nil?
+    from = ENV['PROB'].to_f
+  end
   thrs = Set[]
   n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   data.each_with_index do |user, idx|
@@ -101,9 +105,9 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         cid = nil
         tz = nil
         if ccid.nil? || ctz.nil?
-          cid, ok = get_nat name, login
+          cid, prb, ok = get_nat name, login, prob
           tz, ok2 = get_tz cid unless cid.nil?
-          puts "Got #{name}, #{login} -> #{cid}, #{tz}, #{ok}, #{ok2}" unless cid.nil? || tz.nil?
+          puts "Got #{name}, #{login} -> #{cid}@#{prb}, #{tz}, #{ok}, #{ok2}" unless cid.nil? || tz.nil?
           cid = ccid unless ccid.nil? || ccid  == ''
           tz = ctz unless ctz.nil? || ctz  == ''
           mtx.with_write_lock { f += 1 unless cid.nil? || tz.nil? }
