@@ -28,7 +28,7 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
   # set to false to retry gender lookups where name is set but no gender is found
   always_cache = true
-  retry_nils = true
+  retry_nils = false
   # Parse input JSONs
   data = JSON.parse File.read json_file
   data2 = JSON.parse File.read json_file2
