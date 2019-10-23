@@ -7,7 +7,7 @@ require 'scanf'
 require 'concurrent'
 require 'set'
 require 'thwait'
-require './genderize_lib'
+require './agify_lib'
 
 # Not thread safe
 def get_gcache
@@ -21,7 +21,7 @@ def generate_global_cache(cache)
   cache.each { |key, val| $gcache[key] = val }
 end
 
-def genderize(json_file, json_file2, json_cache, backup_freq)
+def agify(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
   # set to false to retry gender lookups where name is set but no gender is found
   always_cache = true
@@ -48,10 +48,9 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
     login = user['login']
     email = user['email']
     name = user['name']
-    sex = user['sex']
-    sex_prob = user['sex_prob']
-    if always_cache || (name.nil? || name == '' || (sex != nil && sex != '' && sex_prob != nil && sex_prob != ''))
-      cache[[login, email]] = user if user.key?('sex') && user.key?('sex_prob')
+    age = user['age']
+    if always_cache || (name.nil? || name == '' || (age != nil && age != ''))
+      cache[[login, email]] = user if user.key?('age')
     else
       binding.pry
     end
@@ -75,31 +74,28 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
       email = usr['email']
       name = usr['name']
       cid = usr['country_id']
-      csex = usr['sex']
-      cprob = usr['sex_prob']
+      cage = usr['age']
       ky = nil
       ok = nil
       $gcache_mtx.with_read_lock { ky = cache.key?([login, email]) }
-      if (csex.nil? || csex == '' || cprob.nil? || cprob == '') && ky
+      if (cage.nil? || cage == '') && ky
         rec = nil
         $gcache_mtx.with_read_lock { rec = cache[[login, email]] }
-        sex = usr['sex'] = rec['sex']
-        prob = usr['sex_prob'] = rec['sex_prob']
+        age = usr['age'] = rec['age']
         mtx.with_write_lock do
           ca += 1
-          f += 1 unless sex.nil?
+          f += 1 unless age.nil?
         end
       else
-        sex = nil
-        if csex.nil? || cprob.nil?
-          sex, prob, ok = get_sex name, login, cid
-          mtx.with_write_lock { f += 1 unless sex.nil? }
-          usr['sex'] = sex
-          usr['sex_prob'] = prob
+        age = nil
+        if cage.nil?
+          age, ok = get_age name, login, cid
+          mtx.with_write_lock { f += 1 unless age.nil? }
+          usr['age'] = age
         end
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}" }
+      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid}) -> #{age || cage} found #{f}, cache: #{ca}" }
       [usr, ok]
     end
     begin
@@ -147,8 +143,8 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
 end
 
 if ARGV.size < 4
-  puts "Missing arguments: github_users.json stripped.json genderize_cache.json backup_freq"
+  puts "Missing arguments: github_users.json stripped.json agify_cache.json backup_freq"
   exit(1)
 end
 
-genderize ARGV[0], ARGV[1], ARGV[2], ARGV[3]
+agify ARGV[0], ARGV[1], ARGV[2], ARGV[3]
