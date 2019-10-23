@@ -1,37 +1,31 @@
-require 'pry'
+require 'net/http'
 require 'json'
-require 'pg'
+require 'uri'
+require 'pry'
 require 'unidecoder'
+require 'scanf'
 require 'concurrent'
 require 'set'
 require 'thwait'
-require './geousers_lib'
+require './nationalize_lib'
 
-# Not thread safe!
+# Not thread safe
 def get_gcache
   ary = []
   $gcache.each { |key, val| ary << [key, val] }
   ary
 end
 
-# Not thread safe!
+# Not thread safe
 def generate_global_cache(cache)
   cache.each { |key, val| $gcache[key] = val }
 end
 
-def geousers(json_file, json_file2, json_cache, backup_freq)
-  $gdbg = !ENV['DBG'].nil?
+def nationalize(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
-  # set to false to retry localization lookups where location is set but no country/tz is found
+  # set to false to retry gender lookups where name is set but no gender is found
   always_cache = true
-
-  init_sqls()
-
-  #['Россия', 'Russia, Moscow', 'San Francisco, CA, USA'].each do |loc|
-  #  cid = get_cid loc
-  #  puts "Row #{loc} -> #{cid}"
-  #end
-
+  retry_nils = true
   # Parse input JSONs
   data = JSON.parse File.read json_file
   data2 = JSON.parse File.read json_file2
@@ -54,15 +48,20 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   data2.each do |user|
     login = user['login']
     email = user['email']
-    loc = user['location']
+    name = user['name']
     cid = user['country_id']
     tz = user['tz']
-    if always_cache || (loc.nil? || loc == '' || (cid != nil && cid != '' && tz != nil && tz != ''))
-      cache[[login, email]] = user if user.key?('country_id') && user.key?('tz')
+    if always_cache || (name.nil? || name == '' || (cid != nil && cid != '' && tz != nil && tz != ''))
+      if retry_nils
+        cache[[login, email]] = user unless cid.nil? || tz.nil?
+      else
+        cache[[login, email]] = user if user.key?('country_id') && user.key?('tz')
+      end
+    else
+      binding.pry
     end
   end
   newj = []
-  l = 0
   f = 0
   ca = 0
   mtx = Concurrent::ReadWriteLock.new
@@ -79,10 +78,11 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
     thrs << Thread.new(user) do |usr|
       login = usr['login']
       email = usr['email']
-      loc = usr['location']
+      name = usr['name']
       ccid = usr['country_id']
       ctz = usr['tz']
       ky = nil
+      ok = nil
       $gcache_mtx.with_read_lock { ky = cache.key?([login, email]) }
       if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
         rec = nil
@@ -91,27 +91,24 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
         tz = usr['tz'] = rec['tz']
         mtx.with_write_lock do
           ca += 1
-          l += 1 if !loc.nil? && loc.length > 0
-          f += 1 unless cid.nil?
+          f += 1 unless country_id.nil? || tz.nil?
         end
       else
         cid = nil
-        if (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
-          puts "Querying #{login}, #{email}, #{loc}" if $gdbg
-          cid, tz = get_cid loc
-          mtx.with_write_lock do
-            l += 1
-            f += 1 unless cid.nil?
-          end
+        tz = nil
+        if ccid.nil? || ctz.nil?
+          cid, tz, ok = get_nat name, login
+          binding.pry
+          cid = ccid unless ccid.nil? || ccid  == ''
+          tz = ctz unless ctz.nil? || ctz  == ''
+          mtx.with_write_lock { f += 1 unless cid.nil? || tz.nil? }
           usr['country_id'] = cid
           usr['tz'] = tz
         end
-        usr['country_id'] = nil if usr['country_id'].nil?
-        usr['tz'] = nil if usr['tz'].nil?
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}" }
-      usr
+      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: #{name} -> #{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}" }
+      [usr, ok]
     end
     begin
       $gstats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$hit}, Miss: #{$miss}" }
@@ -121,21 +118,30 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
     while thrs.length >= n_thrs
       tw = ThreadsWait.new(thrs.to_a)
       t = tw.next_wait
-      usr = t.value
+      data = t.value
+      usr = data[0]
+      ok = data[1]
       newj << usr
       thrs = thrs.delete t
+      if ok === false
+        puts "Error state returned, backing up data"
+        pretty = JSON.pretty_generate newj
+        File.write 'backup.json', pretty
+        pretty = JSON.pretty_generate get_gcache
+        File.write json_cache, pretty
+      end
     end
     if idx > 0 && idx % freq == 0
       pretty = JSON.pretty_generate newj
       File.write 'partial.json', pretty
-
-      # Write gcache to file for future use
       pretty = JSON.pretty_generate get_gcache
       File.write json_cache, pretty
     end
   end
   ThreadsWait.all_waits(thrs.to_a) do |thr|
-    usr = thr.value
+    data = thr.value
+    usr = data[0]
+    ok = data[1]
     newj << usr
   end
 
@@ -149,8 +155,8 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
 end
 
 if ARGV.size < 4
-  puts "Missing arguments: github_users.json stripped.json geousers_cache.json backup_freq"
+  puts "Missing arguments: github_users.json stripped.json nationalize_cache.json backup_freq"
   exit(1)
 end
 
-geousers ARGV[0], ARGV[1], ARGV[2], ARGV[3]
+nationalize ARGV[0], ARGV[1], ARGV[2], ARGV[3]

@@ -80,7 +80,7 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - Enchance `github_users.json` via `PG_PASS=... ./geousers.sh github_users.json stripped.json geousers_cache.json 2000`. It will add `country_id` and `tz` fields.
 - Go to [store.genderize.io](https://store.genderize.io) and get you `API_KEY`, basic subscription ($9) allows 100,000 monthly gender lookups.
 - If this is a first genderize run create `genderize_cache.json` via `cp empty.json genderize_cache.json`.
-- Enchance `github_users.json` via `API_KEY=... ./nationalize.sh github_users.json stripped.json nationalize_cache.json 20000`. It will eventually fill missing `country_id` and `tz` fields.
+- Enchance `github_users.json` via `PG_PASS=... API_KEY=... ./nationalize.sh github_users.json stripped.json nationalize_cache.json 20000`. It will eventually fill missing `country_id` and `tz` fields.
 - Enchance `github_users.json` via `API_KEY=... ./genderize.sh github_users.json stripped.json genderize_cache.json 20000`. It will add `sex` and `sex_prob` fields.
 - Enchance `github_users.json` via `API_KEY=... ./agify.sh github_users.json stripped.json agify_cache.json 20000`. It will add `age` field.
 - You can skip `API_KEY=...` but only 1000 gender lookups/day are allowed then.
