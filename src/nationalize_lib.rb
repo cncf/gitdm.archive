@@ -28,11 +28,11 @@ def get_nat(name, login)
     name.delete! '"\'[]%_^@$*+={}:|\\`~?/.<>'
     next if name == ''
     $gcache_mtx.acquire_read_lock
-    if $gcache.key?([name, cid])
-      v = $gcache[[name, cid]]
+    if $gcache.key?(name)
+      v = $gcache[name]
       $gcache_mtx.release_read_lock
       while v === false do
-        $gstats_mtx.with_read_lock { v = $gcache[[name, cid]] }
+        $gstats_mtx.with_read_lock { v = $gcache[name] }
         # wait until real data become available (not a wip marker)
         sleep 0.001
       end
@@ -43,18 +43,16 @@ def get_nat(name, login)
     $gcache_mtx.release_read_lock
     $gstats_mtx.with_write_lock { $miss += 1 }
     # Write marker that data is computing now: false
-    $gcache_mtx.with_write_lock { $gcache[[name, cid]] = false }
+    $gcache_mtx.with_write_lock { $gcache[name] = false }
     suri = "https://api.nationalize.io?name=#{URI.encode(name)}"
     suri += "&apikey=#{api_key}" if !api_key.nil? && api_key != ''
-    suri += "&country_id=#{URI.encode(cid)}" if !cid.nil? && cid != ''
     begin
       uri = URI.parse(suri)
       response = Net::HTTP.get_response(uri)
       data = JSON.parse(response.body)
-      # data = { 'country' => 'x', 'probability' => 1.0, 'count' => 10 }
       # data = { 'name' => 'x', 'country' => [{'country_id' => 'PL', 'probability' => 0.94 }, ...]}
       # write the final computed data instead of marker: false
-      $gcache_mtx.with_write_lock { $gcache[[name, cid]] = data }
+      $gcache_mtx.with_write_lock { $gcache[name] = data }
       if data.key? 'error'
         puts data['error']
         return nil, nil, false
@@ -65,7 +63,7 @@ def get_nat(name, login)
         return nil, nil, false
       end
       data['country'].each do |row|
-        ret << row
+        ret << row if row['probability'] >= 0.5
       end
     rescue StandardError => e
       puts e
@@ -73,7 +71,6 @@ def get_nat(name, login)
     end
   end
   r = ret.reject { |r| r['country_id'].nil? }.sort_by { |r| [-r['probability']] }
-  binding.pry
   return nil, nil, true if r.count < 1
   return r.first['country_id'], r.first['probability'], true
 end
