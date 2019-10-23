@@ -57,14 +57,14 @@ def get_age(name, login, cid)
       ret << data
       if data.key? 'error'
         puts data['error']
-        return nil, false
+        return nil, nil, false
       end
     rescue StandardError => e
       puts e
-      return nil, false
+      return nil, nil, false
     end
   end
   r = ret.reject { |r| r['age'].nil? }.sort_by { |r| [-r['count']] }
   return nil, true if r.count < 1
-  return r.first['age'], true
+  return r.first['age'], r.first['count'], true
 end

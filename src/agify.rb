@@ -94,8 +94,8 @@ def agify(json_file, json_file2, json_cache, backup_freq)
       else
         age = nil
         if cage.nil?
-          age, ok = get_age name, login, cid
-          puts "Got #{name}, #{login}, #{cid} -> #{age}, #{ok}" unless age.nil?
+          age, cnt, ok = get_age name, login, cid
+          puts "Got #{name}, #{login}, #{cid} -> #{age}@#{cnt}, #{ok}" unless age.nil?
           mtx.with_write_lock { f += 1 unless age.nil? }
           usr['age'] = age
         end
