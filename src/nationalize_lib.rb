@@ -55,22 +55,22 @@ def get_nat(name, login)
       $gcache_mtx.with_write_lock { $gcache[name] = data }
       if data.key? 'error'
         puts data['error']
-        return nil, nil, false
+        return nil, false
       end
       unless data.key? 'country'
         puts "Missing 'country' key in result"
         p data
-        return nil, nil, false
+        return nil, false
       end
       data['country'].each do |row|
         ret << row if row['probability'] >= 0.5
       end
     rescue StandardError => e
       puts e
-      return nil, nil, false
+      return nil, false
     end
   end
   r = ret.reject { |r| r['country_id'].nil? }.sort_by { |r| [-r['probability']] }
-  return nil, nil, true if r.count < 1
-  return r.first['country_id'], r.first['probability'], true
+  return nil, false if r.count < 1
+  return r.first['country_id'], true
 end

@@ -8,6 +8,7 @@ require 'concurrent'
 require 'set'
 require 'thwait'
 require './nationalize_lib'
+require './geousers_lib'
 
 # Not thread safe
 def get_gcache
@@ -97,7 +98,10 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         cid = nil
         tz = nil
         if ccid.nil? || ctz.nil?
-          cid, tz, ok = get_nat name, login
+          cid, ok = get_nat name, login
+          tz = nil
+          binding.pry
+          tz, ok = get_tz cid if ok
           cid = ccid unless ccid.nil? || ccid  == ''
           tz = ctz unless ctz.nil? || ctz  == ''
           mtx.with_write_lock { f += 1 unless cid.nil? || tz.nil? }
