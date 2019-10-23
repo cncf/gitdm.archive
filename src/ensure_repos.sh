@@ -34,7 +34,7 @@ do
     then
       echo "clone $o/$r"
       git clone "https://github.com/$o/${r}.git"
-  fi
+    fi
   fi
 done
 echo 'OK'

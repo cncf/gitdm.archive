@@ -16,9 +16,9 @@ def generate_logs(repos)
   failed = {}
   timeout_bool = !ENV['TIMEOUT'].nil?
   if timeout_bool
-      timeout_seconds = ENV['TIMEOUT'].to_i
+    timeout_seconds = ENV['TIMEOUT'].to_i
   else
-    timeout_seconds = 900
+    timeout_seconds = 3600
   end
   n_repos = repos.length
   repos.each_with_index do |repo, idx|
