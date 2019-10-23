@@ -8,7 +8,7 @@ $miss = 0
 $gstats_mtx = Concurrent::ReadWriteLock.new
 
 # Thread safe
-def get_nat(name, login)
+def get_nat(name, login, prob)
   login = login.downcase.strip
   ary = [login]
   unless name.nil?
@@ -55,22 +55,22 @@ def get_nat(name, login)
       $gcache_mtx.with_write_lock { $gcache[name] = data }
       if data.key? 'error'
         puts data['error']
-        return nil, false
+        return nil, nil, false
       end
       unless data.key? 'country'
         puts "Missing 'country' key in result"
         p data
-        return nil, false
+        return nil, nil, false
       end
       data['country'].each do |row|
-        ret << row if row['probability'] >= 0.5
+        ret << row if row['probability'] >= prob
       end
     rescue StandardError => e
       puts e
-      return nil, false
+      return nil, nil, false
     end
   end
   r = ret.reject { |r| r['country_id'].nil? }.sort_by { |r| [-r['probability']] }
-  return nil, true if r.count < 1
-  return r.first['country_id'], true
+  return nil, nil, true if r.count < 1
+  return r.first['country_id'], r.first['probability'], true
 end
