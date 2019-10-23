@@ -25,6 +25,7 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
   # set to false to retry gender lookups where name is set but no gender is found
   always_cache = true
+  retry_nils = false
   # Parse input JSONs
   data = JSON.parse File.read json_file
   data2 = JSON.parse File.read json_file2
@@ -51,7 +52,11 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
     sex = user['sex']
     sex_prob = user['sex_prob']
     if always_cache || (name.nil? || name == '' || (sex != nil && sex != '' && sex_prob != nil && sex_prob != ''))
-      cache[[login, email]] = user if user.key?('sex') && user.key?('sex_prob')
+      if retry_nils
+        cache[[login, email]] = user unless sex.nil? || sex_prob.nil?
+      else
+        cache[[login, email]] = user if user.key?('sex') && user.key?('sex_prob')
+      end
     else
       binding.pry
     end

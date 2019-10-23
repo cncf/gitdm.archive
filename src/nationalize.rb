@@ -91,14 +91,13 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         tz = usr['tz'] = rec['tz']
         mtx.with_write_lock do
           ca += 1
-          f += 1 unless country_id.nil? || tz.nil?
+          f += 1 unless cid.nil? || tz.nil?
         end
       else
         cid = nil
         tz = nil
         if ccid.nil? || ctz.nil?
           cid, tz, ok = get_nat name, login
-          binding.pry
           cid = ccid unless ccid.nil? || ccid  == ''
           tz = ctz unless ctz.nil? || ctz  == ''
           mtx.with_write_lock { f += 1 unless cid.nil? || tz.nil? }
@@ -107,7 +106,7 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         end
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: #{name} -> #{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}" }
+      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: #{name} -> (#{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}" }
       [usr, ok]
     end
     begin

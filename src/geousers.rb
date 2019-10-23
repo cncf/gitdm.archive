@@ -24,6 +24,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
   # set to false to retry localization lookups where location is set but no country/tz is found
   always_cache = true
+  retry_nils = false
 
   init_sqls()
 
@@ -58,7 +59,11 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
     cid = user['country_id']
     tz = user['tz']
     if always_cache || (loc.nil? || loc == '' || (cid != nil && cid != '' && tz != nil && tz != ''))
-      cache[[login, email]] = user if user.key?('country_id') && user.key?('tz')
+      if retry_nils
+        cache[[login, email]] = user unless cid.nil? || tz.nil?
+      else
+        cache[[login, email]] = user if user.key?('country_id') && user.key?('tz')
+      end
     end
   end
   newj = []

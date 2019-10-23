@@ -25,6 +25,7 @@ def agify(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
   # set to false to retry gender lookups where name is set but no gender is found
   always_cache = true
+  retry_nils = true
   # Parse input JSONs
   data = JSON.parse File.read json_file
   data2 = JSON.parse File.read json_file2
@@ -50,7 +51,11 @@ def agify(json_file, json_file2, json_cache, backup_freq)
     name = user['name']
     age = user['age']
     if always_cache || (name.nil? || name == '' || (age != nil && age != ''))
-      cache[[login, email]] = user if user.key?('age')
+      if retry_nils
+        cache[[login, email]] = user unless age.nil?
+      else
+        cache[[login, email]] = user if user.key?('age')
+      end
     else
       binding.pry
     end
@@ -95,7 +100,7 @@ def agify(json_file, json_file2, json_cache, backup_freq)
         end
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid}) -> #{age || cage} found #{f}, cache: #{ca}" }
+      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid}) -> #{age || cage}) found #{f}, cache: #{ca}" }
       [usr, ok]
     end
     begin
