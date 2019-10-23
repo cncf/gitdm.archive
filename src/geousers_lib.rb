@@ -184,6 +184,14 @@ def get_cid(loc)
   return r[0][0].downcase, tz
 end
 
+def get_tz(cid)
+  c = [nil]
+  data = check_stmt c, 'tz', [cid]
+  return nil, false if data.length < 1
+  return nil, false if data[0].length < 1
+  return data[0][0], true
+end
+
 def init_sqls()
   # PSQL statements used to get country codes
   $gsqls['direct_name_fcl'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and fcl = $1 and name like $2 order by tz = \'\', population desc, geonameid asc limit 1'
@@ -198,4 +206,5 @@ def init_sqls()
   $gsqls['direct_laname'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and lower(asciiname) like $1 order by tz = \'\', population desc, geonameid asc limit 1'
   $gsqls['alt_name'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where altname like $1) order by tz = \'\', population desc, geonameid asc limit 1'
   $gsqls['alt_lname'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by tz = \'\', population desc, geonameid asc limit 1'
+  $gsqls['tz'] = 'select tz from geonames where countrycode = $1 order by population desc limit 1'
 end
