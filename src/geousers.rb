@@ -10,17 +10,17 @@ require './geousers_lib'
 # Not thread safe!
 def get_gcache
   ary = []
-  $gcache.each { |key, val| ary << [key, val] }
+  $g_geousers_cache.each { |key, val| ary << [key, val] }
   ary
 end
 
 # Not thread safe!
 def generate_global_cache(cache)
-  cache.each { |key, val| $gcache[key] = val }
+  cache.each { |key, val| $g_geousers_cache[key] = val }
 end
 
 def geousers(json_file, json_file2, json_cache, backup_freq)
-  $gdbg = !ENV['DBG'].nil?
+  $g_geousers_dbg = !ENV['GEOUSERS_DBG'].nil?
   freq = backup_freq.to_i
   # set to false to retry localization lookups where location is set but no country/tz is found
   always_cache = true
@@ -40,11 +40,11 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   generate_global_cache cache
 
   # Handle CTRL+C
-  $gjson_cache_filename = json_cache
+  $g_geousers_json_cache_filename = json_cache
   Signal.trap('INT') do
     puts "Caught signal, saving cache and exiting"
     pretty = JSON.pretty_generate get_gcache
-    File.write $gjson_cache_filename, pretty
+    File.write $g_geousers_json_cache_filename, pretty
     puts "Saved"
     exit 1
   end
@@ -89,10 +89,10 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       ctz = usr['tz']
       ky = nil
       ok = nil
-      $gcache_mtx.with_read_lock { ky = cache.key?([login, email]) }
+      $g_geousers_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
       if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
         rec = nil
-        $gcache_mtx.with_read_lock { rec = cache[[login, email]] }
+        $g_geousers_cache_mtx.with_read_lock { rec = cache[[login, email]] }
         cid = usr['country_id'] = rec['country_id']
         tz = usr['tz'] = rec['tz']
         mtx.with_write_lock do
@@ -103,7 +103,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       else
         cid = nil
         if (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
-          puts "Querying #{login}, #{email}, #{loc}" if $gdbg
+          puts "Querying #{login}, #{email}, #{loc}" if $g_geousers_dbg
           cid, tz, ok = get_cid loc
           mtx.with_write_lock do
             l += 1
@@ -120,7 +120,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       usr
     end
     begin
-      $gstats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$ghit}, Miss: #{$gmiss}" }
+      $g_geousers_stats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$g_geousers_hit}, Miss: #{$g_geousers_miss}" }
     rescue => ee
       puts "Error: #{ee}"
     end
