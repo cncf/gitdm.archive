@@ -87,14 +87,14 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
     unless skipenc
       if h[:location]
         print "Geolocation for #{h[:location]} "
-        h[:country_id], h[:tz] = get_cid h[:location]
-        puts "-> (#{h[:country_id]}, #{h[:tz]})"
+        h[:country_id], h[:tz], ok = get_cid h[:location]
+        puts "-> (#{h[:country_id]}, #{h[:tz]}, #{ok})"
       else
         h[:country_id], h[:tz] = nil, nil
       end
       print "(#{h[:name]}, #{h[:login]}, #{h[:country_id]}) "
       h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
-      puts "-> (#{h[:sex]}, #{h[:sex_prob]})"
+      puts "-> (#{h[:sex]}, #{h[:sex_prob]}, #{ok})"
     else
       h[:country_id], h[:tz] = nil, nil
       h[:sex], h[:sex_prob] = nil, nil
