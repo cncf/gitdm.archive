@@ -3,8 +3,8 @@ $gjson_cache_filename = nil
 $gcache = {}
 $gcache_mtx = Concurrent::ReadWriteLock.new
 
-$hit = 0
-$miss = 0
+$ghit = 0
+$gmiss = 0
 $gstats_mtx = Concurrent::ReadWriteLock.new
 
 $gsqls = {}
@@ -23,11 +23,11 @@ def check_stmt(c, stmt_name, args)
         # wait until real data become available (not a wip marker)
         sleep 0.001
       end
-      $gstats_mtx.with_write_lock { $hit += 1 }
+      $gstats_mtx.with_write_lock { $ghit += 1 }
       return v
     end
     $gcache_mtx.release_read_lock
-    $gstats_mtx.with_write_lock { $miss += 1 }
+    $gstats_mtx.with_write_lock { $gmiss += 1 }
     # Write marker that data is computing now: false
     $gcache_mtx.with_write_lock { $gcache[key] = false }
     # Need to have one connection per thread. If using 'c' created in the main thread
@@ -186,7 +186,7 @@ end
 
 def get_tz(cid)
   c = [nil]
-  data = check_stmt c, 'tz', [cid]
+  data = check_stmt c, 'tz', [cid.upcase]
   return nil, false if data.length < 1
   return nil, false if data[0].length < 1
   return data[0][0], true
