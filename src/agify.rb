@@ -105,7 +105,7 @@ def agify(json_file, json_file2, json_cache, backup_freq)
       [usr, ok]
     end
     begin
-      $gstats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$hit}, Miss: #{$miss}" }
+      $gstats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$ghit}, Miss: #{$gmiss}" }
     rescue => ee
       puts "Error: #{ee}"
     end

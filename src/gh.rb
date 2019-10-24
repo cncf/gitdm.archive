@@ -28,9 +28,12 @@ else
   h[:country_id], h[:tz] = nil, nil
 end
 
+h[:location] = nil
+h[:tz] = nil
+
 if h[:country_id].nil? || h[:tz].nil?
   print "nationalize_lib: (#{h[:login]}, #{h[:name]}) -> "
-  cid, prb, ok = get_nat h[:name], h[:login], 0.5
+  cid, prb, ok = get_nat h[:name], h[:login], 0.3
   tz, ok2 = get_tz cid unless cid.nil?
   print "(#{cid}, #{tz}, #{prb}, #{ok}, #{ok2}) -> "
   h[:country_id] = cid if h[:country_id].nil?
@@ -44,7 +47,7 @@ puts "(#{h[:sex]}, #{h[:sex_prob]}, #{ok})"
 
 print "agify_lib: (#{h[:login]}, #{h[:name]}, #{h[:country_id]}) -> "
 h[:age], cnt, ok = get_age h[:name], h[:login], h[:country_id]
-puts "(#{h[:sex]}, #{h[:sex_prob]}, #{ok})"
+puts "(#{h[:age]}, #{cnt}, #{ok})"
 
 h[:commits] = 0
 h[:affiliation] = "(Unknown)"

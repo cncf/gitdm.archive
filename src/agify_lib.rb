@@ -3,8 +3,8 @@ $gjson_cache_filename = nil
 $gcache = {}
 $gcache_mtx = Concurrent::ReadWriteLock.new
 
-$hit = 0
-$miss = 0
+$ghit = 0
+$gmiss = 0
 $gstats_mtx = Concurrent::ReadWriteLock.new
 
 # Thread safe
@@ -36,12 +36,12 @@ def get_age(name, login, cid)
         # wait until real data become available (not a wip marker)
         sleep 0.001
       end
-      $gstats_mtx.with_write_lock { $hit += 1 }
+      $gstats_mtx.with_write_lock { $ghit += 1 }
       ret << v
       next
     end
     $gcache_mtx.release_read_lock
-    $gstats_mtx.with_write_lock { $miss += 1 }
+    $gstats_mtx.with_write_lock { $gmiss += 1 }
     # Write marker that data is computing now: false
     $gcache_mtx.with_write_lock { $gcache[[name, cid]] = false }
     suri = "https://api.agify.io?name=#{URI.encode(name)}"
@@ -65,6 +65,6 @@ def get_age(name, login, cid)
     end
   end
   r = ret.reject { |r| r['age'].nil? }.sort_by { |r| [-r['count']] }
-  return nil, true if r.count < 1
+  return nil, nil, true if r.count < 1
   return r.first['age'], r.first['count'], true
 end
