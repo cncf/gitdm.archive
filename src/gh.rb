@@ -52,7 +52,7 @@ puts "(#{h[:age]}, #{cnt}, #{ok})"
 
 h[:commits] = 0
 h[:affiliation] = "(Unknown)"
-h[:email] = "change-me"
+h[:email] = "#{h[:login]}!users.noreply.github.com"
 h[:source] = "config"
 
 STDERR.puts JSON.pretty_generate(h)
