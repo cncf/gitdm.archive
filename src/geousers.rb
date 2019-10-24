@@ -88,6 +88,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       ccid = usr['country_id']
       ctz = usr['tz']
       ky = nil
+      ok = nil
       $gcache_mtx.with_read_lock { ky = cache.key?([login, email]) }
       if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
         rec = nil
@@ -103,7 +104,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
         cid = nil
         if (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
           puts "Querying #{login}, #{email}, #{loc}" if $gdbg
-          cid, tz = get_cid loc
+          cid, tz, ok = get_cid loc
           mtx.with_write_lock do
             l += 1
             f += 1 unless cid.nil?
@@ -115,7 +116,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
         usr['tz'] = nil if usr['tz'].nil?
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}" }
+      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, ok: #{ok}" }
       usr
     end
     begin

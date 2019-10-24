@@ -174,14 +174,14 @@ def get_cid(loc)
     data = get_cid_from_loc c, loc, false, '%', '%'
     data.each { |row| ret << row }
   end
-  return nil if ret.length < 1
+  return nil, nil, false if ret.length < 1
   r = ret.sort_by { |row| -row[1].to_i }
   tz = r[0][3]
   if tz == '' || tz.nil?
     r2 = ret.sort_by { |row| [(row[3] == '') ? 1 : 0, -row[1].to_i] }
     tz = r2[0][3]
   end
-  return r[0][0].downcase, tz
+  return r[0][0].downcase, tz, true
 end
 
 def get_tz(cid)
