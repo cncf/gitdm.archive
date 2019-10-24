@@ -186,7 +186,7 @@ end
 
 def get_tz(cid)
   c = [nil]
-  data = check_stmt c, 'tz', [cid.upcase]
+  data = check_stmt c, 'tz', [cid.downcase]
   return nil, false if data.length < 1
   return nil, false if data[0].length < 1
   return data[0][0], true
@@ -210,5 +210,5 @@ def init_sqls()
   $g_geousers_sqls['direct_laname'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and lower(asciiname) like $1 order by tz = \'\', population desc, geonameid asc limit 1'
   $g_geousers_sqls['alt_name'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where altname like $1) order by tz = \'\', population desc, geonameid asc limit 1'
   $g_geousers_sqls['alt_lname'] = 'select countrycode, population, name, tz from geonames where countrycode != \'\' and geonameid in (select geonameid from alternatenames where lower(altname) like $1) order by tz = \'\', population desc, geonameid asc limit 1'
-  $g_geousers_sqls['tz'] = 'select tz from geonames where countrycode = $1 order by population desc limit 1'
+  $g_geousers_sqls['tz'] = 'select tz from geonames where lower(countrycode) = $1 order by population desc limit 1'
 end
