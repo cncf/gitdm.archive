@@ -14,13 +14,13 @@ require './geousers_lib'
 # Not thread safe
 def get_gcache
   ary = []
-  $gcache.each { |key, val| ary << [key, val] }
+  $g_nationalize_cache.each { |key, val| ary << [key, val] }
   ary
 end
 
 # Not thread safe
 def generate_global_cache(cache)
-  cache.each { |key, val| $gcache[key] = val }
+  cache.each { |key, val| $g_nationalize_cache[key] = val }
 end
 
 def nationalize(json_file, json_file2, json_cache, backup_freq)
@@ -36,11 +36,11 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
   generate_global_cache cache
 
   # Handle CTRL+C
-  $gjson_cache_filename = json_cache
+  $g_nationalize_json_cache_filename = json_cache
   Signal.trap('INT') do
     puts "Caught signal, saving cache and exiting"
     pretty = JSON.pretty_generate get_gcache
-    File.write $gjson_cache_filename, pretty
+    File.write $g_nationalize_json_cache_filename, pretty
     puts "Saved"
     exit 1
   end
@@ -91,10 +91,10 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
       ky = nil
       ok = nil
       ok2 = nil
-      $gcache_mtx.with_read_lock { ky = cache.key?([login, email]) }
+      $g_nationalize_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
       if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
         rec = nil
-        $gcache_mtx.with_read_lock { rec = cache[[login, email]] }
+        $g_nationalize_cache_mtx.with_read_lock { rec = cache[[login, email]] }
         cid = usr['country_id'] = rec['country_id']
         tz = usr['tz'] = rec['tz']
         mtx.with_write_lock do
@@ -120,7 +120,7 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
       [usr, ok, ok2]
     end
     begin
-      $gstats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$ghit}, Miss: #{$gmiss}" }
+      $g_nationalize_stats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$g_nationalize_hit}, Miss: #{$g_nationalize_miss}" }
     rescue => ee
       puts "Error: #{ee}"
     end

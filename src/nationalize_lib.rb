@@ -1,11 +1,11 @@
-$gjson_cache_filename = nil
+$g_nationalize_json_cache_filename = nil
 
-$gcache = {}
-$gcache_mtx = Concurrent::ReadWriteLock.new
+$g_nationalize_cache = {}
+$g_nationalize_cache_mtx = Concurrent::ReadWriteLock.new
 
-$ghit = 0
-$gmiss = 0
-$gstats_mtx = Concurrent::ReadWriteLock.new
+$g_nationalize_hit = 0
+$g_nationalize_miss = 0
+$g_nationalize_stats_mtx = Concurrent::ReadWriteLock.new
 
 # Thread safe
 def get_nat(name, login, prob)
@@ -27,23 +27,23 @@ def get_nat(name, login, prob)
   alln.each do |name|
     name.delete! '"\'[]%_^@$*+={}:|\\`~?/.<>'
     next if name == ''
-    $gcache_mtx.acquire_read_lock
-    if $gcache.key?(name)
-      v = $gcache[name]
-      $gcache_mtx.release_read_lock
+    $g_nationalize_cache_mtx.acquire_read_lock
+    if $g_nationalize_cache.key?(name)
+      v = $g_nationalize_cache[name]
+      $g_nationalize_cache_mtx.release_read_lock
       while v === false do
-        $gstats_mtx.with_read_lock { v = $gcache[name] }
+        $g_nationalize_stats_mtx.with_read_lock { v = $g_nationalize_cache[name] }
         # wait until real data become available (not a wip marker)
         sleep 0.001
       end
-      $gstats_mtx.with_write_lock { $ghit += 1 }
+      $g_nationalize_stats_mtx.with_write_lock { $g_nationalize_hit += 1 }
       ret << v
       next
     end
-    $gcache_mtx.release_read_lock
-    $gstats_mtx.with_write_lock { $gmiss += 1 }
+    $g_nationalize_cache_mtx.release_read_lock
+    $g_nationalize_stats_mtx.with_write_lock { $g_nationalize_miss += 1 }
     # Write marker that data is computing now: false
-    $gcache_mtx.with_write_lock { $gcache[name] = false }
+    $g_nationalize_cache_mtx.with_write_lock { $g_nationalize_cache[name] = false }
     suri = "https://api.nationalize.io?name=#{URI.encode(name)}"
     suri += "&apikey=#{api_key}" if !api_key.nil? && api_key != ''
     begin
@@ -52,7 +52,7 @@ def get_nat(name, login, prob)
       data = JSON.parse(response.body)
       # data = { 'name' => 'x', 'country' => [{'country_id' => 'PL', 'probability' => 0.94 }, ...]}
       # write the final computed data instead of marker: false
-      $gcache_mtx.with_write_lock { $gcache[name] = data }
+      $g_nationalize_cache_mtx.with_write_lock { $g_nationalize_cache[name] = data }
       if data.key? 'error'
         puts data['error']
         return nil, nil, false

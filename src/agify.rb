@@ -12,13 +12,13 @@ require './agify_lib'
 # Not thread safe
 def get_gcache
   ary = []
-  $gcache.each { |key, val| ary << [key, val] }
+  $g_agify_cache.each { |key, val| ary << [key, val] }
   ary
 end
 
 # Not thread safe
 def generate_global_cache(cache)
-  cache.each { |key, val| $gcache[key] = val }
+  cache.each { |key, val| $g_agify_cache[key] = val }
 end
 
 def agify(json_file, json_file2, json_cache, backup_freq)
@@ -33,11 +33,11 @@ def agify(json_file, json_file2, json_cache, backup_freq)
   generate_global_cache cache
 
   # Handle CTRL+C
-  $gjson_cache_filename = json_cache
+  $g_agify_json_cache_filename = json_cache
   Signal.trap('INT') do
     puts "Caught signal, saving cache and exiting"
     pretty = JSON.pretty_generate get_gcache
-    File.write $gjson_cache_filename, pretty
+    File.write $g_agify_json_cache_filename, pretty
     puts "Saved"
     exit 1
   end
@@ -82,10 +82,10 @@ def agify(json_file, json_file2, json_cache, backup_freq)
       cage = usr['age']
       ky = nil
       ok = nil
-      $gcache_mtx.with_read_lock { ky = cache.key?([login, email]) }
+      $g_agify_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
       if (cage.nil? || cage == '') && ky
         rec = nil
-        $gcache_mtx.with_read_lock { rec = cache[[login, email]] }
+        $g_agify_cache_mtx.with_read_lock { rec = cache[[login, email]] }
         age = usr['age'] = rec['age']
         mtx.with_write_lock do
           ca += 1
@@ -105,7 +105,7 @@ def agify(json_file, json_file2, json_cache, backup_freq)
       [usr, ok]
     end
     begin
-      $gstats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$ghit}, Miss: #{$gmiss}" }
+      $g_agify_stats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$g_agify_hit}, Miss: #{$g_agify_miss}" }
     rescue => ee
       puts "Error: #{ee}"
     end

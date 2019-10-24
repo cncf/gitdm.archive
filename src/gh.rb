@@ -17,6 +17,10 @@ gcs = octokit_init()
 hint = rate_limit(gcs)[0]
 u = gcs[hint].user ARGV[0]
 h = u.to_h
+prob = 0.5
+unless ENV['PROB'].nil?
+  prob = ENV['PROB'].to_f
+end
 
 init_sqls()
 
@@ -28,12 +32,9 @@ else
   h[:country_id], h[:tz] = nil, nil
 end
 
-h[:location] = nil
-h[:tz] = nil
-
 if h[:country_id].nil? || h[:tz].nil?
   print "nationalize_lib: (#{h[:login]}, #{h[:name]}) -> "
-  cid, prb, ok = get_nat h[:name], h[:login], 0.3
+  cid, prb, ok = get_nat h[:name], h[:login], prob
   tz, ok2 = get_tz cid unless cid.nil?
   print "(#{cid}, #{tz}, #{prb}, #{ok}, #{ok2}) -> "
   h[:country_id] = cid if h[:country_id].nil?
