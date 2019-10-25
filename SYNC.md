@@ -26,7 +26,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 9. Recommended: `./ghusers_partially_cached.sh 2> errors.txt` will refetch repos metadata and commits since last fetched and get users data from `github_users.json` so you can save a lot of API points. You can prepend with `NCPUS=N` to override autodetecting number of CPU cores available.
 10. To copy source type from previous JSON version do `./copy_source.sh`, `./compare_sources.sh`.
 11. Run `./company_names_mapping.sh` to fix typical company names spell errors, lower/upper case etc. Update `company-names-mapping` before running this (with a new typos/correlations data from the last 3 steps).
-12. To update (enhance) `github_users.json` with new affiliations `./enhance_json.sh`. If you run `ghusers` you may need to update `skip_github_logins.txt` with new broken GitHub logins found. This is optional if you already have an enhanced json. You can prepend with `NCPUS=N` to override autodetecting number of CPU cores available.
+12. To update (enhance) `github_users.json` with new affiliations `[SHUFFLE=1] ./enhance_json.sh`. If you run `ghusers` you may need to update `skip_github_logins.txt` with new broken GitHub logins found. This is optional if you already have an enhanced json. You can prepend with `NCPUS=N` to override autodetecting number of CPU cores available.
 13. To merge with previous JSON use: `./merge_jsons.sh`.
 14. To merge multiple GitHub logins data (for example propagate known affiliation to unknown or not found on the same GitHub login) run: `./merge_github_logins.sh`.
 15. Because this can find new affiliations you can now use `./import_from_github_users.sh` to import back from `github_users.json` and then `./lower_unique.sh cncf-config/email-map` and restart from step 5. This uses `company-names-mapping` file to import from GitHub `company` field.
@@ -45,6 +45,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 28. Finally copy `github_users.json` to `github_users.old`. You can check if JSON fileds are correct via `./check_json_fields.sh github_users.json`, `./check_json_fields.sh stripped.json small`, `./check_json_fields.sh affiliated.json small`.
 29. If any file displays error with 'Invalid UTF-8' encoding, scrub it using Ruby tool: `./scrub.rb filename`.
 30. To add user with 'xyz' GitHub id, use: `PG_PASS=... ./gh.rb xyz` - this will generate JSON entry that can be added to `github_users.json` after tweaking `email`, `source`, `affiliation` and possible some more fields.
+31. To generate unknown CII committers use: `./sh/unknown_committers.sh`.
 31. Use `PG_PASS=.. ./unknown_committers.rb` to generate `task.csv` file to research CII committers.
 
 
