@@ -229,6 +229,7 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
     puts "We need to process additional actors using GitHub API, type exit-program if you want to exit"
     puts "uacts.join(\"', '\")"
     uacts = unknown_actors.keys
+    uacts.shuffle! unless ENV['SHUFFLE'].nil?
     n_users = uacts.size
     rpts = 0
     thrs = Set[]
@@ -292,6 +293,14 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
             puts "Too many GitHub requests for #{actor}, sleeping for #{td} seconds"
             sleep td
             next
+          rescue Octokit::InternalServerError => err
+            puts "Internal Server Error #{err} for #{actor}, sleeping 60 seconds"
+            sleep 60
+            next
+          rescue Octokit::BadGateway => err
+            puts "Bad Gateway #{err} for #{actor}, sleeping 60 seconds"
+            sleep 60
+            next
           rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err
             puts "Retryable error #{err} for #{actor}, sleeping 10 seconds"
             sleep 10
@@ -299,6 +308,9 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
           rescue => err
             puts "Uups, something bad happened for #{actor}, check `err` variable!"
             STDERR.puts [err.class, err]
+            # Write JSON back
+            json = JSON.pretty_generate data
+            File.write json_file, json
             exit 1
           end
           break
@@ -311,6 +323,12 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
         res = t.value
         res.each { |h| data << h }
         thrs = thrs.delete t
+      end
+      if index > 0 && index % 1000 == 0
+        puts "Backup at #{index}, found #{actors_found}, not found #{actor_not_found} from #{n_users} additional actors"
+        # Write JSON back
+        json = JSON.pretty_generate data
+        File.write json_file, json
       end
     end
     ThreadsWait.all_waits(thrs.to_a) do |thr|
