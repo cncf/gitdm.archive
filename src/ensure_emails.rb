@@ -31,6 +31,7 @@ uacts = hsh.keys
 uacts.shuffle! unless ENV['SHUFFLE'].nil?
 n_users = uacts.size
 rpts = 0
+new_email = 0
 thrs = Set[]
 uacts.each_with_index do |actor, index|
   thrs << Thread.new do
@@ -45,12 +46,14 @@ uacts.each_with_index do |actor, index|
           rpts -= 1
           #puts "#{rpts} calls remain before next rate check"
         end
-        puts "Asking for #{index}/#{n_users}: GitHub: #{actor}"
+        puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, new: #{new_email}"
         u = gcs[hint].user actor
         break if u[:email].nil? || u[:email] == ''
         email = email_encode(u[:email])
         emails = hsh[actor]
         break if emails.key?(email)
+        puts "New email: #{email}"
+        new_emails += 1
         u2 = emails.first[1].clone
         u2['email'] = email
         u2['commits'] = 0
@@ -103,7 +106,7 @@ uacts.each_with_index do |actor, index|
     res.each { |h| data << h }
     thrs = thrs.delete t
   end
-  if index > 0 && index % 3000 == 0
+  if index > 0 && index % 2000 == 0
     puts "Backup at #{index}/#{n_users}"
     # Write JSON back
     json = JSON.pretty_generate data
