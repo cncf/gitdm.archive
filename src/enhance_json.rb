@@ -301,6 +301,10 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
             puts "Bad Gateway #{err} for #{actor}, sleeping 60 seconds"
             sleep 60
             next
+          rescue Octokit::ServerError => err
+            puts "Server Error #{err} for #{actor}, sleeping 60 seconds"
+            sleep 60
+            next
           rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err
             puts "Retryable error #{err} for #{actor}, sleeping 10 seconds"
             sleep 10
