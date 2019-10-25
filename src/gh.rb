@@ -7,6 +7,7 @@ require 'concurrent'
 require 'unidecoder'
 require 'pg'
 
+require './email_code'
 require './ghapi'
 require './geousers_lib'
 require './nationalize_lib'
@@ -72,6 +73,7 @@ end
 h[:commits] = 0 unless h.key?(:commits)
 h[:affiliation] = "(Unknown)" unless h.key?(:affiliation)
 h[:email] = "#{h[:login]}!users.noreply.github.com" if !h.key?(:email) || h[:email].nil? || h[:email] == ''
+h[:email] = email_encode(h[:email])
 h[:source] = "config" unless h.key?(:source)
 
 STDERR.puts JSON.pretty_generate(h)
