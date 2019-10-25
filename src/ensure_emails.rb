@@ -13,12 +13,16 @@ json_file = ARGV[0]
 data = JSON.parse File.read json_file
 
 hsh = {}
+emails = 0
 data.each do |row|
+  emails += 1
   login = row['login']
   email = email_encode(row['email']).downcase
   hsh[login] = {} unless hsh.key?(login)
   hsh[login][email] = row
 end
+
+puts "Logins: #{hsh.keys.length}, emails: #{emails}"
 
 n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
 gcs = octokit_init()
