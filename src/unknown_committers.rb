@@ -101,7 +101,7 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
     end
     h[:commits] = 0
     h[:affiliation] = "(Unknown)"
-    h[:email] = "#{ghid}!users.noreply.github.com"
+    h[:email] = "#{ghid}!users.noreply.github.com" if !h.key?(:email) || h[:email].nil? || h[:email] == ''
     h[:source] = "config"
     obj = {}
     ks.keys.each { |k| obj[k.to_s] = h[k.to_sym] }
