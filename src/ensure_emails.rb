@@ -99,7 +99,7 @@ uacts.each_with_index do |actor, index|
     res.each { |h| data << h }
     thrs = thrs.delete t
   end
-  if index > 0 && index % 10 == 0
+  if index > 0 && index % 3000 == 0
     puts "Backup at #{index}/#{n_users}"
     # Write JSON back
     json = JSON.pretty_generate data
