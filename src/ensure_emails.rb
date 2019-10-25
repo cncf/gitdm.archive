@@ -31,7 +31,7 @@ uacts = hsh.keys
 uacts.shuffle! unless ENV['SHUFFLE'].nil?
 n_users = uacts.size
 rpts = 0
-new_email = 0
+new_emails = 0
 thrs = Set[]
 uacts.each_with_index do |actor, index|
   thrs << Thread.new do
@@ -46,7 +46,7 @@ uacts.each_with_index do |actor, index|
           rpts -= 1
           #puts "#{rpts} calls remain before next rate check"
         end
-        puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, new: #{new_email}"
+        puts "Asking for #{index}/#{n_users}: GitHub: #{actor}, new: #{new_emails}"
         u = gcs[hint].user actor
         break if u[:email].nil? || u[:email] == ''
         email = email_encode(u[:email])
@@ -117,6 +117,7 @@ ThreadsWait.all_waits(thrs.to_a) do |thr|
   res = thr.value
   res.each { |h| data << h }
 end
+puts "Found #{new_emails} new emails"
 
 # Write JSON back
 json = JSON.pretty_generate data
