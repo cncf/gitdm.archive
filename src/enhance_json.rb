@@ -178,11 +178,13 @@ def enchance_json(json_file, csv_file, actors_file, map_file)
           eaffs[e] = {}
           cv.split(', ').each { |a| eaffs[e][a] = true }
         else
+          puts "Exiting due to answer #{answer}"
           exit 1
         end
       end
     end
   end
+  puts 'Done main loop'
 
   # Write new email-map
   File.open(map_file, 'w') do |file|
