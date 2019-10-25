@@ -38,11 +38,11 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 21. To make json unique, call `./unique_json.rb github_users.json`. To sort JSON by commits, login, email use: `./sort_json.rb github_users.json`.
 22. You should run genderize/geousers (if needed) before the next step.
 23. To generate human readable text affiliation files: first run: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`.
-24. You can create smaller final json for `cncf/devstats` using `./delete_json_fields.sh github_users.json; ./check_source.rb github_users.json; ./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/github.com/cncf/devstats/github_users.json`.
+24. You can create smaller final json for `cncf/devstats` using `./delete_json_fields.sh github_users.json; ./check_source.rb github_users.json; ./strip_json.sh github_users.json stripped.json; ONLY_AFF=1 ./strip_json.sh github_users.json affiliated.json; cp affiliated.json ~/dev/go/src/github.com/cncf/devstats/github_users.json`.
 25. To generate final `unknowns.csv` manual research task file run: `./gen_aff_task.rb unknowns.txt`. You can also generate all actors `./gen_aff_task.rb alldevs.txt`. You can prepend with `ONLY_GH=1` to skip entries without GitHub. You can prepend with `ONLY_EMP=1` to skip entries with any affiliation already set. You can filter only specific entries, for example: `./filter_task.rb unknowns.txt unknown_with_linkedin.json unknowns_with_linkedin.txt`.
-26. To manually edit all affiliations related files: edit `cncf-config/email-map all.txt all.csv all_affs.csv github_users.json stripped.json ../developers_affiliations.txt ../company_developers.txt affiliations.csv`
+26. To manually edit all affiliations related files: edit `cncf-config/email-map all.txt all.csv all_affs.csv github_users.json stripped.json affiliated.json ../developers_affiliations.txt ../company_developers.txt affiliations.csv`
 27. To add all possible entries from `github_users.json` to `cncf-config/email-map` use :`github_users_to_map.sh`. This is optional.
-28. Finally copy `github_users.json` to `github_users.old`. You can check if JSON fileds are correct via `./check_json_fields.sh github_users.json`, `./check_json_fields.sh stripped.json small`.
+28. Finally copy `github_users.json` to `github_users.old`. You can check if JSON fileds are correct via `./check_json_fields.sh github_users.json`, `./check_json_fields.sh stripped.json small`, `./check_json_fields.sh affiliated.json small`.
 29. If any file displays error with 'Invalid UTF-8' encoding, scrub it using Ruby tool: `./scrub.rb filename`.
 30. To add user with 'xyz' GitHub id, use: `PG_PASS=... ./gh.rb xyz` - this will generate JSON entry that can be added to `github_users.json` after tweaking `email`, `source`, `affiliation` and possible some more fields.
 31. Use `PG_PASS=.. ./unknown_committers.rb` to generate `task.csv` file to research CII committers.
@@ -84,7 +84,7 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - Enchance `github_users.json` via `API_KEY=... ./genderize.sh github_users.json stripped.json genderize_cache.json 20000`. It will add `sex` and `sex_prob` fields.
 - Enchance `github_users.json` via `API_KEY=... ./agify.sh github_users.json stripped.json agify_cache.json 20000`. It will add `age` field.
 - You can skip `API_KEY=...` but only 1000 gender lookups/day are allowed then.
-- Copy enhanced json to devstats: `./strip_json.sh github_users.json stripped.json; cp stripped.json ~/dev/go/src/github.com/cncf/devstats/github_users.json`
+- Copy enhanced json to devstats: `ONLY_AFF=1 ./strip_json.sh github_users.json affiliated.json; cp affiliated.json ~/dev/go/src/github.com/cncf/devstats/github_users.json`.
 - Import new json on devstats using `./import_affs` tool.
 
 
