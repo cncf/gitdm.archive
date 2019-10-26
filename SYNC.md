@@ -36,7 +36,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 19. *ALWAYS* before any commit to GitHub run: `./handle_forbidden_data.sh` to remove any forbiden affiliations, please also see `FORBIDDEN_DATA.md`.
 20. You can use `./clear_affiliations_in_json.sh` to clear all affiliations on a generated `github_users.json`.
 21. To make json unique, call `./unique_json.rb github_users.json`. To sort JSON by commits, login, email use: `./sort_json.rb github_users.json`.
-22. You should run genderize/geousers (if needed) before the next step.
+22. You should run genderize/geousers/localize/agify (if needed) before the next step.
 23. To generate human readable text affiliation files: first run: `SKIP_COMPANIES="(Unknown)" ./gen_aff_files.sh`.
 24. You can create smaller final json for `cncf/devstats` using `./delete_json_fields.sh github_users.json; ./check_source.rb github_users.json; ./strip_json.sh github_users.json stripped.json; ONLY_AFF=1 ./strip_json.sh github_users.json affiliated.json; cp affiliated.json ~/dev/go/src/github.com/cncf/devstats/github_users.json`.
 25. To generate final `unknowns.csv` manual research task file run: `./gen_aff_task.rb unknowns.txt`. You can also generate all actors `./gen_aff_task.rb alldevs.txt`. You can prepend with `ONLY_GH=1` to skip entries without GitHub. You can prepend with `ONLY_EMP=1` to skip entries with any affiliation already set. You can filter only specific entries, for example: `./filter_task.rb unknowns.txt unknown_with_linkedin.json unknowns_with_linkedin.txt`.
