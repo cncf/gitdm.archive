@@ -77,35 +77,46 @@ def agify(json_file, json_file2, json_cache, backup_freq)
   indices.each_with_index do |sidx, idx|
     user = data[sidx]
     next if idx < from
-    thrs << Thread.new(user) do |usr|
-      login = usr['login']
-      email = usr['email']
-      name = usr['name']
-      cid = usr['country_id']
-      cage = usr['age']
-      ky = nil
-      ok = nil
-      $g_agify_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
-      if (cage.nil? || cage == '') && ky
-        rec = nil
-        $g_agify_cache_mtx.with_read_lock { rec = cache[[login, email]] }
-        age = usr['age'] = rec['age']
-        mtx.with_write_lock do
-          ca += 1
-          f += 1 unless age.nil?
-        end
-      else
-        age = nil
-        if cage.nil?
-          age, cnt, ok = get_age name, login, cid
-          puts "Got #{name}, #{login}, #{cid} -> #{age}@#{cnt}, #{ok}" unless age.nil?
-          mtx.with_write_lock { f += 1 unless age.nil? }
-          usr['age'] = age
-        end
+    login = user['login']
+    email = user['email']
+    name = user['name']
+    cid = user['country_id']
+    cage = user['age']
+    ky = nil
+    ok = nil
+    $g_agify_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
+    if (cage.nil? || cage == '') && ky
+      rec = nil
+      $g_agify_cache_mtx.with_read_lock { rec = cache[[login, email]] }
+      age = usr['age'] = rec['age']
+      mtx.with_write_lock do
+        ca += 1
+        f += 1 unless age.nil?
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid}) -> #{age || cage}) found #{f}, cache: #{ca}" }
-      [usr, ok]
+      mtx.with_read_lock { puts "Row(hit) #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid}) -> #{age || cage}) found #{f}, cache: #{ca}" }
+      newj << user
+    elsif cage.nil?
+      thrs << Thread.new(user) do |usr|
+        login = usr['login']
+        email = usr['email']
+        name = usr['name']
+        cid = usr['country_id']
+        cage = usr['age']
+        ky = nil
+        ok = nil
+        age = nil
+        age, cnt, ok = get_age name, login, cid
+        puts "Got #{name}, #{login}, #{cid} -> #{age}@#{cnt}, #{ok}" unless age.nil?
+        mtx.with_write_lock { f += 1 unless age.nil? }
+        usr['age'] = age
+        mtx.with_write_lock { n += 1 }
+        mtx.with_read_lock { puts "Row(miss) #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid}) -> #{age || cage}) found #{f}, cache: #{ca}" }
+        [usr, ok]
+      end
+    else
+      mtx.with_write_lock { n += 1 }
+      mtx.with_read_lock { puts "Row(skip) #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid}) -> #{age || cage}) found #{f}, cache: #{ca}" }
     end
     begin
       $g_agify_stats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$g_agify_hit}, Miss: #{$g_agify_miss}" }
@@ -115,9 +126,9 @@ def agify(json_file, json_file2, json_cache, backup_freq)
     while thrs.length >= n_thrs
       tw = ThreadsWait.new(thrs.to_a)
       t = tw.next_wait
-      data = t.value
-      usr = data[0]
-      ok = data[1]
+      dat = t.value
+      usr = dat[0]
+      ok = dat[1]
       newj << usr
       thrs = thrs.delete t
       if ok === false
@@ -136,9 +147,9 @@ def agify(json_file, json_file2, json_cache, backup_freq)
     end
   end
   ThreadsWait.all_waits(thrs.to_a) do |thr|
-    data = thr.value
-    usr = data[0]
-    ok = data[1]
+    dat = thr.value
+    usr = dat[0]
+    ok = dat[1]
     newj << usr
   end
 

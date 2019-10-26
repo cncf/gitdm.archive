@@ -85,42 +85,54 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
   indices.each_with_index do |sidx, idx|
     user = data[sidx]
     next if idx < from
-    thrs << Thread.new(user) do |usr|
-      login = usr['login']
-      email = usr['email']
-      name = usr['name']
-      ccid = usr['country_id']
-      ctz = usr['tz']
-      ky = nil
-      ok = nil
-      ok2 = nil
-      $g_nationalize_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
-      if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
-        rec = nil
-        $g_nationalize_cache_mtx.with_read_lock { rec = cache[[login, email]] }
-        cid = usr['country_id'] = rec['country_id']
-        tz = usr['tz'] = rec['tz']
-        mtx.with_write_lock do
-          ca += 1
-          f += 1 unless cid.nil? || tz.nil?
-        end
-      else
-        cid = nil
-        tz = nil
-        if ccid.nil? || ctz.nil?
-          cid, prb, ok = get_nat name, login, prob
-          tz, ok2 = get_tz cid unless cid.nil?
-          puts "Got #{name}, #{login} -> #{cid}@#{prb}, #{tz}, #{ok}, #{ok2}" unless cid.nil? || tz.nil?
-          cid = ccid unless ccid.nil? || ccid  == ''
-          tz = ctz unless ctz.nil? || ctz  == ''
-          mtx.with_write_lock { f += 1 unless cid.nil? || tz.nil? }
-          usr['country_id'] = cid
-          usr['tz'] = tz
-        end
+    login = user['login']
+    email = user['email']
+    name = user['name']
+    ccid = user['country_id']
+    ctz = user['tz']
+    ky = nil
+    ok = nil
+    ok2 = nil
+    $g_nationalize_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
+    if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
+      rec = nil
+      $g_nationalize_cache_mtx.with_read_lock { rec = cache[[login, email]] }
+      cid = user['country_id'] = rec['country_id']
+      tz = user['tz'] = rec['tz']
+      mtx.with_write_lock do
+        ca += 1
+        f += 1 unless cid.nil? || tz.nil?
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: #{name} -> (#{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}, state: #{ok}/#{ok2}" }
-      [usr, ok, ok2]
+      mtx.with_read_lock { puts "Row(hit) #{n}/#{all_n}: #{login}: #{name} -> (#{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}, state: #{ok}/#{ok2}" }
+      newj << user
+    elsif ccid.nil? || ctz.nil?
+      thrs << Thread.new(user) do |usr|
+        login = usr['login']
+        email = usr['email']
+        name = usr['name']
+        ccid = usr['country_id']
+        ctz = usr['tz']
+        ky = nil
+        ok = nil
+        ok2 = nil
+        cid = nil
+        tz = nil
+        cid, prb, ok = get_nat name, login, prob
+        tz, ok2 = get_tz cid unless cid.nil?
+        puts "Got #{name}, #{login} -> #{cid}@#{prb}, #{tz}, #{ok}, #{ok2}" unless cid.nil? || tz.nil?
+        cid = ccid unless ccid.nil? || ccid  == ''
+        tz = ctz unless ctz.nil? || ctz  == ''
+        mtx.with_write_lock { f += 1 unless cid.nil? || tz.nil? }
+        usr['country_id'] = cid
+        usr['tz'] = tz
+        mtx.with_write_lock { n += 1 }
+        mtx.with_read_lock { puts "Row(miss) #{n}/#{all_n}: #{login}: #{name} -> (#{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}, state: #{ok}/#{ok2}" }
+        [usr, ok, ok2]
+      end
+    else
+      mtx.with_write_lock { n += 1 }
+      mtx.with_read_lock { puts "Row(skip) #{n}/#{all_n}: #{login}: #{name} -> (#{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}, state: #{ok}/#{ok2}" }
     end
     begin
       $g_nationalize_stats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$g_nationalize_hit}, Miss: #{$g_nationalize_miss}" }
@@ -138,10 +150,10 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         retry
       end
       t = tw.next_wait
-      data = t.value
-      usr = data[0]
-      ok = data[1]
-      ok2 = data[2]
+      dat = t.value
+      usr = dat[0]
+      ok = dat[1]
+      ok2 = dat[2]
       newj << usr
       thrs = thrs.delete t
       if ok === false
@@ -160,10 +172,10 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
     end
   end
   ThreadsWait.all_waits(thrs.to_a) do |thr|
-    data = thr.value
-    usr = data[0]
-    ok = data[1]
-    ok2 = data[2]
+    dat = thr.value
+    usr = dat[0]
+    ok = dat[1]
+    ok2 = dat[2]
     newj << usr
   end
 

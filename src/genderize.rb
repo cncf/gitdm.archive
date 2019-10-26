@@ -78,37 +78,49 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
   indices.each_with_index do |sidx, idx|
     user = data[sidx]
     next if idx < from
-    thrs << Thread.new(user) do |usr|
-      login = usr['login']
-      email = usr['email']
-      name = usr['name']
-      cid = usr['country_id']
-      csex = usr['sex']
-      cprob = usr['sex_prob']
-      ky = nil
-      ok = nil
-      $g_genderize_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
-      if (csex.nil? || csex == '' || cprob.nil? || cprob == '') && ky
-        rec = nil
-        $g_genderize_cache_mtx.with_read_lock { rec = cache[[login, email]] }
-        sex = usr['sex'] = rec['sex']
-        prob = usr['sex_prob'] = rec['sex_prob']
-        mtx.with_write_lock do
-          ca += 1
-          f += 1 unless sex.nil?
-        end
-      else
-        sex = nil
-        if csex.nil? || cprob.nil?
-          sex, prob, ok = get_sex name, login, cid
-          mtx.with_write_lock { f += 1 unless sex.nil? }
-          usr['sex'] = sex
-          usr['sex_prob'] = prob
-        end
+    login = user['login']
+    email = user['email']
+    name = user['name']
+    cid = user['country_id']
+    csex = user['sex']
+    cprob = user['sex_prob']
+    ky = nil
+    ok = nil
+    $g_genderize_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
+    if (csex.nil? || csex == '' || cprob.nil? || cprob == '') && ky
+      rec = nil
+      $g_genderize_cache_mtx.with_read_lock { rec = cache[[login, email]] }
+      sex = user['sex'] = rec['sex']
+      prob = user['sex_prob'] = rec['sex_prob']
+      mtx.with_write_lock do
+        ca += 1
+        f += 1 unless sex.nil?
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, ok: #{ok}" }
-      [usr, ok]
+      mtx.with_read_lock { puts "Row(hit) #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, ok: #{ok}" }
+      newj << user
+    elsif csex.nil? || cprob.nil?
+      thrs << Thread.new(user) do |usr|
+        login = usr['login']
+        email = usr['email']
+        name = usr['name']
+        cid = usr['country_id']
+        csex = usr['sex']
+        cprob = usr['sex_prob']
+        ky = nil
+        ok = nil
+        sex = nil
+        sex, prob, ok = get_sex name, login, cid
+        mtx.with_write_lock { f += 1 unless sex.nil? }
+        usr['sex'] = sex
+        usr['sex_prob'] = prob
+        mtx.with_write_lock { n += 1 }
+        mtx.with_read_lock { puts "Row(miss) #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, ok: #{ok}" }
+        [usr, ok]
+      end
+    else
+      mtx.with_write_lock { n += 1 }
+      mtx.with_read_lock { puts "Row(skip) #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, ok: #{ok}" }
     end
     begin
       $g_genderize_stats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$g_genderize_hit}, Miss: #{$g_genderize_miss}" }
@@ -118,9 +130,9 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
     while thrs.length >= n_thrs
       tw = ThreadsWait.new(thrs.to_a)
       t = tw.next_wait
-      data = t.value
-      usr = data[0]
-      ok = data[1]
+      dat = t.value
+      usr = dat[0]
+      ok = dat[1]
       newj << usr
       thrs = thrs.delete t
       if ok === false
@@ -139,9 +151,9 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
     end
   end
   ThreadsWait.all_waits(thrs.to_a) do |thr|
-    data = thr.value
-    usr = data[0]
-    ok = data[1]
+    dat = thr.value
+    usr = dat[0]
+    ok = dat[1]
     newj << usr
   end
 
