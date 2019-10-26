@@ -151,8 +151,8 @@ def affiliations(affiliations_file, json_file, email_map)
       end
 
       # emails bugs/typos
-      possible_emails = (new_emails || '').split(',').map(&:strip) << h['email'].strip
-      emails = ((new_emails || '').split(',').map(&:strip).map { |e| email_encode(e) } << email_encode(h['email'].strip)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
+      possible_emails = (new_emails || '').split(',').map(&:strip).map(&:downcase) << h['email'].strip.downcase
+      emails = ((new_emails || '').split(',').map(&:strip).map(&:downcase).map { |e| email_encode(e) } << email_encode(h['email'].strip.downcase)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
       if emails.length != possible_emails.length
         puts "Wrong emails config (some discarded)"
         p h
@@ -401,7 +401,7 @@ def affiliations(affiliations_file, json_file, email_map)
         emails.each do |email|
           next if gh == '-'
           entry = users[email]
-          login = gh.split('/').last
+          login = gh.split('/').last.downcase
           entries = users[login]
           prev_source = prev_sources[email]
           source = sources[email]
