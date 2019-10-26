@@ -84,43 +84,55 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   indices.each_with_index do |sidx, idx|
     user = data[sidx]
     next if idx < from
-    thrs << Thread.new(user) do |usr|
-      login = usr['login']
-      email = usr['email']
-      loc = usr['location']
-      ccid = usr['country_id']
-      ctz = usr['tz']
-      ky = nil
-      ok = nil
-      $g_geousers_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
-      if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
-        rec = nil
-        $g_geousers_cache_mtx.with_read_lock { rec = cache[[login, email]] }
-        cid = usr['country_id'] = rec['country_id']
-        tz = usr['tz'] = rec['tz']
-        mtx.with_write_lock do
-          ca += 1
-          l += 1 if !loc.nil? && loc.length > 0
-          f += 1 unless cid.nil?
-        end
-      else
-        cid = nil
-        if (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
-          puts "Querying #{login}, #{email}, #{loc}" if $g_geousers_dbg
-          cid, tz, ok = get_cid loc
-          mtx.with_write_lock do
-            l += 1
-            f += 1 unless cid.nil?
-          end
-          usr['country_id'] = cid
-          usr['tz'] = tz
-        end
-        usr['country_id'] = nil if usr['country_id'].nil?
-        usr['tz'] = nil if usr['tz'].nil?
+    login = user['login']
+    email = user['email']
+    loc = user['location']
+    ccid = user['country_id']
+    ctz = user['tz']
+    ky = nil
+    ok = nil
+    cid = nil
+    $g_geousers_cache_mtx.with_read_lock { ky = cache.key?([login, email]) }
+    if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
+      rec = nil
+      $g_geousers_cache_mtx.with_read_lock { rec = cache[[login, email]] }
+      cid = user['country_id'] = rec['country_id']
+      tz = user['tz'] = rec['tz']
+      mtx.with_write_lock do
+        ca += 1
+        l += 1 if !loc.nil? && loc.length > 0
+        f += 1 unless cid.nil?
       end
       mtx.with_write_lock { n += 1 }
-      mtx.with_read_lock { puts "Row #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, ok: #{ok}" }
-      usr
+      mtx.with_read_lock { puts "Row(hit) #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, ok: #{ok}" }
+      newj << user
+    elsif (ccid.nil? || ctz.nil? || ccid == '' || ctz == '') && !loc.nil? && loc.length > 0
+      thrs << Thread.new(user) do |usr|
+        login = usr['login']
+        email = usr['email']
+        loc = usr['location']
+        ccid = usr['country_id']
+        ctz = usr['tz']
+        ky = nil
+        ok = nil
+        cid = nil
+        puts "Querying #{login}, #{email}, #{loc}" if $g_geousers_dbg
+        cid, tz, ok = get_cid loc
+        mtx.with_write_lock do
+          l += 1
+          f += 1 unless cid.nil?
+        end
+        usr['country_id'] = cid
+        usr['tz'] = tz
+        usr['country_id'] = nil if usr['country_id'].nil?
+        usr['tz'] = nil if usr['tz'].nil?
+        mtx.with_write_lock { n += 1 }
+        mtx.with_read_lock { puts "Row(miss) #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, ok: #{ok}" }
+        usr
+      end
+    else
+      mtx.with_write_lock { n += 1 }
+      mtx.with_read_lock { puts "Row(skip) #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, ok: #{ok}" }
     end
     begin
       $g_geousers_stats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$g_geousers_hit}, Miss: #{$g_geousers_miss}" }
