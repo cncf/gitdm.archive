@@ -45,7 +45,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 28. Finally copy `github_users.json` to `github_users.old`. You can check if JSON fileds are correct via `./check_json_fields.sh github_users.json`, `./check_json_fields.sh stripped.json small`, `./check_json_fields.sh affiliated.json small`.
 29. If any file displays error with 'Invalid UTF-8' encoding, scrub it using Ruby tool: `./scrub.rb filename`.
 30. To add user with 'xyz' GitHub id, use: `PG_PASS=... ./gh.rb xyz` - this will generate JSON entry that can be added to `github_users.json` after tweaking `email`, `source`, `affiliation` and possible some more fields.
-31. To generate unknown CII committers use: `./sh/unknown_committers.sh`.
+31. To generate unknown CII committers use: `PG_PASS=... ./sh/unknown_committers.sh`.
 32. Use `PG_PASS=... ./unknown_committers.rb` to generate `task.csv` file to research CII committers.
 33. Use `[SHUFFLE=1] ./ensure_emails.rb github_users.json` to ensure that most up-to-date gitHub users emails are present (this will query all GitHub logins so can take even a day to finish on 200k+ JSON.
 
