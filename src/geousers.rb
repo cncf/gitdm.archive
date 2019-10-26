@@ -10,7 +10,7 @@ require './geousers_lib'
 # Not thread safe!
 def get_gcache
   ary = []
-  $g_geousers_cache.each { |key, val| ary << [key, val] }
+  $g_geousers_cache_mtx.with_read_lock { $g_geousers_cache.each { |key, val| ary << [key, val] } }
   ary
 end
 
