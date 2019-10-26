@@ -12,7 +12,7 @@ require './genderize_lib'
 # Not thread safe
 def get_gcache
   ary = []
-  $g_genderize_cache.each { |key, val| ary << [key, val] }
+  $g_genderize_cache_mtx.with_read_lock { $g_genderize_cache.each { |key, val| ary << [key, val] } }
   ary
 end
 
