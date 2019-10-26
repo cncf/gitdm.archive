@@ -73,7 +73,10 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
   n = from
   thrs = Set[]
   n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
-  data.each_with_index do |user, idx|
+  indices = [*0...data.length]
+  indices.shuffle! unless ENV['SHUFFLE'].nil?
+  indices.each_with_index do |sidx, idx|
+    user = data[sidx]
     next if idx < from
     thrs << Thread.new(user) do |usr|
       login = usr['login']
