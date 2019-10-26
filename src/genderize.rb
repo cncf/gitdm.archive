@@ -121,6 +121,7 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
     else
       mtx.with_write_lock { n += 1 }
       mtx.with_read_lock { puts "Row(skip) #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, ok: #{ok}" }
+      newj << user
     end
     begin
       $g_genderize_stats_mtx.with_read_lock { puts "Index: #{idx}, Hits: #{$g_genderize_hit}, Miss: #{$g_genderize_miss}" }
