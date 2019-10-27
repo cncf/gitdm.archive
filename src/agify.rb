@@ -88,7 +88,7 @@ def agify(json_file, json_file2, json_cache, backup_freq)
     if (cage.nil? || cage == '') && ky
       rec = nil
       $g_agify_cache_mtx.with_read_lock { rec = cache[[login, email]] }
-      age = usr['age'] = rec['age']
+      age = user['age'] = rec['age']
       mtx.with_write_lock do
         ca += 1
         f += 1 unless age.nil?
