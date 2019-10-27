@@ -12,13 +12,13 @@ require './agify_lib'
 # Not thread safe
 def get_gcache
   ary = []
-  $g_agify_cache_mtx.with_read_lock { $g_agify_cache.each { |key, val| ary << [key, val] } }
+  $g_agify_cache_mtx.with_read_lock { $g_agify_cache.each { |key, val| ary << [key, val] unless val === false } }
   ary
 end
 
 # Not thread safe
 def generate_global_cache(cache)
-  cache.each { |key, val| $g_agify_cache[key] = val }
+  cache.each { |key, val| $g_agify_cache[key] = val unless val === false }
 end
 
 def agify(json_file, json_file2, json_cache, backup_freq)
