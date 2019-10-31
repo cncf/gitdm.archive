@@ -100,6 +100,10 @@
 /root/devstats_repos/jaredhanson/* \
 /root/devstats_repos/jashkenas/* \
 /root/devstats_repos/jenkins-infra/* \
+/root/devstats_repos/jenkins-x-apps/* \
+/root/devstats_repos/jenkins-x-buildpacks/* \
+/root/devstats_repos/jenkins-x-charts/* \
+/root/devstats_repos/jenkins-x-quickstarts/* \
 /root/devstats_repos/jenkins-x/* \
 /root/devstats_repos/jenkinsci/* \
 /root/devstats_repos/jldec/* \
