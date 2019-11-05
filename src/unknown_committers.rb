@@ -60,6 +60,8 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
       obj = data[lghid][lemail].dup
       if affs.key?(ghid)
         obj['affiliation'] = affs[ghid]
+      else
+        obj['affiliation'] = ''
       end
       ary << obj
     else
@@ -67,6 +69,8 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
       obj = data[lghid][data[lghid].keys[0]].dup
       if affs.key?(ghid)
         obj['affiliation'] = affs[ghid]
+      else
+        obj['affiliation'] = ''
       end
       obj['email'] = email
       # obj['commits'] = commits[ghid]
