@@ -12,6 +12,7 @@ require './email_code'
 require './ghapi'
 require './genderize_lib'
 require './geousers_lib'
+require './nationalize_lib'
 
 # type,email,name,github,linkedin1,linkedin2,linkedin3,commits,gender,location,affiliations
 gcs = octokit_init()
@@ -25,7 +26,7 @@ unless skipcopy
     gh = row['github']
     actor = gh[19..-1]
     a = row['affiliations']
-    affs[actor] = a unless [nil, '', 'NotFound', '(Unknown)'].include?(a)
+    affs[actor] = a unless [nil, '', 'NotFound', '(Unknown)', '?'].include?(a)
   end
 end
 
@@ -54,7 +55,15 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
   commits[ghid] = row['commits']
   email = "#{ghid}!users.noreply.github.com"
   lemail = email.downcase
+  emails = []
   if data.key?(lghid)
+    data[lghid].keys.each do |em|
+      lem = em.downcase
+      if lem != lemail
+        emails << em
+      end
+    end
+    emails = [email] if emails.length == 0
     if data[lghid].key?(lemail)
       puts "Exact match #{lghid}/#{lemail}"
       obj = data[lghid][lemail].dup
@@ -63,20 +72,23 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
       else
         obj['affiliation'] = ''
       end
+      obj['emails'] = emails
       ary << obj
     else
       puts "Partial match: #{lghid}"
       obj = data[lghid][data[lghid].keys[0]].dup
-      if affs.key?(ghid)
-        obj['affiliation'] = affs[ghid]
-      else
-        obj['affiliation'] = ''
-      end
       obj['email'] = email
       # obj['commits'] = commits[ghid]
       obj['commits'] = 0
       new_objs << obj
-      ary << obj
+      obj2 = obj.dup
+      if affs.key?(ghid)
+        obj2['affiliation'] = affs[ghid]
+      else
+        obj2['affiliation'] = ''
+      end
+      obj2['emails'] = emails
+      ary << obj2
     end
   else
     puts "#{idx}) Asking GitHub for #{ghid}"
@@ -114,6 +126,15 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
       else
         h[:country_id], h[:tz] = nil, nil
       end
+      if h[:country_id].nil? || h[:tz].nil? || h[:country_id] == '' || h[:tz] == ''
+        print "Nationalize: (#{h[:login]}, #{h[:name]}) -> "
+        cid, prb, ok = get_nat h[:name], h[:login], prob
+        tz, ok2 = get_tz cid unless cid.nil?
+        print "(#{cid}, #{tz}, #{prb}, #{ok}, #{ok2}) -> "
+        h[:country_id] = cid if h[:country_id].nil?
+        h[:tz] = tz if h[:tz].nil?
+        puts "(#{h[:country_id]}, #{h[:tz]})"
+      end
       print "(#{h[:name]}, #{h[:login]}, #{h[:country_id]}) "
       h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
       puts "-> (#{h[:sex]}, #{h[:sex_prob]}, #{ok})"
@@ -143,10 +164,11 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
   csv << hdr
   ary.each do |row|
     login = row['login']
-    email = row['email']
+    email = row['emails'].join(', ')
     email = "#{login}!users.noreply.github.com" if email.nil?
     name = row['name'] || ''
-    ary2 = email.split '!'
+    emails = row['emails']
+    ary2 = emails[0].split '!'
     uname = ary2[0]
     dom = ary2[1]
     escaped_name = URI.escape(name)
