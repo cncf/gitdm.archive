@@ -18,6 +18,17 @@ gcs = octokit_init()
 hint = rate_limit(gcs)[0]
 init_sqls()
 
+skipcopy = !ENV['SKIP_COPY'].nil?
+affs = {}
+unless skipcopy
+  CSV.foreach('affiliations.csv', headers: true) do |row|
+    gh = row['github']
+    actor = gh[19..-1]
+    a = row['affiliations']
+    affs[actor] = a unless [nil, '', 'NotFound', '(Unknown)'].include?(a)
+  end
+end
+
 json = JSON.parse(File.read('github_users.json'))
 data = {}
 ks = {}
@@ -46,10 +57,17 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
   if data.key?(lghid)
     if data[lghid].key?(lemail)
       puts "Exact match #{lghid}/#{lemail}"
-      ary << data[lghid][lemail]
+      obj = data[lghid][lemail].dup
+      if affs.key?(ghid)
+        obj['affiliation'] = affs[ghid]
+      end
+      ary << obj
     else
       puts "Partial match: #{lghid}"
       obj = data[lghid][data[lghid].keys[0]].dup
+      if affs.key?(ghid)
+        obj['affiliation'] = affs[ghid]
+      end
       obj['email'] = email
       # obj['commits'] = commits[ghid]
       obj['commits'] = 0
@@ -100,7 +118,11 @@ CSV.foreach('unknown_committers.csv', headers: true) do |row|
       h[:sex], h[:sex_prob] = nil, nil
     end
     h[:commits] = 0
-    h[:affiliation] = "(Unknown)"
+    if affs.key?(ghid)
+      h[:affiliation] = affs[ghid]
+    else
+      h[:affiliation] = ''
+    end
     h[:email] = "#{ghid}!users.noreply.github.com" if !h.key?(:email) || h[:email].nil? || h[:email] == ''
     h[:email] = email_encode(h[:email])
     h[:source] = "config"
@@ -127,6 +149,7 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     escaped_uname = URI.escape(name + ' ' + uname)
     lin1 = lin2 = lin3 = ''
     gh = "https://github.com/#{login}"
+    aff = row['affiliation']
     if !dom.nil? && dom.length > 0 && dom != 'users.noreply.github.com'
       ary3 = dom.split '.'
       domain = ary3[0]
@@ -145,7 +168,7 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     else
       loc += row['country_id'] unless row['country_id'].nil?
     end
-    csv << ['(Unknown)', email, name, gh, lin1, lin2, lin3, commits[login], row['sex'], loc, '']
+    csv << ['(Unknown)', email, name, gh, lin1, lin2, lin3, commits[login], row['sex'], loc, aff]
   end
 end
 
