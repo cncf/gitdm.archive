@@ -9,7 +9,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 - `GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_LOCAL=1 get_repos`.
 - `helm delete devstats-test-debug`.
 - `kubectl delete pod debug`.
-3. Top get LF repos use:
+3. To get LF repos use:
 - `AWS_PROFILE=... KUBECONFIG=... helm2 install --name devstats-debug ./devstats-helm --set skipSecrets=1,skipPVs=1,skipProvisions=1,skipCrons=1,skipAffiliations=1,skipGrafanas=1,skipServices=1,skipNamespace=1,bootstrapPodName=debug,bootstrapCommand=sleep,bootstrapCommandArgs={36000s}`.
 - `AWS_PROFILE=... KUBECONFIG=... ../devstats-k8s-lf/util/pod_shell.sh debug`.
 - `ONLY='iovisor mininet opennetworkinglab opensecuritycontroller openswitch p4lang openbmp tungstenfabric cord' GHA2DB_PROPAGATE_ONLY_VAR=1 GHA2DB_EXTERNAL_INFO=1 GHA2DB_PROCESS_REPOS=1 GHA2DB_LOCAL=1 get_repos`.
@@ -45,7 +45,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 28. Finally copy `github_users.json` to `github_users.old`. You can check if JSON fileds are correct via `./check_json_fields.sh github_users.json`, `./check_json_fields.sh stripped.json small`, `./check_json_fields.sh affiliated.json small`.
 29. If any file displays error with 'Invalid UTF-8' encoding, scrub it using Ruby tool: `./scrub.rb filename`.
 30. To add user with 'xyz' GitHub id, use: `PG_PASS=... ./gh.rb xyz` - this will generate JSON entry that can be added to `github_users.json` after tweaking `email`, `source`, `affiliation` and possible some more fields.
-31. To generate unknown CII committers create devstats-reports pod (see `cncf/devstats-helm`:`test/README.md`, search for `Create reports pod`), then ru inside reports podn: `PG_DB=cii ./affs/unknown_committers.sh`, finally get [result CSV](https://teststats.cncf.io/backups/unknown_committers.csv).
+31. To generate unknown CII committers create devstats-reports pod (see `cncf/devstats-helm`:`test/README.md`, search for `Create reports pod`), then run inside reports podn: `PG_DB=cii ./affs/unknown_committers.sh`, finally get [result CSV](https://teststats.cncf.io/backups/unknown_committers.csv).
 32. Obsolete way to get unknown committers on the local database: `PG_PASS=... ./sh/unknown_committers.sh`.
 33. Use `PG_PASS=... ./unknown_committers.rb` to generate `task.csv` file to research CII committers. After this step you can also use `./top_to_task.rb` to generate `top_task.csv`.
 34. Use `[SHUFFLE=1] ./ensure_emails.rb github_users.json` to ensure that most up-to-date gitHub users emails are present (this will query all GitHub logins so can take even a day to finish on 200k+ JSON).
