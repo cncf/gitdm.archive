@@ -383,6 +383,7 @@ def affiliations(affiliations_file, json_file, email_map)
 
       # gender
       gender = h['gender']
+      gender = nil if gender == ''
       gender = gender.downcase if gender
       gender = gender.strip if gender
       if gender && gender != 'm' && gender != 'w' && gender != 'f'
