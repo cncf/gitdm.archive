@@ -132,6 +132,7 @@ CSV.foreach(ARGV[0], headers: true) do |row|
         obj['affiliation'] = ''
       end
       obj['emails'] = emails
+      puts "Emails #{obj['emails']}"
       ary << obj
     else
       puts "Partial match: #{lghid}"
@@ -147,6 +148,7 @@ CSV.foreach(ARGV[0], headers: true) do |row|
         obj2['affiliation'] = ''
       end
       obj2['emails'] = emails
+      puts "Emails #{obj2['emails']}"
       ary << obj2
     end
   else
@@ -212,7 +214,8 @@ CSV.foreach(ARGV[0], headers: true) do |row|
     h[:source] = "config"
     obj = {}
     ks.keys.each { |k| obj[k.to_s] = h[k.to_sym] }
-    obj['emails'] = [obj['email']] unless obj.key?('emails')
+    obj['emails'] = [obj['email']] if !obj.key?('emails') || obj['emails'].nil?
+    puts "Emails #{obj['emails']}"
     new_objs << obj
     ary << obj
   end
