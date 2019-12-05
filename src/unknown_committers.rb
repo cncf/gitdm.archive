@@ -14,7 +14,17 @@ require './genderize_lib'
 require './geousers_lib'
 require './nationalize_lib'
 
+if ARGV.length < 1
+  # wget https://teststats.cncf.io/backups/prestodb_unknown_committers.csv
+  puts "You need to specify CSV file to work [unknown_committers.csv]"
+  exit 1
+end
+
 # type,email,name,github,linkedin1,linkedin2,linkedin3,commits,gender,location,affiliations
+prob = 0.5
+unless ENV['PROB'].nil?
+  prob = ENV['PROB'].to_f
+end
 gcs = octokit_init()
 hint = rate_limit(gcs)[0]
 init_sqls()
@@ -47,7 +57,7 @@ ary = []
 new_objs = []
 commits = {}
 idx = 0
-CSV.foreach('unknown_committers.csv', headers: true) do |row|
+CSV.foreach(ARGV[0], headers: true) do |row|
   #rank_number,actor,commits,percent,cumulative_sum,cumulative_percent,all_commits
   idx += 1
   ghid = row['actor']
