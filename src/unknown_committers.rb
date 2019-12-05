@@ -74,6 +74,10 @@ prob = 0.5
 unless ENV['PROB'].nil?
   prob = ENV['PROB'].to_f
 end
+freq = 200
+unless ENV['FREQ'].nil?
+  freq = ENV['FREQ'].to_f
+end
 gcs = octokit_init()
 hint = rate_limit(gcs)[0]
 init_sqls()
@@ -218,6 +222,17 @@ CSV.foreach(ARGV[0], headers: true) do |row|
     puts "Emails #{obj['emails']}"
     new_objs << obj
     ary << obj
+  end
+  if !skipcache && (idx > 0 && idx % freq == 0)
+    puts 'Writting caches...'
+    pretty = JSON.pretty_generate genderize_get_gcache
+    File.write $g_genderize_json_cache_filename, pretty
+
+    pretty = JSON.pretty_generate geousers_get_gcache
+    File.write $g_geousers_json_cache_filename, pretty
+
+    pretty = JSON.pretty_generate nationalize_get_gcache
+    File.write $g_nationalize_json_cache_filename, pretty
   end
 end
 
