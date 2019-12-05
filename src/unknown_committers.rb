@@ -14,10 +14,59 @@ require './genderize_lib'
 require './geousers_lib'
 require './nationalize_lib'
 
+def genderize_get_gcache
+  ary = []
+  $g_genderize_cache_mtx.with_read_lock { $g_genderize_cache.each { |key, val| ary << [key, val] unless val === false } }
+  ary
+end
+
+def geousers_get_gcache
+  ary = []
+  $g_geousers_cache_mtx.with_read_lock { $g_geousers_cache.each { |key, val| ary << [key, val] unless val === false } }
+  ary
+end
+
+def nationalize_get_gcache
+  ary = []
+  $g_nationalize_cache_mtx.with_read_lock { $g_nationalize_cache.each { |key, val| ary << [key, val] unless val === false } }
+  ary
+end
+
 if ARGV.length < 1
   # wget https://teststats.cncf.io/backups/prestodb_unknown_committers.csv
   puts "You need to specify CSV file to work [unknown_committers.csv]"
   exit 1
+end
+
+skipcache = !ENV['SKIP_CACHE'].nil?
+unless skipcache
+  $g_genderize_json_cache_filename = 'genderize_cache.json'
+  cache = JSON.parse File.read $g_genderize_json_cache_filename
+  cache.each { |key, val| $g_genderize_cache[key] = val unless val === false }
+
+  $g_geousers_json_cache_filename = 'geousers_cache.json'
+  cache = JSON.parse File.read $g_geousers_json_cache_filename
+  cache.each { |key, val| $g_geousers_cache[key] = val unless val === false }
+
+  $g_nationalize_json_cache_filename = 'nationalize_cache.json'
+  cache = JSON.parse File.read $g_nationalize_json_cache_filename
+  cache.each { |key, val| $g_nationalize_cache[key] = val unless val === false }
+
+  Signal.trap('INT') do
+    puts "Caught signal, saving cache and exiting"
+
+    pretty = JSON.pretty_generate genderize_get_gcache
+    File.write $g_genderize_json_cache_filename, pretty
+
+    pretty = JSON.pretty_generate geousers_get_gcache
+    File.write $g_geousers_json_cache_filename, pretty
+
+    pretty = JSON.pretty_generate nationalize_get_gcache
+    File.write $g_nationalize_json_cache_filename, pretty
+
+    puts "Saved"
+    exit 1
+  end
 end
 
 # type,email,name,github,linkedin1,linkedin2,linkedin3,commits,gender,location,affiliations
@@ -163,6 +212,7 @@ CSV.foreach(ARGV[0], headers: true) do |row|
     h[:source] = "config"
     obj = {}
     ks.keys.each { |k| obj[k.to_s] = h[k.to_sym] }
+    obj['emails'] = [obj['email']] unless obj.key?('emails')
     new_objs << obj
     ary << obj
   end
@@ -174,6 +224,7 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
   csv << hdr
   ary.each do |row|
     login = row['login']
+    binding.pry if row['emails'].nil?
     email = row['emails'].join(', ')
     email = "#{login}!users.noreply.github.com" if email.nil?
     name = row['name'] || ''
@@ -214,3 +265,15 @@ new_objs.each do |row|
 end
 json_data = email_encode(JSON.pretty_generate(json))
 File.write 'github_users.json', json_data
+
+unless skipcache
+  puts 'Writting caches...'
+  pretty = JSON.pretty_generate genderize_get_gcache
+  File.write $g_genderize_json_cache_filename, pretty
+
+  pretty = JSON.pretty_generate geousers_get_gcache
+  File.write $g_geousers_json_cache_filename, pretty
+
+  pretty = JSON.pretty_generate nationalize_get_gcache
+  File.write $g_nationalize_json_cache_filename, pretty
+end
