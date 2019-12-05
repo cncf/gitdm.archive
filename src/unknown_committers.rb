@@ -280,7 +280,7 @@ end
 
 puts "Writting JSON..."
 new_objs.each do |row|
-  json << row
+  json << row.delete('emails')
 end
 json_data = email_encode(JSON.pretty_generate(json))
 File.write 'github_users.json', json_data
