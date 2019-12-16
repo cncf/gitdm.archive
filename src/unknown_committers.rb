@@ -74,7 +74,7 @@ prob = 0.5
 unless ENV['PROB'].nil?
   prob = ENV['PROB'].to_f
 end
-freq = 200
+freq = 1000
 unless ENV['FREQ'].nil?
   freq = ENV['FREQ'].to_f
 end
@@ -280,7 +280,8 @@ end
 
 puts "Writting JSON..."
 new_objs.each do |row|
-  json << row.delete('emails')
+  row.delete('emails')
+  json << row
 end
 json_data = email_encode(JSON.pretty_generate(json))
 File.write 'github_users.json', json_data
