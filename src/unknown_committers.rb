@@ -96,12 +96,15 @@ end
 json = JSON.parse(File.read('github_users.json'))
 data = {}
 ks = {}
+ghaffs = {}
 json.each do |row|
   login = row['login'].downcase
   email = row['email'].downcase
   row.keys.each { |k| ks[k] = 0 }
   data[login] = {} unless data.key?(login)
   data[login][email] = row
+  aff = row['affiliation']
+  ghaffs[login] = aff unless [nil, '', 'NotFound', '(Unknown)', '?'].include?(aff)
 end
 
 skipenc = !ENV['SKIP_ENC'].nil?
@@ -256,6 +259,10 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     lin1 = lin2 = lin3 = ''
     gh = "https://github.com/#{login}"
     aff = row['affiliation']
+    if [nil, '', 'NotFound', '(Unknown)', '?'].include?(aff) && ghaffs.key?(login)
+      aff = ghaffs[login]
+      puts "Using JSON: '#{aff}' affiliation for '#{login}/#{email}'"
+    end
     if !dom.nil? && dom.length > 0 && dom != 'users.noreply.github.com'
       ary3 = dom.split '.'
       domain = ary3[0]
@@ -277,6 +284,8 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     csv << ['(Unknown)', email, name, gh, lin1, lin2, lin3, commits[login], row['sex'], loc, aff]
   end
 end
+
+binding.pry
 
 puts "Writting JSON..."
 new_objs.each do |row|
