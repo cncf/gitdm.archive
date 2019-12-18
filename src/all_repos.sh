@@ -47,9 +47,12 @@
 /root/devstats_repos/caolan/* \
 /root/devstats_repos/cdfoundation/* \
 /root/devstats_repos/chalk/* \
+/root/devstats_repos/chubaofs/* \
 /root/devstats_repos/cloudevents/* \
 /root/devstats_repos/cncf/* \
 /root/devstats_repos/containerd/* \
+/root/devstats_repos/containerfs/* \
+/root/devstats_repos/containerfilesystem/* \
 /root/devstats_repos/containernetworking/* \
 /root/devstats_repos/coredns/* \
 /root/devstats_repos/coreos/* \
