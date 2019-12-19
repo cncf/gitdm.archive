@@ -55,6 +55,7 @@ end
 
 puts "Writting CSV..."
 hdr = %w(type email name github linkedin1 linkedin2 linkedin3 repo rank commits gender location affiliations)
+hdr << 'new emails'
 CSV.open('top_task.csv', 'w', headers: hdr) do |csv|
   csv << hdr
   ary.each do |row|
@@ -93,6 +94,6 @@ CSV.open('top_task.csv', 'w', headers: hdr) do |csv|
     commits = row['commits']
     repo = "https://github.com/#{row['repo']}"
     rank = row['rank'].to_i
-    csv << ['(Unknown)', email, name, gh, lin1, lin2, lin3, repo, rank, commits, row['sex'], loc, '']
+    csv << ['(Unknown)', email, name, gh, lin1, lin2, lin3, repo, rank, commits, row['sex'], loc, '', '']
   end
 end
