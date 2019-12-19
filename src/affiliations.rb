@@ -151,8 +151,10 @@ def affiliations(affiliations_file, json_file, email_map)
       end
 
       # emails bugs/typos
-      possible_emails = (new_emails || '').split(',').map(&:strip).map(&:downcase) << h['email'].strip.downcase
+      curr_emails = (h['email'] || '').split(',').map(&:strip).map(&:downcase)
+      possible_emails = (new_emails || '').split(',').map(&:strip).map(&:downcase) + curr_emails
       emails = ((new_emails || '').split(',').map(&:strip).map(&:downcase).map { |e| email_encode(e) } << email_encode(h['email'].strip.downcase)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
+      emails.map { |e| email_encode(e) }.reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
       if emails.length != possible_emails.length
         puts "Wrong emails config (some discarded)"
         p h
