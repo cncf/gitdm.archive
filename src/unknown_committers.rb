@@ -242,6 +242,7 @@ end
 
 puts "Writting CSV..."
 hdr = %w(type email name github linkedin1 linkedin2 linkedin3 commits gender location affiliations)
+hdr << 'new emails'
 CSV.open('task.csv', 'w', headers: hdr) do |csv|
   csv << hdr
   ary.each do |row|
@@ -281,7 +282,7 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
     else
       loc += row['country_id'] unless row['country_id'].nil?
     end
-    csv << ['(Unknown)', email, name, gh, lin1, lin2, lin3, commits[login], row['sex'], loc, aff]
+    csv << ['(Unknown)', email, name, gh, lin1, lin2, lin3, commits[login], row['sex'], loc, aff, '']
   end
 end
 
