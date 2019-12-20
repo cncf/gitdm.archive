@@ -69,7 +69,7 @@ unless skipcache
   end
 end
 
-# type,email,name,github,linkedin1,linkedin2,linkedin3,commits,gender,location,affiliations
+# type,email,name,github,linkedin1,linkedin2,linkedin3,commits,gender,location,affiliations,new emails
 prob = 0.5
 unless ENV['PROB'].nil?
   prob = ENV['PROB'].to_f
