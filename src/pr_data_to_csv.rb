@@ -7,7 +7,7 @@ require './email_code'
 
 def process_affiliation(uname, name, emails, companies)
   # type,email,name,github,linkedin1,linkedin2,linkedin3,commits,gender,location,affiliations,new emails
-  ['(Unknown)', emails.join(', '), uname, "https://github.com/#{name}", '', '', '', '0', '', '', companies.join(','), '']
+    ['(Unknown)', emails.sort.uniq.join(', '), uname, "https://github.com/#{name}", '', '', '', '0', '', '', companies.join(','), '']
 end
 
 def process_unknown(uname, name, emails, companies)
