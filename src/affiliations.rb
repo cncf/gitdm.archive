@@ -153,8 +153,7 @@ def affiliations(affiliations_file, json_file, email_map)
       # emails bugs/typos
       curr_emails = (h['email'] || '').split(',').map(&:strip).map(&:downcase)
       possible_emails = (new_emails || '').split(',').map(&:strip).map(&:downcase) + curr_emails
-      emails = ((new_emails || '').split(',').map(&:strip).map(&:downcase).map { |e| email_encode(e) } << email_encode(h['email'].strip.downcase)).reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
-      emails.map { |e| email_encode(e) }.reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
+      emails = possible_emails.map { |e| email_encode(e) }.reject { |e| e.nil? || e.empty? || !e.include?('!') }.uniq
       if emails.length != possible_emails.length
         puts "Wrong emails config (some discarded)"
         p h
@@ -424,7 +423,8 @@ def affiliations(affiliations_file, json_file, email_map)
               puts "Wrong affiliations config, entries not found for email #{email}, login #{login}"
               p affs
               p h
-              binding.pry
+              # binding.pry
+              next
             end
           end
           entries.each do |entry|
