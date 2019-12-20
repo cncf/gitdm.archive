@@ -10,13 +10,19 @@ def process_affiliation(uname, name, emails, companies)
   ['(Unknown)', emails.join(', '), uname, "https://github.com/#{name}", '', '', '', '0', '', '', companies.join(','), '']
 end
 
-def pr_data_to_csv(pr_data_file, csv_file)
+def process_unknown(uname, name, emails, companies)
+  # rank_number,actor,commits,percent,cumulative_sum,cumulative_percent,all_commits
+  ['0', name, '0', '0','0', '0', '0']
+end
+
+def pr_data_to_csv(pr_data_file, affs_csv_file, unkn_csv_file)
   companies = []
   emails = []
   name = ''
   uname = ''
   n = 0
   data = []
+  unkn = []
   File.readlines(pr_data_file).each do |line|
     n += 1
     line = email_encode(line.delete(" \t\r\n"))
@@ -24,6 +30,7 @@ def pr_data_to_csv(pr_data_file, csv_file)
     if ary.length == 2
       if companies.length > 0
         data << process_affiliation(uname, name, emails, companies)
+        unkn << process_unknown(uname, name, emails, companies)
       end
       companies = []
       name = ary[0]
@@ -68,19 +75,26 @@ def pr_data_to_csv(pr_data_file, csv_file)
   end
   if companies.length > 0
     data << process_affiliation(uname, name, emails, companies)
+    unkn << process_unknown(uname, name, emails, companies)
   end
-  puts "Writting #{csv_file}..."
+  puts "Writting #{affs_csv_file}..."
   hdr = %w(type email name github linkedin1 linkedin2 linkedin3 commits gender location affiliations)
   hdr << 'new emails'
-  CSV.open(csv_file, 'w', headers: hdr) do |csv|
+  CSV.open(affs_csv_file, 'w', headers: hdr) do |csv|
     csv << hdr
     data.each { |row| csv << row }
   end
+  puts "Writting #{unkn_csv_file}..."
+  hdr = %w(rank_number actor commits percent cumulative_sum cumulative_percent all_commits)
+  CSV.open(unkn_csv_file, 'w', headers: hdr) do |csv|
+    csv << hdr
+    unkn.each { |row| csv << row }
+  end
 end
 
-if ARGV.size < 2
-  puts "Missing arguments: pr_data.txt output.csv"
+if ARGV.size < 3
+  puts "Missing arguments: pr_data.txt pr_data.csv unknowns.csv"
   exit(1)
 end
 
-pr_data_to_csv(ARGV[0], ARGV[1])
+pr_data_to_csv(ARGV[0], ARGV[1], ARGV[2])
