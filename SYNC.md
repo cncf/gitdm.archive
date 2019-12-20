@@ -103,3 +103,11 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - After importing new data run `./src/burndown.sh 2018-08-22` (from the src's parent directory). Do this after processing all data mentioned here, not after just importing new CSV.
 - Import generated `csv/burndown.csv` data into `https://docs.google.com/spreadsheets/d/1RxEbZNefBKkgo3sJ2UQz0OCA91LDOopacQjfFBRRqhQ/edit?usp=sharing`.
 - To calculate CNCF/LF ratio use number of CNCF found from last commit - number of CNCF found from some previous commit diveded by the same ratio for all actors.
+
+
+# Complex PRs post merge
+
+For complex merges that modify `developers_affiliationsN.txt` file(s) do the following:
+
+- Copy PR modifications and save them in `pr_data.txt`.
+- Run `./pr_data_to_csv.rb pr_data.txt pr_data.csv`.
