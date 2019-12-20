@@ -110,6 +110,6 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 For complex merges that modify `developers_affiliationsN.txt` file(s) do the following:
 
 - Copy PR modifications and save them in `pr_data.txt`.
-- Run `./pr_data_to_csv.rb pr_data.txt pr_data.csv pr_unknowns.csv`.
+- Run `pr_data_to_csv.sh; cat new_affs.csv >> all_affs.csv; ./sort_configs.sh`.
 - Run `PG_PASS=... ./unknown_committers.rb pr_unknowns.csv`.
 - Run `mv pr_data.csv affiliations.csv; ./affiliations.sh`.
