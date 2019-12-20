@@ -286,8 +286,6 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
   end
 end
 
-binding.pry
-
 puts "Writting JSON..."
 new_objs.each do |row|
   row.delete('emails')
