@@ -78,6 +78,7 @@ freq = 1000
 unless ENV['FREQ'].nil?
   freq = ENV['FREQ'].to_f
 end
+keyw = !ENV['KEYW'].nil?
 gcs = octokit_init()
 hint = rate_limit(gcs)[0]
 init_sqls()
@@ -268,12 +269,24 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
       ary3 = dom.split '.'
       domain = ary3[0]
       escaped_domain = URI.escape(name + ' ' + domain)
-      lin1 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}"
-      lin2 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}"
-      lin3 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_domain}"
+      if keyw
+        lin1 = name + ' ' + uname
+        lin2 = name + ' ' + domain
+        lin3 = name + ' ' + login
+      else
+        lin1 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}"
+        lin2 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}"
+        lin3 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_domain}"
+      end
     else
-      lin1 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}"
-      lin2 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}"
+      if keyw
+        lin1 = name + ' ' + uname
+        lin2 = name + ' ' + login
+        lin3 = uname + ' ' + login
+      else
+        lin1 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}"
+        lin2 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}"
+      end
     end
     loc = ''
     loc += row['location'] unless row['location'].nil?
