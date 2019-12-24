@@ -43,7 +43,7 @@ def check_stmt(c, stmt_name, args)
     rescue => e2
       puts "ERROR: #{e2}"
     end
-    if rs.values && rs.values.count > 0
+    if rs && rs.values && rs.values.count > 0
       # write the final computed data instead of marker: false
       $g_geousers_cache_mtx.with_write_lock { $g_geousers_cache[key] = [rs.values.first] }
       return [rs.values.first]
