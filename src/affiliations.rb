@@ -233,6 +233,7 @@ def affiliations(affiliations_file, json_file, email_map)
                   s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n)"
                   puts s
                   ans = mgetc.downcase
+                  exit if ans == 'q' or ans == 'Q'
                   answers[e] = ans
                   pretty = JSON.pretty_generate answers
                   File.write json_cache, pretty
