@@ -515,6 +515,7 @@ def affiliations(affiliations_file, json_file, email_map)
   puts "Processed #{nu} update rows " if update
   puts "Replaced: #{replaced}, skipped: #{skipped}, added new: #{added}, added affiliation: #{multiple}, new unknown: #{unknown}"
 
+  puts "### Just before this final write ###"
   binding.pry
 
   File.open(email_map, 'w') do |file|
