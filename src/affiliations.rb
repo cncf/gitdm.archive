@@ -193,12 +193,16 @@ def affiliations(affiliations_file, json_file, email_map)
         n_final += 1 if ary.length == 1
       end
 
+      # handle skip
+      skip_flag = false
+
       # process affiliations
       aaffs = []
       err = false
       affs_str = affs.join(', ')
       replaced_emails = {}
       affs.each do |aff|
+        next if skip_flag
         begin
           ddt = DateTime.strptime(aff, '%Y-%m-%d')
           sdt = ddt.strftime("%Y-%m-%d")
@@ -222,6 +226,7 @@ def affiliations(affiliations_file, json_file, email_map)
         end
         if data.length == 1
           emails.each_with_index do |e, idx|
+            next if skip_flag
             if eaffs.key?(e) && !eaffs[e].key?(aff) && !replaced_emails.key?(e)
               ans = 'y'
               ans = 'n' if aff == 'NotFound'
@@ -230,10 +235,15 @@ def affiliations(affiliations_file, json_file, email_map)
                   ans = answers[e]
                 else
                   s = "Line #{ln}, user #{users[e][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
-                  s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n)"
+                  s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n/q/s)"
                   puts s
                   ans = mgetc.downcase
+                  puts "> #{ans}"
                   exit 0 if ans == 'q' or ans == 'Q'
+                  if ans == 's' or ans == 's'
+                    skip_flag = true
+                    break
+                  end
                   answers[e] = ans
                   pretty = JSON.pretty_generate answers
                   File.write json_cache, pretty
@@ -295,6 +305,7 @@ def affiliations(affiliations_file, json_file, email_map)
             sdt = ddt.strftime("%Y-%m-%d")
             com = data[0]
             emails.each_with_index do |e, idx|
+              next if skip_flag
               aff = "#{com} < #{sdt}"
               if eaffs.key?(e) && !eaffs[e].key?(aff) && !replaced_emails.key?(e)
                 ans = 'y'
@@ -303,9 +314,15 @@ def affiliations(affiliations_file, json_file, email_map)
                     ans = answers[e]
                   else
                     s = "Line #{ln}, user #{users[e][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
-                    s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n)"
+                    s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n/q/s)"
                     puts s
                     ans = mgetc.downcase
+                    puts "> #{ans}"
+                    exit 0 if ans == 'q' or ans == 'Q'
+                    if ans == 's' or ans == 's'
+                      skip_flag = true
+                      break
+                    end
                     answers[e] = ans
                     pretty = JSON.pretty_generate answers
                     File.write json_cache, pretty
@@ -356,6 +373,8 @@ def affiliations(affiliations_file, json_file, email_map)
         binding.pry
         next
       end
+
+      next if skip_flag
 
       # info if adding affiliation to the existing email
       aaffs.each do |aaff|
@@ -495,6 +514,9 @@ def affiliations(affiliations_file, json_file, email_map)
   end
   puts "Processed #{nu} update rows " if update
   puts "Replaced: #{replaced}, skipped: #{skipped}, added new: #{added}, added affiliation: #{multiple}, new unknown: #{unknown}"
+
+  binding.pry
+
   File.open(email_map, 'w') do |file|
     file.puts "# Here is a set of mappings of domain names onto employer names."
     file.puts "# [user!]domain  employer  [< yyyy-mm-dd]"
