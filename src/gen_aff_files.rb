@@ -118,7 +118,7 @@ def gen_aff_files(json_file)
 
   t = ''
   cdata.keys.sort.each do |company|
-    t += company + "\n"
+    t += company + ":\n"
     data = cdata[company]
     data.keys.sort.each do |login|
       emd = data[login]
