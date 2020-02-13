@@ -77,3 +77,5 @@ h[:email] = email_encode(h[:email])
 h[:source] = "config" unless h.key?(:source)
 
 STDERR.puts JSON.pretty_generate(h)
+
+puts "Update email, affiliation and source on the generated JSON"
