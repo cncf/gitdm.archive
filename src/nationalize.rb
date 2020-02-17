@@ -28,7 +28,10 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
   # set to false to retry gender lookups where name is set but no gender is found
   always_cache = true
+  # set to true to retry cached nils
   retry_nils = false
+  binding.pry
+
   # Parse input JSONs
   data = JSON.parse File.read json_file
   data2 = JSON.parse File.read json_file2
@@ -60,8 +63,6 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
       else
         cache[[login, email]] = user if user.key?('country_id') && user.key?('tz')
       end
-    else
-      binding.pry
     end
   end
   newj = []
@@ -97,8 +98,8 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
     if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
       rec = nil
       $g_nationalize_cache_mtx.with_read_lock { rec = cache[[login, email]] }
-      cid = user['country_id'] = rec['country_id']
-      tz = user['tz'] = rec['tz']
+      cid = user['country_id'] = rec['country_id'] if ccid.nil? || ccid == ''
+      tz = user['tz'] = rec['tz'] if ctz.nil? || ctz == ''
       mtx.with_write_lock do
         ca += 1
         f += 1 unless cid.nil? || tz.nil?
@@ -124,8 +125,16 @@ def nationalize(json_file, json_file2, json_cache, backup_freq)
         cid = ccid unless ccid.nil? || ccid  == ''
         tz = ctz unless ctz.nil? || ctz  == ''
         mtx.with_write_lock { f += 1 unless cid.nil? || tz.nil? }
-        usr['country_id'] = cid
-        usr['tz'] = tz
+        if cid.nil? || cid == ''
+          usr['country_id'] = cid unless usr.key?('country_id')
+        else
+          usr['country_id'] = cid unless cid.nil? || cid == ''
+        end
+        if tz.nil? || tz == ''
+          usr['tz'] = tz unless usr.key?('tz')
+        else
+          usr['tz'] = tz unless tz.nil? || tz == ''
+        end
         mtx.with_write_lock { n += 1 }
         mtx.with_read_lock { puts "Row(miss) #{n}/#{all_n}: #{login}: #{name} -> (#{cid || ccid}, #{tz || ctz}) found #{f}, cache: #{ca}, state: #{ok}/#{ok2}" }
         [usr, ok, ok2]

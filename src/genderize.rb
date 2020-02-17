@@ -25,8 +25,11 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
   # set to false to retry gender lookups where name is set but no gender is found
   always_cache = true
+  # set to true to retry cached nils
   retry_nils = false
   # Parse input JSONs
+  binding.pry
+
   data = JSON.parse File.read json_file
   data2 = JSON.parse File.read json_file2
   cache = JSON.parse File.read json_cache
@@ -90,8 +93,8 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
     if (csex.nil? || csex == '' || cprob.nil? || cprob == '') && ky
       rec = nil
       $g_genderize_cache_mtx.with_read_lock { rec = cache[[login, email]] }
-      sex = user['sex'] = rec['sex']
-      prob = user['sex_prob'] = rec['sex_prob']
+      sex = user['sex'] = rec['sex'] if csex.nil? || csex == ''
+      prob = user['sex_prob'] = rec['sex_prob'] if cprob.nil? || cprob == ''
       mtx.with_write_lock do
         ca += 1
         f += 1 unless sex.nil?
@@ -112,8 +115,16 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
         sex = nil
         sex, prob, ok = get_sex name, login, cid
         mtx.with_write_lock { f += 1 unless sex.nil? }
-        usr['sex'] = sex
-        usr['sex_prob'] = prob
+        if sex.nil? || sex == ''
+          usr['sex'] = sex unless usr.key?('sex')
+        else
+          usr['sex'] = sex unless sex.nil? || sex == ''
+        end
+        if prob.nil? || prob == ''
+          usr['sex_prob'] = prob unless usr.key?('sex_prob')
+        else
+          usr['sex_prob'] = prob unless prob.nil? || prob == ''
+        end
         mtx.with_write_lock { n += 1 }
         mtx.with_read_lock { puts "Row(miss) #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, ok: #{ok}" }
         [usr, ok]
