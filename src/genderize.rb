@@ -60,8 +60,6 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
       else
         cache[[login, email]] = user if user.key?('sex') && user.key?('sex_prob')
       end
-    else
-      binding.pry
     end
   end
   newj = []
