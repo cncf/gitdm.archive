@@ -24,7 +24,9 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   freq = backup_freq.to_i
   # set to false to retry localization lookups where location is set but no country/tz is found
   always_cache = true
+  # set to true to retry cached nils
   retry_nils = false
+  binding.pry
 
   init_sqls()
 
@@ -70,6 +72,7 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   l = 0
   f = 0
   ca = 0
+  skip_save_cache = !ENV['SKIP_SAVE_CACHE'].nil?
   mtx = Concurrent::ReadWriteLock.new
   all_n = data.length
   from = 0
@@ -96,8 +99,8 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
     if (ccid.nil? || ccid == '' || ctz.nil? || ctz == '') && ky
       rec = nil
       $g_geousers_cache_mtx.with_read_lock { rec = cache[[login, email]] }
-      cid = user['country_id'] = rec['country_id']
-      tz = user['tz'] = rec['tz']
+      cid = user['country_id'] = rec['country_id'] if ccid.nil? || ccid == ''
+      tz = user['tz'] = rec['tz'] if ctz.nil? || ctz == ''
       mtx.with_write_lock do
         ca += 1
         l += 1 if !loc.nil? && loc.length > 0
@@ -122,10 +125,16 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
           l += 1
           f += 1 unless cid.nil?
         end
-        usr['country_id'] = cid
-        usr['tz'] = tz
-        usr['country_id'] = nil if usr['country_id'].nil?
-        usr['tz'] = nil if usr['tz'].nil?
+        if cid.nil? || cid == ''
+          usr['country_id'] = cid unless usr.key?('country_id')
+        else
+          usr['country_id'] = cid unless cid.nil? || cid == ''
+        end
+        if tz.nil? || tz == ''
+          usr['tz'] = tz unless usr.key?('tz')
+        else
+          usr['tz'] = tz unless tz.nil? || tz == ''
+        end
         mtx.with_write_lock { n += 1 }
         mtx.with_read_lock { puts "Row(miss) #{n}/#{all_n}: #{login}: (#{loc} -> #{cid || ccid}, #{tz || ctz}) locations #{l}, found #{f}, cache: #{ca}, ok: #{ok}" }
         usr
@@ -152,8 +161,10 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
       File.write 'partial.json', pretty
 
       # Write gcache to file for future use
-      pretty = JSON.pretty_generate get_gcache
-      File.write json_cache, pretty
+      unless skip_save_cache
+        pretty = JSON.pretty_generate get_gcache
+        File.write json_cache, pretty
+      end
     end
   end
   ThreadsWait.all_waits(thrs.to_a) do |thr|
@@ -166,8 +177,10 @@ def geousers(json_file, json_file2, json_cache, backup_freq)
   File.write json_file, pretty
 
   # Write gcache to file for future use
-  pretty = JSON.pretty_generate get_gcache
-  File.write json_cache, pretty
+  unless skip_save_cache
+    pretty = JSON.pretty_generate get_gcache
+    File.write json_cache, pretty
+  end
 end
 
 if ARGV.size < 4
