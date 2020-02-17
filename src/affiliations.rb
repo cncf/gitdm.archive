@@ -498,7 +498,8 @@ def affiliations(affiliations_file, json_file, email_map)
                   end
                 end
                 if ans == 'y'
-                  puts "Note: '#{prev_source}' -> '#{source}' overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
+                  a = user['affiliation']
+                  puts "Note: '#{prev_source}' -> '#{source}' overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}" unless ['', '?', 'NotFound', '(Unknown)', nil].include?(a)
                   json_data[index]['affiliation'] = saffs
                   json_data[index]['source'] = source
                 end
