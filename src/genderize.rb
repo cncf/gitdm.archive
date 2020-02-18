@@ -82,6 +82,7 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
     login = user['login']
     email = user['email']
     name = user['name']
+    source = user['source']
     cid = user['country_id']
     csex = user['sex']
     cprob = user['sex_prob']
@@ -105,6 +106,7 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
         login = usr['login']
         email = usr['email']
         name = usr['name']
+        source = usr['source']
         cid = usr['country_id']
         csex = usr['sex']
         cprob = usr['sex_prob']
@@ -116,12 +118,20 @@ def genderize(json_file, json_file2, json_cache, backup_freq)
         if sex.nil? || sex == ''
           usr['sex'] = sex unless usr.key?('sex')
         else
-          usr['sex'] = sex unless sex.nil? || sex == ''
+          if %w(manual user_manual user).include?(source)
+            usr['sex'] = sex unless sex.nil? || sex == '' || %w(m f b).include?(csex)
+          else
+            usr['sex'] = sex unless sex.nil? || sex == ''
+          end
         end
         if prob.nil? || prob == ''
           usr['sex_prob'] = prob unless usr.key?('sex_prob')
         else
-          usr['sex_prob'] = prob unless prob.nil? || prob == ''
+          if %w(manual user_manual user).include?(source)
+            usr['sex_prob'] = prob unless prob.nil? || prob == '' || %w(m f b).include?(csex)
+          else
+            usr['sex_prob'] = prob unless prob.nil? || prob == ''
+          end
         end
         mtx.with_write_lock { n += 1 }
         mtx.with_read_lock { puts "Row(miss) #{n}/#{all_n}: #{login}: (#{name}, #{login}, #{cid} -> #{sex || csex}, #{prob || cprob}) found #{f}, cache: #{ca}, ok: #{ok}" }
