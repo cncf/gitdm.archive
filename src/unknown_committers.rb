@@ -13,6 +13,7 @@ require './ghapi'
 require './genderize_lib'
 require './geousers_lib'
 require './nationalize_lib'
+require './agify_lib'
 
 def genderize_get_gcache
   ary = []
@@ -29,6 +30,12 @@ end
 def nationalize_get_gcache
   ary = []
   $g_nationalize_cache_mtx.with_read_lock { $g_nationalize_cache.each { |key, val| ary << [key, val] unless val === false } }
+  ary
+end
+
+def agify_get_gcache
+  ary = []
+  $g_agify_cache_mtx.with_read_lock { $g_agify_cache.each { |key, val| ary << [key, val] unless val === false } }
   ary
 end
 
@@ -52,6 +59,10 @@ unless skipcache
   cache = JSON.parse File.read $g_nationalize_json_cache_filename
   cache.each { |key, val| $g_nationalize_cache[key] = val unless val === false }
 
+  $g_agify_json_cache_filename = 'agify_cache.json'
+  cache = JSON.parse File.read $g_agify_json_cache_filename
+  cache.each { |key, val| $g_agify_cache[key] = val unless val === false }
+
   Signal.trap('INT') do
     puts "Caught signal, saving cache and exiting"
 
@@ -63,6 +74,9 @@ unless skipcache
 
     pretty = JSON.pretty_generate nationalize_get_gcache
     File.write $g_nationalize_json_cache_filename, pretty
+
+    pretty = JSON.pretty_generate agify_get_gcache
+    File.write $g_agify_json_cache_filename, pretty
 
     puts "Saved"
     exit 1
@@ -205,12 +219,16 @@ CSV.foreach(ARGV[0], headers: true) do |row|
         h[:tz] = tz if h[:tz].nil?
         puts "(#{h[:country_id]}, #{h[:tz]})"
       end
-      print "(#{h[:name]}, #{h[:login]}, #{h[:country_id]}) "
+      print "Genderize: (#{h[:name]}, #{h[:login]}, #{h[:country_id]}) "
       h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
       puts "-> (#{h[:sex]}, #{h[:sex_prob]}, #{ok})"
+      print "Agify: (#{h[:login]}, #{h[:name]}, #{h[:country_id]}) "
+      h[:age], cnt, ok = get_age h[:name], h[:login], h[:country_id]
+      puts "(#{h[:age]}, #{cnt}, #{ok})"
     else
       h[:country_id], h[:tz] = nil, nil
       h[:sex], h[:sex_prob] = nil, nil
+      h[:age] = nil
     end
     h[:commits] = 0
     if affs.key?(ghid)
@@ -238,6 +256,9 @@ CSV.foreach(ARGV[0], headers: true) do |row|
 
     pretty = JSON.pretty_generate nationalize_get_gcache
     File.write $g_nationalize_json_cache_filename, pretty
+
+    pretty = JSON.pretty_generate agify_get_gcache
+    File.write $g_agify_json_cache_filename, pretty
   end
 end
 
@@ -317,4 +338,7 @@ unless skipcache
 
   pretty = JSON.pretty_generate nationalize_get_gcache
   File.write $g_nationalize_json_cache_filename, pretty
+
+  pretty = JSON.pretty_generate agify_get_gcache
+  File.write $g_agify_json_cache_filename, pretty
 end
