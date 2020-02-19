@@ -47,7 +47,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 30. To add user with 'xyz' GitHub id, use: `PG_PASS=... ./gh.rb xyz` - this will generate JSON entry that can be added to `github_users.json` after tweaking `email`, `source`, `affiliation` and possible some more fields.
 31. To generate unknown CII committers create devstats-reports pod (see `cncf/devstats-helm`:`test/README.md`, search for `Create reports pod`), then run inside reports pod: `PG_DB=cii ./affs/unknown_committers.sh`, finally get [result CSV](https://teststats.cncf.io/backups/cii_unknown_committers.csv).
 32. Obsolete way to get unknown committers on the local database: `PG_PASS=... ./sh/unknown_committers.sh`.
-33. Use `[KEYW=1] [FREQ=10000] PG_PASS=... ./unknown_committers.rb cii_unknown_committers.csv` to generate `task.csv` file to research CII committers. After this step you can also use `./top_to_task.rb` to generate `top_task.csv` (this converts Top N CSV output into the task.csv file, optional).
+33. Use `[KEYW=1] [FREQ=10000] [API_KEY=...] PG_PASS=... ./unknown_committers.rb cii_unknown_committers.csv` to generate `task.csv` file to research CII committers. After this step you can also use `./top_to_task.rb` to generate `top_task.csv` (this converts Top N CSV output into the task.csv file, optional).
 34. Use `[SHUFFLE=1] ./ensure_emails.rb github_users.json` to ensure that most up-to-date GitHub users emails are present (this will query all GitHub logins so can take even a day to finish on 300k+ JSON).
 35. Use `OUT=fn.csv ./merge_affs_csvs.rb csvfile1.csv csvfile2.csv ...` to merge multiple CSVs to import.
 36. Use `[SKIP_JSON=1] ./affs_analysis.rb filename.csv` to analyse committers/commits affiliated/independent/unknown stats.
