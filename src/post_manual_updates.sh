@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "sort configs"
+./sort_configs.sh
 echo "delete json fields"
 ./delete_json_fields.sh github_users.json
 echo "sort json"
