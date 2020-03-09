@@ -117,3 +117,8 @@ For complex merges that modify `developers_affiliationsN.txt` file(s) do the fol
 - Run `pr_data_to_csv.sh; cat new_affs.csv >> all_affs.csv; ./sort_configs.sh`.
 - Run `PG_PASS=... ./unknown_committers.rb pr_unknowns.csv`.
 - Run `mv pr_data.csv affiliations.csv; ./affiliations.sh`.
+
+Alternative way using diff (for simple PRs that only add new users):
+
+- `git diff HEAD^ > input.diff`.
+- `PG_PASS=... update_from_pr_diff.rb ./input.diff github_users.json cncf-config/email-map`.
