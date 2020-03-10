@@ -120,5 +120,6 @@ For complex merges that modify `developers_affiliationsN.txt` file(s) do the fol
 
 Alternative way using diff (for simple PRs that only add new users):
 
-- `git diff HEAD^ > input.diff`.
-- `PG_PASS=... update_from_pr_diff.rb ./input.diff github_users.json cncf-config/email-map`.
+- Merge a PR from GitHub UI, then `git pull`.
+- `git diff HEAD^ ../*.txt > input.diff`.
+- `PG_PASS=... ./update_from_pr_diff.rb ./input.diff github_users.json cncf-config/email-map`.
