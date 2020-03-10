@@ -66,18 +66,6 @@ def enrich(h, prob)
 end
 
 def update_from_pr_diff(diff_file, json_file, email_map)
-  # affiliation sources priorities
-  prios = {}
-  prios['user'] = 3
-  prios['user_manual'] = 2
-  prios['manual'] = 1
-  prios['config'] = 0
-  prios[true] = 0
-  prios[nil] = 0
-  prios['domain'] = -1
-  prios['notfound'] = -2
-  manual_prio = prios['manual']
-
   if ENV['PG_PASS'].nil?
     puts "You need to set PG_PASS=... variable to run this script"
     exit 1
@@ -178,12 +166,13 @@ def update_from_pr_diff(diff_file, json_file, email_map)
         if user['affiliation'] != company
           aff = user['affiliation'] || 'nil'
           source = user['source'] || 'default'
-          puts "Conflict detected(login):\nCurrent affiliations:\n#{aff}, source: #{source}\nNew affiliation\n#{company}, source: user\nReplace?"
+          puts "Conflict detected(login):\n#{login}/#{user['email']}\nCurrent affiliations:\n#{aff}, source: #{source}\nNew affiliation\n#{company}, source: user\nReplace?"
           ans = mgetc.downcase
           puts "> #{ans}"
           if ans == 'y'
             json_data[index]['affiliation'] = company
-            json_data[index]['source'] = user
+            json_data[index]['source'] = 'user'
+            puts "Updated existing index #{index}"
           end
         end
       end
@@ -218,6 +207,7 @@ def update_from_pr_diff(diff_file, json_file, email_map)
       h = stringify_keys(enrich(h, prob))
       h['affiliation'] = company
       h['source'] = 'user'
+      h['commits'] = 0
       users[dlogin] = []
       emails.each do |email|
         user = h.clone
@@ -229,6 +219,7 @@ def update_from_pr_diff(diff_file, json_file, email_map)
         if first_index < 0
           first_index = index
         end
+        puts "Added new index #{index}"
       end
     end
     emails.each do |email|
@@ -240,12 +231,13 @@ def update_from_pr_diff(diff_file, json_file, email_map)
         if user['affiliation'] != company
           aff = user['affiliation'] || 'nil'
           source = user['source'] || 'default'
-          puts "Conflict detected(email):\nCurrent affiliations:\n#{aff}, source: #{source}\nNew affiliation\n#{company}, source: user\nReplace?"
+          puts "Conflict detected(email):\n#{login}/#{email}\nCurrent affiliations:\n#{aff}, source: #{source}\nNew affiliation\n#{company}, source: user\nReplace?"
           ans = mgetc.downcase
           puts "> #{ans}"
           if ans == 'y'
             json_data[index]['affiliation'] = company
-            json_data[index]['source'] = user
+            json_data[index]['source'] = 'user'
+            puts "Updated existing index #{index}"
           end
         end
       else
@@ -255,12 +247,13 @@ def update_from_pr_diff(diff_file, json_file, email_map)
           if user['affiliation'] != company
             aff = user['affiliation'] || 'nil'
             source = user['source'] || 'default'
-            puts "Conflict detected(copy from existing):\nCurrent affiliations:\n#{aff}, source: #{source}\nNew affiliation\n#{company}, source: user\nReplace?"
+            puts "Conflict detected(copy from existing):\n#{login}/#{user['email']}\nCurrent affiliations:\n#{aff}, source: #{source}\nNew affiliation\n#{company}, source: user\nReplace?"
             ans = mgetc.downcase
             puts "> #{ans}"
             if ans == 'y'
               json_data[index]['affiliation'] = company
-              json_data[index]['source'] = user
+              json_data[index]['source'] = 'user'
+              puts "Updated existing index #{index}"
             end
           end
           user = user.clone
@@ -270,6 +263,7 @@ def update_from_pr_diff(diff_file, json_file, email_map)
           json_data << user
           users[demail] = [index, user]
           users[dlogin] << [index, user]
+          puts "Added new index #{index}"
         else
           puts "#{email}/#{login} has no GitHub configuration to copy from, will skip it"
         end
@@ -277,7 +271,7 @@ def update_from_pr_diff(diff_file, json_file, email_map)
       if eaffs.key?(email)
         obj = eaffs[email]
         unless obj.key?(company)
-          puts "Conflict detected:\nCurrent affiliations:"
+          puts "Conflict detected(config):\n#{login}/#{email}\nCurrent affiliations:"
           obj.each do |aff, source|
             puts "#{aff}, source: #{source === true ? 'default' : source}"
           end
@@ -287,16 +281,22 @@ def update_from_pr_diff(diff_file, json_file, email_map)
           if ans == 'y'
             eaffs[email] = {}
             eaffs[email][company] = 'user'
+            puts "Updated existing index #{index}"
           end
         end
       else
         eaffs[email] = {}
         eaffs[email][company] = 'user'
+        puts "Added new email #{email} #{company}"
       end
     end
   end
 
+  puts "Just before final save"
+  binding.pry
+
   # write eaffs back to cncf-config/email-map
+  puts "Write config file..."
   File.open(email_map, 'w') do |file|
     file.puts "# Here is a set of mappings of domain names onto employer names."
     file.puts "# [user!]domain  employer  [< yyyy-mm-dd]"
@@ -307,9 +307,8 @@ def update_from_pr_diff(diff_file, json_file, email_map)
     end
   end
 
-  binding.pry
-
   # Write JSON back
+  puts "Write JSON file..."
   pretty = JSON.pretty_generate json_data
   File.write json_file, pretty
 end
