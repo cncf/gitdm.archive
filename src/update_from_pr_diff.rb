@@ -108,11 +108,17 @@ def update_from_pr_diff(diff_file, json_file, email_map)
     else
       if ary.length != 1
         p line
-        puts "This diff contains '-' which means it also deletes data, this is not supported"
+        puts "This diff contains line with >1 ':' this is not supported"
         exit 1
       end
     end
-    logins[login] = [line, emails]
+    if logins.key?(login)
+      ary = logins[login]
+      new_line = ary[0] + ", " + line
+      logins[login] = [new_line, ary[1]]
+    else
+      logins[login] = [line, emails]
+    end
   end
 
   # Parse input JSON, store current data in 'users'
