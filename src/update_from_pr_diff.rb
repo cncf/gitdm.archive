@@ -112,9 +112,35 @@ def update_from_pr_diff(diff_file, json_file, email_map)
         exit 1
       end
     end
+    ary = line.split('until').map(&:strip)
+    if ary.length == 1
+      ary2 = line.split('from').map(&:strip)
+      if ary2.length == 2
+        line = ary2[0]
+      elsif ary2.length > 2
+        p line
+        puts "This diff contains line with multiple 'from' phrases"
+        exit 1
+      end
+    elsif ary.length == 2
+      ary2 = ary[0].split('from').map(&:strip)
+      if ary2.length == 1
+        line = ary[0] + " < " + ary[1]
+      elsif ary2.length == 2
+        line = ary2[0] + " < " + ary[1]
+      else
+        p line
+        puts "This diff contains line with 'until' phrase and multiple 'from' phrases"
+        exit 1
+      end
+    else
+      p line
+      puts "This diff contains line with multiple 'until' phrases"
+      exit 1
+    end
     if logins.key?(login)
       ary = logins[login]
-      new_line = ary[0] + ", " + line
+      new_line = ary[0] + ', ' + line
       logins[login] = [new_line, ary[1]]
     else
       logins[login] = [line, emails]
@@ -159,6 +185,7 @@ def update_from_pr_diff(diff_file, json_file, email_map)
   # now update all
   logins.each do |login, data|
     company = data[0]
+    companies = company.split ', '
     emails = data[1]
     dlogin = login.downcase
     first_index = -1
@@ -276,24 +303,28 @@ def update_from_pr_diff(diff_file, json_file, email_map)
       end
       if eaffs.key?(email)
         obj = eaffs[email]
-        unless obj.key?(company)
-          puts "Conflict detected(config):\n#{login}/#{email}\nCurrent affiliations:"
-          obj.each do |aff, source|
-            puts "#{aff}, source: #{source === true ? 'default' : source}"
-          end
-          puts "New affiliation:\n#{company}, source: user\nReplace (y/n)"
-          ans = mgetc.downcase
-          puts "> #{ans}"
-          if ans == 'y'
-            eaffs[email] = {}
-            eaffs[email][company] = 'user'
-            puts "Updated existing index #{index}"
+        companies.each do |comp|
+          unless obj.key?(comp)
+            puts "Conflict detected(config):\n#{login}/#{email}\nCurrent affiliations:"
+            obj.each do |aff, source|
+              puts "#{aff}, source: #{source === true ? 'default' : source}"
+            end
+            puts "New affiliation:\n#{comp}, source: user\nReplace (y/n)"
+            ans = mgetc.downcase
+            puts "> #{ans}"
+            if ans == 'y'
+              eaffs[email] = {}
+              eaffs[email][comp] = 'user'
+              puts "Updated existing index #{index}"
+            end
           end
         end
       else
         eaffs[email] = {}
-        eaffs[email][company] = 'user'
-        puts "Added new email #{email} #{company}"
+        companies.each do |comp|
+          eaffs[email][comp] = 'user'
+          puts "Added new email #{email} #{comp}"
+        end
       end
     end
   end
