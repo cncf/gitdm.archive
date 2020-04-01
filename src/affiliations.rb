@@ -476,16 +476,16 @@ def affiliations(affiliations_file, json_file, email_map)
             end
             if user['affiliation'] != saffs
               caffs = user['affiliation']
-              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs != 'NotFound' && dbg
+              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && caffs != '' && !caffs.nil? && saffs != 'NotFound' && dbg
                 puts "Note: overwriting affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
               end
-              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && !caffs.nil? && saffs == 'NotFound'
+              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && caffs != '' && !caffs.nil? && saffs == 'NotFound'
                 puts "Wrong: not overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
                 eaffs[user['email']].delete('NotFound') if eaffs.key?(user['email'])
               else
                 ans = 'y'
                 if higher_prio
-                  answers[login] = 'y' if saffs == 'NotFound' && ['?', '(Unknown)', nil].include?(user['affiliation'])
+                  answers[login] = 'y' if saffs == 'NotFound' && ['?', '(Unknown)', '', nil].include?(user['affiliation'])
                   if answers.key?(login)
                     ans = answers[login]
                   else
