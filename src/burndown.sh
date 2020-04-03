@@ -29,7 +29,7 @@ fi
 
 if [ -z "$2" ]
 then
-  until="2099-01-01"
+  until="2100-01-01"
 else
   until="$2"
 fi
