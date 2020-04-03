@@ -11,7 +11,7 @@ def sort_and_andd_dates(a)
   affs.each do |aff|
     ary = aff.split(' < ')
     if ary.length == 1
-      dt = '2099-01-01'
+      dt = '2100-01-01'
     else
       dt = ary[1]
     end
@@ -105,7 +105,7 @@ def gen_aff_files(json_file)
         from = ary[0]
         t += ' from ' + from if from != '1900-01-01'
         to = ary[2]
-        t += ' until ' + to if to != '2099-01-01'
+        t += ' until ' + to if to != '2100-01-01'
         t += "\n"
       end
     end
@@ -137,7 +137,7 @@ def gen_aff_files(json_file)
           to = aff[2]
           binding.pry if aff[1] != company
           s += ' from ' + from if from != '1900-01-01'
-          s += ' until ' + to if to != '2099-01-01'
+          s += ' until ' + to if to != '2100-01-01'
           if s != ''
             t += s
             t += ',' if i < l - 1

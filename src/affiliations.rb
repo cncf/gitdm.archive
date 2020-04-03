@@ -279,7 +279,7 @@ def affiliations(affiliations_file, json_file, email_map)
                 added += 1
               end
             end
-            aaffs << [DateTime.strptime('2099-01-01', '%Y-%m-%d'), "#{aff}"] if idx == 0
+            aaffs << [DateTime.strptime('2100-01-01', '%Y-%m-%d'), "#{aff}"] if idx == 0
           end
         elsif data.length == 2
           dt = data[1]
@@ -293,8 +293,8 @@ def affiliations(affiliations_file, json_file, email_map)
           end
           begin
             ddt = DateTime.strptime(dt, '%Y-%m-%d')
-            if ddt.year < 2000 || ddt.year > 2099
-              puts "Wrong date format expected YYYY-MM-DD, got #{ddt} (invalid year: < 2000 or > 2099)"
+            if ddt.year < 2000 || ddt.year > 2100
+              puts "Wrong date format expected YYYY-MM-DD, got #{ddt} (invalid year: < 2000 or > 2100)"
               err = true
               p data
               p h
