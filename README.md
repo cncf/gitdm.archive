@@ -2,9 +2,9 @@
 
 This is the Cloud Native Computing Foundation's fork of Jon Corbet and Greg KH's [gitdm](https://lwn.net/Articles/290957/) tool for calculating contributions based on developers and their companies. Companies and developers can check if they are correctly attributed at the following links:
 
-Company Developers list: [1](https://github.com/cncf/gitdm/blob/master/company_developers1.txt), [2](https://github.com/cncf/gitdm/blob/master/company_developers2.txt).
+Company Developers list: [co1], [co2], [co3], [co4].
 
-Developers affiliations list: [1](https://github.com/cncf/gitdm/blob/master/developers_affiliations1.txt), [2](https://github.com/cncf/gitdm/blob/master/developers_affiliations2.txt).
+Developers affiliations list: [dev1], [dev2], [dev3].
 
 New affiliations are imported into DevStats about 1-2 times/month.
 
@@ -14,11 +14,11 @@ This repository is used as a source of affiliations for all [DevStats projects](
 
 # Adding/Updating affiliation
 
-If you find any errors or missing affiliations in those lists, please submit a pull request with edits to developers affiliations files: [1](https://github.com/cncf/gitdm/blob/master/developers_affiliations1.txt), [2](https://github.com/cncf/gitdm/blob/master/developers_affiliations2.txt).
+If you find any errors or missing affiliations in those lists, please submit a pull request with edits to developers affiliations files: [dev1], [dev2], [dev3].
 
-Only the Developers affiliations list [1](https://github.com/cncf/gitdm/blob/master/developers_affiliations1.txt), [2](https://github.com/cncf/gitdm/blob/master/developers_affiliations2.txt) should be edited manually.
+Only the Developers affiliations list [dev1], [dev2], [dev3] should be edited manually.
 
-Company Developers lists [1](https://github.com/cncf/gitdm/blob/master/company_developers1.txt), [2](https://github.com/cncf/gitdm/blob/master/company_developers2.txt) are computed derivatives of the first list.
+Company Developers lists [co1], [co2], [co3], [co4] are computed derivatives of the first list.
 
 Other files used for affiliations are [email map file](https://github.com/cncf/gitdm/blob/master/src/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/src/github_users.json) file.
 
@@ -367,3 +367,13 @@ Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/git
 # Authors
 - Łukasz Gryglicki <lgryglicki@cncf.io> - developement.
 - Justyna Gryglicka <lgryglicka@cncf.io> - researching affiliations data.
+
+<!-- Links -->
+
+[dev1]: https://github.com/cncf/gitdm/blob/master/developers_affiliations1.txt
+[dev2]: https://github.com/cncf/gitdm/blob/master/developers_affiliations2.txt
+[dev3]: https://github.com/cncf/gitdm/blob/master/developers_affiliations3.txt
+[co1]: https://github.com/cncf/gitdm/blob/master/company_developers1.txt
+[co2]: https://github.com/cncf/gitdm/blob/master/company_developers2.txt 
+[co3]: https://github.com/cncf/gitdm/blob/master/company_developers3.txt 
+[co4]: https://github.com/cncf/gitdm/blob/master/company_developers4.txt
