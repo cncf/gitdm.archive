@@ -447,6 +447,7 @@ def affiliations(affiliations_file, json_file, email_map)
               next
             end
           end
+          binding.pry unless entries
           entries.each do |entry|
             index = entry[0]
             user = entry[1]
