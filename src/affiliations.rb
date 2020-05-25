@@ -29,7 +29,7 @@ def affiliations(affiliations_file, json_file, email_map)
     email = user['email'].downcase
     login = user['login'].downcase
     source = user['source']
-    users[email] = [index, user]
+    users[email] = [[index, user]]
     users[login] = [] unless users.key?(login)
     users[login] << [index, user]
     sources[email] = source unless source.nil?
@@ -234,8 +234,8 @@ def affiliations(affiliations_file, json_file, email_map)
                 if answers.key?(e)
                   ans = answers[e]
                 else
-                  s = "Line #{ln}, user #{users[e][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
-                  s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n/q/s)"
+                  s = "Line #{ln}, user #{users[e][0][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
+                  s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][0][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n/q/s)"
                   puts s
                   ans = mgetc.downcase
                   puts "> #{ans}"
@@ -313,8 +313,8 @@ def affiliations(affiliations_file, json_file, email_map)
                   if answers.key?(e)
                     ans = answers[e]
                   else
-                    s = "Line #{ln}, user #{users[e][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
-                    s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n/q/s)"
+                    s = "Line #{ln}, user #{users[e][0][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
+                    s += "Config affiliations: #{eaffs[e].keys.join(', ')}\nJSON affiliations: #{users[e][0][1]['affiliation']}\nNew affiliations: #{affs_str}\nReplace? (y/n/q/s)"
                     puts s
                     ans = mgetc.downcase
                     puts "> #{ans}"
@@ -422,7 +422,7 @@ def affiliations(affiliations_file, json_file, email_map)
       gha.each do |gh|
         emails.each do |email|
           next if gh == '-'
-          entry = users[email]
+          entry = users[email][0]
           login = gh.split('/').last.downcase
           entries = users[login]
           prev_source = prev_sources[email]
@@ -430,6 +430,7 @@ def affiliations(affiliations_file, json_file, email_map)
           #next unless source
           source = 'config' if source.nil?
           source = 'notfound' if saffs == 'NotFound'
+          entry = nil
           unless entry
             if entries
               user = json_data[entries.first[0]].clone
@@ -447,7 +448,6 @@ def affiliations(affiliations_file, json_file, email_map)
               next
             end
           end
-          binding.pry unless entries
           entries.each do |entry|
             index = entry[0]
             user = entry[1]
