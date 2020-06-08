@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "sort configs"
 ./sort_configs.sh
+echo "fix json"
+./fix_json.rb github_users.json
 echo "delete json fields"
 ./delete_json_fields.sh github_users.json
 echo "sort json"
