@@ -131,10 +131,11 @@ idx = 0
 CSV.foreach(ARGV[0], headers: true) do |row|
   #rank_number,actor,commits,percent,cumulative_sum,cumulative_percent,all_commits
   #rank_number,actor,contributions,percent,cumulative_sum,cumulative_percent,all_contributions
+  #rank_number,actor,events,percent,cumulative_sum,cumulative_percent,all_events
   idx += 1
   ghid = row['actor']
   lghid = ghid.downcase
-  commits[ghid] = row['commits'] || row['contributions']
+  commits[ghid] = row['commits'] || row['contributions'] || row['events']
   email = "#{ghid}!users.noreply.github.com"
   lemail = email.downcase
   emails = []
