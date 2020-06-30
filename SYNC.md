@@ -49,7 +49,7 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 32. Get [result CSV](https://teststats.cncf.io/backups/cii_unknown_committers.csv): `wget https://teststats.cncf.io/backups/argo_unknown_contributors.csv`.
 33. Obsolete way to get unknown committers on the local database: `PG_PASS=... ./sh/unknown_committers.sh`.
 34. Use `[KEYW=1] [FREQ=10000] [API_KEY=...] PG_PASS=... ./unknown_committers.rb cii_unknown_committers.csv` to generate `task.csv` file to research CII committers. After this step you can also use `./top_to_task.rb` to generate `top_task.csv` (this converts Top N CSV output into the task.csv file, optional).
-35. Use `./csv_merge.rb commits target.csv *_task.csv` to merge tasks generated for different projects, to create a file containing all those projects data sorted by contributions/commits desc.
+35. Use `./csv_merge.rb commits task.csv *_task.csv` to merge tasks generated for different projects, to create a file containing all those projects data sorted by contributions/commits desc.
 36. Use `[SHUFFLE=1] ./ensure_emails.rb github_users.json` to ensure that most up-to-date GitHub users emails are present (this will query all GitHub logins so can take even a day to finish on 300k+ JSON).
 37. Use `OUT=fn.csv ./merge_affs_csvs.rb csvfile1.csv csvfile2.csv ...` to merge multiple CSVs to import.
 38. Use `[SKIP_JSON=1] ./affs_analysis.rb filename.csv` to analyse committers/commits affiliated/independent/unknown stats.
