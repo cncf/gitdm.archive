@@ -8,12 +8,24 @@ def merge(csvs)
   target = csvs[1]
   sources = csvs[2..-1]
   data = []
+  logins = {}
   sources.each do |source|
     CSV.foreach(source, headers: true) do |row|
       h = row.to_h
-      data << h
+      l = h['github']
+      unless logins.key?(l)
+        logins[l] = h
+      else
+        r = logins[l]
+        c = r[col].to_i
+        c += h[col].to_i
+        logins[l][col] = c
+        binding.pry
+      end
     end
   end
+  logins.each { |item| data << item[1] }
+  return if data.length == 0
   ary = data.sort_by { |row| -row[col].to_i }
   hdr = data.first.keys
   CSV.open(target, 'w', headers: hdr) do |csv|
