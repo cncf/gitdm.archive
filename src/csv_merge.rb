@@ -20,7 +20,7 @@ def merge(csvs)
         c = r[col].to_i
         c += h[col].to_i
         logins[l][col] = c
-        binding.pry
+        puts "merged #{l}, now have #{c} #{col}"
       end
     end
   end
