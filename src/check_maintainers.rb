@@ -47,7 +47,7 @@ def maintainers(maintainers_file, users_file)
       a = ec.split ', '
       last = a.last
       if last != c
-        puts "check login: #{l}: current: #{ec}, maintainers file: #{c}" 
+        puts "check login: #{l}: current: '#{last}' (#{ec}), maintainers file: '#{c}'"
       else
         puts "#{l}: last company match: '#{ec}' - '#{c}'" if dbg
       end
