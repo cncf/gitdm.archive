@@ -5,7 +5,6 @@ require './comment'
 require './email_code'
 require './ghapi'
 require './mgetc'
-require 'pry'
 
 def maintainers(maintainers_file, users_file, config_file)
   dbg = !ENV['DBG'].nil?

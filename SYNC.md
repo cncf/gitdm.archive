@@ -66,7 +66,8 @@ Make sure that you don't have different case email duplicates in `src/cncf-confi
 2. Save "Name", "Company", "GitHub name" columns to a new sheet and download it as "maintainers.csv".
 3. Add "name,company,login" CSV header.
 4. Example [file](https://docs.google.com/spreadsheets/d/1QShmHcStYh5BjTjdOAASFK9V4WaYwJSFu1maBdcV5YA/edit#gid=0)
-5. Run `[ONLYNEW=1] ./maintainers.sh` script. Follow its instructions.
+5. Run `[DBG=1] [ONLYNEW=1] ./maintainers.sh` script. Follow its instructions.
+6. Run `[DBG=1] ./check_maintainers.sh`. Follow its instructions.
 
 
 # Add new project (cncf or non-cncf) to get affiliation for it.
