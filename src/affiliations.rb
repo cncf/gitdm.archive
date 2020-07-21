@@ -481,7 +481,7 @@ def affiliations(affiliations_file, json_file, email_map)
               if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && caffs != '' && !caffs.nil? && saffs != 'NotFound' && dbg
                 puts "Note: overwriting affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
               end
-              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && caffs != '' && !caffs.nil? && saffs == 'NotFound'
+              if caffs != '(Unknown)' && caffs != 'NotFound' && caffs != '?' && caffs != '' && !caffs.nil? && saffs == 'NotFound' && !recheck
                 puts "Wrong: not overwritten affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}"
                 eaffs[user['email']].delete('NotFound') if eaffs.key?(user['email'])
               else
