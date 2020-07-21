@@ -61,6 +61,7 @@ def affiliations(affiliations_file, json_file, email_map)
   end
 
   update = !ENV['UPDATE'].nil?
+  recheck = !ENV['RECHECK'].nil?
 
   # Check for carriage returns in CSV file
   if update
@@ -229,9 +230,9 @@ def affiliations(affiliations_file, json_file, email_map)
             next if skip_flag
             if eaffs.key?(e) && !eaffs[e].key?(aff) && !replaced_emails.key?(e)
               ans = 'y'
-              ans = 'n' if aff == 'NotFound'
+              ans = 'n' if aff == 'NotFound' && !recheck
               if prios[sources[e]] > manual_prio
-                if answers.key?(e)
+                if answers.key?(e) && !recheck
                   ans = answers[e]
                 else
                   s = "Line #{ln}, user #{users[e][0][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
@@ -310,7 +311,7 @@ def affiliations(affiliations_file, json_file, email_map)
               if eaffs.key?(e) && !eaffs[e].key?(aff) && !replaced_emails.key?(e)
                 ans = 'y'
                 if prios[sources[e]] > manual_prio
-                  if answers.key?(e)
+                  if answers.key?(e) && !recheck
                     ans = answers[e]
                   else
                     s = "Line #{ln}, user #{users[e][0][1]['login']}, email #{e} has affiliation source type '#{sources[e]}' which has higher priority than 'manual'\n"
@@ -457,7 +458,7 @@ def affiliations(affiliations_file, json_file, email_map)
               ans = 'y'
               if higher_prio
                 answers[login] = 'y' if user['sex'].nil? || user['sex'] == ''
-                if answers.key?(login)
+                if answers.key?(login) && !recheck
                   ans = answers[login]
                 else
                   puts "Overwrite gender #{user['sex']} --> #{gender} for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}?"
@@ -487,7 +488,7 @@ def affiliations(affiliations_file, json_file, email_map)
                 ans = 'y'
                 if higher_prio
                   answers[login] = 'y' if saffs == 'NotFound' && ['?', '(Unknown)', '', nil].include?(user['affiliation'])
-                  if answers.key?(login)
+                  if answers.key?(login) && !recheck
                     ans = answers[login]
                   else
                     puts "Overwritte affiliation '#{user['affiliation']}' --> '#{saffs}' for #{login}/#{user['email']}, commits #{user['commits']}, line #{ln}?"
