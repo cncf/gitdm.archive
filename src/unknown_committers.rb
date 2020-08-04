@@ -46,37 +46,44 @@ if ARGV.length < 1
 end
 
 skipcache = !ENV['SKIP_CACHE'].nil?
-unless skipcache
+skipenc = !ENV['SKIP_ENC'].nil?
+skipgdpr = !ENV['SKIP_GDPR'].nil?
+unless skipcache || skipenc
+
   $g_genderize_json_cache_filename = 'genderize_cache.json'
   cache = JSON.parse File.read $g_genderize_json_cache_filename
   cache.each { |key, val| $g_genderize_cache[key] = val unless val === false }
 
-  $g_geousers_json_cache_filename = 'geousers_cache.json'
-  cache = JSON.parse File.read $g_geousers_json_cache_filename
-  cache.each { |key, val| $g_geousers_cache[key] = val unless val === false }
+  if skipgdpr
+    $g_geousers_json_cache_filename = 'geousers_cache.json'
+    cache = JSON.parse File.read $g_geousers_json_cache_filename
+    cache.each { |key, val| $g_geousers_cache[key] = val unless val === false }
 
-  $g_nationalize_json_cache_filename = 'nationalize_cache.json'
-  cache = JSON.parse File.read $g_nationalize_json_cache_filename
-  cache.each { |key, val| $g_nationalize_cache[key] = val unless val === false }
+    $g_nationalize_json_cache_filename = 'nationalize_cache.json'
+    cache = JSON.parse File.read $g_nationalize_json_cache_filename
+    cache.each { |key, val| $g_nationalize_cache[key] = val unless val === false }
 
-  $g_agify_json_cache_filename = 'agify_cache.json'
-  cache = JSON.parse File.read $g_agify_json_cache_filename
-  cache.each { |key, val| $g_agify_cache[key] = val unless val === false }
+    $g_agify_json_cache_filename = 'agify_cache.json'
+    cache = JSON.parse File.read $g_agify_json_cache_filename
+    cache.each { |key, val| $g_agify_cache[key] = val unless val === false }
+  end
 
   Signal.trap('INT') do
     puts "Caught signal, saving cache and exiting"
 
-    pretty = JSON.pretty_generate genderize_get_gcache
-    File.write $g_genderize_json_cache_filename, pretty
-
     pretty = JSON.pretty_generate geousers_get_gcache
     File.write $g_geousers_json_cache_filename, pretty
 
-    pretty = JSON.pretty_generate nationalize_get_gcache
-    File.write $g_nationalize_json_cache_filename, pretty
+    if skipgdpr
+      pretty = JSON.pretty_generate genderize_get_gcache
+      File.write $g_genderize_json_cache_filename, pretty
 
-    pretty = JSON.pretty_generate agify_get_gcache
-    File.write $g_agify_json_cache_filename, pretty
+      pretty = JSON.pretty_generate nationalize_get_gcache
+      File.write $g_nationalize_json_cache_filename, pretty
+
+      pretty = JSON.pretty_generate agify_get_gcache
+      File.write $g_agify_json_cache_filename, pretty
+    end
 
     puts "Saved"
     exit 1
@@ -121,8 +128,6 @@ json.each do |row|
   aff = row['affiliation']
   ghaffs[login] = aff unless [nil, '', 'NotFound', '(Unknown)', '?'].include?(aff)
 end
-
-skipenc = !ENV['SKIP_ENC'].nil?
 
 ary = []
 new_objs = []
@@ -204,28 +209,38 @@ CSV.foreach(ARGV[0], headers: true) do |row|
     end
     h = u.to_h
     unless skipenc
-      if h[:location]
-        print "Geolocation for #{h[:location]} "
-        h[:country_id], h[:tz], ok = get_cid h[:location]
-        puts "-> (#{h[:country_id]}, #{h[:tz]}, #{ok})"
+      if skipgdpr
+        if h[:location]
+          print "Geolocation for #{h[:location]} "
+          h[:country_id], h[:tz], ok = get_cid h[:location]
+          puts "-> (#{h[:country_id]}, #{h[:tz]}, #{ok})"
+        else
+          h[:country_id], h[:tz] = nil, nil
+        end
+        if h[:country_id].nil? || h[:tz].nil? || h[:country_id] == '' || h[:tz] == ''
+          print "Nationalize: (#{h[:login]}, #{h[:name]}) -> "
+          cid, prb, ok = get_nat h[:name], h[:login], prob
+          tz, ok2 = get_tz cid unless cid.nil?
+          print "(#{cid}, #{tz}, #{prb}, #{ok}, #{ok2}) -> "
+          h[:country_id] = cid if h[:country_id].nil?
+          h[:tz] = tz if h[:tz].nil?
+          puts "(#{h[:country_id]}, #{h[:tz]})"
+        end
+        print "Genderize: (#{h[:name]}, #{h[:login]}, #{h[:country_id]}) "
+        h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
+        puts "-> (#{h[:sex]}, #{h[:sex_prob]}, #{ok})"
+        print "Agify: (#{h[:login]}, #{h[:name]}, #{h[:country_id]}) "
+        h[:age], cnt, ok = get_age h[:name], h[:login], h[:country_id]
+        puts "(#{h[:age]}, #{cnt}, #{ok})"
       else
-        h[:country_id], h[:tz] = nil, nil
+        if h[:location]
+          print "Geolocation for #{h[:location]} "
+          h[:country_id], stub, ok = get_cid h[:location]
+          puts "-> (#{h[:country_id]}, #{stub}, #{ok})"
+        else
+          h[:country_id] = nil
+        end
       end
-      if h[:country_id].nil? || h[:tz].nil? || h[:country_id] == '' || h[:tz] == ''
-        print "Nationalize: (#{h[:login]}, #{h[:name]}) -> "
-        cid, prb, ok = get_nat h[:name], h[:login], prob
-        tz, ok2 = get_tz cid unless cid.nil?
-        print "(#{cid}, #{tz}, #{prb}, #{ok}, #{ok2}) -> "
-        h[:country_id] = cid if h[:country_id].nil?
-        h[:tz] = tz if h[:tz].nil?
-        puts "(#{h[:country_id]}, #{h[:tz]})"
-      end
-      print "Genderize: (#{h[:name]}, #{h[:login]}, #{h[:country_id]}) "
-      h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
-      puts "-> (#{h[:sex]}, #{h[:sex_prob]}, #{ok})"
-      print "Agify: (#{h[:login]}, #{h[:name]}, #{h[:country_id]}) "
-      h[:age], cnt, ok = get_age h[:name], h[:login], h[:country_id]
-      puts "(#{h[:age]}, #{cnt}, #{ok})"
     else
       h[:country_id], h[:tz] = nil, nil
       h[:sex], h[:sex_prob] = nil, nil
@@ -249,17 +264,19 @@ CSV.foreach(ARGV[0], headers: true) do |row|
   end
   if !skipcache && (idx > 0 && idx % freq == 0)
     puts 'Writting caches...'
-    pretty = JSON.pretty_generate genderize_get_gcache
-    File.write $g_genderize_json_cache_filename, pretty
-
     pretty = JSON.pretty_generate geousers_get_gcache
     File.write $g_geousers_json_cache_filename, pretty
 
-    pretty = JSON.pretty_generate nationalize_get_gcache
-    File.write $g_nationalize_json_cache_filename, pretty
+    if skipgdpr
+      pretty = JSON.pretty_generate genderize_get_gcache
+      File.write $g_genderize_json_cache_filename, pretty
 
-    pretty = JSON.pretty_generate agify_get_gcache
-    File.write $g_agify_json_cache_filename, pretty
+      pretty = JSON.pretty_generate nationalize_get_gcache
+      File.write $g_nationalize_json_cache_filename, pretty
+
+      pretty = JSON.pretty_generate agify_get_gcache
+      File.write $g_agify_json_cache_filename, pretty
+    end
   end
 end
 
@@ -331,15 +348,17 @@ File.write 'github_users.json', json_data
 
 unless skipcache
   puts 'Writting caches...'
-  pretty = JSON.pretty_generate genderize_get_gcache
-  File.write $g_genderize_json_cache_filename, pretty
-
   pretty = JSON.pretty_generate geousers_get_gcache
   File.write $g_geousers_json_cache_filename, pretty
 
-  pretty = JSON.pretty_generate nationalize_get_gcache
-  File.write $g_nationalize_json_cache_filename, pretty
+  if skipgdpr
+    pretty = JSON.pretty_generate genderize_get_gcache
+    File.write $g_genderize_json_cache_filename, pretty
 
-  pretty = JSON.pretty_generate agify_get_gcache
-  File.write $g_agify_json_cache_filename, pretty
+    pretty = JSON.pretty_generate nationalize_get_gcache
+    File.write $g_nationalize_json_cache_filename, pretty
+
+    pretty = JSON.pretty_generate agify_get_gcache
+    File.write $g_agify_json_cache_filename, pretty
+  end
 end
