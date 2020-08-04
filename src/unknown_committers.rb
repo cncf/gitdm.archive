@@ -50,14 +50,14 @@ skipenc = !ENV['SKIP_ENC'].nil?
 skipgdpr = !ENV['SKIP_GDPR'].nil?
 unless skipcache || skipenc
 
-  $g_genderize_json_cache_filename = 'genderize_cache.json'
-  cache = JSON.parse File.read $g_genderize_json_cache_filename
-  cache.each { |key, val| $g_genderize_cache[key] = val unless val === false }
+  $g_geousers_json_cache_filename = 'geousers_cache.json'
+  cache = JSON.parse File.read $g_geousers_json_cache_filename
+  cache.each { |key, val| $g_geousers_cache[key] = val unless val === false }
 
   if skipgdpr
-    $g_geousers_json_cache_filename = 'geousers_cache.json'
-    cache = JSON.parse File.read $g_geousers_json_cache_filename
-    cache.each { |key, val| $g_geousers_cache[key] = val unless val === false }
+    $g_genderize_json_cache_filename = 'genderize_cache.json'
+    cache = JSON.parse File.read $g_genderize_json_cache_filename
+    cache.each { |key, val| $g_genderize_cache[key] = val unless val === false }
 
     $g_nationalize_json_cache_filename = 'nationalize_cache.json'
     cache = JSON.parse File.read $g_nationalize_json_cache_filename
