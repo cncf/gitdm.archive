@@ -23,38 +23,52 @@ def stringify_keys(hash)
   return ret
 end
 
-def enrich(h, prob)
-  if h[:location]
-    if h[:country_id.nil?] || h[:country_id] == '' || h[:tz].nil? || h[:tz] == ''
-      print "geousers_lib: #{h[:location]} -> "
-      h[:country_id], h[:tz], ok = get_cid h[:location]
-      puts "(#{h[:country_id]}, #{h[:tz]}, #{ok})"
+def enrich(h, prob, skipgdpr)
+  binding.pry
+  unless skipgdpr
+    if h[:location]
+      if h[:country_id].nil? || h[:country_id] == ''
+        print "geousers_lib: #{h[:location]} -> "
+        h[:country_id], stub, ok = get_cid h[:location]
+        puts "(#{h[:country_id]}, #{stub}, #{ok})"
+      end
+    else
+      h[:country_id] = nil unless h.key?(:country_id)
+      h[:tz] = nil unless h.key?(:tz)
     end
   else
-    h[:country_id] = nil unless h.key?(:country_id)
-    h[:tz] = nil unless h.key?(:tz)
-  end
+    if h[:location]
+      if h[:country_id].nil? || h[:country_id] == '' || h[:tz].nil? || h[:tz] == ''
+        print "geousers_lib: #{h[:location]} -> "
+        h[:country_id], h[:tz], ok = get_cid h[:location]
+        puts "(#{h[:country_id]}, #{h[:tz]}, #{ok})"
+      end
+    else
+      h[:country_id] = nil unless h.key?(:country_id)
+      h[:tz] = nil unless h.key?(:tz)
+    end
 
-  if h[:country_id].nil? || h[:tz].nil? || h[:country_id] == '' || h[:tz] == ''
-    print "nationalize_lib: (#{h[:login]}, #{h[:name]}) -> "
-    cid, prb, ok = get_nat h[:name], h[:login], prob
-    tz, ok2 = get_tz cid unless cid.nil?
-    print "(#{cid}, #{tz}, #{prb}, #{ok}, #{ok2}) -> "
-    h[:country_id] = cid if h[:country_id].nil?
-    h[:tz] = tz if h[:tz].nil?
-    puts "(#{h[:country_id]}, #{h[:tz]})"
-  end
+    if h[:country_id].nil? || h[:tz].nil? || h[:country_id] == '' || h[:tz] == ''
+      print "nationalize_lib: (#{h[:login]}, #{h[:name]}) -> "
+      cid, prb, ok = get_nat h[:name], h[:login], prob
+      tz, ok2 = get_tz cid unless cid.nil?
+      print "(#{cid}, #{tz}, #{prb}, #{ok}, #{ok2}) -> "
+      h[:country_id] = cid if h[:country_id].nil?
+      h[:tz] = tz if h[:tz].nil?
+      puts "(#{h[:country_id]}, #{h[:tz]})"
+    end
 
-  if h[:sex].nil? || h[:sex_prob].nil? || h[:sex] == '' || h[:sex_prob] == ''
-    print "genderize_lib: (#{h[:login]}, #{h[:name]}, #{h[:country_id]}) -> "
-    h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
-    puts "(#{h[:sex]}, #{h[:sex_prob]}, #{ok})"
-  end
+    if h[:sex].nil? || h[:sex_prob].nil? || h[:sex] == '' || h[:sex_prob] == ''
+      print "genderize_lib: (#{h[:login]}, #{h[:name]}, #{h[:country_id]}) -> "
+      h[:sex], h[:sex_prob], ok = get_sex h[:name], h[:login], h[:country_id]
+      puts "(#{h[:sex]}, #{h[:sex_prob]}, #{ok})"
+    end
 
-  if h[:age].nil? || h[:age] == ''
-    print "agify_lib: (#{h[:login]}, #{h[:name]}, #{h[:country_id]}) -> "
-    h[:age], cnt, ok = get_age h[:name], h[:login], h[:country_id]
-    puts "(#{h[:age]}, #{cnt}, #{ok})"
+    if h[:age].nil? || h[:age] == ''
+      print "agify_lib: (#{h[:login]}, #{h[:name]}, #{h[:country_id]}) -> "
+      h[:age], cnt, ok = get_age h[:name], h[:login], h[:country_id]
+      puts "(#{h[:age]}, #{cnt}, #{ok})"
+    end
   end
 
   h[:commits] = 0 unless h.key?(:commits)
@@ -73,6 +87,7 @@ def update_from_pr_diff(diff_file, json_file, email_map)
 
   # dbg: set to true to have very verbose output
   dbg = !ENV['DBG'].nil?
+  skipgdpr = !ENV['SKIP_GDPR'].nil?
 
   init_sqls()
   gcs = octokit_init()
@@ -237,7 +252,7 @@ def update_from_pr_diff(diff_file, json_file, email_map)
         next
       end
       h = u.to_h
-      h = stringify_keys(enrich(h, prob))
+      h = stringify_keys(enrich(h, prob, skipgdpr))
       h['affiliation'] = company
       h['source'] = 'user'
       h['commits'] = 0
