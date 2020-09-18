@@ -14,9 +14,9 @@ This repository is used as a source of affiliations for all [DevStats projects](
 
 # Adding/Updating affiliation
 
-If you find any errors or missing affiliations in those lists, please submit a pull request with edits to developers affiliations files: [dev1], [dev2], [dev3], [dev4].
+If you find any errors or missing affiliations in those lists, please submit a pull request with edits to developers affiliations files: [dev1], [dev2], [dev3], [dev4], ... .
 
-Only the Developers affiliations list [dev1], [dev2], [dev3], [dev4] should be edited manually.
+Only the Developers affiliations list [dev1], [dev2], [dev3], [dev4], ... should be edited manually.
 
 Company Developers lists [co1], [co2], [co3], [co4], [co5] are computed derivatives of the first list.
 
