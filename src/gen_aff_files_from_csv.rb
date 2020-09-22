@@ -161,6 +161,9 @@ def gen_aff_files(csv_file)
   hdr += "# If you see your name with asterisk '*' sign - it means that\n"
   hdr += "# multiple affiliations were found for you with different email addresses.\n"
   hdr += "# Please merge all of them into one then.\n"
+  hdr += "# Note that email addresses below are \"best effort\" and are out-of-date\n"
+  hdr += "# or inaccurate in many cases.  Please do not rely on this email information\n"
+  hdr += "# without verification.\n"
   File.write '../developers_affiliations.txt', hdr + t
 
   if wrongs.count > 0
