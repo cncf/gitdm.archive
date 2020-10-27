@@ -106,6 +106,7 @@ def affiliations(affiliations_file, json_file, email_map)
   begin
     CSV.foreach(affiliations_file, headers: true) do |row|
       ln += 1
+      puts ln if dbg
       next if is_comment row
       h = row.to_h
       if n_keys < 0
@@ -423,6 +424,10 @@ def affiliations(affiliations_file, json_file, email_map)
       gha.each do |gh|
         emails.each do |email|
           next if gh == '-'
+          if users[email] == nil
+            puts email
+            next
+          end
           entry = users[email][0]
           login = gh.split('/').last.downcase
           entries = users[login]
