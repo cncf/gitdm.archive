@@ -151,6 +151,7 @@ def affiliations(affiliations_file, json_file, email_map)
         binding.pry
         next
       end
+      new_emails.strip! if new_emails
 
       # emails bugs/typos
       curr_emails = (h['email'] || '').split(',').map(&:strip).map(&:downcase)
@@ -425,7 +426,7 @@ def affiliations(affiliations_file, json_file, email_map)
         emails.each do |email|
           next if gh == '-'
           if users[email] == nil
-            puts email
+            puts "Unknown #{email} email - not present in JSON file"
             next
           end
           entry = users[email][0]
