@@ -427,7 +427,8 @@ def affiliations(affiliations_file, json_file, email_map)
           next if gh == '-'
           if users[email] == nil
             puts "Unknown #{email} email - not present in JSON file"
-            next
+            # we should avoid this
+            # next
           end
           entry = users[email][0]
           login = gh.split('/').last.downcase
