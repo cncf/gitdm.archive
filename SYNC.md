@@ -113,6 +113,11 @@ To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the
 - To calculate CNCF/LF ratio use number of CNCF found from last commit - number of CNCF found from some previous commit diveded by the same ratio for all actors.
 
 
+# Acquisitions
+
+- You can do a company acquisition on a specific dae via something like: `ruby acquire_company.rb 'Old Company' 'YYYY-MM-DD' 'New Company'`
+
+
 # Complex PRs post merge
 
 For complex merges that modify `developers_affiliationsN.txt` file(s) do the following:
