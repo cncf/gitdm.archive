@@ -25,6 +25,20 @@ def run(company, date, new_company)
     lines << new_l
   end
   File.write 'cncf-config/email-map', lines.join('')
+
+  # Parse JSON
+  data = JSON.parse File.read 'github_users.json'
+
+  data.each do |user|
+    next if user['affiliation'].nil? || user['affiliation'] == ''
+    affs = user['affiliation']
+    next if !affs.end_with?(company)
+    affs += " < #{date}, #{new_company}"
+    user['affiliation'] = affs
+  end
+
+  pretty = JSON.pretty_generate data
+  File.write 'github_users.json', pretty
 end
 
 if ARGV.size < 3
