@@ -427,7 +427,7 @@ def affiliations(affiliations_file, json_file, email_map)
           next if gh == '-'
           if users[email] == nil
             puts "Unknown #{email} email - not present in JSON file"
-            # we should avoid this
+            # FIXME/TODO we should avoid this
             # next
           end
           entry = users[email][0]
