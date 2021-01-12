@@ -27,10 +27,10 @@ func checkSHAs(files []string) error {
 	for {
 		row, err := reader.Read()
 		if err == io.EOF {
-			f.Close()
+			_ = f.Close()
 			break
 		} else if err != nil {
-			f.Close()
+			_ = f.Close()
 			fmt.Printf("Reading %s\n", cfn)
 			return err
 		}
