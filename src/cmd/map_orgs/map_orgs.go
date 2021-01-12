@@ -354,6 +354,10 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 	nComps := len(companies)
 	miss := 0
 	thrN := runtime.NumCPU()
+	thrN /= 4
+	if thrN < 1 {
+		thrN = 1
+	}
 	runtime.GOMAXPROCS(thrN)
 	for company := range companies {
 		ci++
