@@ -410,6 +410,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			if ok {
 				to = strings.Replace(to, ",", "", -1)
 				to = strings.Replace(to, "<", "", -1)
+				to = strings.Replace(to, `"`, "", -1)
 				fmt.Printf("%d times: '%s' -> '%s'\n", n, org, to)
 				s += fmt.Sprintf("%s -> %s\n", org, to)
 			}
