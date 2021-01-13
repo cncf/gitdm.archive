@@ -295,6 +295,10 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 	srcMap := make(map[string]string)
 	resMap := make(map[string]struct{})
 	idxMap := make(map[*regexp.Regexp]int)
+	noAcqs := os.Getenv("NO_ACQS") != ""
+	if noAcqs {
+		acqs.Acquisitions = [][2]string{}
+	}
 	for idx, acq := range acqs.Acquisitions {
 		re = regexp.MustCompile(acq[0])
 		res, ok := srcMap[acq[0]]
