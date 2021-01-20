@@ -79,9 +79,9 @@ Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/git
 
 To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the following:
 - Download `allCountries.zip` file from geonames server[](http://download.geonames.org/export/dump/).
-- Create `geonames` database via: `sudo -u postgres createdb geonames`, `sudo -u postgres psql -f geonames.sql`. Table details in `geonames.info`
+- Create `geonames` database via: `sudo -u postgres createdb geonames`, `sudo -u postgres psql geonames -f geonames.sql`. Table details in `geonames.info`
 - Unzip `allCountries.zip` and run `PG_PASS=... ./geodata.sh allCountries.tsv` - this will populate the DB.
-- Create indices on columns to speedup localization: `sudo -u postgres psql -f geonames_idx.sql`.
+- Create indices on columns to speedup localization: `sudo -u postgres psql geonames -f geonames_idx.sql`.
 - Make sure that you don't have any `nil`, `null` and `false` values saved in any `*_cache.json` file (those files are also saved when you `CTRL^C` running enchancement).
 - Regexp to search is `/ \(null\|nil\|false\)\(\n\|,\) `, but `agify_cache.json` and `genderize_cache.json` can have `null` so search only for `false` and `nil`: `/ \(nil\|false\)\(\n\|,\)`.
 - If this is a first geousers run create `geousers_cache.json` via `cp empty.json geousers_cache.json`.
