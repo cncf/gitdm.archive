@@ -9,4 +9,4 @@ echo "json fields"
 ./check_json_fields.sh github_users.json
 echo "forbidden data"
 ./handle_forbidden_data.sh
-echo "consider ./check_spell and ./map_orgs.sh"
+echo "consider ./check_spell, ./merge_mappings.sh, ./map_orgs.sh"
