@@ -12,14 +12,10 @@ def fix_json(json_file)
         row['country_id'] = 'ca'
         fixed += 1
       end
-      if row['country_id'] != 'ca'
-        row['country_id'] = 'ca'
-        fixed += 1
-      end
-      if row['tz'] != 'America/Toronto'
-        row['tz'] = 'America/Toronto'
-        fixed += 1
-      end
+      #if row['tz'] != 'America/Toronto'
+      #  row['tz'] = 'America/Toronto'
+      #  fixed += 1
+      #end
     end
   end
   puts "Fixed: #{fixed}"
