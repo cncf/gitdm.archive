@@ -20,7 +20,7 @@ Only the Developers affiliations list [dev1], [dev2], [dev3], [dev4], ... should
 
 Company Developers lists [co1], [co2], [co3], [co4], [co5] are computed derivatives of the first list.
 
-Other files used for affiliations are [email map file](https://github.com/cncf/gitdm/blob/master/src/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/src/github_users.json) file.
+Other files used for affiliations are the [email map file](https://github.com/cncf/gitdm/blob/master/src/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/src/github_users.json) file.
 
 Please note that `cncf/gitdm` affiliations are imported into DevStats (`cncf/devstats`) weekly.
 
@@ -54,9 +54,9 @@ Output files are placed in the `kubernetes` directory.
 To regenerate all statistics just run: `./rerun_data.sh`
 
 This is an iterative process:
-Run any of scripts. Review its output in the `kubernetes` directory. Iteratively adjust mappings to handle more authors.
+Run any of the scripts. Review its output in the `kubernetes` directory. Iteratively adjust mappings to handle more authors.
 
-You can also run via `./debug.sh` to halt in debugger and review the hackers structure and those who were not found. See `cncfdm.py`:`DebugUnknowns`
+You can also run via `./debug.sh` to halt in debugger and review the hacker's structure and those who were not found. See `cncfdm.py`:`DebugUnknowns`
 
 Final report:
 
@@ -84,7 +84,7 @@ Regenerating all data with `./rerun_data.sh` means:
 - Data for `kubernetes/kubernetes` repository (all time) with 3 mappings of Unknown developers: no mapping (list them with their email & name), map them to their email domain (`user@gmail.com` --> `'Gmail *'`), map all of them to '(Unknown)'. This is done via running: (`./all.sh`, `./all_no_map.sh`, `./all_with_map.sh`). Output goes to `kubernetes/all_time/` directory
 - Data for `kubernetes/kubernetes` repository divided into releases v1.0.0, v1.1.0, ..., v1.7.0 (with 3 types of mappings described above). This is done via (`./rels.sh`, `./rels_strict.sh`, `./rels_no_map.sh`). Output goes to `kubernetes/v1.X.0-v1.Y.0/` directory: X=0,1,2,3,4,5,6 Y=1,2,3,4,5,6,7)
 
-After performing those two steps, `cncfdm.py` output neds to be analysed. It is done by calling: `./analysis_all.sh` (analyses all time results) and then `./analysis_rels.sh` (for per-release data)
+After performing those two steps, `cncfdm.py` output needs to be analysed. It is done by calling: `./analysis_all.sh` (analyses all-time results) and then `./analysis_rels.sh` (for pre-release data)
 
 Data for all 68 repos (currently) which makes the entire Kubernetes project with `./kubernetes_repos.sh` script.
 
@@ -112,18 +112,18 @@ The second calls:
 This ruby tool expects to get 3 files (one with no unknown developers mapping, 2nd with mapping to a domain name and 3rd with mapping to (Unknown).
 
 The output of this analysis.rb tool goes to `project/<prefix>_<key>_<type>`.csv files.
-<prefix>: can be `all` or `v1.X.0-v1.Y.0` - it means that thefile is for all time data or for specific release of `kubernetes/kubernetes`
+<prefix>: can be `all` or `v1.X.0-v1.Y.0` - it means that the file is for all time data or for a specific release of `kubernetes/kubernetes`
 <key>: can be changeset, employers, lines, signoffs - it means that the file contains data sorted by this <key> desc.
 <type>: can be `sum`, `top`, `all`:
 
-- `all` means that the file contains all data for given <prefix> sorted by <key> desc (header is: `idx,company,n,percent` which means n-th, company name, n developers, % all developers) `All known` is sum of all detected developers
+- `all` means that the file contains all data for given <prefix> sorted by <key> desc (header is: `idx,company,n,percent` which means n-th, company name, n developers, % all developers) `All known` is the sum of all detected developers
 - `top` means that there will be top 10 data from `all` but also must contain data for: '(Unknown)', 'Gmail *', 'Qq *', 'Outlook *', 'Yahoo *', 'Hotmail *', '(Independent)', '(Not Found)'. The header is the same as in `all`.
-- `sum` contains a summary value for all found developers. It has a different header: `N companies,sum,percent` numer of developer's companies found, the sum of <key> for all found developers, % of sum <key> as a part of sum <key> for all developers.
-- Special names: `All known` (sum all known developers), `(Independent)` (developers working on their own), `(Not Found)` (developers for whom  an employer was not found even though the search was done in multiple sources), `(Unknown)` (developers not mapped (yet?)), `Some name *` (sum of developers having emails on `Some name` domain). Asterisk `*` added to indicate this.
+- `sum` contains a summary value for all found developers. It has a different header: `N companies,sum,percent` number of developer's companies found, the sum of <key> for all found developers, % of the sum <key> as a part of the sum <key> for all developers.
+- Special names: `All known` (sum all known developers), `(Independent)` (developers working on their own), `(Not Found)` (developers for whom  an employer was not found even though the search was done in multiple sources), `(Unknown)` (developers not mapped (yet?)), `Some name *` (sum of developers having emails on `Some name` domain).An asterisk `*` is added to indicate this.
 
-This data is directly used for "Who writes Kubernetes" report.
+This data is directly used for the "Who writes Kubernetes" report.
 
-`./kubernetes_repos.sh` script is used to generate all time data for all kubernetes repos.
+`./kubernetes_repos.sh` script is used to generate all-time data for all the  kubernetes repos.
 
 To use it, you must have all of kubernetes repositories (68 from 3 different organizations) cloned in `~/dev/go/src/k8s/`.
 
@@ -158,7 +158,7 @@ It gathers `git log` on each of them and concatenates all those files and then r
 
 Results are saved to `repos/combined.<ext>` <ext> is the same as for `anyrepo.sh`.
 
-Typical work flow is re-runing `./kubernetes_repos.sh` and examining `repos/combined.txt` for unknown developers.
+The typical workflow is re-runing `./kubernetes_repos.sh` and examining `repos/combined.txt` for unknown developers.
 
 Research on google, Clearbit, FullContact, github, LinkedIn, Facebook, any other source -> update `cncf-config/<filename>` and re-run `./kubernetes_repos.sh`
 <filename>: usually in this order: email-map, domain-map, a in very rare cases: aliases, gitdm.config-cncf or group mappings in groups/
@@ -172,7 +172,7 @@ It also generates developers and companies statistics via a `./topdevs.sh` call.
 It calls a ruby tool on the combined output of all 68 kubernetes repos (saved as CSV) like so: `ruby topdevs.rb repos/combined.csv`
 
 That tool generates files as follows:
-- `companies_by_name.csv` - this is a list of companies found, sorted by their names (not case sensitive) to allow manual examination for duplicates which came about from different names such as "Google" vs "Googe Corporation" vs "Google Corp." or "google"
+- `companies_by_name.csv` - this is a list of companies found, sorted by their names (not case sensitive) to allow manual examination for duplicates that came about from different names such as "Google" vs "Googe Corporation" vs "Google Corp." or "google"
 - `companies_by_count.csv` - list of companies found, sorted (desc) by the number of employers. This serves a similar purpose but from a different perspective.
 - `unknown_devs.txt`, `unknown_devs.csv`, `unknown_emails.csv` - list of developers for whom there isn't a mapping. Used to prioritize searching for devs, and `unknown_emails.csv` is in the format fitting a clearbit batch.
 
@@ -210,7 +210,7 @@ Prometheus joined CNCF on 2016-05-09.
 
 You need to clone all Prometheus repos into `~/dev/prometheus` using `./clone_prometheus.sh`
 
-Then you need to get a number of distinct Prometheus contributors before joining CNCF:
+Then you need to get several distinct Prometheus contributors before joining CNCF:
 ./prometheus_repos.sh 2015-05-09 2016-05-08 ~/dev/prometheus/
 
 Result is:
@@ -257,14 +257,14 @@ Links to data and generated report are here: `./res/links.txt`
 # Typical update of "Who writes Kubernetes report"
 - Run `./pull_kubernetes.sh` to get all Kubernetes repos updated.
 - Change directory to `dev/go/src/k8s.io/kubernetes/` and update this repository as well.
-- New release since the last run (1.7) so many scripts needs to be updated. Also, all repos from 3 kubernetes orgs are now in  ~/dev/kubernetes/repos so `./kubernetes_repos.sh` script needs an update as well
+- New release since the last run (1.7) so many scripts needs to be updated. Also, all repos from 3 Kubernetes orgs are now in  ~/dev/kubernetes/repos so `./kubernetes_repos.sh` script needs an update as well
 - Updated `kubernetes_repos.sh` script to get repos from `~/dev/kubernetes_repos/`
 - Script to regenerate all data is `./rerun_data.sh`, it needs to be updated to support v1.7.0
 - Now report is: https://docs.google.com/document/d/1RKtRamlu4D_OpTDFTKNpMsmV51obdZlPWbXVj-LrDuw/edit?usp=sharing
 - Report data sheet/draft is: https://docs.google.com/spreadsheets/d/15otmXVx8Gd6JzfiGP_OSjP8M9zyLeLof5-IGQKEb0UQ/edit#gid=0
 - Now report sections:
 ```
-Since the kubernetes project started in June 2014, 2623 Developers from 789 Companies worked on it (counting Kubernetes and all its projects 68 repos from 3 orgs).
+Since the Kubernetes project started in June 2014, 2623 Developers from 789 Companies worked on it (counting Kubernetes and all its projects 68 repos from 3 orgs).
 A total of 28.4 million lines of code were added, 16.3 million lines removed.
 ```
 Taken from: `./repos/combined.txt`
@@ -297,36 +297,36 @@ Last month: 30227,21371,4645,1741,2470,451
 - Analyses of kubernetes/kubernetes (main repo) are in this format: `report/all_{key}_top.csv`, import them to the 2nd sheet
 - Big summaries like all developers etc are in `./repos/combined.txt`, for the main k8s repo: `kubernetes/all_time/first_run_numstat.txt`
 - Top developer stats are here: `stats/all_key.csv` (for all repos), `stats/kubernetes_key.csv` (for the main repo) and `stats/v1.x_key.csv` per versions.
-- Import those to the last 3 sheets in data set
-- Per verion data: `report/v1.x_v1.y_key_top.csv`, key: changesets, lines, developers, import to data sheet for all versions: 7 x 3 = 21 imports
+- Import those to the last 3 sheets in the data set
+- Per verion data: `report/v1.x_v1.y_key_top.csv`, key: changesets, lines, developers, import to the datasheet for all versions: 7 x 3 = 21 imports
 
-Affiliations of some developers are uncertain despite best effort. These developers are listed in `uncertain.csv` file.
+Affiliations of some developers are uncertain despite the best effort. These developers are listed in `uncertain.csv` file.
 
-## GitHub users can be pulled using Octokit GiHub API.
+## GitHub users can be pulled using Octokit GitHub API.
 
 To do this, call: `ruby ghusers.rb` or `./ghusers.sh`
 
 Required are:
 - Standard GitHub OAuth token: https://github.com/settings/tokens --> Personal access tokens, put it in `/etc/github/oauth` file.
-- A GitHub Application to increase rate limit from 60 to 5000 (60 is not enough to process kubernetes, 5000 is enough).
+- A GitHub Application to increase the rate limit from 60 to 5000 (60 is not enough to process kubernetes, 5000 is enough).
 - See: https://github.com/settings/ --> OAuth application, put your client_id and client_secret in `/ect/github/client_id`, `/etc/github/client_secret` files.
 - This tool will cache all GitHub calls (save them as JSON files in `./ghusers/`) 
 - Final JSON will be saved in `./github_users.json` (subsequent calls will use data from this file, so to reset cache, just remove this file and all files from `ghusers/` directory
 - To generate the actual mapping, manually process this JSON (and do some mapping of company names - GitHub users sometimes put strange values there)
-- I've done that by iteratively using a new tool: `import_from_github_users.sh`, `import_from_github_users.rb` with a mapping file (that tries to map a GiHub user company name into something more accurate): `company-names-mapping`
+- I've done that by iteratively using a new tool: `import_from_github_users.sh`, `import_from_github_users.rb` with a mapping file (that tries to map a GitHub  user company name into something more accurate): `company-names-mapping`
 
 ## Tools to help find unknown affiliations
 To enhance this json with pre-existing affiliations, call: `./enchance_json.sh`
 
-- To generate JSON with some filtered data (like all unknown devs with location or LinkedIn profile link or just a blog entry) call: `./lookup_json.sh` (see script for details, also lookup_json.rb have a lot of comments on how to use it).
+- To generate JSON with some filtered data (like all unknown devs with location or LinkedIn profile link or just a blog entry) call: `./lookup_json.sh` (see the script for details, also lookup_json.rb have a lot of comments on how to use it).
 
 - To generate a progress report (report about how many Not Found, Unknowns, and Independent devs are defined in our affiliation, call: `./progress_report.sh`).
 
 - To generate aliases for emails that are already known (are using the same GitHub user name) try `./aliaser.sh`, the output is `aliaser.txt` that can be analyzed and manually added to `cncf-config/aliases` if needed.
 
-- To generate a correlations map for company name (to avoid mapping typos etc) run `./correlations.sh` script. Result is in `correlations.txt` file that can be used to update `cncf-config/email-map` with corrected employer names.
+- To generate a correlations map for company name (to avoid mapping typos etc) run `./correlations.sh` script.The result is in `correlations.txt` file that can be used to update `cncf-config/email-map` with corrected employer names.
 
-- To generate per-files/directories statistics, use: `./per_dirs.sh`, this is a part of a standard workflow, results are in csv files in `per_dirs` directory
+- To generate per-files/directories statistics, use: `./per_dirs.sh`, this is a part of a standard workflow, results are in csv files in the `per_dirs` directory
 
 - To generate affiliation files (`developers_affiliations.txt`, `company_developers.txt`), use `./gen_aff_files.sh`
 
@@ -336,15 +336,15 @@ To enhance this json with pre-existing affiliations, call: `./enchance_json.sh`
 
 All those tools are automatically called when running the full data regeneration script: `./rerun_data.sh`
 
-- To automatically find affiliations (email to company) using Clearbit, run two scripts from affiliation_finder folder in order:
+- To automatically find affiliations (email to the company) using Clearbit, run two scripts from the affiliation_finder folder in order:
 	- `clearbit_affiliation_lookup.rb`
 	- `ruby clearbit_affiliation_merge.rb`
 
-The first one works with one argument and generates a file `clearbit_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false' - default. Invocation would be `clearbit_affiliation_lookup.rb` or `clearbit_affiliation_lookup.rb false` or `clearbit_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwriten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value for this: 
+The first one works with one argument and generates a file `clearbit_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false' - default. Invocation would be `clearbit_affiliation_lookup.rb` or `clearbit_affiliation_lookup.rb false` or `clearbit_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwritten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value for this: 
 	```
 	Clearbit.key = ENV['CLEARBIT_KEY']
 	```
-It is a secret API key on a Clearbit account which has been set up for subscription. When the file is generated, open it in a csv editor, sort by the 'chance' field. Visually check and correct data in the 'affiliation_suggestion' column. Replace values such as 'http://www.ghostcloud.cn/' with 'Ghostcloud'. If you find affiliations for other developers manually, just change the 'none' value in the 'chance' column to 'high' and provide a value in the 'affiliation_suggestion' column. Columns to the right of 'affiliation_suggestion' are not required.
+It is a secret API key on a Clearbit account that has been set up for a subscription. When the file is generated, open it in a csv editor, sort by the 'chance' field. Visually check and correct data in the 'affiliation_suggestion' column. Replace values such as 'http://www.ghostcloud.cn/' with 'Ghostcloud'. If you find affiliations for other developers manually, just change the 'none' value in the 'chance' column to 'high' and provide a value in the 'affiliation_suggestion' column. Columns to the right of 'affiliation_suggestion' are not required.
 
 The second script reads the 'clearbit_affiliation_lookup.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered.
 
@@ -352,15 +352,15 @@ The second script reads the 'clearbit_affiliation_lookup.csv' file. Data is proc
 	- `ruby fullcontact_affiliation_lookup.rb`
 	- `ruby fullcontact_affiliation_merge.rb`
 
-The first one works with one argument and generates a file `fullcontact_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false' - default. Invocation would be `fullcontact_affiliation_lookup.rb` or `fullcontact_affiliation_lookup.rb false` or `fullcontact_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwriten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value for this: 
+The first one works with one argument and generates a file `fullcontact_affiliation_lookup.csv`. The argument can be skipped or have a value of 'true' or 'false' - default. Invocation would be `fullcontact_affiliation_lookup.rb` or `fullcontact_affiliation_lookup.rb false` or `fullcontact_affiliation_lookup.rb true`. The argument is used to whether the script's output data should be overwritten (normally data would be appended to the file) and at the same time it will allow previously looked-up email addresses to be checked again.<br/>The execution environment needs to have a proper value for this: 
 	```
 	config.api_key = ENV['FULLCONTACT_KEY']
 	```
-It is a secret API key on a FullContact account which has been set up for subscription. The columns differ in this file compared to that of Clearbit. If you find affiliations for other developers manually, just change the value in the 'org_1' column. The column by default should have 5 pipe-delimited values. If you do not have the values for the other 4, just type 4 pipes. Columns to the right of 'org_1' are not required.
+It is a secret API key on a FullContact account that has been set up for a subscription. The columns differ in this file compared to that of Clearbit. If you find affiliations for other developers manually, just change the value in the 'org_1' column. The column by default should have 5 pipe-delimited values. If you do not have the values for the other 4, just type 4 pipes. Columns to the right of 'org_1' are not required.
 
 The second script reads the 'clearbit_affiliation_lookup.csv' file. Data is processed against the `cncf-config/email-map` file. When done, the 'email-map' file will have new and updated affiliations. The file will be sorted as well. The lookup file will not be altered. The merge scripts export developer work history to `fullcontact_developer_historical_irganizations.csv`.
 
-# Add new project ( cncf or non-cncf) to get affiliation for it.
+# Add a new project ( cncf or non-cncf) to get affiliation for it.
 
 Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/gitdm/blob/master/ADD_PROJECT.md).
 
