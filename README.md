@@ -366,7 +366,7 @@ Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/git
 
 # Authors
 - Łukasz Gryglicki <lgryglicki@cncf.io> - developement.
-- Justyna Gryglicka <lgryglicka@cncf.io> - researching affiliations data.
+- Justyna Gryglicka <jgryglicka@cncf.io> - researching affiliations data.
 
 <!-- Links -->
 
