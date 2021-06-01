@@ -78,9 +78,10 @@ Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/git
 # Geodata and gender
 
 To add geo data (`country_id`, `tz`) and gender data (`sex`, `sex_prob`), do the following:
-- Download `allCountries.zip` file from geonames server[](http://download.geonames.org/export/dump/).
-- Create `geonames` database via: `sudo -u postgres createdb geonames`, `sudo -u postgres psql geonames -f geonames.sql`. Table details in `geonames.info`
-- Unzip `allCountries.zip` and run `PG_PASS=... ./geodata.sh allCountries.tsv` - this will populate the DB.
+- Download `allCountries.zip` file from geonames server[](http://download.geonames.org/export/dump/): `wget http://download.geonames.org/export/dump/allCountries.zip`.
+- Create `geonames` database via: `sudo -u postgres createdb geonames`, `sudo -u postgres psql geonames -f geonames.sql` or `[PGPASSWORD=...] psql -Upostgres geonames -f geonames.sql`. Table details in `geonames.info`
+- Create `gha_admin` role via `sudo -u postgres -c "create role gha_admin login password 'xyz'"`.
+- Unzip `unzip allCountries.zip` and run `PG_PASS=... ./geodata.sh allCountries.txt` - this will populate the DB.
 - Create indices on columns to speedup localization: `sudo -u postgres psql geonames -f geonames_idx.sql`.
 - Make sure that you don't have any `nil`, `null` and `false` values saved in any `*_cache.json` file (those files are also saved when you `CTRL^C` running enchancement).
 - Regexp to search is `/ \(null\|nil\|false\)\(\n\|,\) `, but `agify_cache.json` and `genderize_cache.json` can have `null` so search only for `false` and `nil`: `/ \(nil\|false\)\(\n\|,\)`.
