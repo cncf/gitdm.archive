@@ -280,6 +280,7 @@ CSV.foreach(ARGV[0], headers: true) do |row|
   end
 end
 
+linkedin_base = 'https://www.linkedin.com/search/results/all/?origin=GLOBAL_SEARCH_HEADER&keywords='
 puts "Writting CSV..."
 hdr = %w(type email name github linkedin1 linkedin2 linkedin3 commits gender location affiliations)
 hdr << 'new emails'
@@ -313,9 +314,9 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
         lin2 = name + ' ' + domain
         lin3 = name + ' ' + login
       else
-        lin1 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}"
-        lin2 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}"
-        lin3 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_domain}"
+        lin1 = linkedin_base + escaped_name
+        lin2 = linkedin_base + escaped_uname
+        lin3 = linkedin_base + escaped_domain
       end
     else
       if keyw
@@ -323,8 +324,8 @@ CSV.open('task.csv', 'w', headers: hdr) do |csv|
         lin2 = name + ' ' + login
         lin3 = uname + ' ' + login
       else
-        lin1 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_name}"
-        lin2 = "https://www.linkedin.com/search/results/index/?keywords=#{escaped_uname}"
+        lin1 = linkedin_base + escaped_name
+        lin2 = linkedin_base + escaped_uname
       end
     end
     loc = ''
