@@ -2,7 +2,6 @@ package main
 
 import (
 	"database/sql"
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -15,6 +14,7 @@ import (
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
+	json "github.com/json-iterator/go"
 	"gopkg.in/yaml.v2"
 )
 
@@ -175,7 +175,7 @@ func getAcquisitionsYAMLBody() []byte {
 
 // getMapOrgNamesYAMLBody - get map organization names YAML body
 func getMapOrgNamesYAMLBody() []byte {
-	yamlRemotePath := "https://github.com/LF-Engineering/dev-analytics-affiliation/raw/master/map_org_names.yaml"
+	yamlRemotePath := "https://github.com/LF-Engineering/dev-analytics-affiliation/raw/prod/map_org_names.yaml"
 	response, err := http.Get(yamlRemotePath)
 	fatalOnError(err)
 	defer func() { _ = response.Body.Close() }()
