@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"database/sql"
 	"fmt"
 	"io/ioutil"
@@ -10,6 +11,7 @@ import (
 	"runtime"
 	"runtime/debug"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 
@@ -23,14 +25,14 @@ type gitHubUsers []gitHubUser
 
 // gitHubUser - single GitHug user entry from cncf/devstats `github_users.json` JSON.
 type gitHubUser struct {
-	Login       string   `json:"login"`
-	Email       string   `json:"email"`
-	Affiliation string   `json:"affiliation"`
-	Name        string   `json:"name"`
-	CountryID   *string  `json:"country_id"`
-	Sex         *string  `json:"sex"`
-	Tz          *string  `json:"tz"`
-	SexProb     *float64 `json:"sex_prob"`
+	Login       string  `json:"login"`
+	Email       string  `json:"email"`
+	Affiliation string  `json:"affiliation"`
+	Source      *string `json:"source,omitempty"`
+	Name        *string `json:"name"`
+	Commits     int     `json:"commits"`
+	Location    *string `json:"location"`
+	CountryID   *string `json:"country_id"`
 }
 
 // allAcquisitions contain all company acquisitions data
@@ -60,7 +62,7 @@ func fatalf(f string, a ...interface{}) {
 // getConnectString - get MariaDB SH (Sorting Hat) database DSN
 // Either provide full DSN via SH_DSN='shuser:shpassword@tcp(shhost:shport)/shdb?charset=utf8'
 // Or use some SH_ variables, only SH_PASS is required
-// Defaults are: "shuser:required_pwd@tcp(localhost:3306)/shdb?charset=utf8
+// Defaults are: "shuser:required_pwd@tcp(localhost:3306)/shdb?charset=utf8"
 // SH_DSN has higher priority; if set no SH_ varaibles are used
 func getConnectString() string {
 	//dsn := "shuser:"+os.Getenv("PASS")+"@/shdb?charset=utf8")
@@ -296,6 +298,12 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 	resMap := make(map[string]struct{})
 	idxMap := make(map[*regexp.Regexp]int)
 	noAcqs := os.Getenv("NO_ACQS") != ""
+	trunc := 0
+	if os.Getenv("TRUNC") != "" {
+		var e error
+		trunc, e = strconv.Atoi(os.Getenv("TRUNC"))
+		fatalOnError(e)
+	}
 	if noAcqs {
 		acqs.Acquisitions = [][2]string{}
 	}
@@ -331,6 +339,9 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		if ui > 0 && ui%10000 == 0 {
 			fmt.Printf("Processing JSON %d/%d\n", ui, nUsr)
 		}
+		if trunc > 0 && ui >= trunc {
+			break
+		}
 		affs := user.Affiliation
 		if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
 			continue
@@ -363,6 +374,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		thrN = 1
 	}
 	runtime.GOMAXPROCS(thrN)
+	replacer := strings.NewReplacer(`"`, "", "<", "", ",", "")
 	for company := range companies {
 		ci++
 		if company == "" {
@@ -377,8 +389,16 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			miss++
 			continue
 		}
+    if mappedName == "Individual - No Account" {
+      mappedName = "Independent"
+    }
 		if mappedName != company {
-			maps[company] = mappedName
+			// " < , cannot be used in affiliation property in github_users.json
+			mappedName := replacer.Replace(mappedName)
+			if mappedName != company {
+				maps[company] = mappedName
+				fmt.Printf("mappedName: '%s' -> '%s'\n", company, mappedName)
+			}
 		}
 	}
 	if miss > 0 {
@@ -408,15 +428,59 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		for _, org := range orgs {
 			to, ok := maps[org]
 			if ok {
-				to = strings.Replace(to, ",", "", -1)
-				to = strings.Replace(to, "<", "", -1)
-				to = strings.Replace(to, `"`, "", -1)
+				// to = replacer.Replace(to)
 				fmt.Printf("%d times: '%s' -> '%s'\n", n, org, to)
 				s += fmt.Sprintf("%s -> %s\n", org, to)
 			}
 		}
 	}
 	fmt.Printf("=============================>\n%s\n", s)
+	noWrite := os.Getenv("NO_WRITE") != ""
+	if noWrite {
+		return
+	}
+	for ui, user := range *users {
+		if ui > 0 && ui%10000 == 0 {
+			fmt.Printf("Processing JSON %d/%d\n", ui, nUsr)
+		}
+		if trunc > 0 && ui >= trunc {
+			break
+		}
+		affs := user.Affiliation
+		if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
+			continue
+		}
+		affsAry := strings.Split(affs, ", ")
+		replaces := [][2]string{}
+		for _, aff := range affsAry {
+			ary := strings.Split(aff, " < ")
+			company := strings.TrimSpace(ary[0])
+			if company == "" {
+				continue
+			}
+			mappedCompany, mapped := maps[company]
+			if mapped {
+				replaces = append(replaces, [2]string{company, mappedCompany})
+			}
+		}
+		if len(replaces) > 0 {
+			for _, replace := range replaces {
+				affs = strings.Replace(affs, replace[0], replace[1], -1)
+			}
+			// fmt.Printf("'%s' --> '%s'\n", user.Affiliation, affs)
+			(*users)[ui].Affiliation = affs
+		}
+	}
+  bf := bytes.NewBuffer([]byte{})
+  js := json.NewEncoder(bf)
+  js.SetEscapeHTML(false)
+  js.SetIndent("", "  ")
+  fatalOnError(js.Encode(&users))
+	fatalOnError(ioutil.WriteFile("mapped.json", bf.Bytes(), 0644))
+  // that was HTML escaping < in "affiliation" property
+	//pretty, err := json.MarshalIndent(&users, "", "  ")
+	//fatalOnError(err)
+	//fatalOnError(ioutil.WriteFile("mapped.json", pretty, 0644))
 }
 
 func mapOrgs() {
@@ -424,6 +488,10 @@ func mapOrgs() {
 	dsn := getConnectString()
 	db, err := sql.Open("mysql", dsn)
 	fatalOnError(err)
+	db.SetMaxIdleConns(128)
+	db.SetMaxOpenConns(128)
+	dur, _ := time.ParseDuration("10m")
+	db.SetConnMaxLifetime(dur)
 	defer func() { fatalOnError(db.Close()) }()
 
 	// Parse github_users.json
