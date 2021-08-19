@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bytes"
 	"database/sql"
 	"fmt"
 	"io/ioutil"
@@ -20,20 +19,30 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+var (
+	// MODE
+	// gSortKeys = false
+	gSortKeys = true
+)
+
 // gitHubUsers - list of GitHub user data from cncf/devstats.
 type gitHubUsers []gitHubUser
 
+// MODE - use named fields (name type gitHubUserStr -> gitHubUser)
 // gitHubUser - single GitHug user entry from cncf/devstats `github_users.json` JSON.
 type gitHubUser struct {
 	Login       string  `json:"login"`
 	Email       string  `json:"email"`
 	Affiliation string  `json:"affiliation"`
 	Source      *string `json:"source,omitempty"`
-	Name        *string `json:"name"`
-	Commits     int     `json:"commits"`
-	Location    *string `json:"location"`
-	CountryID   *string `json:"country_id"`
+	Name        *string `json:"name,omitempty"`
+	Commits     *int    `json:"commits,omitempty"`
+	Location    *string `json:"location,omitempty"`
+	CountryID   *string `json:"country_id,omitempty"`
 }
+
+// MODE - use unlimited fields (name type gitHubUserMap -> gitHubUserStr)
+type gitHubUserMap map[string]interface{}
 
 // allAcquisitions contain all company acquisitions data
 // Acquisition contains acquired company name regular expression and new company name for it.
@@ -342,7 +351,9 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		if trunc > 0 && ui >= trunc {
 			break
 		}
+		// MODE
 		affs := user.Affiliation
+		// affs, _ := user["affiliation"].(string)
 		if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
 			continue
 		}
@@ -389,9 +400,9 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			miss++
 			continue
 		}
-    if mappedName == "Individual - No Account" {
-      mappedName = "Independent"
-    }
+		if mappedName == "Individual - No Account" {
+			mappedName = "Independent"
+		}
 		if mappedName != company {
 			// " < , cannot be used in affiliation property in github_users.json
 			mappedName := replacer.Replace(mappedName)
@@ -446,7 +457,9 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		if trunc > 0 && ui >= trunc {
 			break
 		}
+		// MODE
 		affs := user.Affiliation
+		// affs, _ := user["affiliation"].(string)
 		if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
 			continue
 		}
@@ -468,19 +481,27 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 				affs = strings.Replace(affs, replace[0], replace[1], -1)
 			}
 			// fmt.Printf("'%s' --> '%s'\n", user.Affiliation, affs)
+			// MODE
 			(*users)[ui].Affiliation = affs
+			// (*users)[ui]["affiliation"] = affs
 		}
 	}
-  bf := bytes.NewBuffer([]byte{})
-  js := json.NewEncoder(bf)
-  js.SetEscapeHTML(false)
-  js.SetIndent("", "  ")
-  fatalOnError(js.Encode(&users))
-	fatalOnError(ioutil.WriteFile("mapped.json", bf.Bytes(), 0644))
-  // that was HTML escaping < in "affiliation" property
-	//pretty, err := json.MarshalIndent(&users, "", "  ")
-	//fatalOnError(err)
-	//fatalOnError(ioutil.WriteFile("mapped.json", pretty, 0644))
+	var js = json.Config{
+		EscapeHTML:  false,
+		SortMapKeys: gSortKeys,
+	}.Froze()
+	pretty, err := js.MarshalIndent(&users, "", "  ")
+	fatalOnError(err)
+	fatalOnError(ioutil.WriteFile("mapped.json", pretty, 0644))
+	/*
+		bf := bytes.NewBuffer([]byte{})
+		js := json.NewEncoder(bf)
+		js.SetEscapeHTML(false)
+		js.SetSortMaps(false)
+		js.SetIndent("", "  ")
+		fatalOnError(js.Encode(&users))
+		fatalOnError(ioutil.WriteFile("mapped.json", bf.Bytes(), 0644))
+	*/
 }
 
 func mapOrgs() {
