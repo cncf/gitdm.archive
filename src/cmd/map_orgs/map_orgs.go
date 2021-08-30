@@ -506,6 +506,46 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 	pretty, err := js.MarshalIndent(&users, "", "  ")
 	fatalOnError(err)
 	fatalOnError(ioutil.WriteFile("mapped.json", pretty, 0644))
+	// config file
+	data, err := ioutil.ReadFile("cncf-config/email-map")
+	fatalOnError(err)
+	lines := strings.Split(string(data), "\n")
+	nLines := len(lines)
+	newLines := ""
+	for li, line := range lines {
+		if li > 0 && li%1000 == 0 {
+			fmt.Printf("Processing config %d/%d\n", li, nLines)
+		}
+		line := strings.TrimSpace(line)
+		if line == "" || strings.HasPrefix(line, "# ") {
+			newLines += line + "\n"
+			continue
+		}
+		ary := strings.Split(line, " ")
+		if len(ary) < 2 {
+			fatalf("incorrect line: '%s'\n", line)
+		}
+		email := ary[0]
+		companyData := strings.TrimSpace(strings.Join(ary[1:], " "))
+		ary2 := strings.Split(companyData, "<")
+		if len(ary2) == 1 {
+			company := strings.TrimSpace(ary2[0])
+			mappedCompany, mapped := maps[company]
+			if !mapped {
+				mappedCompany = company
+			}
+			newLines += email + " " + mappedCompany + "\n"
+		} else {
+			company := strings.TrimSpace(ary2[0])
+			date := strings.TrimSpace(ary2[1])
+			mappedCompany, mapped := maps[company]
+			if !mapped {
+				mappedCompany = company
+			}
+			newLines += email + " " + mappedCompany + " < " + date + "\n"
+		}
+	}
+	fatalOnError(ioutil.WriteFile("config.txt", []byte(newLines), 0644))
 	/*
 		bf := bytes.NewBuffer([]byte{})
 		js := json.NewEncoder(bf)
