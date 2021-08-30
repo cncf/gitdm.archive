@@ -13,7 +13,7 @@ echo "strip json"
 ./strip_json.sh github_users.json stripped.json
 echo "affiliated json"
 ONLY_AFF=1 ./strip_json.sh github_users.json affiliated.json
-cp affiliated.json ~/dev/go/src/github.com/cncf/devstats/github_users.json
+cp affiliated.json ../../devstats/github_users.json
 echo "gen text affs files"
 ./gen_aff_files.sh
 echo "consider ./check_spell and ./map_orgs.sh"
