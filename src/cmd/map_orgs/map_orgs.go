@@ -467,6 +467,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		fatalOnError(err)
 		fatalOnError(ioutil.WriteFile("mapping.json", jsonMap, 0644))
 	}
+	fmt.Printf("Processing %d users\n", nUsr)
 	for ui, user := range *users {
 		if ui > 0 && ui%10000 == 0 {
 			fmt.Printf("Processing JSON %d/%d\n", ui, nUsr)
@@ -511,10 +512,14 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 	fatalOnError(err)
 	lines := strings.Split(string(data), "\n")
 	nLines := len(lines)
+	fmt.Printf("Processing %d config lines\n", nLines)
 	newLines := ""
 	for li, line := range lines {
 		if li > 0 && li%1000 == 0 {
 			fmt.Printf("Processing config %d/%d\n", li, nLines)
+		}
+		if trunc > 0 && li >= trunc {
+			break
 		}
 		line := strings.TrimSpace(line)
 		if line == "" || strings.HasPrefix(line, "# ") {
