@@ -12,6 +12,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -231,7 +232,8 @@ func mapCompanyName(comMap map[string][2]string, acqMap map[*regexp.Regexp]strin
 	return company
 }
 
-func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *allMappings, cache map[string]string, missingOrgs map[string]int, thrN int) string {
+func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *allMappings, cache map[string]string, missingOrgs map[string]int, warns map[string]struct{}, thrN int) string {
+	mtx := &sync.Mutex{}
 	mappedCompany, ok := cache[lCompanyName]
 	if !ok {
 		q := "select ? regexp ?"
@@ -243,6 +245,20 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 			for rows.Next() {
 				fatalOnError(rows.Scan(&match))
 				break
+			}
+			e := rows.Err()
+			if e != nil {
+				mtx.Lock()
+				_, ok := warns[re]
+				if !ok {
+					warns[re] = struct{}{}
+				}
+				mtx.Unlock()
+				if !ok {
+					fmt.Printf("%s error for '%s', '%s'\n", q, lCompanyName, re)
+				}
+				ch <- ""
+				return
 			}
 			fatalOnError(rows.Err())
 			fatalOnError(rows.Close())
@@ -391,6 +407,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			thrN = 1
 		}
 		runtime.GOMAXPROCS(thrN)
+		warns := make(map[string]struct{})
 		replacer := strings.NewReplacer(`"`, "", "<", "", ",", "")
 		for company := range companies {
 			ci++
@@ -401,7 +418,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 				fmt.Printf("Processed %d/%d companies\n", ci, nComps)
 			}
 			lCompany := strings.ToLower(company)
-			mappedName := mapOrganization(db, company, lCompany, mapOrgNames, cache, missingOrgs, thrN)
+			mappedName := mapOrganization(db, company, lCompany, mapOrgNames, cache, missingOrgs, warns, thrN)
 			if mappedName == "" {
 				miss++
 				continue
