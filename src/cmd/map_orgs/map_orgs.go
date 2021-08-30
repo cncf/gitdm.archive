@@ -300,155 +300,172 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 
 func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNames *allMappings) {
 	var re *regexp.Regexp
-	acqMap := make(map[*regexp.Regexp]string)
-	comMap := make(map[string][2]string)
-	stat := make(map[string][2]int)
-	srcMap := make(map[string]string)
-	resMap := make(map[string]struct{})
-	idxMap := make(map[*regexp.Regexp]int)
-	noAcqs := os.Getenv("NO_ACQS") != ""
+	cached := os.Getenv("CACHED") != ""
+	maps := make(map[string]string)
+	nUsr := len(*users)
 	trunc := 0
 	if os.Getenv("TRUNC") != "" {
 		var e error
 		trunc, e = strconv.Atoi(os.Getenv("TRUNC"))
 		fatalOnError(e)
 	}
-	if noAcqs {
-		acqs.Acquisitions = [][2]string{}
-	}
-	for idx, acq := range acqs.Acquisitions {
-		re = regexp.MustCompile(acq[0])
-		res, ok := srcMap[acq[0]]
-		if ok {
-			fatalf("Acquisition number %d '%+v' is already present in the mapping and maps into '%s'", idx, acq, res)
+	var js = json.Config{
+		EscapeHTML:  false,
+		SortMapKeys: gSortKeys,
+	}.Froze()
+	if !cached {
+		acqMap := make(map[*regexp.Regexp]string)
+		comMap := make(map[string][2]string)
+		stat := make(map[string][2]int)
+		srcMap := make(map[string]string)
+		resMap := make(map[string]struct{})
+		idxMap := make(map[*regexp.Regexp]int)
+		noAcqs := os.Getenv("NO_ACQS") != ""
+		if noAcqs {
+			acqs.Acquisitions = [][2]string{}
 		}
-		srcMap[acq[0]] = acq[1]
-		_, ok = resMap[acq[1]]
-		if ok {
-			fatalf("Acquisition number %d '%+v': some other acquisition already maps into '%s', merge them", idx, acq, acq[1])
-		}
-		resMap[acq[1]] = struct{}{}
-		acqMap[re] = acq[1]
-		idxMap[re] = idx
-	}
-	for re, res := range acqMap {
-		i := idxMap[re]
 		for idx, acq := range acqs.Acquisitions {
-			if re.MatchString(acq[1]) && i != idx {
-				fatalf("Acquisition's number %d '%s' result '%s' matches other acquisition number %d '%s' which maps to '%s', simplify it: '%v' -> '%s'", idx, acq[0], acq[1], i, re, res, acq[0], res)
+			re = regexp.MustCompile(acq[0])
+			res, ok := srcMap[acq[0]]
+			if ok {
+				fatalf("Acquisition number %d '%+v' is already present in the mapping and maps into '%s'", idx, acq, res)
 			}
-			if re.MatchString(acq[0]) && res != acq[1] {
-				fatalf("Acquisition's number %d '%s' regexp '%s' matches other acquisition number %d '%s' which maps to '%s': result is different '%s'", idx, acq, acq[0], i, re, res, acq[1])
+			srcMap[acq[0]] = acq[1]
+			_, ok = resMap[acq[1]]
+			if ok {
+				fatalf("Acquisition number %d '%+v': some other acquisition already maps into '%s', merge them", idx, acq, acq[1])
+			}
+			resMap[acq[1]] = struct{}{}
+			acqMap[re] = acq[1]
+			idxMap[re] = idx
+		}
+		for re, res := range acqMap {
+			i := idxMap[re]
+			for idx, acq := range acqs.Acquisitions {
+				if re.MatchString(acq[1]) && i != idx {
+					fatalf("Acquisition's number %d '%s' result '%s' matches other acquisition number %d '%s' which maps to '%s', simplify it: '%v' -> '%s'", idx, acq[0], acq[1], i, re, res, acq[0], res)
+				}
+				if re.MatchString(acq[0]) && res != acq[1] {
+					fatalf("Acquisition's number %d '%s' regexp '%s' matches other acquisition number %d '%s' which maps to '%s': result is different '%s'", idx, acq, acq[0], i, re, res, acq[1])
+				}
 			}
 		}
-	}
-	companies := make(map[string]int)
-	nUsr := len(*users)
-	for ui, user := range *users {
-		if ui > 0 && ui%10000 == 0 {
-			fmt.Printf("Processing JSON %d/%d\n", ui, nUsr)
+		companies := make(map[string]int)
+		for ui, user := range *users {
+			if ui > 0 && ui%10000 == 0 {
+				fmt.Printf("Processing JSON %d/%d\n", ui, nUsr)
+			}
+			if trunc > 0 && ui >= trunc {
+				break
+			}
+			// MODE
+			affs := user.Affiliation
+			// affs, _ := user["affiliation"].(string)
+			if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
+				continue
+			}
+			affsAry := strings.Split(affs, ", ")
+			for _, aff := range affsAry {
+				ary := strings.Split(aff, " < ")
+				company := strings.TrimSpace(ary[0])
+				if company == "" {
+					continue
+				}
+				// Map using companies acquisitions/company names mapping
+				company = mapCompanyName(comMap, acqMap, stat, company)
+				n, _ := companies[company]
+				companies[company] = n + 1
+			}
 		}
-		if trunc > 0 && ui >= trunc {
-			break
+		// fmt.Printf("companies: %+v\nnumber of companies: %d\n", companies, len(companies))
+		fmt.Printf("Number of companies: %d\n", len(companies))
+
+		cache := make(map[string]string)
+		missingOrgs := make(map[string]int)
+		ci := 0
+		nComps := len(companies)
+		miss := 0
+		thrN := runtime.NumCPU()
+		thrN /= 4
+		if thrN < 1 {
+			thrN = 1
 		}
-		// MODE
-		affs := user.Affiliation
-		// affs, _ := user["affiliation"].(string)
-		if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
-			continue
-		}
-		affsAry := strings.Split(affs, ", ")
-		for _, aff := range affsAry {
-			ary := strings.Split(aff, " < ")
-			company := strings.TrimSpace(ary[0])
+		runtime.GOMAXPROCS(thrN)
+		replacer := strings.NewReplacer(`"`, "", "<", "", ",", "")
+		for company := range companies {
+			ci++
 			if company == "" {
 				continue
 			}
-			// Map using companies acquisitions/company names mapping
-			company = mapCompanyName(comMap, acqMap, stat, company)
-			n, _ := companies[company]
-			companies[company] = n + 1
-		}
-	}
-	// fmt.Printf("companies: %+v\nnumber of companies: %d\n", companies, len(companies))
-	fmt.Printf("Number of companies: %d\n", len(companies))
-
-	cache := make(map[string]string)
-	missingOrgs := make(map[string]int)
-	maps := make(map[string]string)
-	ci := 0
-	nComps := len(companies)
-	miss := 0
-	thrN := runtime.NumCPU()
-	thrN /= 4
-	if thrN < 1 {
-		thrN = 1
-	}
-	runtime.GOMAXPROCS(thrN)
-	replacer := strings.NewReplacer(`"`, "", "<", "", ",", "")
-	for company := range companies {
-		ci++
-		if company == "" {
-			continue
-		}
-		if ci > 0 && ci%200 == 0 {
-			fmt.Printf("Processed %d/%d companies\n", ci, nComps)
-		}
-		lCompany := strings.ToLower(company)
-		mappedName := mapOrganization(db, company, lCompany, mapOrgNames, cache, missingOrgs, thrN)
-		if mappedName == "" {
-			miss++
-			continue
-		}
-		if mappedName == "Individual - No Account" {
-			mappedName = "Independent"
-		}
-		if mappedName != company {
-			// " < , cannot be used in affiliation property in github_users.json
-			mappedName := replacer.Replace(mappedName)
+			if ci > 0 && ci%200 == 0 {
+				fmt.Printf("Processed %d/%d companies\n", ci, nComps)
+			}
+			lCompany := strings.ToLower(company)
+			mappedName := mapOrganization(db, company, lCompany, mapOrgNames, cache, missingOrgs, thrN)
+			if mappedName == "" {
+				miss++
+				continue
+			}
+			if mappedName == "Individual - No Account" {
+				mappedName = "Independent"
+			}
 			if mappedName != company {
-				maps[company] = mappedName
-				fmt.Printf("mappedName: '%s' -> '%s'\n", company, mappedName)
+				// " < , cannot be used in affiliation property in github_users.json
+				mappedName := replacer.Replace(mappedName)
+				if mappedName != company {
+					maps[company] = mappedName
+					fmt.Printf("mappedName: '%s' -> '%s'\n", company, mappedName)
+				}
 			}
 		}
-	}
-	if miss > 0 {
-		fmt.Printf("Missing %d orgs\n", miss)
-	}
-	fmt.Printf("Actual mappings made: %d\n", len(maps))
-	//for from, to := range maps {
-	//	fmt.Printf("'%s' -> '%s'\n", from, to)
-	//}
-	m := make(map[int][]string)
-	for org, n := range companies {
-		entry, ok := m[n]
-		if ok {
-			m[n] = append(entry, org)
-		} else {
-			m[n] = []string{org}
+		if miss > 0 {
+			fmt.Printf("Missing %d orgs\n", miss)
 		}
-	}
-	ks := []int{}
-	for k := range m {
-		ks = append(ks, k)
-	}
-	sort.Sort(sort.Reverse(sort.IntSlice(ks)))
-	s := ""
-	for _, n := range ks {
-		orgs := m[n]
-		for _, org := range orgs {
-			to, ok := maps[org]
+		fmt.Printf("Actual mappings made: %d\n", len(maps))
+		//for from, to := range maps {
+		//	fmt.Printf("'%s' -> '%s'\n", from, to)
+		//}
+		m := make(map[int][]string)
+		for org, n := range companies {
+			entry, ok := m[n]
 			if ok {
-				// to = replacer.Replace(to)
-				fmt.Printf("%d times: '%s' -> '%s'\n", n, org, to)
-				s += fmt.Sprintf("%s -> %s\n", org, to)
+				m[n] = append(entry, org)
+			} else {
+				m[n] = []string{org}
 			}
 		}
+		ks := []int{}
+		for k := range m {
+			ks = append(ks, k)
+		}
+		sort.Sort(sort.Reverse(sort.IntSlice(ks)))
+		s := ""
+		for _, n := range ks {
+			orgs := m[n]
+			for _, org := range orgs {
+				to, ok := maps[org]
+				if ok {
+					// to = replacer.Replace(to)
+					fmt.Printf("%d times: '%s' -> '%s'\n", n, org, to)
+					s += fmt.Sprintf("%s -> %s\n", org, to)
+				}
+			}
+		}
+		fmt.Printf("=============================>\n%s\n", s)
+	} else {
+		data, err := ioutil.ReadFile("mapping.json")
+		fatalOnError(err)
+		fatalOnError(json.Unmarshal(data, &maps))
+		fmt.Printf("Read cached mapping %d items\n", len(maps))
 	}
-	fmt.Printf("=============================>\n%s\n", s)
 	noWrite := os.Getenv("NO_WRITE") != ""
 	if noWrite {
 		return
+	}
+	if !cached {
+		jsonMap, err := js.MarshalIndent(maps, "", "  ")
+		fatalOnError(err)
+		fatalOnError(ioutil.WriteFile("mapping.json", jsonMap, 0644))
 	}
 	for ui, user := range *users {
 		if ui > 0 && ui%10000 == 0 {
@@ -486,10 +503,6 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			// (*users)[ui]["affiliation"] = affs
 		}
 	}
-	var js = json.Config{
-		EscapeHTML:  false,
-		SortMapKeys: gSortKeys,
-	}.Froze()
 	pretty, err := js.MarshalIndent(&users, "", "  ")
 	fatalOnError(err)
 	fatalOnError(ioutil.WriteFile("mapped.json", pretty, 0644))
