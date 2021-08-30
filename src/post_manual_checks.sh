@@ -1,8 +1,9 @@
 #!/bin/bash
 echo "sort configs"
 ./sort_configs.sh
-echo "company names mapping"
-./company_names_mapping.sh
+echo "company names mapping (currently manual)"
+#./company_names_mapping.sh
+#CACHED=1 TRUNC='' ./map_orgs.sh
 echo "lower unique"
 ./lower_unique.sh cncf-config/email-map
 echo "json fields"
