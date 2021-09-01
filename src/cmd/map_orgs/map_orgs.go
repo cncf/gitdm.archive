@@ -539,7 +539,10 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			break
 		}
 		line := strings.TrimSpace(line)
-		if line == "" || strings.HasPrefix(line, "# ") {
+		if line == "" {
+			continue
+		}
+		if strings.HasPrefix(line, "# ") {
 			newLines += line + "\n"
 			continue
 		}
