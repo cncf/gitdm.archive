@@ -314,6 +314,25 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 	return ""
 }
 
+func addHardcodedMaps(maps map[string]string) {
+	required := [][2]string{
+		{"Red Hat", "Red Hat Inc."},
+		{"Oracle", "Oracle America Inc."},
+		{"Kubermatic", "Kubermatic GmbH"},
+	}
+	for _, req := range required {
+		val, ok := maps[req[0]]
+		if !ok {
+			maps[req[0]] = req[1]
+			continue
+		}
+		if val != req[1] {
+			fmt.Printf("overwriting mapping for '%s' from '%s' to '%s'\n", req[0], val, req[1])
+			maps[req[0]] = req[1]
+		}
+	}
+}
+
 func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNames *allMappings) {
 	var re *regexp.Regexp
 	cached := os.Getenv("CACHED") != ""
@@ -438,6 +457,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		if miss > 0 {
 			fmt.Printf("Missing %d orgs\n", miss)
 		}
+		addHardcodedMaps(maps)
 		fmt.Printf("Actual mappings made: %d\n", len(maps))
 		//for from, to := range maps {
 		//	fmt.Printf("'%s' -> '%s'\n", from, to)
