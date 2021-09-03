@@ -509,16 +509,26 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			if err == nil {
 				fmt.Printf("Read previous mapping %d items\n", len(prevMaps))
 			}
-			inc := 0
+			inc, diff := 0, 0
 			for from, to := range prevMaps {
 				_, ok := maps[from]
 				if !ok {
-					maps[from] = to
+					newTo, newOk := maps[to]
+					if newOk {
+						maps[from] = newTo
+						diff++
+					} else {
+						maps[from] = to
+					}
 					inc++
 				}
 			}
 			if inc > 0 {
-				fmt.Printf("Included %d previous mappings not present in new mapping\n", inc)
+				if diff > 0 {
+					fmt.Printf("Included %d previous mappings not present in new mapping (%d of them map to something different that they were mapping to)\n", inc, diff)
+				} else {
+					fmt.Printf("Included %d previous mappings not present in new mapping\n", inc)
+				}
 			}
 		}
 		jsonMap, err := js.MarshalIndent(maps, "", "  ")
