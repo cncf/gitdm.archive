@@ -314,7 +314,7 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 	return ""
 }
 
-func addHardcodedMaps(maps map[string]string) {
+func addHardcodedMaps(maps map[string]string) (nH int) {
 	required := [][2]string{
 		{"Red Hat", "Red Hat Inc."},
 		{"Oracle", "Oracle America Inc."},
@@ -324,13 +324,15 @@ func addHardcodedMaps(maps map[string]string) {
 		val, ok := maps[req[0]]
 		if !ok {
 			maps[req[0]] = req[1]
+			nH++
 			continue
 		}
 		if val != req[1] {
-			fmt.Printf("overwriting mapping for '%s' from '%s' to '%s'\n", req[0], val, req[1])
+			fmt.Printf("Overwriting mapping for '%s' from '%s' to '%s'\n", req[0], val, req[1])
 			maps[req[0]] = req[1]
 		}
 	}
+	return
 }
 
 func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNames *allMappings) {
@@ -457,8 +459,8 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		if miss > 0 {
 			fmt.Printf("Missing %d orgs\n", miss)
 		}
-		addHardcodedMaps(maps)
-		fmt.Printf("Actual mappings made: %d\n", len(maps))
+		nH := addHardcodedMaps(maps)
+		fmt.Printf("Actual mappings made: %d (%d hardcoded, not necesarily used)\n", len(maps), nH)
 		//for from, to := range maps {
 		//	fmt.Printf("'%s' -> '%s'\n", from, to)
 		//}
@@ -500,6 +502,25 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		return
 	}
 	if !cached {
+		data, err := ioutil.ReadFile("mapping.json")
+		if err == nil {
+			prevMaps := make(map[string]string)
+			err = json.Unmarshal(data, &prevMaps)
+			if err == nil {
+				fmt.Printf("Read previous mapping %d items\n", len(prevMaps))
+			}
+			inc := 0
+			for from, to := range prevMaps {
+				_, ok := maps[from]
+				if !ok {
+					maps[from] = to
+					inc++
+				}
+			}
+			if inc > 0 {
+				fmt.Printf("Included %d previous mappings not present in new mapping\n", inc)
+			}
+		}
 		jsonMap, err := js.MarshalIndent(maps, "", "  ")
 		fatalOnError(err)
 		fatalOnError(ioutil.WriteFile("mapping.json", jsonMap, 0644))

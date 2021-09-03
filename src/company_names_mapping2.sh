@@ -1,4 +1,6 @@
 #!/bin/bash
+# MANUAL - run mapping manually
+# FULL - do not use cache
 if ( [ -z "${SH_DSN}" ] && [ ! -z "$1" ] )
 then
   export SH_DSN="`cat SH_DSN.${1}.secret`"
@@ -12,5 +14,10 @@ if [ ! -z "$MANUAL" ]
 then
   ./map_orgs
 else
-  CACHED=1 TRUNC='' NO_ACQS=1 ./map_orgs && mv config.txt cncf-config/email-map && mv mapped.json github_users.json
+  if [ -z "$FULL" ]
+  then
+    CACHED=1 TRUNC='' NO_ACQS=1 ./map_orgs && mv config.txt cncf-config/email-map && mv mapped.json github_users.json
+  else
+    CACHED='' TRUNC='' NO_ACQS=1 ./map_orgs && mv config.txt cncf-config/email-map && mv mapped.json github_users.json
+  fi
 fi

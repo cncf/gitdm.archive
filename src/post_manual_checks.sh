@@ -3,7 +3,7 @@ echo "sort configs"
 ./sort_configs.sh
 echo "company names mapping (currently manual)"
 #./company_names_mapping.sh
-# MANUAL=1 NO_ACQS=1 ./company_names_mapping2.sh
+# [MANUAL=1] [FULL=1] [NO_ACQS=1] ./company_names_mapping2.sh
 ./company_names_mapping2.sh
 echo "lower unique"
 ./lower_unique.sh cncf-config/email-map
