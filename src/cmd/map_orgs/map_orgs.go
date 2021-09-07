@@ -549,27 +549,29 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
 			continue
 		}
-		affsAry := strings.Split(affs, ", ")
-		replaces := [][2]string{}
+		affsAry := strings.Split(affs, ",")
+		lines := []string{}
+		changed := false
 		for _, aff := range affsAry {
-			ary := strings.Split(aff, " < ")
+			ary := strings.Split(strings.TrimSpace(aff), "<")
 			company := strings.TrimSpace(ary[0])
-			if company == "" {
-				continue
-			}
 			mappedCompany, mapped := maps[company]
-			if mapped {
-				replaces = append(replaces, [2]string{company, mappedCompany})
+			if !mapped {
+				mappedCompany = company
+			} else if !changed && mappedCompany != company {
+				changed = true
+			}
+			if len(ary) == 1 {
+				lines = append(lines, mappedCompany)
+			} else {
+				lines = append(lines, mappedCompany+" < "+strings.TrimSpace(ary[1]))
 			}
 		}
-		if len(replaces) > 0 {
-			for _, replace := range replaces {
-				affs = strings.Replace(affs, replace[0], replace[1], -1)
-			}
+		if changed {
 			// fmt.Printf("'%s' --> '%s'\n", user.Affiliation, affs)
 			// MODE
-			(*users)[ui].Affiliation = affs
-			// (*users)[ui]["affiliation"] = affs
+			(*users)[ui].Affiliation = strings.Join(lines, ", ")
+			// (*users)[ui]["affiliation"] = strings.Join(lines, ", ")
 		}
 	}
 	pretty, err := js.MarshalIndent(&users, "", "  ")
