@@ -291,11 +291,13 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 				pre, ok = gREMap[reS]
 				gREMapMtx.RUnlock()
 				if !ok {
+					// fmt.Printf("compile %s\n", reS)
 					gREMapMtx.Lock()
 					re, err = pcre.Compile(reS, 0)
 					gREMap[reS] = &re
 					gREMapMtx.Unlock()
 				} else {
+					// fmt.Printf("cached %s\n", reS)
 					re = *pre
 				}
 				if err != nil {
@@ -397,6 +399,15 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		EscapeHTML:  false,
 		SortMapKeys: gSortKeys,
 	}.Froze()
+	thrN := runtime.NumCPU()
+	if gUseDB {
+		thrN /= 4
+		if thrN < 1 {
+			thrN = 1
+		}
+	}
+	fmt.Printf("using %d threads\n", thrN)
+	runtime.GOMAXPROCS(thrN)
 	if !cached {
 		acqMap := make(map[*regexp.Regexp]string)
 		comMap := make(map[string][2]string)
@@ -469,15 +480,6 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		ci := 0
 		nComps := len(companies)
 		miss := 0
-		thrN := runtime.NumCPU()
-		if gUseDB {
-			thrN /= 4
-			if thrN < 1 {
-				thrN = 1
-			}
-		}
-		fmt.Printf("using %d threads\n", thrN)
-		runtime.GOMAXPROCS(thrN)
 		warns := make(map[string]struct{})
 		replacer := strings.NewReplacer(`"`, "", "<", "", ",", "")
 		for company := range companies {
@@ -586,6 +588,9 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		fatalOnError(ioutil.WriteFile("mapping.json", jsonMap, 0644))
 	}
 	fmt.Printf("Processing %d users\n", nUsr)
+	che := make(chan struct{})
+	mtx := &sync.Mutex{}
+	nThreads := 0
 	for ui, user := range *users {
 		if ui > 0 && ui%10000 == 0 {
 			fmt.Printf("Processing JSON %d/%d\n", ui, nUsr)
@@ -599,55 +604,66 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
 			continue
 		}
-		affsAry := strings.Split(affs, ",")
-		lines := []string{}
-		changed := false
-		for _, aff := range affsAry {
-			ary := strings.Split(strings.TrimSpace(aff), "<")
-			company := strings.TrimSpace(ary[0])
-			mappedCompany, mapped := maps[company]
-			if !mapped {
-				mappedCompany = company
-			} else if !changed && mappedCompany != company {
-				changed = true
+		go func(che chan struct{}, affs string) {
+			defer func() {
+				che <- struct{}{}
+			}()
+			affsAry := strings.Split(affs, ",")
+			lines := []string{}
+			changed := false
+			for _, aff := range affsAry {
+				ary := strings.Split(strings.TrimSpace(aff), "<")
+				company := strings.TrimSpace(ary[0])
+				mappedCompany, mapped := maps[company]
+				if !mapped {
+					mappedCompany = company
+				} else if !changed && mappedCompany != company {
+					changed = true
+				}
+				if len(ary) == 1 {
+					lines = append(lines, mappedCompany)
+				} else {
+					lines = append(lines, mappedCompany+" < "+strings.TrimSpace(ary[1]))
+				}
 			}
-			if len(ary) == 1 {
-				lines = append(lines, mappedCompany)
-			} else {
-				lines = append(lines, mappedCompany+" < "+strings.TrimSpace(ary[1]))
+			if changed {
+				// fmt.Printf("'%s' --> '%s'\n", user.Affiliation, affs)
+				// MODE
+				mtx.Lock()
+				(*users)[ui].Affiliation = strings.Join(lines, ", ")
+				// (*users)[ui]["affiliation"] = strings.Join(lines, ", ")
+				mtx.Unlock()
 			}
+		}(che, affs)
+		nThreads++
+		if nThreads == thrN {
+			_ = <-che
+			nThreads--
 		}
-		if changed {
-			// fmt.Printf("'%s' --> '%s'\n", user.Affiliation, affs)
-			// MODE
-			(*users)[ui].Affiliation = strings.Join(lines, ", ")
-			// (*users)[ui]["affiliation"] = strings.Join(lines, ", ")
-		}
+	}
+	for nThreads > 0 {
+		_ = <-che
+		nThreads--
 	}
 	pretty, err := js.MarshalIndent(&users, "", "  ")
 	fatalOnError(err)
-	fatalOnError(ioutil.WriteFile("mapped.json", pretty, 0644))
+	mappedFN := "mapped.json"
+	fatalOnError(ioutil.WriteFile(mappedFN, pretty, 0644))
+	fmt.Printf("written %s\n", mappedFN)
 	// config file
 	data, err := ioutil.ReadFile("cncf-config/email-map")
 	fatalOnError(err)
 	lines := strings.Split(string(data), "\n")
 	nLines := len(lines)
 	fmt.Printf("Processing %d config lines\n", nLines)
-	newLines := ""
-	for li, line := range lines {
-		if li > 0 && li%1000 == 0 {
-			fmt.Printf("Processing config %d/%d\n", li, nLines)
-		}
-		if trunc > 0 && li >= trunc {
-			break
-		}
-		line := strings.TrimSpace(line)
-		if line == "" {
-			continue
-		}
-		if strings.HasPrefix(line, "# ") {
-			newLines += line + "\n"
-			continue
+	ch := make(chan string)
+	nThreads = 0
+	linesAry := []string{}
+	processLine := func(ch chan string, line string) {
+		line = strings.TrimSpace(line)
+		if line == "" || strings.HasPrefix(line, "# ") {
+			ch <- line
+			return
 		}
 		ary := strings.Split(line, " ")
 		if len(ary) < 2 {
@@ -662,17 +678,43 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			if !mapped {
 				mappedCompany = company
 			}
-			newLines += email + " " + mappedCompany + "\n"
-		} else {
-			company := strings.TrimSpace(ary2[0])
-			date := strings.TrimSpace(ary2[1])
-			mappedCompany, mapped := maps[company]
-			if !mapped {
-				mappedCompany = company
+			ch <- email + " " + mappedCompany
+			return
+		}
+		company := strings.TrimSpace(ary2[0])
+		date := strings.TrimSpace(ary2[1])
+		mappedCompany, mapped := maps[company]
+		if !mapped {
+			mappedCompany = company
+		}
+		ch <- email + " " + mappedCompany + " < " + date
+	}
+	for li, line := range lines {
+		if li > 0 && li%10000 == 0 {
+			fmt.Printf("Processing config %d/%d\n", li, nLines)
+		}
+		if trunc > 0 && li >= trunc {
+			break
+		}
+		go processLine(ch, line)
+		nThreads++
+		if nThreads == thrN {
+			line := <-ch
+			nThreads--
+			if line != "" {
+				linesAry = append(linesAry, line)
 			}
-			newLines += email + " " + mappedCompany + " < " + date + "\n"
 		}
 	}
+	for nThreads > 0 {
+		line := <-ch
+		nThreads--
+		if line != "" {
+			linesAry = append(linesAry, line)
+		}
+	}
+	sort.Strings(linesAry)
+	newLines := strings.Join(linesAry, "\n")
 	fatalOnError(ioutil.WriteFile("config.txt", []byte(newLines), 0644))
 	/*
 		bf := bytes.NewBuffer([]byte{})
