@@ -27,6 +27,8 @@ var (
 	// gSortKeys = false
 	gSortKeys = true
 	gUseDB    = false
+	gREMap    = map[string]*pcre.Regexp{}
+	gREMapMtx = &sync.RWMutex{}
 )
 
 // gitHubUsers - list of GitHub user data from cncf/devstats.
@@ -277,18 +279,31 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 			}
 		} else {
 			f = func(ch chan string, mp [2]string) {
-				reS := strings.Replace(mp[0], "\\\\", "\\", -1)
-				re, err := pcre.Compile(reS, 0)
+				var (
+					err error
+					ok  bool
+					reS string
+					re  pcre.Regexp
+					pre *pcre.Regexp
+				)
+				reS = strings.Replace(mp[0], "\\\\", "\\", -1)
+				gREMapMtx.RLock()
+				pre, ok = gREMap[reS]
+				gREMapMtx.RUnlock()
+				if !ok {
+					gREMapMtx.Lock()
+					re, err = pcre.Compile(reS, 0)
+					gREMap[reS] = &re
+					gREMapMtx.Unlock()
+				} else {
+					re = *pre
+				}
 				if err != nil {
-					mtx.Lock()
-					_, ok := warns[reS]
-					if !ok {
-						warns[reS] = struct{}{}
-					}
-					mtx.Unlock()
-					if !ok {
-						fmt.Printf("error for '%s', '%s': %+v\n", lCompanyName, re, err)
-					}
+					fmt.Printf("error for '%s', '%s': %+v\n", lCompanyName, re, err)
+					ch <- ""
+					return
+				}
+				if pre == nil {
 					ch <- ""
 					return
 				}
@@ -296,8 +311,7 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 				if match {
 					to := mp[1]
 					ch <- to
-					// FIXME
-					fmt.Printf("'%s' matches? '%s' -> %v\n", lCompanyName, reS, match)
+					// fmt.Printf("'%s' matches '%s' -> %v\n", lCompanyName, reS, match)
 				} else {
 					ch <- ""
 				}
@@ -456,10 +470,13 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		nComps := len(companies)
 		miss := 0
 		thrN := runtime.NumCPU()
-		thrN /= 4
-		if thrN < 1 {
-			thrN = 1
+		if gUseDB {
+			thrN /= 4
+			if thrN < 1 {
+				thrN = 1
+			}
 		}
+		fmt.Printf("using %d threads\n", thrN)
 		runtime.GOMAXPROCS(thrN)
 		warns := make(map[string]struct{})
 		replacer := strings.NewReplacer(`"`, "", "<", "", ",", "")
@@ -669,7 +686,8 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 }
 
 func mapOrgs() {
-	gUseDB := os.Getenv("USE_DB") != ""
+	gUseDB = os.Getenv("USE_DB") != ""
+	fmt.Printf("using database: %v\n", gUseDB)
 	// Connect to MariaDB
 	var db *sql.DB
 	if gUseDB {
