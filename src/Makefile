@@ -1,5 +1,6 @@
 GO_BIN_FILES=cmd/check_spell/check_spell.go cmd/mtp/mtp.go cmd/check_shas/check_shas.go cmd/map_orgs/map_orgs.go
-GO_ENV=CGO_ENABLED=0
+# GO_ENV=CGO_ENABLED=0
+GO_ENV=CGO_ENABLED=1
 GO_BUILD=go build -ldflags '-s -w'
 GO_FMT=gofmt -s -w
 GO_LINT=golint -set_exit_status

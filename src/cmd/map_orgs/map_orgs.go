@@ -18,12 +18,15 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	json "github.com/json-iterator/go"
 	"gopkg.in/yaml.v2"
+
+	pcre "github.com/gijsbers/go-pcre"
 )
 
 var (
 	// MODE
 	// gSortKeys = false
 	gSortKeys = true
+	gUseDB    = false
 )
 
 // gitHubUsers - list of GitHub user data from cncf/devstats.
@@ -236,38 +239,68 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 	mtx := &sync.Mutex{}
 	mappedCompany, ok := cache[lCompanyName]
 	if !ok {
-		q := "select ? regexp ?"
-		f := func(ch chan string, mp [2]string) {
-			re := strings.Replace(mp[0], "\\\\", "\\", -1)
-			rows, err := db.Query(q, lCompanyName, re)
-			fatalOnError(err)
-			match := 0
-			for rows.Next() {
-				fatalOnError(rows.Scan(&match))
-				break
-			}
-			e := rows.Err()
-			if e != nil {
-				mtx.Lock()
-				_, ok := warns[re]
-				if !ok {
-					warns[re] = struct{}{}
+		var f func(chan string, [2]string)
+		if gUseDB {
+			q := "select ? regexp ?"
+			f = func(ch chan string, mp [2]string) {
+				re := strings.Replace(mp[0], "\\\\", "\\", -1)
+				rows, err := db.Query(q, lCompanyName, re)
+				fatalOnError(err)
+				match := 0
+				for rows.Next() {
+					fatalOnError(rows.Scan(&match))
+					break
 				}
-				mtx.Unlock()
-				if !ok {
-					fmt.Printf("%s error for '%s', '%s'\n", q, lCompanyName, re)
+				e := rows.Err()
+				if e != nil {
+					mtx.Lock()
+					_, ok := warns[re]
+					if !ok {
+						warns[re] = struct{}{}
+					}
+					mtx.Unlock()
+					if !ok {
+						fmt.Printf("%s error for '%s', '%s'\n", q, lCompanyName, re)
+					}
+					ch <- ""
+					return
 				}
-				ch <- ""
-				return
+				fatalOnError(rows.Err())
+				fatalOnError(rows.Close())
+				if match == 1 {
+					to := mp[1]
+					ch <- to
+					//fmt.Printf("'%s' matches? '%s' -> %d\n", lCompanyName, re, match)
+				} else {
+					ch <- ""
+				}
 			}
-			fatalOnError(rows.Err())
-			fatalOnError(rows.Close())
-			if match == 1 {
-				to := mp[1]
-				ch <- to
-				//fmt.Printf("'%s' matches? '%s' -> %d\n", lCompanyName, re, match)
-			} else {
-				ch <- ""
+		} else {
+			f = func(ch chan string, mp [2]string) {
+				reS := strings.Replace(mp[0], "\\\\", "\\", -1)
+				re, err := pcre.Compile(reS, 0)
+				if err != nil {
+					mtx.Lock()
+					_, ok := warns[reS]
+					if !ok {
+						warns[reS] = struct{}{}
+					}
+					mtx.Unlock()
+					if !ok {
+						fmt.Printf("error for '%s', '%s': %+v\n", lCompanyName, re, err)
+					}
+					ch <- ""
+					return
+				}
+				match := re.MatcherString(lCompanyName, 0).Matches()
+				if match {
+					to := mp[1]
+					ch <- to
+					// FIXME
+					fmt.Printf("'%s' matches? '%s' -> %v\n", lCompanyName, reS, match)
+				} else {
+					ch <- ""
+				}
 			}
 		}
 		ch := make(chan string)
@@ -636,15 +669,20 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 }
 
 func mapOrgs() {
+	gUseDB := os.Getenv("USE_DB") != ""
 	// Connect to MariaDB
-	dsn := getConnectString()
-	db, err := sql.Open("mysql", dsn)
-	fatalOnError(err)
-	db.SetMaxIdleConns(128)
-	db.SetMaxOpenConns(128)
-	dur, _ := time.ParseDuration("10m")
-	db.SetConnMaxLifetime(dur)
-	defer func() { fatalOnError(db.Close()) }()
+	var db *sql.DB
+	if gUseDB {
+		var err error
+		dsn := getConnectString()
+		db, err = sql.Open("mysql", dsn)
+		fatalOnError(err)
+		db.SetMaxIdleConns(128)
+		db.SetMaxOpenConns(128)
+		dur, _ := time.ParseDuration("10m")
+		db.SetConnMaxLifetime(dur)
+		defer func() { fatalOnError(db.Close()) }()
+	}
 
 	// Parse github_users.json
 	var users gitHubUsers
