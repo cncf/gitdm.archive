@@ -24,7 +24,13 @@ def rate_limit(clients, last_hint = -1, debug = 1)
     clients.each_with_index do |client, idx|
       thrs << Thread.new do
         puts "Checking rate limit for #{idx}" if debug >= 2
-        client.rate_limit
+        rate = nil
+        begin
+          rate = client.rate_limit
+        rescue
+          puts "idx #{idx} failed"
+        end
+        rate
       end
       while thrs.length >= n_thrs
         rls << thrs.first.value
@@ -33,7 +39,10 @@ def rate_limit(clients, last_hint = -1, debug = 1)
       end
     end
     thrs.each_with_index do |thr, idx|
-      rls << thr.value
+      rate = thr.value
+      if rate
+        rls << thr.value
+      end
       puts "Checked rate limit for #{idx}" if debug >= 2
     end
   end
