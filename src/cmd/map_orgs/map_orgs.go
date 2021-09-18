@@ -604,7 +604,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
 			continue
 		}
-		go func(che chan struct{}, affs string) {
+		go func(che chan struct{}, ui int, affs string) {
 			defer func() {
 				che <- struct{}{}
 			}()
@@ -634,7 +634,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 				// (*users)[ui]["affiliation"] = strings.Join(lines, ", ")
 				mtx.Unlock()
 			}
-		}(che, affs)
+		}(che, ui, affs)
 		nThreads++
 		if nThreads == thrN {
 			_ = <-che
