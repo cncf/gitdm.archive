@@ -1,10 +1,13 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"io/ioutil"
 	"os"
+	"runtime"
 	"sort"
+	"strconv"
 	"strings"
 
 	json "github.com/json-iterator/go"
@@ -137,78 +140,142 @@ func genAffFiles(jsonFile string) (err error) {
 		}
 		ldata[login] = affs2
 	}
+	// fmt.Printf("%+v\n%+v\n", ldata["lukaszgryglicki"], cdata["CNCF"]["lukaszgryglicki"])
+	lk := []string{}
+	for l := range ldata {
+		lk = append(lk, l)
+	}
+	sort.Strings(lk)
+	t := map[int]string{}
+	thrN := runtime.NumCPU()
+	fmt.Printf("using %d threads\n", thrN)
+	runtime.GOMAXPROCS(thrN)
+	ch := make(chan [2]string)
+	nThreads := 0
+	for i := range lk {
+		go func(ch chan [2]string, idx int) {
+			ret := [2]string{strconv.Itoa(idx), ""}
+			t := ""
+			defer func() {
+				ret[1] = t
+				ch <- ret
+			}()
+			login := lk[idx]
+			data := ldata[login]
+			m := map[string]string{}
+			for k, v := range data {
+				ary := strings.Split(v, ", ")
+				sort.Strings(ary)
+				v2 := strings.Join(ary, ", ")
+				m[v2] = k
+			}
+			mk := []string{}
+			for k := range m {
+				mk = append(mk, k)
+			}
+			sort.Strings(mk)
+			for _, emails := range mk {
+				affs := m[emails]
+				t += login + ": " + emails + "\n"
+				affsAry := strings.Split(affs, ", ")
+				for _, aff := range affsAry {
+					ary := strings.Split(aff, " < ")
+					t += "\t" + ary[1]
+					from := ary[0]
+					if from != "1900-01-01" {
+						t += " from " + from
+					}
+					to := ary[2]
+					if to != "2100-01-01" {
+						to += " until " + to
+					}
+					t += "\n"
+				}
+			}
+		}(ch, i)
+		nThreads++
+		if nThreads == thrN {
+			data := <-ch
+			nThreads--
+			idx, _ := strconv.Atoi(data[0])
+			t[idx] = data[1]
+		}
+	}
+	for nThreads > 0 {
+		data := <-ch
+		nThreads--
+		idx, _ := strconv.Atoi(data[0])
+		t[idx] = data[1]
+	}
+	hdr := "# This is the main developers affiliations file.\n"
+	hdr += "# If you see your name with asterisk '*' sign - it means that\n"
+	hdr += "# multiple affiliations were found for you with different email addresses.\n"
+	hdr += "# Please merge all of them into one then.\n"
+	hdr += "# Note that email addresses below are \"best effort\" and are out-of-date\n"
+	hdr += "# or inaccurate in many cases. Please do not rely on this email information\n"
+	hdr += "# without verification.\n"
+	var file *os.File
+	file, err = os.OpenFile("../developers_affiliations.txt", os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		return
+	}
+	writer := bufio.NewWriter(file)
+	_, _ = writer.WriteString(hdr)
+	for i := range lk {
+		_, _ = writer.WriteString(t[i])
+	}
+	_ = writer.Flush()
+	_ = file.Close()
+	ck := []string{}
+	for c := range cdata {
+		ck = append(ck, c)
+	}
+	sort.Strings(ck)
+	t = map[int]string{}
+	ch = make(chan [2]string)
+	nThreads = 0
+	for i := range ck {
+		go func(ch chan [2]string, idx int) {
+			ret := [2]string{strconv.Itoa(idx), ""}
+			t := ""
+			defer func() {
+				ret[1] = t
+				ch <- ret
+			}()
+			company := ck[idx]
+			data := cdata[company]
+			fmt.Printf("%s: %+v\n", company, data)
+		}(ch, i)
+		nThreads++
+		if nThreads == thrN {
+			data := <-ch
+			nThreads--
+			idx, _ := strconv.Atoi(data[0])
+			t[idx] = data[1]
+		}
+	}
+	for nThreads > 0 {
+		data := <-ch
+		nThreads--
+		idx, _ := strconv.Atoi(data[0])
+		t[idx] = data[1]
+	}
+	hdr = "# This file is derived from developers_affiliations.txt and so should not be edited directly.\n"
+	hdr += "# If you see an error, please update developers_affiliations.txt and this file will be fixed\n"
+	hdr += "# when regenerated.\n"
+	file, err = os.OpenFile("../company_developers.txt", os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		return
+	}
+	writer = bufio.NewWriter(file)
+	_, _ = writer.WriteString(hdr)
+	for i := range lk {
+		_, _ = writer.WriteString(t[i])
+	}
+	_ = writer.Flush()
+	_ = file.Close()
 	return
 	/*
-		  ldata = {}
-		  cdata = {}
-		  logins.each do |login, rows|
-		    affs = {}
-		    rows.each do |row|
-		      a = row['affiliation']
-		      e = row['email']
-		      affs[a] = [] unless affs.key?(a)
-		      affs[a] << e
-		    end
-		    affs2 = {}
-		    affs.each do |daff, emails|
-		      aff = sort_and_add_dates(daff)
-		      semails = emails.join(', ')
-		      affs2[aff] = semails
-		    end
-		    affs2.each do |aff, emails|
-		      arr = aff.split ','
-		      arr.each do |d|
-		        d = d.strip
-		        arr2 = d.split '<'
-		        l = arr2.length
-		        binding.pry if l != 3
-		        pdt = arr2[0].strip
-		        c = arr2[1].strip
-		        dt = arr2[2].strip
-		        cdata[c] = {} unless cdata.key?(c)
-		        cdata[c][login] = {} unless cdata[c].key?(login)
-		        cdata[c][login][emails] = [] unless cdata[c][login].key?(emails)
-		        cdata[c][login][emails] << [pdt, c, dt]
-		      end
-		    end
-		    ldata[login] = affs2
-		  end
-
-		  puts "generating developer affiliations file..."
-		  t = ''
-		  ldata.keys.sort.each do |login|
-		    data = ldata[login]
-		    m = {}
-		    data.each do |k, v|
-		      v2 = v.split(', ').sort.join(', ')
-		      m[v2] = k
-		    end
-		    m.keys.sort.each do |emails|
-		      affs = m[emails]
-		      t += login + ': ' + emails + "\n"
-		      affs.split(', ').each do |aff|
-		        ary = aff.split(' < ')
-		        binding.pry if ary.length != 3
-		        t += "\t" + ary[1]
-		        from = ary[0]
-		        t += ' from ' + from if from != '1900-01-01'
-		        to = ary[2]
-		        t += ' until ' + to if to != '2100-01-01'
-		        t += "\n"
-		      end
-		    end
-		  end
-		  hdr = "# This is the main developers affiliations file.\n"
-		  hdr += "# If you see your name with asterisk '*' sign - it means that\n"
-		  hdr += "# multiple affiliations were found for you with different email addresses.\n"
-		  hdr += "# Please merge all of them into one then.\n"
-		  hdr += "# Note that email addresses below are \"best effort\" and are out-of-date\n"
-		  hdr += "# or inaccurate in many cases. Please do not rely on this email information\n"
-		  hdr += "# without verification.\n"
-		  binding.pry
-		  File.write '../developers_affiliations.txt', hdr + t
-
-		  t = ''
 		  cdata.keys.sort.each do |company|
 		    t += company + ":\n"
 		    data = cdata[company]
@@ -239,9 +306,6 @@ func genAffFiles(jsonFile string) (err error) {
 		      end
 		    end
 		  end
-		  hdr =  "# This file is derived from developers_affiliations.txt and so should not be edited directly.\n"
-		  hdr += "# If you see an error, please update developers_affiliations.txt and this file will be fixed\n"
-		  hdr += "# when regenerated.\n"
 		  File.write '../company_developers.txt', hdr + t
 		end
 	*/
