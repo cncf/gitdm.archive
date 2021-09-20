@@ -66,6 +66,7 @@ func genAffFiles(jsonFile string) (err error) {
 		data  []byte
 		users gitHubUsers
 	)
+	fmt.Printf("reading %s\n", jsonFile)
 	data, err = ioutil.ReadFile(jsonFile)
 	if err != nil {
 		return
@@ -93,6 +94,7 @@ func genAffFiles(jsonFile string) (err error) {
 		data = append(data, row)
 		logins[l] = data
 	}
+	fmt.Printf("generated logins data\n")
 	cdata := map[string]map[string]map[string][][3]string{}
 	ldata := map[string]map[string]string{}
 	for login, rows := range logins {
@@ -141,6 +143,7 @@ func genAffFiles(jsonFile string) (err error) {
 		ldata[login] = affs2
 	}
 	// fmt.Printf("%+v\n%+v\n", ldata["lukaszgryglicki"], cdata["CNCF"]["lukaszgryglicki"])
+	fmt.Printf("generated affiliations mappings\n")
 	lk := []string{}
 	for l := range ldata {
 		lk = append(lk, l)
@@ -187,7 +190,7 @@ func genAffFiles(jsonFile string) (err error) {
 					}
 					to := ary[2]
 					if to != "2100-01-01" {
-						to += " until " + to
+						t += " until " + to
 					}
 					t += "\n"
 				}
@@ -226,6 +229,7 @@ func genAffFiles(jsonFile string) (err error) {
 	}
 	_ = writer.Flush()
 	_ = file.Close()
+	fmt.Printf("saved developer affiliations file\n")
 	ck := []string{}
 	for c := range cdata {
 		ck = append(ck, c)
@@ -243,8 +247,52 @@ func genAffFiles(jsonFile string) (err error) {
 				ch <- ret
 			}()
 			company := ck[idx]
+			t += company + ":\n"
 			data := cdata[company]
-			fmt.Printf("%s: %+v\n", company, data)
+			// fmt.Printf("%s: %+v\n", company, data)
+			dk := []string{}
+			for d := range data {
+				dk = append(dk, d)
+			}
+			sort.Strings(dk)
+			for _, login := range dk {
+				emd := data[login]
+				m := map[string][][3]string{}
+				for k, v := range emd {
+					ary := strings.Split(k, ", ")
+					sort.Strings(ary)
+					k2 := strings.Join(ary, ", ")
+					m[k2] = v
+				}
+				mk := []string{}
+				for k := range m {
+					mk = append(mk, k)
+				}
+				sort.Strings(mk)
+				for _, emails := range mk {
+					affs := m[emails]
+					t += "\t" + login + ": " + emails
+					l := len(affs)
+					for i, aff := range affs {
+						s := ""
+						from := aff[0]
+						to := aff[2]
+						if from != "1900-01-01" {
+							s += " from " + from
+						}
+						if to != "2100-01-01" {
+							s += " until " + to
+						}
+						if s != "" { // xxx
+							t += s
+							if i < l-1 {
+								t += "," // xxx
+							}
+						}
+					}
+					t += "\n"
+				}
+			}
 		}(ch, i)
 		nThreads++
 		if nThreads == thrN {
@@ -274,41 +322,8 @@ func genAffFiles(jsonFile string) (err error) {
 	}
 	_ = writer.Flush()
 	_ = file.Close()
+	fmt.Printf("saved company developers file\n")
 	return
-	/*
-		  cdata.keys.sort.each do |company|
-		    t += company + ":\n"
-		    data = cdata[company]
-		    data.keys.sort.each do |login|
-		      emd = data[login]
-		      m = {}
-		      emd.each do |k, v|
-		        k2 = k.split(', ').sort.join(', ')
-		        m[k2] = v
-		      end
-		      m.keys.sort.each do |emails|
-		        affs = m[emails]
-		        t += "\t" + login + ': ' + emails
-		        l = affs.length
-		        affs.each_with_index do |aff, i|
-		          s = ''
-		          from = aff[0]
-		          to = aff[2]
-		          binding.pry if aff[1] != company
-		          s += ' from ' + from if from != '1900-01-01'
-		          s += ' until ' + to if to != '2100-01-01'
-		          if s != ''
-		            t += s
-		            t += ',' if i < l - 1
-		          end
-		        end
-		        t += "\n"
-		      end
-		    end
-		  end
-		  File.write '../company_developers.txt', hdr + t
-		end
-	*/
 }
 
 func main() {
