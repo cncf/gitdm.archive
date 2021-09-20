@@ -4,34 +4,35 @@ require 'pry'
 require './comment'
 require './email_code'
 
-def sort_and_andd_dates(a)
-  affs = a.split(', ')
+def sort_and_add_dates(a)
+  affs = a.split(',')
   l = affs.length
   sa = []
   affs.each do |aff|
-    ary = aff.split(' < ')
+    aff = aff.strip
+    ary = aff.split('<')
     if ary.length == 1
       dt = '2100-01-01'
     else
-      dt = ary[1]
+      dt = ary[1].strip
     end
-    c = ary[0]
+    c = ary[0].strip
     sa << dt + " < " + c
   end
   sa = sa.sort
   s = ''
   sa.each_with_index do |aff, i|
-    ary = aff.split(' < ')
+    ary = aff.split('<')
     binding.pry if ary.length != 2
     if i == 0
       dt = '1900-01-01'
     else
       prev = sa[i-1]
-      ary2 = prev.split(' < ')
+      ary2 = prev.split('<')
       binding.pry if ary2.length != 2
-      dt = ary2[0]
+      dt = ary2[0].strip
     end
-    s += dt + ' < ' + ary[1] + ' < ' + ary[0]
+    s += dt + ' < ' + ary[1].strip + ' < ' + ary[0].strip
     if i < l - 1
       s += ', '
     end
@@ -42,6 +43,7 @@ end
 
 def gen_aff_files(json_file)
   # Parse JSON
+  puts "getting logins with affiliations..."
   data = JSON.parse File.read json_file
   logins = {}
   data.each do |row|
@@ -53,6 +55,7 @@ def gen_aff_files(json_file)
     logins[l] << h
   end
 
+  puts "processing affiliations data..."
   ldata = {}
   cdata = {}
   logins.each do |login, rows|
@@ -65,19 +68,20 @@ def gen_aff_files(json_file)
     end
     affs2 = {}
     affs.each do |daff, emails|
-      aff = sort_and_andd_dates(daff)
+      aff = sort_and_add_dates(daff)
       semails = emails.join(', ')
       affs2[aff] = semails
     end
     affs2.each do |aff, emails|
-      arr = aff.split ', '
+      arr = aff.split ','
       arr.each do |d|
-        arr2 = d.split ' < '
+        d = d.strip
+        arr2 = d.split '<'
         l = arr2.length
         binding.pry if l != 3
-        pdt = arr2[0]
-        c = arr2[1]
-        dt = arr2[2]
+        pdt = arr2[0].strip
+        c = arr2[1].strip
+        dt = arr2[2].strip
         cdata[c] = {} unless cdata.key?(c)
         cdata[c][login] = {} unless cdata[c].key?(login)
         cdata[c][login][emails] = [] unless cdata[c][login].key?(emails)
@@ -87,6 +91,7 @@ def gen_aff_files(json_file)
     ldata[login] = affs2
   end
 
+  puts "generating developer affiliations file..."
   t = ''
   ldata.keys.sort.each do |login|
     data = ldata[login]
@@ -115,8 +120,9 @@ def gen_aff_files(json_file)
   hdr += "# multiple affiliations were found for you with different email addresses.\n"
   hdr += "# Please merge all of them into one then.\n"
   hdr += "# Note that email addresses below are \"best effort\" and are out-of-date\n"
-  hdr += "# or inaccurate in many cases.  Please do not rely on this email information\n"
+  hdr += "# or inaccurate in many cases. Please do not rely on this email information\n"
   hdr += "# without verification.\n"
+  binding.pry
   File.write '../developers_affiliations.txt', hdr + t
 
   t = ''
@@ -157,7 +163,7 @@ def gen_aff_files(json_file)
 end
 
 if ARGV.size < 1
-  puts "Missing argument: CSV_file (all_affs.csv)"
+  puts "Missing argument: json_file (github_users.json)"
   exit(1)
 end
 
