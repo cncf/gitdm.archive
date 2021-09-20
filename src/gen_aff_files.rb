@@ -122,7 +122,6 @@ def gen_aff_files(json_file)
   hdr += "# Note that email addresses below are \"best effort\" and are out-of-date\n"
   hdr += "# or inaccurate in many cases. Please do not rely on this email information\n"
   hdr += "# without verification.\n"
-  binding.pry
   File.write '../developers_affiliations.txt', hdr + t
 
   t = ''

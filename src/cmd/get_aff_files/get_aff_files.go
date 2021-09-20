@@ -61,6 +61,21 @@ func sortAndAddDates(a string) string {
 	return s
 }
 
+func correctWhitespace(a string) string {
+	ary := strings.Split(a, ",")
+	items := []string{}
+	for _, item := range ary {
+		item := strings.TrimSpace(item)
+		ary2 := strings.Split(item, "<")
+		if len(ary2) == 1 {
+			items = append(items, item)
+			continue
+		}
+		items = append(items, strings.TrimSpace(ary2[0])+" < "+strings.TrimSpace(ary2[1]))
+	}
+	return strings.Join(items, ", ")
+}
+
 func genAffFiles(jsonFile string) (err error) {
 	var (
 		data  []byte
@@ -100,7 +115,7 @@ func genAffFiles(jsonFile string) (err error) {
 	for login, rows := range logins {
 		affs := map[string][]string{}
 		for _, row := range rows {
-			a := *row.Affiliation
+			a := correctWhitespace(*row.Affiliation)
 			e := row.Email
 			data, ok := affs[a]
 			if !ok {
@@ -143,6 +158,7 @@ func genAffFiles(jsonFile string) (err error) {
 		ldata[login] = affs2
 	}
 	// fmt.Printf("%+v\n%+v\n", ldata["lukaszgryglicki"], cdata["CNCF"]["lukaszgryglicki"])
+	// fmt.Printf("ldata: %+v\ncdata: %+v\n", ldata, cdata)
 	fmt.Printf("generated affiliations mappings\n")
 	lk := []string{}
 	for l := range ldata {
@@ -218,7 +234,7 @@ func genAffFiles(jsonFile string) (err error) {
 	hdr += "# or inaccurate in many cases. Please do not rely on this email information\n"
 	hdr += "# without verification.\n"
 	var file *os.File
-	file, err = os.OpenFile("../developers_affiliations.txt", os.O_CREATE|os.O_WRONLY, 0644)
+	file, err = os.OpenFile("../developers_affiliations.txt", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
 	if err != nil {
 		return
 	}
@@ -244,6 +260,7 @@ func genAffFiles(jsonFile string) (err error) {
 			t := ""
 			defer func() {
 				ret[1] = t
+				// fmt.Printf("%+v\n", ret)
 				ch <- ret
 			}()
 			company := ck[idx]
@@ -257,6 +274,7 @@ func genAffFiles(jsonFile string) (err error) {
 			sort.Strings(dk)
 			for _, login := range dk {
 				emd := data[login]
+				// fmt.Printf("%s: %s: %+v\n", company, login, emd)
 				m := map[string][][3]string{}
 				for k, v := range emd {
 					ary := strings.Split(k, ", ")
@@ -271,6 +289,7 @@ func genAffFiles(jsonFile string) (err error) {
 				sort.Strings(mk)
 				for _, emails := range mk {
 					affs := m[emails]
+					// fmt.Printf("%s: %s: %s: %+v\n", company, login, emails, affs)
 					t += "\t" + login + ": " + emails
 					l := len(affs)
 					for i, aff := range affs {
@@ -283,10 +302,10 @@ func genAffFiles(jsonFile string) (err error) {
 						if to != "2100-01-01" {
 							s += " until " + to
 						}
-						if s != "" { // xxx
+						if s != "" {
 							t += s
 							if i < l-1 {
-								t += "," // xxx
+								t += ","
 							}
 						}
 					}
@@ -311,13 +330,13 @@ func genAffFiles(jsonFile string) (err error) {
 	hdr = "# This file is derived from developers_affiliations.txt and so should not be edited directly.\n"
 	hdr += "# If you see an error, please update developers_affiliations.txt and this file will be fixed\n"
 	hdr += "# when regenerated.\n"
-	file, err = os.OpenFile("../company_developers.txt", os.O_CREATE|os.O_WRONLY, 0644)
+	file, err = os.OpenFile("../company_developers.txt", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644)
 	if err != nil {
 		return
 	}
 	writer = bufio.NewWriter(file)
 	_, _ = writer.WriteString(hdr)
-	for i := range lk {
+	for i := range ck {
 		_, _ = writer.WriteString(t[i])
 	}
 	_ = writer.Flush()
