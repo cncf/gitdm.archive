@@ -390,6 +390,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 	maps := make(map[string]string)
 	nUsr := len(*users)
 	trunc := 0
+	replacer := strings.NewReplacer(`"`, "", "<", "", ",", "")
 	if os.Getenv("TRUNC") != "" {
 		var e error
 		trunc, e = strconv.Atoi(os.Getenv("TRUNC"))
@@ -459,10 +460,11 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			if affs == "NotFound" || affs == "(Unknown)" || affs == "?" || affs == "-" || affs == "" {
 				continue
 			}
-			affsAry := strings.Split(affs, ", ")
+			affsAry := strings.Split(affs, ",")
 			for _, aff := range affsAry {
-				ary := strings.Split(aff, " < ")
-				company := strings.TrimSpace(ary[0])
+				aff = strings.TrimSpace(aff)
+				ary := strings.Split(aff, "<")
+				company := strings.Replace(strings.TrimSpace(ary[0]), `"`, "", -1)
 				if company == "" {
 					continue
 				}
@@ -481,7 +483,6 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		nComps := len(companies)
 		miss := 0
 		warns := make(map[string]struct{})
-		replacer := strings.NewReplacer(`"`, "", "<", "", ",", "")
 		for company := range companies {
 			ci++
 			if company == "" {
@@ -490,6 +491,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			if ci > 0 && ci%200 == 0 {
 				fmt.Printf("Processed %d/%d companies\n", ci, nComps)
 			}
+			company := replacer.Replace(company)
 			lCompany := strings.ToLower(company)
 			mappedName := mapOrganization(db, company, lCompany, mapOrgNames, cache, missingOrgs, warns, thrN)
 			if mappedName == "" {
@@ -613,11 +615,18 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			changed := false
 			for _, aff := range affsAry {
 				ary := strings.Split(strings.TrimSpace(aff), "<")
-				company := strings.TrimSpace(ary[0])
+				rawCompany := strings.TrimSpace(ary[0])
+				company := replacer.Replace(rawCompany)
 				mappedCompany, mapped := maps[company]
+				if mapped {
+					mappedCompany = replacer.Replace(mappedCompany)
+				}
 				if !mapped {
 					mappedCompany = company
-				} else if !changed && mappedCompany != company {
+					if !changed && company != rawCompany {
+						changed = true
+					}
+				} else if !changed && (mappedCompany != company || mappedCompany != rawCompany || company != rawCompany) {
 					changed = true
 				}
 				if len(ary) == 1 {
