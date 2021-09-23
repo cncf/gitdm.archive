@@ -660,7 +660,11 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 	fatalOnError(ioutil.WriteFile(mappedFN, pretty, 0644))
 	fmt.Printf("written %s\n", mappedFN)
 	// config file
-	data, err := ioutil.ReadFile("cncf-config/email-map")
+	configFile := "cncf-config/email-map"
+	if os.Getenv("CONFIG_FILE") != "" {
+		configFile = os.Getenv("CONFIG_FILE")
+	}
+	data, err := ioutil.ReadFile(configFile)
 	fatalOnError(err)
 	lines := strings.Split(string(data), "\n")
 	nLines := len(lines)

@@ -2,6 +2,8 @@
 # USE_DB - use MySQL/MariaDB instead of PCRE library
 # MANUAL - run mapping manually
 # FULL - do not use cache
+# CONFIG_FILE=file.txt
+# SH_LOCAL_JSON_PATH=in.json
 if [ ! -z "${USE_DB}" ]
 then
   if ( [ -z "${SH_DSN}" ] && [ ! -z "$1" ] )
