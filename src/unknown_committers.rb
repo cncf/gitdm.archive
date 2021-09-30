@@ -195,7 +195,12 @@ CSV.foreach(ARGV[0], headers: true) do |row|
     rescue Octokit::TooManyRequests => err
       hint, td = rate_limit(gcs)
       puts "Too many GitHub requests for #{ghid}, sleeping for #{td} seconds"
-      sleep td
+      if td > 0
+        sleep td
+      else
+        puts "sleep request for <= 0 seconds (#{td}), sleeping 10s instead"
+        sleep 10
+      end
       retry
     rescue Zlib::BufError, Zlib::DataError, Faraday::ConnectionFailed => err
       puts "Retryable error #{err} for #{ghid}, sleeping 10 seconds"
