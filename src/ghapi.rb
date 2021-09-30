@@ -28,7 +28,8 @@ def rate_limit(clients, last_hint = -1, debug = 1)
         begin
           rate = client.rate_limit
         rescue
-          puts "idx #{idx} failed"
+          puts "idx #{idx} failed, either remove it #{client} via SKIP_TOKENS='#{idx}' or remove it from /etc/github/oauth(s)"
+          exit 1
         end
         rate
       end
