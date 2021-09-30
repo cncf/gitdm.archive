@@ -5,9 +5,9 @@
 - Shell into reporting pod: `../devstats-k8s-lf/util/pod_shell.sh devstats-reports` or `k exec -itn devstats-prod devstats-reports -- bash` from a different namespace (like `devstats-test`).
 - Generate data for all time for a given project(s): `TASKS='unknown_contributors' ONLY='keylime tuf' ./affs/all_tasks.sh`.
 - Generate data for recent 3 months for all projects: `TASKS='unknown_contributors' ONLY='allprj' ./affs/all_tasks_recent.sh '3 months'`.
-- Delete reporting pod: `helm delete devstats-prod-reports`.
+- Delete reporting pod: `helm delete devstats-prod-reports`. User devstats URL for `prod` and `teststats` for `test`.
 - Go to `cncf/gitdm:src`: `wget https://devstats.cncf.io/backups/keylime_unknown_contributors.csv`
-- Go to `cncf/gitdm:src`: `wget https://devstats.cncf.io/backups/allprj_unknown_contributors_recent.csv`
+- Go to `cncf/gitdm:src`: `wget https://teststats.cncf.io/backups/allprj_unknown_contributors_recent.csv`
 - Check for forbidden SHAs: `./check_shas keylime_unknown_contributors.csv`.
 - Check for forbidden SHAs: `./check_shas allprj_unknown_contributors_recent.csv`.
 - Generate a task file: `PG_PASS=... ./unknown_committers.rb keylime_unknown_contributors.csv; mv task.csv keylime_task.csv`.
