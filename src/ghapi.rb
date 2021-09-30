@@ -59,7 +59,10 @@ def rate_limit(clients, last_hint = -1, debug = 1)
   resets_ats = rls.map { |rl| rl.resets_at.strftime("%H:%M:%S") }
   resets_ins = rls.map { |rl| "#{rl.resets_in}s" }
   rem = (rls[hint].resets_at - Time.now).to_i + 1
-  puts "Hint: #{hint}, remainings=#{remainings}, resets_ats=#{resets_ats}, resets_ins=#{resets_ins}" if debug >= 1
+  puts "Hint: #{hint}"
+  remainings.each_with_index do |rem, idx|
+    puts "#{idx}) remaining #{rem}, resets_at #{resets_ats[idx]}, resets_ins #{resets_ins[idx]}" if debug >= 1
+  end
   puts "Suggested client nr #{hint}, remaining API points: #{remainings[hint]}, resets at #{resets_ats[hint]}, seconds till reset: #{rem}" if debug >= 0
   [hint, rem, remainings[hint]]
 end
@@ -141,6 +144,15 @@ def octokit_init()
     client_secrets = ary
   end
 
+  skipped = ENV['SKIP_TOKENS']
+  if !skipped.nil? && skipped != ''
+    ski = skipped.strip
+    idxa = skipped.split(',').map(&:to_i)
+    ary = []
+    tokens.each_with_index { |token, idx| ary << token unless idxa.include?(idx) }
+    tokens = ary
+  end
+
   puts "Connecting #{tokens.length} clients."
   # Process tripples, create N threads to handle client creations
   clients = []
@@ -148,7 +160,7 @@ def octokit_init()
   n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   tokens.each_with_index do |token, idx|
     thrs << Thread.new do
-      puts "Connecting client nr #{idx}"
+      puts "Connecting client nr #{idx} #{token}"
       client = Octokit::Client.new(
         access_token: token,
         client_id: client_ids[idx],
