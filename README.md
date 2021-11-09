@@ -2,9 +2,9 @@
 
 This is the Cloud Native Computing Foundation's fork of Jon Corbet and Greg KH's [gitdm](https://lwn.net/Articles/290957/) tool for calculating contributions based on developers and their companies. Companies and developers can check if they are correctly attributed at the following links:
 
-Company Developers list: [co1], [co2], [co3], [co4], [co5].
+Company Developers list: [co1], [co2], [co3], [co4], [co5], [co6], [co7], [co8].
 
-Developers affiliations list: [dev1], [dev2], [dev3], [dev4].
+Developers affiliations list: [dev1], [dev2], [dev3], [dev4], [dev5].
 
 New affiliations are imported into DevStats about 1-2 times/month.
 
@@ -14,11 +14,11 @@ This repository is used as a source of affiliations for all [DevStats projects](
 
 # Adding/Updating affiliation
 
-If you find any errors or missing affiliations in those lists, please submit a pull request with edits to developers affiliations files: [dev1], [dev2], [dev3], [dev4], ... .
+If you find any errors or missing affiliations in those lists, please submit a pull request with edits to developers affiliations files: [dev1], [dev2], [dev3], [dev4], [dev5], ... .
 
-Only the Developers affiliations list [dev1], [dev2], [dev3], [dev4], ... should be edited manually.
+Only the Developers affiliations list [dev1], [dev2], [dev3], [dev4], [dev5], ... should be edited manually.
 
-Company Developers lists [co1], [co2], [co3], [co4], [co5] are computed derivatives of the first list.
+Company Developers lists [co1], [co2], [co3], [co4], [co5], [co6], [co7], [co8] are computed derivatives of the first list.
 
 Other files used for affiliations are the [email map file](https://github.com/cncf/gitdm/blob/master/src/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/src/github_users.json) file.
 
@@ -374,8 +374,12 @@ Please follow the instructions from [ADD_PROJECT.md](https://github.com/cncf/git
 [dev2]: https://github.com/cncf/gitdm/blob/master/developers_affiliations2.txt
 [dev3]: https://github.com/cncf/gitdm/blob/master/developers_affiliations3.txt
 [dev4]: https://github.com/cncf/gitdm/blob/master/developers_affiliations4.txt
+[dev5]: https://github.com/cncf/gitdm/blob/master/developers_affiliations5.txt
 [co1]: https://github.com/cncf/gitdm/blob/master/company_developers1.txt
 [co2]: https://github.com/cncf/gitdm/blob/master/company_developers2.txt 
 [co3]: https://github.com/cncf/gitdm/blob/master/company_developers3.txt 
 [co4]: https://github.com/cncf/gitdm/blob/master/company_developers4.txt
 [co5]: https://github.com/cncf/gitdm/blob/master/company_developers5.txt
+[co6]: https://github.com/cncf/gitdm/blob/master/company_developers6.txt
+[co7]: https://github.com/cncf/gitdm/blob/master/company_developers7.txt
+[co8]: https://github.com/cncf/gitdm/blob/master/company_developers8.txt
