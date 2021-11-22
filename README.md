@@ -22,7 +22,7 @@ Company Developers lists [co1], [co2], [co3], [co4], [co5], [co6], [co7], [co8] 
 
 Other files used for affiliations are the [email map file](https://github.com/cncf/gitdm/blob/master/src/cncf-config/email-map) and [github users](https://github.com/cncf/gitdm/blob/master/src/github_users.json) file.
 
-Please note that `cncf/gitdm` affiliations are imported into DevStats (`cncf/devstats`) weekly.
+Please note that `cncf/gitdm` affiliations are imported into DevStats (`cncf/devstats`) once per 4 weeks.
 
 # Removing affiliations
 
