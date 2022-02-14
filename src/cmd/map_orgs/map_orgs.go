@@ -369,6 +369,7 @@ func addHardcodedMaps(maps map[string]string) (nH int) {
 		{"Oracle", "Oracle America Inc."},
 		{"Kubermatic", "Kubermatic GmbH"},
 		{"DaoCloud", "DaoCloud Network Technology Co. Ltd."},
+		{"Atlassian Inc", "Atlassian"},
 	}
 	for _, req := range required {
 		val, ok := maps[req[0]]
