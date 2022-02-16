@@ -8,6 +8,7 @@ if [ -z "${BRANCH}" ]
 then
   export BRANCH='HEAD^'
 fi
+git pull
 git diff "${BRANCH}" ../*.txt > input.diff
 vim input.diff
 ./update_from_pr_diff.rb ./input.diff github_users.json cncf-config/email-map || exit 2
