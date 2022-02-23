@@ -17,4 +17,5 @@ if [ -z "$PARTIAL" ]
 then
   FULL=1 ./post_manual_checks.sh && ./post_manual_updates.sh
   git diff
+  git status
 fi
