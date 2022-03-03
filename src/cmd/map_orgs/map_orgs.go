@@ -566,6 +566,8 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			if err == nil {
 				fmt.Printf("Read previous mapping %d items\n", len(prevMaps))
 			}
+      fmt.printf("maps = %+v\n", maps)
+      fmt.printf("prevMaps = %+v\n", prevMaps)
 			inc, diff := 0, 0
 			for from, to := range prevMaps {
 				_, ok := maps[from]
