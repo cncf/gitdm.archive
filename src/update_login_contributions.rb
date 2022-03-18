@@ -21,14 +21,14 @@ def update_json(json_file, csv_file)
     ncnt = cnts[login]
     next if ncnt <= cnt
     puts "update #{i} #{login} #{cnt} -> #{ncnt}" if dbg
+    row['commits'] = ncnt
     updates += 1
   end
   if updates > 0
     data = data.sort_by { |u| [-u['commits'], u['login'], u['email']] }
     pretty = JSON.pretty_generate data
+    File.write json_file, pretty
     puts "updated #{updates} entries"
-    binding.pry
-    # File.write json_file, pretty
   else
     puts "everything up to date"
   end
