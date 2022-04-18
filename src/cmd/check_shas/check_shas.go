@@ -181,16 +181,24 @@ func checkSHAs(files []string) error {
 	if len(keys) > 0 {
 		fmt.Printf("Found %d tokens that need to be removed:\n===========================================\n", len(keys))
 	}
+	fixFiles := make(map[string]struct{})
 	for _, k := range keys {
 		data := tMap[k]
 		fmt.Printf("%s: ", k)
 		for _, row := range data {
 			fmt.Printf("%s:%d:%d ", files[row[0]], row[1]+1, row[2]+1)
+			fixFiles[files[row[0]]] = struct{}{}
 		}
 		fmt.Printf("\n\n")
 	}
 	if len(keys) > 0 {
+		fix := []string{}
+		for f := range fixFiles {
+			fix = append(fix, `'`+f+`'`)
+		}
 		fmt.Printf("===========================================\n")
+		fmt.Printf("Keys VIM search pattern: '%s'\n", strings.Join(keys, `\|`))
+    fmt.Printf("VIM command: vim %s\n", strings.Join(fix, " "))
 	} else {
 		fmt.Printf("Nothing to remove, all data is OK\n")
 	}

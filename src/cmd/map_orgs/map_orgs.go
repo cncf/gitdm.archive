@@ -237,7 +237,7 @@ func mapCompanyName(comMap map[string][2]string, acqMap map[*regexp.Regexp]strin
 	return company
 }
 
-func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *allMappings, cache map[string]string, missingOrgs map[string]int, warns map[string]struct{}, thrN int) string {
+func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *allMappings, cache map[string]string, missingOrgs map[string]int, warns map[string]struct{}, thrN int) (result string) {
 	mtx := &sync.Mutex{}
 	mappedCompany, ok := cache[lCompanyName]
 	if !ok {
@@ -344,7 +344,8 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 		if mappedCompany != "" {
 			//fmt.Printf("Found mapping '%s' -> '%s'\n", companyName, mappedCompany)
 			cache[lCompanyName] = mappedCompany
-			return mappedCompany
+			result = mappedCompany
+			return
 		}
 	} else {
 		/*
@@ -354,13 +355,14 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 				fmt.Printf("Cached miss for '%s'\n", lCompanyName)
 			}
 		*/
-		return mappedCompany
+		result = mappedCompany
+		return
 	}
 	//fmt.Printf("Can't find anything for '%s'\n", lCompanyName)
 	n, _ := missingOrgs[companyName]
 	missingOrgs[companyName] = n + 1
 	cache[lCompanyName] = ""
-	return ""
+	return
 }
 
 func addHardcodedMaps(maps map[string]string) (nH int) {
@@ -371,6 +373,8 @@ func addHardcodedMaps(maps map[string]string) (nH int) {
 		{"DaoCloud", "DaoCloud Network Technology Co. Ltd."},
 		{"Atlassian Inc", "Atlassian"},
 		{"Dynatrace", "Dynatrace LLC"},
+		{"Comcast Corporation", "Comcast Cable Communications, LLC (Xfinity)"},
+		{"Zeppelin Lab GmbH", "Z Lab"},
 	}
 	for _, req := range required {
 		val, ok := maps[req[0]]
@@ -390,6 +394,8 @@ func addHardcodedMaps(maps map[string]string) (nH int) {
 func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNames *allMappings) {
 	var re *regexp.Regexp
 	cached := os.Getenv("CACHED") != ""
+	fmt.Printf("using cache: %v\n", cached)
+	// fmt.Printf("mapOrgNames = %+v\n", mapOrgNames)
 	maps := make(map[string]string)
 	nUsr := len(*users)
 	trunc := 0
@@ -421,6 +427,7 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		idxMap := make(map[*regexp.Regexp]int)
 		noAcqs := os.Getenv("NO_ACQS") != ""
 		if noAcqs {
+			fmt.Printf("Skipping acquisitions\n")
 			acqs.Acquisitions = [][2]string{}
 		}
 		for idx, acq := range acqs.Acquisitions {
@@ -486,7 +493,12 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 		nComps := len(companies)
 		miss := 0
 		warns := make(map[string]struct{})
+		companiesAry := []string{}
 		for company := range companies {
+			companiesAry = append(companiesAry, company)
+		}
+		sort.Strings(companiesAry)
+		for _, company := range companiesAry {
 			ci++
 			if company == "" {
 				continue
@@ -566,6 +578,8 @@ func genRenames(db *sql.DB, users *gitHubUsers, acqs *allAcquisitions, mapOrgNam
 			if err == nil {
 				fmt.Printf("Read previous mapping %d items\n", len(prevMaps))
 			}
+			// fmt.Printf("maps = %+v\n", maps)
+			// fmt.Printf("prevMaps = %+v\n", prevMaps)
 			inc, diff := 0, 0
 			for from, to := range prevMaps {
 				_, ok := maps[from]
@@ -783,5 +797,12 @@ func mapOrgs() {
 }
 
 func main() {
+	/*
+		rs := `^[[:space:]]*comcast[[:space:]]*$`
+		s := "  comcastx "
+		r, _ := pcre.Compile(rs, 0)
+		m := r.MatcherString(s, 0).Matches()
+		fmt.Printf("(rs,s,r,m)=(%+v,%+v,%+v,%+v)\n", rs, s, r, m)
+	*/
 	mapOrgs()
 }
