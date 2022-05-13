@@ -152,6 +152,9 @@ def octokit_init()
     ary = []
     tokens.each_with_index { |token, idx| ary << token unless idxa.include?(idx) }
     tokens = ary
+    skipped = []
+    tokens.each_with_index { |token, idx| skipped << token if idxa.include?(idx) }
+    puts "Skipped tokens: #{skipped}"
   end
 
   puts "Connecting #{tokens.length} clients."
