@@ -139,6 +139,7 @@ CSV.foreach(ARGV[0], headers: true) do |row|
   #rank_number,actor,events,percent,cumulative_sum,cumulative_percent,all_events
   idx += 1
   ghid = row['actor']
+  next if ghid = nil
   lghid = ghid.downcase
   commits[ghid] = row['commits'] || row['contributions'] || row['events']
   email = "#{ghid}!users.noreply.github.com"
