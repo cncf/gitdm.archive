@@ -12,6 +12,7 @@ def rate_limit(clients, last_hint = -1, debug = 1)
   end
   # This is to force checking other clients state with 1/N probablity.
   # Even if we don't use them, they can reset to a higher API points after <= 1h
+  failed = []
   last_hint = -1 if last_hint >= 0 && Time.now.to_i % clients.length == 0
   rls = []
   if $g_rls.length > 0 && last_hint >= 0
@@ -22,15 +23,16 @@ def rate_limit(clients, last_hint = -1, debug = 1)
     thrs = []
     n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
     clients.each_with_index do |client, idx|
-      thrs << Thread.new do
+      thrs << Thread.new(client, idx) do |client, idx|
         puts "Checking rate limit for #{idx}" if debug >= 2
         rate = nil
         begin
           rate = client.rate_limit
         rescue
           puts "idx #{idx} failed, either remove it #{client} via SKIP_TOKENS='#{idx}' or remove it from /etc/github/oauth(s)"
-          exit 1
+          failed << idx
         end
+        puts "Rate limit for #{idx}: #{rate}" if debug >= 2
         rate
       end
       while thrs.length >= n_thrs
@@ -46,6 +48,12 @@ def rate_limit(clients, last_hint = -1, debug = 1)
       end
       puts "Checked rate limit for #{idx}" if debug >= 2
     end
+  end
+  if failed.length > 0
+    puts "Failed indices: #{failed}"
+    exit 1
+  else
+    puts "Tokens OK"
   end
   $g_rls = rls
   hint = 0
@@ -154,7 +162,9 @@ def octokit_init()
     tokens = ary
     skipped = []
     tokens.each_with_index { |token, idx| skipped << token if idxa.include?(idx) }
+    puts "Tokens: #{tokens}"
     puts "Skipped tokens: #{skipped}"
+    # exit 1
   end
 
   puts "Connecting #{tokens.length} clients."
@@ -163,7 +173,7 @@ def octokit_init()
   thrs = []
   n_thrs = ENV['NCPUS'].nil? ? Etc.nprocessors : ENV['NCPUS'].to_i
   tokens.each_with_index do |token, idx|
-    thrs << Thread.new do
+    thrs << Thread.new(token, idx) do |token, idx|
       puts "Connecting client nr #{idx} #{token}"
       client = Octokit::Client.new(
         access_token: token,
@@ -213,5 +223,6 @@ def octokit_init()
   else
     final_clients = clients
   end
+  puts "octoinit complete"
   final_clients
 end
