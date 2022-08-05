@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ -z "$1" ]
 then
-  echo "You need to provide path as first arument"
+  echo "You need to provide path as first argument"
   exit 1
 fi
 if [ -z "$2" ]
