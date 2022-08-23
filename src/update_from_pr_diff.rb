@@ -15,6 +15,8 @@ require './nationalize_lib'
 require './genderize_lib'
 require './agify_lib'
 
+# SKIP_TOKENS=17
+
 def stringify_keys(hash)
   ret = {}
   hash.each do |key, val|
