@@ -366,23 +366,34 @@ func mapOrganization(db *sql.DB, companyName, lCompanyName string, mapOrgNames *
 }
 
 func addHardcodedMaps(maps map[string]string) (nH int) {
-	required := [][2]string{
-		{"Red Hat", "Red Hat Inc."},
-		{"Oracle", "Oracle America Inc."},
-		{"Kubermatic", "Kubermatic GmbH"},
-		{"DaoCloud", "DaoCloud Network Technology Co. Ltd."},
-		{"Atlassian Inc", "Atlassian"},
-		{"Dynatrace", "Dynatrace LLC"},
-		{"Comcast Corporation", "Comcast Cable Communications, LLC (Xfinity)"},
-		{"Zeppelin Lab GmbH", "Z Lab"},
-		{"Microsoft", "Microsoft Corporation"},
-		{"Spotify", "Spotify AB"},
-		{"Intuit", "Intuit Inc."},
-		{"Datadog", "Datadog Inc"},
-		{"Daimler TSS", "Mercedes-Benz Tech Innovation GmbH"},
-		{"Salesforce.com inc.", "Salesforce.com Inc."},
-		{"Raintank Inc. – Grafana Labs", "Grafana Labs"},
+	data, err := ioutil.ReadFile("manual.json")
+	fatalOnError(err)
+	mps := make(map[string]string)
+	fatalOnError(json.Unmarshal(data, &mps))
+	fmt.Printf("Read manual mapping %d items\n", len(mps))
+	required := [][2]string{}
+	for k, v := range mps {
+		required = append(required, [2]string{k, v})
 	}
+	/*
+		required := [][2]string{
+			{"Red Hat", "Red Hat Inc."},
+			{"Oracle", "Oracle America Inc."},
+			{"Kubermatic", "Kubermatic GmbH"},
+			{"DaoCloud", "DaoCloud Network Technology Co. Ltd."},
+			{"Atlassian Inc", "Atlassian"},
+			{"Dynatrace", "Dynatrace LLC"},
+			{"Comcast Corporation", "Comcast Cable Communications, LLC (Xfinity)"},
+			{"Zeppelin Lab GmbH", "Z Lab"},
+			{"Microsoft", "Microsoft Corporation"},
+			{"Spotify", "Spotify AB"},
+			{"Intuit", "Intuit Inc."},
+			{"Datadog", "Datadog Inc"},
+			{"Daimler TSS", "Mercedes-Benz Tech Innovation GmbH"},
+			{"Salesforce.com inc.", "Salesforce.com Inc."},
+			{"Raintank Inc. – Grafana Labs", "Grafana Labs"},
+		}
+	*/
 	for _, req := range required {
 		val, ok := maps[req[0]]
 		if !ok {
