@@ -1,4 +1,5 @@
 #!/bin/bash
+# manual mappings are in manual.json
 echo "sort configs"
 ./sort_configs.sh
 echo "company names mapping (currently manual)"
