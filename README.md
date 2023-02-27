@@ -14,7 +14,9 @@ This repository is used as a source of affiliations for all [DevStats projects](
 
 # Adding/Updating affiliation
 
-If you find any errors or missing affiliations in those lists, please submit a pull request with edits to developers affiliations files: [dev1], [dev2], [dev3], [dev4], [dev5], ... .
+If you find any errors or missing affiliations in those lists, please submit a pull request with edits to developers affiliations files: [dev1], [dev2], [dev3], [dev4], [dev5], ...
+
+Please note that we need both *current* and *historical* email here as we are processing data from GitHub *Archives*, so old emails are there (even if they are no longer current).
 
 Only the Developers affiliations list [dev1], [dev2], [dev3], [dev4], [dev5], ... should be edited manually.
 
