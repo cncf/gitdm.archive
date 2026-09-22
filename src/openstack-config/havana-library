@@ -1,0 +1,13 @@
+# OpenStack library projects
+# as described at https://wiki.openstack.org/wiki/Projects
+# note: oslo.config has tags, but they don't appear to be current with grizzly release
+oslo.config fc8ca59..
+oslo-incubator 2013.1
+python-novaclient 2.13.0..
+python-swiftclient 1.3.0..
+python-glanceclient 0.9.0..
+python-keystoneclient 0.2.3..
+python-neutronclient 2.2.1..
+python-cinderclient 1.0.3..
+python-ceilometerclient 1.0.0..
+python-heatclient 0.2.2..

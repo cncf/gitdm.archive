@@ -1,0 +1,57 @@
+*.pyc
+*~
+.venv
+*.swp
+*.swo
+src/clearbit_tools/all_clearbit_queries.csv
+src/clearbit_tools/cncf_enriched.csv
+src/clearbit_tools/input_enriched.csv
+src/clearbit_tools/new_round_enriched.csv
+src/clearbit_tools/unknown_emails_enriched.csv
+all.log
+git.log
+all.log.xz
+#all.txt
+all.csv
+database.dump
+datelc.csv
+errors.txt
+header
+x
+src/ghusers/*
+# Data files
+# *.txt
+# *.csv
+*.out
+# *.json
+*.log
+*.old
+*.dat
+*.db
+*.dump
+err
+out
+out1
+out2
+out.diff
+geodata.tsv
+geodata.tsv.xz
+partial.json
+backup.json
+affiliated.json
+stripped.json
+*.htm*
+src/check_spell
+src/mtp
+src/check_shas
+src/map_orgs
+src/get_aff_files
+src/git_logs/*.log
+src/git_logs/*.1
+src/git_logs/*.2
+src/flist.txt
+/src/git.log_*
+*.secret
+allCountries.zip
+allCountries.txt
+allCountries.tsv

@@ -1,0 +1,34 @@
+# OpenStack infrastructure projects
+# as described at https://wiki.openstack.org/wiki/Projects
+config e8862b1..
+gear 6044080..
+jeepyb 18e8256..
+zuul 8259510..
+gearman-plugin c4e660f..
+devstack-gate fae4700..
+jenkins-job-builder 96a72de..
+gitdm 8f01611..
+git-review 1.21..
+gerrit 19507d3..
+gerritlib 81a0066..
+# note: need to update gerritbot once a commit happens in havana
+gerritbot 6563e96..
+reviewday c3044dd..
+askbot-theme d1cfa0b..
+releasestatus 94b0b30..
+# note: need to update zmq-event-publisher once a commit happens in havana
+zmq-event-publisher 135d273..
+# note: need to update statusbot once a commit happens in havana
+statusbot 336c7d9..
+# note: need to update puppet-dashboard once a commit happens in havana
+puppet-dashboard 7c8a306..
+# note: need to update puppet-apparmor once a commit happens in havana
+puppet-apparmor 6c51fe5..
+# note: need to update puppet-vcsrepo once a commit happens in havana
+puppet-vcsrepo 4c3e9b2..
+# note: need to update meetbot once a commit happens in havana
+meetbot bf953cc..
+# note: need to update lodgeit once a commit happens in havana
+lodgeit dfd551f..
+# note: need to update nose-html-output once a commit happens in havana
+nose-html-output 714b4242..

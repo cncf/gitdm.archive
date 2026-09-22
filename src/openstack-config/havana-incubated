@@ -1,0 +1,12 @@
+# OpenStack incubated projects
+# as described at https://wiki.openstack.org/wiki/Projects
+# Note:  trove and ironic do not have tags such as 2013.1, so use
+# the commit whose date most closely aligns with the official grizzly
+# release on 2013-04-04
+trove b15d347..
+trove-integration bac5b1b..
+python-trove-client 6222dea..
+ironic 8e05dbf..
+# note: python-ironicclient is currently just a stub, but putting here 
+# for future reference
+python-ironicclient

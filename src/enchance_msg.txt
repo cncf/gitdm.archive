@@ -1,0 +1,2 @@
+Look for broken data via searching for '" ', ' ",', '\cfunky', '"[', '"<', '\c^"[z9]', '\c^"[^0-9a-zA-Z_]', '\c[^0-9a-zA-Z_,])"'
+`/\c" \| ",\|funky\|"\[\|"<\|^"[z9]\|^"[^0-9a-zA-Z_]\|[^0-9a-zA-Z_,])"`

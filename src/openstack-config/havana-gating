@@ -1,0 +1,9 @@
+# openstack gating projects
+# As described at https://wiki.openstack.org/wiki/Projects
+# note: devstack, tempest, and requirements don't have tag 2013.1,
+# so we'll use the commit closest to the 2013-04-04 grizzly release
+devstack 896eb66..
+tempest 017e95c..
+requirements aea036d..
+# note: need to update openstack-nose once a commit happens in havana
+openstack-nose a103741..
